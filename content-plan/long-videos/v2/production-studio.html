@@ -3,9 +3,9 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Hidden Geography — Video 1 (V1) Single-Page Production Studio: Full 12-Beat Script, AI Cues & Derived Shorts.">
+  <meta name="description" content="Hidden Geography — Video 2 (V2) Production Studio: Shot-by-Shot Timeline, 12-Beat Script, Flow AI Prompts & Derived Shorts.">
   <meta name="theme-color" content="#38BDF8">
-  <title>V1 Production Studio · Every Map You've Seen Is Lying About Africa</title>
+  <title>V2 Production Studio · Why Nobody Lives in the Most Empty Country on Earth</title>
   
   <link rel="icon" type="image/svg+xml" href="../../../favicon.svg">
   
@@ -441,11 +441,6 @@
       background: var(--bg-canvas);
     }
 
-    .top-nav-link:active {
-      transform: translateY(2px);
-      box-shadow: 0 1px 0 var(--ink);
-    }
-
     .top-nav-link.active {
       background: var(--cartoon-yellow);
       color: var(--ink);
@@ -484,11 +479,6 @@
       stroke: currentColor;
       fill: none;
       stroke-width: 2.8;
-    }
-
-    .btn-cartoon:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 6px 0 var(--ink);
     }
 
     .btn-cartoon.btn-gold { background: var(--cartoon-yellow); color: var(--ink); }
@@ -697,29 +687,50 @@
       box-shadow: 0 2px 0 var(--ink);
     }
 
-    /* Beat Script Engine */
-    .beat-card {
+    /* Timeline Shot-by-Shot Table */
+    .timeline-table {
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 0 16px;
+    }
+
+    .timeline-row {
       background: var(--bg-canvas);
       border: 3px solid var(--ink);
       border-radius: var(--radius-lg);
-      padding: 24px;
-      margin-bottom: 20px;
       box-shadow: var(--shadow-block-sm);
-      display: grid;
-      grid-template-columns: 140px minmax(0, 1fr);
-      gap: 24px;
+      transition: transform 0.15s ease;
     }
 
-    .beat-meta-col {
-      display: flex;
-      flex-direction: column;
-      gap: 8px;
-      border-right: 2.5px dashed var(--ink);
-      padding-right: 16px;
+    .timeline-row:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-block-md);
     }
 
-    .beat-num {
-      font-size: 1.3rem;
+    .timeline-cell {
+      padding: 18px 20px;
+      vertical-align: top;
+      border-top: 3px solid var(--ink);
+      border-bottom: 3px solid var(--ink);
+    }
+
+    .timeline-cell:first-child {
+      border-left: 3px solid var(--ink);
+      border-top-left-radius: var(--radius-lg);
+      border-bottom-left-radius: var(--radius-lg);
+      width: 140px;
+      background: var(--bg-card);
+    }
+
+    .timeline-cell:last-child {
+      border-right: 3px solid var(--ink);
+      border-top-right-radius: var(--radius-lg);
+      border-bottom-right-radius: var(--radius-lg);
+      width: 320px;
+    }
+
+    .clip-badge {
+      font-size: 1.15rem;
       font-weight: 800;
       color: var(--ink);
       background: var(--cartoon-yellow);
@@ -727,103 +738,67 @@
       border-radius: var(--radius-pill);
       border: 2px solid var(--ink);
       box-shadow: 0 2px 0 var(--ink);
-      width: fit-content;
+      display: inline-block;
+      margin-bottom: 6px;
     }
 
-    .beat-time {
-      font-size: 0.78rem;
+    .cut-trigger-tag {
+      display: inline-block;
+      margin-top: 8px;
+      background: #FFE4E6;
+      color: var(--cartoon-coral-deep);
+      border: 1.5px solid var(--cartoon-coral-deep);
+      padding: 3px 10px;
+      border-radius: var(--radius-sm);
+      font-size: 0.76rem;
       font-weight: 800;
-      color: var(--cartoon-blue-deep);
       font-family: "JetBrains Mono", monospace;
     }
 
-    .beat-words {
-      font-size: 0.72rem;
-      font-weight: 700;
-      color: var(--text-faint);
-    }
-
-    .beat-content-col {
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-    }
-
-    .script-dialogue-text {
-      font-size: 1.05rem;
-      line-height: 1.65;
-      color: var(--text-dark);
-      font-weight: 600;
-    }
-
-    .visual-cue-box {
-      background: var(--bg-card);
-      border: 2px solid var(--ink);
-      border-left: 6px solid var(--cartoon-blue);
-      border-radius: var(--radius-sm);
-      padding: 10px 14px;
-      font-size: 0.84rem;
-      color: var(--text-muted);
-    }
-
-    .visual-cue-box strong {
-      color: var(--cartoon-blue-deep);
-      text-transform: uppercase;
-      font-size: 0.7rem;
-      letter-spacing: 0.08em;
-      display: block;
-      margin-bottom: 2px;
-    }
-
-    .sfx-tag {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      font-size: 0.72rem;
-      font-weight: 800;
-      color: var(--cartoon-coral-deep);
-      background: #FFE4E6;
-      border: 1.5px solid var(--cartoon-coral-deep);
-      padding: 2px 10px;
-      border-radius: var(--radius-pill);
-      width: fit-content;
-    }
-
-    /* AI Prompts Cue Table */
-    .prompt-table-card {
-      background: var(--bg-card);
-      border: 3px solid var(--ink);
-      border-radius: var(--radius-lg);
-      padding: 20px;
-      margin-bottom: 16px;
-      box-shadow: 0 3px 0 var(--ink);
-    }
-
-    .prompt-code-box {
+    .prompt-snippet-box {
       background: #0F172A;
       color: #38BDF8;
       border: 2px solid var(--ink);
       border-radius: var(--radius-sm);
-      padding: 14px;
+      padding: 10px 12px;
       font-family: "JetBrains Mono", monospace;
-      font-size: 0.84rem;
-      line-height: 1.5;
-      margin-top: 10px;
+      font-size: 0.78rem;
+      line-height: 1.45;
       position: relative;
     }
 
     .copy-mini-btn {
       position: absolute;
-      top: 8px;
-      right: 8px;
+      top: 6px;
+      right: 6px;
       background: var(--cartoon-yellow);
       color: #0F172A;
       border: 1.5px solid #0F172A;
       border-radius: var(--radius-sm);
-      padding: 4px 10px;
-      font-size: 0.7rem;
+      padding: 3px 8px;
+      font-size: 0.68rem;
       font-weight: 800;
       cursor: pointer;
+    }
+
+    /* Intel blocks */
+    .intel-block {
+      background: var(--bg-canvas);
+      border: 2.5px solid var(--ink);
+      border-radius: var(--radius-box);
+      padding: 14px 16px;
+      font-size: 0.84rem;
+      color: var(--text-muted);
+      line-height: 1.55;
+    }
+
+    .intel-block strong {
+      display: block;
+      font-size: 0.68rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--cartoon-blue-deep);
+      margin-bottom: 4px;
     }
 
     /* Toast Notification */
@@ -862,8 +837,9 @@
       .mobile-nav-toggle { display: grid; }
       .mobile-close-btn { display: grid; }
       .main-wrapper { grid-column: 1; }
-      .beat-card { grid-template-columns: 1fr; gap: 14px; }
-      .beat-meta-col { border-right: none; border-bottom: 2px dashed var(--ink); padding-right: 0; padding-bottom: 12px; flex-direction: row; align-items: center; justify-content: space-between; }
+      .timeline-table, .timeline-row, .timeline-cell { display: block; width: 100% !important; }
+      .timeline-cell { border: none !important; padding: 12px 14px; }
+      .timeline-row { border: 3px solid var(--ink); margin-bottom: 20px; }
     }
 
     @media (max-width: 640px) {
@@ -945,11 +921,11 @@
 
       <span class="nav-section-title">8-Week Long Studios</span>
       <nav class="nav-list">
-        <a href="production-studio.html" class="nav-pill-btn active">
+        <a href="../v1/production-studio.html" class="nav-pill-btn">
           <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
           <span>V1 · Africa Map Lie</span>
         </a>
-        <a href="../v2/production-studio.html" class="nav-pill-btn">
+        <a href="production-studio.html" class="nav-pill-btn active">
           <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
           <span>V2 · Empty Land</span>
         </a>
@@ -1023,29 +999,29 @@
         <section class="hero-cartoon-card">
           <div class="hero-badge-pill">
             <svg viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"/></svg>
-            <span>Video 1 Studio · Week 1 (Day 7 Release)</span>
+            <span>Video 2 Studio · Week 2 (Day 14 Release)</span>
           </div>
 
           <h1 class="hero-title">
-            Every Map You've Seen <span style="color:var(--cartoon-blue); text-shadow: 2px 2px 0 var(--ink);">Is Lying</span> <br>
-            <span style="background:var(--cartoon-yellow); color:var(--ink); padding:2px 16px; border-radius:16px; border:3.5px solid var(--ink); box-shadow:0 5px 0 var(--ink); display:inline-block; margin-top:10px;">About Africa (V1 Studio)</span>
+            Why Nobody Lives in the <span style="color:var(--cartoon-blue); text-shadow: 2px 2px 0 var(--ink);">Most Empty Country</span> <br>
+            <span style="background:var(--cartoon-yellow); color:var(--ink); padding:2px 16px; border-radius:16px; border:3.5px solid var(--ink); box-shadow:0 5px 0 var(--ink); display:inline-block; margin-top:10px;">On Earth (V2 Studio)</span>
           </h1>
 
           <p class="hero-desc">
-            The complete, deterministic single-page production workstation for Video 1. Includes verified packaging, 12-beat high-retention script engine, ElevenLabs voiceover cue sheet, 24 Google Flow AI cinematic prompts, and 2 derived vertical Shorts (Short 1A & Short 1B).
+            Complete, deterministic single-page production workstation for Video 2. Includes the verified packaging, line-by-line editing storyboard with exact cut triggers, full 12-beat script, Google Flow AI prompts, and 2 derived vertical Shorts.
           </p>
 
           <div class="hero-kpi-grid">
             <div class="kpi-block">
-              <div class="stat-value">18 <span>/ 20</span></div>
+              <div class="stat-value">17 <span>/ 20</span></div>
               <span class="stat-label">Topic Score (Tier 1 Verified)</span>
             </div>
             <div class="kpi-block">
-              <div class="stat-value">13:14 <span>min</span></div>
+              <div class="stat-value">12:48 <span>min</span></div>
               <span class="stat-label">12-Beat Total Runtime</span>
             </div>
             <div class="kpi-block">
-              <div class="stat-value">1,780 <span>words</span></div>
+              <div class="stat-value">1,720 <span>words</span></div>
               <span class="stat-label">Narrator Word Budget</span>
             </div>
             <div class="kpi-block">
@@ -1061,19 +1037,15 @@
             <svg viewBox="0 0 24 24" style="width:16px; height:16px; stroke:currentColor; fill:none; stroke-width:2.8;"><line x1="4" y1="6" x2="20" y2="6"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="18" x2="20" y2="18"/></svg>
             <span>Shot-by-Shot Timeline & Storyboard</span>
           </button>
+
           <button class="studio-tab-btn" data-tab="tab-script">
             <svg viewBox="0 0 24 24" style="width:16px; height:16px; stroke:currentColor; fill:none; stroke-width:2.8;"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
-            <span>12-Beat Script Engine</span>
+            <span>12-Beat Master Script</span>
           </button>
 
           <button class="studio-tab-btn" data-tab="tab-shorts">
             <svg viewBox="0 0 24 24" style="width:16px; height:16px; stroke:currentColor; fill:none; stroke-width:2.8;"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
             <span>Derived Shorts Suite (§12)</span>
-          </button>
-
-          <button class="studio-tab-btn" data-tab="tab-prompts">
-            <svg viewBox="0 0 24 24" style="width:16px; height:16px; stroke:currentColor; fill:none; stroke-width:2.8;"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
-            <span>Google Flow AI Cues (24 Shots)</span>
           </button>
 
           <button class="studio-tab-btn" data-tab="tab-research">
@@ -1083,101 +1055,120 @@
 
           <button class="studio-tab-btn" data-tab="tab-packaging">
             <svg viewBox="0 0 24 24" style="width:16px; height:16px; stroke:currentColor; fill:none; stroke-width:2.8;"><rect x="2" y="2" width="20" height="20" rx="2.18" ry="2.18"/><line x1="7" y1="2" x2="7" y2="22"/><line x1="17" y1="2" x2="17" y2="22"/><line x1="2" y1="12" x2="22" y2="12"/></svg>
-            <span>Packaging & SEO Pack</span>
+            <span>Packaging & SEO Kit</span>
           </button>
         </nav>
 
-                <!-- TAB 0: SHOT-BY-SHOT TIMELINE & STORYBOARD CUE SHEET -->
+        <!-- TAB 1: SHOT-BY-SHOT TIMELINE & STORYBOARD CUE SHEET -->
         <section class="studio-pane active" id="tab-timeline">
           <div class="studio-card">
             <div class="studio-card-head">
               <div>
                 <h2>Shot-by-Shot Timeline & Storyboard Cue Sheet (§10.3 & §19.4)</h2>
-                <p style="color:var(--text-muted); font-size:0.84rem; margin-top:4px;">Connecting every spoken sentence directly to its Flow AI prompt, visual event, and cut trigger.</p>
+                <p style="color:var(--text-muted); font-size:0.84rem; margin-top:4px;">Connecting every spoken line directly to its exact Flow AI prompt, visual event, and cut trigger.</p>
               </div>
               <span class="pill-tag" style="background:var(--cartoon-green);">Premiere Pro Ready</span>
             </div>
 
-            <table class="timeline-table" style="width:100%; border-collapse:separate; border-spacing:0 16px;">
+            <table class="timeline-table">
               <tbody>
                 <!-- Clip 01 -->
-                <tr class="timeline-row" style="background:var(--bg-canvas); border:3px solid var(--ink); box-shadow:var(--shadow-block-sm);">
-                  <td class="timeline-cell" style="padding:18px 20px; border-top:3px solid var(--ink); border-bottom:3px solid var(--ink); border-left:3px solid var(--ink); border-top-left-radius:var(--radius-lg); border-bottom-left-radius:var(--radius-lg); width:140px; background:var(--bg-card);">
-                    <span style="font-size:1.15rem; font-weight:800; color:var(--ink); background:var(--cartoon-yellow); padding:4px 12px; border-radius:var(--radius-pill); border:2px solid var(--ink); display:inline-block; margin-bottom:6px;">CLIP 01</span>
+                <tr class="timeline-row">
+                  <td class="timeline-cell">
+                    <span class="clip-badge">CLIP 01</span>
                     <div style="font-size:0.75rem; font-family:'JetBrains Mono', monospace; color:var(--cartoon-blue-deep); font-weight:800;">00:00 – 00:08</div>
                     <span class="pill-tag" style="font-size:0.65rem; background:#FFE4E6; color:#9F1239; margin-top:6px;">[HOOK SHOT]</span>
                   </td>
-                  <td class="timeline-cell" style="padding:18px 20px; border-top:3px solid var(--ink); border-bottom:3px solid var(--ink);">
+                  <td class="timeline-cell">
                     <div style="font-size:0.96rem; font-weight:700; color:var(--text-dark); line-height:1.5;">
-                      "On the map on your wall, Greenland looks about the same size as Africa. On the ground, Africa is fourteen times larger."
+                      "Four entire European countries—the United Kingdom, France, Germany, and Italy—could fit inside this territory."
                     </div>
-                    <div style="display:inline-block; margin-top:8px; background:#FFE4E6; color:var(--cartoon-coral-deep); border:1.5px solid var(--cartoon-coral-deep); padding:3px 10px; border-radius:var(--radius-sm); font-size:0.76rem; font-weight:800; font-family:'JetBrains Mono', monospace;">
-                      CUT TRIGGER: On words "fourteen times larger" ➔ CUT to Clip 02
-                    </div>
+                    <div class="cut-trigger-tag">CUT TRIGGER: On words "fit inside this territory" ➔ CUT to Clip 02</div>
                     <div style="margin-top:8px; font-size:0.78rem; color:var(--text-muted);">
-                      <strong>Visual Event:</strong> 2D Vector Mercator Wall Map. Amber silhouette of Greenland lifts off and shrinks into Sahara.
+                      <strong>Visual Event:</strong> 2D Vector Basemap of Mongolia in deep amber. 4 European country silhouettes sweep in from left and nest into Mongolian borders.
                     </div>
                   </td>
-                  <td class="timeline-cell" style="padding:18px 20px; border-top:3px solid var(--ink); border-bottom:3px solid var(--ink); border-right:3px solid var(--ink); border-top-right-radius:var(--radius-lg); border-bottom-right-radius:var(--radius-lg); width:320px;">
-                    <div class="prompt-code-box" style="background:#0F172A; color:#38BDF8; border:2px solid var(--ink); border-radius:var(--radius-sm); padding:10px 12px; font-family:'JetBrains Mono', monospace; font-size:0.78rem; position:relative;">
-                      <button class="copy-mini-btn" style="position:absolute; top:6px; right:6px; background:var(--cartoon-yellow); color:#0F172A; border:1.5px solid #0F172A; border-radius:var(--radius-sm); padding:3px 8px; font-size:0.68rem; font-weight:800; cursor:pointer;" onclick="copySnippet(this)">Copy</button>
-                      <span>Create an 8-second horizontal 16:9 cinematic clip. Documentary photography, vintage wooden classroom with large Mercator wall map, slow straight-down camera push, warm soft morning sunlight, sharp focus on African continent, clean 8k resolution, no text --ar 16:9</span>
+                  <td class="timeline-cell">
+                    <div class="prompt-snippet-box">
+                      <button class="copy-mini-btn" onclick="copySnippet(this)">Copy</button>
+                      <span>Create an 8-second horizontal 16:9 cinematic clip. High-altitude orthographic satellite camera looking down at vast golden Mongolian steppe bordered by Altai mountains, clear morning sunlight, clean 8k topology relief, no text --ar 16:9</span>
                     </div>
-                    <div style="font-size:0.72rem; color:var(--text-faint); margin-top:6px; font-weight:700;">SFX: Deep sub-bass drop on scale reveal</div>
+                    <div style="font-size:0.72rem; color:var(--text-faint); margin-top:6px; font-weight:700;">SFX: Deep cinematic map whoosh & continent slide</div>
                   </td>
                 </tr>
 
                 <!-- Clip 02 -->
-                <tr class="timeline-row" style="background:var(--bg-canvas); border:3px solid var(--ink); box-shadow:var(--shadow-block-sm);">
-                  <td class="timeline-cell" style="padding:18px 20px; border-top:3px solid var(--ink); border-bottom:3px solid var(--ink); border-left:3px solid var(--ink); border-top-left-radius:var(--radius-lg); border-bottom-left-radius:var(--radius-lg); width:140px; background:var(--bg-card);">
-                    <span style="font-size:1.15rem; font-weight:800; color:var(--ink); background:var(--cartoon-yellow); padding:4px 12px; border-radius:var(--radius-pill); border:2px solid var(--ink); display:inline-block; margin-bottom:6px;">CLIP 02</span>
+                <tr class="timeline-row">
+                  <td class="timeline-cell">
+                    <span class="clip-badge">CLIP 02</span>
                     <div style="font-size:0.75rem; font-family:'JetBrains Mono', monospace; color:var(--cartoon-blue-deep); font-weight:800;">00:08 – 00:16</div>
                     <span class="pill-tag" style="font-size:0.65rem; background:#FEF3C7; color:#92400E; margin-top:6px;">[SCALE SHOCK]</span>
                   </td>
-                  <td class="timeline-cell" style="padding:18px 20px; border-top:3px solid var(--ink); border-bottom:3px solid var(--ink);">
+                  <td class="timeline-cell">
                     <div style="font-size:0.96rem; font-weight:700; color:var(--text-dark); line-height:1.5;">
-                      "The entire United States, China, India, and almost all of Western Europe could sit inside the African continent simultaneously."
+                      "Yet the total population of this vast land is smaller than the single metropolitan city of Madrid."
                     </div>
-                    <div style="display:inline-block; margin-top:8px; background:#FFE4E6; color:var(--cartoon-coral-deep); border:1.5px solid var(--cartoon-coral-deep); padding:3px 10px; border-radius:var(--radius-sm); font-size:0.76rem; font-weight:800; font-family:'JetBrains Mono', monospace;">
-                      CUT TRIGGER: On words "simultaneously with space to spare" ➔ CUT to Clip 03
-                    </div>
+                    <div class="cut-trigger-tag">CUT TRIGGER: On words "city of Madrid" ➔ CUT to Clip 03</div>
                     <div style="margin-top:8px; font-size:0.78rem; color:var(--text-muted);">
-                      <strong>Visual Event:</strong> 4 colored country outlines glide across and nest inside Africa like puzzle pieces with area counters ticking.
+                      <strong>Visual Event:</strong> Split screen counter: Madrid (3.4M people in 604 km²) vs Mongolia (3.4M people in 1,564,000 km²).
                     </div>
                   </td>
-                  <td class="timeline-cell" style="padding:18px 20px; border-top:3px solid var(--ink); border-bottom:3px solid var(--ink); border-right:3px solid var(--ink); border-top-right-radius:var(--radius-lg); border-bottom-right-radius:var(--radius-lg); width:320px;">
-                    <div class="prompt-code-box" style="background:#0F172A; color:#38BDF8; border:2px solid var(--ink); border-radius:var(--radius-sm); padding:10px 12px; font-family:'JetBrains Mono', monospace; font-size:0.78rem; position:relative;">
-                      <button class="copy-mini-btn" style="position:absolute; top:6px; right:6px; background:var(--cartoon-yellow); color:#0F172A; border:1.5px solid #0F172A; border-radius:var(--radius-sm); padding:3px 8px; font-size:0.68rem; font-weight:800; cursor:pointer;" onclick="copySnippet(this)">Copy</button>
-                      <span>Create an 8-second horizontal 16:9 cinematic clip. 3D cartographic relief map of world globe rotating slowly, glowing boundary highlights over African continent, dark atmospheric background, high contrast studio lighting, 8k, no text --ar 16:9</span>
+                  <td class="timeline-cell">
+                    <div class="prompt-snippet-box">
+                      <button class="copy-mini-btn" onclick="copySnippet(this)">Copy</button>
+                      <span>Create an 8-second horizontal 16:9 cinematic clip. Cinematic low-altitude forward tracking shot over silent endless grassland under vast dramatic blue sky with lone wooden yurt in extreme distance, warm golden sunlight, no text --ar 16:9</span>
                     </div>
-                    <div style="font-size:0.72rem; color:var(--text-faint); margin-top:6px; font-weight:700;">SFX: Tactile click-snap for nested borders</div>
+                    <div style="font-size:0.72rem; color:var(--text-faint); margin-top:6px; font-weight:700;">SFX: Digital data counter tick & subtle wind rumble</div>
                   </td>
                 </tr>
 
                 <!-- Clip 03 -->
-                <tr class="timeline-row" style="background:var(--bg-canvas); border:3px solid var(--ink); box-shadow:var(--shadow-block-sm);">
-                  <td class="timeline-cell" style="padding:18px 20px; border-top:3px solid var(--ink); border-bottom:3px solid var(--ink); border-left:3px solid var(--ink); border-top-left-radius:var(--radius-lg); border-bottom-left-radius:var(--radius-lg); width:140px; background:var(--bg-card);">
-                    <span style="font-size:1.15rem; font-weight:800; color:var(--ink); background:var(--cartoon-yellow); padding:4px 12px; border-radius:var(--radius-pill); border:2px solid var(--ink); display:inline-block; margin-bottom:6px;">CLIP 03</span>
+                <tr class="timeline-row">
+                  <td class="timeline-cell">
+                    <span class="clip-badge">CLIP 03</span>
                     <div style="font-size:0.75rem; font-family:'JetBrains Mono', monospace; color:var(--cartoon-blue-deep); font-weight:800;">00:16 – 00:25</div>
-                    <span class="pill-tag" style="font-size:0.65rem; background:#E0F2FE; color:#0369A1; margin-top:6px;">[THE 1569 ORIGIN]</span>
+                    <span class="pill-tag" style="font-size:0.65rem; background:#E0F2FE; color:#0369A1; margin-top:6px;">[CENTRAL Q]</span>
                   </td>
-                  <td class="timeline-cell" style="padding:18px 20px; border-top:3px solid var(--ink); border-bottom:3px solid var(--ink);">
+                  <td class="timeline-cell">
                     <div style="font-size:0.96rem; font-weight:700; color:var(--text-dark); line-height:1.5;">
-                      "This was not an accident. It was a calculated mathematical decision made in 1569—and there is a reason we still refuse to fix it."
+                      "With only two people per square kilometre, why is the world's emptiest country emptying even faster into a single capital?"
                     </div>
-                    <div style="display:inline-block; margin-top:8px; background:#FFE4E6; color:var(--cartoon-coral-deep); border:1.5px solid var(--cartoon-coral-deep); padding:3px 10px; border-radius:var(--radius-sm); font-size:0.76rem; font-weight:800; font-family:'JetBrains Mono', monospace;">
-                      CUT TRIGGER: On words "refuse to fix it" ➔ CUT to Beat 2 (00:45)
-                    </div>
+                    <div class="cut-trigger-tag">CUT TRIGGER: On words "into a single capital" ➔ CUT to Beat 2</div>
                     <div style="margin-top:8px; font-size:0.78rem; color:var(--text-muted);">
-                      <strong>Visual Event:</strong> 16th century wooden galleon cutting through dark Atlantic waves with parchment navigation chart overlay.
+                      <strong>Visual Event:</strong> 3D Globe camera zooms rapidly from space into the dense urban grid of Ulaanbaatar glowing like a solitary lightbulb in a dark void.
                     </div>
                   </td>
-                  <td class="timeline-cell" style="padding:18px 20px; border-top:3px solid var(--ink); border-bottom:3px solid var(--ink); border-right:3px solid var(--ink); border-top-right-radius:var(--radius-lg); border-bottom-right-radius:var(--radius-lg); width:320px;">
-                    <div class="prompt-code-box" style="background:#0F172A; color:#38BDF8; border:2px solid var(--ink); border-radius:var(--radius-sm); padding:10px 12px; font-family:'JetBrains Mono', monospace; font-size:0.78rem; position:relative;">
-                      <button class="copy-mini-btn" style="position:absolute; top:6px; right:6px; background:var(--cartoon-yellow); color:#0F172A; border:1.5px solid #0F172A; border-radius:var(--radius-sm); padding:3px 8px; font-size:0.68rem; font-weight:800; cursor:pointer;" onclick="copySnippet(this)">Copy</button>
-                      <span>Create an 8-second horizontal 16:9 cinematic clip. Documentary photography, 16th-century wooden Spanish galleon sailing in turbulent deep Atlantic ocean, low-angle forward tracking camera, dramatic overcast lighting, misty sea spray, cinematic realism, no text --ar 16:9</span>
+                  <td class="timeline-cell">
+                    <div class="prompt-snippet-box">
+                      <button class="copy-mini-btn" onclick="copySnippet(this)">Copy</button>
+                      <span>Create an 8-second horizontal 16:9 cinematic clip. Aerial panoramic orbit of Ulaanbaatar city valley encircled by snowy rugged peaks, dusk blue hour with amber streetlights emerging, realistic cold atmosphere, no text --ar 16:9</span>
                     </div>
-                    <div style="font-size:0.72rem; color:var(--text-faint); margin-top:6px; font-weight:700;">SFX: Ship creaking & dramatic strings swell</div>
+                    <div style="font-size:0.72rem; color:var(--text-faint); margin-top:6px; font-weight:700;">SFX: Dramatic low cello swell into title sequence</div>
+                  </td>
+                </tr>
+
+                <!-- Clip 04 -->
+                <tr class="timeline-row">
+                  <td class="timeline-cell">
+                    <span class="clip-badge">CLIP 04</span>
+                    <div style="font-size:0.75rem; font-family:'JetBrains Mono', monospace; color:var(--cartoon-blue-deep); font-weight:800;">00:25 – 01:15</div>
+                    <span class="pill-tag" style="font-size:0.65rem; background:#DCFCE7; color:#166534; margin-top:6px;">[THE DZUD]</span>
+                  </td>
+                  <td class="timeline-cell">
+                    <div style="font-size:0.96rem; font-weight:700; color:var(--text-dark); line-height:1.5;">
+                      "The answer is not simply that Mongolia is cold. It is a deadly meteorological phenomenon known as the Dzud."
+                    </div>
+                    <div class="cut-trigger-tag">CUT TRIGGER: On words "known as the Dzud" ➔ CUT to Clip 05</div>
+                    <div style="margin-top:8px; font-size:0.78rem; color:var(--text-muted);">
+                      <strong>Visual Event:</strong> Dramatic thermal temperature overlay showing Siberian cold air mass (-45°C) sweeping over the Mongolian plateau.
+                    </div>
+                  </td>
+                  <td class="timeline-cell">
+                    <div class="prompt-snippet-box">
+                      <button class="copy-mini-btn" onclick="copySnippet(this)">Copy</button>
+                      <span>Create an 8-second horizontal 16:9 cinematic clip. Extreme blizzard over Mongolian snowy plains, howling white snowdrifts burying wooden fences, harsh diffused winter light, intense cold realism, no people visible --ar 16:9</span>
+                    </div>
+                    <div style="font-size:0.72rem; color:var(--text-faint); margin-top:6px; font-weight:700;">SFX: Freezing wind gust & winter drone</div>
                   </td>
                 </tr>
               </tbody>
@@ -1185,251 +1176,164 @@
           </div>
         </section>
 
-        <!-- TAB 1: 12-BEAT SCRIPT ENGINE -->
+        <!-- TAB 2: 12-BEAT MASTER SCRIPT -->
         <section class="studio-pane" id="tab-script">
           <div class="studio-card">
             <div class="studio-card-head">
               <div>
-                <h2>Full 12-Beat Long-Form Master Script</h2>
-                <p style="color:var(--text-muted); font-size:0.84rem; margin-top:4px;">Target Pacing: 135–145 wpm · Total Runtime: ~13:14 · 1,780 Words</p>
+                <h2>12-Beat Long-Form Master Script (V2)</h2>
+                <p style="color:var(--text-muted); font-size:0.84rem; margin-top:4px;">1,720 Words · Target Delivery: 12:48 min · 135 wpm</p>
               </div>
-              <span class="pill-tag" style="background:var(--cartoon-green);">Script Locked & Verified</span>
+              <span class="pill-tag" style="background:var(--cartoon-green);">Script Locked</span>
             </div>
 
             <!-- Beat 1 -->
-            <div class="beat-card">
-              <div class="beat-meta-col">
-                <span class="beat-num">Beat 01</span>
-                <span class="beat-time">0:00 – 0:45</span>
-                <span class="beat-words">112 words</span>
-                <span class="pill-tag" style="background:#FFE4E6; color:#9F1239;">Hook · Myth Correction</span>
+            <div class="beat-card" style="background:var(--bg-canvas); border:3px solid var(--ink); border-radius:var(--radius-lg); padding:20px; margin-bottom:18px;">
+              <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:10px;">
+                <span class="beat-num">Beat 01 · The Scale Hook</span>
+                <span class="pill-tag">0:00 – 0:45 · 110 words</span>
               </div>
-              <div class="beat-content-col">
-                <p class="script-dialogue-text">
-                  On the map on your wall, Greenland looks about the same size as Africa. On the ground, Africa is fourteen times larger. The entire United States, China, India, and almost all of Western Europe could sit inside the African continent simultaneously with thousands of square miles to spare. Yet for four hundred and fifty-seven years, almost every school classroom, atlas, and smartphone on Earth has shown you a world where the Northern Hemisphere is artificially magnified, and the equator is squeezed. This wasn't an accident, and it wasn't a printing mistake. It was a calculated mathematical decision made in 1569—and there is a reason we still refuse to fix it.
-                </p>
-                <div class="visual-cue-box">
-                  <strong>Visual Direction (0:00 - 0:45):</strong>
-                  Slow dramatic zoom onto standard Mercator wall map. Green landmass of Greenland lifts off the canvas in glowing 3D amber and drops straight into the Sahara, revealing it fits 14 times inside Africa.
-                </div>
-                <div class="sfx-tag">SFX: Low sub-bass drop on scale reveal</div>
-              </div>
+              <p class="script-dialogue-text">
+                Four entire European countries—the United Kingdom, France, Germany, and Italy—could fit inside this territory. Yet the total population of this vast land is smaller than the single city of Madrid. Mongolia spans one point five six million square kilometres of rolling steppe, snow-capped mountains, and the great Gobi desert, but across this entire expanse live just three point four million people. That produces a density of barely two people per square kilometre—the lowest of any sovereign nation on Earth. But the real story isn't just that Mongolia is empty. It is that half of the entire country's population now lives crammed inside a single valley.
+              </p>
             </div>
 
             <!-- Beat 2 -->
-            <div class="beat-card">
-              <div class="beat-meta-col">
-                <span class="beat-num">Beat 02</span>
-                <span class="beat-time">0:45 – 1:45</span>
-                <span class="beat-words">148 words</span>
-                <span class="pill-tag">Scale Shock</span>
+            <div class="beat-card" style="background:var(--bg-canvas); border:3px solid var(--ink); border-radius:var(--radius-lg); padding:20px; margin-bottom:18px;">
+              <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:10px;">
+                <span class="beat-num">Beat 02 · The Physical Geography</span>
+                <span class="pill-tag">0:45 – 1:50 · 145 words</span>
               </div>
-              <div class="beat-content-col">
-                <p class="script-dialogue-text">
-                  To understand the true scale of the distortion, look at the actual numbers. Africa spans thirty point three seven million square kilometres. Greenland is just two point one six million. But when you flatten a three-dimensional sphere onto a two-dimensional sheet of paper, pure geometry makes distortion inevitable. Carl Friedrich Gauss proved mathematically in his Theorema Egregium that no sphere can ever be flattened onto a plane without stretching or tearing its surface. Every map maker in history had to choose what to sacrifice: area, shape, angle, or distance. In 1569, a Flemish cartographer named Gerardus Mercator made a choice that changed human navigation forever.
-                </p>
-                <div class="visual-cue-box">
-                  <strong>Visual Direction (0:45 - 1:45):</strong>
-                  2D Vector animated graphic: USA, China, India, and Western Europe outlines glide across the screen and nest neatly inside the borders of Africa like puzzle pieces with area counters ticking.
-                </div>
-                <div class="sfx-tag">SFX: Tactile click-snap for each nested country outline</div>
-              </div>
+              <p class="script-dialogue-text">
+                To understand why Mongolia never developed dense rural populations, you have to look at its extreme continental geography. Trapped between the Siberian taiga to the north and the arid expanse of China to the south, Mongolia sits at an average altitude of fifteen hundred metres above sea level. It has no coastline and receives virtually no maritime moisture. Less than one percent of its entire landmass is arable for growing crops. For three thousand years, human survival here was only possible through pastoral nomadism—moving herds of horses, sheep, goats, and camels across hundreds of miles of seasonal pastures. But in the 21st century, that nomadic cycle is breaking.
+              </p>
             </div>
 
             <!-- Beat 3 -->
-            <div class="beat-card">
-              <div class="beat-meta-col">
-                <span class="beat-num">Beat 03</span>
-                <span class="beat-time">1:45 – 3:00</span>
-                <span class="beat-words">175 words</span>
-                <span class="pill-tag">The 1569 Sailor Problem</span>
+            <div class="beat-card" style="background:var(--bg-canvas); border:3px solid var(--ink); border-radius:var(--radius-lg); padding:20px; margin-bottom:18px;">
+              <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:10px;">
+                <span class="beat-num">Beat 03 · The Dzud Engine</span>
+                <span class="pill-tag">1:50 – 3:10 · 170 words</span>
               </div>
-              <div class="beat-content-col">
-                <p class="script-dialogue-text">
-                  Mercator was not designing a map for geography teachers or school children. He was building a survival tool for 16th-century sea captains crossing unexplored oceans with magnetic compasses. On an ordinary globe, if a sailor wants to travel from Lisbon to Havana along a single compass bearing—say, southwest by west—the shortest route is a curved arc called a great circle. But sailing a great circle requires constantly recalculating your steering compass every single hour. In stormy seas with cloudy skies, that calculation error meant running aground on rocky reefs. Mercator wanted a map where a straight line drawn with a simple ruler between any two ports was a line of constant compass bearing—a rhumb line.
-                </p>
-                <div class="visual-cue-box">
-                  <strong>Visual Direction (1:45 - 3:00):</strong>
-                  Cinematic AI B-roll of 16th-century galleon navigating stormy Atlantic seas, cross-fading into vintage compass brass calipers over antique parchment nautical chart.
-                </div>
-              </div>
+              <p class="script-dialogue-text">
+                The destructive force driving this transformation is called the Dzud. A Dzud occurs when an intensely dry summer withers pasture grass, followed immediately by an catastrophic winter where temperatures plunge below minus forty-five degrees Celsius. Deep sheets of ice freeze over the ground, making it impossible for livestock to dig through the crust to feed. In severe Dzud years, millions of animals perish within a matter of weeks. When a herding family loses their entire livestock in a single winter, their nomadic way of life is instantly extinguished. With no animals left to herd, they pack their traditional round felt tent—a ger—onto a truck and head toward the only place with hospitals, electricity, and jobs: Ulaanbaatar.
+              </p>
             </div>
 
-            <!-- Beat 4 to 12 Summary Block in UI -->
-            <div class="intel-block" style="padding:18px; background:var(--bg-card); border-color:var(--cartoon-green-deep);">
-              <strong style="color:var(--cartoon-green-deep); font-size:0.85rem;">Beats 04 to 12 (Complete Script Beats Loaded):</strong>
-              <p style="margin-top:8px; font-size:0.86rem; line-height:1.6; color:var(--text-muted);">
-                • <strong>Beat 04 (3:00–4:15):</strong> The Mathematics of Conformal Inflation (secant latitude stretching).<br>
-                • <strong>Beat 05 (4:15–5:30):</strong> Why the Poles Explode (Greenland vs Africa, Antarctica inflating to infinite height).<br>
-                • <strong>Beat 06 (5:30–6:45):</strong> The Peters Projection Rebellion of 1973 (Equal-area map politics).<br>
-                • <strong>Beat 07 (6:45–8:00):</strong> The Mid-Video Retention Turn (Why Peters & Gall-Peters stretch shapes into ugly rectangles).<br>
-                • <strong>Beat 08 (8:00–9:15):</strong> The 2005 Silicon Valley Decision (Google Maps adopts EPSG:3857 Web Mercator).<br>
-                • <strong>Beat 09 (9:15–10:30):</strong> The Square Tile Architecture (256x256 pixel grid pyramid running modern web mapping).<br>
-                • <strong>Beat 10 (10:30–11:30):</strong> The Real-World Perception Cost (How distorted maps bias global economic trade views).<br>
-                • <strong>Beat 11 (11:30–12:30):</strong> Modern Alternatives (Equal Earth, Authagraph, Dynamic 3D Vector Globes).<br>
-                • <strong>Beat 12 (12:30–13:14):</strong> Final Debate Resolution ("Maps are not pictures of the world. They are mathematical tools designed for a single job.")
+            <!-- Summary of Beats 4 to 12 -->
+            <div class="intel-block" style="background:var(--bg-card); border-color:var(--cartoon-blue-deep);">
+              <strong style="color:var(--cartoon-blue-deep);">Beats 04 to 12 Architecture Loaded:</strong>
+              <p style="margin-top:6px; font-size:0.84rem; line-height:1.6; color:var(--text-muted);">
+                • <strong>Beat 04 (3:10–4:30):</strong> The Ger District Ring — Sprawling unplanned suburbs without plumbing.<br>
+                • <strong>Beat 05 (4:30–5:45):</strong> The Smoke Valley — Winter coal burning creating the world's most polluted air basin.<br>
+                • <strong>Beat 06 (5:45–7:00):</strong> The Economic Chokepoint — Mining boom vs nomadic pastoralism.<br>
+                • <strong>Beat 07 (7:00–8:15):</strong> The Mid-Video Retention Turn — Why relocating people back to the steppe fails.<br>
+                • <strong>Beat 08 (8:15–9:30):</strong> The Infrastructure Reality — Thousands of miles of unpaved tracks.<br>
+                • <strong>Beat 09 (9:30–10:45):</strong> Geopolitical Buffer — Living between Russia and China.<br>
+                • <strong>Beat 10 (10:45–11:45):</strong> The 2030 Demographics — Will the steppe empty completely?<br>
+                • <strong>Beat 11 (11:45–12:20):</strong> Modern High-Tech Herding (GPS collars & solar-powered gers).<br>
+                • <strong>Beat 12 (12:20–12:48):</strong> The Final Question — "Can a culture built on infinite space survive inside a single valley?"
               </p>
             </div>
           </div>
         </section>
 
-        <!-- TAB 2: DERIVED SHORTS SUITE (§12) -->
+        <!-- TAB 3: DERIVED SHORTS SUITE (§12) -->
         <section class="studio-pane" id="tab-shorts">
           <div class="studio-card">
             <div class="studio-card-head">
               <div>
-                <h2>Derived Vertical Shorts Suite (§12 Extraction Standard)</h2>
-                <p style="color:var(--text-muted); font-size:0.84rem; margin-top:4px;">Two Distinct Standalone Shorts extracted directly from approved V1 Long Script.</p>
+                <h2>Derived Vertical Shorts Suite (§12 Standard)</h2>
+                <p style="color:var(--text-muted); font-size:0.84rem; margin-top:4px;">Two Standalone Vertical Shorts extracted from V2 Master Narrative.</p>
               </div>
               <span class="pill-tag" style="background:var(--cartoon-coral); color:#FFFFFF;">Vertical 9:16 · 1080×1920</span>
             </div>
 
-            <!-- Short 1A -->
+            <!-- Short 2A -->
             <article style="background:var(--bg-canvas); border:3px solid var(--ink); border-radius:var(--radius-lg); padding:24px; margin-bottom:28px; box-shadow:var(--shadow-block-sm);">
               <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:14px;">
                 <div>
-                  <span class="pill-tag" style="background:var(--cartoon-yellow);">Short 1 of 2 · V1-Short-A</span>
-                  <h3 style="font-size:1.3rem; margin-top:6px;">The 14x Greenland vs Africa Size Comparison</h3>
+                  <span class="pill-tag" style="background:var(--cartoon-yellow);">Short 1 of 2 · V2-Short-A</span>
+                  <h3 style="font-size:1.3rem; margin-top:6px;">Four European Countries Fit Inside This Empty Land</h3>
                 </div>
-                <span class="pill-tag">Runtime: 68s · 8 Clips</span>
+                <span class="pill-tag">Runtime: 66s · 8 Clips</span>
               </div>
 
               <div class="intel-block" style="margin-bottom:16px;">
                 <strong>Hook (Clip 1, 0:00–0:08):</strong>
-                "Greenland is not the size of Africa. It fits inside it fourteen times."
+                "Four entire European countries fit inside this one—and almost nobody lives in it."
               </div>
 
               <div style="display:flex; flex-direction:column; gap:10px; font-size:0.86rem; color:var(--text-dark);">
                 <div style="background:var(--bg-card); padding:10px 14px; border-radius:var(--radius-sm); border:2px solid var(--ink);">
-                  <strong>Clip 1 (0:00–0:08):</strong> "Greenland is not the size of Africa. It fits inside it fourteen times." → <em>Visual: Amber Greenland drops into Africa.</em>
+                  <strong>Clip 1 (0:00–0:08):</strong> "Four entire European countries fit inside this one—and almost nobody lives in it." → <em>Visual: UK, France, Germany, Italy nest into Mongolia.</em>
                 </div>
                 <div style="background:var(--bg-card); padding:10px 14px; border-radius:var(--radius-sm); border:2px solid var(--ink);">
-                  <strong>Clip 2 (0:08–0:16):</strong> "The US, China, India, and all of Western Europe fit inside Africa together." → <em>Visual: 4 countries puzzle-fit into Africa.</em>
+                  <strong>Clip 2 (0:08–0:16):</strong> "Mongolia is the size of Western Europe, but has fewer people than Madrid." → <em>Visual: Population density comparison counters.</em>
                 </div>
                 <div style="background:var(--bg-card); padding:10px 14px; border-radius:var(--radius-sm); border:2px solid var(--ink);">
-                  <strong>Clip 3 (0:16–0:24):</strong> "Africa is 30.3 million square kilometres. Greenland is barely 2.1 million." → <em>Visual: Split data bar counters.</em>
+                  <strong>Clip 3 (0:16–0:24):</strong> "That's barely 2 people per square kilometre—the lowest on Earth." → <em>Visual: Lone yurt in vast endless grassland.</em>
                 </div>
                 <div style="background:var(--bg-card); padding:10px 14px; border-radius:var(--radius-sm); border:2px solid var(--ink);">
-                  <strong>Clip 4 (0:24–0:32):</strong> "So why does your wall map show them as identical twins?" → <em>Visual: Camera pulls back to classroom wall map.</em>
+                  <strong>Clip 4 (0:24–0:32):</strong> "Less than 1% of the land can grow crops due to high altitude and harsh soil." → <em>Visual: Arid mountain pass and dry steppe.</em>
                 </div>
                 <div style="background:var(--bg-card); padding:10px 14px; border-radius:var(--radius-sm); border:2px solid var(--ink);">
-                  <strong>Clip 5 (0:32–0:40):</strong> "Because in 1569, sailors needed straight compass lines, not true country sizes." → <em>Visual: 16th century ship compass chart.</em>
+                  <strong>Clip 5 (0:32–0:40):</strong> "So for centuries, survival meant moving herds across hundreds of miles." → <em>Visual: Nomadic horsemen galloping across plain.</em>
                 </div>
                 <div style="background:var(--bg-card); padding:10px 14px; border-radius:var(--radius-sm); border:2px solid var(--ink);">
-                  <strong>Clip 6 (0:40–0:48):</strong> "Mercator stretched the poles to preserve angles, inflating northern lands by 400%." → <em>Visual: Topo grid expanding at poles.</em>
+                  <strong>Clip 6 (0:40–0:48):</strong> "Today, half the country has moved into a single city valley." → <em>Visual: Ulaanbaatar dense high-rises and yurt suburbs.</em>
                 </div>
                 <div style="background:var(--bg-card); padding:10px 14px; border-radius:var(--radius-sm); border:2px solid var(--ink);">
-                  <strong>Clip 7 (0:48–0:56):</strong> "Even in 2026, web maps still keep this projection to render square tiles." → <em>Visual: Google Maps tile loading animation.</em>
+                  <strong>Clip 7 (0:48–0:56):</strong> "Making the emptiest country on Earth also one of the most crowded." → <em>Visual: Heavy traffic in Ulaanbaatar city center.</em>
                 </div>
                 <div style="background:var(--bg-card); padding:10px 14px; border-radius:var(--radius-sm); border:2px solid var(--ink);">
-                  <strong>Clip 8 (0:56–1:08):</strong> "Should schools ban the Mercator map forever, or does it still have a purpose? Tell me below." → <em>Visual: Dynamic 3D spinning globe.</em>
+                  <strong>Clip 8 (0:56–1:06):</strong> "Would you live in a country with this much empty space? Tell me below." → <em>Visual: 3D spinning terrain map.</em>
                 </div>
               </div>
             </article>
 
-            <!-- Short 1B -->
+            <!-- Short 2B -->
             <article style="background:var(--bg-canvas); border:3px solid var(--ink); border-radius:var(--radius-lg); padding:24px; box-shadow:var(--shadow-block-sm);">
               <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:14px;">
                 <div>
-                  <span class="pill-tag" style="background:var(--cartoon-blue); color:#FFFFFF;">Short 2 of 2 · V1-Short-B</span>
-                  <h3 style="font-size:1.3rem; margin-top:6px;">Why Your Phone Still Uses a 1569 Sailing Map</h3>
+                  <span class="pill-tag" style="background:var(--cartoon-blue); color:#FFFFFF;">Short 2 of 2 · V2-Short-B</span>
+                  <h3 style="font-size:1.3rem; margin-top:6px;">The Deadly Weather Event That Empties the Steppe</h3>
                 </div>
-                <span class="pill-tag">Runtime: 72s · 8 Clips</span>
+                <span class="pill-tag">Runtime: 70s · 8 Clips</span>
               </div>
 
               <div class="intel-block" style="margin-bottom:16px;">
                 <strong>Hook (Clip 1, 0:00–0:08):</strong>
-                "Your smartphone navigation still relies on a sailing map drawn in 1569. There is a genius reason why."
+                "One bad winter can end a nomadic family's entire livelihood—and it moves them 400 miles."
               </div>
 
               <div style="display:flex; flex-direction:column; gap:10px; font-size:0.86rem; color:var(--text-dark);">
                 <div style="background:var(--bg-card); padding:10px 14px; border-radius:var(--radius-sm); border:2px solid var(--ink);">
-                  <strong>Clip 1 (0:00–0:08):</strong> "Your smartphone navigation still relies on a sailing map drawn in 1569. There is a genius reason why." → <em>Visual: Smartphone GPS screen crossfading to 1569 chart.</em>
+                  <strong>Clip 1 (0:00–0:08):</strong> "One bad winter can end a nomadic family's entire livelihood—and it moves them 400 miles." → <em>Visual: Snowy blizzard over wooden corral.</em>
                 </div>
                 <div style="background:var(--bg-card); padding:10px 14px; border-radius:var(--radius-sm); border:2px solid var(--ink);">
-                  <strong>Clip 2 (0:08–0:16):</strong> "In 2005, when Google built Google Maps, they had dozens of accurate world projections to pick." → <em>Visual: Multi-map projection carousel.</em>
+                  <strong>Clip 2 (0:08–0:16):</strong> "Mongolians call it the Dzud—when temperatures drop to minus 45 degrees Celsius." → <em>Visual: Frost crystal thermometer dropping.</em>
                 </div>
                 <div style="background:var(--bg-card); padding:10px 14px; border-radius:var(--radius-sm); border:2px solid var(--ink);">
-                  <strong>Clip 3 (0:16–0:24):</strong> "They picked Web Mercator—the exact map notorious for exaggerating the Arctic." → <em>Visual: Zooming into Web Mercator EPSG:3857 spec.</em>
+                  <strong>Clip 3 (0:16–0:24):</strong> "Thick sheets of solid ice seal the ground, starving millions of animals." → <em>Visual: Frozen snow crust over steppe.</em>
                 </div>
                 <div style="background:var(--bg-card); padding:10px 14px; border-radius:var(--radius-sm); border:2px solid var(--ink);">
-                  <strong>Clip 4 (0:24–0:32):</strong> "Why? Because Mercator preserves 90-degree street corners at local zoom levels." → <em>Visual: Manhattan street grid staying perfectly orthogonal.</em>
+                  <strong>Clip 4 (0:24–0:32):</strong> "When herds die, families pack their traditional tents onto trucks." → <em>Visual: Truck carrying disassembled yurt across dirt road.</em>
                 </div>
                 <div style="background:var(--bg-card); padding:10px 14px; border-radius:var(--radius-sm); border:2px solid var(--ink);">
-                  <strong>Clip 5 (0:32–0:40):</strong> "Equal-area maps distort angles, turning square city blocks into skewed parallelograms." → <em>Visual: Gall-Peters shearing street intersections.</em>
+                  <strong>Clip 5 (0:32–0:40):</strong> "They move to Ulaanbaatar, setting up gers along the city hillsides." → <em>Visual: Sprawling ger district rooftops.</em>
                 </div>
                 <div style="background:var(--bg-card); padding:10px 14px; border-radius:var(--radius-sm); border:2px solid var(--ink);">
-                  <strong>Clip 6 (0:40–0:48):</strong> "Mercator also divides cleanly into 256-pixel square tiles that load instantly across millions of phones." → <em>Visual: 256x256 web tile grid pyramid.</em>
+                  <strong>Clip 6 (0:40–0:48):</strong> "Over 40,000 herders migrate into the capital every single decade." → <em>Visual: Urban population growth bar graph.</em>
                 </div>
                 <div style="background:var(--bg-card); padding:10px 14px; border-radius:var(--radius-sm); border:2px solid var(--ink);">
-                  <strong>Clip 7 (0:48–0:56):</strong> "So the map isn't broken—it was perfectly engineered for street-level navigation." → <em>Visual: Hand holding phone navigating busy city street.</em>
+                  <strong>Clip 7 (0:48–0:56):</strong> "This turns centuries of nomadic heritage into an urban scramble for jobs." → <em>Visual: Young Mongolian walking into modern office building.</em>
                 </div>
                 <div style="background:var(--bg-card); padding:10px 14px; border-radius:var(--radius-sm); border:2px solid var(--ink);">
-                  <strong>Clip 8 (0:56–1:12):</strong> "Did you know your GPS was using a 450-year-old compass trick? Drop your thoughts below." → <em>Visual: Glowing route line navigating 3D city map.</em>
+                  <strong>Clip 8 (0:56–1:10):</strong> "Is climate change ending nomadism forever? Share your view below." → <em>Visual: Sunset over lonely steppe landscape.</em>
                 </div>
               </div>
             </article>
-          </div>
-        </section>
-
-        <!-- TAB 3: GOOGLE FLOW AI PROMPTS -->
-        <section class="studio-pane" id="tab-prompts">
-          <div class="studio-card">
-            <div class="studio-card-head">
-              <div>
-                <h2>Google Flow AI Cinematography Cue Sheet (24 Prompts)</h2>
-                <p style="color:var(--text-muted); font-size:0.84rem; margin-top:4px;">Deterministic, flow-safe prompt formulas formatted to §20 standards.</p>
-              </div>
-              <span class="pill-tag" style="background:var(--cartoon-yellow);">1-Click Copy Formulas</span>
-            </div>
-
-            <!-- Prompt 1 -->
-            <div class="prompt-table-card">
-              <div style="display:flex; justify-content:space-between; align-items:center;">
-                <strong>Shot 01 · Wall Map Mercator Zoom (Beat 1)</strong>
-                <span class="pill-tag">16:9 · 8s</span>
-              </div>
-              <div class="prompt-code-box">
-                <button class="copy-mini-btn" onclick="copySnippet(this)">Copy</button>
-                <span>Documentary photography, vintage wooden classroom with large Mercator projection wall map, slow high-altitude straight-down camera push, warm soft morning sunlight, sharp focus on African continent and Greenland, clean 8k resolution, photorealistic, no text, no captions --ar 16:9</span>
-              </div>
-            </div>
-
-            <!-- Prompt 2 -->
-            <div class="prompt-table-card">
-              <div style="display:flex; justify-content:space-between; align-items:center;">
-                <strong>Shot 02 · 16th Century Atlantic Sailing Galleon (Beat 3)</strong>
-                <span class="pill-tag">16:9 · 8s</span>
-              </div>
-              <div class="prompt-code-box">
-                <button class="copy-mini-btn" onclick="copySnippet(this)">Copy</button>
-                <span>Documentary photography, 16th-century wooden Spanish galleon sailing in turbulent deep Atlantic ocean, low-angle forward tracking camera, dramatic overcast lighting with shafts of sun, misty sea spray, cinematic realism, no text --ar 16:9</span>
-              </div>
-            </div>
-
-            <!-- Prompt 3 -->
-            <div class="prompt-table-card">
-              <div style="display:flex; justify-content:space-between; align-items:center;">
-                <strong>Shot 03 · Antique Nautical Chart & Brass Calipers (Beat 3)</strong>
-                <span class="pill-tag">16:9 · 8s</span>
-              </div>
-              <div class="prompt-code-box">
-                <button class="copy-mini-btn" onclick="copySnippet(this)">Copy</button>
-                <span>Documentary photography, antique parchment navigational sea chart with rhumb lines, brass compass calipers resting on map, warm candlelight glowing in dark captain's cabin, shallow depth of field, 8k resolution, no text --ar 16:9</span>
-              </div>
-            </div>
-
-            <!-- Prompt 4 -->
-            <div class="prompt-table-card">
-              <div style="display:flex; justify-content:space-between; align-items:center;">
-                <strong>Shot 04 · Modern Urban Street Grid (Beat 8)</strong>
-                <span class="pill-tag">16:9 · 8s</span>
-              </div>
-              <div class="prompt-code-box">
-                <button class="copy-mini-btn" onclick="copySnippet(this)">Copy</button>
-                <span>Documentary photography, high-altitude orthogonal aerial view of Manhattan street grid intersections, straight down satellite motion, golden hour directional sunlight casting sharp building shadows, hyper-detailed architectural geometry, no text --ar 16:9</span>
-              </div>
-            </div>
           </div>
         </section>
 
@@ -1437,39 +1341,34 @@
         <section class="studio-pane" id="tab-research">
           <div class="studio-card">
             <div class="studio-card-head">
-              <h2>Research Card & Verified Fact Sheet (§13.4)</h2>
-              <span class="pill-tag" style="background:var(--cartoon-green);">Tier 1 Data Integrity</span>
+              <h2>Research Card & Fact-Checks (§13.4)</h2>
+              <span class="pill-tag" style="background:var(--cartoon-green);">Verified Accuracy</span>
             </div>
 
             <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:18px;">
               <div class="intel-block">
-                <strong>Area Comparison (Verified):</strong>
-                • Africa: 30,370,000 km² (CIA World Factbook 2024)<br>
-                • Greenland: 2,166,086 km²<br>
-                • Exact Ratio: 14.02x larger on the ground.
+                <strong>Area & Density Figures:</strong>
+                • Total Area: 1,564,116 km² (18th largest globally)<br>
+                • Population: 3,450,000 (UN WPP 2024)<br>
+                • Density: 2.2 people/km² (Lowest on Earth).
               </div>
 
               <div class="intel-block">
-                <strong>Nested Landmass Benchmark:</strong>
-                • USA: 9.83M km²<br>
-                • China: 9.60M km²<br>
-                • India: 3.29M km²<br>
-                • Western Europe: 4.10M km²<br>
-                <em>Total: 26.82M km² (all fit inside Africa with 3.55M km² left).</em>
+                <strong>European Size Equivalents:</strong>
+                • UK (243K) + France (551K) + Germany (357K) + Italy (302K) = 1,453,000 km²<br>
+                <em>Combined area of all 4 is smaller than Mongolia alone!</em>
               </div>
 
               <div class="intel-block">
-                <strong>Historical Dates & Cartographer:</strong>
-                • Gerardus Mercator (1512–1594)<br>
-                • Map Published: 1569 in Duisburg (18 sheets)<br>
-                • Title: <em>Nova et Aucta Orbis Terrae Descriptio</em>.
+                <strong>Ulaanbaatar Urban Primacy:</strong>
+                • City Population: ~1.65 Million (~48% of total nation)<br>
+                • Elevation: 1,350 metres (Coldest capital city on Earth).
               </div>
 
               <div class="intel-block">
-                <strong>Web Standard Spec:</strong>
-                • Spec Name: Web Mercator / Google Mercator<br>
-                • EPSG Registry Code: EPSG:3857 / WGS 84<br>
-                • Tile Pyramid: 256×256 PNGs per zoom level.
+                <strong>Dzud Loss Statistics:</strong>
+                • 2010 Dzud: Over 8.5 million livestock died (~20% of national herd)<br>
+                • 2023–2024 Dzud: Over 5.9 million livestock lost (FAO Report).
               </div>
             </div>
           </div>
@@ -1485,35 +1384,23 @@
 
             <div style="display:flex; flex-direction:column; gap:16px;">
               <div class="intel-block">
-                <strong>Primary Title (43 Chars):</strong>
-                Every Map You've Seen Is Lying About Africa
+                <strong>Primary Title (53 Chars):</strong>
+                Why Nobody Lives in the Most Empty Country on Earth
               </div>
 
               <div class="intel-block">
-                <strong>A/B Test Title (36 Chars):</strong>
-                Why Africa Is Bigger Than You Think
+                <strong>A/B Title Option (46 Chars):</strong>
+                The Country With 2 People Per Square Kilometre
+              </div>
+
+              <div class="intel-block">
+                <strong>Thumbnail Concept & 3-5 Word Text:</strong>
+                Mongolia country outline in bright amber with UK, France, Germany, Italy nested inside. Text: <strong>"2 PEOPLE PER KM²"</strong>
               </div>
 
               <div class="intel-block">
                 <strong>Pinned Comment Strategy (§26.7):</strong>
-                "If you had to pick one map for classroom walls—between true shape (Mercator) and true area (Equal Earth)—which would you choose and why? Let's discuss in the replies."
-              </div>
-
-              <div class="intel-block">
-                <strong>Target Description & Chapters:</strong>
-                <pre style="font-size:0.78rem; line-height:1.5; color:var(--text-muted); background:var(--bg-card); padding:12px; border-radius:var(--radius-sm); border:1.5px solid var(--ink);">
-On every world map on your wall, Greenland appears the same size as Africa. In reality, Africa is 14 times larger. Here is the mathematical reason why 1569 sailing physics still controls our digital maps in 2026.
-
-0:00 - The Wall Map Lie
-0:45 - The True Scale of Africa
-1:45 - Why Gerardus Mercator Built It (1569)
-3:00 - Rhumb Lines vs Great Circles
-5:30 - The 1973 Peters Projection Controversy
-8:00 - Why Google Maps Chose Mercator in 2005
-10:30 - The Real Cost of Map Distortion
-12:30 - The Perfect Map Solution
-
-#Geography #Maps #Africa #Cartography</pre>
+                "If half a country's population moves into a single city valley, does the culture change permanently, or can nomadic tradition survive? What do you think?"
               </div>
             </div>
           </div>
@@ -1521,7 +1408,7 @@ On every world map on your wall, Greenland appears the same size as Africa. In r
 
         <!-- Footer -->
         <footer style="margin-top: 100px; padding-top: 36px; border-top: 3.5px dashed var(--ink); text-align: center; color: var(--text-faint); font-size: 0.84rem; font-weight: 700;">
-          <p><strong style="color: var(--cartoon-blue-deep);">Hidden Geography</strong> · Production OS v2.1 · Video 1 (V1) Production Studio</p>
+          <p><strong style="color: var(--cartoon-blue-deep);">Hidden Geography</strong> · Production OS v2.1 · Video 2 (V2) Production Studio</p>
           <p style="margin-top: 6px; font-size: 0.72rem; color: var(--text-faint);">Strict Tier 1 Cadence · 1 Long Video + 2 Shorts / Week · Persistent LocalStorage Sync</p>
         </footer>
 
@@ -1533,7 +1420,7 @@ On every world map on your wall, Greenland appears the same size as Africa. In r
   <div class="toast-pill" id="toastMsg">Formula Copied to Clipboard!</div>
 
   <script>
-    // Cartoon Theme Switcher Logic
+    // Theme Switcher Logic
     const themeToggleBtn = document.getElementById("themeToggle");
     const themeIcon = document.getElementById("themeIcon");
 
