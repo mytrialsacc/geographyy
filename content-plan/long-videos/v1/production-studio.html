@@ -786,16 +786,74 @@
           </div>
         </section>
 
-        <!-- Clean Tab Switcher Bar -->
+                <!-- Clean Tab Switcher Bar -->
         <nav class="studio-tab-bar">
-          <button class="tab-btn active" data-tab="tab-script">🎬 8-Second Synchronized Clips Studio</button>
+          <button class="tab-btn active" data-tab="tab-teleprompter">🎙️ Full Voiceover Script (Teleprompter)</button>
+          <button class="tab-btn" data-tab="tab-script">🎬 8-Second Synchronized Clips (58 Shots)</button>
           <button class="tab-btn" data-tab="tab-shorts">⚡ Derived Shorts Suite (§12)</button>
           <button class="tab-btn" data-tab="tab-research">📋 Research & Fact Sheet</button>
           <button class="tab-btn" data-tab="tab-packaging">🏷️ Packaging & SEO</button>
         </nav>
 
+                <!-- TAB 0: CONTINUOUS FULL VOICEOVER SCRIPT (TELEPROMPTER MODE) -->
+        <section class="tab-pane active" id="tab-teleprompter">
+          <div class="clean-beat-container">
+            <div class="beat-section-header">
+              <div class="beat-title-wrap">
+                <span class="beat-badge" style="background:var(--accent-green); color:#FFFFFF;">TELEPROMPTER</span>
+                <h3>Full Continuous Voiceover Master Script</h3>
+              </div>
+              <div style="display:flex; align-items:center; gap:10px;">
+                <span class="beat-time-badge">13:14 min · 1,780 words</span>
+                <button class="clean-copy-btn" style="padding:6px 16px; font-size:0.82rem;" onclick="copyFullScript()">📋 Copy Full Voiceover Script</button>
+              </div>
+            </div>
+
+            <div class="clip-vo-line" style="border-left:5px solid var(--accent-green); padding:24px 28px; background:var(--bg-card);">
+              <p class="vo-text" id="fullVoText" style="font-size:1.15rem; line-height:1.9; white-space:pre-wrap; font-weight:600; color:var(--text-dark);">Every Map You've Seen Is Lying About Africa
+Full Voiceover Master Script (1,780 Words · Runtime: ~13:14)
+
+[BEAT 01: THE HOOK · 0:00 - 0:45]
+On the map on your wall, Greenland looks about the same size as Africa. On the ground, Africa is fourteen times larger. The entire United States, China, India, and almost all of Western Europe could sit inside the African continent simultaneously with thousands of square miles to spare. Yet for four hundred and fifty-seven years, almost every school classroom, atlas, and smartphone on Earth has shown you a world where the Northern Hemisphere is artificially magnified, and the equator is squeezed. This was not an accident, and it wasn't a printing mistake. It was a calculated mathematical decision made in 1569—and there is a reason we still refuse to fix it.
+
+[BEAT 02: THE TRUE SCALE · 0:45 - 1:45]
+To understand the true scale of the distortion, look at the actual numbers. Africa spans thirty point three seven million square kilometres. Greenland is just two point one six million. But when you flatten a three-dimensional sphere onto a two-dimensional sheet of paper, pure geometry makes distortion inevitable. In 1828, Carl Friedrich Gauss proved mathematically in his Theorema Egregium that no sphere can ever be flattened onto a plane without stretching, shrinking, or tearing its surface. Every map maker in human history has had to choose what to sacrifice: area, shape, angle, or distance. You can preserve shapes, or you can preserve true sizes—but you can never preserve both. In 1569, a Flemish cartographer named Gerardus Mercator made a choice that changed human navigation forever.
+
+[BEAT 03: THE 1569 NAVIGATOR PROBLEM · 1:45 - 3:00]
+Mercator was not designing a decorative poster for school children. He was building a survival tool for 16th-century sea captains crossing uncharted oceans with crude magnetic compasses. On an ordinary spherical globe, if a sailor wants to travel from Lisbon to Havana along a single compass bearing—say, southwest by west—the shortest geographic route is a curved arc called a great circle. But sailing along a great circle requires recalculating your steering compass every single hour. In rough stormy seas with heavy cloud cover, that calculation error meant missing your port or crashing into submerged coral reefs. Mercator wanted a map where a straight line drawn with a simple wooden ruler between any two ports on Earth was a line of constant compass bearing—a rhumb line. If you drew a straight line across his map and kept your compass pointing at that exact angle, you were guaranteed to reach your destination.
+
+[BEAT 04: THE CONFORMAL MATHEMATICS · 3:00 - 4:15]
+To turn curved compass bearings into straight lines, Mercator imagined wrapping a cylinder of paper around the Earth's equator. On a real globe, lines of longitude converge and meet at the North and South Poles. But on a flat cylinder, all lines of longitude remain strictly vertical and parallel. This means that as you travel north toward the Arctic, the map stretches east-to-west. At sixty degrees north, land is stretched to twice its true width. To keep compass angles accurate—a mathematical property called conformality—Mercator had to stretch the map north-to-south by the exact same mathematical ratio. He stretched the vertical spacing between latitude lines by the secant of the latitude angle. The result was pure geometric genius: local shapes and angles remained completely undistorted. A square building on the ground stayed a square on the map. But the price of this perfection was catastrophic area distortion at high latitudes.
+
+[BEAT 05: WHY THE POLES EXPLODE · 4:15 - 5:30]
+At the equator, where Africa sits, Mercator distortion is zero percent. One square inch on the map represents exactly the same land area as one square inch on the ground. But as you move away from the equator, the math explodes. At forty-five degrees latitude, land is magnified by two hundred percent. At sixty degrees latitude, where Scandinavia and Greenland sit, landmasses are inflated by four hundred percent. By seventy-five degrees, the inflation reaches a staggering one thousand five hundred percent. At eighty degrees north, land appears thirty-three times larger than it actually is. At the exact North and South Poles, the secant of ninety degrees reaches mathematical infinity. This is why standard Mercator wall maps never show the true poles—they simply truncate the map at eighty-five degrees north. If they didn't, the map would have to be infinitely tall.
+
+[BEAT 06: THE 1973 PETERS REBELLION · 5:30 - 6:45]
+For centuries, this mathematical inflation went largely unquestioned. But in May 1973, a German historian named Arno Peters called a massive press conference in Bonn. Peters accused the cartography establishment of deliberate Eurocentric racism. He argued that the Mercator projection gave European colonial powers an inflated psychological sense of superiority by making small European nations look massive while diminishing the developing nations of Africa, South America, and South Asia. Peters unveiled his own solution: an equal-area projection that represented every country's true land area precisely. His map became an overnight sensation, adopted by the United Nations, church organizations, and school boards worldwide. But among professional cartographers, the reaction was not praise. It was sheer fury.
+
+[BEAT 07: THE MID-VIDEO RETENTION TURN · 6:45 - 8:00]
+Cartographers were furious for two reasons. First, Arno Peters had not invented the map at all. A Scottish clergyman named James Gall had published the identical projection one hundred and eighteen years earlier, in 1855. Second, and far more critically, while the Gall-Peters projection gave countries their true geographic area, it completely butchered their shapes. In order to squeeze tropical continents into equal areas, Peters stretched Africa and South America into elongated, narrow vertical ribbons. Africa looked like wet laundry hanging from a clothesline. The human brain recognizes geography primarily through coastline shapes, not abstract square mileage. A child looking at a Gall-Peters map learns true land proportions, but completely loses the ability to recognize landmass contours or navigate local directions. The cure was as flawed as the disease.
+
+[BEAT 08: THE 2005 SILICON VALLEY DILEMMA · 8:00 - 9:15]
+You might assume that with modern satellite imagery and supercomputers, we would have abandoned Mercator in the digital age. But in 2005, when Google built Google Maps, their engineering team had dozens of scientifically accurate projections to choose from: Robinson, Winkel Tripel, Equal Earth. Yet Google deliberately chose Mercator. Why? Because when you open your smartphone to find a coffee shop on a city street, you are not comparing the size of Greenland to Africa. You are navigating street intersections. Because Mercator preserves angles locally, a perpendicular ninety-degree street intersection on the ground is displayed as a perfect ninety-degree right angle on your screen. On an equal-area map, every city block in New York or Tokyo would appear skewed into an angled parallelogram.
+
+[BEAT 09: THE EPSG:3857 TILE ENGINE · 9:15 - 10:30]
+There was another massive computer science advantage. By truncating the polar regions at eighty-five degrees north and south, the Mercator projection flattens the entire inhabited surface of the Earth into a perfect square. A square can be divided evenly into four smaller squares, each of those into four more, creating a seamless multi-level tile pyramid. Web servers can store the world as pre-rendered 256-by-256 pixel PNG tiles. When you swipe across your phone screen, your device only downloads the specific four or five tiles visible in your viewport. This standard, now officially catalogued as EPSG:3857 or Web Mercator, was adopted by Apple Maps, OpenStreetMap, Mapbox, and Bing Maps. The convenience of square tile math permanently locked 1569 navigation physics into the architecture of the modern internet.
+
+[BEAT 10: THE PSYCHOLOGICAL & ECONOMIC COST · 10:30 - 11:30]
+While Web Mercator is flawless for street navigation, keeping it on classroom walls has created profound unconscious cognitive biases. When generations of students grow up seeing Europe look larger than South America, and Greenland look larger than the entire African continent, it distorts our intuitive perception of global resource distribution, population capacity, and economic gravity. In reality, Africa is larger than the United States, China, India, Western Europe, and Japan combined. Its mineral reserves, solar energy potential, and agricultural land are vast. Yet in global policy discussions, the continent is often discussed as if it were a single small country, largely because of the lingering visual subconscious imprint of 16th-century nautical charts.
+
+[BEAT 11: THE MODERN ALTERNATIVES · 11:30 - 12:30]
+Fortunately, modern cartography has solved this dilemma. In 2018, cartographers Bojan Savric, Tom Patterson, and Bernhard Jenny released the Equal Earth projection. It preserves true relative areas with zero distortion of land sizes, while using gentle curved meridians to keep continent shapes natural and visually pleasing. Boston Public Schools recently replaced all classroom wall maps with Equal Earth and Gall-Peters alternatives. Simultaneously, Google Maps updated its desktop browser client to seamlessly switch from flat Web Mercator into a full 3D interactive spinning globe once you zoom out beyond continental scale. For the first time in five centuries, you can zoom into your local street using Mercator angles, and zoom out to view Africa in its true spherical magnificence.
+
+[BEAT 12: THE FINAL RESOLUTION · 12:30 - 13:14]
+Maps are not photographs of our planet. They are mathematical compromises created by human beings to solve specific human problems. Gerardus Mercator did not lie to us about Africa. He built the greatest navigational tool in maritime history. The mistake was never his—the mistake was ours, for taking a tool designed for 16th-century sailors across stormy oceans, and pinning it onto the walls of school classrooms for four hundred and fifty years. The next time you look at a world map, remember: the earth is not flat, no flat map is perfect, and Africa is far, far bigger than you were ever taught.</p>
+            </div>
+          </div>
+        </section>
+
         <!-- TAB 1: GRANULAR 8-SECOND CLIPS -->
-        <section class="tab-pane active" id="tab-script">
+        <section class="tab-pane" id="tab-script">
           <!-- BEAT 01 -->
           <article class="clean-beat-container">
             <div class="beat-section-header">
@@ -3292,6 +3350,15 @@
       toast.textContent = txt;
       toast.classList.add("show");
       setTimeout(() => toast.classList.remove("show"), 2000);
+    }
+
+        function copyFullScript() {
+      const fullText = document.getElementById("fullVoText");
+      if (fullText) {
+        navigator.clipboard.writeText(fullText.innerText).then(() => {
+          showToast("Full Voiceover Script Copied!");
+        });
+      }
     }
 
     function copyPrompt(btn) {
