@@ -72,7 +72,7 @@
       -webkit-font-smoothing: antialiased;
     }
 
-    h1, h2, h3, h4, .brand-title, .clip-number-badge {
+    h1, h2, h3, h4, .brand-title, .clip-filename-pill {
       font-family: "Fredoka", sans-serif;
       font-weight: 700;
       letter-spacing: -0.01em;
@@ -341,7 +341,7 @@
       gap: 16px;
     }
 
-    /* Single Clip Card (Ultra Clean) */
+    /* Single Clip Card (Clean & Filename focused) */
     .single-clip-card {
       background: var(--bg-surface);
       border: 1.5px solid var(--border-medium);
@@ -363,20 +363,39 @@
       border-bottom: 1px solid var(--border-subtle);
     }
 
-    .clip-number-badge {
-      font-size: 0.84rem;
+    .clip-title-group {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .clip-filename-pill {
+      font-size: 0.88rem;
       font-weight: 800;
       background: #0F172A;
-      color: #FFFFFF;
-      padding: 2px 10px;
+      color: #F8FAFC;
+      padding: 4px 12px;
       border-radius: 6px;
+      letter-spacing: 0.02em;
     }
+    .clip-filename-pill strong { color: var(--accent-yellow); }
 
     .clip-time-range {
       font-family: "JetBrains Mono", monospace;
       font-size: 0.82rem;
       font-weight: 800;
       color: var(--accent-blue);
+    }
+
+    .clip-type-pill {
+      font-size: 0.76rem;
+      font-weight: 800;
+      background: #E0F2FE;
+      color: #0369A1;
+      border: 1px solid #BAE6FD;
+      padding: 3px 10px;
+      border-radius: var(--radius-pill);
     }
 
     /* Clip Prompt Box */
@@ -526,7 +545,7 @@
     <!-- Quick Jump Bar -->
     <nav class="anchor-nav-bar">
       <a class="anchor-pill" href="#step1-voiceover">🎙️ Step 1: Full Voiceover Script</a>
-      <a class="anchor-pill" href="#step2-clips">🎬 Step 2: Clips & Prompts Sequence</a>
+      <a class="anchor-pill" href="#step2-clips">🎬 Step 2: Flow AI Prompts (v2-s01-a...)</a>
       <a class="anchor-pill" href="#step3-shorts">⚡ Step 3: YouTube Shorts</a>
     </nav>
 
@@ -534,8 +553,8 @@
     <section class="production-section" id="step1-voiceover">
       <div class="section-banner-head">
         <div>
-          <span class="clip-number-badge" style="background:var(--accent-yellow); color:#0F172A;">STEP 1</span>
-          <h2 class="section-head-title" style="margin-top:6px;">🎙️ Full Voiceover Script (840 words · 06:20 min)</h2>
+          <span class="clip-filename-pill" style="background:var(--accent-yellow); color:#0F172A;">STEP 1</span>
+          <h2 class="section-head-title" style="margin-top:6px;">🎙️ Full Voiceover Script (840 words · 06:30 min)</h2>
         </div>
         <button class="btn-copy-action" onclick="copyFullScript()">📋 Copy Full Script for Voice</button>
       </div>
@@ -576,139 +595,243 @@ By 2035, over seventy percent of Mongolia's population will live in urban center
     <section class="production-section" id="step2-clips">
       <div class="section-banner-head">
         <div>
-          <span class="clip-number-badge" style="background:#0284C7; color:#FFFFFF;">STEP 2</span>
-          <h2 class="section-head-title" style="margin-top:6px;">🎬 Clips Sequence & Prompts (Google Flow AI)</h2>
+          <span class="clip-filename-pill" style="background:#0284C7; color:#FFFFFF;">STEP 2</span>
+          <h2 class="section-head-title" style="margin-top:6px;">🎬 Google Flow AI Clips Sequence (v2-s01-a to v2-s16-a)</h2>
+        </div>
+      </div>
+
+      <!-- Mariyam Saving Guide -->
+      <div class="step1-instruction-box" style="background:var(--bg-tint-blue); border-color:#0284C7;">
+        <div class="instruction-step-line" style="color:#0369A1;">
+          <span>💾</span>
+          <span><strong>Mariyam Ke Liye File Saving Rule:</strong> Har clip ke upar uska exact file name likha hai (jaise <code>v2-s01-a.mp4</code>). Google Flow se download karte waqt isi naam se save karein, taake CapCut/Premiere me arrange karna bilkul aasan ho!</span>
         </div>
       </div>
 
       <!-- Sequential Cards List -->
       <div class="clips-sequence-list">
-        <!-- Clip 01 -->
-        <article class="single-clip-card" id="clip01">
+        <!-- v2-s01-a.mp4 -->
+        <article class="single-clip-card" id="v2-s01-a">
           <div class="clip-card-header">
-            <span class="clip-number-badge">Clip 01</span>
-            <span class="clip-time-range">0:00 – 0:15 (15s)</span>
+            <div class="clip-title-group">
+              <span class="clip-filename-pill">💾 Save As: <strong>v2-s01-a.mp4</strong></span>
+              <span class="clip-time-range">0:00 – 0:11 (11s)</span>
+            </div>
+            <span class="clip-type-pill">⚡ Google Flow AI (8s Clip)</span>
           </div>
 
-          <!-- Google Flow AI Prompt -->
+          <!-- Prompt Box -->
           <div class="clip-prompt-box">
             <div class="prompt-box-header">
-              <span class="prompt-badge-title">⚡ Google Flow AI Prompt (8s Clip):</span>
+              <span class="prompt-badge-title">Google Flow AI Prompt:</span>
               <button class="btn-copy-action" onclick="copyClipPrompt(this)">📋 Copy Prompt</button>
             </div>
-            <pre class="prompt-code-box"><code>Create an 8-second horizontal 16:9 cinematic clip. 3D animated geopolitical map showing glowing vector outlines of United Kingdom, France, Germany and Italy flying across Eurasia and nesting perfectly inside the borders of Mongolia, 8k, no text --ar 16:9</code></pre>
+            <pre class="prompt-code-box"><code>Create an 8-second horizontal 16:9 cinematic clip. 3D animated geopolitical map showing glowing neon borders of United Kingdom, France, Germany, and Italy flying across a dark topographic globe and settling inside the borders of Mongolia, sleek 8k, no text --ar 16:9</code></pre>
           </div>
 
           <!-- Cut Point -->
           <div class="clip-cut-box">
-            <span class="cut-point-label">✂️ Yeh Clip Kab Khatam Karna Hai:</span>
-            <p class="cut-point-instruction">Jab voiceover bole: "fit inside this territory" ➔ Theek yahan Clip 02 lagayein.</p>
+            <span class="cut-point-label">✂️ Yeh Clip Kab Khatam Karna Hai (Cut Cue):</span>
+            <p class="cut-point-instruction">Jab voiceover bole: "fit inside this territory" ➔ Theek yahan v2-s01-b.mp4 lagayein.</p>
           </div>
         </article>
 
-        <!-- Clip 02 -->
-        <article class="single-clip-card" id="clip02">
+        <!-- v2-s01-b.mp4 -->
+        <article class="single-clip-card" id="v2-s01-b">
           <div class="clip-card-header">
-            <span class="clip-number-badge">Clip 02</span>
-            <span class="clip-time-range">0:15 – 0:30 (15s)</span>
+            <div class="clip-title-group">
+              <span class="clip-filename-pill">💾 Save As: <strong>v2-s01-b.mp4</strong></span>
+              <span class="clip-time-range">0:11 – 0:22 (11s)</span>
+            </div>
+            <span class="clip-type-pill">⚡ Google Flow AI (8s Clip)</span>
           </div>
 
-          <!-- Google Flow AI Prompt -->
+          <!-- Prompt Box -->
           <div class="clip-prompt-box">
             <div class="prompt-box-header">
-              <span class="prompt-badge-title">⚡ Google Flow AI Prompt (8s Clip):</span>
+              <span class="prompt-badge-title">Google Flow AI Prompt:</span>
               <button class="btn-copy-action" onclick="copyClipPrompt(this)">📋 Copy Prompt</button>
             </div>
-            <pre class="prompt-code-box"><code>Create an 8-second horizontal 16:9 cinematic clip. Split-screen motion graphic comparing bustling crowded city streets of Madrid on one side with the vast empty golden steppe of Mongolia on the other side, cinematic lighting, 8k, no text --ar 16:9</code></pre>
+            <pre class="prompt-code-box"><code>Create an 8-second horizontal 16:9 cinematic clip. Split-screen comparison: crowded bustling streets of Madrid on the left side, beside the infinite silent golden steppe of Mongolia on the right side, cinematic contrast lighting, 8k, no text --ar 16:9</code></pre>
           </div>
 
           <!-- Cut Point -->
           <div class="clip-cut-box">
-            <span class="cut-point-label">✂️ Yeh Clip Kab Khatam Karna Hai:</span>
-            <p class="cut-point-instruction">Jab voiceover bole: "lowest on Earth" ➔ Theek yahan Clip 03 lagayein.</p>
+            <span class="cut-point-label">✂️ Yeh Clip Kab Khatam Karna Hai (Cut Cue):</span>
+            <p class="cut-point-instruction">Jab voiceover bole: "single city of Madrid" ➔ Theek yahan v2-s02-a.mp4 lagayein.</p>
           </div>
         </article>
 
-        <!-- Clip 03 -->
-        <article class="single-clip-card" id="clip03">
+        <!-- v2-s02-a.mp4 -->
+        <article class="single-clip-card" id="v2-s02-a">
           <div class="clip-card-header">
-            <span class="clip-number-badge">Clip 03</span>
-            <span class="clip-time-range">0:30 – 0:45 (15s)</span>
+            <div class="clip-title-group">
+              <span class="clip-filename-pill">💾 Save As: <strong>v2-s02-a.mp4</strong></span>
+              <span class="clip-time-range">0:22 – 0:33 (11s)</span>
+            </div>
+            <span class="clip-type-pill">⚡ Google Flow AI (8s Clip)</span>
           </div>
 
-          <!-- Google Flow AI Prompt -->
+          <!-- Prompt Box -->
           <div class="clip-prompt-box">
             <div class="prompt-box-header">
-              <span class="prompt-badge-title">⚡ Google Flow AI Prompt (8s Clip):</span>
+              <span class="prompt-badge-title">Google Flow AI Prompt:</span>
               <button class="btn-copy-action" onclick="copyClipPrompt(this)">📋 Copy Prompt</button>
             </div>
-            <pre class="prompt-code-box"><code>Create an 8-second horizontal 16:9 cinematic clip. High-altitude orthographic satellite camera looking down at vast golden Mongolian steppe bordered by Altai mountains, clear morning sunlight, clean 8k topology relief, no text --ar 16:9</code></pre>
+            <pre class="prompt-code-box"><code>Create an 8-second horizontal 16:9 cinematic clip. High-altitude orthographic satellite camera looking down at vast golden Mongolian steppe bordered by snow-dusted Altai mountains, clear morning sunlight, clean 8k topology relief, no text --ar 16:9</code></pre>
           </div>
 
           <!-- Cut Point -->
           <div class="clip-cut-box">
-            <span class="cut-point-label">✂️ Yeh Clip Kab Khatam Karna Hai:</span>
-            <p class="cut-point-instruction">Jab voiceover bole: "inside a single valley" ➔ Theek yahan Clip 04 lagayein.</p>
+            <span class="cut-point-label">✂️ Yeh Clip Kab Khatam Karna Hai (Cut Cue):</span>
+            <p class="cut-point-instruction">Jab voiceover bole: "lowest on Earth" ➔ Theek yahan v2-s02-b.mp4 lagayein.</p>
           </div>
         </article>
 
-        <!-- Clip 04 -->
-        <article class="single-clip-card" id="clip04">
+        <!-- v2-s02-b.mp4 -->
+        <article class="single-clip-card" id="v2-s02-b">
           <div class="clip-card-header">
-            <span class="clip-number-badge">Clip 04</span>
-            <span class="clip-time-range">0:45 – 1:15 (30s)</span>
+            <div class="clip-title-group">
+              <span class="clip-filename-pill">💾 Save As: <strong>v2-s02-b.mp4</strong></span>
+              <span class="clip-time-range">0:33 – 0:45 (12s)</span>
+            </div>
+            <span class="clip-type-pill">⚡ Google Flow AI (8s Clip)</span>
           </div>
 
-          <!-- Google Flow AI Prompt -->
+          <!-- Prompt Box -->
           <div class="clip-prompt-box">
             <div class="prompt-box-header">
-              <span class="prompt-badge-title">⚡ Google Flow AI Prompt (8s Clip):</span>
+              <span class="prompt-badge-title">Google Flow AI Prompt:</span>
               <button class="btn-copy-action" onclick="copyClipPrompt(this)">📋 Copy Prompt</button>
             </div>
-            <pre class="prompt-code-box"><code>Create an 8-second horizontal 16:9 cinematic clip. 3D satellite camera flying over vast Central Asian mountain plateau and arid Gobi desert sand dunes, photorealistic 8k relief, clear blue sky, no text --ar 16:9</code></pre>
+            <pre class="prompt-code-box"><code>Create an 8-second horizontal 16:9 cinematic clip. Sweeping aerial drone shot rising over a narrow bowl-shaped mountain valley packed with urban buildings and thousands of white yurts, cold morning mist, 8k realism, no text --ar 16:9</code></pre>
           </div>
 
           <!-- Cut Point -->
           <div class="clip-cut-box">
-            <span class="cut-point-label">✂️ Yeh Clip Kab Khatam Karna Hai:</span>
-            <p class="cut-point-instruction">Jab voiceover bole: "growing crops" ➔ Theek yahan Clip 05 lagayein.</p>
+            <span class="cut-point-label">✂️ Yeh Clip Kab Khatam Karna Hai (Cut Cue):</span>
+            <p class="cut-point-instruction">Jab voiceover bole: "inside a single valley" ➔ Theek yahan v2-s03-a.mp4 lagayein.</p>
           </div>
         </article>
 
-        <!-- Clip 05 -->
-        <article class="single-clip-card" id="clip05">
+        <!-- v2-s03-a.mp4 -->
+        <article class="single-clip-card" id="v2-s03-a">
           <div class="clip-card-header">
-            <span class="clip-number-badge">Clip 05</span>
-            <span class="clip-time-range">1:15 – 1:45 (30s)</span>
+            <div class="clip-title-group">
+              <span class="clip-filename-pill">💾 Save As: <strong>v2-s03-a.mp4</strong></span>
+              <span class="clip-time-range">0:45 – 1:00 (15s)</span>
+            </div>
+            <span class="clip-type-pill">⚡ Google Flow AI (8s Clip)</span>
           </div>
 
-          <!-- Google Flow AI Prompt -->
+          <!-- Prompt Box -->
           <div class="clip-prompt-box">
             <div class="prompt-box-header">
-              <span class="prompt-badge-title">⚡ Google Flow AI Prompt (8s Clip):</span>
+              <span class="prompt-badge-title">Google Flow AI Prompt:</span>
               <button class="btn-copy-action" onclick="copyClipPrompt(this)">📋 Copy Prompt</button>
             </div>
-            <pre class="prompt-code-box"><code>Create an 8-second horizontal 16:9 cinematic clip. Traditional white felt yurt camp in verdant Mongolian river valley, smoke rising from chimney into crisp morning air, horses grazing, 8k, no text --ar 16:9</code></pre>
+            <pre class="prompt-code-box"><code>Create an 8-second horizontal 16:9 cinematic clip. 3D animated topographic map showing the Mongolian plateau elevated high between dense dark green Siberian forests in the north and orange arid Gobi desert in the south, 8k, no text --ar 16:9</code></pre>
           </div>
 
           <!-- Cut Point -->
           <div class="clip-cut-box">
-            <span class="cut-point-label">✂️ Yeh Clip Kab Khatam Karna Hai:</span>
-            <p class="cut-point-instruction">Jab voiceover bole: "deadly weather catastrophe" ➔ Theek yahan Clip 06 lagayein.</p>
+            <span class="cut-point-label">✂️ Yeh Clip Kab Khatam Karna Hai (Cut Cue):</span>
+            <p class="cut-point-instruction">Jab voiceover bole: "above sea level" ➔ Theek yahan v2-s03-b.mp4 lagayein.</p>
           </div>
         </article>
 
-        <!-- Clip 06 -->
-        <article class="single-clip-card" id="clip06">
+        <!-- v2-s03-b.mp4 -->
+        <article class="single-clip-card" id="v2-s03-b">
           <div class="clip-card-header">
-            <span class="clip-number-badge">Clip 06</span>
-            <span class="clip-time-range">1:45 – 2:15 (30s)</span>
+            <div class="clip-title-group">
+              <span class="clip-filename-pill">💾 Save As: <strong>v2-s03-b.mp4</strong></span>
+              <span class="clip-time-range">1:00 – 1:15 (15s)</span>
+            </div>
+            <span class="clip-type-pill">⚡ Google Flow AI (8s Clip)</span>
           </div>
 
-          <!-- Google Flow AI Prompt -->
+          <!-- Prompt Box -->
           <div class="clip-prompt-box">
             <div class="prompt-box-header">
-              <span class="prompt-badge-title">⚡ Google Flow AI Prompt (8s Clip):</span>
+              <span class="prompt-badge-title">Google Flow AI Prompt:</span>
+              <button class="btn-copy-action" onclick="copyClipPrompt(this)">📋 Copy Prompt</button>
+            </div>
+            <pre class="prompt-code-box"><code>Create an 8-second horizontal 16:9 cinematic clip. Low-angle ground camera tracking over dry cracked arid soil and sparse yellow steppe grass under a vast harsh blue sky, dry wind blowing dust, 8k realism, no text --ar 16:9</code></pre>
+          </div>
+
+          <!-- Cut Point -->
+          <div class="clip-cut-box">
+            <span class="cut-point-label">✂️ Yeh Clip Kab Khatam Karna Hai (Cut Cue):</span>
+            <p class="cut-point-instruction">Jab voiceover bole: "growing crops" ➔ Theek yahan v2-s04-a.mp4 lagayein.</p>
+          </div>
+        </article>
+
+        <!-- v2-s04-a.mp4 -->
+        <article class="single-clip-card" id="v2-s04-a">
+          <div class="clip-card-header">
+            <div class="clip-title-group">
+              <span class="clip-filename-pill">💾 Save As: <strong>v2-s04-a.mp4</strong></span>
+              <span class="clip-time-range">1:15 – 1:30 (15s)</span>
+            </div>
+            <span class="clip-type-pill">⚡ Google Flow AI (8s Clip)</span>
+          </div>
+
+          <!-- Prompt Box -->
+          <div class="clip-prompt-box">
+            <div class="prompt-box-header">
+              <span class="prompt-badge-title">Google Flow AI Prompt:</span>
+              <button class="btn-copy-action" onclick="copyClipPrompt(this)">📋 Copy Prompt</button>
+            </div>
+            <pre class="prompt-code-box"><code>Create an 8-second horizontal 16:9 cinematic clip. Traditional white felt yurt camp in verdant Mongolian river valley, smoke rising gently from small metal chimney into crisp morning air, horses grazing in background, 8k, no text --ar 16:9</code></pre>
+          </div>
+
+          <!-- Cut Point -->
+          <div class="clip-cut-box">
+            <span class="cut-point-label">✂️ Yeh Clip Kab Khatam Karna Hai (Cut Cue):</span>
+            <p class="cut-point-instruction">Jab voiceover bole: "seasonal pastures" ➔ Theek yahan v2-s04-b.mp4 lagayein.</p>
+          </div>
+        </article>
+
+        <!-- v2-s04-b.mp4 -->
+        <article class="single-clip-card" id="v2-s04-b">
+          <div class="clip-card-header">
+            <div class="clip-title-group">
+              <span class="clip-filename-pill">💾 Save As: <strong>v2-s04-b.mp4</strong></span>
+              <span class="clip-time-range">1:30 – 1:45 (15s)</span>
+            </div>
+            <span class="clip-type-pill">⚡ Google Flow AI (8s Clip)</span>
+          </div>
+
+          <!-- Prompt Box -->
+          <div class="clip-prompt-box">
+            <div class="prompt-box-header">
+              <span class="prompt-badge-title">Google Flow AI Prompt:</span>
+              <button class="btn-copy-action" onclick="copyClipPrompt(this)">📋 Copy Prompt</button>
+            </div>
+            <pre class="prompt-code-box"><code>Create an 8-second horizontal 16:9 cinematic clip. Dark storm clouds gathering rapidly over the vast open grassland horizon, ominous freezing winter wind rustling through tall steppe grass, dramatic lighting, 8k, no text --ar 16:9</code></pre>
+          </div>
+
+          <!-- Cut Point -->
+          <div class="clip-cut-box">
+            <span class="cut-point-label">✂️ Yeh Clip Kab Khatam Karna Hai (Cut Cue):</span>
+            <p class="cut-point-instruction">Jab voiceover bole: "deadly weather catastrophe" ➔ Theek yahan v2-s05-a.mp4 lagayein.</p>
+          </div>
+        </article>
+
+        <!-- v2-s05-a.mp4 -->
+        <article class="single-clip-card" id="v2-s05-a">
+          <div class="clip-card-header">
+            <div class="clip-title-group">
+              <span class="clip-filename-pill">💾 Save As: <strong>v2-s05-a.mp4</strong></span>
+              <span class="clip-time-range">1:45 – 2:00 (15s)</span>
+            </div>
+            <span class="clip-type-pill">⚡ Google Flow AI (8s Clip)</span>
+          </div>
+
+          <!-- Prompt Box -->
+          <div class="clip-prompt-box">
+            <div class="prompt-box-header">
+              <span class="prompt-badge-title">Google Flow AI Prompt:</span>
               <button class="btn-copy-action" onclick="copyClipPrompt(this)">📋 Copy Prompt</button>
             </div>
             <pre class="prompt-code-box"><code>Create an 8-second horizontal 16:9 cinematic clip. Extreme blizzard over Mongolian snowy plains, howling white snowdrifts burying wooden fences, harsh diffused winter light, intense cold realism, no people visible --ar 16:9</code></pre>
@@ -716,68 +839,103 @@ By 2035, over seventy percent of Mongolia's population will live in urban center
 
           <!-- Cut Point -->
           <div class="clip-cut-box">
-            <span class="cut-point-label">✂️ Yeh Clip Kab Khatam Karna Hai:</span>
-            <p class="cut-point-instruction">Jab voiceover bole: "minus forty-five degrees Celsius" ➔ Theek yahan Clip 07 lagayein.</p>
+            <span class="cut-point-label">✂️ Yeh Clip Kab Khatam Karna Hai (Cut Cue):</span>
+            <p class="cut-point-instruction">Jab voiceover bole: "minus forty-five degrees Celsius" ➔ Theek yahan v2-s05-b.mp4 lagayein.</p>
           </div>
         </article>
 
-        <!-- Clip 07 -->
-        <article class="single-clip-card" id="clip07">
+        <!-- v2-s05-b.mp4 -->
+        <article class="single-clip-card" id="v2-s05-b">
           <div class="clip-card-header">
-            <span class="clip-number-badge">Clip 07</span>
-            <span class="clip-time-range">2:15 – 2:40 (25s)</span>
+            <div class="clip-title-group">
+              <span class="clip-filename-pill">💾 Save As: <strong>v2-s05-b.mp4</strong></span>
+              <span class="clip-time-range">2:00 – 2:15 (15s)</span>
+            </div>
+            <span class="clip-type-pill">⚡ Google Flow AI (8s Clip)</span>
           </div>
 
-          <!-- Google Flow AI Prompt -->
+          <!-- Prompt Box -->
           <div class="clip-prompt-box">
             <div class="prompt-box-header">
-              <span class="prompt-badge-title">⚡ Google Flow AI Prompt (8s Clip):</span>
+              <span class="prompt-badge-title">Google Flow AI Prompt:</span>
               <button class="btn-copy-action" onclick="copyClipPrompt(this)">📋 Copy Prompt</button>
             </div>
-            <pre class="prompt-code-box"><code>Create an 8-second horizontal 16:9 cinematic clip. Dramatic cinematic camera panning over snow-covered wooden corrals after a blizzard, somber winter atmosphere, frosted fences, pale morning sun, 8k, no text --ar 16:9</code></pre>
+            <pre class="prompt-code-box"><code>Create an 8-second horizontal 16:9 cinematic clip. Macro ground shot of solid thick sheets of clear ice frozen hard over yellow frozen pasture grass, harsh glittering frost under freezing winter sun, 8k, no text --ar 16:9</code></pre>
           </div>
 
           <!-- Cut Point -->
           <div class="clip-cut-box">
-            <span class="cut-point-label">✂️ Yeh Clip Kab Khatam Karna Hai:</span>
-            <p class="cut-point-instruction">Jab voiceover bole: "matter of weeks" ➔ Theek yahan Clip 08 lagayein.</p>
+            <span class="cut-point-label">✂️ Yeh Clip Kab Khatam Karna Hai (Cut Cue):</span>
+            <p class="cut-point-instruction">Jab voiceover bole: "reach food" ➔ Theek yahan v2-s06-a.mp4 lagayein.</p>
           </div>
         </article>
 
-        <!-- Clip 08 -->
-        <article class="single-clip-card" id="clip08">
+        <!-- v2-s06-a.mp4 -->
+        <article class="single-clip-card" id="v2-s06-a">
           <div class="clip-card-header">
-            <span class="clip-number-badge">Clip 08</span>
-            <span class="clip-time-range">2:40 – 3:00 (20s)</span>
+            <div class="clip-title-group">
+              <span class="clip-filename-pill">💾 Save As: <strong>v2-s06-a.mp4</strong></span>
+              <span class="clip-time-range">2:15 – 2:30 (15s)</span>
+            </div>
+            <span class="clip-type-pill">⚡ Google Flow AI (8s Clip)</span>
           </div>
 
-          <!-- Google Flow AI Prompt -->
+          <!-- Prompt Box -->
           <div class="clip-prompt-box">
             <div class="prompt-box-header">
-              <span class="prompt-badge-title">⚡ Google Flow AI Prompt (8s Clip):</span>
+              <span class="prompt-badge-title">Google Flow AI Prompt:</span>
               <button class="btn-copy-action" onclick="copyClipPrompt(this)">📋 Copy Prompt</button>
             </div>
-            <pre class="prompt-code-box"><code>Create an 8-second horizontal 16:9 cinematic clip. Old Russian flatbed truck loaded with traditional yurt frame driving slowly along dirt track across vast winter landscape, cold morning mist, 8k, no text --ar 16:9</code></pre>
+            <pre class="prompt-code-box"><code>Create an 8-second horizontal 16:9 cinematic clip. Somber cinematic view of an empty snow-covered animal pen after a winter storm, wooden posts covered in icicles, pale morning sun casting long shadows, 8k, no text --ar 16:9</code></pre>
           </div>
 
           <!-- Cut Point -->
           <div class="clip-cut-box">
-            <span class="cut-point-label">✂️ Yeh Clip Kab Khatam Karna Hai:</span>
-            <p class="cut-point-instruction">Jab voiceover bole: "head toward Ulaanbaatar" ➔ Theek yahan Clip 09 lagayein.</p>
+            <span class="cut-point-label">✂️ Yeh Clip Kab Khatam Karna Hai (Cut Cue):</span>
+            <p class="cut-point-instruction">Jab voiceover bole: "matter of weeks" ➔ Theek yahan v2-s06-b.mp4 lagayein.</p>
           </div>
         </article>
 
-        <!-- Clip 09 -->
-        <article class="single-clip-card" id="clip09">
+        <!-- v2-s06-b.mp4 -->
+        <article class="single-clip-card" id="v2-s06-b">
           <div class="clip-card-header">
-            <span class="clip-number-badge">Clip 09</span>
-            <span class="clip-time-range">3:00 – 3:30 (30s)</span>
+            <div class="clip-title-group">
+              <span class="clip-filename-pill">💾 Save As: <strong>v2-s06-b.mp4</strong></span>
+              <span class="clip-time-range">2:30 – 2:45 (15s)</span>
+            </div>
+            <span class="clip-type-pill">⚡ Google Flow AI (8s Clip)</span>
           </div>
 
-          <!-- Google Flow AI Prompt -->
+          <!-- Prompt Box -->
           <div class="clip-prompt-box">
             <div class="prompt-box-header">
-              <span class="prompt-badge-title">⚡ Google Flow AI Prompt (8s Clip):</span>
+              <span class="prompt-badge-title">Google Flow AI Prompt:</span>
+              <button class="btn-copy-action" onclick="copyClipPrompt(this)">📋 Copy Prompt</button>
+            </div>
+            <pre class="prompt-code-box"><code>Create an 8-second horizontal 16:9 cinematic clip. Old Russian flatbed truck loaded with traditional yurt frames driving slowly along a rutted dirt track across a vast winter landscape, cold morning mist, 8k, no text --ar 16:9</code></pre>
+          </div>
+
+          <!-- Cut Point -->
+          <div class="clip-cut-box">
+            <span class="cut-point-label">✂️ Yeh Clip Kab Khatam Karna Hai (Cut Cue):</span>
+            <p class="cut-point-instruction">Jab voiceover bole: "head toward Ulaanbaatar" ➔ Theek yahan v2-s07-a.mp4 lagayein.</p>
+          </div>
+        </article>
+
+        <!-- v2-s07-a.mp4 -->
+        <article class="single-clip-card" id="v2-s07-a">
+          <div class="clip-card-header">
+            <div class="clip-title-group">
+              <span class="clip-filename-pill">💾 Save As: <strong>v2-s07-a.mp4</strong></span>
+              <span class="clip-time-range">2:45 – 3:00 (15s)</span>
+            </div>
+            <span class="clip-type-pill">⚡ Google Flow AI (8s Clip)</span>
+          </div>
+
+          <!-- Prompt Box -->
+          <div class="clip-prompt-box">
+            <div class="prompt-box-header">
+              <span class="prompt-badge-title">Google Flow AI Prompt:</span>
               <button class="btn-copy-action" onclick="copyClipPrompt(this)">📋 Copy Prompt</button>
             </div>
             <pre class="prompt-code-box"><code>Create an 8-second horizontal 16:9 cinematic clip. High-angle aerial panoramic view over sprawling hillside ger district of Ulaanbaatar, thousands of round white yurts surrounded by wooden fences, dusk light, 8k, no text --ar 16:9</code></pre>
@@ -785,114 +943,155 @@ By 2035, over seventy percent of Mongolia's population will live in urban center
 
           <!-- Cut Point -->
           <div class="clip-cut-box">
-            <span class="cut-point-label">✂️ Yeh Clip Kab Khatam Karna Hai:</span>
-            <p class="cut-point-instruction">Jab voiceover bole: "city's population" ➔ Theek yahan Clip 10 lagayein.</p>
+            <span class="cut-point-label">✂️ Yeh Clip Kab Khatam Karna Hai (Cut Cue):</span>
+            <p class="cut-point-instruction">Jab voiceover bole: "city's population" ➔ Theek yahan v2-s07-b.mp4 lagayein.</p>
           </div>
         </article>
 
-        <!-- Clip 10 -->
-        <article class="single-clip-card" id="clip10">
+        <!-- v2-s07-b.mp4 -->
+        <article class="single-clip-card" id="v2-s07-b">
           <div class="clip-card-header">
-            <span class="clip-number-badge">Clip 10</span>
-            <span class="clip-time-range">3:30 – 3:55 (25s)</span>
+            <div class="clip-title-group">
+              <span class="clip-filename-pill">💾 Save As: <strong>v2-s07-b.mp4</strong></span>
+              <span class="clip-time-range">3:00 – 3:15 (15s)</span>
+            </div>
+            <span class="clip-type-pill">⚡ Google Flow AI (8s Clip)</span>
           </div>
 
-          <!-- Google Flow AI Prompt -->
+          <!-- Prompt Box -->
           <div class="clip-prompt-box">
             <div class="prompt-box-header">
-              <span class="prompt-badge-title">⚡ Google Flow AI Prompt (8s Clip):</span>
+              <span class="prompt-badge-title">Google Flow AI Prompt:</span>
               <button class="btn-copy-action" onclick="copyClipPrompt(this)">📋 Copy Prompt</button>
             </div>
-            <pre class="prompt-code-box"><code>Create an 8-second horizontal 16:9 cinematic clip. 3D animated atmospheric diagram showing cold blue air sinking into a bowl-shaped mountain valley while dark smoke accumulates beneath a warm ceiling layer, 8k, no text --ar 16:9</code></pre>
+            <pre class="prompt-code-box"><code>Create an 8-second horizontal 16:9 cinematic clip. Close-up of black raw coal burning brightly inside a cast iron yurt stove, glowing orange embers, smoke rising into a metal flue pipe, warm cozy interior, 8k, no text --ar 16:9</code></pre>
           </div>
 
           <!-- Cut Point -->
           <div class="clip-cut-box">
-            <span class="cut-point-label">✂️ Yeh Clip Kab Khatam Karna Hai:</span>
-            <p class="cut-point-instruction">Jab voiceover bole: "inside their yurts" ➔ Theek yahan Clip 11 lagayein.</p>
+            <span class="cut-point-label">✂️ Yeh Clip Kab Khatam Karna Hai (Cut Cue):</span>
+            <p class="cut-point-instruction">Jab voiceover bole: "inside their yurts" ➔ Theek yahan v2-s08-a.mp4 lagayein.</p>
           </div>
         </article>
 
-        <!-- Clip 11 -->
-        <article class="single-clip-card" id="clip11">
+        <!-- v2-s08-a.mp4 -->
+        <article class="single-clip-card" id="v2-s08-a">
           <div class="clip-card-header">
-            <span class="clip-number-badge">Clip 11</span>
-            <span class="clip-time-range">3:55 – 4:15 (20s)</span>
+            <div class="clip-title-group">
+              <span class="clip-filename-pill">💾 Save As: <strong>v2-s08-a.mp4</strong></span>
+              <span class="clip-time-range">3:15 – 3:30 (15s)</span>
+            </div>
+            <span class="clip-type-pill">⚡ Google Flow AI (8s Clip)</span>
           </div>
 
-          <!-- Google Flow AI Prompt -->
+          <!-- Prompt Box -->
           <div class="clip-prompt-box">
             <div class="prompt-box-header">
-              <span class="prompt-badge-title">⚡ Google Flow AI Prompt (8s Clip):</span>
+              <span class="prompt-badge-title">Google Flow AI Prompt:</span>
               <button class="btn-copy-action" onclick="copyClipPrompt(this)">📋 Copy Prompt</button>
             </div>
-            <pre class="prompt-code-box"><code>Create an 8-second horizontal 16:9 cinematic clip. Panoramic view of winter mountain valley at sunrise with thick blanket of atmospheric smoke settling over city basin, cold blue lighting, 8k, no text --ar 16:9</code></pre>
+            <pre class="prompt-code-box"><code>Create an 8-second horizontal 16:9 cinematic clip. 3D animated atmospheric cross-section diagram of a bowl valley showing dense dark smoke pooling at the floor beneath a layer of warm air, clean scientific visualization, 8k, no text --ar 16:9</code></pre>
           </div>
 
           <!-- Cut Point -->
           <div class="clip-cut-box">
-            <span class="cut-point-label">✂️ Yeh Clip Kab Khatam Karna Hai:</span>
-            <p class="cut-point-instruction">Jab voiceover bole: "fifty times safe limits" ➔ Theek yahan Clip 12 lagayein.</p>
+            <span class="cut-point-label">✂️ Yeh Clip Kab Khatam Karna Hai (Cut Cue):</span>
+            <p class="cut-point-instruction">Jab voiceover bole: "ceiling of warm air" ➔ Theek yahan v2-s08-b.mp4 lagayein.</p>
           </div>
         </article>
 
-        <!-- Clip 12 -->
-        <article class="single-clip-card" id="clip12">
+        <!-- v2-s08-b.mp4 -->
+        <article class="single-clip-card" id="v2-s08-b">
           <div class="clip-card-header">
-            <span class="clip-number-badge">Clip 12</span>
-            <span class="clip-time-range">4:15 – 4:45 (30s)</span>
+            <div class="clip-title-group">
+              <span class="clip-filename-pill">💾 Save As: <strong>v2-s08-b.mp4</strong></span>
+              <span class="clip-time-range">3:30 – 3:45 (15s)</span>
+            </div>
+            <span class="clip-type-pill">⚡ Google Flow AI (8s Clip)</span>
           </div>
 
-          <!-- Google Flow AI Prompt -->
+          <!-- Prompt Box -->
           <div class="clip-prompt-box">
             <div class="prompt-box-header">
-              <span class="prompt-badge-title">⚡ Google Flow AI Prompt (8s Clip):</span>
+              <span class="prompt-badge-title">Google Flow AI Prompt:</span>
               <button class="btn-copy-action" onclick="copyClipPrompt(this)">📋 Copy Prompt</button>
             </div>
-            <pre class="prompt-code-box"><code>Create an 8-second horizontal 16:9 cinematic clip. Paved two-lane highway cutting straight through endless flat steppe to vanishing point under vast blue sky, slow tracking motion, 8k, no text --ar 16:9</code></pre>
+            <pre class="prompt-code-box"><code>Create an 8-second horizontal 16:9 cinematic clip. Panoramic view of winter mountain valley at sunrise with a thick blanket of atmospheric smoke settling over the entire city basin, cold blue winter lighting, 8k, no text --ar 16:9</code></pre>
           </div>
 
           <!-- Cut Point -->
           <div class="clip-cut-box">
-            <span class="cut-point-label">✂️ Yeh Clip Kab Khatam Karna Hai:</span>
-            <p class="cut-point-instruction">Jab voiceover bole: "concentrate in one place" ➔ Theek yahan Clip 13 lagayein.</p>
+            <span class="cut-point-label">✂️ Yeh Clip Kab Khatam Karna Hai (Cut Cue):</span>
+            <p class="cut-point-instruction">Jab voiceover bole: "fifty times safe limits" ➔ Theek yahan v2-s09-a.mp4 lagayein.</p>
           </div>
         </article>
 
-        <!-- Clip 13 -->
-        <article class="single-clip-card" id="clip13">
+        <!-- v2-s09-a.mp4 -->
+        <article class="single-clip-card" id="v2-s09-a">
           <div class="clip-card-header">
-            <span class="clip-number-badge">Clip 13</span>
-            <span class="clip-time-range">4:45 – 5:10 (25s)</span>
+            <div class="clip-title-group">
+              <span class="clip-filename-pill">💾 Save As: <strong>v2-s09-a.mp4</strong></span>
+              <span class="clip-time-range">3:45 – 4:00 (15s)</span>
+            </div>
+            <span class="clip-type-pill">⚡ Google Flow AI (8s Clip)</span>
           </div>
 
-          <!-- Google Flow AI Prompt -->
+          <!-- Prompt Box -->
           <div class="clip-prompt-box">
             <div class="prompt-box-header">
-              <span class="prompt-badge-title">⚡ Google Flow AI Prompt (8s Clip):</span>
+              <span class="prompt-badge-title">Google Flow AI Prompt:</span>
               <button class="btn-copy-action" onclick="copyClipPrompt(this)">📋 Copy Prompt</button>
             </div>
-            <pre class="prompt-code-box"><code>Create an 8-second horizontal 16:9 cinematic clip. Modern Mongolian nomad on lightweight motorcycle herding galloping horses across green grassland under big open sky, cinematic motion tracking, 8k, no text --ar 16:9</code></pre>
+            <pre class="prompt-code-box"><code>Create an 8-second horizontal 16:9 cinematic clip. Paved two-lane highway cutting straight through endless flat golden steppe to a vanishing point under vast blue sky, slow tracking motion, 8k, no text --ar 16:9</code></pre>
           </div>
 
           <!-- Cut Point -->
           <div class="clip-cut-box">
-            <span class="cut-point-label">✂️ Yeh Clip Kab Khatam Karna Hai:</span>
-            <p class="cut-point-instruction">Jab voiceover bole: "livestock prices" ➔ Theek yahan Clip 14 lagayein.</p>
+            <span class="cut-point-label">✂️ Yeh Clip Kab Khatam Karna Hai (Cut Cue):</span>
+            <p class="cut-point-instruction">Jab voiceover bole: "costs millions of dollars per resident" ➔ Theek yahan v2-s09-b.mp4 lagayein.</p>
           </div>
         </article>
 
-        <!-- Clip 14 -->
-        <article class="single-clip-card" id="clip14">
+        <!-- v2-s09-b.mp4 -->
+        <article class="single-clip-card" id="v2-s09-b">
           <div class="clip-card-header">
-            <span class="clip-number-badge">Clip 14</span>
-            <span class="clip-time-range">5:10 – 5:30 (20s)</span>
+            <div class="clip-title-group">
+              <span class="clip-filename-pill">💾 Save As: <strong>v2-s09-b.mp4</strong></span>
+              <span class="clip-time-range">4:00 – 4:15 (15s)</span>
+            </div>
+            <span class="clip-type-pill">⚡ Google Flow AI (8s Clip)</span>
           </div>
 
-          <!-- Google Flow AI Prompt -->
+          <!-- Prompt Box -->
           <div class="clip-prompt-box">
             <div class="prompt-box-header">
-              <span class="prompt-badge-title">⚡ Google Flow AI Prompt (8s Clip):</span>
+              <span class="prompt-badge-title">Google Flow AI Prompt:</span>
+              <button class="btn-copy-action" onclick="copyClipPrompt(this)">📋 Copy Prompt</button>
+            </div>
+            <pre class="prompt-code-box"><code>Create an 8-second horizontal 16:9 cinematic clip. Modern school building and playground in Ulaanbaatar surrounded by apartment blocks, children walking with backpacks, bright morning sunlight, 8k, no text --ar 16:9</code></pre>
+          </div>
+
+          <!-- Cut Point -->
+          <div class="clip-cut-box">
+            <span class="cut-point-label">✂️ Yeh Clip Kab Khatam Karna Hai (Cut Cue):</span>
+            <p class="cut-point-instruction">Jab voiceover bole: "concentrate in one place" ➔ Theek yahan v2-s10-a.mp4 lagayein.</p>
+          </div>
+        </article>
+
+        <!-- v2-s10-a.mp4 -->
+        <article class="single-clip-card" id="v2-s10-a">
+          <div class="clip-card-header">
+            <div class="clip-title-group">
+              <span class="clip-filename-pill">💾 Save As: <strong>v2-s10-a.mp4</strong></span>
+              <span class="clip-time-range">4:15 – 4:30 (15s)</span>
+            </div>
+            <span class="clip-type-pill">⚡ Google Flow AI (8s Clip)</span>
+          </div>
+
+          <!-- Prompt Box -->
+          <div class="clip-prompt-box">
+            <div class="prompt-box-header">
+              <span class="prompt-badge-title">Google Flow AI Prompt:</span>
               <button class="btn-copy-action" onclick="copyClipPrompt(this)">📋 Copy Prompt</button>
             </div>
             <pre class="prompt-code-box"><code>Create an 8-second horizontal 16:9 cinematic clip. Solar panel attached to round white felt yurt in vast green grassland, young herder holding smartphone, crisp sunlight, 8k, no text --ar 16:9</code></pre>
@@ -900,45 +1099,129 @@ By 2035, over seventy percent of Mongolia's population will live in urban center
 
           <!-- Cut Point -->
           <div class="clip-cut-box">
-            <span class="cut-point-label">✂️ Yeh Clip Kab Khatam Karna Hai:</span>
-            <p class="cut-point-instruction">Jab voiceover bole: "it has digitized" ➔ Theek yahan Clip 15 lagayein.</p>
+            <span class="cut-point-label">✂️ Yeh Clip Kab Khatam Karna Hai (Cut Cue):</span>
+            <p class="cut-point-instruction">Jab voiceover bole: "livestock prices" ➔ Theek yahan v2-s10-b.mp4 lagayein.</p>
           </div>
         </article>
 
-        <!-- Clip 15 -->
-        <article class="single-clip-card" id="clip15">
+        <!-- v2-s10-b.mp4 -->
+        <article class="single-clip-card" id="v2-s10-b">
           <div class="clip-card-header">
-            <span class="clip-number-badge">Clip 15</span>
-            <span class="clip-time-range">5:30 – 5:50 (20s)</span>
+            <div class="clip-title-group">
+              <span class="clip-filename-pill">💾 Save As: <strong>v2-s10-b.mp4</strong></span>
+              <span class="clip-time-range">4:30 – 4:45 (15s)</span>
+            </div>
+            <span class="clip-type-pill">⚡ Google Flow AI (8s Clip)</span>
           </div>
 
-          <!-- Google Flow AI Prompt -->
+          <!-- Prompt Box -->
           <div class="clip-prompt-box">
             <div class="prompt-box-header">
-              <span class="prompt-badge-title">⚡ Google Flow AI Prompt (8s Clip):</span>
+              <span class="prompt-badge-title">Google Flow AI Prompt:</span>
               <button class="btn-copy-action" onclick="copyClipPrompt(this)">📋 Copy Prompt</button>
             </div>
-            <pre class="prompt-code-box"><code>Create an 8-second horizontal 16:9 cinematic clip. Modern glass high-rises and eco-apartment buildings in Ulaanbaatar contrasting against snow-dusted mountains at sunset, warm urban lights, 8k, no text --ar 16:9</code></pre>
+            <pre class="prompt-code-box"><code>Create an 8-second horizontal 16:9 cinematic clip. Modern Mongolian nomad on lightweight motorcycle herding galloping horses across green grassland under big open sky, cinematic motion tracking, 8k, no text --ar 16:9</code></pre>
           </div>
 
           <!-- Cut Point -->
           <div class="clip-cut-box">
-            <span class="cut-point-label">✂️ Yeh Clip Kab Khatam Karna Hai:</span>
-            <p class="cut-point-instruction">Jab voiceover bole: "insulated apartments" ➔ Theek yahan Clip 16 lagayein.</p>
+            <span class="cut-point-label">✂️ Yeh Clip Kab Khatam Karna Hai (Cut Cue):</span>
+            <p class="cut-point-instruction">Jab voiceover bole: "it has digitized" ➔ Theek yahan v2-s11-a.mp4 lagayein.</p>
           </div>
         </article>
 
-        <!-- Clip 16 -->
-        <article class="single-clip-card" id="clip16">
+        <!-- v2-s11-a.mp4 -->
+        <article class="single-clip-card" id="v2-s11-a">
           <div class="clip-card-header">
-            <span class="clip-number-badge">Clip 16</span>
-            <span class="clip-time-range">5:50 – 6:20 (30s)</span>
+            <div class="clip-title-group">
+              <span class="clip-filename-pill">💾 Save As: <strong>v2-s11-a.mp4</strong></span>
+              <span class="clip-time-range">4:45 – 5:00 (15s)</span>
+            </div>
+            <span class="clip-type-pill">⚡ Google Flow AI (8s Clip)</span>
           </div>
 
-          <!-- Google Flow AI Prompt -->
+          <!-- Prompt Box -->
           <div class="clip-prompt-box">
             <div class="prompt-box-header">
-              <span class="prompt-badge-title">⚡ Google Flow AI Prompt (8s Clip):</span>
+              <span class="prompt-badge-title">Google Flow AI Prompt:</span>
+              <button class="btn-copy-action" onclick="copyClipPrompt(this)">📋 Copy Prompt</button>
+            </div>
+            <pre class="prompt-code-box"><code>Create an 8-second horizontal 16:9 cinematic clip. 3D architectural render of modern eco-district in Ulaanbaatar with insulated sustainable apartment buildings, green courtyards, solar roofs, golden sunset light, 8k, no text --ar 16:9</code></pre>
+          </div>
+
+          <!-- Cut Point -->
+          <div class="clip-cut-box">
+            <span class="cut-point-label">✂️ Yeh Clip Kab Khatam Karna Hai (Cut Cue):</span>
+            <p class="cut-point-instruction">Jab voiceover bole: "urban centers" ➔ Theek yahan v2-s11-b.mp4 lagayein.</p>
+          </div>
+        </article>
+
+        <!-- v2-s11-b.mp4 -->
+        <article class="single-clip-card" id="v2-s11-b">
+          <div class="clip-card-header">
+            <div class="clip-title-group">
+              <span class="clip-filename-pill">💾 Save As: <strong>v2-s11-b.mp4</strong></span>
+              <span class="clip-time-range">5:00 – 5:15 (15s)</span>
+            </div>
+            <span class="clip-type-pill">⚡ Google Flow AI (8s Clip)</span>
+          </div>
+
+          <!-- Prompt Box -->
+          <div class="clip-prompt-box">
+            <div class="prompt-box-header">
+              <span class="prompt-badge-title">Google Flow AI Prompt:</span>
+              <button class="btn-copy-action" onclick="copyClipPrompt(this)">📋 Copy Prompt</button>
+            </div>
+            <pre class="prompt-code-box"><code>Create an 8-second horizontal 16:9 cinematic clip. Modern glass high-rise towers in central Ulaanbaatar contrasting with distant snow-capped mountains at dusk, glowing city lights, 8k realism, no text --ar 16:9</code></pre>
+          </div>
+
+          <!-- Cut Point -->
+          <div class="clip-cut-box">
+            <span class="cut-point-label">✂️ Yeh Clip Kab Khatam Karna Hai (Cut Cue):</span>
+            <p class="cut-point-instruction">Jab voiceover bole: "insulated apartments" ➔ Theek yahan v2-s12-a.mp4 lagayein.</p>
+          </div>
+        </article>
+
+        <!-- v2-s12-a.mp4 -->
+        <article class="single-clip-card" id="v2-s12-a">
+          <div class="clip-card-header">
+            <div class="clip-title-group">
+              <span class="clip-filename-pill">💾 Save As: <strong>v2-s12-a.mp4</strong></span>
+              <span class="clip-time-range">5:15 – 5:45 (30s)</span>
+            </div>
+            <span class="clip-type-pill">⚡ Google Flow AI (8s Clip)</span>
+          </div>
+
+          <!-- Prompt Box -->
+          <div class="clip-prompt-box">
+            <div class="prompt-box-header">
+              <span class="prompt-badge-title">Google Flow AI Prompt:</span>
+              <button class="btn-copy-action" onclick="copyClipPrompt(this)">📋 Copy Prompt</button>
+            </div>
+            <pre class="prompt-code-box"><code>Create an 8-second horizontal 16:9 cinematic clip. Aerial drone camera pulling slowly back over an endless vast Mongolian grassland plain, infinite silence and sky stretching to horizon, 8k documentary, no text --ar 16:9</code></pre>
+          </div>
+
+          <!-- Cut Point -->
+          <div class="clip-cut-box">
+            <span class="cut-point-label">✂️ Yeh Clip Kab Khatam Karna Hai (Cut Cue):</span>
+            <p class="cut-point-instruction">Jab voiceover bole: "build their future" ➔ Theek yahan v2-s12-b.mp4 lagayein.</p>
+          </div>
+        </article>
+
+        <!-- v2-s12-b.mp4 -->
+        <article class="single-clip-card" id="v2-s12-b">
+          <div class="clip-card-header">
+            <div class="clip-title-group">
+              <span class="clip-filename-pill">💾 Save As: <strong>v2-s12-b.mp4</strong></span>
+              <span class="clip-time-range">5:45 – 6:30 (45s)</span>
+            </div>
+            <span class="clip-type-pill">⚡ Google Flow AI (8s Clip)</span>
+          </div>
+
+          <!-- Prompt Box -->
+          <div class="clip-prompt-box">
+            <div class="prompt-box-header">
+              <span class="prompt-badge-title">Google Flow AI Prompt:</span>
               <button class="btn-copy-action" onclick="copyClipPrompt(this)">📋 Copy Prompt</button>
             </div>
             <pre class="prompt-code-box"><code>Create an 8-second horizontal 16:9 cinematic clip. Sunset over endless Mongolian grassland, golden orange sky with lone horse rider silhouetted on ridge, cinematic slow lift to sky, 8k, no text --ar 16:9</code></pre>
@@ -946,7 +1229,7 @@ By 2035, over seventy percent of Mongolia's population will live in urban center
 
           <!-- Cut Point -->
           <div class="clip-cut-box">
-            <span class="cut-point-label">✂️ Yeh Clip Kab Khatam Karna Hai:</span>
+            <span class="cut-point-label">✂️ Yeh Clip Kab Khatam Karna Hai (Cut Cue):</span>
             <p class="cut-point-instruction">Video khatam ➔ Outro Subscribe & End Screen lagayein.</p>
           </div>
         </article>
@@ -957,17 +1240,20 @@ By 2035, over seventy percent of Mongolia's population will live in urban center
     <section class="production-section" id="step3-shorts">
       <div class="section-banner-head">
         <div>
-          <span class="clip-number-badge" style="background:var(--accent-coral); color:#FFFFFF;">STEP 3</span>
+          <span class="clip-filename-pill" style="background:var(--accent-coral); color:#FFFFFF;">STEP 3</span>
           <h2 class="section-head-title" style="margin-top:6px;">⚡ YouTube Shorts Suite (9:16 Vertical)</h2>
         </div>
       </div>
 
       <div class="clips-sequence-list">
-        <!-- Short 2A -->
+        <!-- v2-short-a -->
         <article class="single-clip-card">
           <div class="clip-card-header">
-            <span class="clip-number-badge" style="background:#0284C7;">SHORT 2A</span>
-            <span class="clip-time-range">66s · 9:16 Vertical</span>
+            <div class="clip-title-group">
+              <span class="clip-filename-pill" style="background:#0284C7;">💾 Save As: <strong>v2-short-a.mp4</strong></span>
+              <span class="clip-time-range">66s · 9:16 Vertical</span>
+            </div>
+            <span class="clip-type-pill">⚡ Flow AI Vertical (9:16)</span>
           </div>
 
           <div class="clip-vo-box">
@@ -977,7 +1263,7 @@ By 2035, over seventy percent of Mongolia's population will live in urban center
 
           <div class="clip-prompt-box">
             <div class="prompt-box-header">
-              <span class="prompt-badge-title">⚡ Google Flow Vertical Prompt (9:16):</span>
+              <span class="prompt-badge-title">Google Flow Vertical Prompt (9:16):</span>
               <button class="btn-copy-action" onclick="copyClipPrompt(this)">📋 Copy Prompt</button>
             </div>
             <pre class="prompt-code-box"><code>Create an 8-second vertical 9:16 cinematic clip. Drone shot sweeping over vast golden Mongolian steppe with lone yurt on horizon under towering sky, pristine 8k realism --ar 9:16</code></pre>
@@ -987,7 +1273,7 @@ By 2035, over seventy percent of Mongolia's population will live in urban center
     </section>
 
     <footer style="margin-top: 30px; padding-top: 20px; border-top: 1.5px dashed var(--border-subtle); text-align: center; color: var(--ink-faint); font-size: 0.82rem; font-weight: 600;">
-      <p><strong style="color: var(--accent-blue);">Hidden Geography</strong> · Production Studio OS v2.1 · 100% Ready Google Flow Prompts</p>
+      <p><strong style="color: var(--accent-blue);">Hidden Geography</strong> · Production Studio OS v2.1 · High-Retention Viral Standard</p>
     </footer>
 
   </main>
