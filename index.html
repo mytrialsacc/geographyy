@@ -1,94 +1,105 @@
 <!doctype html>
-<html lang="en" data-theme="dark">
+<html lang="en" data-theme="light">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Hidden Geography — Animated Cartoonish Mission Control & Production Studio.">
-  <meta name="theme-color" content="#0F172A">
-  <title>Hidden Geography · Mission Control Studio</title>
+  <meta name="description" content="Hidden Geography — Playful Animated Cartoon Mission Control & Production Studio.">
+  <meta name="theme-color" content="#38BDF8">
+  <title>Hidden Geography · Animated Mission Control</title>
   
   <!-- Custom Branded Favicon -->
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
   
-  <!-- High Impact Modern Google Fonts -->
+  <!-- Google Cartoon Fonts: Fredoka (Headings) & Plus Jakarta Sans (Body) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&family=JetBrains+Mono:wght@600;800&display=swap" rel="stylesheet">
   
   <style>
     :root {
-      /* Cartoon Vibrant Dark Palette (Playful Geography Explorer) */
-      --bg-space: #090D16;
+      /* Playful Animated Cartoon Palette (Bright, Punchy, Nintendo/Duolingo Style) */
+      --ink: #0F172A;
+      --bg-sky: #E0F2FE;
+      --bg-canvas: #F0F9FF;
+      --bg-card: #FFFFFF;
+      --bg-card-alt: #FEF3C7;
+      
+      /* Vibrant Animated Cartoon Character Colors */
+      --cartoon-blue: #0EA5E9;
+      --cartoon-blue-deep: #0284C7;
+      --cartoon-blue-shadow: #0369A1;
+      
+      --cartoon-green: #22C55E;
+      --cartoon-green-deep: #16A34A;
+      --cartoon-green-shadow: #15803D;
+      
+      --cartoon-yellow: #FBBF24;
+      --cartoon-yellow-deep: #F59E0B;
+      --cartoon-yellow-shadow: #D97706;
+      
+      --cartoon-coral: #FB7185;
+      --cartoon-coral-deep: #F43F5E;
+      --cartoon-coral-shadow: #E11D48;
+      
+      --cartoon-purple: #A855F7;
+      --cartoon-purple-deep: #9333EA;
+      --cartoon-purple-shadow: #7E22CE;
+
+      --cartoon-orange: #FB923C;
+      --cartoon-orange-deep: #EA580C;
+      --cartoon-orange-shadow: #C2410C;
+
+      --text-dark: #0F172A;
+      --text-muted: #475569;
+      --text-faint: #64748B;
+      --text-white: #FFFFFF;
+      
+      /* 3D Solid Cartoon Shadow Blocks */
+      --shadow-block-lg: 0 10px 0 var(--ink), 0 20px 30px rgba(15, 23, 42, 0.12);
+      --shadow-block-md: 0 6px 0 var(--ink), 0 12px 20px rgba(15, 23, 42, 0.08);
+      --shadow-block-sm: 0 4px 0 var(--ink);
+      --shadow-btn: 0 5px 0 var(--ink);
+      --shadow-btn-active: 0 1px 0 var(--ink);
+
+      --radius-pill: 999px;
+      --radius-bubble: 24px;
+      --radius-box: 18px;
+      --radius-sm: 12px;
+      --sidebar-w: 280px;
+    }
+
+    [data-theme="dark"] {
+      /* Vibrant Cartoon Night Mode */
+      --ink: #050811;
+      --bg-sky: #090D16;
       --bg-canvas: #0F172A;
-      --card-base: #1E293B;
-      --card-elevated: #24344D;
-      --card-highlight: #2D3F5C;
-      --border-chunky: #334155;
-      --border-accent: #0EA5E9;
+      --bg-card: #1E293B;
+      --bg-card-alt: #283548;
       
-      /* Vibrant Cartoon Accent Pops */
-      --ocean-blue: #0284C7;
-      --electric-cyan: #38BDF8;
-      --topo-emerald: #10B981;
-      --meadow-lime: #22C55E;
-      --sunset-amber: #F59E0B;
-      --warm-gold: #FBBF24;
-      --volcano-coral: #F43F5E;
-      --neon-purple: #A855F7;
-      
-      /* Typography Colors */
-      --text-main: #F8FAFC;
+      --text-dark: #F8FAFC;
       --text-muted: #94A3B8;
       --text-faint: #64748B;
       
-      /* Cartoon Shadows & Geometry */
-      --shadow-chunky: 0 10px 0 #070B12, 0 18px 32px rgba(0,0,0,0.45);
-      --shadow-card: 0 8px 0 #0A0F1A, 0 14px 28px rgba(0,0,0,0.35);
-      --shadow-btn: 0 5px 0 #0369A1;
-      --shadow-btn-gold: 0 5px 0 #D97706;
-      --shadow-btn-emerald: 0 5px 0 #059669;
-      --shadow-hover: 0 14px 0 #070B12, 0 24px 40px rgba(14, 165, 233, 0.25);
-      
-      --radius-badge: 999px;
-      --radius-lg: 22px;
-      --radius-md: 16px;
-      --radius-sm: 10px;
-      --sidebar-w: 270px;
-    }
-
-    [data-theme="light"] {
-      /* Cartoon Vibrant Light Palette */
-      --bg-space: #F0F9FF;
-      --bg-canvas: #F8FAFC;
-      --card-base: #FFFFFF;
-      --card-elevated: #F1F5F9;
-      --card-highlight: #E2E8F0;
-      --border-chunky: #CBD5E1;
-      --border-accent: #0284C7;
-      
-      --text-main: #0F172A;
-      --text-muted: #475569;
-      --text-faint: #64748B;
-      
-      --shadow-chunky: 0 8px 0 #CBD5E1, 0 16px 28px rgba(0,0,0,0.08);
-      --shadow-card: 0 6px 0 #E2E8F0, 0 12px 24px rgba(0,0,0,0.06);
-      --shadow-btn: 0 5px 0 #0369A1;
-      --shadow-hover: 0 12px 0 #94A3B8, 0 20px 35px rgba(2, 132, 199, 0.15);
+      --shadow-block-lg: 0 10px 0 #050811, 0 24px 40px rgba(0,0,0,0.5);
+      --shadow-block-md: 0 6px 0 #050811, 0 14px 24px rgba(0,0,0,0.4);
+      --shadow-block-sm: 0 4px 0 #050811;
+      --shadow-btn: 0 5px 0 #050811;
     }
 
     * { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; scroll-padding-top: 90px; }
+    html { scroll-behavior: smooth; scroll-padding-top: 100px; }
+    
     body {
       min-height: 100vh;
-      color: var(--text-main);
+      color: var(--text-dark);
       font-family: "Plus Jakarta Sans", sans-serif;
-      background-color: var(--bg-space);
+      background-color: var(--bg-sky);
       background-image: 
-        radial-gradient(circle at 15% 15%, rgba(56, 189, 248, 0.12), transparent 35rem),
-        radial-gradient(circle at 85% 75%, rgba(16, 185, 129, 0.12), transparent 40rem),
-        radial-gradient(circle at 50% 50%, rgba(245, 158, 11, 0.08), transparent 45rem);
+        radial-gradient(circle at 10% 20%, rgba(14, 165, 233, 0.18), transparent 32rem),
+        radial-gradient(circle at 90% 80%, rgba(34, 197, 94, 0.18), transparent 35rem),
+        radial-gradient(circle at 50% 50%, rgba(251, 191, 36, 0.12), transparent 40rem);
       background-attachment: fixed;
-      line-height: 1.6;
+      line-height: 1.55;
       -webkit-font-smoothing: antialiased;
     }
 
@@ -335,8 +346,8 @@
       z-index: 90;
       backdrop-filter: blur(16px);
       -webkit-backdrop-filter: blur(16px);
-      background: rgba(15, 23, 42, 0.9);
-      border-bottom: 3px solid var(--border-chunky);
+      background: rgba(240, 249, 255, 0.92);
+      border-bottom: 3.5px solid var(--ink);
       padding: 14px clamp(20px, 4vw, 56px);
       display: flex;
       align-items: center;
@@ -344,8 +355,8 @@
       gap: 20px;
     }
 
-    [data-theme="light"] .topbar {
-      background: rgba(248, 250, 252, 0.92);
+    [data-theme="dark"] .topbar {
+      background: rgba(15, 23, 42, 0.92);
     }
 
     .top-progress-cluster {
@@ -353,31 +364,32 @@
       align-items: center;
       gap: 16px;
       flex: 1;
-      max-width: 520px;
+      max-width: 540px;
     }
 
     .top-progress-label {
-      font-size: 0.78rem;
+      font-size: 0.82rem;
       font-weight: 800;
       white-space: nowrap;
     }
 
     .top-progress-label span {
       display: block;
-      font-size: 0.62rem;
+      font-size: 0.64rem;
       text-transform: uppercase;
       letter-spacing: 0.1em;
-      color: var(--warm-gold);
+      color: var(--cartoon-yellow-deep);
     }
 
+    /* Candy Striped Animated Progress Bar */
     .progress-track-candy {
       flex: 1;
-      height: 14px;
-      border-radius: 999px;
-      background: var(--card-base);
-      border: 2px solid var(--border-chunky);
+      height: 18px;
+      border-radius: var(--radius-pill);
+      background: var(--bg-card);
+      border: 3px solid var(--ink);
       overflow: hidden;
-      box-shadow: inset 0 2px 4px rgba(0,0,0,0.3);
+      box-shadow: inset 0 3px 0 rgba(0,0,0,0.12);
       position: relative;
     }
 
@@ -385,9 +397,26 @@
       height: 100%;
       width: 0%;
       border-radius: inherit;
-      background: linear-gradient(90deg, var(--electric-cyan), var(--topo-emerald), var(--warm-gold));
-      box-shadow: 0 0 15px rgba(56, 189, 248, 0.45);
+      background: linear-gradient(90deg, var(--cartoon-green), var(--cartoon-blue), var(--cartoon-yellow));
+      background-size: 28px 28px;
+      background-image: linear-gradient(
+        45deg,
+        rgba(255, 255, 255, 0.35) 25%,
+        transparent 25%,
+        transparent 50%,
+        rgba(255, 255, 255, 0.35) 50%,
+        rgba(255, 255, 255, 0.35) 75%,
+        transparent 75%,
+        transparent
+      );
+      animation: candyStripes 1.2s linear infinite;
+      box-shadow: 0 0 12px rgba(34, 197, 94, 0.5);
       transition: width 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+
+    @keyframes candyStripes {
+      0% { background-position: 0 0; }
+      100% { background-position: 28px 0; }
     }
 
     .top-action-group {
@@ -396,59 +425,56 @@
       gap: 12px;
     }
 
-    /* Chunky Cartoon Action Buttons */
+    /* Chunky Cartoon Action Buttons with 3D Push physics */
     .btn-cartoon {
-      height: 42px;
-      padding: 0 18px;
-      border-radius: var(--radius-md);
-      font-size: 0.82rem;
-      font-weight: 800;
-      border: 2.5px solid #0F172A;
-      background: var(--card-elevated);
-      color: var(--text-main);
+      height: 44px;
+      padding: 0 20px;
+      border-radius: var(--radius-box);
+      font-size: 0.88rem;
+      font-weight: 700;
+      border: 3.5px solid var(--ink);
+      background: var(--bg-card);
+      color: var(--text-dark);
       display: inline-flex;
       align-items: center;
-      gap: 9px;
-      box-shadow: 0 4px 0 #0F172A;
+      gap: 10px;
+      box-shadow: var(--shadow-btn);
       cursor: pointer;
-      transition: all 0.16s ease;
+      transition: all 0.12s ease;
       text-decoration: none;
     }
 
     .btn-cartoon svg {
-      width: 17px;
-      height: 17px;
+      width: 19px;
+      height: 19px;
       stroke: currentColor;
       fill: none;
-      stroke-width: 2.5;
+      stroke-width: 2.8;
     }
 
     .btn-cartoon:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 6px 0 #0F172A;
+      transform: translateY(-3px);
+      box-shadow: 0 8px 0 var(--ink);
     }
 
     .btn-cartoon:active {
-      transform: translateY(3px);
-      box-shadow: 0 1px 0 #0F172A;
+      transform: translateY(4px);
+      box-shadow: var(--shadow-btn-active);
     }
 
     .btn-cartoon.btn-cyan {
-      background: var(--electric-cyan);
-      color: #0F172A;
-      box-shadow: var(--shadow-btn);
+      background: var(--cartoon-blue);
+      color: #FFFFFF;
     }
 
     .btn-cartoon.btn-gold {
-      background: var(--warm-gold);
-      color: #0F172A;
-      box-shadow: var(--shadow-btn-gold);
+      background: var(--cartoon-yellow);
+      color: var(--ink);
     }
 
     .btn-cartoon.btn-emerald {
-      background: var(--meadow-lime);
-      color: #0F172A;
-      box-shadow: var(--shadow-btn-emerald);
+      background: var(--cartoon-green);
+      color: var(--ink);
     }
 
     .icon-btn-cartoon {
@@ -491,22 +517,20 @@
       padding: 36px 0 100px;
     }
 
-    /* Cartoon Hero Showcase */
+    /* Cartoon Hero Showcase Banner */
     .hero-cartoon-card {
       position: relative;
       overflow: hidden;
-      border-radius: var(--radius-xl);
-      border: 3.5px solid var(--border-chunky);
-      background: 
-        linear-gradient(135deg, var(--card-base), var(--card-elevated)),
-        radial-gradient(circle at 85% 20%, rgba(14, 165, 233, 0.15), transparent 28rem);
+      border-radius: var(--radius-bubble);
+      border: 4px solid var(--ink);
+      background: var(--bg-card);
       padding: clamp(36px, 6vw, 68px);
       margin-bottom: 48px;
-      box-shadow: var(--shadow-chunky);
+      box-shadow: var(--shadow-block-lg);
     }
 
-    [data-theme="light"] .hero-cartoon-card {
-      background: linear-gradient(135deg, #FFFFFF, #E0F2FE);
+    [data-theme="dark"] .hero-cartoon-card {
+      background: var(--bg-card);
     }
 
     .hero-topo-illustration {
@@ -516,7 +540,6 @@
       width: 420px;
       height: 420px;
       pointer-events: none;
-      opacity: 0.85;
       animation: floatIsland 6s ease-in-out infinite;
     }
 
@@ -529,25 +552,25 @@
       display: inline-flex;
       align-items: center;
       gap: 9px;
-      padding: 6px 16px;
-      border-radius: 999px;
-      background: var(--card-highlight);
-      border: 2px solid var(--border-chunky);
-      color: var(--warm-gold);
-      font-size: 0.72rem;
+      padding: 8px 18px;
+      border-radius: var(--radius-pill);
+      background: var(--cartoon-yellow);
+      border: 3px solid var(--ink);
+      color: var(--ink);
+      font-size: 0.76rem;
       font-weight: 800;
-      letter-spacing: 0.1em;
+      letter-spacing: 0.08em;
       text-transform: uppercase;
       margin-bottom: 22px;
-      box-shadow: 0 3px 0 var(--border-chunky);
+      box-shadow: 0 4px 0 var(--ink);
     }
 
     .hero-badge-pill svg {
-      width: 15px;
-      height: 15px;
-      stroke: var(--warm-gold);
+      width: 16px;
+      height: 16px;
+      stroke: var(--ink);
       fill: none;
-      stroke-width: 2.5;
+      stroke-width: 2.8;
     }
 
     .hero-title {
@@ -556,16 +579,18 @@
       letter-spacing: -0.02em;
       max-width: 880px;
       margin-bottom: 22px;
-      color: var(--text-main);
+      color: var(--text-dark);
     }
 
     .hero-title em {
-      color: var(--electric-cyan);
+      color: var(--cartoon-blue-deep);
       font-style: normal;
-      text-decoration: underline;
-      text-decoration-color: var(--warm-gold);
-      text-decoration-thickness: 6px;
-      text-underline-offset: 8px;
+      background: var(--cartoon-yellow);
+      padding: 0 10px;
+      border-radius: 12px;
+      border: 3px solid var(--ink);
+      box-shadow: 0 4px 0 var(--ink);
+      display: inline-block;
     }
 
     .hero-desc {
@@ -591,23 +616,28 @@
       gap: 16px;
       margin-top: 40px;
       padding-top: 32px;
-      border-top: 3px dashed var(--border-chunky);
+      border-top: 3.5px dashed var(--ink);
       position: relative;
       z-index: 2;
     }
 
     .kpi-block {
-      background: var(--card-base);
-      border: 2.5px solid var(--border-chunky);
-      border-radius: var(--radius-md);
+      background: var(--bg-canvas);
+      border: 3.5px solid var(--ink);
+      border-radius: var(--radius-box);
       padding: 18px 22px;
-      box-shadow: 0 5px 0 var(--border-chunky);
+      box-shadow: var(--shadow-block-sm);
       position: relative;
+      transition: transform 0.15s ease;
+    }
+
+    .kpi-block:hover {
+      transform: translateY(-3px);
     }
 
     .kpi-block .stat-value {
       font-size: 2.6rem;
-      color: var(--warm-gold);
+      color: var(--text-dark);
       line-height: 1;
       display: flex;
       align-items: baseline;
@@ -616,13 +646,13 @@
 
     .kpi-block .stat-value span {
       font-size: 1.1rem;
-      color: var(--electric-cyan);
+      color: var(--cartoon-coral-deep);
     }
 
     .kpi-block .stat-label {
       display: block;
       margin-top: 6px;
-      font-size: 0.76rem;
+      font-size: 0.78rem;
       font-weight: 700;
       color: var(--text-muted);
     }
@@ -638,7 +668,7 @@
       align-items: flex-end;
       gap: 20px;
       margin-bottom: 30px;
-      border-bottom: 3px dashed var(--border-chunky);
+      border-bottom: 3.5px dashed var(--ink);
       padding-bottom: 20px;
     }
 
@@ -646,30 +676,35 @@
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      font-size: 0.72rem;
+      font-size: 0.74rem;
       font-weight: 800;
       text-transform: uppercase;
-      letter-spacing: 0.12em;
-      color: var(--electric-cyan);
-      margin-bottom: 6px;
+      letter-spacing: 0.1em;
+      color: var(--cartoon-blue-deep);
+      background: var(--bg-sky);
+      border: 2.5px solid var(--ink);
+      padding: 4px 12px;
+      border-radius: var(--radius-pill);
+      box-shadow: 0 2px 0 var(--ink);
+      margin-bottom: 8px;
     }
 
     .section-tag-kicker svg {
       width: 16px;
       height: 16px;
-      stroke: currentColor;
+      stroke: var(--ink);
       fill: none;
-      stroke-width: 2.5;
+      stroke-width: 2.8;
     }
 
     .section-title {
       font-size: clamp(2.3rem, 4.5vw, 3.6rem);
-      color: var(--text-main);
+      color: var(--text-dark);
     }
 
     .section-subtitle {
       color: var(--text-muted);
-      font-size: 0.88rem;
+      font-size: 0.9rem;
       font-weight: 600;
       max-width: 700px;
       margin-top: 6px;
@@ -683,21 +718,20 @@
     }
 
     .doc-card {
-      background: var(--card-base);
-      border: 3px solid var(--border-chunky);
-      border-radius: var(--radius-lg);
+      background: var(--bg-card);
+      border: 3.5px solid var(--ink);
+      border-radius: var(--radius-bubble);
       padding: 28px;
       display: flex;
       flex-direction: column;
       position: relative;
-      box-shadow: var(--shadow-card);
-      transition: all 0.22s cubic-bezier(0.34, 1.56, 0.64, 1);
+      box-shadow: var(--shadow-block-md);
+      transition: all 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
     }
 
     .doc-card:hover {
       transform: translateY(-6px);
-      border-color: var(--border-accent);
-      box-shadow: var(--shadow-hover);
+      box-shadow: var(--shadow-block-lg);
     }
 
     .doc-card-head {
@@ -709,28 +743,30 @@
     }
 
     .week-pill {
-      font-size: 0.7rem;
+      font-size: 0.72rem;
       font-weight: 800;
       text-transform: uppercase;
       letter-spacing: 0.08em;
       padding: 5px 12px;
-      border-radius: 999px;
-      border: 2px solid var(--border-chunky);
-      background: var(--card-elevated);
-      color: var(--warm-gold);
+      border-radius: var(--radius-pill);
+      border: 2.5px solid var(--ink);
+      background: var(--cartoon-yellow);
+      color: var(--ink);
+      box-shadow: 0 3px 0 var(--ink);
     }
 
     .score-tag {
       display: inline-flex;
       align-items: center;
       gap: 6px;
-      font-size: 0.78rem;
+      font-size: 0.8rem;
       font-weight: 800;
-      color: var(--meadow-lime);
-      background: rgba(34, 197, 94, 0.14);
-      padding: 4px 10px;
-      border-radius: var(--radius-sm);
-      border: 2px solid rgba(34, 197, 94, 0.35);
+      color: var(--ink);
+      background: var(--cartoon-green);
+      padding: 4px 11px;
+      border-radius: var(--radius-pill);
+      border: 2.5px solid var(--ink);
+      box-shadow: 0 3px 0 var(--ink);
     }
 
     .score-tag svg {
@@ -948,6 +984,39 @@
       transform: translateY(0) scale(1);
     }
 
+    /* Floating Cartoon Clouds Background */
+    .cartoon-clouds-bg {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 0;
+      overflow: hidden;
+    }
+
+    .cloud {
+      position: absolute;
+      background: #FFFFFF;
+      border: 3px solid var(--ink);
+      border-radius: var(--radius-pill);
+      box-shadow: 0 6px 0 var(--ink);
+      opacity: 0.85;
+      animation: floatCloud 24s linear infinite;
+    }
+
+    [data-theme="dark"] .cloud {
+      background: #1E293B;
+      opacity: 0.35;
+    }
+
+    .cloud-1 { width: 140px; height: 48px; top: 10%; left: -160px; animation-duration: 32s; }
+    .cloud-2 { width: 190px; height: 60px; top: 45%; left: -210px; animation-duration: 44s; animation-delay: 8s; }
+    .cloud-3 { width: 120px; height: 42px; top: 80%; left: -140px; animation-duration: 28s; animation-delay: 16s; }
+
+    @keyframes floatCloud {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(calc(100vw + 300px)); }
+    }
+
     /* Responsive Queries */
     @media (max-width: 1040px) {
       .app-shell { grid-template-columns: 1fr; }
@@ -969,8 +1038,12 @@
 </head>
 <body>
 
-  <!-- Topographic Map Grid Background -->
-  <div class="animated-topo-bg" aria-hidden="true"></div>
+  <!-- Floating Cartoon Clouds Background -->
+  <div class="cartoon-clouds-bg" aria-hidden="true">
+    <div class="cloud cloud-1"></div>
+    <div class="cloud cloud-2"></div>
+    <div class="cloud cloud-3"></div>
+  </div>
 
   <div class="app-shell">
     <!-- Left Navigation Bar -->
@@ -1112,7 +1185,10 @@
             <span>8-Week Production Pipeline · Locked Tier 1 Cadence</span>
           </div>
 
-          <h1 class="hero-title">Hidden <em>Geography</em> Mission Control</h1>
+          <h1 class="hero-title">
+            Hidden <span style="color:var(--cartoon-blue-deep);">Geography</span> <br>
+            <span style="background:var(--cartoon-yellow); color:var(--ink); padding:2px 14px; border-radius:14px; border:3.5px solid var(--ink); box-shadow:0 5px 0 var(--ink); display:inline-block; margin-top:8px;">Mission Control</span>
+          </h1>
           <p class="hero-desc">
             The ultimate command workspace for producing high-retention, faceless data-visualization geography documentaries. Powered by verified geographical facts, deterministic cue sheets, and Google Flow AI cinematography.
           </p>
@@ -1126,7 +1202,7 @@
               <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
               <span>8-Week Calendar (56 Days)</span>
             </a>
-            <a class="btn-cartoon" href="content-plan/style-guide/style-guide-dashboard.html">
+            <a class="btn-cartoon btn-emerald" href="content-plan/style-guide/style-guide-dashboard.html">
               <svg viewBox="0 0 24 24"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
               <span>Visual Style Bible</span>
             </a>
@@ -1210,7 +1286,7 @@
                 <span class="cartoon-chip"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/></svg> 12 Beats</span>
               </div>
               <div class="doc-card-bottom">
-                <a class="btn-cartoon" href="content-plan/long-videos/v2/production-studio.html">
+                <a class="btn-cartoon btn-gold" href="content-plan/long-videos/v2/production-studio.html">
                   <span>Open V2 Studio</span>
                   <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
                 </a>
@@ -1235,7 +1311,7 @@
                 <span class="cartoon-chip"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/></svg> 12 Beats</span>
               </div>
               <div class="doc-card-bottom">
-                <a class="btn-cartoon" href="content-plan/long-videos/v3/production-studio.html">
+                <a class="btn-cartoon btn-cyan" href="content-plan/long-videos/v3/production-studio.html">
                   <span>Open V3 Studio</span>
                   <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
                 </a>
@@ -1260,7 +1336,7 @@
                 <span class="cartoon-chip"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/></svg> 12 Beats</span>
               </div>
               <div class="doc-card-bottom">
-                <a class="btn-cartoon" href="content-plan/long-videos/v4/production-studio.html">
+                <a class="btn-cartoon btn-emerald" href="content-plan/long-videos/v4/production-studio.html">
                   <span>Open V4 Studio</span>
                   <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
                 </a>
@@ -1281,7 +1357,7 @@
                 <span class="cartoon-chip"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg> 1,380 words</span>
               </div>
               <div class="doc-card-bottom">
-                <a class="btn-cartoon" href="content-plan/long-videos/v5/production-studio.html"><span>Open V5 Studio</span><svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+                <a class="btn-cartoon btn-gold" href="content-plan/long-videos/v5/production-studio.html"><span>Open V5 Studio</span><svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
                 <span style="font-size: 0.72rem; font-weight: 700; color: var(--text-faint);">Month 2</span>
               </div>
             </article>
@@ -1299,7 +1375,7 @@
                 <span class="cartoon-chip"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg> 1,310 words</span>
               </div>
               <div class="doc-card-bottom">
-                <a class="btn-cartoon" href="content-plan/long-videos/v6/production-studio.html"><span>Open V6 Studio</span><svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+                <a class="btn-cartoon btn-cyan" href="content-plan/long-videos/v6/production-studio.html"><span>Open V6 Studio</span><svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
                 <span style="font-size: 0.72rem; font-weight: 700; color: var(--text-faint);">Month 2</span>
               </div>
             </article>
@@ -1317,7 +1393,7 @@
                 <span class="cartoon-chip"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg> 1,420 words</span>
               </div>
               <div class="doc-card-bottom">
-                <a class="btn-cartoon" href="content-plan/long-videos/v7/production-studio.html"><span>Open V7 Studio</span><svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+                <a class="btn-cartoon btn-emerald" href="content-plan/long-videos/v7/production-studio.html"><span>Open V7 Studio</span><svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
                 <span style="font-size: 0.72rem; font-weight: 700; color: var(--text-faint);">Month 2</span>
               </div>
             </article>
@@ -1335,7 +1411,7 @@
                 <span class="cartoon-chip"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg> 1,340 words</span>
               </div>
               <div class="doc-card-bottom">
-                <a class="btn-cartoon" href="content-plan/long-videos/v8/production-studio.html"><span>Open V8 Studio</span><svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+                <a class="btn-cartoon btn-gold" href="content-plan/long-videos/v8/production-studio.html"><span>Open V8 Studio</span><svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
                 <span style="font-size: 0.72rem; font-weight: 700; color: var(--text-faint);">Month 2</span>
               </div>
             </article>
@@ -1451,11 +1527,11 @@
     }
 
     themeToggleBtn.addEventListener("click", () => {
-      const current = document.documentElement.dataset.theme || "dark";
-      setTheme(current === "dark" ? "light" : "dark");
+      const current = document.documentElement.dataset.theme || "light";
+      setTheme(current === "light" ? "dark" : "light");
     });
 
-    setTheme(localStorage.getItem("hg-theme-cartoon-v1") || "dark");
+    setTheme(localStorage.getItem("hg-theme-cartoon-v1") || "light");
 
     // Real-Time Progress Tracker Synced with LocalStorage
     const stages = ["Script", "Voiceover", "Visuals", "Edit", "Uploaded"];
