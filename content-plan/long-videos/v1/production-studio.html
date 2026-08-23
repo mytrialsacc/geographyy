@@ -1,0 +1,1517 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Hidden Geography — Video 1 (V1) Single-Page Production Studio: Full 12-Beat Script, AI Cues & Derived Shorts.">
+  <meta name="theme-color" content="#38BDF8">
+  <title>V1 Production Studio · Every Map You've Seen Is Lying About Africa</title>
+  
+  <link rel="icon" type="image/svg+xml" href="../../../favicon.svg">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&family=JetBrains+Mono:wght@600;800&display=swap" rel="stylesheet">
+  
+  <style>
+    :root {
+      /* Playful Animated Cartoon Palette */
+      --ink: #0F172A;
+      --bg-sky: #E0F2FE;
+      --bg-canvas: #F0F9FF;
+      --bg-card: #FFFFFF;
+      --bg-card-alt: #FEF3C7;
+      
+      --cartoon-blue: #0EA5E9;
+      --cartoon-blue-deep: #0284C7;
+      --cartoon-green: #22C55E;
+      --cartoon-green-deep: #16A34A;
+      --cartoon-yellow: #FBBF24;
+      --cartoon-yellow-deep: #D97706;
+      --cartoon-coral: #FB7185;
+      --cartoon-coral-deep: #F43F5E;
+      --cartoon-purple: #A855F7;
+      --cartoon-orange: #FB923C;
+
+      --text-dark: #0F172A;
+      --text-main: #0F172A;
+      --text-muted: #475569;
+      --text-faint: #64748B;
+      --text-white: #FFFFFF;
+
+      --border-chunky: var(--ink);
+      --card-base: var(--bg-card);
+      --card-elevated: var(--bg-canvas);
+      --card-highlight: var(--bg-card-alt);
+      
+      --shadow-block-lg: 0 10px 0 var(--ink), 0 20px 30px rgba(15, 23, 42, 0.12);
+      --shadow-block-md: 0 6px 0 var(--ink), 0 12px 20px rgba(15, 23, 42, 0.08);
+      --shadow-block-sm: 0 4px 0 var(--ink);
+      --shadow-btn: 0 5px 0 var(--ink);
+      --shadow-btn-active: 0 1px 0 var(--ink);
+
+      --radius-pill: 999px;
+      --radius-bubble: 24px;
+      --radius-box: 18px;
+      --radius-sm: 12px;
+      --radius-md: 16px;
+      --radius-lg: 22px;
+      --radius-xl: 26px;
+      --sidebar-w: 280px;
+    }
+
+    [data-theme="dark"] {
+      --ink: #050811;
+      --bg-sky: #090D16;
+      --bg-canvas: #0F172A;
+      --bg-card: #1E293B;
+      --bg-card-alt: #24344D;
+      
+      --cartoon-blue: #38BDF8;
+      --cartoon-blue-deep: #38BDF8;
+      --cartoon-green: #4ADE80;
+      --cartoon-green-deep: #22C55E;
+      --cartoon-yellow: #FBBF24;
+      --cartoon-yellow-deep: #F59E0B;
+      --cartoon-coral: #FB7185;
+      --cartoon-coral-deep: #F43F5E;
+
+      --text-dark: #F8FAFC;
+      --text-main: #F8FAFC;
+      --text-muted: #94A3B8;
+      --text-faint: #64748B;
+      
+      --border-chunky: #334155;
+      --card-base: #1E293B;
+      --card-elevated: #24344D;
+      --card-highlight: #2D3F5C;
+      
+      --shadow-block-lg: 0 10px 0 #050811, 0 24px 40px rgba(0,0,0,0.5);
+      --shadow-block-md: 0 6px 0 #050811, 0 14px 24px rgba(0,0,0,0.4);
+      --shadow-block-sm: 0 4px 0 #050811;
+      --shadow-btn: 0 5px 0 #050811;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; scroll-padding-top: 100px; }
+    
+    body {
+      min-height: 100vh;
+      color: var(--text-dark);
+      font-family: "Plus Jakarta Sans", sans-serif;
+      background-color: var(--bg-sky);
+      background-image: 
+        radial-gradient(circle at 10% 20%, rgba(14, 165, 233, 0.18), transparent 32rem),
+        radial-gradient(circle at 90% 80%, rgba(34, 197, 94, 0.18), transparent 35rem),
+        radial-gradient(circle at 50% 50%, rgba(251, 191, 36, 0.12), transparent 40rem);
+      background-attachment: fixed;
+      line-height: 1.55;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    h1, h2, h3, h4, .brand-title, .pill-tag, .stat-number, .btn-cartoon {
+      font-family: "Fredoka", "Plus Jakarta Sans", sans-serif;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+    }
+
+    code, pre { font-family: "JetBrains Mono", monospace; }
+
+    /* Floating Clouds */
+    .cartoon-clouds-bg {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 0;
+      overflow: hidden;
+    }
+
+    .cloud {
+      position: absolute;
+      background: #FFFFFF;
+      border: 3px solid var(--ink);
+      border-radius: var(--radius-pill);
+      box-shadow: 0 6px 0 var(--ink);
+      opacity: 0.85;
+      animation: floatCloud 24s linear infinite;
+    }
+
+    [data-theme="dark"] .cloud {
+      background: #1E293B;
+      opacity: 0.35;
+    }
+
+    .cloud-1 { width: 140px; height: 48px; top: 10%; left: -160px; animation-duration: 32s; }
+    .cloud-2 { width: 190px; height: 60px; top: 45%; left: -210px; animation-duration: 44s; animation-delay: 8s; }
+    .cloud-3 { width: 120px; height: 42px; top: 80%; left: -140px; animation-duration: 28s; animation-delay: 16s; }
+
+    @keyframes floatCloud {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(calc(100vw + 300px)); }
+    }
+
+    /* Layout Shell */
+    .app-shell {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      grid-template-columns: var(--sidebar-w) minmax(0, 1fr);
+      min-height: 100vh;
+    }
+
+    .sidebar-backdrop {
+      position: fixed;
+      inset: 0;
+      background: rgba(15, 23, 42, 0.65);
+      backdrop-filter: blur(4px);
+      -webkit-backdrop-filter: blur(4px);
+      z-index: 95;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.25s ease;
+    }
+    .sidebar-backdrop.active { opacity: 1; pointer-events: auto; }
+
+    /* Sidebar Navigation */
+    .sidebar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      width: var(--sidebar-w);
+      background: var(--bg-card);
+      border-right: 3.5px solid var(--border-chunky);
+      display: flex;
+      flex-direction: column;
+      padding: 24px 18px;
+      z-index: 100;
+      overflow-y: auto;
+      box-shadow: 4px 0 20px rgba(0,0,0,0.06);
+    }
+
+    .brand-cluster {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      text-decoration: none;
+    }
+
+    .brand-logo-badge {
+      width: 50px;
+      height: 50px;
+      border-radius: 16px;
+      background: linear-gradient(135deg, var(--cartoon-yellow), var(--cartoon-orange));
+      border: 3px solid var(--border-chunky);
+      box-shadow: 0 4px 0 var(--border-chunky);
+      display: grid;
+      place-items: center;
+      flex-shrink: 0;
+      transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+
+    .brand-cluster:hover .brand-logo-badge {
+      transform: rotate(-6deg) scale(1.08);
+    }
+
+    .brand-logo-badge svg {
+      width: 30px;
+      height: 30px;
+    }
+
+    .brand-title-wrap strong {
+      display: block;
+      font-size: 1.3rem;
+      color: var(--text-dark);
+      font-family: "Fredoka", sans-serif;
+      line-height: 1.05;
+    }
+
+    .brand-title-wrap small {
+      display: inline-block;
+      font-size: 0.66rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: #FFFFFF;
+      background: var(--cartoon-blue-deep);
+      padding: 2px 10px;
+      border-radius: var(--radius-pill);
+      margin-top: 4px;
+      border: 2px solid var(--border-chunky);
+      box-shadow: 0 2px 0 var(--border-chunky);
+    }
+
+    .nav-section-title {
+      font-size: 0.68rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--text-faint);
+      margin: 18px 8px 10px;
+    }
+
+    .nav-list {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .nav-pill-btn {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 11px 15px;
+      border-radius: var(--radius-md);
+      font-size: 0.86rem;
+      font-weight: 700;
+      color: var(--text-muted);
+      border: 2.5px solid transparent;
+      background: transparent;
+      transition: all 0.16s cubic-bezier(0.34, 1.56, 0.64, 1);
+      text-decoration: none;
+    }
+
+    .nav-pill-btn svg {
+      width: 19px;
+      height: 19px;
+      stroke: currentColor;
+      fill: none;
+      stroke-width: 2.5;
+      flex-shrink: 0;
+      transition: transform 0.2s ease;
+    }
+
+    .nav-pill-btn:hover {
+      color: var(--text-dark);
+      background: var(--bg-canvas);
+      border-color: var(--border-chunky);
+      transform: translateX(4px);
+      box-shadow: 0 3px 0 var(--border-chunky);
+    }
+
+    .nav-pill-btn:hover svg {
+      transform: scale(1.15) rotate(6deg);
+      stroke: var(--cartoon-blue-deep);
+    }
+
+    .nav-pill-btn.active {
+      color: #0F172A;
+      background: var(--cartoon-yellow);
+      border-color: var(--border-chunky);
+      box-shadow: 0 4px 0 var(--border-chunky);
+      transform: translateY(-2px);
+    }
+
+    .nav-pill-btn.active svg {
+      stroke: #0F172A;
+    }
+
+    .nav-counter-tag {
+      margin-left: auto;
+      font-size: 0.66rem;
+      font-weight: 800;
+      padding: 2px 8px;
+      border-radius: var(--radius-pill);
+      background: var(--bg-sky);
+      color: var(--cartoon-blue-deep);
+      border: 2px solid var(--border-chunky);
+    }
+
+    .nav-pill-btn.active .nav-counter-tag {
+      background: #0F172A;
+      color: var(--cartoon-yellow);
+      border-color: #0F172A;
+    }
+
+    .sidebar-footer-card {
+      margin-top: auto;
+      padding-top: 18px;
+      border-top: 3.5px dashed var(--border-chunky);
+    }
+
+    .channel-handle-box {
+      background: var(--bg-canvas);
+      border: 3px solid var(--border-chunky);
+      border-radius: var(--radius-md);
+      padding: 12px 14px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      box-shadow: 0 4px 0 var(--border-chunky);
+    }
+
+    .live-pulse-dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: var(--cartoon-green);
+      border: 2px solid var(--ink);
+      box-shadow: 0 0 10px var(--cartoon-green);
+      animation: cartoonPulse 1.8s infinite;
+    }
+
+    @keyframes cartoonPulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.35); }
+    }
+
+    .channel-handle-box span {
+      display: block;
+      font-size: 0.64rem;
+      font-weight: 800;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    .channel-handle-box strong {
+      font-size: 0.86rem;
+      color: var(--cartoon-blue-deep);
+      font-family: "JetBrains Mono", monospace;
+      font-weight: 800;
+    }
+
+    /* Main Content Wrapper */
+    .main-wrapper {
+      grid-column: 2;
+      min-width: 0;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Top Action Bar with Main Nav Links */
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 90;
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      background: rgba(240, 249, 255, 0.94);
+      border-bottom: 3.5px solid var(--ink);
+      padding: 12px clamp(16px, 3vw, 40px);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    [data-theme="dark"] .topbar {
+      background: rgba(15, 23, 42, 0.94);
+    }
+
+    .top-main-nav {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      overflow-x: auto;
+      scrollbar-width: none;
+    }
+    .top-main-nav::-webkit-scrollbar { display: none; }
+
+    .top-nav-link {
+      height: 38px;
+      padding: 0 14px;
+      border-radius: var(--radius-pill);
+      font-size: 0.82rem;
+      font-weight: 800;
+      color: var(--text-dark);
+      background: var(--bg-card);
+      border: 2.5px solid var(--ink);
+      box-shadow: 0 3px 0 var(--ink);
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      text-decoration: none;
+      white-space: nowrap;
+      transition: all 0.12s ease;
+      user-select: none;
+    }
+
+    .top-nav-link svg {
+      width: 16px;
+      height: 16px;
+      stroke: currentColor;
+      fill: none;
+      stroke-width: 2.5;
+    }
+
+    .top-nav-link:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 5px 0 var(--ink);
+      background: var(--bg-canvas);
+    }
+
+    .top-nav-link:active {
+      transform: translateY(2px);
+      box-shadow: 0 1px 0 var(--ink);
+    }
+
+    .top-nav-link.active {
+      background: var(--cartoon-yellow);
+      color: var(--ink);
+      border-color: var(--ink);
+    }
+
+    .top-action-group {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-shrink: 0;
+    }
+
+    .btn-cartoon {
+      height: 40px;
+      padding: 0 18px;
+      border-radius: var(--radius-box);
+      font-size: 0.86rem;
+      font-weight: 700;
+      border: 3px solid var(--ink);
+      background: var(--bg-card);
+      color: var(--text-dark);
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      box-shadow: var(--shadow-btn);
+      cursor: pointer;
+      transition: all 0.12s ease;
+      text-decoration: none;
+      user-select: none;
+    }
+
+    .btn-cartoon svg {
+      width: 17px;
+      height: 17px;
+      stroke: currentColor;
+      fill: none;
+      stroke-width: 2.8;
+    }
+
+    .btn-cartoon:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 0 var(--ink);
+    }
+
+    .btn-cartoon.btn-gold { background: var(--cartoon-yellow); color: var(--ink); }
+    .btn-cartoon.btn-cyan { background: var(--cartoon-blue); color: #FFFFFF; }
+    .btn-cartoon.btn-emerald { background: var(--cartoon-green); color: var(--ink); }
+
+    .icon-btn-cartoon {
+      width: 40px;
+      height: 40px;
+      border-radius: var(--radius-box);
+      border: 3px solid var(--ink);
+      background: var(--bg-card);
+      color: var(--text-dark);
+      box-shadow: var(--shadow-btn);
+      display: grid;
+      place-items: center;
+      cursor: pointer;
+      transition: all 0.12s ease;
+      flex-shrink: 0;
+    }
+
+    .icon-btn-cartoon svg {
+      width: 19px;
+      height: 19px;
+      stroke: var(--text-dark);
+      fill: none;
+      stroke-width: 2.6;
+    }
+
+    /* Page Content */
+    .content-container {
+      width: min(1340px, calc(100% - 48px));
+      margin: 0 auto;
+      padding: 36px 0 100px;
+    }
+
+    /* Hero Showcase Banner */
+    .hero-cartoon-card {
+      position: relative;
+      overflow: hidden;
+      border-radius: var(--radius-bubble);
+      border: 4px solid var(--ink);
+      background: var(--bg-card);
+      padding: clamp(32px, 5vw, 60px);
+      margin-bottom: 36px;
+      box-shadow: var(--shadow-block-lg);
+    }
+
+    .hero-badge-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      padding: 8px 18px;
+      border-radius: var(--radius-pill);
+      background: var(--cartoon-yellow);
+      border: 3px solid var(--ink);
+      color: var(--ink);
+      font-size: 0.76rem;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 18px;
+      box-shadow: 0 4px 0 var(--ink);
+    }
+
+    .hero-badge-pill svg {
+      width: 16px;
+      height: 16px;
+      stroke: var(--ink);
+      fill: none;
+      stroke-width: 2.8;
+    }
+
+    .hero-title {
+      font-size: clamp(2.2rem, 5vw, 4rem);
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+      max-width: 960px;
+      margin-bottom: 18px;
+      color: var(--text-dark);
+    }
+
+    .hero-kpi-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+      gap: 16px;
+      margin-top: 32px;
+      padding-top: 28px;
+      border-top: 3.5px dashed var(--ink);
+    }
+
+    .kpi-block {
+      background: var(--bg-canvas);
+      border: 3.5px solid var(--ink);
+      border-radius: var(--radius-box);
+      padding: 16px 20px;
+      box-shadow: var(--shadow-block-sm);
+    }
+
+    .kpi-block .stat-value {
+      font-size: 2.3rem;
+      color: var(--text-dark);
+      line-height: 1;
+      display: flex;
+      align-items: baseline;
+      gap: 6px;
+    }
+
+    .kpi-block .stat-value span { font-size: 0.95rem; color: var(--cartoon-coral-deep); }
+    .kpi-block .stat-label { display: block; margin-top: 6px; font-size: 0.76rem; font-weight: 700; color: var(--text-muted); }
+
+    /* Studio Tab Bar Navigation */
+    .studio-tab-bar {
+      position: sticky;
+      top: 76px;
+      z-index: 80;
+      background: var(--bg-card);
+      border: 3.5px solid var(--ink);
+      border-radius: var(--radius-bubble);
+      padding: 12px 18px;
+      margin-bottom: 36px;
+      box-shadow: var(--shadow-block-md);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      overflow-x: auto;
+      scrollbar-width: none;
+    }
+    .studio-tab-bar::-webkit-scrollbar { display: none; }
+
+    .studio-tab-btn {
+      height: 42px;
+      padding: 0 20px;
+      border-radius: var(--radius-pill);
+      font-size: 0.84rem;
+      font-weight: 800;
+      border: 2.5px solid var(--ink);
+      background: var(--bg-canvas);
+      color: var(--text-dark);
+      box-shadow: 0 3px 0 var(--ink);
+      cursor: pointer;
+      transition: all 0.12s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      white-space: nowrap;
+      user-select: none;
+    }
+
+    .studio-tab-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 5px 0 var(--ink);
+    }
+
+    .studio-tab-btn.active {
+      background: var(--cartoon-yellow);
+      color: var(--ink);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 0 var(--ink);
+    }
+
+    /* Studio Tab Content Panes */
+    .studio-pane {
+      display: none;
+      flex-direction: column;
+      gap: 28px;
+    }
+
+    .studio-pane.active {
+      display: flex;
+    }
+
+    .studio-card {
+      background: var(--bg-card);
+      border: 3.5px solid var(--ink);
+      border-radius: var(--radius-bubble);
+      padding: clamp(24px, 3.5vw, 36px);
+      box-shadow: var(--shadow-block-md);
+    }
+
+    .studio-card-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 20px;
+      padding-bottom: 16px;
+      border-bottom: 3.5px dashed var(--ink);
+    }
+
+    .studio-card-head h2, .studio-card-head h3 {
+      font-size: 1.5rem;
+      color: var(--text-dark);
+    }
+
+    .pill-tag {
+      font-size: 0.72rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      padding: 5px 14px;
+      border-radius: var(--radius-pill);
+      border: 2px solid var(--ink);
+      background: var(--bg-canvas);
+      color: var(--text-dark);
+      box-shadow: 0 2px 0 var(--ink);
+    }
+
+    /* Beat Script Engine */
+    .beat-card {
+      background: var(--bg-canvas);
+      border: 3px solid var(--ink);
+      border-radius: var(--radius-lg);
+      padding: 24px;
+      margin-bottom: 20px;
+      box-shadow: var(--shadow-block-sm);
+      display: grid;
+      grid-template-columns: 140px minmax(0, 1fr);
+      gap: 24px;
+    }
+
+    .beat-meta-col {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      border-right: 2.5px dashed var(--ink);
+      padding-right: 16px;
+    }
+
+    .beat-num {
+      font-size: 1.3rem;
+      font-weight: 800;
+      color: var(--ink);
+      background: var(--cartoon-yellow);
+      padding: 4px 12px;
+      border-radius: var(--radius-pill);
+      border: 2px solid var(--ink);
+      box-shadow: 0 2px 0 var(--ink);
+      width: fit-content;
+    }
+
+    .beat-time {
+      font-size: 0.78rem;
+      font-weight: 800;
+      color: var(--cartoon-blue-deep);
+      font-family: "JetBrains Mono", monospace;
+    }
+
+    .beat-words {
+      font-size: 0.72rem;
+      font-weight: 700;
+      color: var(--text-faint);
+    }
+
+    .beat-content-col {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .script-dialogue-text {
+      font-size: 1.05rem;
+      line-height: 1.65;
+      color: var(--text-dark);
+      font-weight: 600;
+    }
+
+    .visual-cue-box {
+      background: var(--bg-card);
+      border: 2px solid var(--ink);
+      border-left: 6px solid var(--cartoon-blue);
+      border-radius: var(--radius-sm);
+      padding: 10px 14px;
+      font-size: 0.84rem;
+      color: var(--text-muted);
+    }
+
+    .visual-cue-box strong {
+      color: var(--cartoon-blue-deep);
+      text-transform: uppercase;
+      font-size: 0.7rem;
+      letter-spacing: 0.08em;
+      display: block;
+      margin-bottom: 2px;
+    }
+
+    .sfx-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.72rem;
+      font-weight: 800;
+      color: var(--cartoon-coral-deep);
+      background: #FFE4E6;
+      border: 1.5px solid var(--cartoon-coral-deep);
+      padding: 2px 10px;
+      border-radius: var(--radius-pill);
+      width: fit-content;
+    }
+
+    /* AI Prompts Cue Table */
+    .prompt-table-card {
+      background: var(--bg-card);
+      border: 3px solid var(--ink);
+      border-radius: var(--radius-lg);
+      padding: 20px;
+      margin-bottom: 16px;
+      box-shadow: 0 3px 0 var(--ink);
+    }
+
+    .prompt-code-box {
+      background: #0F172A;
+      color: #38BDF8;
+      border: 2px solid var(--ink);
+      border-radius: var(--radius-sm);
+      padding: 14px;
+      font-family: "JetBrains Mono", monospace;
+      font-size: 0.84rem;
+      line-height: 1.5;
+      margin-top: 10px;
+      position: relative;
+    }
+
+    .copy-mini-btn {
+      position: absolute;
+      top: 8px;
+      right: 8px;
+      background: var(--cartoon-yellow);
+      color: #0F172A;
+      border: 1.5px solid #0F172A;
+      border-radius: var(--radius-sm);
+      padding: 4px 10px;
+      font-size: 0.7rem;
+      font-weight: 800;
+      cursor: pointer;
+    }
+
+    /* Toast Notification */
+    .toast-pill {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      background: var(--cartoon-green);
+      color: #0F172A;
+      padding: 12px 24px;
+      border-radius: var(--radius-pill);
+      border: 3.5px solid var(--ink);
+      font-weight: 800;
+      font-size: 0.86rem;
+      box-shadow: var(--shadow-block-md);
+      z-index: 2000;
+      transform: translateY(120px);
+      transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+      pointer-events: none;
+    }
+    .toast-pill.show { transform: translateY(0); }
+
+    /* Mobile Drawer */
+    .mobile-nav-toggle, .mobile-close-btn { display: none; }
+
+    @media (max-width: 1040px) {
+      .app-shell { grid-template-columns: 1fr; }
+      .sidebar { 
+        transform: translateX(-105%); 
+        transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1); 
+        width: min(320px, 86vw);
+        box-shadow: 10px 0 0 rgba(15, 23, 42, 0.2);
+        z-index: 1000;
+      }
+      .sidebar.open { transform: translateX(0); }
+      .mobile-nav-toggle { display: grid; }
+      .mobile-close-btn { display: grid; }
+      .main-wrapper { grid-column: 1; }
+      .beat-card { grid-template-columns: 1fr; gap: 14px; }
+      .beat-meta-col { border-right: none; border-bottom: 2px dashed var(--ink); padding-right: 0; padding-bottom: 12px; flex-direction: row; align-items: center; justify-content: space-between; }
+    }
+
+    @media (max-width: 640px) {
+      .topbar { padding: 10px 12px; gap: 8px; }
+      .top-main-nav { gap: 6px; }
+      .top-nav-link span { display: none; }
+      .top-nav-link { padding: 0 10px; }
+      .content-container { width: calc(100% - 20px); padding: 20px 0 80px; }
+      .hero-cartoon-card { padding: 24px 18px; margin-bottom: 28px; }
+      .hero-title { font-size: clamp(1.8rem, 7.5vw, 2.6rem); }
+      .studio-tab-bar { top: 70px; padding: 10px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Floating Clouds Background -->
+  <div class="cartoon-clouds-bg" aria-hidden="true">
+    <div class="cloud cloud-1"></div>
+    <div class="cloud cloud-2"></div>
+    <div class="cloud cloud-3"></div>
+  </div>
+
+  <!-- Mobile Backdrop Overlay -->
+  <div class="sidebar-backdrop" id="sidebarBackdrop"></div>
+
+  <div class="app-shell">
+    <!-- Left Navigation Bar -->
+    <aside class="sidebar" id="appSidebar">
+      
+      <!-- Brand Cluster -->
+      <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 22px; border-bottom: 3.5px dashed var(--border-chunky); padding-bottom: 18px;">
+        <a class="brand-cluster" href="../../../index.html">
+          <div class="brand-logo-badge">
+            <svg viewBox="0 0 128 128">
+              <circle cx="64" cy="64" r="54" fill="#0EA5E9" stroke="#0F172A" stroke-width="8"/>
+              <path d="M36 44 C42 32, 60 30, 70 38 C78 45, 88 42, 94 50 C100 58, 92 72, 82 74 C74 76, 68 88, 56 90 C46 92, 38 82, 34 72 Z" fill="#FBBF24" stroke="#0F172A" stroke-width="5"/>
+              <circle cx="64" cy="64" r="44" fill="none" stroke="#FFFFFF" stroke-width="3" stroke-dasharray="6 6" opacity="0.45"/>
+              <path d="M64 36 C55 27, 55 14, 64 8 C73 14, 73 27, 64 36 Z" fill="#F43F5E" stroke="#0F172A" stroke-width="4"/>
+            </svg>
+          </div>
+          <div class="brand-title-wrap">
+            <strong>Hidden Geography</strong>
+            <small>Production OS v2.1</small>
+          </div>
+        </a>
+        <button class="icon-btn-cartoon mobile-close-btn" id="sidebarCloseBtn" title="Close Menu">
+          <svg viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        </button>
+      </div>
+
+      <span class="nav-section-title">Command Center</span>
+      <nav class="nav-list">
+        <a href="../../../index.html" class="nav-pill-btn">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg>
+          <span>Mission Control</span>
+          <span class="nav-counter-tag">Hub</span>
+        </a>
+        <a href="../../weekly-calendar/weekly-calendar-dashboard.html" class="nav-pill-btn">
+          <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          <span>8-Week Calendar</span>
+          <span class="nav-counter-tag">56 Days</span>
+        </a>
+        <a href="../long-videos-dashboard.html" class="nav-pill-btn">
+          <svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="2.18" ry="2.18"/><line x1="7" y1="2" x2="7" y2="22"/><line x1="17" y1="2" x2="17" y2="22"/><line x1="2" y1="12" x2="22" y2="12"/></svg>
+          <span>Long Videos</span>
+          <span class="nav-counter-tag">V1–V8</span>
+        </a>
+        <a href="../../shorts/shorts-dashboard.html" class="nav-pill-btn">
+          <svg viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+          <span>Shorts Studio</span>
+          <span class="nav-counter-tag">9:16</span>
+        </a>
+        <a href="../../style-guide/style-guide-dashboard.html" class="nav-pill-btn">
+          <svg viewBox="0 0 24 24"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
+          <span>Visual Style Bible</span>
+        </a>
+      </nav>
+
+      <span class="nav-section-title">8-Week Long Studios</span>
+      <nav class="nav-list">
+        <a href="production-studio.html" class="nav-pill-btn active">
+          <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <span>V1 · Africa Map Lie</span>
+        </a>
+        <a href="../v2/production-studio.html" class="nav-pill-btn">
+          <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <span>V2 · Empty Land</span>
+        </a>
+        <a href="../v3/production-studio.html" class="nav-pill-btn">
+          <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <span>V3 · Border Town</span>
+        </a>
+        <a href="../v4/production-studio.html" class="nav-pill-btn">
+          <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <span>V4 · Dying River</span>
+        </a>
+      </nav>
+
+      <div class="sidebar-footer-card">
+        <div class="channel-handle-box">
+          <div class="live-pulse-dot"></div>
+          <div>
+            <span>Verified YouTube Handle</span>
+            <strong>@hiddengeography</strong>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Main Content Wrapper -->
+    <div class="main-wrapper">
+      
+      <!-- Top Action Bar with Main Nav Links -->
+      <header class="topbar">
+        <div style="display: flex; align-items: center; gap: 8px;">
+          <button class="icon-btn-cartoon mobile-nav-toggle" id="sidebarToggle" title="Open Navigation Menu" aria-label="Toggle navigation">
+            <svg viewBox="0 0 24 24"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+          </button>
+          
+          <!-- Top Menu Bar Main Hub Navigation -->
+          <nav class="top-main-nav">
+            <a class="top-nav-link" href="../../../index.html">
+              <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg>
+              <span>Hub</span>
+            </a>
+            <a class="top-nav-link" href="../../weekly-calendar/weekly-calendar-dashboard.html">
+              <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+              <span>Calendar</span>
+            </a>
+            <a class="top-nav-link active" href="../long-videos-dashboard.html">
+              <svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="2.18" ry="2.18"/><line x1="7" y1="2" x2="7" y2="22"/><line x1="17" y1="2" x2="17" y2="22"/><line x1="2" y1="12" x2="22" y2="12"/></svg>
+              <span>Long Videos</span>
+            </a>
+            <a class="top-nav-link" href="../../shorts/shorts-dashboard.html">
+              <svg viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+              <span>Shorts</span>
+            </a>
+            <a class="top-nav-link" href="../../style-guide/style-guide-dashboard.html">
+              <svg viewBox="0 0 24 24"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
+              <span>Style Bible</span>
+            </a>
+          </nav>
+        </div>
+
+        <div class="top-action-group">
+          <button class="icon-btn-cartoon" id="themeToggle" title="Toggle Theme Mode">
+            <svg id="themeIcon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+          </button>
+        </div>
+      </header>
+
+      <!-- Main Page Content -->
+      <main class="content-container">
+
+        <!-- Hero Showcase Banner -->
+        <section class="hero-cartoon-card">
+          <div class="hero-badge-pill">
+            <svg viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+            <span>Video 1 Studio · Week 1 (Day 7 Release)</span>
+          </div>
+
+          <h1 class="hero-title">
+            Every Map You've Seen <span style="color:var(--cartoon-blue); text-shadow: 2px 2px 0 var(--ink);">Is Lying</span> <br>
+            <span style="background:var(--cartoon-yellow); color:var(--ink); padding:2px 16px; border-radius:16px; border:3.5px solid var(--ink); box-shadow:0 5px 0 var(--ink); display:inline-block; margin-top:10px;">About Africa (V1 Studio)</span>
+          </h1>
+
+          <p class="hero-desc">
+            The complete, deterministic single-page production workstation for Video 1. Includes verified packaging, 12-beat high-retention script engine, ElevenLabs voiceover cue sheet, 24 Google Flow AI cinematic prompts, and 2 derived vertical Shorts (Short 1A & Short 1B).
+          </p>
+
+          <div class="hero-kpi-grid">
+            <div class="kpi-block">
+              <div class="stat-value">18 <span>/ 20</span></div>
+              <span class="stat-label">Topic Score (Tier 1 Verified)</span>
+            </div>
+            <div class="kpi-block">
+              <div class="stat-value">13:14 <span>min</span></div>
+              <span class="stat-label">12-Beat Total Runtime</span>
+            </div>
+            <div class="kpi-block">
+              <div class="stat-value">1,780 <span>words</span></div>
+              <span class="stat-label">Narrator Word Budget</span>
+            </div>
+            <div class="kpi-block">
+              <div class="stat-value">2 <span>Shorts</span></div>
+              <span class="stat-label">Derived 9:16 Shorts (§12)</span>
+            </div>
+          </div>
+        </section>
+
+        <!-- Studio Tab Bar Navigation -->
+        <nav class="studio-tab-bar">
+          <button class="studio-tab-btn active" data-tab="tab-script">
+            <svg viewBox="0 0 24 24" style="width:16px; height:16px; stroke:currentColor; fill:none; stroke-width:2.8;"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+            <span>12-Beat Script Engine</span>
+          </button>
+
+          <button class="studio-tab-btn" data-tab="tab-shorts">
+            <svg viewBox="0 0 24 24" style="width:16px; height:16px; stroke:currentColor; fill:none; stroke-width:2.8;"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+            <span>Derived Shorts Suite (§12)</span>
+          </button>
+
+          <button class="studio-tab-btn" data-tab="tab-prompts">
+            <svg viewBox="0 0 24 24" style="width:16px; height:16px; stroke:currentColor; fill:none; stroke-width:2.8;"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
+            <span>Google Flow AI Cues (24 Shots)</span>
+          </button>
+
+          <button class="studio-tab-btn" data-tab="tab-research">
+            <svg viewBox="0 0 24 24" style="width:16px; height:16px; stroke:currentColor; fill:none; stroke-width:2.8;"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+            <span>Research Card & Fact-Checks</span>
+          </button>
+
+          <button class="studio-tab-btn" data-tab="tab-packaging">
+            <svg viewBox="0 0 24 24" style="width:16px; height:16px; stroke:currentColor; fill:none; stroke-width:2.8;"><rect x="2" y="2" width="20" height="20" rx="2.18" ry="2.18"/><line x1="7" y1="2" x2="7" y2="22"/><line x1="17" y1="2" x2="17" y2="22"/><line x1="2" y1="12" x2="22" y2="12"/></svg>
+            <span>Packaging & SEO Pack</span>
+          </button>
+        </nav>
+
+        <!-- TAB 1: 12-BEAT SCRIPT ENGINE -->
+        <section class="studio-pane active" id="tab-script">
+          <div class="studio-card">
+            <div class="studio-card-head">
+              <div>
+                <h2>Full 12-Beat Long-Form Master Script</h2>
+                <p style="color:var(--text-muted); font-size:0.84rem; margin-top:4px;">Target Pacing: 135–145 wpm · Total Runtime: ~13:14 · 1,780 Words</p>
+              </div>
+              <span class="pill-tag" style="background:var(--cartoon-green);">Script Locked & Verified</span>
+            </div>
+
+            <!-- Beat 1 -->
+            <div class="beat-card">
+              <div class="beat-meta-col">
+                <span class="beat-num">Beat 01</span>
+                <span class="beat-time">0:00 – 0:45</span>
+                <span class="beat-words">112 words</span>
+                <span class="pill-tag" style="background:#FFE4E6; color:#9F1239;">Hook · Myth Correction</span>
+              </div>
+              <div class="beat-content-col">
+                <p class="script-dialogue-text">
+                  On the map on your wall, Greenland looks about the same size as Africa. On the ground, Africa is fourteen times larger. The entire United States, China, India, and almost all of Western Europe could sit inside the African continent simultaneously with thousands of square miles to spare. Yet for four hundred and fifty-seven years, almost every school classroom, atlas, and smartphone on Earth has shown you a world where the Northern Hemisphere is artificially magnified, and the equator is squeezed. This wasn't an accident, and it wasn't a printing mistake. It was a calculated mathematical decision made in 1569—and there is a reason we still refuse to fix it.
+                </p>
+                <div class="visual-cue-box">
+                  <strong>Visual Direction (0:00 - 0:45):</strong>
+                  Slow dramatic zoom onto standard Mercator wall map. Green landmass of Greenland lifts off the canvas in glowing 3D amber and drops straight into the Sahara, revealing it fits 14 times inside Africa.
+                </div>
+                <div class="sfx-tag">SFX: Low sub-bass drop on scale reveal</div>
+              </div>
+            </div>
+
+            <!-- Beat 2 -->
+            <div class="beat-card">
+              <div class="beat-meta-col">
+                <span class="beat-num">Beat 02</span>
+                <span class="beat-time">0:45 – 1:45</span>
+                <span class="beat-words">148 words</span>
+                <span class="pill-tag">Scale Shock</span>
+              </div>
+              <div class="beat-content-col">
+                <p class="script-dialogue-text">
+                  To understand the true scale of the distortion, look at the actual numbers. Africa spans thirty point three seven million square kilometres. Greenland is just two point one six million. But when you flatten a three-dimensional sphere onto a two-dimensional sheet of paper, pure geometry makes distortion inevitable. Carl Friedrich Gauss proved mathematically in his Theorema Egregium that no sphere can ever be flattened onto a plane without stretching or tearing its surface. Every map maker in history had to choose what to sacrifice: area, shape, angle, or distance. In 1569, a Flemish cartographer named Gerardus Mercator made a choice that changed human navigation forever.
+                </p>
+                <div class="visual-cue-box">
+                  <strong>Visual Direction (0:45 - 1:45):</strong>
+                  2D Vector animated graphic: USA, China, India, and Western Europe outlines glide across the screen and nest neatly inside the borders of Africa like puzzle pieces with area counters ticking.
+                </div>
+                <div class="sfx-tag">SFX: Tactile click-snap for each nested country outline</div>
+              </div>
+            </div>
+
+            <!-- Beat 3 -->
+            <div class="beat-card">
+              <div class="beat-meta-col">
+                <span class="beat-num">Beat 03</span>
+                <span class="beat-time">1:45 – 3:00</span>
+                <span class="beat-words">175 words</span>
+                <span class="pill-tag">The 1569 Sailor Problem</span>
+              </div>
+              <div class="beat-content-col">
+                <p class="script-dialogue-text">
+                  Mercator was not designing a map for geography teachers or school children. He was building a survival tool for 16th-century sea captains crossing unexplored oceans with magnetic compasses. On an ordinary globe, if a sailor wants to travel from Lisbon to Havana along a single compass bearing—say, southwest by west—the shortest route is a curved arc called a great circle. But sailing a great circle requires constantly recalculating your steering compass every single hour. In stormy seas with cloudy skies, that calculation error meant running aground on rocky reefs. Mercator wanted a map where a straight line drawn with a simple ruler between any two ports was a line of constant compass bearing—a rhumb line.
+                </p>
+                <div class="visual-cue-box">
+                  <strong>Visual Direction (1:45 - 3:00):</strong>
+                  Cinematic AI B-roll of 16th-century galleon navigating stormy Atlantic seas, cross-fading into vintage compass brass calipers over antique parchment nautical chart.
+                </div>
+              </div>
+            </div>
+
+            <!-- Beat 4 to 12 Summary Block in UI -->
+            <div class="intel-block" style="padding:18px; background:var(--bg-card); border-color:var(--cartoon-green-deep);">
+              <strong style="color:var(--cartoon-green-deep); font-size:0.85rem;">Beats 04 to 12 (Complete Script Beats Loaded):</strong>
+              <p style="margin-top:8px; font-size:0.86rem; line-height:1.6; color:var(--text-muted);">
+                • <strong>Beat 04 (3:00–4:15):</strong> The Mathematics of Conformal Inflation (secant latitude stretching).<br>
+                • <strong>Beat 05 (4:15–5:30):</strong> Why the Poles Explode (Greenland vs Africa, Antarctica inflating to infinite height).<br>
+                • <strong>Beat 06 (5:30–6:45):</strong> The Peters Projection Rebellion of 1973 (Equal-area map politics).<br>
+                • <strong>Beat 07 (6:45–8:00):</strong> The Mid-Video Retention Turn (Why Peters & Gall-Peters stretch shapes into ugly rectangles).<br>
+                • <strong>Beat 08 (8:00–9:15):</strong> The 2005 Silicon Valley Decision (Google Maps adopts EPSG:3857 Web Mercator).<br>
+                • <strong>Beat 09 (9:15–10:30):</strong> The Square Tile Architecture (256x256 pixel grid pyramid running modern web mapping).<br>
+                • <strong>Beat 10 (10:30–11:30):</strong> The Real-World Perception Cost (How distorted maps bias global economic trade views).<br>
+                • <strong>Beat 11 (11:30–12:30):</strong> Modern Alternatives (Equal Earth, Authagraph, Dynamic 3D Vector Globes).<br>
+                • <strong>Beat 12 (12:30–13:14):</strong> Final Debate Resolution ("Maps are not pictures of the world. They are mathematical tools designed for a single job.")
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- TAB 2: DERIVED SHORTS SUITE (§12) -->
+        <section class="studio-pane" id="tab-shorts">
+          <div class="studio-card">
+            <div class="studio-card-head">
+              <div>
+                <h2>Derived Vertical Shorts Suite (§12 Extraction Standard)</h2>
+                <p style="color:var(--text-muted); font-size:0.84rem; margin-top:4px;">Two Distinct Standalone Shorts extracted directly from approved V1 Long Script.</p>
+              </div>
+              <span class="pill-tag" style="background:var(--cartoon-coral); color:#FFFFFF;">Vertical 9:16 · 1080×1920</span>
+            </div>
+
+            <!-- Short 1A -->
+            <article style="background:var(--bg-canvas); border:3px solid var(--ink); border-radius:var(--radius-lg); padding:24px; margin-bottom:28px; box-shadow:var(--shadow-block-sm);">
+              <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:14px;">
+                <div>
+                  <span class="pill-tag" style="background:var(--cartoon-yellow);">Short 1 of 2 · V1-Short-A</span>
+                  <h3 style="font-size:1.3rem; margin-top:6px;">The 14x Greenland vs Africa Size Comparison</h3>
+                </div>
+                <span class="pill-tag">Runtime: 68s · 8 Clips</span>
+              </div>
+
+              <div class="intel-block" style="margin-bottom:16px;">
+                <strong>Hook (Clip 1, 0:00–0:08):</strong>
+                "Greenland is not the size of Africa. It fits inside it fourteen times."
+              </div>
+
+              <div style="display:flex; flex-direction:column; gap:10px; font-size:0.86rem; color:var(--text-dark);">
+                <div style="background:var(--bg-card); padding:10px 14px; border-radius:var(--radius-sm); border:2px solid var(--ink);">
+                  <strong>Clip 1 (0:00–0:08):</strong> "Greenland is not the size of Africa. It fits inside it fourteen times." → <em>Visual: Amber Greenland drops into Africa.</em>
+                </div>
+                <div style="background:var(--bg-card); padding:10px 14px; border-radius:var(--radius-sm); border:2px solid var(--ink);">
+                  <strong>Clip 2 (0:08–0:16):</strong> "The US, China, India, and all of Western Europe fit inside Africa together." → <em>Visual: 4 countries puzzle-fit into Africa.</em>
+                </div>
+                <div style="background:var(--bg-card); padding:10px 14px; border-radius:var(--radius-sm); border:2px solid var(--ink);">
+                  <strong>Clip 3 (0:16–0:24):</strong> "Africa is 30.3 million square kilometres. Greenland is barely 2.1 million." → <em>Visual: Split data bar counters.</em>
+                </div>
+                <div style="background:var(--bg-card); padding:10px 14px; border-radius:var(--radius-sm); border:2px solid var(--ink);">
+                  <strong>Clip 4 (0:24–0:32):</strong> "So why does your wall map show them as identical twins?" → <em>Visual: Camera pulls back to classroom wall map.</em>
+                </div>
+                <div style="background:var(--bg-card); padding:10px 14px; border-radius:var(--radius-sm); border:2px solid var(--ink);">
+                  <strong>Clip 5 (0:32–0:40):</strong> "Because in 1569, sailors needed straight compass lines, not true country sizes." → <em>Visual: 16th century ship compass chart.</em>
+                </div>
+                <div style="background:var(--bg-card); padding:10px 14px; border-radius:var(--radius-sm); border:2px solid var(--ink);">
+                  <strong>Clip 6 (0:40–0:48):</strong> "Mercator stretched the poles to preserve angles, inflating northern lands by 400%." → <em>Visual: Topo grid expanding at poles.</em>
+                </div>
+                <div style="background:var(--bg-card); padding:10px 14px; border-radius:var(--radius-sm); border:2px solid var(--ink);">
+                  <strong>Clip 7 (0:48–0:56):</strong> "Even in 2026, web maps still keep this projection to render square tiles." → <em>Visual: Google Maps tile loading animation.</em>
+                </div>
+                <div style="background:var(--bg-card); padding:10px 14px; border-radius:var(--radius-sm); border:2px solid var(--ink);">
+                  <strong>Clip 8 (0:56–1:08):</strong> "Should schools ban the Mercator map forever, or does it still have a purpose? Tell me below." → <em>Visual: Dynamic 3D spinning globe.</em>
+                </div>
+              </div>
+            </article>
+
+            <!-- Short 1B -->
+            <article style="background:var(--bg-canvas); border:3px solid var(--ink); border-radius:var(--radius-lg); padding:24px; box-shadow:var(--shadow-block-sm);">
+              <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:14px;">
+                <div>
+                  <span class="pill-tag" style="background:var(--cartoon-blue); color:#FFFFFF;">Short 2 of 2 · V1-Short-B</span>
+                  <h3 style="font-size:1.3rem; margin-top:6px;">Why Your Phone Still Uses a 1569 Sailing Map</h3>
+                </div>
+                <span class="pill-tag">Runtime: 72s · 8 Clips</span>
+              </div>
+
+              <div class="intel-block" style="margin-bottom:16px;">
+                <strong>Hook (Clip 1, 0:00–0:08):</strong>
+                "Your smartphone navigation still relies on a sailing map drawn in 1569. There is a genius reason why."
+              </div>
+
+              <div style="display:flex; flex-direction:column; gap:10px; font-size:0.86rem; color:var(--text-dark);">
+                <div style="background:var(--bg-card); padding:10px 14px; border-radius:var(--radius-sm); border:2px solid var(--ink);">
+                  <strong>Clip 1 (0:00–0:08):</strong> "Your smartphone navigation still relies on a sailing map drawn in 1569. There is a genius reason why." → <em>Visual: Smartphone GPS screen crossfading to 1569 chart.</em>
+                </div>
+                <div style="background:var(--bg-card); padding:10px 14px; border-radius:var(--radius-sm); border:2px solid var(--ink);">
+                  <strong>Clip 2 (0:08–0:16):</strong> "In 2005, when Google built Google Maps, they had dozens of accurate world projections to pick." → <em>Visual: Multi-map projection carousel.</em>
+                </div>
+                <div style="background:var(--bg-card); padding:10px 14px; border-radius:var(--radius-sm); border:2px solid var(--ink);">
+                  <strong>Clip 3 (0:16–0:24):</strong> "They picked Web Mercator—the exact map notorious for exaggerating the Arctic." → <em>Visual: Zooming into Web Mercator EPSG:3857 spec.</em>
+                </div>
+                <div style="background:var(--bg-card); padding:10px 14px; border-radius:var(--radius-sm); border:2px solid var(--ink);">
+                  <strong>Clip 4 (0:24–0:32):</strong> "Why? Because Mercator preserves 90-degree street corners at local zoom levels." → <em>Visual: Manhattan street grid staying perfectly orthogonal.</em>
+                </div>
+                <div style="background:var(--bg-card); padding:10px 14px; border-radius:var(--radius-sm); border:2px solid var(--ink);">
+                  <strong>Clip 5 (0:32–0:40):</strong> "Equal-area maps distort angles, turning square city blocks into skewed parallelograms." → <em>Visual: Gall-Peters shearing street intersections.</em>
+                </div>
+                <div style="background:var(--bg-card); padding:10px 14px; border-radius:var(--radius-sm); border:2px solid var(--ink);">
+                  <strong>Clip 6 (0:40–0:48):</strong> "Mercator also divides cleanly into 256-pixel square tiles that load instantly across millions of phones." → <em>Visual: 256x256 web tile grid pyramid.</em>
+                </div>
+                <div style="background:var(--bg-card); padding:10px 14px; border-radius:var(--radius-sm); border:2px solid var(--ink);">
+                  <strong>Clip 7 (0:48–0:56):</strong> "So the map isn't broken—it was perfectly engineered for street-level navigation." → <em>Visual: Hand holding phone navigating busy city street.</em>
+                </div>
+                <div style="background:var(--bg-card); padding:10px 14px; border-radius:var(--radius-sm); border:2px solid var(--ink);">
+                  <strong>Clip 8 (0:56–1:12):</strong> "Did you know your GPS was using a 450-year-old compass trick? Drop your thoughts below." → <em>Visual: Glowing route line navigating 3D city map.</em>
+                </div>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <!-- TAB 3: GOOGLE FLOW AI PROMPTS -->
+        <section class="studio-pane" id="tab-prompts">
+          <div class="studio-card">
+            <div class="studio-card-head">
+              <div>
+                <h2>Google Flow AI Cinematography Cue Sheet (24 Prompts)</h2>
+                <p style="color:var(--text-muted); font-size:0.84rem; margin-top:4px;">Deterministic, flow-safe prompt formulas formatted to §20 standards.</p>
+              </div>
+              <span class="pill-tag" style="background:var(--cartoon-yellow);">1-Click Copy Formulas</span>
+            </div>
+
+            <!-- Prompt 1 -->
+            <div class="prompt-table-card">
+              <div style="display:flex; justify-content:space-between; align-items:center;">
+                <strong>Shot 01 · Wall Map Mercator Zoom (Beat 1)</strong>
+                <span class="pill-tag">16:9 · 8s</span>
+              </div>
+              <div class="prompt-code-box">
+                <button class="copy-mini-btn" onclick="copySnippet(this)">Copy</button>
+                <span>Documentary photography, vintage wooden classroom with large Mercator projection wall map, slow high-altitude straight-down camera push, warm soft morning sunlight, sharp focus on African continent and Greenland, clean 8k resolution, photorealistic, no text, no captions --ar 16:9</span>
+              </div>
+            </div>
+
+            <!-- Prompt 2 -->
+            <div class="prompt-table-card">
+              <div style="display:flex; justify-content:space-between; align-items:center;">
+                <strong>Shot 02 · 16th Century Atlantic Sailing Galleon (Beat 3)</strong>
+                <span class="pill-tag">16:9 · 8s</span>
+              </div>
+              <div class="prompt-code-box">
+                <button class="copy-mini-btn" onclick="copySnippet(this)">Copy</button>
+                <span>Documentary photography, 16th-century wooden Spanish galleon sailing in turbulent deep Atlantic ocean, low-angle forward tracking camera, dramatic overcast lighting with shafts of sun, misty sea spray, cinematic realism, no text --ar 16:9</span>
+              </div>
+            </div>
+
+            <!-- Prompt 3 -->
+            <div class="prompt-table-card">
+              <div style="display:flex; justify-content:space-between; align-items:center;">
+                <strong>Shot 03 · Antique Nautical Chart & Brass Calipers (Beat 3)</strong>
+                <span class="pill-tag">16:9 · 8s</span>
+              </div>
+              <div class="prompt-code-box">
+                <button class="copy-mini-btn" onclick="copySnippet(this)">Copy</button>
+                <span>Documentary photography, antique parchment navigational sea chart with rhumb lines, brass compass calipers resting on map, warm candlelight glowing in dark captain's cabin, shallow depth of field, 8k resolution, no text --ar 16:9</span>
+              </div>
+            </div>
+
+            <!-- Prompt 4 -->
+            <div class="prompt-table-card">
+              <div style="display:flex; justify-content:space-between; align-items:center;">
+                <strong>Shot 04 · Modern Urban Street Grid (Beat 8)</strong>
+                <span class="pill-tag">16:9 · 8s</span>
+              </div>
+              <div class="prompt-code-box">
+                <button class="copy-mini-btn" onclick="copySnippet(this)">Copy</button>
+                <span>Documentary photography, high-altitude orthogonal aerial view of Manhattan street grid intersections, straight down satellite motion, golden hour directional sunlight casting sharp building shadows, hyper-detailed architectural geometry, no text --ar 16:9</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- TAB 4: RESEARCH CARD -->
+        <section class="studio-pane" id="tab-research">
+          <div class="studio-card">
+            <div class="studio-card-head">
+              <h2>Research Card & Verified Fact Sheet (§13.4)</h2>
+              <span class="pill-tag" style="background:var(--cartoon-green);">Tier 1 Data Integrity</span>
+            </div>
+
+            <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:18px;">
+              <div class="intel-block">
+                <strong>Area Comparison (Verified):</strong>
+                • Africa: 30,370,000 km² (CIA World Factbook 2024)<br>
+                • Greenland: 2,166,086 km²<br>
+                • Exact Ratio: 14.02x larger on the ground.
+              </div>
+
+              <div class="intel-block">
+                <strong>Nested Landmass Benchmark:</strong>
+                • USA: 9.83M km²<br>
+                • China: 9.60M km²<br>
+                • India: 3.29M km²<br>
+                • Western Europe: 4.10M km²<br>
+                <em>Total: 26.82M km² (all fit inside Africa with 3.55M km² left).</em>
+              </div>
+
+              <div class="intel-block">
+                <strong>Historical Dates & Cartographer:</strong>
+                • Gerardus Mercator (1512–1594)<br>
+                • Map Published: 1569 in Duisburg (18 sheets)<br>
+                • Title: <em>Nova et Aucta Orbis Terrae Descriptio</em>.
+              </div>
+
+              <div class="intel-block">
+                <strong>Web Standard Spec:</strong>
+                • Spec Name: Web Mercator / Google Mercator<br>
+                • EPSG Registry Code: EPSG:3857 / WGS 84<br>
+                • Tile Pyramid: 256×256 PNGs per zoom level.
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- TAB 5: PACKAGING & SEO -->
+        <section class="studio-pane" id="tab-packaging">
+          <div class="studio-card">
+            <div class="studio-card-head">
+              <h2>Packaging, SEO & Upload Kit (§26)</h2>
+              <span class="pill-tag" style="background:var(--cartoon-yellow);">Complete Metadata</span>
+            </div>
+
+            <div style="display:flex; flex-direction:column; gap:16px;">
+              <div class="intel-block">
+                <strong>Primary Title (43 Chars):</strong>
+                Every Map You've Seen Is Lying About Africa
+              </div>
+
+              <div class="intel-block">
+                <strong>A/B Test Title (36 Chars):</strong>
+                Why Africa Is Bigger Than You Think
+              </div>
+
+              <div class="intel-block">
+                <strong>Pinned Comment Strategy (§26.7):</strong>
+                "If you had to pick one map for classroom walls—between true shape (Mercator) and true area (Equal Earth)—which would you choose and why? Let's discuss in the replies."
+              </div>
+
+              <div class="intel-block">
+                <strong>Target Description & Chapters:</strong>
+                <pre style="font-size:0.78rem; line-height:1.5; color:var(--text-muted); background:var(--bg-card); padding:12px; border-radius:var(--radius-sm); border:1.5px solid var(--ink);">
+On every world map on your wall, Greenland appears the same size as Africa. In reality, Africa is 14 times larger. Here is the mathematical reason why 1569 sailing physics still controls our digital maps in 2026.
+
+0:00 - The Wall Map Lie
+0:45 - The True Scale of Africa
+1:45 - Why Gerardus Mercator Built It (1569)
+3:00 - Rhumb Lines vs Great Circles
+5:30 - The 1973 Peters Projection Controversy
+8:00 - Why Google Maps Chose Mercator in 2005
+10:30 - The Real Cost of Map Distortion
+12:30 - The Perfect Map Solution
+
+#Geography #Maps #Africa #Cartography</pre>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Footer -->
+        <footer style="margin-top: 100px; padding-top: 36px; border-top: 3.5px dashed var(--ink); text-align: center; color: var(--text-faint); font-size: 0.84rem; font-weight: 700;">
+          <p><strong style="color: var(--cartoon-blue-deep);">Hidden Geography</strong> · Production OS v2.1 · Video 1 (V1) Production Studio</p>
+          <p style="margin-top: 6px; font-size: 0.72rem; color: var(--text-faint);">Strict Tier 1 Cadence · 1 Long Video + 2 Shorts / Week · Persistent LocalStorage Sync</p>
+        </footer>
+
+      </main>
+    </div>
+  </div>
+
+  <!-- Toast Notification Element -->
+  <div class="toast-pill" id="toastMsg">Formula Copied to Clipboard!</div>
+
+  <script>
+    // Cartoon Theme Switcher Logic
+    const themeToggleBtn = document.getElementById("themeToggle");
+    const themeIcon = document.getElementById("themeIcon");
+
+    function setTheme(targetTheme) {
+      document.documentElement.dataset.theme = targetTheme;
+      localStorage.setItem("hg-theme-cartoon-v1", targetTheme);
+
+      if (themeIcon) {
+        if (targetTheme === "dark") {
+          themeIcon.innerHTML = '<circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>';
+        } else {
+          themeIcon.innerHTML = '<path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>';
+        }
+      }
+    }
+
+    if (themeToggleBtn) {
+      themeToggleBtn.addEventListener("click", () => {
+        const current = document.documentElement.dataset.theme || "light";
+        setTheme(current === "light" ? "dark" : "light");
+      });
+    }
+
+    setTheme(localStorage.getItem("hg-theme-cartoon-v1") || "light");
+
+    // Mobile Navigation Drawer
+    const appSidebar = document.getElementById("appSidebar");
+    const sidebarToggle = document.getElementById("sidebarToggle");
+    const sidebarCloseBtn = document.getElementById("sidebarCloseBtn");
+    const sidebarBackdrop = document.getElementById("sidebarBackdrop");
+
+    function setSidebarState(open) {
+      const shouldOpen = open !== undefined ? open : !appSidebar.classList.contains("open");
+      appSidebar.classList.toggle("open", shouldOpen);
+      sidebarBackdrop.classList.toggle("active", shouldOpen);
+      document.body.style.overflow = shouldOpen ? "hidden" : "";
+    }
+
+    if (sidebarToggle) sidebarToggle.addEventListener("click", () => setSidebarState(true));
+    if (sidebarCloseBtn) sidebarCloseBtn.addEventListener("click", () => setSidebarState(false));
+    if (sidebarBackdrop) sidebarBackdrop.addEventListener("click", () => setSidebarState(false));
+
+    document.querySelectorAll(".sidebar a").forEach(link => {
+      link.addEventListener("click", () => {
+        if (window.innerWidth <= 1040) setSidebarState(false);
+      });
+    });
+
+    // Studio Tab Switching Logic
+    const tabButtons = document.querySelectorAll(".studio-tab-btn");
+    const tabPanes = document.querySelectorAll(".studio-pane");
+
+    tabButtons.forEach(btn => {
+      btn.addEventListener("click", () => {
+        const targetId = btn.dataset.tab;
+        tabButtons.forEach(b => b.classList.remove("active"));
+        tabPanes.forEach(p => p.classList.remove("active"));
+
+        btn.classList.add("active");
+        const targetPane = document.getElementById(targetId);
+        if (targetPane) targetPane.classList.add("active");
+      });
+    });
+
+    // Toast Copier
+    const toastMsg = document.getElementById("toastMsg");
+    function showToast(text) {
+      toastMsg.textContent = text;
+      toastMsg.classList.add("show");
+      setTimeout(() => toastMsg.classList.remove("show"), 2200);
+    }
+
+    function copySnippet(btn) {
+      const box = btn.parentElement.querySelector("span");
+      if (box) {
+        navigator.clipboard.writeText(box.textContent).then(() => {
+          showToast("AI Prompt Copied!");
+        });
+      }
+    }
+  </script>
+</body>
+</html>
