@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0284C7"/>
+      <stop offset="50%" stop-color="#0EA5E9"/>
+      <stop offset="100%" stop-color="#10B981"/>
+    </linearGradient>
+    <linearGradient id="landGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FCD34D"/>
+      <stop offset="100%" stop-color="#F59E0B"/>
+    </linearGradient>
+  </defs>
+  <circle cx="64" cy="64" r="56" fill="url(#bgGrad)" stroke="#0F172A" stroke-width="8"/>
+  <path d="M36 44 C42 32, 60 30, 70 38 C78 45, 88 42, 94 50 C100 58, 92 72, 82 74 C74 76, 68 88, 56 90 C46 92, 38 82, 34 72 C30 60, 30 54, 36 44 Z" fill="url(#landGrad)" stroke="#0F172A" stroke-width="5" stroke-linejoin="round"/>
+  <path d="M78 82 C84 80, 92 84, 96 90 C92 96, 82 98, 76 92 Z" fill="url(#landGrad)" stroke="#0F172A" stroke-width="4"/>
+  <circle cx="64" cy="64" r="44" fill="none" stroke="#FFFFFF" stroke-width="3" stroke-dasharray="6 6" opacity="0.45"/>
+  <line x1="20" y1="64" x2="108" y2="64" stroke="#FFFFFF" stroke-width="3" opacity="0.4"/>
+  <line x1="64" y1="20" x2="64" y2="108" stroke="#FFFFFF" stroke-width="3" opacity="0.4"/>
+  <g transform="translate(64, 40)">
+    <path d="M0 0 C-9 -9, -9 -22, 0 -28 C9 -22, 9 -9, 0 0 Z" fill="#EF4444" stroke="#0F172A" stroke-width="4" stroke-linejoin="round"/>
+    <circle cx="0" cy="-18" r="4.5" fill="#FFFFFF" stroke="#0F172A" stroke-width="2.5"/>
+  </g>
+  <path d="M30 32 C42 20, 60 16, 76 18" fill="none" stroke="#FFFFFF" stroke-width="6" stroke-linecap="round" opacity="0.6"/>
+</svg>
