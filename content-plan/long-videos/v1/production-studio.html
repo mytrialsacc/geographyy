@@ -191,6 +191,65 @@
       margin: 32px auto 100px;
     }
 
+    /* Mariyam Quick Guide Box */
+    .mariyam-guide-box {
+      background: linear-gradient(135deg, #FEF3C7, #FFFBEB);
+      border: 2px solid #F59E0B;
+      border-radius: var(--radius-card);
+      padding: 24px 28px;
+      margin-bottom: 24px;
+      box-shadow: 0 4px 14px rgba(245, 158, 11, 0.15);
+    }
+
+    [data-theme="dark"] .mariyam-guide-box {
+      background: linear-gradient(135deg, #2D2415, #1E1B15);
+      border-color: #B45309;
+    }
+
+    .mariyam-guide-head {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 14px;
+    }
+
+    .mariyam-guide-title {
+      font-size: 1.15rem;
+      color: #92400E;
+      font-weight: 800;
+    }
+    [data-theme="dark"] .mariyam-guide-title { color: #FBBF24; }
+
+    .mariyam-steps-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 14px;
+    }
+
+    .mariyam-step-card {
+      background: var(--bg-surface);
+      border: 1.5px solid var(--border-medium);
+      border-radius: 10px;
+      padding: 14px 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .step-badge {
+      font-size: 0.72rem;
+      font-weight: 800;
+      color: var(--accent-blue);
+      text-transform: uppercase;
+    }
+
+    .step-text {
+      font-size: 0.88rem;
+      color: var(--ink-primary);
+      line-height: 1.5;
+      font-weight: 600;
+    }
+
     /* Hero Card */
     .hero-banner {
       background: var(--bg-surface);
@@ -366,7 +425,7 @@
 
     .section-micro-label {
       display: block;
-      font-size: 0.7rem;
+      font-size: 0.72rem;
       font-weight: 800;
       text-transform: uppercase;
       letter-spacing: 0.05em;
@@ -462,11 +521,10 @@
       background: #FFE4E6;
       color: var(--accent-coral);
       border: 1px solid var(--accent-coral);
-      padding: 2px 8px;
+      padding: 3px 10px;
       border-radius: var(--radius-pill);
-      font-size: 0.72rem;
+      font-size: 0.74rem;
       font-weight: 800;
-      font-family: "JetBrains Mono", monospace;
       white-space: nowrap;
     }
 
@@ -480,31 +538,27 @@
 
     .shot-vo-label {
       display: block;
-      font-size: 0.68rem;
+      font-size: 0.7rem;
       font-weight: 800;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-      color: var(--accent-yellow);
+      color: #B45309;
       margin-bottom: 2px;
     }
 
     .shot-vo-content {
-      font-size: 0.95rem;
+      font-size: 0.96rem;
       font-weight: 600;
       line-height: 1.5;
       color: var(--ink-primary);
     }
 
     .shot-action-box {
-      font-size: 0.86rem;
+      font-size: 0.88rem;
       color: var(--ink-secondary);
     }
 
     .shot-action-label {
-      font-size: 0.7rem;
+      font-size: 0.72rem;
       font-weight: 800;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
       color: var(--accent-blue);
       display: block;
       margin-bottom: 2px;
@@ -525,10 +579,8 @@
     }
 
     .prompt-head-label {
-      font-size: 0.68rem;
+      font-size: 0.7rem;
       font-weight: 800;
-      text-transform: uppercase;
-      letter-spacing: 0.06em;
       color: #94A3B8;
     }
 
@@ -537,8 +589,8 @@
       color: #0F172A;
       border: 1px solid #0F172A;
       border-radius: 4px;
-      padding: 2px 8px;
-      font-size: 0.7rem;
+      padding: 3px 10px;
+      font-size: 0.72rem;
       font-weight: 800;
       cursor: pointer;
     }
@@ -557,14 +609,13 @@
       border: 1px dashed var(--border-medium);
       border-radius: 8px;
       padding: 8px 12px;
-      font-size: 0.82rem;
+      font-size: 0.84rem;
       color: var(--ink-secondary);
     }
 
     .source-info-label {
-      font-size: 0.68rem;
+      font-size: 0.7rem;
       font-weight: 800;
-      text-transform: uppercase;
       color: var(--accent-green);
       display: block;
       margin-bottom: 2px;
@@ -631,6 +682,28 @@
   <!-- Page Content Container -->
   <main class="page-wrap">
 
+    <!-- Mariyam 3-Step Simple Guide Box -->
+    <section class="mariyam-guide-box">
+      <div class="mariyam-guide-head">
+        <span style="font-size: 1.5rem;">👩‍💻</span>
+        <h2 class="mariyam-guide-title">Mariyam Ke Liye Simple Step-by-Step Production Guide</h2>
+      </div>
+      <div class="mariyam-steps-grid">
+        <div class="mariyam-step-card">
+          <span class="step-badge">Step 1 · Voiceover</span>
+          <p class="step-text">Upar <strong>"🎙️ Teleprompter"</strong> tab me jayein, <strong>"Copy Full Script"</strong> dabayein aur ElevenLabs se 6 minute ki audio nikaal lein.</p>
+        </div>
+        <div class="mariyam-step-card">
+          <span class="step-badge">Step 2 · AI Clips</span>
+          <p class="step-text">Har Beat me jahan <strong>"⚡ Google Flow Prompt"</strong> hai, <strong>"Copy Prompt"</strong> dabayein aur Google Flow se 8 second ka clip download kar lein.</p>
+        </div>
+        <div class="mariyam-step-card">
+          <span class="step-badge">Step 3 · Video Jorna</span>
+          <p class="step-text">CapCut / Premiere me Voiceover ke mutabiq clip lagayein, aur <strong>"✂️ Cut Cue"</strong> wale lafz par agla visual/map laga dein!</p>
+        </div>
+      </div>
+    </section>
+
     <!-- Hero Card -->
     <section class="hero-banner">
       <div class="badge-pill">
@@ -664,7 +737,7 @@
             <div class="beat-card-head">
               <div class="head-left">
                 <span class="beat-gold-pill">BEAT 01</span>
-                <h3 class="beat-title-text">The Scale Hook · The Wall Map Lie</h3>
+                <h3 class="beat-title-text">The Scale Hook · Naqshay Ka Jhoot</h3>
               </div>
               <div class="head-right">
                 <span class="beat-time-pill">0:00 – 0:45</span>
@@ -674,13 +747,13 @@
 
             <!-- Complete Beat Voiceover Script -->
             <div class="vo-script-box">
-              <span class="section-micro-label">🎙️ Complete Narration for BEAT 01:</span>
+              <span class="section-micro-label">🎙️ Poori Voiceover Narration (BEAT 01):</span>
               <p class="vo-script-paragraph">On the map on your wall, Greenland looks about the same size as Africa. On the ground, Africa is fourteen times larger. The entire United States, China, India, and almost all of Western Europe could sit inside Africa simultaneously with room to spare. Yet for four hundred and fifty-seven years, classroom maps have shown you a distorted world. This was not an accident or a printing error—it was a calculated mathematical decision made in 1569 that we still use every single day.</p>
             </div>
 
             <!-- Shot by Shot Visual Editing Breakdown -->
             <div class="shots-container">
-              <span class="section-micro-label">🎬 Visual Editing Timeline (3 Sequential Cuts):</span>
+              <span class="section-micro-label">🎬 Video Editing Guide (3 Sequential Shots):</span>
               <div class="shots-list">
               <!-- Shot 1.1 -->
               <div class="single-shot-card">
@@ -689,23 +762,23 @@
                     <span class="shot-pill">Shot 1.1</span>
                     <span class="shot-time-span">0:00 – 0:08 (8s)</span>
                   </div>
-                  <span class="shot-type-pill badge-ai">🎥 Google Flow AI B-Roll</span>
-                  <span class="shot-cut-trigger">CUT ON: "same size as Africa" ➔ CUT to Shot 1.2</span>
+                  <span class="shot-type-pill badge-ai">🎥 Google Flow AI Clip</span>
+                  <span class="shot-cut-trigger">✂️ Jab aawaz me bole "same size as Africa" ➔ Agla map lagayein</span>
                 </div>
 
                 <div class="shot-vo-subbox">
-                  <span class="shot-vo-label">🎙️ Voiceover Spoken During this Visual (0:00 – 0:08 (8s)):</span>
+                  <span class="shot-vo-label">🎙️ Mariyam is time (0:00 – 0:08 (8s)) yeh line voiceover me chalegi:</span>
                   <p class="shot-vo-content">"On the map on your wall, Greenland looks about the same size as Africa."</p>
                 </div>
 
                 <div class="shot-action-box">
-                  <span class="shot-action-label">🎥 Visual Event on Screen:</span>
-                  <p class="shot-action-desc">Vintage wooden classroom with large Mercator wall map. Camera pushes slowly and smoothly in toward Africa under soft morning light.</p>
+                  <span class="shot-action-label">🎬 Screen Par Kya Dikhana Hai:</span>
+                  <p class="shot-action-desc">Ek purani wooden classroom ka scene, deewar par bada Mercator map laga ho aur camera aahista aahista Africa ke naqshay ki taraf push kare.</p>
                 </div>
 
                   <div class="shot-prompt-wrap">
                     <div class="shot-prompt-head">
-                      <span class="prompt-head-label">⚡ Google Flow AI Prompt (8s Clip)</span>
+                      <span class="prompt-head-label">⚡ Google Flow AI Prompt (Yeh Copy Karke 8s Clip Banayein)</span>
                       <button class="btn-copy-shot-prompt" onclick="copyShotPrompt(this)">Copy Prompt</button>
                     </div>
                     <pre class="shot-prompt-code"><code>Create an 8-second horizontal 16:9 cinematic clip. Documentary photography, vintage wooden classroom with large Mercator wall map on wall, slow straight-down camera push, warm morning sunlight, sharp focus on African continent, 8k resolution, no text --ar 16:9</code></pre>
@@ -719,23 +792,23 @@
                     <span class="shot-pill">Shot 1.2</span>
                     <span class="shot-time-span">0:08 – 0:22 (14s)</span>
                   </div>
-                  <span class="shot-type-pill badge-map">🗺️ 2D Map Animation (CapCut/Premiere)</span>
-                  <span class="shot-cut-trigger">CUT ON: "fourteen times larger" ➔ CUT to Shot 1.3</span>
+                  <span class="shot-type-pill badge-map">🗺️ 2D Map Zoom (CapCut / Premiere)</span>
+                  <span class="shot-cut-trigger">✂️ Jab aawaz me bole "fourteen times larger" ➔ Agla graphic lagayein</span>
                 </div>
 
                 <div class="shot-vo-subbox">
-                  <span class="shot-vo-label">🎙️ Voiceover Spoken During this Visual (0:08 – 0:22 (14s)):</span>
+                  <span class="shot-vo-label">🎙️ Mariyam is time (0:08 – 0:22 (14s)) yeh line voiceover me chalegi:</span>
                   <p class="shot-vo-content">"On the ground, Africa is fourteen times larger."</p>
                 </div>
 
                 <div class="shot-action-box">
-                  <span class="shot-action-label">🎥 Visual Event on Screen:</span>
-                  <p class="shot-action-desc">2D animated map graphic where Greenland outline lifts off and shrinks down 14x into the Sahara desert.</p>
+                  <span class="shot-action-label">🎬 Screen Par Kya Dikhana Hai:</span>
+                  <p class="shot-action-desc">Greenland ka outline map uth kar chota hota hai aur Africa ke Sahara desert ke andar 14 guna chota fit ho jata hai.</p>
                 </div>
 
                   <div class="shot-source-info">
-                    <span class="source-info-label">🛠️ Editing Asset Source:</span>
-                    <p class="source-info-text">2D SVG / PNG map layer in video editor (Scale: 100% ➔ 7.14%). No AI generation needed.</p>
+                    <span class="source-info-label">🛠️ Editing Guide (Yeh CapCut / Premiere Me Banega):</span>
+                    <p class="source-info-text">CapCut ya Premiere me Greenland ki photo ko 14x chota (scale down) karke Africa par rakh dein. (AI clip nahi chahiye).</p>
                   </div>
               </div>
 
@@ -746,23 +819,23 @@
                     <span class="shot-pill">Shot 1.3</span>
                     <span class="shot-time-span">0:22 – 0:45 (23s)</span>
                   </div>
-                  <span class="shot-type-pill badge-graphic">📊 Infographic Overlay (Static Motion)</span>
-                  <span class="shot-cut-trigger">CUT ON: "every single day" ➔ CUT to Beat 02</span>
+                  <span class="shot-type-pill badge-graphic">📊 Country Outlines Graphic</span>
+                  <span class="shot-cut-trigger">✂️ Jab aawaz me bole "every single day" ➔ Beat 02 par jayein</span>
                 </div>
 
                 <div class="shot-vo-subbox">
-                  <span class="shot-vo-label">🎙️ Voiceover Spoken During this Visual (0:22 – 0:45 (23s)):</span>
+                  <span class="shot-vo-label">🎙️ Mariyam is time (0:22 – 0:45 (23s)) yeh line voiceover me chalegi:</span>
                   <p class="shot-vo-content">"The entire United States, China, India, and almost all of Western Europe could sit inside Africa simultaneously with room to spare. Yet for four hundred and fifty-seven years, classroom maps have shown you a distorted world. This was not an accident or a printing error—it was a calculated mathematical decision made in 1569 that we still use every single day."</p>
                 </div>
 
                 <div class="shot-action-box">
-                  <span class="shot-action-label">🎥 Visual Event on Screen:</span>
-                  <p class="shot-action-desc">High-contrast map graphic showing USA, China, India, and Europe outlines gliding and nesting inside African continent with area labels.</p>
+                  <span class="shot-action-label">🎬 Screen Par Kya Dikhana Hai:</span>
+                  <p class="shot-action-desc">USA, China, India aur Europe ke naqshay ek ek karke Africa ke andar fit hotay dikhayein.</p>
                 </div>
 
                   <div class="shot-source-info">
-                    <span class="source-info-label">🛠️ Editing Asset Source:</span>
-                    <p class="source-info-text">True Size static infographic asset with slow pan and country snap sound effects.</p>
+                    <span class="source-info-label">🛠️ Editing Guide (Yeh CapCut / Premiere Me Banega):</span>
+                    <p class="source-info-text">TrueSize static image par slow pan aur zoom-in animation dein.</p>
                   </div>
               </div>
               </div>
@@ -775,7 +848,7 @@
             <div class="beat-card-head">
               <div class="head-left">
                 <span class="beat-gold-pill">BEAT 02</span>
-                <h3 class="beat-title-text">Gauss's Mathematical Curse</h3>
+                <h3 class="beat-title-text">Gauss's Math Curse · Sphere Ko Flat Karna</h3>
               </div>
               <div class="head-right">
                 <span class="beat-time-pill">0:45 – 1:45</span>
@@ -785,13 +858,13 @@
 
             <!-- Complete Beat Voiceover Script -->
             <div class="vo-script-box">
-              <span class="section-micro-label">🎙️ Complete Narration for BEAT 02:</span>
+              <span class="section-micro-label">🎙️ Poori Voiceover Narration (BEAT 02):</span>
               <p class="vo-script-paragraph">To understand why this happens, look at the actual numbers: Africa is thirty point three million square kilometres. Greenland is barely two point one million. But when you flatten a three-dimensional globe onto a flat sheet of paper, distortion is mathematically unavoidable. In 1828, mathematician Carl Friedrich Gauss proved that no sphere can ever be flattened without stretching, tearing, or shrinking its surface. Every map maker in history must choose what to sacrifice: true shape, true area, or true compass direction. In 1569, a Flemish geographer named Gerardus Mercator chose direction—and transformed maritime history.</p>
             </div>
 
             <!-- Shot by Shot Visual Editing Breakdown -->
             <div class="shots-container">
-              <span class="section-micro-label">🎬 Visual Editing Timeline (2 Sequential Cuts):</span>
+              <span class="section-micro-label">🎬 Video Editing Guide (2 Sequential Shots):</span>
               <div class="shots-list">
               <!-- Shot 2.1 -->
               <div class="single-shot-card">
@@ -800,23 +873,23 @@
                     <span class="shot-pill">Shot 2.1</span>
                     <span class="shot-time-span">0:45 – 1:15 (30s)</span>
                   </div>
-                  <span class="shot-type-pill badge-map">🗺️ 3D Earth Orbit (Google Earth / 3D)</span>
-                  <span class="shot-cut-trigger">CUT ON: "mathematically unavoidable" ➔ CUT to Shot 2.2</span>
+                  <span class="shot-type-pill badge-map">🗺️ 3D Globe Orbit (Google Earth Studio)</span>
+                  <span class="shot-cut-trigger">✂️ Jab aawaz me bole "mathematically unavoidable" ➔ Agla AI clip lagayein</span>
                 </div>
 
                 <div class="shot-vo-subbox">
-                  <span class="shot-vo-label">🎙️ Voiceover Spoken During this Visual (0:45 – 1:15 (30s)):</span>
+                  <span class="shot-vo-label">🎙️ Mariyam is time (0:45 – 1:15 (30s)) yeh line voiceover me chalegi:</span>
                   <p class="shot-vo-content">"To understand why this happens, look at the actual numbers: Africa is thirty point three million square kilometres. Greenland is barely two point one million. But when you flatten a three-dimensional globe onto a flat sheet of paper, distortion is mathematically unavoidable."</p>
                 </div>
 
                 <div class="shot-action-box">
-                  <span class="shot-action-label">🎥 Visual Event on Screen:</span>
-                  <p class="shot-action-desc">3D photorealistic globe rotating slowly in space, highlighting true continent boundaries and realistic topological relief.</p>
+                  <span class="shot-action-label">🎬 Screen Par Kya Dikhana Hai:</span>
+                  <p class="shot-action-desc">Photorealistic 3D Globe space me ghoom raha ho aur Africa aur Greenland ka asli size nazar aa raha ho.</p>
                 </div>
 
                   <div class="shot-source-info">
-                    <span class="source-info-label">🛠️ Editing Asset Source:</span>
-                    <p class="source-info-text">Google Earth Studio / 3D globe animation.</p>
+                    <span class="source-info-label">🛠️ Editing Guide (Yeh CapCut / Premiere Me Banega):</span>
+                    <p class="source-info-text">Google Earth Studio ya free 3D rotating globe video lagayein.</p>
                   </div>
               </div>
 
@@ -827,23 +900,23 @@
                     <span class="shot-pill">Shot 2.2</span>
                     <span class="shot-time-span">1:15 – 1:45 (30s)</span>
                   </div>
-                  <span class="shot-type-pill badge-ai">🎥 Google Flow AI B-Roll</span>
-                  <span class="shot-cut-trigger">CUT ON: "transformed maritime history" ➔ CUT to Beat 03</span>
+                  <span class="shot-type-pill badge-ai">🎥 Google Flow AI Clip</span>
+                  <span class="shot-cut-trigger">✂️ Jab aawaz me bole "transformed maritime history" ➔ Beat 03 par jayein</span>
                 </div>
 
                 <div class="shot-vo-subbox">
-                  <span class="shot-vo-label">🎙️ Voiceover Spoken During this Visual (1:15 – 1:45 (30s)):</span>
+                  <span class="shot-vo-label">🎙️ Mariyam is time (1:15 – 1:45 (30s)) yeh line voiceover me chalegi:</span>
                   <p class="shot-vo-content">"In 1828, mathematician Carl Friedrich Gauss proved that no sphere can ever be flattened without stretching, tearing, or shrinking its surface. Every map maker in history must choose what to sacrifice: true shape, true area, or true compass direction. In 1569, a Flemish geographer named Gerardus Mercator chose direction—and transformed maritime history."</p>
                 </div>
 
                 <div class="shot-action-box">
-                  <span class="shot-action-label">🎥 Visual Event on Screen:</span>
-                  <p class="shot-action-desc">Close-up macro of vintage mathematical geometry equations and compass circles hand-drawn on aged parchment under warm directional desk lamp.</p>
+                  <span class="shot-action-label">🎬 Screen Par Kya Dikhana Hai:</span>
+                  <p class="shot-action-desc">Purani table par geometry ki diagrams, compass aur math ke equations ink se draw ho rahay hon.</p>
                 </div>
 
                   <div class="shot-prompt-wrap">
                     <div class="shot-prompt-head">
-                      <span class="prompt-head-label">⚡ Google Flow AI Prompt (8s Clip)</span>
+                      <span class="prompt-head-label">⚡ Google Flow AI Prompt (Yeh Copy Karke 8s Clip Banayein)</span>
                       <button class="btn-copy-shot-prompt" onclick="copyShotPrompt(this)">Copy Prompt</button>
                     </div>
                     <pre class="shot-prompt-code"><code>Create an 8-second horizontal 16:9 cinematic clip. Close-up macro shot of mathematical equations and geometric compass circles drawn with ink on vintage parchment, warm directional desk lamp, dust motes, 8k --ar 16:9</code></pre>
@@ -859,7 +932,7 @@
             <div class="beat-card-head">
               <div class="head-left">
                 <span class="beat-gold-pill">BEAT 03</span>
-                <h3 class="beat-title-text">The 1569 Navigator Problem</h3>
+                <h3 class="beat-title-text">1569 Sailors Ki Problem · Ship Navigation</h3>
               </div>
               <div class="head-right">
                 <span class="beat-time-pill">1:45 – 3:00</span>
@@ -869,13 +942,13 @@
 
             <!-- Complete Beat Voiceover Script -->
             <div class="vo-script-box">
-              <span class="section-micro-label">🎙️ Complete Narration for BEAT 03:</span>
+              <span class="section-micro-label">🎙️ Poori Voiceover Narration (BEAT 03):</span>
               <p class="vo-script-paragraph">Mercator was not building a decorative poster for schools. He was building a life-or-death navigation tool for 16th-century sea captains crossing stormy oceans with simple magnetic compasses. On a round Earth, the shortest route between two ports is a curved arc called a great circle. But sailing a great circle requires recalculating your steering compass every single hour. In stormy seas with no visible stars, calculation errors meant running aground on deadly reefs. Mercator designed a map where any straight line drawn with a ruler represented a constant compass bearing—a rhumb line. Hold that single angle on your steering compass, and you were guaranteed to arrive.</p>
             </div>
 
             <!-- Shot by Shot Visual Editing Breakdown -->
             <div class="shots-container">
-              <span class="section-micro-label">🎬 Visual Editing Timeline (3 Sequential Cuts):</span>
+              <span class="section-micro-label">🎬 Video Editing Guide (3 Sequential Shots):</span>
               <div class="shots-list">
               <!-- Shot 3.1 -->
               <div class="single-shot-card">
@@ -884,23 +957,23 @@
                     <span class="shot-pill">Shot 3.1</span>
                     <span class="shot-time-span">1:45 – 2:15 (30s)</span>
                   </div>
-                  <span class="shot-type-pill badge-ai">🎥 Google Flow AI B-Roll</span>
-                  <span class="shot-cut-trigger">CUT ON: "magnetic compasses" ➔ CUT to Shot 3.2</span>
+                  <span class="shot-type-pill badge-ai">🎥 Google Flow AI Clip</span>
+                  <span class="shot-cut-trigger">✂️ Jab aawaz me bole "magnetic compasses" ➔ Agla route chart lagayein</span>
                 </div>
 
                 <div class="shot-vo-subbox">
-                  <span class="shot-vo-label">🎙️ Voiceover Spoken During this Visual (1:45 – 2:15 (30s)):</span>
+                  <span class="shot-vo-label">🎙️ Mariyam is time (1:45 – 2:15 (30s)) yeh line voiceover me chalegi:</span>
                   <p class="shot-vo-content">"Mercator was not building a decorative poster for schools. He was building a life-or-death navigation tool for 16th-century sea captains crossing stormy oceans with simple magnetic compasses."</p>
                 </div>
 
                 <div class="shot-action-box">
-                  <span class="shot-action-label">🎥 Visual Event on Screen:</span>
-                  <p class="shot-action-desc">16th-century wooden Spanish galleon sailing in turbulent deep Atlantic ocean amidst misty sea spray and dramatic stormy sky.</p>
+                  <span class="shot-action-label">🎬 Screen Par Kya Dikhana Hai:</span>
+                  <p class="shot-action-desc">16th-century purana lakdi ka samundri jahaz (Spanish Galleon) toofani leharon ko cheerte hue aage badh raha hai.</p>
                 </div>
 
                   <div class="shot-prompt-wrap">
                     <div class="shot-prompt-head">
-                      <span class="prompt-head-label">⚡ Google Flow AI Prompt (8s Clip)</span>
+                      <span class="prompt-head-label">⚡ Google Flow AI Prompt (Yeh Copy Karke 8s Clip Banayein)</span>
                       <button class="btn-copy-shot-prompt" onclick="copyShotPrompt(this)">Copy Prompt</button>
                     </div>
                     <pre class="shot-prompt-code"><code>Create an 8-second horizontal 16:9 cinematic clip. Documentary photography, 16th-century wooden Spanish galleon sailing in turbulent deep Atlantic ocean, low-angle forward tracking camera, dramatic overcast lighting, misty sea spray, cinematic realism, no text --ar 16:9</code></pre>
@@ -914,23 +987,23 @@
                     <span class="shot-pill">Shot 3.2</span>
                     <span class="shot-time-span">2:15 – 2:40 (25s)</span>
                   </div>
-                  <span class="shot-type-pill badge-graphic">📊 2D Compass Chart Animation</span>
-                  <span class="shot-cut-trigger">CUT ON: "on deadly reefs" ➔ CUT to Shot 3.3</span>
+                  <span class="shot-type-pill badge-graphic">📊 2D Ship Route Chart</span>
+                  <span class="shot-cut-trigger">✂️ Jab aawaz me bole "on deadly reefs" ➔ Agla AI clip lagayein</span>
                 </div>
 
                 <div class="shot-vo-subbox">
-                  <span class="shot-vo-label">🎙️ Voiceover Spoken During this Visual (2:15 – 2:40 (25s)):</span>
+                  <span class="shot-vo-label">🎙️ Mariyam is time (2:15 – 2:40 (25s)) yeh line voiceover me chalegi:</span>
                   <p class="shot-vo-content">"On a round Earth, the shortest route between two ports is a curved arc called a great circle. But sailing a great circle requires recalculating your steering compass every single hour. In stormy seas with no visible stars, calculation errors meant running aground on deadly reefs."</p>
                 </div>
 
                 <div class="shot-action-box">
-                  <span class="shot-action-label">🎥 Visual Event on Screen:</span>
-                  <p class="shot-action-desc">Animated Atlantic navigation chart showing curved Great Circle route (red arc) versus straight Rhumb Line (green line).</p>
+                  <span class="shot-action-label">🎬 Screen Par Kya Dikhana Hai:</span>
+                  <p class="shot-action-desc">Samundri chart par do lines dikhayein: Ek tedhi curve line aur ek seedhi line.</p>
                 </div>
 
                   <div class="shot-source-info">
-                    <span class="source-info-label">🛠️ Editing Asset Source:</span>
-                    <p class="source-info-text">2D animated chart overlay in Premiere/CapCut.</p>
+                    <span class="source-info-label">🛠️ Editing Guide (Yeh CapCut / Premiere Me Banega):</span>
+                    <p class="source-info-text">CapCut me simple animated line drawing overlay lagayein.</p>
                   </div>
               </div>
 
@@ -941,23 +1014,23 @@
                     <span class="shot-pill">Shot 3.3</span>
                     <span class="shot-time-span">2:40 – 3:00 (20s)</span>
                   </div>
-                  <span class="shot-type-pill badge-ai">🎥 Google Flow AI B-Roll</span>
-                  <span class="shot-cut-trigger">CUT ON: "guaranteed to arrive" ➔ CUT to Beat 04</span>
+                  <span class="shot-type-pill badge-ai">🎥 Google Flow AI Clip</span>
+                  <span class="shot-cut-trigger">✂️ Jab aawaz me bole "guaranteed to arrive" ➔ Beat 04 par jayein</span>
                 </div>
 
                 <div class="shot-vo-subbox">
-                  <span class="shot-vo-label">🎙️ Voiceover Spoken During this Visual (2:40 – 3:00 (20s)):</span>
+                  <span class="shot-vo-label">🎙️ Mariyam is time (2:40 – 3:00 (20s)) yeh line voiceover me chalegi:</span>
                   <p class="shot-vo-content">"Mercator designed a map where any straight line drawn with a ruler represented a constant compass bearing—a rhumb line. Hold that single angle on your steering compass, and you were guaranteed to arrive."</p>
                 </div>
 
                 <div class="shot-action-box">
-                  <span class="shot-action-label">🎥 Visual Event on Screen:</span>
-                  <p class="shot-action-desc">Close-up of weathered hands gripping wooden ship steering wheel at sunrise, calm golden ocean horizon ahead.</p>
+                  <span class="shot-action-label">🎬 Screen Par Kya Dikhana Hai:</span>
+                  <p class="shot-action-desc">Subah ke sooraj ke samne captain ke haath lakdi ke steering wheel ko pakre hue hain.</p>
                 </div>
 
                   <div class="shot-prompt-wrap">
                     <div class="shot-prompt-head">
-                      <span class="prompt-head-label">⚡ Google Flow AI Prompt (8s Clip)</span>
+                      <span class="prompt-head-label">⚡ Google Flow AI Prompt (Yeh Copy Karke 8s Clip Banayein)</span>
                       <button class="btn-copy-shot-prompt" onclick="copyShotPrompt(this)">Copy Prompt</button>
                     </div>
                     <pre class="shot-prompt-code"><code>Create an 8-second horizontal 16:9 cinematic clip. Weathered hands gripping wooden ship steering wheel at sunrise, calm golden ocean horizon ahead, warm majestic lighting, 8k --ar 16:9</code></pre>
@@ -973,7 +1046,7 @@
             <div class="beat-card-head">
               <div class="head-left">
                 <span class="beat-gold-pill">BEAT 04</span>
-                <h3 class="beat-title-text">The Exploding Poles & The Peters Rebellion</h3>
+                <h3 class="beat-title-text">Exploding Poles · Greenland Kyun Bada Hua?</h3>
               </div>
               <div class="head-right">
                 <span class="beat-time-pill">3:00 – 4:15</span>
@@ -983,13 +1056,13 @@
 
             <!-- Complete Beat Voiceover Script -->
             <div class="vo-script-box">
-              <span class="section-micro-label">🎙️ Complete Narration for BEAT 04:</span>
+              <span class="section-micro-label">🎙️ Poori Voiceover Narration (BEAT 04):</span>
               <p class="vo-script-paragraph">To keep compass lines straight, Mercator projected Earth onto a cylinder. Longitude lines remained parallel instead of converging at the poles, forcing northern landmasses to stretch east-to-west. To preserve accurate angles, Mercator stretched the vertical latitude lines by the exact same ratio. At the equator where Africa sits, distortion is zero percent. But at sixty degrees north, land is magnified four times. By eighty degrees, it is inflated thirty-three times. In 1973, historian Arno Peters protested this distortion, proposing an equal-area map that showed true continent sizes. But while Peters fixed land areas, his map severely warped coastlines, making Africa look like stretched wet laundry.</p>
             </div>
 
             <!-- Shot by Shot Visual Editing Breakdown -->
             <div class="shots-container">
-              <span class="section-micro-label">🎬 Visual Editing Timeline (3 Sequential Cuts):</span>
+              <span class="section-micro-label">🎬 Video Editing Guide (3 Sequential Shots):</span>
               <div class="shots-list">
               <!-- Shot 4.1 -->
               <div class="single-shot-card">
@@ -998,23 +1071,23 @@
                     <span class="shot-pill">Shot 4.1</span>
                     <span class="shot-time-span">3:00 – 3:30 (30s)</span>
                   </div>
-                  <span class="shot-type-pill badge-ai">🎥 Google Flow AI B-Roll</span>
-                  <span class="shot-cut-trigger">CUT ON: "exact same ratio" ➔ CUT to Shot 4.2</span>
+                  <span class="shot-type-pill badge-ai">🎥 Google Flow AI Clip</span>
+                  <span class="shot-cut-trigger">✂️ Jab aawaz me bole "exact same ratio" ➔ Agla percentage graphic lagayein</span>
                 </div>
 
                 <div class="shot-vo-subbox">
-                  <span class="shot-vo-label">🎙️ Voiceover Spoken During this Visual (3:00 – 3:30 (30s)):</span>
+                  <span class="shot-vo-label">🎙️ Mariyam is time (3:00 – 3:30 (30s)) yeh line voiceover me chalegi:</span>
                   <p class="shot-vo-content">"To keep compass lines straight, Mercator projected Earth onto a cylinder. Longitude lines remained parallel instead of converging at the poles, forcing northern landmasses to stretch east-to-west. To preserve accurate angles, Mercator stretched the vertical latitude lines by the exact same ratio."</p>
                 </div>
 
                 <div class="shot-action-box">
-                  <span class="shot-action-label">🎥 Visual Event on Screen:</span>
-                  <p class="shot-action-desc">Aerial drone shot over massive icebergs drifting in Disko Bay Greenland, deep sapphire water and golden polar sun.</p>
+                  <span class="shot-action-label">🎬 Screen Par Kya Dikhana Hai:</span>
+                  <p class="shot-action-desc">Greenland ke neelay samundar me tairte hue barf ke pahad (Icebergs) ka drone shot.</p>
                 </div>
 
                   <div class="shot-prompt-wrap">
                     <div class="shot-prompt-head">
-                      <span class="prompt-head-label">⚡ Google Flow AI Prompt (8s Clip)</span>
+                      <span class="prompt-head-label">⚡ Google Flow AI Prompt (Yeh Copy Karke 8s Clip Banayein)</span>
                       <button class="btn-copy-shot-prompt" onclick="copyShotPrompt(this)">Copy Prompt</button>
                     </div>
                     <pre class="shot-prompt-code"><code>Create an 8-second horizontal 16:9 cinematic clip. Aerial drone shot over massive icebergs drifting in Disko Bay Greenland, deep sapphire water, golden afternoon sun glinting on ice, 8k realism --ar 16:9</code></pre>
@@ -1028,23 +1101,23 @@
                     <span class="shot-pill">Shot 4.2</span>
                     <span class="shot-time-span">3:30 – 3:55 (25s)</span>
                   </div>
-                  <span class="shot-type-pill badge-graphic">📊 Distortion Heatmap Overlay</span>
-                  <span class="shot-cut-trigger">CUT ON: "thirty-three times" ➔ CUT to Shot 4.3</span>
+                  <span class="shot-type-pill badge-graphic">📊 Distortion Percentage Graphic</span>
+                  <span class="shot-cut-trigger">✂️ Jab aawaz me bole "thirty-three times" ➔ Agla map comparison lagayein</span>
                 </div>
 
                 <div class="shot-vo-subbox">
-                  <span class="shot-vo-label">🎙️ Voiceover Spoken During this Visual (3:30 – 3:55 (25s)):</span>
+                  <span class="shot-vo-label">🎙️ Mariyam is time (3:30 – 3:55 (25s)) yeh line voiceover me chalegi:</span>
                   <p class="shot-vo-content">"At the equator where Africa sits, distortion is zero percent. But at sixty degrees north, land is magnified four times. By eighty degrees, it is inflated thirty-three times."</p>
                 </div>
 
                 <div class="shot-action-box">
-                  <span class="shot-action-label">🎥 Visual Event on Screen:</span>
-                  <p class="shot-action-desc">Color-coded distortion heatmap on world map: Equator (0%) ➔ 60°N (400%) ➔ 80°N (3300%).</p>
+                  <span class="shot-action-label">🎬 Screen Par Kya Dikhana Hai:</span>
+                  <p class="shot-action-desc">Naqshay par numbers flash hotay hain: Equator (0%) ➔ 60° North (400% Bada) ➔ 80° North (3300% Bada).</p>
                 </div>
 
                   <div class="shot-source-info">
-                    <span class="source-info-label">🛠️ Editing Asset Source:</span>
-                    <p class="source-info-text">2D animated heatmap graphic.</p>
+                    <span class="source-info-label">🛠️ Editing Guide (Yeh CapCut / Premiere Me Banega):</span>
+                    <p class="source-info-text">CapCut me text pop-up animation banayein.</p>
                   </div>
               </div>
 
@@ -1055,23 +1128,23 @@
                     <span class="shot-pill">Shot 4.3</span>
                     <span class="shot-time-span">3:55 – 4:15 (20s)</span>
                   </div>
-                  <span class="shot-type-pill badge-map">🗺️ Map Comparison (Gall-Peters vs Normal)</span>
-                  <span class="shot-cut-trigger">CUT ON: "stretched wet laundry" ➔ CUT to Beat 05</span>
+                  <span class="shot-type-pill badge-map">🗺️ Side-by-Side Map Comparison</span>
+                  <span class="shot-cut-trigger">✂️ Jab aawaz me bole "stretched wet laundry" ➔ Beat 05 par jayein</span>
                 </div>
 
                 <div class="shot-vo-subbox">
-                  <span class="shot-vo-label">🎙️ Voiceover Spoken During this Visual (3:55 – 4:15 (20s)):</span>
+                  <span class="shot-vo-label">🎙️ Mariyam is time (3:55 – 4:15 (20s)) yeh line voiceover me chalegi:</span>
                   <p class="shot-vo-content">"In 1973, historian Arno Peters protested this distortion, proposing an equal-area map that showed true continent sizes. But while Peters fixed land areas, his map severely warped coastlines, making Africa look like stretched wet laundry."</p>
                 </div>
 
                 <div class="shot-action-box">
-                  <span class="shot-action-label">🎥 Visual Event on Screen:</span>
-                  <p class="shot-action-desc">Side-by-side comparison animation of natural Africa shape vs vertically elongated Gall-Peters Africa.</p>
+                  <span class="shot-action-label">🎬 Screen Par Kya Dikhana Hai:</span>
+                  <p class="shot-action-desc">Asli Africa aur Arno Peters ke lambay kheenche hue Africa ka comparison.</p>
                 </div>
 
                   <div class="shot-source-info">
-                    <span class="source-info-label">🛠️ Editing Asset Source:</span>
-                    <p class="source-info-text">2D split-screen map comparison in video editor.</p>
+                    <span class="source-info-label">🛠️ Editing Guide (Yeh CapCut / Premiere Me Banega):</span>
+                    <p class="source-info-text">Split-screen image comparison in editor.</p>
                   </div>
               </div>
               </div>
@@ -1084,7 +1157,7 @@
             <div class="beat-card-head">
               <div class="head-left">
                 <span class="beat-gold-pill">BEAT 05</span>
-                <h3 class="beat-title-text">Why Google Maps Still Uses It</h3>
+                <h3 class="beat-title-text">Google Maps Aaj Bhi Yeh Kyun Use Karta Hai?</h3>
               </div>
               <div class="head-right">
                 <span class="beat-time-pill">4:15 – 5:30</span>
@@ -1094,13 +1167,13 @@
 
             <!-- Complete Beat Voiceover Script -->
             <div class="vo-script-box">
-              <span class="section-micro-label">🎙️ Complete Narration for BEAT 05:</span>
+              <span class="section-micro-label">🎙️ Poori Voiceover Narration (BEAT 05):</span>
               <p class="vo-script-paragraph">In 2005, when Google built Google Maps, they had dozens of accurate world projections to pick. They deliberately chose Web Mercator. Why? Because when you navigate a city street on your phone, preserving 90-degree street corners is everything. On an equal-area map, every city intersection in New York or London would appear skewed into an angled diamond. Mercator also flattens the inhabited world into a perfect square, which web servers easily chop into 256-pixel square tiles that load instantly across millions of smartphones. A 450-year-old sailing trick became the digital operating system of modern GPS.</p>
             </div>
 
             <!-- Shot by Shot Visual Editing Breakdown -->
             <div class="shots-container">
-              <span class="section-micro-label">🎬 Visual Editing Timeline (3 Sequential Cuts):</span>
+              <span class="section-micro-label">🎬 Video Editing Guide (3 Sequential Shots):</span>
               <div class="shots-list">
               <!-- Shot 5.1 -->
               <div class="single-shot-card">
@@ -1109,23 +1182,23 @@
                     <span class="shot-pill">Shot 5.1</span>
                     <span class="shot-time-span">4:15 – 4:45 (30s)</span>
                   </div>
-                  <span class="shot-type-pill badge-ai">🎥 Google Flow AI B-Roll</span>
-                  <span class="shot-cut-trigger">CUT ON: "corners is everything" ➔ CUT to Shot 5.2</span>
+                  <span class="shot-type-pill badge-ai">🎥 Google Flow AI Clip</span>
+                  <span class="shot-cut-trigger">✂️ Jab aawaz me bole "corners is everything" ➔ Agla tile graphic lagayein</span>
                 </div>
 
                 <div class="shot-vo-subbox">
-                  <span class="shot-vo-label">🎙️ Voiceover Spoken During this Visual (4:15 – 4:45 (30s)):</span>
+                  <span class="shot-vo-label">🎙️ Mariyam is time (4:15 – 4:45 (30s)) yeh line voiceover me chalegi:</span>
                   <p class="shot-vo-content">"In 2005, when Google built Google Maps, they had dozens of accurate world projections to pick. They deliberately chose Web Mercator. Why? Because when you navigate a city street on your phone, preserving 90-degree street corners is everything."</p>
                 </div>
 
                 <div class="shot-action-box">
-                  <span class="shot-action-label">🎥 Visual Event on Screen:</span>
-                  <p class="shot-action-desc">High-altitude orthogonal aerial view of Manhattan street grid intersections, straight down satellite motion under golden hour sun.</p>
+                  <span class="shot-action-label">🎬 Screen Par Kya Dikhana Hai:</span>
+                  <p class="shot-action-desc">New York ki seedhi sadkon aur square city blocks ka upar se satellite aerial view.</p>
                 </div>
 
                   <div class="shot-prompt-wrap">
                     <div class="shot-prompt-head">
-                      <span class="prompt-head-label">⚡ Google Flow AI Prompt (8s Clip)</span>
+                      <span class="prompt-head-label">⚡ Google Flow AI Prompt (Yeh Copy Karke 8s Clip Banayein)</span>
                       <button class="btn-copy-shot-prompt" onclick="copyShotPrompt(this)">Copy Prompt</button>
                     </div>
                     <pre class="shot-prompt-code"><code>Create an 8-second horizontal 16:9 cinematic clip. High-altitude orthogonal aerial view of Manhattan street grid intersections, straight down satellite motion, golden hour directional sunlight, 8k --ar 16:9</code></pre>
@@ -1139,23 +1212,23 @@
                     <span class="shot-pill">Shot 5.2</span>
                     <span class="shot-time-span">4:45 – 5:10 (25s)</span>
                   </div>
-                  <span class="shot-type-pill badge-graphic">📊 3D Tile Pyramid Animation</span>
-                  <span class="shot-cut-trigger">CUT ON: "millions of smartphones" ➔ CUT to Shot 5.3</span>
+                  <span class="shot-type-pill badge-graphic">📊 Square Tiles Loading Graphic</span>
+                  <span class="shot-cut-trigger">✂️ Jab aawaz me bole "millions of smartphones" ➔ Agla AI clip lagayein</span>
                 </div>
 
                 <div class="shot-vo-subbox">
-                  <span class="shot-vo-label">🎙️ Voiceover Spoken During this Visual (4:45 – 5:10 (25s)):</span>
+                  <span class="shot-vo-label">🎙️ Mariyam is time (4:45 – 5:10 (25s)) yeh line voiceover me chalegi:</span>
                   <p class="shot-vo-content">"On an equal-area map, every city intersection in New York or London would appear skewed into an angled diamond. Mercator also flattens the inhabited world into a perfect square, which web servers easily chop into 256-pixel square tiles that load instantly across millions of smartphones."</p>
                 </div>
 
                 <div class="shot-action-box">
-                  <span class="shot-action-label">🎥 Visual Event on Screen:</span>
-                  <p class="shot-action-desc">3D cascading animation of square 256x256 image tiles dividing and loading rapidly downward onto smartphone screen.</p>
+                  <span class="shot-action-label">🎬 Screen Par Kya Dikhana Hai:</span>
+                  <p class="shot-action-desc">Chotay chotay 256x256 square boxes mobile screen par load hotay hue dikhayein.</p>
                 </div>
 
                   <div class="shot-source-info">
-                    <span class="source-info-label">🛠️ Editing Asset Source:</span>
-                    <p class="source-info-text">Motion graphic tile pyramid animation.</p>
+                    <span class="source-info-label">🛠️ Editing Guide (Yeh CapCut / Premiere Me Banega):</span>
+                    <p class="source-info-text">Simple motion graphics animation in video editor.</p>
                   </div>
               </div>
 
@@ -1166,23 +1239,23 @@
                     <span class="shot-pill">Shot 5.3</span>
                     <span class="shot-time-span">5:10 – 5:30 (20s)</span>
                   </div>
-                  <span class="shot-type-pill badge-ai">🎥 Google Flow AI B-Roll</span>
-                  <span class="shot-cut-trigger">CUT ON: "operating system of modern GPS" ➔ CUT to Beat 06</span>
+                  <span class="shot-type-pill badge-ai">🎥 Google Flow AI Clip</span>
+                  <span class="shot-cut-trigger">✂️ Jab aawaz me bole "operating system of modern GPS" ➔ Beat 06 par jayein</span>
                 </div>
 
                 <div class="shot-vo-subbox">
-                  <span class="shot-vo-label">🎙️ Voiceover Spoken During this Visual (5:10 – 5:30 (20s)):</span>
+                  <span class="shot-vo-label">🎙️ Mariyam is time (5:10 – 5:30 (20s)) yeh line voiceover me chalegi:</span>
                   <p class="shot-vo-content">"A 450-year-old sailing trick became the digital operating system of modern GPS."</p>
                 </div>
 
                 <div class="shot-action-box">
-                  <span class="shot-action-label">🎥 Visual Event on Screen:</span>
-                  <p class="shot-action-desc">Close-up of hand holding modern smartphone displaying glowing GPS route while walking down busy city sidewalk.</p>
+                  <span class="shot-action-label">🎬 Screen Par Kya Dikhana Hai:</span>
+                  <p class="shot-action-desc">Haath me modern smartphone pakra hua hai jisme blue GPS route chal raha hai city road par.</p>
                 </div>
 
                   <div class="shot-prompt-wrap">
                     <div class="shot-prompt-head">
-                      <span class="prompt-head-label">⚡ Google Flow AI Prompt (8s Clip)</span>
+                      <span class="prompt-head-label">⚡ Google Flow AI Prompt (Yeh Copy Karke 8s Clip Banayein)</span>
                       <button class="btn-copy-shot-prompt" onclick="copyShotPrompt(this)">Copy Prompt</button>
                     </div>
                     <pre class="shot-prompt-code"><code>Create an 8-second horizontal 16:9 cinematic clip. Close-up of hand holding modern smartphone displaying GPS navigation route while walking along bustling sunny city sidewalk, bokeh pedestrians, 8k --ar 16:9</code></pre>
@@ -1198,7 +1271,7 @@
             <div class="beat-card-head">
               <div class="head-left">
                 <span class="beat-gold-pill">BEAT 06</span>
-                <h3 class="beat-title-text">The Final Resolution</h3>
+                <h3 class="beat-title-text">Conclusion · Africa Asal Me Kitna Bada Hai</h3>
               </div>
               <div class="head-right">
                 <span class="beat-time-pill">5:30 – 6:30</span>
@@ -1208,13 +1281,13 @@
 
             <!-- Complete Beat Voiceover Script -->
             <div class="vo-script-box">
-              <span class="section-micro-label">🎙️ Complete Narration for BEAT 06:</span>
+              <span class="section-micro-label">🎙️ Poori Voiceover Narration (BEAT 06):</span>
               <p class="vo-script-paragraph">Modern cartography has finally solved this dilemma. Today, the Equal Earth projection gives every continent its true proportions without distorting shapes, and Google Maps seamlessly switches into a 3D rotating globe once you zoom out. Maps are not photographs of our planet—they are human tools designed for specific jobs. Gerardus Mercator never lied to us; he built the ultimate sea chart. The mistake was ours, for keeping a 16th-century nautical tool pinned to classroom walls. The next time you look at a map, remember: Africa is bigger than you think.</p>
             </div>
 
             <!-- Shot by Shot Visual Editing Breakdown -->
             <div class="shots-container">
-              <span class="section-micro-label">🎬 Visual Editing Timeline (2 Sequential Cuts):</span>
+              <span class="section-micro-label">🎬 Video Editing Guide (2 Sequential Shots):</span>
               <div class="shots-list">
               <!-- Shot 6.1 -->
               <div class="single-shot-card">
@@ -1223,23 +1296,23 @@
                     <span class="shot-pill">Shot 6.1</span>
                     <span class="shot-time-span">5:30 – 5:55 (25s)</span>
                   </div>
-                  <span class="shot-type-pill badge-map">🗺️ Equal Earth Map Display</span>
-                  <span class="shot-cut-trigger">CUT ON: "once you zoom out" ➔ CUT to Shot 6.2</span>
+                  <span class="shot-type-pill badge-map">🗺️ Equal Earth Asli Naqsha</span>
+                  <span class="shot-cut-trigger">✂️ Jab aawaz me bole "once you zoom out" ➔ Agla space AI clip lagayein</span>
                 </div>
 
                 <div class="shot-vo-subbox">
-                  <span class="shot-vo-label">🎙️ Voiceover Spoken During this Visual (5:30 – 5:55 (25s)):</span>
+                  <span class="shot-vo-label">🎙️ Mariyam is time (5:30 – 5:55 (25s)) yeh line voiceover me chalegi:</span>
                   <p class="shot-vo-content">"Modern cartography has finally solved this dilemma. Today, the Equal Earth projection gives every continent its true proportions without distorting shapes, and Google Maps seamlessly switches into a 3D rotating globe once you zoom out."</p>
                 </div>
 
                 <div class="shot-action-box">
-                  <span class="shot-action-label">🎥 Visual Event on Screen:</span>
-                  <p class="shot-action-desc">Clean Equal Earth projection map unfurling with smooth curved meridians and true continent proportions.</p>
+                  <span class="shot-action-label">🎬 Screen Par Kya Dikhana Hai:</span>
+                  <p class="shot-action-desc">Naya Equal Earth map smooth open hota hai jahan Africa aur Greenland ka bilkul sahi size nazar ata hai.</p>
                 </div>
 
                   <div class="shot-source-info">
-                    <span class="source-info-label">🛠️ Editing Asset Source:</span>
-                    <p class="source-info-text">2D motion graphic map display in video editor.</p>
+                    <span class="source-info-label">🛠️ Editing Guide (Yeh CapCut / Premiere Me Banega):</span>
+                    <p class="source-info-text">Clean Equal Earth map image par slow pan.</p>
                   </div>
               </div>
 
@@ -1250,23 +1323,23 @@
                     <span class="shot-pill">Shot 6.2</span>
                     <span class="shot-time-span">5:55 – 6:30 (35s)</span>
                   </div>
-                  <span class="shot-type-pill badge-ai">🎥 Google Flow AI B-Roll</span>
-                  <span class="shot-cut-trigger">FADE TO BLACK ➔ Outro End Screen</span>
+                  <span class="shot-type-pill badge-ai">🎥 Google Flow AI Clip (Outro)</span>
+                  <span class="shot-cut-trigger">✂️ Video khatam ➔ Outro Subscribe screen</span>
                 </div>
 
                 <div class="shot-vo-subbox">
-                  <span class="shot-vo-label">🎙️ Voiceover Spoken During this Visual (5:55 – 6:30 (35s)):</span>
+                  <span class="shot-vo-label">🎙️ Mariyam is time (5:55 – 6:30 (35s)) yeh line voiceover me chalegi:</span>
                   <p class="shot-vo-content">"Maps are not photographs of our planet—they are human tools designed for specific jobs. Gerardus Mercator never lied to us; he built the ultimate sea chart. The mistake was ours, for keeping a 16th-century nautical tool pinned to classroom walls. The next time you look at a map, remember: Africa is bigger than you think."</p>
                 </div>
 
                 <div class="shot-action-box">
-                  <span class="shot-action-label">🎥 Visual Event on Screen:</span>
-                  <p class="shot-action-desc">Cinematic deep space pull back from Earth as a golden sunrise crests over the African continent under a starry sky.</p>
+                  <span class="shot-action-label">🎬 Screen Par Kya Dikhana Hai:</span>
+                  <p class="shot-action-desc">Space se Earth ka door hota hua view, Africa ke upar golden sooraj nikal raha hai.</p>
                 </div>
 
                   <div class="shot-prompt-wrap">
                     <div class="shot-prompt-head">
-                      <span class="prompt-head-label">⚡ Google Flow AI Prompt (8s Clip)</span>
+                      <span class="prompt-head-label">⚡ Google Flow AI Prompt (Yeh Copy Karke 8s Clip Banayein)</span>
                       <button class="btn-copy-shot-prompt" onclick="copyShotPrompt(this)">Copy Prompt</button>
                     </div>
                     <pre class="shot-prompt-code"><code>Create an 8-second horizontal 16:9 cinematic clip. Cinematic deep space pull back from Earth, golden sunrise cresting over the African continent, ethereal starry background, photorealistic 8k --ar 16:9</code></pre>
@@ -1289,22 +1362,22 @@
         </div>
 
         <div class="vo-script-box" style="background:var(--bg-surface); border:1.5px solid var(--border-medium);">
-          <p id="fullVoText" style="font-size:1.15rem; line-height:1.9; white-space:pre-wrap; font-weight:500; color:var(--ink-primary);">[BEAT 01: The Scale Hook · The Wall Map Lie · 0:00 – 0:45]
+          <p id="fullVoText" style="font-size:1.15rem; line-height:1.9; white-space:pre-wrap; font-weight:500; color:var(--ink-primary);">[BEAT 01: The Scale Hook · Naqshay Ka Jhoot · 0:00 – 0:45]
 On the map on your wall, Greenland looks about the same size as Africa. On the ground, Africa is fourteen times larger. The entire United States, China, India, and almost all of Western Europe could sit inside Africa simultaneously with room to spare. Yet for four hundred and fifty-seven years, classroom maps have shown you a distorted world. This was not an accident or a printing error—it was a calculated mathematical decision made in 1569 that we still use every single day.
 
-[BEAT 02: Gauss's Mathematical Curse · 0:45 – 1:45]
+[BEAT 02: Gauss's Math Curse · Sphere Ko Flat Karna · 0:45 – 1:45]
 To understand why this happens, look at the actual numbers: Africa is thirty point three million square kilometres. Greenland is barely two point one million. But when you flatten a three-dimensional globe onto a flat sheet of paper, distortion is mathematically unavoidable. In 1828, mathematician Carl Friedrich Gauss proved that no sphere can ever be flattened without stretching, tearing, or shrinking its surface. Every map maker in history must choose what to sacrifice: true shape, true area, or true compass direction. In 1569, a Flemish geographer named Gerardus Mercator chose direction—and transformed maritime history.
 
-[BEAT 03: The 1569 Navigator Problem · 1:45 – 3:00]
+[BEAT 03: 1569 Sailors Ki Problem · Ship Navigation · 1:45 – 3:00]
 Mercator was not building a decorative poster for schools. He was building a life-or-death navigation tool for 16th-century sea captains crossing stormy oceans with simple magnetic compasses. On a round Earth, the shortest route between two ports is a curved arc called a great circle. But sailing a great circle requires recalculating your steering compass every single hour. In stormy seas with no visible stars, calculation errors meant running aground on deadly reefs. Mercator designed a map where any straight line drawn with a ruler represented a constant compass bearing—a rhumb line. Hold that single angle on your steering compass, and you were guaranteed to arrive.
 
-[BEAT 04: The Exploding Poles & The Peters Rebellion · 3:00 – 4:15]
+[BEAT 04: Exploding Poles · Greenland Kyun Bada Hua? · 3:00 – 4:15]
 To keep compass lines straight, Mercator projected Earth onto a cylinder. Longitude lines remained parallel instead of converging at the poles, forcing northern landmasses to stretch east-to-west. To preserve accurate angles, Mercator stretched the vertical latitude lines by the exact same ratio. At the equator where Africa sits, distortion is zero percent. But at sixty degrees north, land is magnified four times. By eighty degrees, it is inflated thirty-three times. In 1973, historian Arno Peters protested this distortion, proposing an equal-area map that showed true continent sizes. But while Peters fixed land areas, his map severely warped coastlines, making Africa look like stretched wet laundry.
 
-[BEAT 05: Why Google Maps Still Uses It · 4:15 – 5:30]
+[BEAT 05: Google Maps Aaj Bhi Yeh Kyun Use Karta Hai? · 4:15 – 5:30]
 In 2005, when Google built Google Maps, they had dozens of accurate world projections to pick. They deliberately chose Web Mercator. Why? Because when you navigate a city street on your phone, preserving 90-degree street corners is everything. On an equal-area map, every city intersection in New York or London would appear skewed into an angled diamond. Mercator also flattens the inhabited world into a perfect square, which web servers easily chop into 256-pixel square tiles that load instantly across millions of smartphones. A 450-year-old sailing trick became the digital operating system of modern GPS.
 
-[BEAT 06: The Final Resolution · 5:30 – 6:30]
+[BEAT 06: Conclusion · Africa Asal Me Kitna Bada Hai · 5:30 – 6:30]
 Modern cartography has finally solved this dilemma. Today, the Equal Earth projection gives every continent its true proportions without distorting shapes, and Google Maps seamlessly switches into a 3D rotating globe once you zoom out. Maps are not photographs of our planet—they are human tools designed for specific jobs. Gerardus Mercator never lied to us; he built the ultimate sea chart. The mistake was ours, for keeping a 16th-century nautical tool pinned to classroom walls. The next time you look at a map, remember: Africa is bigger than you think.</p>
         </div>
       </article>
@@ -1316,22 +1389,27 @@ Modern cartography has finally solved this dilemma. Today, the Equal Earth proje
             <div class="beat-card-head">
               <div class="head-left">
                 <span class="beat-gold-pill">SHORT 1A</span>
-                <h3 class="beat-title-text">The 14x Greenland vs Africa Area Shock</h3>
+                <h3 class="beat-title-text">Greenland vs Africa 14x Ka Jhoot</h3>
               </div>
               <span class="beat-time-pill">68s · 9:16 Vertical</span>
             </div>
 
             <div class="vo-script-box">
+              <span class="section-micro-label">🎙️ Short 1A Voiceover Script:</span>
               <p class="vo-script-paragraph">
-                <strong>Hook:</strong> "Greenland is not the size of Africa. It fits inside it fourteen times."<br><br>
-                <strong>Narration:</strong> "The US, China, India, and all of Western Europe fit inside Africa together. Africa is 30.3 million square kilometres. Greenland is barely 2.1 million. So why does your wall map show them as identical twins? Because in 1569, sailors needed straight compass lines, not true country sizes. Mercator stretched the poles to preserve angles, inflating northern lands by 400%. Even in 2026, web maps still keep this projection to render square tiles. Should schools ban the Mercator map forever, or does it still have a purpose? Tell me below."
+                <strong>Hook:</strong> "Greenland Africa ke barabar nahi hai. Yeh Africa ke andar 14 baar fit ho sakta hai!"<br><br>
+                <strong>Narration:</strong> "Poora America, China, India aur poora Europe ek sath Africa ke andar fit ho jatay hain. Africa 30 million square km hai aur Greenland sirf 2 million. Toh deewar ke map par dono barabar kyun dikhte hain? Kyunke 1569 me jahaz chalane walon ko seedhi compass lines chahiye theen. Mercator ne barfani ilaqon ko 4 guna bada bana diya. 2026 me bhi Google Maps yahi map use karta hai. Kya schoolon se is naqshay ko ban kar dena chahiye? Comment me batayein!"
               </p>
             </div>
 
-            <div class="visual-directive-card">
-              <span class="meta-label">⚡ Google Flow AI Vertical Prompt (9:16)</span>
-              <div class="ai-prompt-box">
-                <pre class="prompt-code-display"><code>Create an 8-second vertical 9:16 cinematic clip. Macro documentary shot, vintage wooden classroom with large Mercator wall map, camera pushes straight in on Greenland and Africa, soft morning daylight, 8k --ar 9:16</code></pre>
+            <div class="single-shot-card">
+              <span class="section-micro-label">⚡ Google Flow AI Vertical Prompt (9:16):</span>
+              <div class="shot-prompt-wrap">
+                <div class="shot-prompt-head">
+                  <span class="prompt-head-label">Shorts Prompt (8s Clip)</span>
+                  <button class="btn-copy-shot-prompt" onclick="copyShotPrompt(this)">Copy Prompt</button>
+                </div>
+                <pre class="shot-prompt-code"><code>Create an 8-second vertical 9:16 cinematic clip. Macro documentary shot, vintage wooden classroom with large Mercator wall map, camera pushes straight in on Greenland and Africa, soft morning daylight, 8k --ar 9:16</code></pre>
               </div>
             </div>
           </article>
@@ -1340,22 +1418,27 @@ Modern cartography has finally solved this dilemma. Today, the Equal Earth proje
             <div class="beat-card-head">
               <div class="head-left">
                 <span class="beat-gold-pill" style="background:var(--accent-blue-soft); color:#FFFFFF;">SHORT 1B</span>
-                <h3 class="beat-title-text">Why Your Phone Uses a 1569 Sailing Map</h3>
+                <h3 class="beat-title-text">Aapka Phone 1569 Ka Naqsha Kyun Use Karta Hai?</h3>
               </div>
               <span class="beat-time-pill">72s · 9:16 Vertical</span>
             </div>
 
             <div class="vo-script-box">
+              <span class="section-micro-label">🎙️ Short 1B Voiceover Script:</span>
               <p class="vo-script-paragraph">
-                <strong>Hook:</strong> "Your smartphone navigation still relies on a sailing map drawn in 1569. There is a genius reason why."<br><br>
-                <strong>Narration:</strong> "In 2005, when Google built Google Maps, they had dozens of accurate world projections to pick. They picked Web Mercator—the exact map notorious for exaggerating the Arctic. Why? Because Mercator preserves 90-degree street corners at local zoom levels. Equal-area maps distort angles, turning square city blocks into skewed parallelograms. Mercator also divides cleanly into 256-pixel square tiles that load instantly across millions of phones. So the map isn't broken—it was perfectly engineered for street-level navigation. Did you know your GPS was using a 450-year-old compass trick? Drop your thoughts below."
+                <strong>Hook:</strong> "Aapka smartphone GPS aaj bhi 450 saal purana naqsha use karta hai. Iski ek zabardast wajah hai!"<br><br>
+                <strong>Narration:</strong> "2005 me jab Google ne Google Maps banaya, unhone 1569 ka Mercator map chuna. Kyun? Kyunke jab aap mobile par galiyon me chalte hain, toh sadak ke 90-degree mod bilkul seedhay dikhne chahiye. Doosray naqshon par galiyan tedhi ho jati hain. Plus Mercator map 256 pixel ke square tiles me baant kar instant load hota hai. Yaani yeh naqsha kharab nahi, balkay GPS ke liye perfect hai! Kya aapko yeh pata tha? Batayein!"
               </p>
             </div>
 
-            <div class="visual-directive-card">
-              <span class="meta-label">⚡ Google Flow AI Vertical Prompt (9:16)</span>
-              <div class="ai-prompt-box">
-                <pre class="prompt-code-display"><code>Create an 8-second vertical 9:16 cinematic clip. Close-up of modern smartphone displaying blue GPS navigation route on bustling city sidewalk at sunset, sleek bokeh city lights, 8k --ar 9:16</code></pre>
+            <div class="single-shot-card">
+              <span class="section-micro-label">⚡ Google Flow AI Vertical Prompt (9:16):</span>
+              <div class="shot-prompt-wrap">
+                <div class="shot-prompt-head">
+                  <span class="prompt-head-label">Shorts Prompt (8s Clip)</span>
+                  <button class="btn-copy-shot-prompt" onclick="copyShotPrompt(this)">Copy Prompt</button>
+                </div>
+                <pre class="shot-prompt-code"><code>Create an 8-second vertical 9:16 cinematic clip. Close-up of modern smartphone displaying blue GPS navigation route on bustling city sidewalk at sunset, sleek bokeh city lights, 8k --ar 9:16</code></pre>
               </div>
             </div>
           </article>
@@ -1367,22 +1450,22 @@ Modern cartography has finally solved this dilemma. Today, the Equal Earth proje
             <div class="beat-card-head">
               <div class="head-left">
                 <span class="beat-gold-pill" style="background:var(--accent-green); color:#FFFFFF;">FACT CHECK</span>
-                <h3 class="beat-title-text">Verified Citations & Area Ratios (§13.4)</h3>
+                <h3 class="beat-title-text">Verified Asli Facts & Numbers</h3>
               </div>
             </div>
 
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px;">
               <div class="vo-script-box">
-                <span class="meta-label">Area Ratios (CIA Factbook):</span>
-                <p style="font-size: 0.92rem; font-weight: 600; color: var(--ink-primary); margin-top:4px;">• Africa: 30,370,000 km²<br>• Greenland: 2,166,086 km²<br>• Ratio: 14.02x</p>
+                <span class="section-micro-label">Zameen Ka Asli Size:</span>
+                <p style="font-size: 0.92rem; font-weight: 600; color: var(--ink-primary); margin-top:4px;">• Africa: 30,370,000 km²<br>• Greenland: 2,166,086 km²<br>• Asal Faraq: <strong>14 Guna Bada</strong></p>
               </div>
               <div class="vo-script-box">
-                <span class="meta-label">Nested Benchmark:</span>
-                <p style="font-size: 0.92rem; font-weight: 600; color: var(--ink-primary); margin-top:4px;">• USA + China + India + W. Europe = 26.82M km²<br><em>All 4 nest inside Africa with room to spare.</em></p>
+                <span class="section-micro-label">Fit Hone Walay Mulk:</span>
+                <p style="font-size: 0.92rem; font-weight: 600; color: var(--ink-primary); margin-top:4px;">• USA + China + India + Europe = 26.8M km²<br><em>Yeh chaaro ek sath Africa ke andar asani se aatay hain.</em></p>
               </div>
               <div class="vo-script-box">
-                <span class="meta-label">Web Standard:</span>
-                <p style="font-size: 0.92rem; font-weight: 600; color: var(--ink-primary); margin-top:4px;">• Spec: EPSG:3857 (Web Mercator)<br>• Tile Pyramid: 256×256 pixels.</p>
+                <span class="section-micro-label">Google Maps Standard:</span>
+                <p style="font-size: 0.92rem; font-weight: 600; color: var(--ink-primary); margin-top:4px;">• Format: Web Mercator (EPSG:3857)<br>• Square Tiles: 256×256 pixels.</p>
               </div>
             </div>
           </article>
@@ -1394,18 +1477,18 @@ Modern cartography has finally solved this dilemma. Today, the Equal Earth proje
             <div class="beat-card-head">
               <div class="head-left">
                 <span class="beat-gold-pill">SEO KIT</span>
-                <h3 class="beat-title-text">YouTube Packaging & Metadata (§26)</h3>
+                <h3 class="beat-title-text">YouTube Title & Thumbnail Guide</h3>
               </div>
             </div>
 
             <div style="display: flex; flex-direction: column; gap: 14px;">
               <div class="vo-script-box">
-                <span class="meta-label">Primary Title (43 Chars):</span>
+                <span class="section-micro-label">Best Video Title:</span>
                 <p style="font-size: 1.05rem; font-weight: 800; color: var(--ink-primary);">Every Map You've Seen Is Lying About Africa</p>
               </div>
               <div class="vo-script-box">
-                <span class="meta-label">Thumbnail Concept & 3-Word Text:</span>
-                <p style="font-size: 0.95rem; font-weight: 600; color: var(--ink-primary);">Amber Greenland outline nested inside dark slate Africa. Text: <strong>"14x BIGGER"</strong></p>
+                <span class="section-micro-label">Thumbnail Par Kya Dikhana Hai:</span>
+                <p style="font-size: 0.95rem; font-weight: 600; color: var(--ink-primary);">Africa ke naqshay ke andar Greenland ka chota naqsha. Bada Text: <strong>"14x BIGGER"</strong></p>
               </div>
             </div>
           </article>

@@ -191,6 +191,65 @@
       margin: 32px auto 100px;
     }
 
+    /* Mariyam Quick Guide Box */
+    .mariyam-guide-box {
+      background: linear-gradient(135deg, #FEF3C7, #FFFBEB);
+      border: 2px solid #F59E0B;
+      border-radius: var(--radius-card);
+      padding: 24px 28px;
+      margin-bottom: 24px;
+      box-shadow: 0 4px 14px rgba(245, 158, 11, 0.15);
+    }
+
+    [data-theme="dark"] .mariyam-guide-box {
+      background: linear-gradient(135deg, #2D2415, #1E1B15);
+      border-color: #B45309;
+    }
+
+    .mariyam-guide-head {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 14px;
+    }
+
+    .mariyam-guide-title {
+      font-size: 1.15rem;
+      color: #92400E;
+      font-weight: 800;
+    }
+    [data-theme="dark"] .mariyam-guide-title { color: #FBBF24; }
+
+    .mariyam-steps-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 14px;
+    }
+
+    .mariyam-step-card {
+      background: var(--bg-surface);
+      border: 1.5px solid var(--border-medium);
+      border-radius: 10px;
+      padding: 14px 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .step-badge {
+      font-size: 0.72rem;
+      font-weight: 800;
+      color: var(--accent-blue);
+      text-transform: uppercase;
+    }
+
+    .step-text {
+      font-size: 0.88rem;
+      color: var(--ink-primary);
+      line-height: 1.5;
+      font-weight: 600;
+    }
+
     /* Hero Card */
     .hero-banner {
       background: var(--bg-surface);
@@ -366,7 +425,7 @@
 
     .section-micro-label {
       display: block;
-      font-size: 0.7rem;
+      font-size: 0.72rem;
       font-weight: 800;
       text-transform: uppercase;
       letter-spacing: 0.05em;
@@ -462,11 +521,10 @@
       background: #FFE4E6;
       color: var(--accent-coral);
       border: 1px solid var(--accent-coral);
-      padding: 2px 8px;
+      padding: 3px 10px;
       border-radius: var(--radius-pill);
-      font-size: 0.72rem;
+      font-size: 0.74rem;
       font-weight: 800;
-      font-family: "JetBrains Mono", monospace;
       white-space: nowrap;
     }
 
@@ -480,31 +538,27 @@
 
     .shot-vo-label {
       display: block;
-      font-size: 0.68rem;
+      font-size: 0.7rem;
       font-weight: 800;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-      color: var(--accent-yellow);
+      color: #B45309;
       margin-bottom: 2px;
     }
 
     .shot-vo-content {
-      font-size: 0.95rem;
+      font-size: 0.96rem;
       font-weight: 600;
       line-height: 1.5;
       color: var(--ink-primary);
     }
 
     .shot-action-box {
-      font-size: 0.86rem;
+      font-size: 0.88rem;
       color: var(--ink-secondary);
     }
 
     .shot-action-label {
-      font-size: 0.7rem;
+      font-size: 0.72rem;
       font-weight: 800;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
       color: var(--accent-blue);
       display: block;
       margin-bottom: 2px;
@@ -525,10 +579,8 @@
     }
 
     .prompt-head-label {
-      font-size: 0.68rem;
+      font-size: 0.7rem;
       font-weight: 800;
-      text-transform: uppercase;
-      letter-spacing: 0.06em;
       color: #94A3B8;
     }
 
@@ -537,8 +589,8 @@
       color: #0F172A;
       border: 1px solid #0F172A;
       border-radius: 4px;
-      padding: 2px 8px;
-      font-size: 0.7rem;
+      padding: 3px 10px;
+      font-size: 0.72rem;
       font-weight: 800;
       cursor: pointer;
     }
@@ -557,14 +609,13 @@
       border: 1px dashed var(--border-medium);
       border-radius: 8px;
       padding: 8px 12px;
-      font-size: 0.82rem;
+      font-size: 0.84rem;
       color: var(--ink-secondary);
     }
 
     .source-info-label {
-      font-size: 0.68rem;
+      font-size: 0.7rem;
       font-weight: 800;
-      text-transform: uppercase;
       color: var(--accent-green);
       display: block;
       margin-bottom: 2px;
@@ -631,6 +682,28 @@
   <!-- Page Content Container -->
   <main class="page-wrap">
 
+    <!-- Mariyam 3-Step Simple Guide Box -->
+    <section class="mariyam-guide-box">
+      <div class="mariyam-guide-head">
+        <span style="font-size: 1.5rem;">👩‍💻</span>
+        <h2 class="mariyam-guide-title">Mariyam Ke Liye Simple Step-by-Step Production Guide</h2>
+      </div>
+      <div class="mariyam-steps-grid">
+        <div class="mariyam-step-card">
+          <span class="step-badge">Step 1 · Voiceover</span>
+          <p class="step-text">Upar <strong>"🎙️ Teleprompter"</strong> tab me jayein, <strong>"Copy Full Script"</strong> dabayein aur ElevenLabs se 6 minute ki audio nikaal lein.</p>
+        </div>
+        <div class="mariyam-step-card">
+          <span class="step-badge">Step 2 · AI Clips</span>
+          <p class="step-text">Har Beat me jahan <strong>"⚡ Google Flow Prompt"</strong> hai, <strong>"Copy Prompt"</strong> dabayein aur Google Flow se 8 second ka clip download kar lein.</p>
+        </div>
+        <div class="mariyam-step-card">
+          <span class="step-badge">Step 3 · Video Jorna</span>
+          <p class="step-text">CapCut / Premiere me Voiceover ke mutabiq clip lagayein, aur <strong>"✂️ Cut Cue"</strong> wale lafz par agla visual/map laga dein!</p>
+        </div>
+      </div>
+    </section>
+
     <!-- Hero Card -->
     <section class="hero-banner">
       <div class="badge-pill">
@@ -664,7 +737,7 @@
             <div class="beat-card-head">
               <div class="head-left">
                 <span class="beat-gold-pill">BEAT 01</span>
-                <h3 class="beat-title-text">The Scale Hook · The Empty Giant</h3>
+                <h3 class="beat-title-text">The Scale Hook · Itna Bada Khaali Mulk</h3>
               </div>
               <div class="head-right">
                 <span class="beat-time-pill">0:00 – 0:45</span>
@@ -674,13 +747,13 @@
 
             <!-- Complete Beat Voiceover Script -->
             <div class="vo-script-box">
-              <span class="section-micro-label">🎙️ Complete Narration for BEAT 01:</span>
+              <span class="section-micro-label">🎙️ Poori Voiceover Narration (BEAT 01):</span>
               <p class="vo-script-paragraph">Four entire European countries—the United Kingdom, France, Germany, and Italy—could fit inside this territory. Yet the total population of this vast land is smaller than the single city of Madrid. Mongolia spans one point five six million square kilometres, but across this entire expanse live just three point four million people. That produces an average density of barely two people per square kilometre—the lowest on Earth. But the real geographic mystery isn't just that Mongolia is empty. It is that half of the entire country's population now lives crammed inside a single valley.</p>
             </div>
 
             <!-- Shot by Shot Visual Editing Breakdown -->
             <div class="shots-container">
-              <span class="section-micro-label">🎬 Visual Editing Timeline (3 Sequential Cuts):</span>
+              <span class="section-micro-label">🎬 Video Editing Guide (3 Sequential Shots):</span>
               <div class="shots-list">
               <!-- Shot 1.1 -->
               <div class="single-shot-card">
@@ -690,22 +763,22 @@
                     <span class="shot-time-span">0:00 – 0:15 (15s)</span>
                   </div>
                   <span class="shot-type-pill badge-map">🗺️ 2D Map Animation (CapCut/Premiere)</span>
-                  <span class="shot-cut-trigger">CUT ON: "fit inside this territory" ➔ CUT to Shot 1.2</span>
+                  <span class="shot-cut-trigger">✂️ Jab aawaz me bole "fit inside this territory" ➔ Agla graphic lagayein</span>
                 </div>
 
                 <div class="shot-vo-subbox">
-                  <span class="shot-vo-label">🎙️ Voiceover Spoken During this Visual (0:00 – 0:15 (15s)):</span>
+                  <span class="shot-vo-label">🎙️ Mariyam is time (0:00 – 0:15 (15s)) yeh line voiceover me chalegi:</span>
                   <p class="shot-vo-content">"Four entire European countries—the United Kingdom, France, Germany, and Italy—could fit inside this territory."</p>
                 </div>
 
                 <div class="shot-action-box">
-                  <span class="shot-action-label">🎥 Visual Event on Screen:</span>
-                  <p class="shot-action-desc">Outlines of UK, France, Germany, and Italy sweep across the map and nest inside the borders of Mongolia.</p>
+                  <span class="shot-action-label">🎬 Screen Par Kya Dikhana Hai:</span>
+                  <p class="shot-action-desc">UK, France, Germany aur Italy ke chaar naqshay udte hue Mongolia ke border ke andar fit ho jatay hain.</p>
                 </div>
 
                   <div class="shot-source-info">
-                    <span class="source-info-label">🛠️ Editing Asset Source:</span>
-                    <p class="source-info-text">2D animated map overlay in video editor. No AI needed.</p>
+                    <span class="source-info-label">🛠️ Editing Guide (Yeh CapCut / Premiere Me Banega):</span>
+                    <p class="source-info-text">CapCut me simple 4 countries ke PNG cutout images ko Mongolia ke map par slide karein.</p>
                   </div>
               </div>
 
@@ -716,23 +789,23 @@
                     <span class="shot-pill">Shot 1.2</span>
                     <span class="shot-time-span">0:15 – 0:30 (15s)</span>
                   </div>
-                  <span class="shot-type-pill badge-graphic">📊 Split Screen Graphic</span>
-                  <span class="shot-cut-trigger">CUT ON: "lowest on Earth" ➔ CUT to Shot 1.3</span>
+                  <span class="shot-type-pill badge-graphic">📊 Madrid vs Mongolia Comparison</span>
+                  <span class="shot-cut-trigger">✂️ Jab aawaz me bole "lowest on Earth" ➔ Agla AI clip lagayein</span>
                 </div>
 
                 <div class="shot-vo-subbox">
-                  <span class="shot-vo-label">🎙️ Voiceover Spoken During this Visual (0:15 – 0:30 (15s)):</span>
+                  <span class="shot-vo-label">🎙️ Mariyam is time (0:15 – 0:30 (15s)) yeh line voiceover me chalegi:</span>
                   <p class="shot-vo-content">"Yet the total population of this vast land is smaller than the single city of Madrid. Mongolia spans one point five six million square kilometres, but across this entire expanse live just three point four million people. That produces an average density of barely two people per square kilometre—the lowest on Earth."</p>
                 </div>
 
                 <div class="shot-action-box">
-                  <span class="shot-action-label">🎥 Visual Event on Screen:</span>
-                  <p class="shot-action-desc">Split-screen population comparison: Madrid (3.4M in 604 km²) vs Mongolia (3.4M in 1,564,000 km²).</p>
+                  <span class="shot-action-label">🎬 Screen Par Kya Dikhana Hai:</span>
+                  <p class="shot-action-desc">Screen par do hissay: Ek taraf Madrid city (3.4M log) aur doosri taraf poora Mongolia (3.4M log).</p>
                 </div>
 
                   <div class="shot-source-info">
-                    <span class="source-info-label">🛠️ Editing Asset Source:</span>
-                    <p class="source-info-text">2D static graphic with animated population counters.</p>
+                    <span class="source-info-label">🛠️ Editing Guide (Yeh CapCut / Premiere Me Banega):</span>
+                    <p class="source-info-text">Side-by-side comparison text graphic in editor.</p>
                   </div>
               </div>
 
@@ -743,23 +816,23 @@
                     <span class="shot-pill">Shot 1.3</span>
                     <span class="shot-time-span">0:30 – 0:45 (15s)</span>
                   </div>
-                  <span class="shot-type-pill badge-ai">🎥 Google Flow AI B-Roll</span>
-                  <span class="shot-cut-trigger">CUT ON: "inside a single valley" ➔ CUT to Beat 02</span>
+                  <span class="shot-type-pill badge-ai">🎥 Google Flow AI Clip</span>
+                  <span class="shot-cut-trigger">✂️ Jab aawaz me bole "inside a single valley" ➔ Beat 02 par jayein</span>
                 </div>
 
                 <div class="shot-vo-subbox">
-                  <span class="shot-vo-label">🎙️ Voiceover Spoken During this Visual (0:30 – 0:45 (15s)):</span>
+                  <span class="shot-vo-label">🎙️ Mariyam is time (0:30 – 0:45 (15s)) yeh line voiceover me chalegi:</span>
                   <p class="shot-vo-content">"But the real geographic mystery isn't just that Mongolia is empty. It is that half of the entire country's population now lives crammed inside a single valley."</p>
                 </div>
 
                 <div class="shot-action-box">
-                  <span class="shot-action-label">🎥 Visual Event on Screen:</span>
-                  <p class="shot-action-desc">High-altitude orthographic camera looking down at vast golden Mongolian steppe bordered by Altai mountains under crisp morning sun.</p>
+                  <span class="shot-action-label">🎬 Screen Par Kya Dikhana Hai:</span>
+                  <p class="shot-action-desc">Mongolia ke sun-here ghaas ke maidan (steppe) aur peechay Altai pahadon ka high aerial shot.</p>
                 </div>
 
                   <div class="shot-prompt-wrap">
                     <div class="shot-prompt-head">
-                      <span class="prompt-head-label">⚡ Google Flow AI Prompt (8s Clip)</span>
+                      <span class="prompt-head-label">⚡ Google Flow AI Prompt (Yeh Copy Karke 8s Clip Banayein)</span>
                       <button class="btn-copy-shot-prompt" onclick="copyShotPrompt(this)">Copy Prompt</button>
                     </div>
                     <pre class="shot-prompt-code"><code>Create an 8-second horizontal 16:9 cinematic clip. High-altitude orthographic satellite camera looking down at vast golden Mongolian steppe bordered by Altai mountains, clear morning sunlight, clean 8k topology relief, no text --ar 16:9</code></pre>
@@ -775,7 +848,7 @@
             <div class="beat-card-head">
               <div class="head-left">
                 <span class="beat-gold-pill">BEAT 02</span>
-                <h3 class="beat-title-text">The Physical Fortress & Pastoral Nomadism</h3>
+                <h3 class="beat-title-text">Kheti Baadi Na Hone Ki Wajah · Geography</h3>
               </div>
               <div class="head-right">
                 <span class="beat-time-pill">0:45 – 1:45</span>
@@ -785,13 +858,13 @@
 
             <!-- Complete Beat Voiceover Script -->
             <div class="vo-script-box">
-              <span class="section-micro-label">🎙️ Complete Narration for BEAT 02:</span>
+              <span class="section-micro-label">🎙️ Poori Voiceover Narration (BEAT 02):</span>
               <p class="vo-script-paragraph">To understand why Mongolia never developed dense farmland, you have to look at its extreme geography. Trapped between the Siberian taiga and the arid Gobi desert, Mongolia sits at an average altitude of fifteen hundred metres above sea level. It has no coastline and receives virtually no maritime moisture. Less than one percent of its entire landmass is arable for growing crops. For three thousand years, human survival here was only possible through pastoral nomadism—moving herds of horses, sheep, goats, and camels across hundreds of miles of seasonal pastures. But today, that ancient cycle is breaking under a deadly weather catastrophe.</p>
             </div>
 
             <!-- Shot by Shot Visual Editing Breakdown -->
             <div class="shots-container">
-              <span class="section-micro-label">🎬 Visual Editing Timeline (2 Sequential Cuts):</span>
+              <span class="section-micro-label">🎬 Video Editing Guide (2 Sequential Shots):</span>
               <div class="shots-list">
               <!-- Shot 2.1 -->
               <div class="single-shot-card">
@@ -800,23 +873,23 @@
                     <span class="shot-pill">Shot 2.1</span>
                     <span class="shot-time-span">0:45 – 1:15 (30s)</span>
                   </div>
-                  <span class="shot-type-pill badge-map">🗺️ 3D Terrain Relief</span>
-                  <span class="shot-cut-trigger">CUT ON: "growing crops" ➔ CUT to Shot 2.2</span>
+                  <span class="shot-type-pill badge-map">🗺️ 3D Plateau Relief Map</span>
+                  <span class="shot-cut-trigger">✂️ Jab aawaz me bole "growing crops" ➔ Agla AI clip lagayein</span>
                 </div>
 
                 <div class="shot-vo-subbox">
-                  <span class="shot-vo-label">🎙️ Voiceover Spoken During this Visual (0:45 – 1:15 (30s)):</span>
+                  <span class="shot-vo-label">🎙️ Mariyam is time (0:45 – 1:15 (30s)) yeh line voiceover me chalegi:</span>
                   <p class="shot-vo-content">"To understand why Mongolia never developed dense farmland, you have to look at its extreme geography. Trapped between the Siberian taiga and the arid Gobi desert, Mongolia sits at an average altitude of fifteen hundred metres above sea level. It has no coastline and receives virtually no maritime moisture. Less than one percent of its entire landmass is arable for growing crops."</p>
                 </div>
 
                 <div class="shot-action-box">
-                  <span class="shot-action-label">🎥 Visual Event on Screen:</span>
-                  <p class="shot-action-desc">3D elevation model of Central Asian plateau showing rain shadow barriers and arid Gobi desert.</p>
+                  <span class="shot-action-label">🎬 Screen Par Kya Dikhana Hai:</span>
+                  <p class="shot-action-desc">3D map jisme dikhe ke Mongolia unche pahadon aur Gobi desert ke darmiyan phansa hua hai.</p>
                 </div>
 
                   <div class="shot-source-info">
-                    <span class="source-info-label">🛠️ Editing Asset Source:</span>
-                    <p class="source-info-text">Google Earth Studio / 3D elevation map.</p>
+                    <span class="source-info-label">🛠️ Editing Guide (Yeh CapCut / Premiere Me Banega):</span>
+                    <p class="source-info-text">Google Earth Studio ya 3D topography map video.</p>
                   </div>
               </div>
 
@@ -827,23 +900,23 @@
                     <span class="shot-pill">Shot 2.2</span>
                     <span class="shot-time-span">1:15 – 1:45 (30s)</span>
                   </div>
-                  <span class="shot-type-pill badge-ai">🎥 Google Flow AI B-Roll</span>
-                  <span class="shot-cut-trigger">CUT ON: "deadly weather catastrophe" ➔ CUT to Beat 03</span>
+                  <span class="shot-type-pill badge-ai">🎥 Google Flow AI Clip</span>
+                  <span class="shot-cut-trigger">✂️ Jab aawaz me bole "deadly weather catastrophe" ➔ Beat 03 par jayein</span>
                 </div>
 
                 <div class="shot-vo-subbox">
-                  <span class="shot-vo-label">🎙️ Voiceover Spoken During this Visual (1:15 – 1:45 (30s)):</span>
+                  <span class="shot-vo-label">🎙️ Mariyam is time (1:15 – 1:45 (30s)) yeh line voiceover me chalegi:</span>
                   <p class="shot-vo-content">"For three thousand years, human survival here was only possible through pastoral nomadism—moving herds of horses, sheep, goats, and camels across hundreds of miles of seasonal pastures. But today, that ancient cycle is breaking under a deadly weather catastrophe."</p>
                 </div>
 
                 <div class="shot-action-box">
-                  <span class="shot-action-label">🎥 Visual Event on Screen:</span>
-                  <p class="shot-action-desc">Traditional white felt yurt camp in verdant Mongolian river valley with horses grazing in morning mist.</p>
+                  <span class="shot-action-label">🎬 Screen Par Kya Dikhana Hai:</span>
+                  <p class="shot-action-desc">Khubsoorat green valley me safaid tent (Yurt) aur ghaas chartay hue ghoray (horses).</p>
                 </div>
 
                   <div class="shot-prompt-wrap">
                     <div class="shot-prompt-head">
-                      <span class="prompt-head-label">⚡ Google Flow AI Prompt (8s Clip)</span>
+                      <span class="prompt-head-label">⚡ Google Flow AI Prompt (Yeh Copy Karke 8s Clip Banayein)</span>
                       <button class="btn-copy-shot-prompt" onclick="copyShotPrompt(this)">Copy Prompt</button>
                     </div>
                     <pre class="shot-prompt-code"><code>Create an 8-second horizontal 16:9 cinematic clip. Traditional white felt yurt camp in verdant Mongolian river valley, smoke rising from chimney into crisp morning air, horses grazing, 8k --ar 16:9</code></pre>
@@ -859,7 +932,7 @@
             <div class="beat-card-head">
               <div class="head-left">
                 <span class="beat-gold-pill">BEAT 03</span>
-                <h3 class="beat-title-text">The Dzud Catastrophe</h3>
+                <h3 class="beat-title-text">Dzud Toofan · -45°C Barfani Tabahi</h3>
               </div>
               <div class="head-right">
                 <span class="beat-time-pill">1:45 – 3:00</span>
@@ -869,13 +942,13 @@
 
             <!-- Complete Beat Voiceover Script -->
             <div class="vo-script-box">
-              <span class="section-micro-label">🎙️ Complete Narration for BEAT 03:</span>
+              <span class="section-micro-label">🎙️ Poori Voiceover Narration (BEAT 03):</span>
               <p class="vo-script-paragraph">The destructive engine driving this transformation is called the Dzud. A Dzud occurs when a summer drought withers pasture grass, followed immediately by a catastrophic winter where temperatures plunge below minus forty-five degrees Celsius. Deep sheets of solid ice freeze over the ground, creating an impenetrable barrier that prevents livestock from digging through to reach food. In severe Dzud years, millions of animals perish in a matter of weeks. When a herding family loses their entire herd in a single winter, their nomadic way of life is instantly extinguished. With no animals left, they pack their round felt yurt onto a truck and head toward Ulaanbaatar.</p>
             </div>
 
             <!-- Shot by Shot Visual Editing Breakdown -->
             <div class="shots-container">
-              <span class="section-micro-label">🎬 Visual Editing Timeline (3 Sequential Cuts):</span>
+              <span class="section-micro-label">🎬 Video Editing Guide (3 Sequential Shots):</span>
               <div class="shots-list">
               <!-- Shot 3.1 -->
               <div class="single-shot-card">
@@ -884,23 +957,23 @@
                     <span class="shot-pill">Shot 3.1</span>
                     <span class="shot-time-span">1:45 – 2:15 (30s)</span>
                   </div>
-                  <span class="shot-type-pill badge-ai">🎥 Google Flow AI B-Roll</span>
-                  <span class="shot-cut-trigger">CUT ON: "minus forty-five degrees Celsius" ➔ CUT to Shot 3.2</span>
+                  <span class="shot-type-pill badge-ai">🎥 Google Flow AI Clip</span>
+                  <span class="shot-cut-trigger">✂️ Jab aawaz me bole "minus forty-five degrees Celsius" ➔ Agla chart lagayein</span>
                 </div>
 
                 <div class="shot-vo-subbox">
-                  <span class="shot-vo-label">🎙️ Voiceover Spoken During this Visual (1:45 – 2:15 (30s)):</span>
+                  <span class="shot-vo-label">🎙️ Mariyam is time (1:45 – 2:15 (30s)) yeh line voiceover me chalegi:</span>
                   <p class="shot-vo-content">"The destructive engine driving this transformation is called the Dzud. A Dzud occurs when a summer drought withers pasture grass, followed immediately by a catastrophic winter where temperatures plunge below minus forty-five degrees Celsius."</p>
                 </div>
 
                 <div class="shot-action-box">
-                  <span class="shot-action-label">🎥 Visual Event on Screen:</span>
-                  <p class="shot-action-desc">Extreme blizzard over Mongolian snowy plains, howling white snowdrifts burying wooden corrals under harsh cold light.</p>
+                  <span class="shot-action-label">🎬 Screen Par Kya Dikhana Hai:</span>
+                  <p class="shot-action-desc">Shadeed barfani toofan (Blizzard) jo poore maidan ko safaid barf me dafan kar raha hai.</p>
                 </div>
 
                   <div class="shot-prompt-wrap">
                     <div class="shot-prompt-head">
-                      <span class="prompt-head-label">⚡ Google Flow AI Prompt (8s Clip)</span>
+                      <span class="prompt-head-label">⚡ Google Flow AI Prompt (Yeh Copy Karke 8s Clip Banayein)</span>
                       <button class="btn-copy-shot-prompt" onclick="copyShotPrompt(this)">Copy Prompt</button>
                     </div>
                     <pre class="shot-prompt-code"><code>Create an 8-second horizontal 16:9 cinematic clip. Extreme blizzard over Mongolian snowy plains, howling white snowdrifts burying wooden fences, harsh diffused winter light, intense cold realism, no people visible --ar 16:9</code></pre>
@@ -914,23 +987,23 @@
                     <span class="shot-pill">Shot 3.2</span>
                     <span class="shot-time-span">2:15 – 2:40 (25s)</span>
                   </div>
-                  <span class="shot-type-pill badge-graphic">📊 Livestock Mortality Infographic</span>
-                  <span class="shot-cut-trigger">CUT ON: "matter of weeks" ➔ CUT to Shot 3.3</span>
+                  <span class="shot-type-pill badge-graphic">📊 Janwaron Ki Maut Ka Chart</span>
+                  <span class="shot-cut-trigger">✂️ Jab aawaz me bole "matter of weeks" ➔ Agla AI clip lagayein</span>
                 </div>
 
                 <div class="shot-vo-subbox">
-                  <span class="shot-vo-label">🎙️ Voiceover Spoken During this Visual (2:15 – 2:40 (25s)):</span>
+                  <span class="shot-vo-label">🎙️ Mariyam is time (2:15 – 2:40 (25s)) yeh line voiceover me chalegi:</span>
                   <p class="shot-vo-content">"Deep sheets of solid ice freeze over the ground, creating an impenetrable barrier that prevents livestock from digging through to reach food. In severe Dzud years, millions of animals perish in a matter of weeks."</p>
                 </div>
 
                 <div class="shot-action-box">
-                  <span class="shot-action-label">🎥 Visual Event on Screen:</span>
-                  <p class="shot-action-desc">Infographic showing 8.5 million livestock perished in 2010 Dzud and 5.9 million in 2024.</p>
+                  <span class="shot-action-label">🎬 Screen Par Kya Dikhana Hai:</span>
+                  <p class="shot-action-desc">Graph dikhayein: 2010 me 8.5 million janwar mare, 2024 me 5.9 million janwar mare.</p>
                 </div>
 
                   <div class="shot-source-info">
-                    <span class="source-info-label">🛠️ Editing Asset Source:</span>
-                    <p class="source-info-text">2D bar chart graphic in video editor.</p>
+                    <span class="source-info-label">🛠️ Editing Guide (Yeh CapCut / Premiere Me Banega):</span>
+                    <p class="source-info-text">CapCut me simple animated bar chart.</p>
                   </div>
               </div>
 
@@ -941,23 +1014,23 @@
                     <span class="shot-pill">Shot 3.3</span>
                     <span class="shot-time-span">2:40 – 3:00 (20s)</span>
                   </div>
-                  <span class="shot-type-pill badge-ai">🎥 Google Flow AI B-Roll</span>
-                  <span class="shot-cut-trigger">CUT ON: "head toward Ulaanbaatar" ➔ CUT to Beat 04</span>
+                  <span class="shot-type-pill badge-ai">🎥 Google Flow AI Clip</span>
+                  <span class="shot-cut-trigger">✂️ Jab aawaz me bole "head toward Ulaanbaatar" ➔ Beat 04 par jayein</span>
                 </div>
 
                 <div class="shot-vo-subbox">
-                  <span class="shot-vo-label">🎙️ Voiceover Spoken During this Visual (2:40 – 3:00 (20s)):</span>
+                  <span class="shot-vo-label">🎙️ Mariyam is time (2:40 – 3:00 (20s)) yeh line voiceover me chalegi:</span>
                   <p class="shot-vo-content">"When a herding family loses their entire herd in a single winter, their nomadic way of life is instantly extinguished. With no animals left, they pack their round felt yurt onto a truck and head toward Ulaanbaatar."</p>
                 </div>
 
                 <div class="shot-action-box">
-                  <span class="shot-action-label">🎥 Visual Event on Screen:</span>
-                  <p class="shot-action-desc">Old Russian flatbed truck loaded with traditional yurt frame driving slowly along dirt track across vast winter landscape.</p>
+                  <span class="shot-action-label">🎬 Screen Par Kya Dikhana Hai:</span>
+                  <p class="shot-action-desc">Purana Russian truck jis par safaid yurt (tent) ka saaman load hai, barfani rastay par shehar ki taraf ja raha hai.</p>
                 </div>
 
                   <div class="shot-prompt-wrap">
                     <div class="shot-prompt-head">
-                      <span class="prompt-head-label">⚡ Google Flow AI Prompt (8s Clip)</span>
+                      <span class="prompt-head-label">⚡ Google Flow AI Prompt (Yeh Copy Karke 8s Clip Banayein)</span>
                       <button class="btn-copy-shot-prompt" onclick="copyShotPrompt(this)">Copy Prompt</button>
                     </div>
                     <pre class="shot-prompt-code"><code>Create an 8-second horizontal 16:9 cinematic clip. Old Russian flatbed truck loaded with traditional yurt frame driving slowly along dirt track across vast winter landscape, cold morning mist, 8k --ar 16:9</code></pre>
@@ -973,7 +1046,7 @@
             <div class="beat-card-head">
               <div class="head-left">
                 <span class="beat-gold-pill">BEAT 04</span>
-                <h3 class="beat-title-text">The Ger District & Valley Inversion</h3>
+                <h3 class="beat-title-text">Ger Districts · Shehar Me Dhuan Phansna</h3>
               </div>
               <div class="head-right">
                 <span class="beat-time-pill">3:00 – 4:15</span>
@@ -983,13 +1056,13 @@
 
             <!-- Complete Beat Voiceover Script -->
             <div class="vo-script-box">
-              <span class="section-micro-label">🎙️ Complete Narration for BEAT 04:</span>
+              <span class="section-micro-label">🎙️ Poori Voiceover Narration (BEAT 04):</span>
               <p class="vo-script-paragraph">When herders arrive in Ulaanbaatar, they claim free plots of land on the steep hillsides encircling the capital. Today, these spontaneous settlements—known as the Ger Districts—house over eight hundred thousand people, more than half the city's population. In winter, temperatures plunge below minus thirty degrees, making Ulaanbaatar the coldest capital on Earth. Because these districts lack central heating, families burn raw coal in simple stoves inside their yurts. The city sits trapped at the bottom of a bowl-shaped valley. Cold air pools at the floor, creating a severe thermal inversion that traps dense black smoke beneath a ceiling of warm air, spiking pollution to fifty times safe limits.</p>
             </div>
 
             <!-- Shot by Shot Visual Editing Breakdown -->
             <div class="shots-container">
-              <span class="section-micro-label">🎬 Visual Editing Timeline (3 Sequential Cuts):</span>
+              <span class="section-micro-label">🎬 Video Editing Guide (3 Sequential Shots):</span>
               <div class="shots-list">
               <!-- Shot 4.1 -->
               <div class="single-shot-card">
@@ -998,23 +1071,23 @@
                     <span class="shot-pill">Shot 4.1</span>
                     <span class="shot-time-span">3:00 – 3:30 (30s)</span>
                   </div>
-                  <span class="shot-type-pill badge-ai">🎥 Google Flow AI B-Roll</span>
-                  <span class="shot-cut-trigger">CUT ON: "city's population" ➔ CUT to Shot 4.2</span>
+                  <span class="shot-type-pill badge-ai">🎥 Google Flow AI Clip</span>
+                  <span class="shot-cut-trigger">✂️ Jab aawaz me bole "city's population" ➔ Agla smoke trap diagram lagayein</span>
                 </div>
 
                 <div class="shot-vo-subbox">
-                  <span class="shot-vo-label">🎙️ Voiceover Spoken During this Visual (3:00 – 3:30 (30s)):</span>
+                  <span class="shot-vo-label">🎙️ Mariyam is time (3:00 – 3:30 (30s)) yeh line voiceover me chalegi:</span>
                   <p class="shot-vo-content">"When herders arrive in Ulaanbaatar, they claim free plots of land on the steep hillsides encircling the capital. Today, these spontaneous settlements—known as the Ger Districts—house over eight hundred thousand people, more than half the city's population."</p>
                 </div>
 
                 <div class="shot-action-box">
-                  <span class="shot-action-label">🎥 Visual Event on Screen:</span>
-                  <p class="shot-action-desc">High-angle aerial panoramic view over sprawling hillside ger districts of Ulaanbaatar with thousands of white yurts.</p>
+                  <span class="shot-action-label">🎬 Screen Par Kya Dikhana Hai:</span>
+                  <p class="shot-action-desc">Pahadiyon par hazaaron safaid yurts (tents) ka sprawling settlement view sham ke waqt.</p>
                 </div>
 
                   <div class="shot-prompt-wrap">
                     <div class="shot-prompt-head">
-                      <span class="prompt-head-label">⚡ Google Flow AI Prompt (8s Clip)</span>
+                      <span class="prompt-head-label">⚡ Google Flow AI Prompt (Yeh Copy Karke 8s Clip Banayein)</span>
                       <button class="btn-copy-shot-prompt" onclick="copyShotPrompt(this)">Copy Prompt</button>
                     </div>
                     <pre class="shot-prompt-code"><code>Create an 8-second horizontal 16:9 cinematic clip. High-angle aerial panoramic view over sprawling hillside ger district of Ulaanbaatar, thousands of round white yurts surrounded by wooden fences, dusk light, 8k --ar 16:9</code></pre>
@@ -1028,23 +1101,23 @@
                     <span class="shot-pill">Shot 4.2</span>
                     <span class="shot-time-span">3:30 – 3:55 (25s)</span>
                   </div>
-                  <span class="shot-type-pill badge-graphic">📊 3D Inversion Graphic</span>
-                  <span class="shot-cut-trigger">CUT ON: "inside their yurts" ➔ CUT to Shot 4.3</span>
+                  <span class="shot-type-pill badge-graphic">📊 Valley Smoke Inversion Diagram</span>
+                  <span class="shot-cut-trigger">✂️ Jab aawaz me bole "inside their yurts" ➔ Agla AI clip lagayein</span>
                 </div>
 
                 <div class="shot-vo-subbox">
-                  <span class="shot-vo-label">🎙️ Voiceover Spoken During this Visual (3:30 – 3:55 (25s)):</span>
+                  <span class="shot-vo-label">🎙️ Mariyam is time (3:30 – 3:55 (25s)) yeh line voiceover me chalegi:</span>
                   <p class="shot-vo-content">"In winter, temperatures plunge below minus thirty degrees, making Ulaanbaatar the coldest capital on Earth. Because these districts lack central heating, families burn raw coal in simple stoves inside their yurts."</p>
                 </div>
 
                 <div class="shot-action-box">
-                  <span class="shot-action-label">🎥 Visual Event on Screen:</span>
-                  <p class="shot-action-desc">3D valley cross-section diagram showing cold air and dense black coal smoke trapped in the valley basin.</p>
+                  <span class="shot-action-label">🎬 Screen Par Kya Dikhana Hai:</span>
+                  <p class="shot-action-desc">Diagram dikhayein ke kaise do pahadon ke darmiyan koyle ka kaala dhuan phans jata hai.</p>
                 </div>
 
                   <div class="shot-source-info">
-                    <span class="source-info-label">🛠️ Editing Asset Source:</span>
-                    <p class="source-info-text">2D/3D diagram graphic in video editor.</p>
+                    <span class="source-info-label">🛠️ Editing Guide (Yeh CapCut / Premiere Me Banega):</span>
+                    <p class="source-info-text">2D illustration diagram with animated smoke.</p>
                   </div>
               </div>
 
@@ -1055,23 +1128,23 @@
                     <span class="shot-pill">Shot 4.3</span>
                     <span class="shot-time-span">3:55 – 4:15 (20s)</span>
                   </div>
-                  <span class="shot-type-pill badge-ai">🎥 Google Flow AI B-Roll</span>
-                  <span class="shot-cut-trigger">CUT ON: "fifty times safe limits" ➔ CUT to Beat 05</span>
+                  <span class="shot-type-pill badge-ai">🎥 Google Flow AI Clip</span>
+                  <span class="shot-cut-trigger">✂️ Jab aawaz me bole "fifty times safe limits" ➔ Beat 05 par jayein</span>
                 </div>
 
                 <div class="shot-vo-subbox">
-                  <span class="shot-vo-label">🎙️ Voiceover Spoken During this Visual (3:55 – 4:15 (20s)):</span>
+                  <span class="shot-vo-label">🎙️ Mariyam is time (3:55 – 4:15 (20s)) yeh line voiceover me chalegi:</span>
                   <p class="shot-vo-content">"The city sits trapped at the bottom of a bowl-shaped valley. Cold air pools at the floor, creating a severe thermal inversion that traps dense black smoke beneath a ceiling of warm air, spiking pollution to fifty times safe limits."</p>
                 </div>
 
                 <div class="shot-action-box">
-                  <span class="shot-action-label">🎥 Visual Event on Screen:</span>
-                  <p class="shot-action-desc">Panoramic view of winter mountain valley at sunrise with thick blanket of atmospheric smoke settling over city.</p>
+                  <span class="shot-action-label">🎬 Screen Par Kya Dikhana Hai:</span>
+                  <p class="shot-action-desc">Subah ke waqt poori valley ke upar dhuen ki gehri chadar chhayi hui hai.</p>
                 </div>
 
                   <div class="shot-prompt-wrap">
                     <div class="shot-prompt-head">
-                      <span class="prompt-head-label">⚡ Google Flow AI Prompt (8s Clip)</span>
+                      <span class="prompt-head-label">⚡ Google Flow AI Prompt (Yeh Copy Karke 8s Clip Banayein)</span>
                       <button class="btn-copy-shot-prompt" onclick="copyShotPrompt(this)">Copy Prompt</button>
                     </div>
                     <pre class="shot-prompt-code"><code>Create an 8-second horizontal 16:9 cinematic clip. Panoramic view of winter mountain valley at sunrise with thick blanket of atmospheric smoke settling over city basin, cold blue lighting, 8k --ar 16:9</code></pre>
@@ -1087,7 +1160,7 @@
             <div class="beat-card-head">
               <div class="head-left">
                 <span class="beat-gold-pill">BEAT 05</span>
-                <h3 class="beat-title-text">High-Tech Adaptation & The Infrastructure Reality</h3>
+                <h3 class="beat-title-text">High-Tech Nomads · Solar Panels Aur 4G</h3>
               </div>
               <div class="head-right">
                 <span class="beat-time-pill">4:15 – 5:30</span>
@@ -1097,13 +1170,13 @@
 
             <!-- Complete Beat Voiceover Script -->
             <div class="vo-script-box">
-              <span class="section-micro-label">🎙️ Complete Narration for BEAT 05:</span>
+              <span class="section-micro-label">🎙️ Poori Voiceover Narration (BEAT 05):</span>
               <p class="vo-script-paragraph">Why can't the government simply relocate people back onto the empty steppe? Because providing modern roads, electrical grids, and hospitals across a territory the size of Western Europe costs millions of dollars per resident. It is far cheaper for the state to provide schools when people concentrate in one place. Meanwhile, herders who remain on the steppe have adapted: today, almost every yurt has rooftop solar panels, satellite dishes, and 4G smartphones to monitor weather and livestock prices. Herders use lightweight motorcycles and GPS collars attached to lead horses to track their herds. Nomadism has not died—it has digitized.</p>
             </div>
 
             <!-- Shot by Shot Visual Editing Breakdown -->
             <div class="shots-container">
-              <span class="section-micro-label">🎬 Visual Editing Timeline (3 Sequential Cuts):</span>
+              <span class="section-micro-label">🎬 Video Editing Guide (3 Sequential Shots):</span>
               <div class="shots-list">
               <!-- Shot 5.1 -->
               <div class="single-shot-card">
@@ -1112,23 +1185,23 @@
                     <span class="shot-pill">Shot 5.1</span>
                     <span class="shot-time-span">4:15 – 4:45 (30s)</span>
                   </div>
-                  <span class="shot-type-pill badge-ai">🎥 Google Flow AI B-Roll</span>
-                  <span class="shot-cut-trigger">CUT ON: "concentrate in one place" ➔ CUT to Shot 5.2</span>
+                  <span class="shot-type-pill badge-ai">🎥 Google Flow AI Clip</span>
+                  <span class="shot-cut-trigger">✂️ Jab aawaz me bole "concentrate in one place" ➔ Agla tech infographic lagayein</span>
                 </div>
 
                 <div class="shot-vo-subbox">
-                  <span class="shot-vo-label">🎙️ Voiceover Spoken During this Visual (4:15 – 4:45 (30s)):</span>
+                  <span class="shot-vo-label">🎙️ Mariyam is time (4:15 – 4:45 (30s)) yeh line voiceover me chalegi:</span>
                   <p class="shot-vo-content">"Why can't the government simply relocate people back onto the empty steppe? Because providing modern roads, electrical grids, and hospitals across a territory the size of Western Europe costs millions of dollars per resident. It is far cheaper for the state to provide schools when people concentrate in one place."</p>
                 </div>
 
                 <div class="shot-action-box">
-                  <span class="shot-action-label">🎥 Visual Event on Screen:</span>
-                  <p class="shot-action-desc">Paved two-lane highway cutting straight through endless flat steppe to a vanishing point under vast blue sky.</p>
+                  <span class="shot-action-label">🎬 Screen Par Kya Dikhana Hai:</span>
+                  <p class="shot-action-desc">Lambi paved sadak jo bilkul seedhi khaali maidan me se guzar rahi hai.</p>
                 </div>
 
                   <div class="shot-prompt-wrap">
                     <div class="shot-prompt-head">
-                      <span class="prompt-head-label">⚡ Google Flow AI Prompt (8s Clip)</span>
+                      <span class="prompt-head-label">⚡ Google Flow AI Prompt (Yeh Copy Karke 8s Clip Banayein)</span>
                       <button class="btn-copy-shot-prompt" onclick="copyShotPrompt(this)">Copy Prompt</button>
                     </div>
                     <pre class="shot-prompt-code"><code>Create an 8-second horizontal 16:9 cinematic clip. Paved two-lane highway cutting straight through endless flat steppe to vanishing point under vast blue sky, slow tracking motion, 8k --ar 16:9</code></pre>
@@ -1142,23 +1215,23 @@
                     <span class="shot-pill">Shot 5.2</span>
                     <span class="shot-time-span">4:45 – 5:10 (25s)</span>
                   </div>
-                  <span class="shot-type-pill badge-graphic">📊 Rural Cost vs Urban Density Chart</span>
-                  <span class="shot-cut-trigger">CUT ON: "livestock prices" ➔ CUT to Shot 5.3</span>
+                  <span class="shot-type-pill badge-graphic">📊 High-Tech Nomad Tools Infographic</span>
+                  <span class="shot-cut-trigger">✂️ Jab aawaz me bole "livestock prices" ➔ Agla AI clip lagayein</span>
                 </div>
 
                 <div class="shot-vo-subbox">
-                  <span class="shot-vo-label">🎙️ Voiceover Spoken During this Visual (4:45 – 5:10 (25s)):</span>
+                  <span class="shot-vo-label">🎙️ Mariyam is time (4:45 – 5:10 (25s)) yeh line voiceover me chalegi:</span>
                   <p class="shot-vo-content">"Meanwhile, herders who remain on the steppe have adapted: today, almost every yurt has rooftop solar panels, satellite dishes, and 4G smartphones to monitor weather and livestock prices."</p>
                 </div>
 
                 <div class="shot-action-box">
-                  <span class="shot-action-label">🎥 Visual Event on Screen:</span>
-                  <p class="shot-action-desc">Infographic showing high-tech nomad tools: Solar panels, satellite dish, 4G cellular towers, and motorcycle.</p>
+                  <span class="shot-action-label">🎬 Screen Par Kya Dikhana Hai:</span>
+                  <p class="shot-action-desc">Icons dikhayein: Solar Panels, Satellite Dish, 4G Smartphone, Motorcycle aur GPS Collars.</p>
                 </div>
 
                   <div class="shot-source-info">
-                    <span class="source-info-label">🛠️ Editing Asset Source:</span>
-                    <p class="source-info-text">2D animated icon callouts.</p>
+                    <span class="source-info-label">🛠️ Editing Guide (Yeh CapCut / Premiere Me Banega):</span>
+                    <p class="source-info-text">Clean icon callouts in video editor.</p>
                   </div>
               </div>
 
@@ -1169,23 +1242,23 @@
                     <span class="shot-pill">Shot 5.3</span>
                     <span class="shot-time-span">5:10 – 5:30 (20s)</span>
                   </div>
-                  <span class="shot-type-pill badge-ai">🎥 Google Flow AI B-Roll</span>
-                  <span class="shot-cut-trigger">CUT ON: "it has digitized" ➔ CUT to Beat 06</span>
+                  <span class="shot-type-pill badge-ai">🎥 Google Flow AI Clip</span>
+                  <span class="shot-cut-trigger">✂️ Jab aawaz me bole "it has digitized" ➔ Beat 06 par jayein</span>
                 </div>
 
                 <div class="shot-vo-subbox">
-                  <span class="shot-vo-label">🎙️ Voiceover Spoken During this Visual (5:10 – 5:30 (20s)):</span>
+                  <span class="shot-vo-label">🎙️ Mariyam is time (5:10 – 5:30 (20s)) yeh line voiceover me chalegi:</span>
                   <p class="shot-vo-content">"Herders use lightweight motorcycles and GPS collars attached to lead horses to track their herds. Nomadism has not died—it has digitized."</p>
                 </div>
 
                 <div class="shot-action-box">
-                  <span class="shot-action-label">🎥 Visual Event on Screen:</span>
-                  <p class="shot-action-desc">Solar panel attached to round white felt yurt in vast green grassland, young herder holding smartphone.</p>
+                  <span class="shot-action-label">🎬 Screen Par Kya Dikhana Hai:</span>
+                  <p class="shot-action-desc">Safaid yurt ke sath solar panel laga hua hai aur ek nojawan herder phone use kar raha hai.</p>
                 </div>
 
                   <div class="shot-prompt-wrap">
                     <div class="shot-prompt-head">
-                      <span class="prompt-head-label">⚡ Google Flow AI Prompt (8s Clip)</span>
+                      <span class="prompt-head-label">⚡ Google Flow AI Prompt (Yeh Copy Karke 8s Clip Banayein)</span>
                       <button class="btn-copy-shot-prompt" onclick="copyShotPrompt(this)">Copy Prompt</button>
                     </div>
                     <pre class="shot-prompt-code"><code>Create an 8-second horizontal 16:9 cinematic clip. Solar panel attached to round white felt yurt in vast green grassland, young herder holding smartphone, crisp sunlight, 8k --ar 16:9</code></pre>
@@ -1201,7 +1274,7 @@
             <div class="beat-card-head">
               <div class="head-left">
                 <span class="beat-gold-pill">BEAT 06</span>
-                <h3 class="beat-title-text">The Final Resolution</h3>
+                <h3 class="beat-title-text">Conclusion · Mongolia Ka Mustaqbil</h3>
               </div>
               <div class="head-right">
                 <span class="beat-time-pill">5:30 – 6:20</span>
@@ -1211,13 +1284,13 @@
 
             <!-- Complete Beat Voiceover Script -->
             <div class="vo-script-box">
-              <span class="section-micro-label">🎙️ Complete Narration for BEAT 06:</span>
+              <span class="section-micro-label">🎙️ Poori Voiceover Narration (BEAT 06):</span>
               <p class="vo-script-paragraph">By 2035, over seventy percent of Mongolia's population will live in urban centers. To solve the winter smog, the government is building eco-cities and insulated apartments. Mongolia represents one of our planet's greatest geographic paradoxes: an empire of infinite open space where silence stretches for hundreds of miles, while its people gather in a single mountain valley to build their future. The land is not empty because it is broken—it is empty because nature set the rules of survival, and human beings adapted.</p>
             </div>
 
             <!-- Shot by Shot Visual Editing Breakdown -->
             <div class="shots-container">
-              <span class="section-micro-label">🎬 Visual Editing Timeline (2 Sequential Cuts):</span>
+              <span class="section-micro-label">🎬 Video Editing Guide (2 Sequential Shots):</span>
               <div class="shots-list">
               <!-- Shot 6.1 -->
               <div class="single-shot-card">
@@ -1226,23 +1299,23 @@
                     <span class="shot-pill">Shot 6.1</span>
                     <span class="shot-time-span">5:30 – 5:50 (20s)</span>
                   </div>
-                  <span class="shot-type-pill badge-graphic">📊 2035 Demographic Trend Chart</span>
-                  <span class="shot-cut-trigger">CUT ON: "insulated apartments" ➔ CUT to Shot 6.2</span>
+                  <span class="shot-type-pill badge-graphic">📊 2035 Population Trend</span>
+                  <span class="shot-cut-trigger">✂️ Jab aawaz me bole "insulated apartments" ➔ Agla sunset AI clip lagayein</span>
                 </div>
 
                 <div class="shot-vo-subbox">
-                  <span class="shot-vo-label">🎙️ Voiceover Spoken During this Visual (5:30 – 5:50 (20s)):</span>
+                  <span class="shot-vo-label">🎙️ Mariyam is time (5:30 – 5:50 (20s)) yeh line voiceover me chalegi:</span>
                   <p class="shot-vo-content">"By 2035, over seventy percent of Mongolia's population will live in urban centers. To solve the winter smog, the government is building eco-cities and insulated apartments."</p>
                 </div>
 
                 <div class="shot-action-box">
-                  <span class="shot-action-label">🎥 Visual Event on Screen:</span>
-                  <p class="shot-action-desc">Graph showing rural population dropping from 60% in 1990 down to 28% in 2026, and 2035 projection.</p>
+                  <span class="shot-action-label">🎬 Screen Par Kya Dikhana Hai:</span>
+                  <p class="shot-action-desc">Population graph: Gaon ki aabadi 60% se ghir kar 28% ho gayi aur shehron ki 70% ho rahi hai.</p>
                 </div>
 
                   <div class="shot-source-info">
-                    <span class="source-info-label">🛠️ Editing Asset Source:</span>
-                    <p class="source-info-text">2D animated chart overlay in video editor.</p>
+                    <span class="source-info-label">🛠️ Editing Guide (Yeh CapCut / Premiere Me Banega):</span>
+                    <p class="source-info-text">Animated line chart in editor.</p>
                   </div>
               </div>
 
@@ -1253,23 +1326,23 @@
                     <span class="shot-pill">Shot 6.2</span>
                     <span class="shot-time-span">5:50 – 6:20 (30s)</span>
                   </div>
-                  <span class="shot-type-pill badge-ai">🎥 Google Flow AI B-Roll</span>
-                  <span class="shot-cut-trigger">FADE TO BLACK ➔ Outro End Screen</span>
+                  <span class="shot-type-pill badge-ai">🎥 Google Flow AI Clip (Outro)</span>
+                  <span class="shot-cut-trigger">✂️ Video khatam ➔ Outro Subscribe screen</span>
                 </div>
 
                 <div class="shot-vo-subbox">
-                  <span class="shot-vo-label">🎙️ Voiceover Spoken During this Visual (5:50 – 6:20 (30s)):</span>
+                  <span class="shot-vo-label">🎙️ Mariyam is time (5:50 – 6:20 (30s)) yeh line voiceover me chalegi:</span>
                   <p class="shot-vo-content">"Mongolia represents one of our planet's greatest geographic paradoxes: an empire of infinite open space where silence stretches for hundreds of miles, while its people gather in a single mountain valley to build their future. The land is not empty because it is broken—it is empty because nature set the rules of survival, and human beings adapted."</p>
                 </div>
 
                 <div class="shot-action-box">
-                  <span class="shot-action-label">🎥 Visual Event on Screen:</span>
-                  <p class="shot-action-desc">Sunset over endless Mongolian grassland, golden orange sky with lone horse rider silhouetted on a ridge.</p>
+                  <span class="shot-action-label">🎬 Screen Par Kya Dikhana Hai:</span>
+                  <p class="shot-action-desc">Ghaas ke maidan par shaandaar orange sunset, ek ghursawar pahadi par khara hai.</p>
                 </div>
 
                   <div class="shot-prompt-wrap">
                     <div class="shot-prompt-head">
-                      <span class="prompt-head-label">⚡ Google Flow AI Prompt (8s Clip)</span>
+                      <span class="prompt-head-label">⚡ Google Flow AI Prompt (Yeh Copy Karke 8s Clip Banayein)</span>
                       <button class="btn-copy-shot-prompt" onclick="copyShotPrompt(this)">Copy Prompt</button>
                     </div>
                     <pre class="shot-prompt-code"><code>Create an 8-second horizontal 16:9 cinematic clip. Sunset over endless Mongolian grassland, golden orange sky with lone horse rider silhouetted on ridge, cinematic slow lift to sky, 8k --ar 16:9</code></pre>
@@ -1292,22 +1365,22 @@
         </div>
 
         <div class="vo-script-box" style="background:var(--bg-surface); border:1.5px solid var(--border-medium);">
-          <p id="fullVoText" style="font-size:1.15rem; line-height:1.9; white-space:pre-wrap; font-weight:500; color:var(--ink-primary);">[BEAT 01: The Scale Hook · The Empty Giant · 0:00 – 0:45]
+          <p id="fullVoText" style="font-size:1.15rem; line-height:1.9; white-space:pre-wrap; font-weight:500; color:var(--ink-primary);">[BEAT 01: The Scale Hook · Itna Bada Khaali Mulk · 0:00 – 0:45]
 Four entire European countries—the United Kingdom, France, Germany, and Italy—could fit inside this territory. Yet the total population of this vast land is smaller than the single city of Madrid. Mongolia spans one point five six million square kilometres, but across this entire expanse live just three point four million people. That produces an average density of barely two people per square kilometre—the lowest on Earth. But the real geographic mystery isn't just that Mongolia is empty. It is that half of the entire country's population now lives crammed inside a single valley.
 
-[BEAT 02: The Physical Fortress & Pastoral Nomadism · 0:45 – 1:45]
+[BEAT 02: Kheti Baadi Na Hone Ki Wajah · Geography · 0:45 – 1:45]
 To understand why Mongolia never developed dense farmland, you have to look at its extreme geography. Trapped between the Siberian taiga and the arid Gobi desert, Mongolia sits at an average altitude of fifteen hundred metres above sea level. It has no coastline and receives virtually no maritime moisture. Less than one percent of its entire landmass is arable for growing crops. For three thousand years, human survival here was only possible through pastoral nomadism—moving herds of horses, sheep, goats, and camels across hundreds of miles of seasonal pastures. But today, that ancient cycle is breaking under a deadly weather catastrophe.
 
-[BEAT 03: The Dzud Catastrophe · 1:45 – 3:00]
+[BEAT 03: Dzud Toofan · -45°C Barfani Tabahi · 1:45 – 3:00]
 The destructive engine driving this transformation is called the Dzud. A Dzud occurs when a summer drought withers pasture grass, followed immediately by a catastrophic winter where temperatures plunge below minus forty-five degrees Celsius. Deep sheets of solid ice freeze over the ground, creating an impenetrable barrier that prevents livestock from digging through to reach food. In severe Dzud years, millions of animals perish in a matter of weeks. When a herding family loses their entire herd in a single winter, their nomadic way of life is instantly extinguished. With no animals left, they pack their round felt yurt onto a truck and head toward Ulaanbaatar.
 
-[BEAT 04: The Ger District & Valley Inversion · 3:00 – 4:15]
+[BEAT 04: Ger Districts · Shehar Me Dhuan Phansna · 3:00 – 4:15]
 When herders arrive in Ulaanbaatar, they claim free plots of land on the steep hillsides encircling the capital. Today, these spontaneous settlements—known as the Ger Districts—house over eight hundred thousand people, more than half the city's population. In winter, temperatures plunge below minus thirty degrees, making Ulaanbaatar the coldest capital on Earth. Because these districts lack central heating, families burn raw coal in simple stoves inside their yurts. The city sits trapped at the bottom of a bowl-shaped valley. Cold air pools at the floor, creating a severe thermal inversion that traps dense black smoke beneath a ceiling of warm air, spiking pollution to fifty times safe limits.
 
-[BEAT 05: High-Tech Adaptation & The Infrastructure Reality · 4:15 – 5:30]
+[BEAT 05: High-Tech Nomads · Solar Panels Aur 4G · 4:15 – 5:30]
 Why can't the government simply relocate people back onto the empty steppe? Because providing modern roads, electrical grids, and hospitals across a territory the size of Western Europe costs millions of dollars per resident. It is far cheaper for the state to provide schools when people concentrate in one place. Meanwhile, herders who remain on the steppe have adapted: today, almost every yurt has rooftop solar panels, satellite dishes, and 4G smartphones to monitor weather and livestock prices. Herders use lightweight motorcycles and GPS collars attached to lead horses to track their herds. Nomadism has not died—it has digitized.
 
-[BEAT 06: The Final Resolution · 5:30 – 6:20]
+[BEAT 06: Conclusion · Mongolia Ka Mustaqbil · 5:30 – 6:20]
 By 2035, over seventy percent of Mongolia's population will live in urban centers. To solve the winter smog, the government is building eco-cities and insulated apartments. Mongolia represents one of our planet's greatest geographic paradoxes: an empire of infinite open space where silence stretches for hundreds of miles, while its people gather in a single mountain valley to build their future. The land is not empty because it is broken—it is empty because nature set the rules of survival, and human beings adapted.</p>
         </div>
       </article>
@@ -1319,22 +1392,27 @@ By 2035, over seventy percent of Mongolia's population will live in urban center
             <div class="beat-card-head">
               <div class="head-left">
                 <span class="beat-gold-pill">SHORT 2A</span>
-                <h3 class="beat-title-text">Four European Countries Fit Inside This Empty Land</h3>
+                <h3 class="beat-title-text">Chaar Mulk Is Khaali Zameen Me Fit Ho Jatay Hain</h3>
               </div>
               <span class="beat-time-pill">66s · 9:16 Vertical</span>
             </div>
 
             <div class="vo-script-box">
+              <span class="section-micro-label">🎙️ Short 2A Voiceover Script:</span>
               <p class="vo-script-paragraph">
-                <strong>Hook:</strong> "Four entire European countries fit inside this one—and almost nobody lives in it."<br><br>
-                <strong>Narration:</strong> "Mongolia is the size of Western Europe, but has fewer people than Madrid. That's barely 2 people per square kilometre—the lowest on Earth. Less than 1% of the land can grow crops due to high altitude and harsh soil. So for centuries, survival meant moving herds across hundreds of miles. Today, half the country has moved into a single city valley. Making the emptiest country on Earth also one of the most crowded. Would you live in a country with this much empty space? Tell me below."
+                <strong>Hook:</strong> "Chaar European mulk is ek zameen ke andar fit ho saktay hain—lekin yahan koi nahi rehta!"<br><br>
+                <strong>Narration:</strong> "Mongolia Western Europe jitna bada hai, lekin aabadi Madrid se bhi kam hai! Sirf 2 log per square kilometre. Yahan 1% se bhi kam zameen par fasal ugti hai kyunke sardi bohot shaded hoti hai. Isliye 3000 saal se log janwar chara kar zinda rahay. Lekin aaj aadhi aabadi ek hi shehari valley me phans chuki hai. Kya aap aisi khaali jagah par rehna pasand karenge? Comment me batayein!"
               </p>
             </div>
 
-            <div class="visual-directive-card">
-              <span class="meta-label">⚡ Google Flow AI Vertical Prompt (9:16)</span>
-              <div class="ai-prompt-box">
-                <pre class="prompt-code-display"><code>Create an 8-second vertical 9:16 cinematic clip. Drone shot sweeping over vast golden Mongolian steppe with lone yurt on horizon under towering sky, pristine 8k realism --ar 9:16</code></pre>
+            <div class="single-shot-card">
+              <span class="section-micro-label">⚡ Google Flow AI Vertical Prompt (9:16):</span>
+              <div class="shot-prompt-wrap">
+                <div class="shot-prompt-head">
+                  <span class="prompt-head-label">Shorts Prompt (8s Clip)</span>
+                  <button class="btn-copy-shot-prompt" onclick="copyShotPrompt(this)">Copy Prompt</button>
+                </div>
+                <pre class="shot-prompt-code"><code>Create an 8-second vertical 9:16 cinematic clip. Drone shot sweeping over vast golden Mongolian steppe with lone yurt on horizon under towering sky, pristine 8k realism --ar 9:16</code></pre>
               </div>
             </div>
           </article>
@@ -1346,18 +1424,18 @@ By 2035, over seventy percent of Mongolia's population will live in urban center
             <div class="beat-card-head">
               <div class="head-left">
                 <span class="beat-gold-pill" style="background:var(--accent-green); color:#FFFFFF;">FACT CHECK</span>
-                <h3 class="beat-title-text">Verified Geographic & Density Citations (§13.4)</h3>
+                <h3 class="beat-title-text">Verified Asli Facts & Numbers</h3>
               </div>
             </div>
 
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px;">
               <div class="vo-script-box">
-                <span class="meta-label">Area & Population (UN WPP 2024):</span>
-                <p style="font-size: 0.92rem; font-weight: 600; color: var(--ink-primary); margin-top:4px;">• Area: 1,564,116 km²<br>• Population: 3,450,000<br>• Density: 2.2 people/km²</p>
+                <span class="section-micro-label">Area & Aabadi (UN Report):</span>
+                <p style="font-size: 0.92rem; font-weight: 600; color: var(--ink-primary); margin-top:4px;">• Area: 1,564,116 km²<br>• Total Log: 3,450,000<br>• Density: <strong>Sirf 2.2 Log per km²</strong></p>
               </div>
               <div class="vo-script-box">
-                <span class="meta-label">European Fit:</span>
-                <p style="font-size: 0.92rem; font-weight: 600; color: var(--ink-primary); margin-top:4px;">• UK + France + Germany + Italy = 1.45M km²<br><em>All 4 combined fit inside Mongolia.</em></p>
+                <span class="section-micro-label">European Comparison:</span>
+                <p style="font-size: 0.92rem; font-weight: 600; color: var(--ink-primary); margin-top:4px;">• UK + France + Germany + Italy = 1.45M km²<br><em>Chaar baray mulk mil kar Mongolia me fit hotay hain.</em></p>
               </div>
             </div>
           </article>
@@ -1369,18 +1447,18 @@ By 2035, over seventy percent of Mongolia's population will live in urban center
             <div class="beat-card-head">
               <div class="head-left">
                 <span class="beat-gold-pill">SEO KIT</span>
-                <h3 class="beat-title-text">YouTube Packaging & Metadata (§26)</h3>
+                <h3 class="beat-title-text">YouTube Title & Thumbnail Guide</h3>
               </div>
             </div>
 
             <div style="display: flex; flex-direction: column; gap: 14px;">
               <div class="vo-script-box">
-                <span class="meta-label">Primary Title:</span>
+                <span class="section-micro-label">Best Video Title:</span>
                 <p style="font-size: 1.05rem; font-weight: 800; color: var(--ink-primary);">Why Nobody Lives in the Most Empty Country on Earth</p>
               </div>
               <div class="vo-script-box">
-                <span class="meta-label">Thumbnail Concept:</span>
-                <p style="font-size: 0.95rem; font-weight: 600; color: var(--ink-primary);">Mongolia outline in amber with 4 European countries inside. Text: <strong>"2 PEOPLE PER KM²"</strong></p>
+                <span class="section-micro-label">Thumbnail Par Kya Dikhana Hai:</span>
+                <p style="font-size: 0.95rem; font-weight: 600; color: var(--ink-primary);">Mongolia ka naqsha aur chaar mulk uske andar. Bada Text: <strong>"2 PEOPLE PER KM²"</strong></p>
               </div>
             </div>
           </article>
