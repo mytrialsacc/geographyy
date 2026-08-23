@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Hidden Geography — Why Nobody Lives in the Most Empty Country on Earth (Step-by-Step Production Studio)">
+  <meta name="description" content="Hidden Geography — Why Nobody Lives in the Most Empty Country on Earth">
   <meta name="theme-color" content="#0EA5E9">
   <title>Why Nobody Lives in the Most Empty Country on Earth · Production Studio</title>
   
@@ -188,11 +188,11 @@
 
     /* Main Container */
     .page-wrap {
-      width: min(1040px, calc(100% - 36px));
+      width: min(960px, calc(100% - 36px));
       margin: 32px auto 100px;
       display: flex;
       flex-direction: column;
-      gap: 36px;
+      gap: 32px;
     }
 
     /* Quick Anchor Nav */
@@ -210,10 +210,10 @@
     .anchor-nav-bar::-webkit-scrollbar { display: none; }
 
     .anchor-pill {
-      height: 40px;
-      padding: 0 18px;
+      height: 38px;
+      padding: 0 16px;
       border-radius: var(--radius-pill);
-      font-size: 0.84rem;
+      font-size: 0.82rem;
       font-weight: 700;
       border: 1.5px solid var(--border-medium);
       background: var(--bg-surface);
@@ -238,11 +238,11 @@
       background: var(--bg-surface);
       border: 1.5px solid var(--border-medium);
       border-radius: var(--radius-card);
-      padding: 32px clamp(20px, 4vw, 36px);
+      padding: 28px clamp(18px, 4vw, 32px);
       box-shadow: var(--shadow-card);
       display: flex;
       flex-direction: column;
-      gap: 22px;
+      gap: 20px;
     }
 
     .section-banner-head {
@@ -251,12 +251,12 @@
       justify-content: space-between;
       flex-wrap: wrap;
       gap: 12px;
-      padding-bottom: 16px;
-      border-bottom: 2px solid var(--border-subtle);
+      padding-bottom: 14px;
+      border-bottom: 1.5px solid var(--border-subtle);
     }
 
     .section-head-title {
-      font-size: 1.45rem;
+      font-size: 1.35rem;
       color: var(--ink-primary);
       display: flex;
       align-items: center;
@@ -268,14 +268,14 @@
       background: var(--bg-tint-gold);
       border: 2px solid #F59E0B;
       border-radius: var(--radius-sm);
-      padding: 18px 22px;
+      padding: 16px 20px;
       display: flex;
       flex-direction: column;
       gap: 10px;
     }
 
     .instruction-step-line {
-      font-size: 0.95rem;
+      font-size: 0.92rem;
       font-weight: 700;
       color: #78350F;
       display: flex;
@@ -306,12 +306,11 @@
       background: var(--bg-surface-alt);
       border: 1.5px solid var(--border-medium);
       border-radius: 12px;
-      padding: 24px;
-      position: relative;
+      padding: 22px;
     }
 
     .full-script-text {
-      font-size: 1.14rem;
+      font-size: 1.12rem;
       line-height: 1.95;
       color: var(--ink-primary);
       font-weight: 500;
@@ -323,9 +322,9 @@
       background: var(--accent-yellow);
       color: #0F172A;
       border: 1.5px solid #0F172A;
-      border-radius: 8px;
-      padding: 8px 16px;
-      font-size: 0.82rem;
+      border-radius: 6px;
+      padding: 6px 14px;
+      font-size: 0.78rem;
       font-weight: 800;
       cursor: pointer;
       display: inline-flex;
@@ -339,19 +338,19 @@
     .clips-sequence-list {
       display: flex;
       flex-direction: column;
-      gap: 20px;
+      gap: 16px;
     }
 
-    /* Single Clip Card */
+    /* Single Clip Card (Ultra Clean) */
     .single-clip-card {
       background: var(--bg-surface);
       border: 1.5px solid var(--border-medium);
-      border-radius: 14px;
-      padding: 22px 26px;
+      border-radius: 12px;
+      padding: 18px 22px;
       display: flex;
       flex-direction: column;
-      gap: 16px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+      gap: 12px;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.03);
     }
 
     .clip-card-header {
@@ -360,120 +359,43 @@
       justify-content: space-between;
       flex-wrap: wrap;
       gap: 10px;
-      padding-bottom: 12px;
-      border-bottom: 1.5px dashed var(--border-subtle);
-    }
-
-    .clip-title-group {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      flex-wrap: wrap;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--border-subtle);
     }
 
     .clip-number-badge {
-      font-size: 0.88rem;
+      font-size: 0.84rem;
       font-weight: 800;
       background: #0F172A;
       color: #FFFFFF;
-      padding: 3px 12px;
+      padding: 2px 10px;
       border-radius: 6px;
     }
 
     .clip-time-range {
       font-family: "JetBrains Mono", monospace;
-      font-size: 0.84rem;
+      font-size: 0.82rem;
       font-weight: 800;
       color: var(--accent-blue);
-    }
-
-    .clip-beat-tag {
-      font-size: 0.76rem;
-      font-weight: 700;
-      color: var(--ink-muted);
-      background: var(--bg-surface-alt);
-      padding: 2px 10px;
-      border-radius: var(--radius-pill);
-    }
-
-    .clip-type-pill {
-      font-size: 0.76rem;
-      font-weight: 800;
-      padding: 4px 12px;
-      border-radius: var(--radius-pill);
-    }
-
-    .badge-ai { background: #E0F2FE; color: #0369A1; border: 1px solid #BAE6FD; }
-    .badge-map { background: #DCFCE7; color: #15803D; border: 1px solid #BBF7D0; }
-    .badge-graphic { background: #FEF3C7; color: #B45309; border: 1px solid #FDE68A; }
-
-    /* Clip VO Box */
-    .clip-vo-box {
-      background: var(--bg-surface-alt);
-      border-left: 4px solid var(--accent-yellow);
-      border-radius: 8px;
-      padding: 12px 18px;
-    }
-
-    .micro-label-gold {
-      display: block;
-      font-size: 0.72rem;
-      font-weight: 800;
-      color: #B45309;
-      margin-bottom: 4px;
-      text-transform: uppercase;
-      letter-spacing: 0.04em;
-    }
-    [data-theme="dark"] .micro-label-gold { color: #FBBF24; }
-
-    .clip-vo-text {
-      font-size: 1.05rem;
-      font-weight: 600;
-      line-height: 1.6;
-      color: var(--ink-primary);
-    }
-
-    /* Clip Action Box */
-    .clip-action-box {
-      background: var(--bg-surface);
-      border: 1px solid var(--border-subtle);
-      border-radius: 8px;
-      padding: 12px 16px;
-    }
-
-    .micro-label-blue {
-      display: block;
-      font-size: 0.72rem;
-      font-weight: 800;
-      color: var(--accent-blue);
-      margin-bottom: 4px;
-      text-transform: uppercase;
-      letter-spacing: 0.04em;
-    }
-
-    .clip-action-text {
-      font-size: 0.92rem;
-      color: var(--ink-secondary);
-      line-height: 1.5;
     }
 
     /* Clip Prompt Box */
     .clip-prompt-box {
       background: #0F172A;
       border: 1.5px solid #1E293B;
-      border-radius: 10px;
-      padding: 14px 18px;
+      border-radius: 8px;
+      padding: 12px 16px;
     }
 
     .prompt-box-header {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      margin-bottom: 8px;
+      margin-bottom: 6px;
     }
 
     .prompt-badge-title {
-      font-size: 0.74rem;
+      font-size: 0.7rem;
       font-weight: 800;
       color: #94A3B8;
       text-transform: uppercase;
@@ -484,8 +406,8 @@
       margin: 0;
       white-space: pre-wrap;
       word-break: break-word;
-      font-size: 0.82rem;
-      line-height: 1.5;
+      font-size: 0.8rem;
+      line-height: 1.45;
       color: #38BDF8;
     }
 
@@ -493,22 +415,22 @@
     .clip-source-box {
       background: #F0FDF4;
       border: 1.5px dashed #22C55E;
-      border-radius: 10px;
-      padding: 12px 16px;
+      border-radius: 8px;
+      padding: 10px 14px;
     }
     [data-theme="dark"] .clip-source-box { background: #132A1C; border-color: #16A34A; }
 
     .source-badge-title {
-      font-size: 0.72rem;
+      font-size: 0.7rem;
       font-weight: 800;
       color: var(--accent-green);
       display: block;
-      margin-bottom: 4px;
+      margin-bottom: 2px;
       text-transform: uppercase;
     }
 
     .source-desc-text {
-      font-size: 0.88rem;
+      font-size: 0.86rem;
       font-weight: 600;
       color: var(--ink-secondary);
     }
@@ -518,7 +440,7 @@
       background: #FFF1F2;
       border: 1.5px solid var(--accent-coral);
       border-radius: 8px;
-      padding: 10px 16px;
+      padding: 8px 14px;
       display: flex;
       flex-direction: column;
       gap: 2px;
@@ -526,15 +448,40 @@
     [data-theme="dark"] .clip-cut-box { background: #2E151A; }
 
     .cut-point-label {
-      font-size: 0.72rem;
+      font-size: 0.68rem;
       font-weight: 800;
       color: var(--accent-coral);
       text-transform: uppercase;
     }
 
     .cut-point-instruction {
-      font-size: 0.92rem;
+      font-size: 0.9rem;
       font-weight: 700;
+      color: var(--ink-primary);
+    }
+
+    /* Shorts VO Box */
+    .clip-vo-box {
+      background: var(--bg-surface-alt);
+      border-left: 3.5px solid var(--accent-yellow);
+      border-radius: 6px;
+      padding: 10px 14px;
+    }
+
+    .micro-label-gold {
+      display: block;
+      font-size: 0.68rem;
+      font-weight: 800;
+      color: #B45309;
+      margin-bottom: 4px;
+      text-transform: uppercase;
+    }
+    [data-theme="dark"] .micro-label-gold { color: #FBBF24; }
+
+    .clip-vo-text {
+      font-size: 0.94rem;
+      font-weight: 500;
+      line-height: 1.6;
       color: var(--ink-primary);
     }
 
@@ -560,8 +507,8 @@
     @media (max-width: 768px) {
       .clean-header { padding: 10px 16px; }
       .page-wrap { width: calc(100% - 24px); margin: 18px auto 80px; }
-      .production-section { padding: 20px 16px; }
-      .single-clip-card { padding: 16px 14px; }
+      .production-section { padding: 18px 14px; }
+      .single-clip-card { padding: 14px 14px; }
       .full-script-text { font-size: 1.02rem; }
     }
 
@@ -658,615 +605,354 @@ By 2035, over seventy percent of Mongolia's population will live in urban center
         </div>
       </div>
 
-      <!-- Mariyam Instructions for Step 2 -->
-      <div class="step1-instruction-box" style="background:var(--bg-tint-blue); border-color:#0284C7;">
-        <div class="instruction-step-line" style="color:#0369A1;">
-          <span>💡</span>
-          <span><strong>Mariyam ke liye Video Jorne Ki Guide:</strong> CapCut ya Premiere Pro me aawaz rakhein. Niche diye gaye clips sequence ke mutabiq chalte jayein. Jahan <strong>"⚡ Google Flow Prompt"</strong> hai uska prompt copy karke 8s clip banayein, aur <strong>"✂️ Cut Cue"</strong> wale lafz par agla clip switch karein!</span>
-        </div>
-      </div>
-
       <!-- Sequential Cards List -->
       <div class="clips-sequence-list">
         <!-- Clip 01 -->
         <article class="single-clip-card" id="clip01">
           <div class="clip-card-header">
-            <div class="clip-title-group">
-              <span class="clip-number-badge">Clip 01</span>
-              <span class="clip-time-range">0:00 – 0:15 (15s)</span>
-              <span class="clip-beat-tag">BEAT 01 · Scale Hook</span>
-            </div>
-            <span class="clip-type-pill badge-map">🗺️ 2D Map Animation (CapCut / Premiere)</span>
+            <span class="clip-number-badge">Clip 01</span>
+            <span class="clip-time-range">0:00 – 0:15 (15s)</span>
           </div>
 
-          <!-- Voiceover Line -->
-          <div class="clip-vo-box">
-            <span class="micro-label-gold">🎙️ Is clip ke waqt aawaz me yeh line chalegi:</span>
-            <p class="clip-vo-text">"Four entire European countries—the United Kingdom, France, Germany, and Italy—could fit inside this territory."</p>
-          </div>
-
-          <!-- Screen Action -->
-          <div class="clip-action-box">
-            <span class="micro-label-blue">🎬 Screen par kya dikhana hai:</span>
-            <p class="clip-action-text">UK, France, Germany aur Italy ke 4 naqshay sweep hotay hue Mongolia ke border ke andar fit hotay hain.</p>
-          </div>
-
-            <!-- Map/Graphic Source -->
+            <!-- Map Asset Note -->
             <div class="clip-source-box">
-              <span class="source-badge-title">🛠️ CapCut / Premiere Me Yeh Asset Lagayein:</span>
-              <p class="source-desc-text">CapCut me simple 4 countries ke PNG images ko Mongolia ke map par slide karein. (No AI needed).</p>
+              <span class="source-badge-title">🗺️ Map / Graphic Asset (CapCut / Premiere):</span>
+              <p class="source-desc-text">CapCut me UK, France, Germany aur Italy ke 4 PNG cutouts ko Mongolia ke map par slide karke fit karein.</p>
             </div>
 
-          <!-- Cut Point Instruction -->
+          <!-- Cut Point -->
           <div class="clip-cut-box">
-            <span class="cut-point-label">✂️ Yeh Clip Kab Khatam Karna Hai (Cut Cue):</span>
-            <p class="cut-point-instruction">Jab voiceover me aawaz aaye: "fit inside this territory" ➔ Theek yahan Clip 02 lagayein.</p>
+            <span class="cut-point-label">✂️ Yeh Clip Kab Khatam Karna Hai:</span>
+            <p class="cut-point-instruction">Jab voiceover bole: "fit inside this territory" ➔ Theek yahan Clip 02 lagayein.</p>
           </div>
         </article>
 
         <!-- Clip 02 -->
         <article class="single-clip-card" id="clip02">
           <div class="clip-card-header">
-            <div class="clip-title-group">
-              <span class="clip-number-badge">Clip 02</span>
-              <span class="clip-time-range">0:15 – 0:30 (15s)</span>
-              <span class="clip-beat-tag">BEAT 01 · Scale Hook</span>
-            </div>
-            <span class="clip-type-pill badge-graphic">📊 Madrid vs Mongolia Split Screen</span>
+            <span class="clip-number-badge">Clip 02</span>
+            <span class="clip-time-range">0:15 – 0:30 (15s)</span>
           </div>
 
-          <!-- Voiceover Line -->
-          <div class="clip-vo-box">
-            <span class="micro-label-gold">🎙️ Is clip ke waqt aawaz me yeh line chalegi:</span>
-            <p class="clip-vo-text">"Yet the total population of this vast land is smaller than the single city of Madrid. Mongolia spans one point five six million square kilometres, but across this entire expanse live just three point four million people. That produces an average density of barely two people per square kilometre—the lowest on Earth."</p>
-          </div>
-
-          <!-- Screen Action -->
-          <div class="clip-action-box">
-            <span class="micro-label-blue">🎬 Screen par kya dikhana hai:</span>
-            <p class="clip-action-text">Split-screen population comparison: Madrid city (3.4M log) vs Poora Mongolia (3.4M log).</p>
-          </div>
-
-            <!-- Map/Graphic Source -->
+            <!-- Map Asset Note -->
             <div class="clip-source-box">
-              <span class="source-badge-title">🛠️ CapCut / Premiere Me Yeh Asset Lagayein:</span>
-              <p class="source-desc-text">Side-by-side comparison text graphic in video editor.</p>
+              <span class="source-badge-title">🗺️ Map / Graphic Asset (CapCut / Premiere):</span>
+              <p class="source-desc-text">Split-screen comparison text graphic: Madrid city (3.4M log) vs Poora Mongolia (3.4M log).</p>
             </div>
 
-          <!-- Cut Point Instruction -->
+          <!-- Cut Point -->
           <div class="clip-cut-box">
-            <span class="cut-point-label">✂️ Yeh Clip Kab Khatam Karna Hai (Cut Cue):</span>
-            <p class="cut-point-instruction">Jab voiceover me aawaz aaye: "lowest on Earth" ➔ Theek yahan Clip 03 lagayein.</p>
+            <span class="cut-point-label">✂️ Yeh Clip Kab Khatam Karna Hai:</span>
+            <p class="cut-point-instruction">Jab voiceover bole: "lowest on Earth" ➔ Theek yahan Clip 03 lagayein.</p>
           </div>
         </article>
 
         <!-- Clip 03 -->
         <article class="single-clip-card" id="clip03">
           <div class="clip-card-header">
-            <div class="clip-title-group">
-              <span class="clip-number-badge">Clip 03</span>
-              <span class="clip-time-range">0:30 – 0:45 (15s)</span>
-              <span class="clip-beat-tag">BEAT 01 · Scale Hook</span>
-            </div>
-            <span class="clip-type-pill badge-ai">🎥 Google Flow AI Clip</span>
+            <span class="clip-number-badge">Clip 03</span>
+            <span class="clip-time-range">0:30 – 0:45 (15s)</span>
           </div>
 
-          <!-- Voiceover Line -->
-          <div class="clip-vo-box">
-            <span class="micro-label-gold">🎙️ Is clip ke waqt aawaz me yeh line chalegi:</span>
-            <p class="clip-vo-text">"But the real geographic mystery isn't just that Mongolia is empty. It is that half of the entire country's population now lives crammed inside a single valley."</p>
-          </div>
-
-          <!-- Screen Action -->
-          <div class="clip-action-box">
-            <span class="micro-label-blue">🎬 Screen par kya dikhana hai:</span>
-            <p class="clip-action-text">High-altitude satellite view: Vast golden steppe aur peechay Altai mountains.</p>
-          </div>
-
-            <!-- AI Prompt Box -->
+            <!-- Google Flow AI Prompt -->
             <div class="clip-prompt-box">
               <div class="prompt-box-header">
-                <span class="prompt-badge-title">⚡ Google Flow AI Prompt (8 Second Ka Clip Banega):</span>
+                <span class="prompt-badge-title">⚡ Google Flow AI Prompt (8s Clip):</span>
                 <button class="btn-copy-action" onclick="copyClipPrompt(this)">📋 Copy Prompt</button>
               </div>
               <pre class="prompt-code-box"><code>Create an 8-second horizontal 16:9 cinematic clip. High-altitude orthographic satellite camera looking down at vast golden Mongolian steppe bordered by Altai mountains, clear morning sunlight, clean 8k topology relief, no text --ar 16:9</code></pre>
             </div>
 
-          <!-- Cut Point Instruction -->
+          <!-- Cut Point -->
           <div class="clip-cut-box">
-            <span class="cut-point-label">✂️ Yeh Clip Kab Khatam Karna Hai (Cut Cue):</span>
-            <p class="cut-point-instruction">Jab voiceover me aawaz aaye: "inside a single valley" ➔ Theek yahan Clip 04 lagayein.</p>
+            <span class="cut-point-label">✂️ Yeh Clip Kab Khatam Karna Hai:</span>
+            <p class="cut-point-instruction">Jab voiceover bole: "inside a single valley" ➔ Theek yahan Clip 04 lagayein.</p>
           </div>
         </article>
 
         <!-- Clip 04 -->
         <article class="single-clip-card" id="clip04">
           <div class="clip-card-header">
-            <div class="clip-title-group">
-              <span class="clip-number-badge">Clip 04</span>
-              <span class="clip-time-range">0:45 – 1:15 (30s)</span>
-              <span class="clip-beat-tag">BEAT 02 · Physical Fortress</span>
-            </div>
-            <span class="clip-type-pill badge-map">🗺️ 3D Terrain Relief Model</span>
+            <span class="clip-number-badge">Clip 04</span>
+            <span class="clip-time-range">0:45 – 1:15 (30s)</span>
           </div>
 
-          <!-- Voiceover Line -->
-          <div class="clip-vo-box">
-            <span class="micro-label-gold">🎙️ Is clip ke waqt aawaz me yeh line chalegi:</span>
-            <p class="clip-vo-text">"To understand why Mongolia never developed dense farmland, you have to look at its extreme geography. Trapped between the Siberian taiga and the arid Gobi desert, Mongolia sits at an average altitude of fifteen hundred metres above sea level. It has no coastline and receives virtually no maritime moisture. Less than one percent of its entire landmass is arable for growing crops."</p>
-          </div>
-
-          <!-- Screen Action -->
-          <div class="clip-action-box">
-            <span class="micro-label-blue">🎬 Screen par kya dikhana hai:</span>
-            <p class="clip-action-text">3D elevation model of Central Asian plateau showing rain shadow barriers and Gobi desert.</p>
-          </div>
-
-            <!-- Map/Graphic Source -->
-            <div class="clip-source-box">
-              <span class="source-badge-title">🛠️ CapCut / Premiere Me Yeh Asset Lagayein:</span>
-              <p class="source-desc-text">Google Earth Studio ya 3D elevation map.</p>
+            <!-- Google Flow AI Prompt -->
+            <div class="clip-prompt-box">
+              <div class="prompt-box-header">
+                <span class="prompt-badge-title">⚡ Google Flow AI Prompt (8s Clip):</span>
+                <button class="btn-copy-action" onclick="copyClipPrompt(this)">📋 Copy Prompt</button>
+              </div>
+              <pre class="prompt-code-box"><code>Create an 8-second horizontal 16:9 cinematic clip. 3D satellite camera flying over vast Central Asian mountain plateau and arid Gobi desert sand dunes, photorealistic 8k relief --ar 16:9</code></pre>
             </div>
 
-          <!-- Cut Point Instruction -->
+          <!-- Cut Point -->
           <div class="clip-cut-box">
-            <span class="cut-point-label">✂️ Yeh Clip Kab Khatam Karna Hai (Cut Cue):</span>
-            <p class="cut-point-instruction">Jab voiceover me aawaz aaye: "growing crops" ➔ Theek yahan Clip 05 lagayein.</p>
+            <span class="cut-point-label">✂️ Yeh Clip Kab Khatam Karna Hai:</span>
+            <p class="cut-point-instruction">Jab voiceover bole: "growing crops" ➔ Theek yahan Clip 05 lagayein.</p>
           </div>
         </article>
 
         <!-- Clip 05 -->
         <article class="single-clip-card" id="clip05">
           <div class="clip-card-header">
-            <div class="clip-title-group">
-              <span class="clip-number-badge">Clip 05</span>
-              <span class="clip-time-range">1:15 – 1:45 (30s)</span>
-              <span class="clip-beat-tag">BEAT 02 · Physical Fortress</span>
-            </div>
-            <span class="clip-type-pill badge-ai">🎥 Google Flow AI Clip</span>
+            <span class="clip-number-badge">Clip 05</span>
+            <span class="clip-time-range">1:15 – 1:45 (30s)</span>
           </div>
 
-          <!-- Voiceover Line -->
-          <div class="clip-vo-box">
-            <span class="micro-label-gold">🎙️ Is clip ke waqt aawaz me yeh line chalegi:</span>
-            <p class="clip-vo-text">"For three thousand years, human survival here was only possible through pastoral nomadism—moving herds of horses, sheep, goats, and camels across hundreds of miles of seasonal pastures. But today, that ancient cycle is breaking under a deadly weather catastrophe."</p>
-          </div>
-
-          <!-- Screen Action -->
-          <div class="clip-action-box">
-            <span class="micro-label-blue">🎬 Screen par kya dikhana hai:</span>
-            <p class="clip-action-text">Khubsoorat green river valley me traditional safaid yurt camp aur ghaas chartay hue ghoray.</p>
-          </div>
-
-            <!-- AI Prompt Box -->
+            <!-- Google Flow AI Prompt -->
             <div class="clip-prompt-box">
               <div class="prompt-box-header">
-                <span class="prompt-badge-title">⚡ Google Flow AI Prompt (8 Second Ka Clip Banega):</span>
+                <span class="prompt-badge-title">⚡ Google Flow AI Prompt (8s Clip):</span>
                 <button class="btn-copy-action" onclick="copyClipPrompt(this)">📋 Copy Prompt</button>
               </div>
               <pre class="prompt-code-box"><code>Create an 8-second horizontal 16:9 cinematic clip. Traditional white felt yurt camp in verdant Mongolian river valley, smoke rising from chimney into crisp morning air, horses grazing, 8k --ar 16:9</code></pre>
             </div>
 
-          <!-- Cut Point Instruction -->
+          <!-- Cut Point -->
           <div class="clip-cut-box">
-            <span class="cut-point-label">✂️ Yeh Clip Kab Khatam Karna Hai (Cut Cue):</span>
-            <p class="cut-point-instruction">Jab voiceover me aawaz aaye: "deadly weather catastrophe" ➔ Theek yahan Clip 06 lagayein.</p>
+            <span class="cut-point-label">✂️ Yeh Clip Kab Khatam Karna Hai:</span>
+            <p class="cut-point-instruction">Jab voiceover bole: "deadly weather catastrophe" ➔ Theek yahan Clip 06 lagayein.</p>
           </div>
         </article>
 
         <!-- Clip 06 -->
         <article class="single-clip-card" id="clip06">
           <div class="clip-card-header">
-            <div class="clip-title-group">
-              <span class="clip-number-badge">Clip 06</span>
-              <span class="clip-time-range">1:45 – 2:15 (30s)</span>
-              <span class="clip-beat-tag">BEAT 03 · The Dzud Freeze</span>
-            </div>
-            <span class="clip-type-pill badge-ai">🎥 Google Flow AI Clip</span>
+            <span class="clip-number-badge">Clip 06</span>
+            <span class="clip-time-range">1:45 – 2:15 (30s)</span>
           </div>
 
-          <!-- Voiceover Line -->
-          <div class="clip-vo-box">
-            <span class="micro-label-gold">🎙️ Is clip ke waqt aawaz me yeh line chalegi:</span>
-            <p class="clip-vo-text">"The destructive engine driving this transformation is called the Dzud. A Dzud occurs when a summer drought withers pasture grass, followed immediately by a catastrophic winter where temperatures plunge below minus forty-five degrees Celsius."</p>
-          </div>
-
-          <!-- Screen Action -->
-          <div class="clip-action-box">
-            <span class="micro-label-blue">🎬 Screen par kya dikhana hai:</span>
-            <p class="clip-action-text">Shadeed barfani toofan (Blizzard) jisme safaid barf ki leharain corrals ko dafan kar rahi hon.</p>
-          </div>
-
-            <!-- AI Prompt Box -->
+            <!-- Google Flow AI Prompt -->
             <div class="clip-prompt-box">
               <div class="prompt-box-header">
-                <span class="prompt-badge-title">⚡ Google Flow AI Prompt (8 Second Ka Clip Banega):</span>
+                <span class="prompt-badge-title">⚡ Google Flow AI Prompt (8s Clip):</span>
                 <button class="btn-copy-action" onclick="copyClipPrompt(this)">📋 Copy Prompt</button>
               </div>
               <pre class="prompt-code-box"><code>Create an 8-second horizontal 16:9 cinematic clip. Extreme blizzard over Mongolian snowy plains, howling white snowdrifts burying wooden fences, harsh diffused winter light, intense cold realism, no people visible --ar 16:9</code></pre>
             </div>
 
-          <!-- Cut Point Instruction -->
+          <!-- Cut Point -->
           <div class="clip-cut-box">
-            <span class="cut-point-label">✂️ Yeh Clip Kab Khatam Karna Hai (Cut Cue):</span>
-            <p class="cut-point-instruction">Jab voiceover me aawaz aaye: "minus forty-five degrees Celsius" ➔ Theek yahan Clip 07 lagayein.</p>
+            <span class="cut-point-label">✂️ Yeh Clip Kab Khatam Karna Hai:</span>
+            <p class="cut-point-instruction">Jab voiceover bole: "minus forty-five degrees Celsius" ➔ Theek yahan Clip 07 lagayein.</p>
           </div>
         </article>
 
         <!-- Clip 07 -->
         <article class="single-clip-card" id="clip07">
           <div class="clip-card-header">
-            <div class="clip-title-group">
-              <span class="clip-number-badge">Clip 07</span>
-              <span class="clip-time-range">2:15 – 2:40 (25s)</span>
-              <span class="clip-beat-tag">BEAT 03 · The Dzud Freeze</span>
-            </div>
-            <span class="clip-type-pill badge-graphic">📊 Livestock Death Toll Chart</span>
+            <span class="clip-number-badge">Clip 07</span>
+            <span class="clip-time-range">2:15 – 2:40 (25s)</span>
           </div>
 
-          <!-- Voiceover Line -->
-          <div class="clip-vo-box">
-            <span class="micro-label-gold">🎙️ Is clip ke waqt aawaz me yeh line chalegi:</span>
-            <p class="clip-vo-text">"Deep sheets of solid ice freeze over the ground, creating an impenetrable barrier that prevents livestock from digging through to reach food. In severe Dzud years, millions of animals perish in a matter of weeks."</p>
-          </div>
-
-          <!-- Screen Action -->
-          <div class="clip-action-box">
-            <span class="micro-label-blue">🎬 Screen par kya dikhana hai:</span>
-            <p class="clip-action-text">Bar chart infographic: 2010 me 8.5M janwar mare aur 2024 me 5.9M janwar mare.</p>
-          </div>
-
-            <!-- Map/Graphic Source -->
+            <!-- Map Asset Note -->
             <div class="clip-source-box">
-              <span class="source-badge-title">🛠️ CapCut / Premiere Me Yeh Asset Lagayein:</span>
-              <p class="source-desc-text">2D animated chart overlay in video editor.</p>
+              <span class="source-badge-title">🗺️ Map / Graphic Asset (CapCut / Premiere):</span>
+              <p class="source-desc-text">Bar chart graphic in CapCut: 2010 Dzud (8.5M janwar khatam) vs 2024 Dzud (5.9M janwar khatam).</p>
             </div>
 
-          <!-- Cut Point Instruction -->
+          <!-- Cut Point -->
           <div class="clip-cut-box">
-            <span class="cut-point-label">✂️ Yeh Clip Kab Khatam Karna Hai (Cut Cue):</span>
-            <p class="cut-point-instruction">Jab voiceover me aawaz aaye: "matter of weeks" ➔ Theek yahan Clip 08 lagayein.</p>
+            <span class="cut-point-label">✂️ Yeh Clip Kab Khatam Karna Hai:</span>
+            <p class="cut-point-instruction">Jab voiceover bole: "matter of weeks" ➔ Theek yahan Clip 08 lagayein.</p>
           </div>
         </article>
 
         <!-- Clip 08 -->
         <article class="single-clip-card" id="clip08">
           <div class="clip-card-header">
-            <div class="clip-title-group">
-              <span class="clip-number-badge">Clip 08</span>
-              <span class="clip-time-range">2:40 – 3:00 (20s)</span>
-              <span class="clip-beat-tag">BEAT 03 · The Dzud Freeze</span>
-            </div>
-            <span class="clip-type-pill badge-ai">🎥 Google Flow AI Clip</span>
+            <span class="clip-number-badge">Clip 08</span>
+            <span class="clip-time-range">2:40 – 3:00 (20s)</span>
           </div>
 
-          <!-- Voiceover Line -->
-          <div class="clip-vo-box">
-            <span class="micro-label-gold">🎙️ Is clip ke waqt aawaz me yeh line chalegi:</span>
-            <p class="clip-vo-text">"When a herding family loses their entire herd in a single winter, their nomadic way of life is instantly extinguished. With no animals left, they pack their round felt yurt onto a truck and head toward Ulaanbaatar."</p>
-          </div>
-
-          <!-- Screen Action -->
-          <div class="clip-action-box">
-            <span class="micro-label-blue">🎬 Screen par kya dikhana hai:</span>
-            <p class="clip-action-text">Purana Russian flatbed truck jis par yurt ka saaman load hai, barfani rastay par shehar ki taraf ja raha hai.</p>
-          </div>
-
-            <!-- AI Prompt Box -->
+            <!-- Google Flow AI Prompt -->
             <div class="clip-prompt-box">
               <div class="prompt-box-header">
-                <span class="prompt-badge-title">⚡ Google Flow AI Prompt (8 Second Ka Clip Banega):</span>
+                <span class="prompt-badge-title">⚡ Google Flow AI Prompt (8s Clip):</span>
                 <button class="btn-copy-action" onclick="copyClipPrompt(this)">📋 Copy Prompt</button>
               </div>
               <pre class="prompt-code-box"><code>Create an 8-second horizontal 16:9 cinematic clip. Old Russian flatbed truck loaded with traditional yurt frame driving slowly along dirt track across vast winter landscape, cold morning mist, 8k --ar 16:9</code></pre>
             </div>
 
-          <!-- Cut Point Instruction -->
+          <!-- Cut Point -->
           <div class="clip-cut-box">
-            <span class="cut-point-label">✂️ Yeh Clip Kab Khatam Karna Hai (Cut Cue):</span>
-            <p class="cut-point-instruction">Jab voiceover me aawaz aaye: "head toward Ulaanbaatar" ➔ Theek yahan Clip 09 lagayein.</p>
+            <span class="cut-point-label">✂️ Yeh Clip Kab Khatam Karna Hai:</span>
+            <p class="cut-point-instruction">Jab voiceover bole: "head toward Ulaanbaatar" ➔ Theek yahan Clip 09 lagayein.</p>
           </div>
         </article>
 
         <!-- Clip 09 -->
         <article class="single-clip-card" id="clip09">
           <div class="clip-card-header">
-            <div class="clip-title-group">
-              <span class="clip-number-badge">Clip 09</span>
-              <span class="clip-time-range">3:00 – 3:30 (30s)</span>
-              <span class="clip-beat-tag">BEAT 04 · Ger District & Valley Inversion</span>
-            </div>
-            <span class="clip-type-pill badge-ai">🎥 Google Flow AI Clip</span>
+            <span class="clip-number-badge">Clip 09</span>
+            <span class="clip-time-range">3:00 – 3:30 (30s)</span>
           </div>
 
-          <!-- Voiceover Line -->
-          <div class="clip-vo-box">
-            <span class="micro-label-gold">🎙️ Is clip ke waqt aawaz me yeh line chalegi:</span>
-            <p class="clip-vo-text">"When herders arrive in Ulaanbaatar, they claim free plots of land on the steep hillsides encircling the capital. Today, these spontaneous settlements—known as the Ger Districts—house over eight hundred thousand people, more than half the city's population."</p>
-          </div>
-
-          <!-- Screen Action -->
-          <div class="clip-action-box">
-            <span class="micro-label-blue">🎬 Screen par kya dikhana hai:</span>
-            <p class="clip-action-text">Ulaanbaatar ki pahadiyon par hazaaron round white yurts ka sprawling aerial panorama view.</p>
-          </div>
-
-            <!-- AI Prompt Box -->
+            <!-- Google Flow AI Prompt -->
             <div class="clip-prompt-box">
               <div class="prompt-box-header">
-                <span class="prompt-badge-title">⚡ Google Flow AI Prompt (8 Second Ka Clip Banega):</span>
+                <span class="prompt-badge-title">⚡ Google Flow AI Prompt (8s Clip):</span>
                 <button class="btn-copy-action" onclick="copyClipPrompt(this)">📋 Copy Prompt</button>
               </div>
               <pre class="prompt-code-box"><code>Create an 8-second horizontal 16:9 cinematic clip. High-angle aerial panoramic view over sprawling hillside ger district of Ulaanbaatar, thousands of round white yurts surrounded by wooden fences, dusk light, 8k --ar 16:9</code></pre>
             </div>
 
-          <!-- Cut Point Instruction -->
+          <!-- Cut Point -->
           <div class="clip-cut-box">
-            <span class="cut-point-label">✂️ Yeh Clip Kab Khatam Karna Hai (Cut Cue):</span>
-            <p class="cut-point-instruction">Jab voiceover me aawaz aaye: "city's population" ➔ Theek yahan Clip 10 lagayein.</p>
+            <span class="cut-point-label">✂️ Yeh Clip Kab Khatam Karna Hai:</span>
+            <p class="cut-point-instruction">Jab voiceover bole: "city's population" ➔ Theek yahan Clip 10 lagayein.</p>
           </div>
         </article>
 
         <!-- Clip 10 -->
         <article class="single-clip-card" id="clip10">
           <div class="clip-card-header">
-            <div class="clip-title-group">
-              <span class="clip-number-badge">Clip 10</span>
-              <span class="clip-time-range">3:30 – 3:55 (25s)</span>
-              <span class="clip-beat-tag">BEAT 04 · Ger District & Valley Inversion</span>
-            </div>
-            <span class="clip-type-pill badge-graphic">📊 Valley Smoke Inversion Diagram</span>
+            <span class="clip-number-badge">Clip 10</span>
+            <span class="clip-time-range">3:30 – 3:55 (25s)</span>
           </div>
 
-          <!-- Voiceover Line -->
-          <div class="clip-vo-box">
-            <span class="micro-label-gold">🎙️ Is clip ke waqt aawaz me yeh line chalegi:</span>
-            <p class="clip-vo-text">"In winter, temperatures plunge below minus thirty degrees, making Ulaanbaatar the coldest capital on Earth. Because these districts lack central heating, families burn raw coal in simple stoves inside their yurts."</p>
-          </div>
-
-          <!-- Screen Action -->
-          <div class="clip-action-box">
-            <span class="micro-label-blue">🎬 Screen par kya dikhana hai:</span>
-            <p class="clip-action-text">3D cross-section diagram: Cold air aur black coal smoke valley basin ke andar phans jata hai.</p>
-          </div>
-
-            <!-- Map/Graphic Source -->
+            <!-- Map Asset Note -->
             <div class="clip-source-box">
-              <span class="source-badge-title">🛠️ CapCut / Premiere Me Yeh Asset Lagayein:</span>
-              <p class="source-desc-text">2D diagram illustration with animated smoke.</p>
+              <span class="source-badge-title">🗺️ Map / Graphic Asset (CapCut / Premiere):</span>
+              <p class="source-desc-text">Valley cross-section diagram: Cold air aur black coal smoke valley basin ke andar phans jata hai.</p>
             </div>
 
-          <!-- Cut Point Instruction -->
+          <!-- Cut Point -->
           <div class="clip-cut-box">
-            <span class="cut-point-label">✂️ Yeh Clip Kab Khatam Karna Hai (Cut Cue):</span>
-            <p class="cut-point-instruction">Jab voiceover me aawaz aaye: "inside their yurts" ➔ Theek yahan Clip 11 lagayein.</p>
+            <span class="cut-point-label">✂️ Yeh Clip Kab Khatam Karna Hai:</span>
+            <p class="cut-point-instruction">Jab voiceover bole: "inside their yurts" ➔ Theek yahan Clip 11 lagayein.</p>
           </div>
         </article>
 
         <!-- Clip 11 -->
         <article class="single-clip-card" id="clip11">
           <div class="clip-card-header">
-            <div class="clip-title-group">
-              <span class="clip-number-badge">Clip 11</span>
-              <span class="clip-time-range">3:55 – 4:15 (20s)</span>
-              <span class="clip-beat-tag">BEAT 04 · Ger District & Valley Inversion</span>
-            </div>
-            <span class="clip-type-pill badge-ai">🎥 Google Flow AI Clip</span>
+            <span class="clip-number-badge">Clip 11</span>
+            <span class="clip-time-range">3:55 – 4:15 (20s)</span>
           </div>
 
-          <!-- Voiceover Line -->
-          <div class="clip-vo-box">
-            <span class="micro-label-gold">🎙️ Is clip ke waqt aawaz me yeh line chalegi:</span>
-            <p class="clip-vo-text">"The city sits trapped at the bottom of a bowl-shaped valley. Cold air pools at the floor, creating a severe thermal inversion that traps dense black smoke beneath a ceiling of warm air, spiking pollution to fifty times safe limits."</p>
-          </div>
-
-          <!-- Screen Action -->
-          <div class="clip-action-box">
-            <span class="micro-label-blue">🎬 Screen par kya dikhana hai:</span>
-            <p class="clip-action-text">Subah ke waqt poori mountain valley ke upar atmospheric smoke ki moti chadar chhayi hui hai.</p>
-          </div>
-
-            <!-- AI Prompt Box -->
+            <!-- Google Flow AI Prompt -->
             <div class="clip-prompt-box">
               <div class="prompt-box-header">
-                <span class="prompt-badge-title">⚡ Google Flow AI Prompt (8 Second Ka Clip Banega):</span>
+                <span class="prompt-badge-title">⚡ Google Flow AI Prompt (8s Clip):</span>
                 <button class="btn-copy-action" onclick="copyClipPrompt(this)">📋 Copy Prompt</button>
               </div>
               <pre class="prompt-code-box"><code>Create an 8-second horizontal 16:9 cinematic clip. Panoramic view of winter mountain valley at sunrise with thick blanket of atmospheric smoke settling over city basin, cold blue lighting, 8k --ar 16:9</code></pre>
             </div>
 
-          <!-- Cut Point Instruction -->
+          <!-- Cut Point -->
           <div class="clip-cut-box">
-            <span class="cut-point-label">✂️ Yeh Clip Kab Khatam Karna Hai (Cut Cue):</span>
-            <p class="cut-point-instruction">Jab voiceover me aawaz aaye: "fifty times safe limits" ➔ Theek yahan Clip 12 lagayein.</p>
+            <span class="cut-point-label">✂️ Yeh Clip Kab Khatam Karna Hai:</span>
+            <p class="cut-point-instruction">Jab voiceover bole: "fifty times safe limits" ➔ Theek yahan Clip 12 lagayein.</p>
           </div>
         </article>
 
         <!-- Clip 12 -->
         <article class="single-clip-card" id="clip12">
           <div class="clip-card-header">
-            <div class="clip-title-group">
-              <span class="clip-number-badge">Clip 12</span>
-              <span class="clip-time-range">4:15 – 4:45 (30s)</span>
-              <span class="clip-beat-tag">BEAT 05 · High-Tech Nomads</span>
-            </div>
-            <span class="clip-type-pill badge-ai">🎥 Google Flow AI Clip</span>
+            <span class="clip-number-badge">Clip 12</span>
+            <span class="clip-time-range">4:15 – 4:45 (30s)</span>
           </div>
 
-          <!-- Voiceover Line -->
-          <div class="clip-vo-box">
-            <span class="micro-label-gold">🎙️ Is clip ke waqt aawaz me yeh line chalegi:</span>
-            <p class="clip-vo-text">"Why can't the government simply relocate people back onto the empty steppe? Because providing modern roads, electrical grids, and hospitals across a territory the size of Western Europe costs millions of dollars per resident. It is far cheaper for the state to provide schools when people concentrate in one place."</p>
-          </div>
-
-          <!-- Screen Action -->
-          <div class="clip-action-box">
-            <span class="micro-label-blue">🎬 Screen par kya dikhana hai:</span>
-            <p class="clip-action-text">Paved two-lane highway jo endlessly flat steppe me se seedhi guzar rahi hai.</p>
-          </div>
-
-            <!-- AI Prompt Box -->
+            <!-- Google Flow AI Prompt -->
             <div class="clip-prompt-box">
               <div class="prompt-box-header">
-                <span class="prompt-badge-title">⚡ Google Flow AI Prompt (8 Second Ka Clip Banega):</span>
+                <span class="prompt-badge-title">⚡ Google Flow AI Prompt (8s Clip):</span>
                 <button class="btn-copy-action" onclick="copyClipPrompt(this)">📋 Copy Prompt</button>
               </div>
               <pre class="prompt-code-box"><code>Create an 8-second horizontal 16:9 cinematic clip. Paved two-lane highway cutting straight through endless flat steppe to vanishing point under vast blue sky, slow tracking motion, 8k --ar 16:9</code></pre>
             </div>
 
-          <!-- Cut Point Instruction -->
+          <!-- Cut Point -->
           <div class="clip-cut-box">
-            <span class="cut-point-label">✂️ Yeh Clip Kab Khatam Karna Hai (Cut Cue):</span>
-            <p class="cut-point-instruction">Jab voiceover me aawaz aaye: "concentrate in one place" ➔ Theek yahan Clip 13 lagayein.</p>
+            <span class="cut-point-label">✂️ Yeh Clip Kab Khatam Karna Hai:</span>
+            <p class="cut-point-instruction">Jab voiceover bole: "concentrate in one place" ➔ Theek yahan Clip 13 lagayein.</p>
           </div>
         </article>
 
         <!-- Clip 13 -->
         <article class="single-clip-card" id="clip13">
           <div class="clip-card-header">
-            <div class="clip-title-group">
-              <span class="clip-number-badge">Clip 13</span>
-              <span class="clip-time-range">4:45 – 5:10 (25s)</span>
-              <span class="clip-beat-tag">BEAT 05 · High-Tech Nomads</span>
-            </div>
-            <span class="clip-type-pill badge-graphic">📊 High-Tech Nomad Tools Infographic</span>
+            <span class="clip-number-badge">Clip 13</span>
+            <span class="clip-time-range">4:45 – 5:10 (25s)</span>
           </div>
 
-          <!-- Voiceover Line -->
-          <div class="clip-vo-box">
-            <span class="micro-label-gold">🎙️ Is clip ke waqt aawaz me yeh line chalegi:</span>
-            <p class="clip-vo-text">"Meanwhile, herders who remain on the steppe have adapted: today, almost every yurt has rooftop solar panels, satellite dishes, and 4G smartphones to monitor weather and livestock prices."</p>
-          </div>
-
-          <!-- Screen Action -->
-          <div class="clip-action-box">
-            <span class="micro-label-blue">🎬 Screen par kya dikhana hai:</span>
-            <p class="clip-action-text">Animated icons: Solar panels, satellite dish, 4G towers, motorcycle aur GPS collars.</p>
-          </div>
-
-            <!-- Map/Graphic Source -->
+            <!-- Map Asset Note -->
             <div class="clip-source-box">
-              <span class="source-badge-title">🛠️ CapCut / Premiere Me Yeh Asset Lagayein:</span>
-              <p class="source-desc-text">Clean icon callouts in video editor.</p>
+              <span class="source-badge-title">🗺️ Map / Graphic Asset (CapCut / Premiere):</span>
+              <p class="source-desc-text">Clean icons graphic in CapCut: Solar panels, satellite dish, 4G towers, motorcycle aur GPS collars.</p>
             </div>
 
-          <!-- Cut Point Instruction -->
+          <!-- Cut Point -->
           <div class="clip-cut-box">
-            <span class="cut-point-label">✂️ Yeh Clip Kab Khatam Karna Hai (Cut Cue):</span>
-            <p class="cut-point-instruction">Jab voiceover me aawaz aaye: "livestock prices" ➔ Theek yahan Clip 14 lagayein.</p>
+            <span class="cut-point-label">✂️ Yeh Clip Kab Khatam Karna Hai:</span>
+            <p class="cut-point-instruction">Jab voiceover bole: "livestock prices" ➔ Theek yahan Clip 14 lagayein.</p>
           </div>
         </article>
 
         <!-- Clip 14 -->
         <article class="single-clip-card" id="clip14">
           <div class="clip-card-header">
-            <div class="clip-title-group">
-              <span class="clip-number-badge">Clip 14</span>
-              <span class="clip-time-range">5:10 – 5:30 (20s)</span>
-              <span class="clip-beat-tag">BEAT 05 · High-Tech Nomads</span>
-            </div>
-            <span class="clip-type-pill badge-ai">🎥 Google Flow AI Clip</span>
+            <span class="clip-number-badge">Clip 14</span>
+            <span class="clip-time-range">5:10 – 5:30 (20s)</span>
           </div>
 
-          <!-- Voiceover Line -->
-          <div class="clip-vo-box">
-            <span class="micro-label-gold">🎙️ Is clip ke waqt aawaz me yeh line chalegi:</span>
-            <p class="clip-vo-text">"Herders use lightweight motorcycles and GPS collars attached to lead horses to track their herds. Nomadism has not died—it has digitized."</p>
-          </div>
-
-          <!-- Screen Action -->
-          <div class="clip-action-box">
-            <span class="micro-label-blue">🎬 Screen par kya dikhana hai:</span>
-            <p class="clip-action-text">Safaid yurt ke sath solar panel laga hai aur young herder haath me smartphone use kar raha hai.</p>
-          </div>
-
-            <!-- AI Prompt Box -->
+            <!-- Google Flow AI Prompt -->
             <div class="clip-prompt-box">
               <div class="prompt-box-header">
-                <span class="prompt-badge-title">⚡ Google Flow AI Prompt (8 Second Ka Clip Banega):</span>
+                <span class="prompt-badge-title">⚡ Google Flow AI Prompt (8s Clip):</span>
                 <button class="btn-copy-action" onclick="copyClipPrompt(this)">📋 Copy Prompt</button>
               </div>
               <pre class="prompt-code-box"><code>Create an 8-second horizontal 16:9 cinematic clip. Solar panel attached to round white felt yurt in vast green grassland, young herder holding smartphone, crisp sunlight, 8k --ar 16:9</code></pre>
             </div>
 
-          <!-- Cut Point Instruction -->
+          <!-- Cut Point -->
           <div class="clip-cut-box">
-            <span class="cut-point-label">✂️ Yeh Clip Kab Khatam Karna Hai (Cut Cue):</span>
-            <p class="cut-point-instruction">Jab voiceover me aawaz aaye: "it has digitized" ➔ Theek yahan Clip 15 lagayein.</p>
+            <span class="cut-point-label">✂️ Yeh Clip Kab Khatam Karna Hai:</span>
+            <p class="cut-point-instruction">Jab voiceover bole: "it has digitized" ➔ Theek yahan Clip 15 lagayein.</p>
           </div>
         </article>
 
         <!-- Clip 15 -->
         <article class="single-clip-card" id="clip15">
           <div class="clip-card-header">
-            <div class="clip-title-group">
-              <span class="clip-number-badge">Clip 15</span>
-              <span class="clip-time-range">5:30 – 5:50 (20s)</span>
-              <span class="clip-beat-tag">BEAT 06 · Conclusion</span>
-            </div>
-            <span class="clip-type-pill badge-graphic">📊 2035 Urbanization Trend</span>
+            <span class="clip-number-badge">Clip 15</span>
+            <span class="clip-time-range">5:30 – 5:50 (20s)</span>
           </div>
 
-          <!-- Voiceover Line -->
-          <div class="clip-vo-box">
-            <span class="micro-label-gold">🎙️ Is clip ke waqt aawaz me yeh line chalegi:</span>
-            <p class="clip-vo-text">"By 2035, over seventy percent of Mongolia's population will live in urban centers. To solve the winter smog, the government is building eco-cities and insulated apartments."</p>
-          </div>
-
-          <!-- Screen Action -->
-          <div class="clip-action-box">
-            <span class="micro-label-blue">🎬 Screen par kya dikhana hai:</span>
-            <p class="clip-action-text">Population trend line: Gaon ki aabadi 60% se ghir kar 28% ho gayi aur shehron ki 70% ho rahi hai.</p>
-          </div>
-
-            <!-- Map/Graphic Source -->
+            <!-- Map Asset Note -->
             <div class="clip-source-box">
-              <span class="source-badge-title">🛠️ CapCut / Premiere Me Yeh Asset Lagayein:</span>
-              <p class="source-desc-text">2D animated chart overlay in video editor.</p>
+              <span class="source-badge-title">🗺️ Map / Graphic Asset (CapCut / Premiere):</span>
+              <p class="source-desc-text">Population trend chart in CapCut: Gaon ki aabadi 60% se ghir kar 28% ho gayi aur shehron ki 70% ho rahi hai.</p>
             </div>
 
-          <!-- Cut Point Instruction -->
+          <!-- Cut Point -->
           <div class="clip-cut-box">
-            <span class="cut-point-label">✂️ Yeh Clip Kab Khatam Karna Hai (Cut Cue):</span>
-            <p class="cut-point-instruction">Jab voiceover me aawaz aaye: "insulated apartments" ➔ Theek yahan Clip 16 (Outro Finale) lagayein.</p>
+            <span class="cut-point-label">✂️ Yeh Clip Kab Khatam Karna Hai:</span>
+            <p class="cut-point-instruction">Jab voiceover bole: "insulated apartments" ➔ Theek yahan Clip 16 lagayein.</p>
           </div>
         </article>
 
         <!-- Clip 16 -->
         <article class="single-clip-card" id="clip16">
           <div class="clip-card-header">
-            <div class="clip-title-group">
-              <span class="clip-number-badge">Clip 16</span>
-              <span class="clip-time-range">5:50 – 6:20 (30s)</span>
-              <span class="clip-beat-tag">BEAT 06 · Conclusion</span>
-            </div>
-            <span class="clip-type-pill badge-ai">🎥 Google Flow AI Clip (Outro Finale)</span>
+            <span class="clip-number-badge">Clip 16</span>
+            <span class="clip-time-range">5:50 – 6:20 (30s)</span>
           </div>
 
-          <!-- Voiceover Line -->
-          <div class="clip-vo-box">
-            <span class="micro-label-gold">🎙️ Is clip ke waqt aawaz me yeh line chalegi:</span>
-            <p class="clip-vo-text">"Mongolia represents one of our planet's greatest geographic paradoxes: an empire of infinite open space where silence stretches for hundreds of miles, while its people gather in a single mountain valley to build their future. The land is not empty because it is broken—it is empty because nature set the rules of survival, and human beings adapted."</p>
-          </div>
-
-          <!-- Screen Action -->
-          <div class="clip-action-box">
-            <span class="micro-label-blue">🎬 Screen par kya dikhana hai:</span>
-            <p class="clip-action-text">Endless Mongolian grassland par sunset, golden orange aasmaan aur ghursawar silhouetted on ridge.</p>
-          </div>
-
-            <!-- AI Prompt Box -->
+            <!-- Google Flow AI Prompt -->
             <div class="clip-prompt-box">
               <div class="prompt-box-header">
-                <span class="prompt-badge-title">⚡ Google Flow AI Prompt (8 Second Ka Clip Banega):</span>
+                <span class="prompt-badge-title">⚡ Google Flow AI Prompt (8s Clip):</span>
                 <button class="btn-copy-action" onclick="copyClipPrompt(this)">📋 Copy Prompt</button>
               </div>
               <pre class="prompt-code-box"><code>Create an 8-second horizontal 16:9 cinematic clip. Sunset over endless Mongolian grassland, golden orange sky with lone horse rider silhouetted on ridge, cinematic slow lift to sky, 8k --ar 16:9</code></pre>
             </div>
 
-          <!-- Cut Point Instruction -->
+          <!-- Cut Point -->
           <div class="clip-cut-box">
-            <span class="cut-point-label">✂️ Yeh Clip Kab Khatam Karna Hai (Cut Cue):</span>
+            <span class="cut-point-label">✂️ Yeh Clip Kab Khatam Karna Hai:</span>
             <p class="cut-point-instruction">Video khatam ➔ Outro Subscribe & End Screen lagayein.</p>
           </div>
         </article>
@@ -1286,19 +972,13 @@ By 2035, over seventy percent of Mongolia's population will live in urban center
         <!-- Short 2A -->
         <article class="single-clip-card">
           <div class="clip-card-header">
-            <div class="clip-title-group">
-              <span class="clip-number-badge" style="background:#0284C7;">SHORT 2A</span>
-              <span class="clip-time-range">66s · 9:16 Vertical</span>
-            </div>
-            <span class="clip-type-pill badge-ai">🎥 Flow AI Vertical Clip</span>
+            <span class="clip-number-badge" style="background:#0284C7;">SHORT 2A</span>
+            <span class="clip-time-range">66s · 9:16 Vertical</span>
           </div>
 
           <div class="clip-vo-box">
-            <span class="micro-label-gold">🎙️ Short 2A Ki Poori Script (F5-TTS Me Paste Karein):</span>
-            <p class="clip-vo-text">
-              <strong>Hook:</strong> "Chaar European mulk is ek zameen ke andar fit ho saktay hain—lekin yahan koi nahi rehta!"<br><br>
-              <strong>Narration:</strong> "Mongolia Western Europe jitna bada hai, lekin aabadi Madrid se bhi kam hai! Sirf 2 log per square kilometre. Yahan 1% se bhi kam zameen par fasal ugti hai kyunke sardi bohot shaded hoti hai. Isliye 3000 saal se log janwar chara kar zinda rahay. Lekin aaj aadhi aabadi ek hi shehari valley me phans chuki hai. Kya aap aisi khaali jagah par rehna pasand karenge? Comment me batayein!"
-            </p>
+            <span class="micro-label-gold">🎙️ Short 2A Voiceover Script:</span>
+            <p class="clip-vo-text">"Four entire European countries fit inside this one—and almost nobody lives in it! Mongolia is the size of Western Europe, but has fewer people than Madrid. That's barely 2 people per square kilometre—the lowest on Earth. Less than 1% of the land can grow crops due to high altitude and harsh soil. So for centuries, survival meant moving herds across hundreds of miles. Today, half the country has moved into a single city valley. Making the emptiest country on Earth also one of the most crowded. Would you live in a country with this much empty space? Tell me below."</p>
           </div>
 
           <div class="clip-prompt-box">
@@ -1312,8 +992,8 @@ By 2035, over seventy percent of Mongolia's population will live in urban center
       </div>
     </section>
 
-    <footer style="margin-top: 40px; padding-top: 24px; border-top: 1.5px dashed var(--border-subtle); text-align: center; color: var(--ink-faint); font-size: 0.84rem; font-weight: 600;">
-      <p><strong style="color: var(--accent-blue);">Hidden Geography</strong> · Production Studio OS v2.1 · Simple Step-by-Step Workflow for Mariyam</p>
+    <footer style="margin-top: 30px; padding-top: 20px; border-top: 1.5px dashed var(--border-subtle); text-align: center; color: var(--ink-faint); font-size: 0.82rem; font-weight: 600;">
+      <p><strong style="color: var(--accent-blue);">Hidden Geography</strong> · Production Studio OS v2.1 · Direct Minimalist Workflow for Mariyam</p>
     </footer>
 
   </main>
@@ -1330,7 +1010,7 @@ By 2035, over seventy percent of Mongolia's population will live in urban center
       localStorage.setItem("hg-clean-theme", theme);
       if (themeIcon) {
         if (theme === "dark") {
-          themeIcon.innerHTML = '<circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>';
+          themeIcon.innerHTML = '<circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>';
         } else {
           themeIcon.innerHTML = '<path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>';
         }
