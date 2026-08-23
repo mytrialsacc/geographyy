@@ -3,93 +3,60 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Hidden Geography — Video 2 (V2) Production Studio: Shot-by-Shot Timeline, 12-Beat Script, Flow AI Prompts & Derived Shorts.">
-  <meta name="theme-color" content="#38BDF8">
-  <title>V2 Production Studio · Why Nobody Lives in the Most Empty Country on Earth</title>
+  <meta name="description" content="Hidden Geography — Why Nobody Lives in the Most Empty Country on Earth">
+  <meta name="theme-color" content="#0EA5E9">
+  <title>Why Nobody Lives in the Most Empty Country on Earth · Production Studio</title>
   
   <link rel="icon" type="image/svg+xml" href="../../../favicon.svg">
   
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&family=JetBrains+Mono:wght@600;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
   
   <style>
     :root {
-      /* Playful Animated Cartoon Palette */
       --ink: #0F172A;
-      --bg-sky: #E0F2FE;
-      --bg-canvas: #F0F9FF;
+      --bg-sky: #F0F9FF;
       --bg-card: #FFFFFF;
-      --bg-card-alt: #FEF3C7;
+      --bg-card-alt: #F8FAFC;
+      --bg-tint: #E0F2FE;
       
-      --cartoon-blue: #0EA5E9;
-      --cartoon-blue-deep: #0284C7;
-      --cartoon-green: #22C55E;
-      --cartoon-green-deep: #16A34A;
-      --cartoon-yellow: #FBBF24;
-      --cartoon-yellow-deep: #D97706;
-      --cartoon-coral: #FB7185;
-      --cartoon-coral-deep: #F43F5E;
-      --cartoon-purple: #A855F7;
-      --cartoon-orange: #FB923C;
+      --accent-blue: #0EA5E9;
+      --accent-blue-deep: #0284C7;
+      --accent-green: #22C55E;
+      --accent-green-deep: #16A34A;
+      --accent-yellow: #FBBF24;
+      --accent-yellow-deep: #D97706;
+      --accent-coral: #F43F5E;
 
       --text-dark: #0F172A;
-      --text-main: #0F172A;
       --text-muted: #475569;
       --text-faint: #64748B;
-      --text-white: #FFFFFF;
-
-      --border-chunky: var(--ink);
-      --card-base: var(--bg-card);
-      --card-elevated: var(--bg-canvas);
-      --card-highlight: var(--bg-card-alt);
       
-      --shadow-block-lg: 0 10px 0 var(--ink), 0 20px 30px rgba(15, 23, 42, 0.12);
-      --shadow-block-md: 0 6px 0 var(--ink), 0 12px 20px rgba(15, 23, 42, 0.08);
-      --shadow-block-sm: 0 4px 0 var(--ink);
-      --shadow-btn: 0 5px 0 var(--ink);
-      --shadow-btn-active: 0 1px 0 var(--ink);
-
+      --border-chunky: #0F172A;
+      --shadow-block: 0 6px 0 var(--ink);
+      --shadow-sm: 0 3px 0 var(--ink);
+      
       --radius-pill: 999px;
-      --radius-bubble: 24px;
       --radius-box: 18px;
-      --radius-sm: 12px;
-      --radius-md: 16px;
-      --radius-lg: 22px;
-      --radius-xl: 26px;
+      --radius-sm: 10px;
       --sidebar-w: 280px;
     }
 
     [data-theme="dark"] {
       --ink: #050811;
-      --bg-sky: #090D16;
-      --bg-canvas: #0F172A;
+      --bg-sky: #0F172A;
       --bg-card: #1E293B;
       --bg-card-alt: #24344D;
+      --bg-tint: #1E3A5F;
       
-      --cartoon-blue: #38BDF8;
-      --cartoon-blue-deep: #38BDF8;
-      --cartoon-green: #4ADE80;
-      --cartoon-green-deep: #22C55E;
-      --cartoon-yellow: #FBBF24;
-      --cartoon-yellow-deep: #F59E0B;
-      --cartoon-coral: #FB7185;
-      --cartoon-coral-deep: #F43F5E;
-
       --text-dark: #F8FAFC;
-      --text-main: #F8FAFC;
-      --text-muted: #94A3B8;
-      --text-faint: #64748B;
+      --text-muted: #CBD5E1;
+      --text-faint: #94A3B8;
       
       --border-chunky: #334155;
-      --card-base: #1E293B;
-      --card-elevated: #24344D;
-      --card-highlight: #2D3F5C;
-      
-      --shadow-block-lg: 0 10px 0 #050811, 0 24px 40px rgba(0,0,0,0.5);
-      --shadow-block-md: 0 6px 0 #050811, 0 14px 24px rgba(0,0,0,0.4);
-      --shadow-block-sm: 0 4px 0 #050811;
-      --shadow-btn: 0 5px 0 #050811;
+      --shadow-block: 0 6px 0 #050811;
+      --shadow-sm: 0 3px 0 #050811;
     }
 
     * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -100,60 +67,20 @@
       color: var(--text-dark);
       font-family: "Plus Jakarta Sans", sans-serif;
       background-color: var(--bg-sky);
-      background-image: 
-        radial-gradient(circle at 10% 20%, rgba(14, 165, 233, 0.18), transparent 32rem),
-        radial-gradient(circle at 90% 80%, rgba(34, 197, 94, 0.18), transparent 35rem),
-        radial-gradient(circle at 50% 50%, rgba(251, 191, 36, 0.12), transparent 40rem);
-      background-attachment: fixed;
-      line-height: 1.55;
+      line-height: 1.6;
       -webkit-font-smoothing: antialiased;
     }
 
-    h1, h2, h3, h4, .brand-title, .pill-tag, .stat-number, .btn-cartoon {
-      font-family: "Fredoka", "Plus Jakarta Sans", sans-serif;
+    h1, h2, h3, h4, .brand-title, .beat-pill, .btn-cartoon {
+      font-family: "Fredoka", sans-serif;
       font-weight: 700;
       letter-spacing: -0.01em;
     }
 
     code, pre { font-family: "JetBrains Mono", monospace; }
 
-    /* Floating Clouds */
-    .cartoon-clouds-bg {
-      position: fixed;
-      inset: 0;
-      pointer-events: none;
-      z-index: 0;
-      overflow: hidden;
-    }
-
-    .cloud {
-      position: absolute;
-      background: #FFFFFF;
-      border: 3px solid var(--ink);
-      border-radius: var(--radius-pill);
-      box-shadow: 0 6px 0 var(--ink);
-      opacity: 0.85;
-      animation: floatCloud 24s linear infinite;
-    }
-
-    [data-theme="dark"] .cloud {
-      background: #1E293B;
-      opacity: 0.35;
-    }
-
-    .cloud-1 { width: 140px; height: 48px; top: 10%; left: -160px; animation-duration: 32s; }
-    .cloud-2 { width: 190px; height: 60px; top: 45%; left: -210px; animation-duration: 44s; animation-delay: 8s; }
-    .cloud-3 { width: 120px; height: 42px; top: 80%; left: -140px; animation-duration: 28s; animation-delay: 16s; }
-
-    @keyframes floatCloud {
-      0% { transform: translateX(0); }
-      100% { transform: translateX(calc(100vw + 300px)); }
-    }
-
     /* Layout Shell */
     .app-shell {
-      position: relative;
-      z-index: 1;
       display: grid;
       grid-template-columns: var(--sidebar-w) minmax(0, 1fr);
       min-height: 100vh;
@@ -162,13 +89,12 @@
     .sidebar-backdrop {
       position: fixed;
       inset: 0;
-      background: rgba(15, 23, 42, 0.65);
+      background: rgba(15, 23, 42, 0.6);
       backdrop-filter: blur(4px);
-      -webkit-backdrop-filter: blur(4px);
       z-index: 95;
       opacity: 0;
       pointer-events: none;
-      transition: opacity 0.25s ease;
+      transition: opacity 0.2s ease;
     }
     .sidebar-backdrop.active { opacity: 1; pointer-events: auto; }
 
@@ -180,65 +106,54 @@
       bottom: 0;
       width: var(--sidebar-w);
       background: var(--bg-card);
-      border-right: 3.5px solid var(--border-chunky);
+      border-right: 3px solid var(--border-chunky);
       display: flex;
       flex-direction: column;
       padding: 24px 18px;
       z-index: 100;
       overflow-y: auto;
-      box-shadow: 4px 0 20px rgba(0,0,0,0.06);
     }
 
     .brand-cluster {
       display: flex;
       align-items: center;
-      gap: 14px;
+      gap: 12px;
       text-decoration: none;
     }
 
     .brand-logo-badge {
-      width: 50px;
-      height: 50px;
-      border-radius: 16px;
-      background: linear-gradient(135deg, var(--cartoon-yellow), var(--cartoon-orange));
-      border: 3px solid var(--border-chunky);
-      box-shadow: 0 4px 0 var(--border-chunky);
+      width: 46px;
+      height: 46px;
+      border-radius: 14px;
+      background: linear-gradient(135deg, var(--accent-yellow), #FB923C);
+      border: 2.5px solid var(--border-chunky);
+      box-shadow: var(--shadow-sm);
       display: grid;
       place-items: center;
       flex-shrink: 0;
-      transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
     }
 
-    .brand-cluster:hover .brand-logo-badge {
-      transform: rotate(-6deg) scale(1.08);
-    }
-
-    .brand-logo-badge svg {
-      width: 30px;
-      height: 30px;
-    }
+    .brand-logo-badge svg { width: 28px; height: 28px; }
 
     .brand-title-wrap strong {
       display: block;
-      font-size: 1.3rem;
+      font-size: 1.25rem;
       color: var(--text-dark);
-      font-family: "Fredoka", sans-serif;
-      line-height: 1.05;
+      line-height: 1.1;
     }
 
     .brand-title-wrap small {
       display: inline-block;
-      font-size: 0.66rem;
+      font-size: 0.65rem;
       font-weight: 800;
       text-transform: uppercase;
       letter-spacing: 0.08em;
       color: #FFFFFF;
-      background: var(--cartoon-blue-deep);
-      padding: 2px 10px;
+      background: var(--accent-blue-deep);
+      padding: 2px 8px;
       border-radius: var(--radius-pill);
       margin-top: 4px;
-      border: 2px solid var(--border-chunky);
-      box-shadow: 0 2px 0 var(--border-chunky);
+      border: 1.5px solid var(--border-chunky);
     }
 
     .nav-section-title {
@@ -247,7 +162,7 @@
       text-transform: uppercase;
       letter-spacing: 0.12em;
       color: var(--text-faint);
-      margin: 18px 8px 10px;
+      margin: 20px 8px 8px;
     }
 
     .nav-list {
@@ -260,50 +175,38 @@
       display: flex;
       align-items: center;
       gap: 12px;
-      padding: 11px 15px;
-      border-radius: var(--radius-md);
+      padding: 10px 14px;
+      border-radius: 12px;
       font-size: 0.86rem;
       font-weight: 700;
       color: var(--text-muted);
-      border: 2.5px solid transparent;
+      border: 2px solid transparent;
       background: transparent;
-      transition: all 0.16s cubic-bezier(0.34, 1.56, 0.64, 1);
       text-decoration: none;
+      transition: all 0.15s ease;
     }
 
     .nav-pill-btn svg {
-      width: 19px;
-      height: 19px;
+      width: 18px;
+      height: 18px;
       stroke: currentColor;
       fill: none;
       stroke-width: 2.5;
       flex-shrink: 0;
-      transition: transform 0.2s ease;
     }
 
     .nav-pill-btn:hover {
       color: var(--text-dark);
-      background: var(--bg-canvas);
+      background: var(--bg-card-alt);
       border-color: var(--border-chunky);
-      transform: translateX(4px);
-      box-shadow: 0 3px 0 var(--border-chunky);
-    }
-
-    .nav-pill-btn:hover svg {
-      transform: scale(1.15) rotate(6deg);
-      stroke: var(--cartoon-blue-deep);
+      transform: translateX(3px);
     }
 
     .nav-pill-btn.active {
       color: #0F172A;
-      background: var(--cartoon-yellow);
+      background: var(--accent-yellow);
       border-color: var(--border-chunky);
-      box-shadow: 0 4px 0 var(--border-chunky);
-      transform: translateY(-2px);
-    }
-
-    .nav-pill-btn.active svg {
-      stroke: #0F172A;
+      box-shadow: var(--shadow-sm);
     }
 
     .nav-counter-tag {
@@ -312,66 +215,12 @@
       font-weight: 800;
       padding: 2px 8px;
       border-radius: var(--radius-pill);
-      background: var(--bg-sky);
-      color: var(--cartoon-blue-deep);
-      border: 2px solid var(--border-chunky);
+      background: var(--bg-tint);
+      color: var(--accent-blue-deep);
+      border: 1.5px solid var(--border-chunky);
     }
 
-    .nav-pill-btn.active .nav-counter-tag {
-      background: #0F172A;
-      color: var(--cartoon-yellow);
-      border-color: #0F172A;
-    }
-
-    .sidebar-footer-card {
-      margin-top: auto;
-      padding-top: 18px;
-      border-top: 3.5px dashed var(--border-chunky);
-    }
-
-    .channel-handle-box {
-      background: var(--bg-canvas);
-      border: 3px solid var(--border-chunky);
-      border-radius: var(--radius-md);
-      padding: 12px 14px;
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      box-shadow: 0 4px 0 var(--border-chunky);
-    }
-
-    .live-pulse-dot {
-      width: 12px;
-      height: 12px;
-      border-radius: 50%;
-      background: var(--cartoon-green);
-      border: 2px solid var(--ink);
-      box-shadow: 0 0 10px var(--cartoon-green);
-      animation: cartoonPulse 1.8s infinite;
-    }
-
-    @keyframes cartoonPulse {
-      0%, 100% { transform: scale(1); }
-      50% { transform: scale(1.35); }
-    }
-
-    .channel-handle-box span {
-      display: block;
-      font-size: 0.64rem;
-      font-weight: 800;
-      color: var(--text-muted);
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-    }
-
-    .channel-handle-box strong {
-      font-size: 0.86rem;
-      color: var(--cartoon-blue-deep);
-      font-family: "JetBrains Mono", monospace;
-      font-weight: 800;
-    }
-
-    /* Main Content Wrapper */
+    /* Main Content */
     .main-wrapper {
       grid-column: 2;
       min-width: 0;
@@ -379,15 +228,14 @@
       flex-direction: column;
     }
 
-    /* Top Action Bar with Main Nav Links */
+    /* Top Sticky Action Bar */
     .topbar {
       position: sticky;
       top: 0;
       z-index: 90;
-      backdrop-filter: blur(16px);
-      -webkit-backdrop-filter: blur(16px);
-      background: rgba(240, 249, 255, 0.94);
-      border-bottom: 3.5px solid var(--ink);
+      backdrop-filter: blur(12px);
+      background: rgba(240, 249, 255, 0.95);
+      border-bottom: 3px solid var(--ink);
       padding: 12px clamp(16px, 3vw, 40px);
       display: flex;
       align-items: center;
@@ -396,7 +244,7 @@
     }
 
     [data-theme="dark"] .topbar {
-      background: rgba(15, 23, 42, 0.94);
+      background: rgba(15, 23, 42, 0.95);
     }
 
     .top-main-nav {
@@ -416,15 +264,14 @@
       font-weight: 800;
       color: var(--text-dark);
       background: var(--bg-card);
-      border: 2.5px solid var(--ink);
-      box-shadow: 0 3px 0 var(--ink);
+      border: 2px solid var(--ink);
+      box-shadow: var(--shadow-sm);
       display: inline-flex;
       align-items: center;
       gap: 7px;
       text-decoration: none;
       white-space: nowrap;
       transition: all 0.12s ease;
-      user-select: none;
     }
 
     .top-nav-link svg {
@@ -437,431 +284,377 @@
 
     .top-nav-link:hover {
       transform: translateY(-2px);
-      box-shadow: 0 5px 0 var(--ink);
-      background: var(--bg-canvas);
+      background: var(--bg-card-alt);
     }
 
     .top-nav-link.active {
-      background: var(--cartoon-yellow);
+      background: var(--accent-yellow);
       color: var(--ink);
-      border-color: var(--ink);
     }
-
-    .top-action-group {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      flex-shrink: 0;
-    }
-
-    .btn-cartoon {
-      height: 40px;
-      padding: 0 18px;
-      border-radius: var(--radius-box);
-      font-size: 0.86rem;
-      font-weight: 700;
-      border: 3px solid var(--ink);
-      background: var(--bg-card);
-      color: var(--text-dark);
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      box-shadow: var(--shadow-btn);
-      cursor: pointer;
-      transition: all 0.12s ease;
-      text-decoration: none;
-      user-select: none;
-    }
-
-    .btn-cartoon svg {
-      width: 17px;
-      height: 17px;
-      stroke: currentColor;
-      fill: none;
-      stroke-width: 2.8;
-    }
-
-    .btn-cartoon.btn-gold { background: var(--cartoon-yellow); color: var(--ink); }
-    .btn-cartoon.btn-cyan { background: var(--cartoon-blue); color: #FFFFFF; }
-    .btn-cartoon.btn-emerald { background: var(--cartoon-green); color: var(--ink); }
 
     .icon-btn-cartoon {
-      width: 40px;
-      height: 40px;
-      border-radius: var(--radius-box);
-      border: 3px solid var(--ink);
+      width: 38px;
+      height: 38px;
+      border-radius: 12px;
+      border: 2.5px solid var(--ink);
       background: var(--bg-card);
       color: var(--text-dark);
-      box-shadow: var(--shadow-btn);
+      box-shadow: var(--shadow-sm);
       display: grid;
       place-items: center;
       cursor: pointer;
-      transition: all 0.12s ease;
       flex-shrink: 0;
     }
 
     .icon-btn-cartoon svg {
-      width: 19px;
-      height: 19px;
+      width: 18px;
+      height: 18px;
       stroke: var(--text-dark);
       fill: none;
       stroke-width: 2.6;
     }
 
-    /* Page Content */
+    /* Container */
     .content-container {
-      width: min(1340px, calc(100% - 48px));
+      width: min(1200px, calc(100% - 40px));
       margin: 0 auto;
-      padding: 36px 0 100px;
+      padding: 32px 0 100px;
     }
 
-    /* Hero Showcase Banner */
-    .hero-cartoon-card {
-      position: relative;
-      overflow: hidden;
-      border-radius: var(--radius-bubble);
-      border: 4px solid var(--ink);
+    /* Clean Hero Card */
+    .clean-hero-card {
       background: var(--bg-card);
-      padding: clamp(32px, 5vw, 60px);
-      margin-bottom: 36px;
-      box-shadow: var(--shadow-block-lg);
-    }
-
-    .hero-badge-pill {
-      display: inline-flex;
-      align-items: center;
-      gap: 9px;
-      padding: 8px 18px;
-      border-radius: var(--radius-pill);
-      background: var(--cartoon-yellow);
       border: 3px solid var(--ink);
-      color: var(--ink);
-      font-size: 0.76rem;
-      font-weight: 800;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      margin-bottom: 18px;
-      box-shadow: 0 4px 0 var(--ink);
-    }
-
-    .hero-badge-pill svg {
-      width: 16px;
-      height: 16px;
-      stroke: var(--ink);
-      fill: none;
-      stroke-width: 2.8;
-    }
-
-    .hero-title {
-      font-size: clamp(2.2rem, 5vw, 4rem);
-      line-height: 1.1;
-      letter-spacing: -0.02em;
-      max-width: 960px;
-      margin-bottom: 18px;
-      color: var(--text-dark);
-    }
-
-    .hero-kpi-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
-      gap: 16px;
-      margin-top: 32px;
-      padding-top: 28px;
-      border-top: 3.5px dashed var(--ink);
-    }
-
-    .kpi-block {
-      background: var(--bg-canvas);
-      border: 3.5px solid var(--ink);
       border-radius: var(--radius-box);
-      padding: 16px 20px;
-      box-shadow: var(--shadow-block-sm);
+      padding: 32px clamp(20px, 4vw, 40px);
+      margin-bottom: 28px;
+      box-shadow: var(--shadow-block);
     }
 
-    .kpi-block .stat-value {
-      font-size: 2.3rem;
-      color: var(--text-dark);
-      line-height: 1;
-      display: flex;
-      align-items: baseline;
-      gap: 6px;
-    }
-
-    .kpi-block .stat-value span { font-size: 0.95rem; color: var(--cartoon-coral-deep); }
-    .kpi-block .stat-label { display: block; margin-top: 6px; font-size: 0.76rem; font-weight: 700; color: var(--text-muted); }
-
-    /* Studio Tab Bar Navigation */
-    .studio-tab-bar {
-      position: sticky;
-      top: 76px;
-      z-index: 80;
-      background: var(--bg-card);
-      border: 3.5px solid var(--ink);
-      border-radius: var(--radius-bubble);
-      padding: 12px 18px;
-      margin-bottom: 36px;
-      box-shadow: var(--shadow-block-md);
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      overflow-x: auto;
-      scrollbar-width: none;
-    }
-    .studio-tab-bar::-webkit-scrollbar { display: none; }
-
-    .studio-tab-btn {
-      height: 42px;
-      padding: 0 20px;
-      border-radius: var(--radius-pill);
-      font-size: 0.84rem;
-      font-weight: 800;
-      border: 2.5px solid var(--ink);
-      background: var(--bg-canvas);
-      color: var(--text-dark);
-      box-shadow: 0 3px 0 var(--ink);
-      cursor: pointer;
-      transition: all 0.12s ease;
+    .hero-top-badge {
       display: inline-flex;
       align-items: center;
       gap: 8px;
+      padding: 6px 14px;
+      border-radius: var(--radius-pill);
+      background: var(--accent-yellow);
+      border: 2px solid var(--ink);
+      color: var(--ink);
+      font-size: 0.76rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      margin-bottom: 14px;
+    }
+
+    .hero-title {
+      font-size: clamp(1.8rem, 4vw, 2.8rem);
+      line-height: 1.15;
+      color: var(--text-dark);
+      margin-bottom: 12px;
+    }
+
+    .hero-desc {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      max-width: 820px;
+      line-height: 1.55;
+    }
+
+    .hero-kpis-ribbon {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 24px;
+      padding-top: 20px;
+      border-top: 2.5px dashed var(--border-chunky);
+    }
+
+    .kpi-pill {
+      background: var(--bg-card-alt);
+      border: 2px solid var(--ink);
+      border-radius: var(--radius-pill);
+      padding: 6px 16px;
+      font-size: 0.82rem;
+      font-weight: 700;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .kpi-pill strong { color: var(--accent-blue-deep); }
+
+    /* Tab Switcher */
+    .studio-tab-bar {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 28px;
+      overflow-x: auto;
+      scrollbar-width: none;
+      position: sticky;
+      top: 68px;
+      z-index: 80;
+      background: var(--bg-sky);
+      padding: 8px 0;
+    }
+    .studio-tab-bar::-webkit-scrollbar { display: none; }
+
+    .tab-btn {
+      height: 42px;
+      padding: 0 20px;
+      border-radius: var(--radius-pill);
+      font-size: 0.86rem;
+      font-weight: 800;
+      border: 2.5px solid var(--ink);
+      background: var(--bg-card);
+      color: var(--text-dark);
+      box-shadow: var(--shadow-sm);
+      cursor: pointer;
+      transition: all 0.12s ease;
       white-space: nowrap;
       user-select: none;
     }
 
-    .studio-tab-btn:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 5px 0 var(--ink);
-    }
-
-    .studio-tab-btn.active {
-      background: var(--cartoon-yellow);
+    .tab-btn:hover { transform: translateY(-2px); }
+    .tab-btn.active {
+      background: var(--accent-yellow);
       color: var(--ink);
       transform: translateY(-2px);
-      box-shadow: 0 4px 0 var(--ink);
     }
 
-    /* Studio Tab Content Panes */
-    .studio-pane {
-      display: none;
-      flex-direction: column;
-      gap: 28px;
-    }
+    /* Tab Panes */
+    .tab-pane { display: none; flex-direction: column; gap: 24px; }
+    .tab-pane.active { display: flex; }
 
-    .studio-pane.active {
-      display: flex;
-    }
-
-    .studio-card {
+    /* Clean Script Cards */
+    .clean-script-card {
       background: var(--bg-card);
-      border: 3.5px solid var(--ink);
-      border-radius: var(--radius-bubble);
-      padding: clamp(24px, 3.5vw, 36px);
-      box-shadow: var(--shadow-block-md);
+      border: 3px solid var(--ink);
+      border-radius: var(--radius-box);
+      padding: 24px 28px;
+      box-shadow: var(--shadow-block);
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
     }
 
-    .studio-card-head {
+    .card-top-bar {
       display: flex;
       align-items: center;
       justify-content: space-between;
+      flex-wrap: wrap;
       gap: 12px;
-      margin-bottom: 20px;
-      padding-bottom: 16px;
-      border-bottom: 3.5px dashed var(--ink);
+      padding-bottom: 14px;
+      border-bottom: 2px dashed var(--border-chunky);
     }
 
-    .studio-card-head h2, .studio-card-head h3 {
-      font-size: 1.5rem;
+    .card-title-group {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .beat-pill {
+      font-size: 0.85rem;
+      font-weight: 800;
+      background: var(--accent-yellow);
+      color: #0F172A;
+      padding: 4px 14px;
+      border-radius: var(--radius-pill);
+      border: 2px solid var(--ink);
+    }
+
+    .card-title-group h3 {
+      font-size: 1.25rem;
       color: var(--text-dark);
     }
 
-    .pill-tag {
+    .time-tag {
+      font-family: "JetBrains Mono", monospace;
+      font-size: 0.78rem;
+      font-weight: 800;
+      color: var(--accent-blue-deep);
+      background: var(--bg-tint);
+      padding: 3px 10px;
+      border-radius: var(--radius-pill);
+      border: 1.5px solid var(--border-chunky);
+    }
+
+    .word-count-tag {
+      font-size: 0.74rem;
+      font-weight: 800;
+      color: var(--text-faint);
+    }
+
+    /* Large Readable Voiceover Box */
+    .voiceover-text-box {
+      background: var(--bg-card-alt);
+      border: 2px solid var(--ink);
+      border-radius: 14px;
+      padding: 18px 22px;
+    }
+
+    .voiceover-text-box p {
+      font-size: 1.12rem;
+      line-height: 1.8;
+      color: var(--text-dark);
+      font-weight: 600;
+    }
+
+    /* Production Directive Box */
+    .production-directive-box {
+      background: var(--bg-sky);
+      border: 2px solid var(--ink);
+      border-radius: 14px;
+      padding: 16px 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .directive-row {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 16px;
+      align-items: center;
+    }
+
+    .directive-label {
+      display: block;
       font-size: 0.72rem;
       font-weight: 800;
       text-transform: uppercase;
       letter-spacing: 0.06em;
-      padding: 5px 14px;
-      border-radius: var(--radius-pill);
-      border: 2px solid var(--ink);
-      background: var(--bg-canvas);
-      color: var(--text-dark);
-      box-shadow: 0 2px 0 var(--ink);
+      color: var(--accent-blue-deep);
+      margin-bottom: 3px;
     }
 
-    /* Timeline Shot-by-Shot Table */
-    .timeline-table {
-      width: 100%;
-      border-collapse: separate;
-      border-spacing: 0 16px;
+    .directive-item p {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      font-weight: 500;
     }
 
-    .timeline-row {
-      background: var(--bg-canvas);
-      border: 3px solid var(--ink);
-      border-radius: var(--radius-lg);
-      box-shadow: var(--shadow-block-sm);
-      transition: transform 0.15s ease;
-    }
-
-    .timeline-row:hover {
-      transform: translateY(-3px);
-      box-shadow: var(--shadow-block-md);
-    }
-
-    .timeline-cell {
-      padding: 18px 20px;
-      vertical-align: top;
-      border-top: 3px solid var(--ink);
-      border-bottom: 3px solid var(--ink);
-    }
-
-    .timeline-cell:first-child {
-      border-left: 3px solid var(--ink);
-      border-top-left-radius: var(--radius-lg);
-      border-bottom-left-radius: var(--radius-lg);
-      width: 140px;
-      background: var(--bg-card);
-    }
-
-    .timeline-cell:last-child {
-      border-right: 3px solid var(--ink);
-      border-top-right-radius: var(--radius-lg);
-      border-bottom-right-radius: var(--radius-lg);
-      width: 320px;
-    }
-
-    .clip-badge {
-      font-size: 1.15rem;
-      font-weight: 800;
-      color: var(--ink);
-      background: var(--cartoon-yellow);
+    .cut-trigger-pill {
+      display: inline-block;
+      background: #FFE4E6;
+      color: var(--accent-coral);
+      border: 1.5px solid var(--accent-coral);
       padding: 4px 12px;
       border-radius: var(--radius-pill);
-      border: 2px solid var(--ink);
-      box-shadow: 0 2px 0 var(--ink);
-      display: inline-block;
-      margin-bottom: 6px;
-    }
-
-    .cut-trigger-tag {
-      display: inline-block;
-      margin-top: 8px;
-      background: #FFE4E6;
-      color: var(--cartoon-coral-deep);
-      border: 1.5px solid var(--cartoon-coral-deep);
-      padding: 3px 10px;
-      border-radius: var(--radius-sm);
       font-size: 0.76rem;
       font-weight: 800;
       font-family: "JetBrains Mono", monospace;
+      white-space: nowrap;
     }
 
-    .prompt-snippet-box {
+    .directive-prompt-box {
       background: #0F172A;
       color: #38BDF8;
       border: 2px solid var(--ink);
-      border-radius: var(--radius-sm);
-      padding: 10px 12px;
-      font-family: "JetBrains Mono", monospace;
-      font-size: 0.78rem;
-      line-height: 1.45;
-      position: relative;
+      border-radius: 12px;
+      padding: 12px 16px;
     }
 
-    .copy-mini-btn {
-      position: absolute;
-      top: 6px;
-      right: 6px;
-      background: var(--cartoon-yellow);
+    .prompt-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 8px;
+    }
+
+    .prompt-label {
+      font-size: 0.72rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: #94A3B8;
+    }
+
+    .clean-copy-btn {
+      background: var(--accent-yellow);
       color: #0F172A;
       border: 1.5px solid #0F172A;
-      border-radius: var(--radius-sm);
-      padding: 3px 8px;
-      font-size: 0.68rem;
+      border-radius: 8px;
+      padding: 3px 10px;
+      font-size: 0.72rem;
       font-weight: 800;
       cursor: pointer;
+      transition: transform 0.1s ease;
     }
 
-    /* Intel blocks */
-    .intel-block {
-      background: var(--bg-canvas);
-      border: 2.5px solid var(--ink);
-      border-radius: var(--radius-box);
-      padding: 14px 16px;
-      font-size: 0.84rem;
+    .clean-copy-btn:hover { transform: scale(1.05); }
+
+    .prompt-text {
+      margin: 0;
+      white-space: pre-wrap;
+      word-break: break-word;
+      font-size: 0.82rem;
+      line-height: 1.5;
+      color: #38BDF8;
+    }
+
+    .sfx-footer-row {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.78rem;
+      font-weight: 700;
       color: var(--text-muted);
-      line-height: 1.55;
     }
+    .sfx-label { color: var(--accent-coral); }
 
-    .intel-block strong {
-      display: block;
-      font-size: 0.68rem;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      color: var(--cartoon-blue-deep);
-      margin-bottom: 4px;
-    }
-
-    /* Toast Notification */
+    /* Toast */
     .toast-pill {
       position: fixed;
       bottom: 24px;
       right: 24px;
-      background: var(--cartoon-green);
+      background: var(--accent-green);
       color: #0F172A;
       padding: 12px 24px;
       border-radius: var(--radius-pill);
-      border: 3.5px solid var(--ink);
+      border: 3px solid var(--ink);
       font-weight: 800;
       font-size: 0.86rem;
-      box-shadow: var(--shadow-block-md);
+      box-shadow: var(--shadow-block);
       z-index: 2000;
       transform: translateY(120px);
-      transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+      transition: transform 0.25s ease;
       pointer-events: none;
     }
     .toast-pill.show { transform: translateY(0); }
 
-    /* Mobile Drawer */
+    /* Mobile */
     .mobile-nav-toggle, .mobile-close-btn { display: none; }
 
     @media (max-width: 1040px) {
       .app-shell { grid-template-columns: 1fr; }
-      .sidebar { 
-        transform: translateX(-105%); 
-        transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1); 
-        width: min(320px, 86vw);
-        box-shadow: 10px 0 0 rgba(15, 23, 42, 0.2);
+      .sidebar {
+        transform: translateX(-105%);
+        transition: transform 0.25s ease;
+        width: min(300px, 84vw);
         z-index: 1000;
       }
       .sidebar.open { transform: translateX(0); }
-      .mobile-nav-toggle { display: grid; }
-      .mobile-close-btn { display: grid; }
+      .mobile-nav-toggle, .mobile-close-btn { display: grid; }
       .main-wrapper { grid-column: 1; }
-      .timeline-table, .timeline-row, .timeline-cell { display: block; width: 100% !important; }
-      .timeline-cell { border: none !important; padding: 12px 14px; }
-      .timeline-row { border: 3px solid var(--ink); margin-bottom: 20px; }
+      .directive-row { grid-template-columns: 1fr; }
     }
 
     @media (max-width: 640px) {
-      .topbar { padding: 10px 12px; gap: 8px; }
-      .top-main-nav { gap: 6px; }
+      .topbar { padding: 10px 14px; }
       .top-nav-link span { display: none; }
       .top-nav-link { padding: 0 10px; }
-      .content-container { width: calc(100% - 20px); padding: 20px 0 80px; }
-      .hero-cartoon-card { padding: 24px 18px; margin-bottom: 28px; }
-      .hero-title { font-size: clamp(1.8rem, 7.5vw, 2.6rem); }
-      .studio-tab-bar { top: 70px; padding: 10px; }
+      .content-container { width: calc(100% - 24px); padding: 18px 0 80px; }
+      .clean-hero-card { padding: 22px 18px; }
+      .clean-script-card { padding: 18px 16px; }
+      .voiceover-text-box { padding: 14px 16px; }
+      .voiceover-text-box p { font-size: 1.02rem; }
     }
   </style>
 </head>
 <body>
-
-  <!-- Floating Clouds Background -->
-  <div class="cartoon-clouds-bg" aria-hidden="true">
-    <div class="cloud cloud-1"></div>
-    <div class="cloud cloud-2"></div>
-    <div class="cloud cloud-3"></div>
-  </div>
 
   <!-- Mobile Backdrop Overlay -->
   <div class="sidebar-backdrop" id="sidebarBackdrop"></div>
@@ -870,15 +663,12 @@
     <!-- Left Navigation Bar -->
     <aside class="sidebar" id="appSidebar">
       
-      <!-- Brand Cluster -->
-      <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 22px; border-bottom: 3.5px dashed var(--border-chunky); padding-bottom: 18px;">
+      <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 20px; border-bottom: 2.5px dashed var(--border-chunky); padding-bottom: 16px;">
         <a class="brand-cluster" href="../../../index.html">
           <div class="brand-logo-badge">
             <svg viewBox="0 0 128 128">
               <circle cx="64" cy="64" r="54" fill="#0EA5E9" stroke="#0F172A" stroke-width="8"/>
               <path d="M36 44 C42 32, 60 30, 70 38 C78 45, 88 42, 94 50 C100 58, 92 72, 82 74 C74 76, 68 88, 56 90 C46 92, 38 82, 34 72 Z" fill="#FBBF24" stroke="#0F172A" stroke-width="5"/>
-              <circle cx="64" cy="64" r="44" fill="none" stroke="#FFFFFF" stroke-width="3" stroke-dasharray="6 6" opacity="0.45"/>
-              <path d="M64 36 C55 27, 55 14, 64 8 C73 14, 73 27, 64 36 Z" fill="#F43F5E" stroke="#0F172A" stroke-width="4"/>
             </svg>
           </div>
           <div class="brand-title-wrap">
@@ -891,27 +681,23 @@
         </button>
       </div>
 
-      <span class="nav-section-title">Command Center</span>
+      <span class="nav-section-title">Main Navigation</span>
       <nav class="nav-list">
         <a href="../../../index.html" class="nav-pill-btn">
           <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg>
           <span>Mission Control</span>
-          <span class="nav-counter-tag">Hub</span>
         </a>
         <a href="../../weekly-calendar/weekly-calendar-dashboard.html" class="nav-pill-btn">
           <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
           <span>8-Week Calendar</span>
-          <span class="nav-counter-tag">56 Days</span>
         </a>
         <a href="../long-videos-dashboard.html" class="nav-pill-btn">
           <svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="2.18" ry="2.18"/><line x1="7" y1="2" x2="7" y2="22"/><line x1="17" y1="2" x2="17" y2="22"/><line x1="2" y1="12" x2="22" y2="12"/></svg>
           <span>Long Videos</span>
-          <span class="nav-counter-tag">V1–V8</span>
         </a>
         <a href="../../shorts/shorts-dashboard.html" class="nav-pill-btn">
           <svg viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
           <span>Shorts Studio</span>
-          <span class="nav-counter-tag">9:16</span>
         </a>
         <a href="../../style-guide/style-guide-dashboard.html" class="nav-pill-btn">
           <svg viewBox="0 0 24 24"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
@@ -919,48 +705,29 @@
         </a>
       </nav>
 
-      <span class="nav-section-title">8-Week Long Studios</span>
+      <span class="nav-section-title">Long Studios</span>
       <nav class="nav-list">
-        <a href="../v1/production-studio.html" class="nav-pill-btn">
+        <a href="../v1/production-studio.html" class="nav-pill-btn ">
           <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
           <span>V1 · Africa Map Lie</span>
         </a>
-        <a href="production-studio.html" class="nav-pill-btn active">
+        <a href="../v2/production-studio.html" class="nav-pill-btn active">
           <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
           <span>V2 · Empty Land</span>
         </a>
-        <a href="../v3/production-studio.html" class="nav-pill-btn">
-          <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-          <span>V3 · Border Town</span>
-        </a>
-        <a href="../v4/production-studio.html" class="nav-pill-btn">
-          <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-          <span>V4 · Dying River</span>
-        </a>
       </nav>
-
-      <div class="sidebar-footer-card">
-        <div class="channel-handle-box">
-          <div class="live-pulse-dot"></div>
-          <div>
-            <span>Verified YouTube Handle</span>
-            <strong>@hiddengeography</strong>
-          </div>
-        </div>
-      </div>
     </aside>
 
     <!-- Main Content Wrapper -->
     <div class="main-wrapper">
       
-      <!-- Top Action Bar with Main Nav Links -->
+      <!-- Top Action Bar -->
       <header class="topbar">
         <div style="display: flex; align-items: center; gap: 8px;">
-          <button class="icon-btn-cartoon mobile-nav-toggle" id="sidebarToggle" title="Open Navigation Menu" aria-label="Toggle navigation">
+          <button class="icon-btn-cartoon mobile-nav-toggle" id="sidebarToggle" title="Open Navigation Menu">
             <svg viewBox="0 0 24 24"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
           </button>
           
-          <!-- Top Menu Bar Main Hub Navigation -->
           <nav class="top-main-nav">
             <a class="top-nav-link" href="../../../index.html">
               <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg>
@@ -985,823 +752,696 @@
           </nav>
         </div>
 
-        <div class="top-action-group">
-          <button class="icon-btn-cartoon" id="themeToggle" title="Toggle Theme Mode">
-            <svg id="themeIcon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
-          </button>
-        </div>
+        <button class="icon-btn-cartoon" id="themeToggle" title="Toggle Theme">
+          <svg id="themeIcon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+        </button>
       </header>
 
       <!-- Main Page Content -->
       <main class="content-container">
 
-        <!-- Hero Showcase Banner -->
-        <section class="hero-cartoon-card">
-          <div class="hero-badge-pill">
-            <svg viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+        <!-- Clean Hero Banner -->
+        <section class="clean-hero-card">
+          <div class="hero-top-badge">
+            <svg viewBox="0 0 24 24" style="width:14px; height:14px; stroke:currentColor; fill:none; stroke-width:3;"><polygon points="5 3 19 12 5 21 5 3"/></svg>
             <span>Video 2 Studio · Week 2 (Day 14 Release)</span>
           </div>
 
-          <h1 class="hero-title">
-            Why Nobody Lives in the <span style="color:var(--cartoon-blue); text-shadow: 2px 2px 0 var(--ink);">Most Empty Country</span> <br>
-            <span style="background:var(--cartoon-yellow); color:var(--ink); padding:2px 16px; border-radius:16px; border:3.5px solid var(--ink); box-shadow:0 5px 0 var(--ink); display:inline-block; margin-top:10px;">On Earth (V2 Studio)</span>
-          </h1>
+          <h1 class="hero-title">Why Nobody Lives in the Most Empty Country on Earth</h1>
+          <p class="hero-desc">Complete, deterministic single-page production workstation for Video 2. 12-beat verbatim teleprompter script, Google Flow AI cinematography prompts, and derived Shorts suite.</p>
 
-          <p class="hero-desc">
-            Complete, deterministic single-page production workstation for Video 2. Includes the verified packaging, line-by-line editing storyboard with exact cut triggers, full 12-beat script, Google Flow AI prompts, and 2 derived vertical Shorts.
-          </p>
-
-          <div class="hero-kpi-grid">
-            <div class="kpi-block">
-              <div class="stat-value">17 <span>/ 20</span></div>
-              <span class="stat-label">Topic Score (Tier 1 Verified)</span>
-            </div>
-            <div class="kpi-block">
-              <div class="stat-value">12:48 <span>min</span></div>
-              <span class="stat-label">12-Beat Total Runtime</span>
-            </div>
-            <div class="kpi-block">
-              <div class="stat-value">1,720 <span>words</span></div>
-              <span class="stat-label">Narrator Word Budget</span>
-            </div>
-            <div class="kpi-block">
-              <div class="stat-value">2 <span>Shorts</span></div>
-              <span class="stat-label">Derived 9:16 Shorts (§12)</span>
-            </div>
+          <div class="hero-kpis-ribbon">
+            <span class="kpi-pill">Topic Score: <strong>17 / 20</strong></span>
+            <span class="kpi-pill">Total Runtime: <strong>12:48 min</strong></span>
+            <span class="kpi-pill">Voiceover Word Budget: <strong>1,720 words</strong></span>
+            <span class="kpi-pill">Derived Shorts: <strong>2 Vertical Shorts</strong></span>
           </div>
         </section>
 
-        <!-- Studio Tab Bar Navigation -->
+        <!-- Clean Tab Switcher Bar -->
         <nav class="studio-tab-bar">
-          <button class="studio-tab-btn" data-tab="tab-timeline">
-            <svg viewBox="0 0 24 24" style="width:16px; height:16px; stroke:currentColor; fill:none; stroke-width:2.8;"><line x1="4" y1="6" x2="20" y2="6"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="18" x2="20" y2="18"/></svg>
-            <span>Shot-by-Shot Timeline & Storyboard</span>
-          </button>
-
-          <button class="studio-tab-btn active" data-tab="tab-script">
-            <svg viewBox="0 0 24 24" style="width:16px; height:16px; stroke:currentColor; fill:none; stroke-width:2.8;"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
-            <span>12-Beat Master Script</span>
-          </button>
-
-          <button class="studio-tab-btn" data-tab="tab-shorts">
-            <svg viewBox="0 0 24 24" style="width:16px; height:16px; stroke:currentColor; fill:none; stroke-width:2.8;"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
-            <span>Derived Shorts Suite (§12)</span>
-          </button>
-
-          <button class="studio-tab-btn" data-tab="tab-research">
-            <svg viewBox="0 0 24 24" style="width:16px; height:16px; stroke:currentColor; fill:none; stroke-width:2.8;"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
-            <span>Research Card & Fact-Checks</span>
-          </button>
-
-          <button class="studio-tab-btn" data-tab="tab-packaging">
-            <svg viewBox="0 0 24 24" style="width:16px; height:16px; stroke:currentColor; fill:none; stroke-width:2.8;"><rect x="2" y="2" width="20" height="20" rx="2.18" ry="2.18"/><line x1="7" y1="2" x2="7" y2="22"/><line x1="17" y1="2" x2="17" y2="22"/><line x1="2" y1="12" x2="22" y2="12"/></svg>
-            <span>Packaging & SEO Kit</span>
-          </button>
+          <button class="tab-btn active" data-tab="tab-script">📜 Full 12-Beat Script</button>
+          <button class="tab-btn" data-tab="tab-shorts">⚡ Derived Shorts Suite (§12)</button>
+          <button class="tab-btn" data-tab="tab-research">📋 Research & Fact Sheet</button>
+          <button class="tab-btn" data-tab="tab-packaging">🏷️ Packaging & SEO</button>
         </nav>
 
-        <!-- TAB 1: SHOT-BY-SHOT TIMELINE & STORYBOARD CUE SHEET -->
-        <section class="studio-pane" id="tab-timeline">
-          <div class="studio-card">
-            <div class="studio-card-head">
-              <div>
-                <h2>Shot-by-Shot Timeline & Storyboard Cue Sheet (§10.3 & §19.4)</h2>
-                <p style="color:var(--text-muted); font-size:0.84rem; margin-top:4px;">Connecting every spoken line directly to its exact Flow AI prompt, visual event, and cut trigger.</p>
+        <!-- TAB 1: FULL SCRIPT -->
+        <section class="tab-pane active" id="tab-script">
+            <!-- Beat 01 -->
+            <article class="clean-script-card">
+              <div class="card-top-bar">
+                <div class="card-title-group">
+                  <span class="beat-pill">Beat 01</span>
+                  <h3>The Scale Hook</h3>
+                  <span class="time-tag">0:00 – 0:45</span>
+                </div>
+                <span class="word-count-tag">118 words</span>
               </div>
-              <span class="pill-tag" style="background:var(--cartoon-green);">Premiere Pro Ready</span>
-            </div>
 
-            <table class="timeline-table" style="width:100%; border-collapse:separate; border-spacing:0 16px;">
-              <tbody>
-                <!-- CLIP 01 -->
-                <tr class="timeline-row" style="background:var(--bg-canvas); border:3px solid var(--ink); box-shadow:var(--shadow-block-sm);">
-                  <td class="timeline-cell" style="padding:18px 20px; border-top:3px solid var(--ink); border-bottom:3px solid var(--ink); border-left:3px solid var(--ink); border-top-left-radius:var(--radius-lg); border-bottom-left-radius:var(--radius-lg); width:140px; background:var(--bg-card);">
-                    <span style="font-size:1.15rem; font-weight:800; color:var(--ink); background:var(--cartoon-yellow); padding:4px 12px; border-radius:var(--radius-pill); border:2px solid var(--ink); display:inline-block; margin-bottom:6px;">CLIP 01</span>
-                    <div style="font-size:0.75rem; font-family:'JetBrains Mono', monospace; color:var(--cartoon-blue-deep); font-weight:800;">00:00 – 00:08</div>
-                    <span class="pill-tag" style="font-size:0.65rem; background:#FFE4E6; color:#9F1239; margin-top:6px;">[HOOK SHOT]</span>
-                  </td>
-                  <td class="timeline-cell" style="padding:18px 20px; border-top:3px solid var(--ink); border-bottom:3px solid var(--ink);">
-                    <div style="font-size:0.96rem; font-weight:700; color:var(--text-dark); line-height:1.5;">
-                      "Four entire European countries—the United Kingdom, France, Germany, and Italy—could fit inside this territory."
-                    </div>
-                    <div style="display:inline-block; margin-top:8px; background:#FFE4E6; color:var(--cartoon-coral-deep); border:1.5px solid var(--cartoon-coral-deep); padding:3px 10px; border-radius:var(--radius-sm); font-size:0.76rem; font-weight:800; font-family:'JetBrains Mono', monospace;">
-                      CUT ON: "fit inside this territory" ➔ CUT to Clip 02
-                    </div>
-                    <div style="margin-top:8px; font-size:0.78rem; color:var(--text-muted);">
-                      <strong>Visual Event:</strong> 2D Vector Basemap: Mongolia outline in deep amber. 4 European country silhouettes sweep in and nest into Mongolian borders.
-                    </div>
-                  </td>
-                  <td class="timeline-cell" style="padding:18px 20px; border-top:3px solid var(--ink); border-bottom:3px solid var(--ink); border-right:3px solid var(--ink); border-top-right-radius:var(--radius-lg); border-bottom-right-radius:var(--radius-lg); width:320px;">
-                    <div class="prompt-code-box" style="background:#0F172A; color:#38BDF8; border:2px solid var(--ink); border-radius:var(--radius-sm); padding:10px 12px; font-family:'JetBrains Mono', monospace; font-size:0.78rem; position:relative;">
-                      <button class="copy-mini-btn" style="position:absolute; top:6px; right:6px; background:var(--cartoon-yellow); color:#0F172A; border:1.5px solid #0F172A; border-radius:var(--radius-sm); padding:3px 8px; font-size:0.68rem; font-weight:800; cursor:pointer;" onclick="copySnippet(this)">Copy</button>
-                      <span>Create an 8-second horizontal 16:9 cinematic clip. High-altitude orthographic satellite camera looking down at vast golden Mongolian steppe bordered by Altai mountains, clear morning sunlight, clean 8k topology relief, no text --ar 16:9</span>
-                    </div>
-                    <div style="font-size:0.72rem; color:var(--text-faint); margin-top:6px; font-weight:700;">SFX: Deep cinematic map whoosh & continent slide</div>
-                  </td>
-                </tr>
-                <!-- CLIP 02 -->
-                <tr class="timeline-row" style="background:var(--bg-canvas); border:3px solid var(--ink); box-shadow:var(--shadow-block-sm);">
-                  <td class="timeline-cell" style="padding:18px 20px; border-top:3px solid var(--ink); border-bottom:3px solid var(--ink); border-left:3px solid var(--ink); border-top-left-radius:var(--radius-lg); border-bottom-left-radius:var(--radius-lg); width:140px; background:var(--bg-card);">
-                    <span style="font-size:1.15rem; font-weight:800; color:var(--ink); background:var(--cartoon-yellow); padding:4px 12px; border-radius:var(--radius-pill); border:2px solid var(--ink); display:inline-block; margin-bottom:6px;">CLIP 02</span>
-                    <div style="font-size:0.75rem; font-family:'JetBrains Mono', monospace; color:var(--cartoon-blue-deep); font-weight:800;">00:08 – 00:16</div>
-                    <span class="pill-tag" style="font-size:0.65rem; background:#FEF3C7; color:#92400E; margin-top:6px;">[SCALE SHOCK]</span>
-                  </td>
-                  <td class="timeline-cell" style="padding:18px 20px; border-top:3px solid var(--ink); border-bottom:3px solid var(--ink);">
-                    <div style="font-size:0.96rem; font-weight:700; color:var(--text-dark); line-height:1.5;">
-                      "Yet the total population of this vast land is smaller than the single metropolitan city of Madrid."
-                    </div>
-                    <div style="display:inline-block; margin-top:8px; background:#FFE4E6; color:var(--cartoon-coral-deep); border:1.5px solid var(--cartoon-coral-deep); padding:3px 10px; border-radius:var(--radius-sm); font-size:0.76rem; font-weight:800; font-family:'JetBrains Mono', monospace;">
-                      CUT ON: "city of Madrid" ➔ CUT to Clip 03
-                    </div>
-                    <div style="margin-top:8px; font-size:0.78rem; color:var(--text-muted);">
-                      <strong>Visual Event:</strong> Split screen counter: Madrid (3.4M people in 604 km²) vs Mongolia (3.4M people in 1,564,000 km²).
-                    </div>
-                  </td>
-                  <td class="timeline-cell" style="padding:18px 20px; border-top:3px solid var(--ink); border-bottom:3px solid var(--ink); border-right:3px solid var(--ink); border-top-right-radius:var(--radius-lg); border-bottom-right-radius:var(--radius-lg); width:320px;">
-                    <div class="prompt-code-box" style="background:#0F172A; color:#38BDF8; border:2px solid var(--ink); border-radius:var(--radius-sm); padding:10px 12px; font-family:'JetBrains Mono', monospace; font-size:0.78rem; position:relative;">
-                      <button class="copy-mini-btn" style="position:absolute; top:6px; right:6px; background:var(--cartoon-yellow); color:#0F172A; border:1.5px solid #0F172A; border-radius:var(--radius-sm); padding:3px 8px; font-size:0.68rem; font-weight:800; cursor:pointer;" onclick="copySnippet(this)">Copy</button>
-                      <span>Create an 8-second horizontal 16:9 cinematic clip. Cinematic low-altitude forward tracking shot over silent endless grassland under vast dramatic blue sky with lone wooden yurt in extreme distance, warm golden sunlight, no text --ar 16:9</span>
-                    </div>
-                    <div style="font-size:0.72rem; color:var(--text-faint); margin-top:6px; font-weight:700;">SFX: Digital data counter tick & subtle wind rumble</div>
-                  </td>
-                </tr>
-                <!-- CLIP 03 -->
-                <tr class="timeline-row" style="background:var(--bg-canvas); border:3px solid var(--ink); box-shadow:var(--shadow-block-sm);">
-                  <td class="timeline-cell" style="padding:18px 20px; border-top:3px solid var(--ink); border-bottom:3px solid var(--ink); border-left:3px solid var(--ink); border-top-left-radius:var(--radius-lg); border-bottom-left-radius:var(--radius-lg); width:140px; background:var(--bg-card);">
-                    <span style="font-size:1.15rem; font-weight:800; color:var(--ink); background:var(--cartoon-yellow); padding:4px 12px; border-radius:var(--radius-pill); border:2px solid var(--ink); display:inline-block; margin-bottom:6px;">CLIP 03</span>
-                    <div style="font-size:0.75rem; font-family:'JetBrains Mono', monospace; color:var(--cartoon-blue-deep); font-weight:800;">00:16 – 00:25</div>
-                    <span class="pill-tag" style="font-size:0.65rem; background:#E0F2FE; color:#0369A1; margin-top:6px;">[CENTRAL Q]</span>
-                  </td>
-                  <td class="timeline-cell" style="padding:18px 20px; border-top:3px solid var(--ink); border-bottom:3px solid var(--ink);">
-                    <div style="font-size:0.96rem; font-weight:700; color:var(--text-dark); line-height:1.5;">
-                      "With only two people per square kilometre, why is the world's emptiest country emptying even faster into a single capital?"
-                    </div>
-                    <div style="display:inline-block; margin-top:8px; background:#FFE4E6; color:var(--cartoon-coral-deep); border:1.5px solid var(--cartoon-coral-deep); padding:3px 10px; border-radius:var(--radius-sm); font-size:0.76rem; font-weight:800; font-family:'JetBrains Mono', monospace;">
-                      CUT ON: "into a single capital" ➔ CUT to Clip 04
-                    </div>
-                    <div style="margin-top:8px; font-size:0.78rem; color:var(--text-muted);">
-                      <strong>Visual Event:</strong> 3D Globe camera zooms rapidly from space into the dense urban grid of Ulaanbaatar glowing like a solitary lightbulb in a dark void.
-                    </div>
-                  </td>
-                  <td class="timeline-cell" style="padding:18px 20px; border-top:3px solid var(--ink); border-bottom:3px solid var(--ink); border-right:3px solid var(--ink); border-top-right-radius:var(--radius-lg); border-bottom-right-radius:var(--radius-lg); width:320px;">
-                    <div class="prompt-code-box" style="background:#0F172A; color:#38BDF8; border:2px solid var(--ink); border-radius:var(--radius-sm); padding:10px 12px; font-family:'JetBrains Mono', monospace; font-size:0.78rem; position:relative;">
-                      <button class="copy-mini-btn" style="position:absolute; top:6px; right:6px; background:var(--cartoon-yellow); color:#0F172A; border:1.5px solid #0F172A; border-radius:var(--radius-sm); padding:3px 8px; font-size:0.68rem; font-weight:800; cursor:pointer;" onclick="copySnippet(this)">Copy</button>
-                      <span>Create an 8-second horizontal 16:9 cinematic clip. Aerial panoramic orbit of Ulaanbaatar city valley encircled by snowy rugged peaks, dusk blue hour with amber streetlights emerging, realistic cold atmosphere, no text --ar 16:9</span>
-                    </div>
-                    <div style="font-size:0.72rem; color:var(--text-faint); margin-top:6px; font-weight:700;">SFX: Dramatic low cello swell into title sequence</div>
-                  </td>
-                </tr>
-                <!-- CLIP 04 -->
-                <tr class="timeline-row" style="background:var(--bg-canvas); border:3px solid var(--ink); box-shadow:var(--shadow-block-sm);">
-                  <td class="timeline-cell" style="padding:18px 20px; border-top:3px solid var(--ink); border-bottom:3px solid var(--ink); border-left:3px solid var(--ink); border-top-left-radius:var(--radius-lg); border-bottom-left-radius:var(--radius-lg); width:140px; background:var(--bg-card);">
-                    <span style="font-size:1.15rem; font-weight:800; color:var(--ink); background:var(--cartoon-yellow); padding:4px 12px; border-radius:var(--radius-pill); border:2px solid var(--ink); display:inline-block; margin-bottom:6px;">CLIP 04</span>
-                    <div style="font-size:0.75rem; font-family:'JetBrains Mono', monospace; color:var(--cartoon-blue-deep); font-weight:800;">00:25 – 00:45</div>
-                    <span class="pill-tag" style="font-size:0.65rem; background:#DCFCE7; color:#166534; margin-top:6px;">[TITLE & HOOK]</span>
-                  </td>
-                  <td class="timeline-cell" style="padding:18px 20px; border-top:3px solid var(--ink); border-bottom:3px solid var(--ink);">
-                    <div style="font-size:0.96rem; font-weight:700; color:var(--text-dark); line-height:1.5;">
-                      "This is not just a story about cold geography. It is the story of how an extreme climate is ending 3,000 years of nomadic civilization."
-                    </div>
-                    <div style="display:inline-block; margin-top:8px; background:#FFE4E6; color:var(--cartoon-coral-deep); border:1.5px solid var(--cartoon-coral-deep); padding:3px 10px; border-radius:var(--radius-sm); font-size:0.76rem; font-weight:800; font-family:'JetBrains Mono', monospace;">
-                      CUT ON: "nomadic civilization" ➔ CUT to Beat 2 (00:45)
-                    </div>
-                    <div style="margin-top:8px; font-size:0.78rem; color:var(--text-muted);">
-                      <strong>Visual Event:</strong> Title Card: 'HIDDEN GEOGRAPHY: THE EMPTIEST COUNTRY ON EARTH' over sweeping aerial Mongolian plain.
-                    </div>
-                  </td>
-                  <td class="timeline-cell" style="padding:18px 20px; border-top:3px solid var(--ink); border-bottom:3px solid var(--ink); border-right:3px solid var(--ink); border-top-right-radius:var(--radius-lg); border-bottom-right-radius:var(--radius-lg); width:320px;">
-                    <div class="prompt-code-box" style="background:#0F172A; color:#38BDF8; border:2px solid var(--ink); border-radius:var(--radius-sm); padding:10px 12px; font-family:'JetBrains Mono', monospace; font-size:0.78rem; position:relative;">
-                      <button class="copy-mini-btn" style="position:absolute; top:6px; right:6px; background:var(--cartoon-yellow); color:#0F172A; border:1.5px solid #0F172A; border-radius:var(--radius-sm); padding:3px 8px; font-size:0.68rem; font-weight:800; cursor:pointer;" onclick="copySnippet(this)">Copy</button>
-                      <span>Create an 8-second horizontal 16:9 cinematic clip. Dramatic aerial tracking over galloping Mongolian horses with lone nomadic horseman across golden autumn steppe, dust rising in afternoon sun, 8k --ar 16:9</span>
-                    </div>
-                    <div style="font-size:0.72rem; color:var(--text-faint); margin-top:6px; font-weight:700;">SFX: Distant horse gallop and wind gust</div>
-                  </td>
-                </tr>
-                <!-- CLIP 05 -->
-                <tr class="timeline-row" style="background:var(--bg-canvas); border:3px solid var(--ink); box-shadow:var(--shadow-block-sm);">
-                  <td class="timeline-cell" style="padding:18px 20px; border-top:3px solid var(--ink); border-bottom:3px solid var(--ink); border-left:3px solid var(--ink); border-top-left-radius:var(--radius-lg); border-bottom-left-radius:var(--radius-lg); width:140px; background:var(--bg-card);">
-                    <span style="font-size:1.15rem; font-weight:800; color:var(--ink); background:var(--cartoon-yellow); padding:4px 12px; border-radius:var(--radius-pill); border:2px solid var(--ink); display:inline-block; margin-bottom:6px;">CLIP 05</span>
-                    <div style="font-size:0.75rem; font-family:'JetBrains Mono', monospace; color:var(--cartoon-blue-deep); font-weight:800;">00:45 – 01:05</div>
-                    <span class="pill-tag" style="font-size:0.65rem; background:#F3E8FF; color:#6B21A8; margin-top:6px;">[TERRAIN RELIEF]</span>
-                  </td>
-                  <td class="timeline-cell" style="padding:18px 20px; border-top:3px solid var(--ink); border-bottom:3px solid var(--ink);">
-                    <div style="font-size:0.96rem; font-weight:700; color:var(--text-dark); line-height:1.5;">
-                      "Mongolia sits locked inside the heart of Asia, an elevated plateau averaging 1,500 metres above sea level."
-                    </div>
-                    <div style="display:inline-block; margin-top:8px; background:#FFE4E6; color:var(--cartoon-coral-deep); border:1.5px solid var(--cartoon-coral-deep); padding:3px 10px; border-radius:var(--radius-sm); font-size:0.76rem; font-weight:800; font-family:'JetBrains Mono', monospace;">
-                      CUT ON: "above sea level" ➔ CUT to Clip 06
-                    </div>
-                    <div style="margin-top:8px; font-size:0.78rem; color:var(--text-muted);">
-                      <strong>Visual Event:</strong> 3D Elevation Model: High-relief color ramp showing elevation contours rising sharply from Russia and China.
-                    </div>
-                  </td>
-                  <td class="timeline-cell" style="padding:18px 20px; border-top:3px solid var(--ink); border-bottom:3px solid var(--ink); border-right:3px solid var(--ink); border-top-right-radius:var(--radius-lg); border-bottom-right-radius:var(--radius-lg); width:320px;">
-                    <div class="prompt-code-box" style="background:#0F172A; color:#38BDF8; border:2px solid var(--ink); border-radius:var(--radius-sm); padding:10px 12px; font-family:'JetBrains Mono', monospace; font-size:0.78rem; position:relative;">
-                      <button class="copy-mini-btn" style="position:absolute; top:6px; right:6px; background:var(--cartoon-yellow); color:#0F172A; border:1.5px solid #0F172A; border-radius:var(--radius-sm); padding:3px 8px; font-size:0.68rem; font-weight:800; cursor:pointer;" onclick="copySnippet(this)">Copy</button>
-                      <span>Create an 8-second horizontal 16:9 cinematic clip. 3D cartographic elevation relief map of Central Asian plateau, Altai mountain ridges casting long afternoon shadows, clean photorealistic rendering, 8k --ar 16:9</span>
-                    </div>
-                    <div style="font-size:0.72rem; color:var(--text-faint); margin-top:6px; font-weight:700;">SFX: Low tectonic bass hum</div>
-                  </td>
-                </tr>
-                <!-- CLIP 06 -->
-                <tr class="timeline-row" style="background:var(--bg-canvas); border:3px solid var(--ink); box-shadow:var(--shadow-block-sm);">
-                  <td class="timeline-cell" style="padding:18px 20px; border-top:3px solid var(--ink); border-bottom:3px solid var(--ink); border-left:3px solid var(--ink); border-top-left-radius:var(--radius-lg); border-bottom-left-radius:var(--radius-lg); width:140px; background:var(--bg-card);">
-                    <span style="font-size:1.15rem; font-weight:800; color:var(--ink); background:var(--cartoon-yellow); padding:4px 12px; border-radius:var(--radius-pill); border:2px solid var(--ink); display:inline-block; margin-bottom:6px;">CLIP 06</span>
-                    <div style="font-size:0.75rem; font-family:'JetBrains Mono', monospace; color:var(--cartoon-blue-deep); font-weight:800;">01:05 – 01:28</div>
-                    <span class="pill-tag" style="font-size:0.65rem; background:#FEF3C7; color:#92400E; margin-top:6px;">[RAIN SHADOW]</span>
-                  </td>
-                  <td class="timeline-cell" style="padding:18px 20px; border-top:3px solid var(--ink); border-bottom:3px solid var(--ink);">
-                    <div style="font-size:0.96rem; font-weight:700; color:var(--text-dark); line-height:1.5;">
-                      "Surrounded by mountain ranges and thousands of miles from any ocean, almost no moisture reaches the central steppe."
-                    </div>
-                    <div style="display:inline-block; margin-top:8px; background:#FFE4E6; color:var(--cartoon-coral-deep); border:1.5px solid var(--cartoon-coral-deep); padding:3px 10px; border-radius:var(--radius-sm); font-size:0.76rem; font-weight:800; font-family:'JetBrains Mono', monospace;">
-                      CUT ON: "central steppe" ➔ CUT to Clip 07
-                    </div>
-                    <div style="margin-top:8px; font-size:0.78rem; color:var(--text-muted);">
-                      <strong>Visual Event:</strong> Atmospheric Map: Moisture clouds from Pacific and Indian oceans hitting Himalayas and Altai ranges and stopping cold.
-                    </div>
-                  </td>
-                  <td class="timeline-cell" style="padding:18px 20px; border-top:3px solid var(--ink); border-bottom:3px solid var(--ink); border-right:3px solid var(--ink); border-top-right-radius:var(--radius-lg); border-bottom-right-radius:var(--radius-lg); width:320px;">
-                    <div class="prompt-code-box" style="background:#0F172A; color:#38BDF8; border:2px solid var(--ink); border-radius:var(--radius-sm); padding:10px 12px; font-family:'JetBrains Mono', monospace; font-size:0.78rem; position:relative;">
-                      <button class="copy-mini-btn" style="position:absolute; top:6px; right:6px; background:var(--cartoon-yellow); color:#0F172A; border:1.5px solid #0F172A; border-radius:var(--radius-sm); padding:3px 8px; font-size:0.68rem; font-weight:800; cursor:pointer;" onclick="copySnippet(this)">Copy</button>
-                      <span>Create an 8-second horizontal 16:9 cinematic clip. High-altitude satellite view of arid Gobi desert transitioning into dry grassy plain, stark harsh sunlight, dry cracked earth textures, 8k --ar 16:9</span>
-                    </div>
-                    <div style="font-size:0.72rem; color:var(--text-faint); margin-top:6px; font-weight:700;">SFX: Dry desert wind whistle</div>
-                  </td>
-                </tr>
-                <!-- CLIP 07 -->
-                <tr class="timeline-row" style="background:var(--bg-canvas); border:3px solid var(--ink); box-shadow:var(--shadow-block-sm);">
-                  <td class="timeline-cell" style="padding:18px 20px; border-top:3px solid var(--ink); border-bottom:3px solid var(--ink); border-left:3px solid var(--ink); border-top-left-radius:var(--radius-lg); border-bottom-left-radius:var(--radius-lg); width:140px; background:var(--bg-card);">
-                    <span style="font-size:1.15rem; font-weight:800; color:var(--ink); background:var(--cartoon-yellow); padding:4px 12px; border-radius:var(--radius-pill); border:2px solid var(--ink); display:inline-block; margin-bottom:6px;">CLIP 07</span>
-                    <div style="font-size:0.75rem; font-family:'JetBrains Mono', monospace; color:var(--cartoon-blue-deep); font-weight:800;">01:28 – 01:50</div>
-                    <span class="pill-tag" style="font-size:0.65rem; background:#FFE4E6; color:#9F1239; margin-top:6px;">[ARABLE STAT]</span>
-                  </td>
-                  <td class="timeline-cell" style="padding:18px 20px; border-top:3px solid var(--ink); border-bottom:3px solid var(--ink);">
-                    <div style="font-size:0.96rem; font-weight:700; color:var(--text-dark); line-height:1.5;">
-                      "Less than one percent of Mongolia's land is arable for farming. You cannot grow crops on the steppe—you can only graze livestock."
-                    </div>
-                    <div style="display:inline-block; margin-top:8px; background:#FFE4E6; color:var(--cartoon-coral-deep); border:1.5px solid var(--cartoon-coral-deep); padding:3px 10px; border-radius:var(--radius-sm); font-size:0.76rem; font-weight:800; font-family:'JetBrains Mono', monospace;">
-                      CUT ON: "graze livestock" ➔ CUT to Beat 3 (01:50)
-                    </div>
-                    <div style="margin-top:8px; font-size:0.78rem; color:var(--text-muted);">
-                      <strong>Visual Event:</strong> Data Pie Chart: 99.2% Non-arable rangeland vs 0.8% Arable land.
-                    </div>
-                  </td>
-                  <td class="timeline-cell" style="padding:18px 20px; border-top:3px solid var(--ink); border-bottom:3px solid var(--ink); border-right:3px solid var(--ink); border-top-right-radius:var(--radius-lg); border-bottom-right-radius:var(--radius-lg); width:320px;">
-                    <div class="prompt-code-box" style="background:#0F172A; color:#38BDF8; border:2px solid var(--ink); border-radius:var(--radius-sm); padding:10px 12px; font-family:'JetBrains Mono', monospace; font-size:0.78rem; position:relative;">
-                      <button class="copy-mini-btn" style="position:absolute; top:6px; right:6px; background:var(--cartoon-yellow); color:#0F172A; border:1.5px solid #0F172A; border-radius:var(--radius-sm); padding:3px 8px; font-size:0.68rem; font-weight:800; cursor:pointer;" onclick="copySnippet(this)">Copy</button>
-                      <span>Create an 8-second horizontal 16:9 cinematic clip. Herd of two-humped Bactrian camels grazing on sparse scrubland in front of towering sand dunes, golden morning light, 8k realism --ar 16:9</span>
-                    </div>
-                    <div style="font-size:0.72rem; color:var(--text-faint); margin-top:6px; font-weight:700;">SFX: Camel grunt and dry grass rustling</div>
-                  </td>
-                </tr>
-                <!-- CLIP 08 -->
-                <tr class="timeline-row" style="background:var(--bg-canvas); border:3px solid var(--ink); box-shadow:var(--shadow-block-sm);">
-                  <td class="timeline-cell" style="padding:18px 20px; border-top:3px solid var(--ink); border-bottom:3px solid var(--ink); border-left:3px solid var(--ink); border-top-left-radius:var(--radius-lg); border-bottom-left-radius:var(--radius-lg); width:140px; background:var(--bg-card);">
-                    <span style="font-size:1.15rem; font-weight:800; color:var(--ink); background:var(--cartoon-yellow); padding:4px 12px; border-radius:var(--radius-pill); border:2px solid var(--ink); display:inline-block; margin-bottom:6px;">CLIP 08</span>
-                    <div style="font-size:0.75rem; font-family:'JetBrains Mono', monospace; color:var(--cartoon-blue-deep); font-weight:800;">01:50 – 02:15</div>
-                    <span class="pill-tag" style="font-size:0.65rem; background:#E0F2FE; color:#0369A1; margin-top:6px;">[THE DZUD WEAPON]</span>
-                  </td>
-                  <td class="timeline-cell" style="padding:18px 20px; border-top:3px solid var(--ink); border-bottom:3px solid var(--ink);">
-                    <div style="font-size:0.96rem; font-weight:700; color:var(--text-dark); line-height:1.5;">
-                      "The engine that drives people off the steppe is a unique meteorological disaster that Mongolians call the Dzud."
-                    </div>
-                    <div style="display:inline-block; margin-top:8px; background:#FFE4E6; color:var(--cartoon-coral-deep); border:1.5px solid var(--cartoon-coral-deep); padding:3px 10px; border-radius:var(--radius-sm); font-size:0.76rem; font-weight:800; font-family:'JetBrains Mono', monospace;">
-                      CUT ON: "call the Dzud" ➔ CUT to Clip 09
-                    </div>
-                    <div style="margin-top:8px; font-size:0.78rem; color:var(--text-muted);">
-                      <strong>Visual Event:</strong> Thermal Satellite Overlay: Massive Siberian polar vortex of freezing blue air (-45°C) descending over Mongolia.
-                    </div>
-                  </td>
-                  <td class="timeline-cell" style="padding:18px 20px; border-top:3px solid var(--ink); border-bottom:3px solid var(--ink); border-right:3px solid var(--ink); border-top-right-radius:var(--radius-lg); border-bottom-right-radius:var(--radius-lg); width:320px;">
-                    <div class="prompt-code-box" style="background:#0F172A; color:#38BDF8; border:2px solid var(--ink); border-radius:var(--radius-sm); padding:10px 12px; font-family:'JetBrains Mono', monospace; font-size:0.78rem; position:relative;">
-                      <button class="copy-mini-btn" style="position:absolute; top:6px; right:6px; background:var(--cartoon-yellow); color:#0F172A; border:1.5px solid #0F172A; border-radius:var(--radius-sm); padding:3px 8px; font-size:0.68rem; font-weight:800; cursor:pointer;" onclick="copySnippet(this)">Copy</button>
-                      <span>Create an 8-second horizontal 16:9 cinematic clip. Extreme blizzard over Mongolian snowy plains, howling white snowdrifts burying wooden fences, harsh diffused winter light, intense cold realism, no people visible --ar 16:9</span>
-                    </div>
-                    <div style="font-size:0.72rem; color:var(--text-faint); margin-top:6px; font-weight:700;">SFX: Freezing winter wind howl & ice crack</div>
-                  </td>
-                </tr>
-                <!-- CLIP 09 -->
-                <tr class="timeline-row" style="background:var(--bg-canvas); border:3px solid var(--ink); box-shadow:var(--shadow-block-sm);">
-                  <td class="timeline-cell" style="padding:18px 20px; border-top:3px solid var(--ink); border-bottom:3px solid var(--ink); border-left:3px solid var(--ink); border-top-left-radius:var(--radius-lg); border-bottom-left-radius:var(--radius-lg); width:140px; background:var(--bg-card);">
-                    <span style="font-size:1.15rem; font-weight:800; color:var(--ink); background:var(--cartoon-yellow); padding:4px 12px; border-radius:var(--radius-pill); border:2px solid var(--ink); display:inline-block; margin-bottom:6px;">CLIP 09</span>
-                    <div style="font-size:0.75rem; font-family:'JetBrains Mono', monospace; color:var(--cartoon-blue-deep); font-weight:800;">02:15 – 02:40</div>
-                    <span class="pill-tag" style="font-size:0.65rem; background:#DCFCE7; color:#166534; margin-top:6px;">[WHITE DZUD]</span>
-                  </td>
-                  <td class="timeline-cell" style="padding:18px 20px; border-top:3px solid var(--ink); border-bottom:3px solid var(--ink);">
-                    <div style="font-size:0.96rem; font-weight:700; color:var(--text-dark); line-height:1.5;">
-                      "In a White Dzud, heavy snowdrifts freeze into solid ice sheets, locking pasture grass beneath impenetrable armor."
-                    </div>
-                    <div style="display:inline-block; margin-top:8px; background:#FFE4E6; color:var(--cartoon-coral-deep); border:1.5px solid var(--cartoon-coral-deep); padding:3px 10px; border-radius:var(--radius-sm); font-size:0.76rem; font-weight:800; font-family:'JetBrains Mono', monospace;">
-                      CUT ON: "impenetrable armor" ➔ CUT to Clip 10
-                    </div>
-                    <div style="margin-top:8px; font-size:0.78rem; color:var(--text-muted);">
-                      <strong>Visual Event:</strong> Macro camera shot of solid blue ice covering dry grass blades with thermometer dropping to -48°C.
-                    </div>
-                  </td>
-                  <td class="timeline-cell" style="padding:18px 20px; border-top:3px solid var(--ink); border-bottom:3px solid var(--ink); border-right:3px solid var(--ink); border-top-right-radius:var(--radius-lg); border-bottom-right-radius:var(--radius-lg); width:320px;">
-                    <div class="prompt-code-box" style="background:#0F172A; color:#38BDF8; border:2px solid var(--ink); border-radius:var(--radius-sm); padding:10px 12px; font-family:'JetBrains Mono', monospace; font-size:0.78rem; position:relative;">
-                      <button class="copy-mini-btn" style="position:absolute; top:6px; right:6px; background:var(--cartoon-yellow); color:#0F172A; border:1.5px solid #0F172A; border-radius:var(--radius-sm); padding:3px 8px; font-size:0.68rem; font-weight:800; cursor:pointer;" onclick="copySnippet(this)">Copy</button>
-                      <span>Create an 8-second horizontal 16:9 cinematic clip. Extreme close-up of thick frost and ice crust encasing dry steppe grass under biting wind, glistening ice crystals, cold pale lighting, 8k macro --ar 16:9</span>
-                    </div>
-                    <div style="font-size:0.72rem; color:var(--text-faint); margin-top:6px; font-weight:700;">SFX: Cracking ice under pressure</div>
-                  </td>
-                </tr>
-                <!-- CLIP 10 -->
-                <tr class="timeline-row" style="background:var(--bg-canvas); border:3px solid var(--ink); box-shadow:var(--shadow-block-sm);">
-                  <td class="timeline-cell" style="padding:18px 20px; border-top:3px solid var(--ink); border-bottom:3px solid var(--ink); border-left:3px solid var(--ink); border-top-left-radius:var(--radius-lg); border-bottom-left-radius:var(--radius-lg); width:140px; background:var(--bg-card);">
-                    <span style="font-size:1.15rem; font-weight:800; color:var(--ink); background:var(--cartoon-yellow); padding:4px 12px; border-radius:var(--radius-pill); border:2px solid var(--ink); display:inline-block; margin-bottom:6px;">CLIP 10</span>
-                    <div style="font-size:0.75rem; font-family:'JetBrains Mono', monospace; color:var(--cartoon-blue-deep); font-weight:800;">02:40 – 03:10</div>
-                    <span class="pill-tag" style="font-size:0.65rem; background:#F3E8FF; color:#6B21A8; margin-top:6px;">[LIVESTOCK LOSS]</span>
-                  </td>
-                  <td class="timeline-cell" style="padding:18px 20px; border-top:3px solid var(--ink); border-bottom:3px solid var(--ink);">
-                    <div style="font-size:0.96rem; font-weight:700; color:var(--text-dark); line-height:1.5;">
-                      "Unable to graze, livestock starve by the millions. In the catastrophic 2010 Dzud, over 8.5 million animals died in a single season."
-                    </div>
-                    <div style="display:inline-block; margin-top:8px; background:#FFE4E6; color:var(--cartoon-coral-deep); border:1.5px solid var(--cartoon-coral-deep); padding:3px 10px; border-radius:var(--radius-sm); font-size:0.76rem; font-weight:800; font-family:'JetBrains Mono', monospace;">
-                      CUT ON: "single season" ➔ CUT to Beat 4 (03:10)
-                    </div>
-                    <div style="margin-top:8px; font-size:0.78rem; color:var(--text-muted);">
-                      <strong>Visual Event:</strong> FAO Historical Loss Graph: Animal loss spike of 8.5 million cattle, sheep, and goats.
-                    </div>
-                  </td>
-                  <td class="timeline-cell" style="padding:18px 20px; border-top:3px solid var(--ink); border-bottom:3px solid var(--ink); border-right:3px solid var(--ink); border-top-right-radius:var(--radius-lg); border-bottom-right-radius:var(--radius-lg); width:320px;">
-                    <div class="prompt-code-box" style="background:#0F172A; color:#38BDF8; border:2px solid var(--ink); border-radius:var(--radius-sm); padding:10px 12px; font-family:'JetBrains Mono', monospace; font-size:0.78rem; position:relative;">
-                      <button class="copy-mini-btn" style="position:absolute; top:6px; right:6px; background:var(--cartoon-yellow); color:#0F172A; border:1.5px solid #0F172A; border-radius:var(--radius-sm); padding:3px 8px; font-size:0.68rem; font-weight:800; cursor:pointer;" onclick="copySnippet(this)">Copy</button>
-                      <span>Create an 8-second horizontal 16:9 cinematic clip. Abandoned wooden animal corral half-buried in deep snowdrifts on desolate winter plain, grey overcast sky, solemn documentary mood, 8k --ar 16:9</span>
-                    </div>
-                    <div style="font-size:0.72rem; color:var(--text-faint); margin-top:6px; font-weight:700;">SFX: Solemn low violin and quiet wind</div>
-                  </td>
-                </tr>
-                <!-- CLIP 11 -->
-                <tr class="timeline-row" style="background:var(--bg-canvas); border:3px solid var(--ink); box-shadow:var(--shadow-block-sm);">
-                  <td class="timeline-cell" style="padding:18px 20px; border-top:3px solid var(--ink); border-bottom:3px solid var(--ink); border-left:3px solid var(--ink); border-top-left-radius:var(--radius-lg); border-bottom-left-radius:var(--radius-lg); width:140px; background:var(--bg-card);">
-                    <span style="font-size:1.15rem; font-weight:800; color:var(--ink); background:var(--cartoon-yellow); padding:4px 12px; border-radius:var(--radius-pill); border:2px solid var(--ink); display:inline-block; margin-bottom:6px;">CLIP 11</span>
-                    <div style="font-size:0.75rem; font-family:'JetBrains Mono', monospace; color:var(--cartoon-blue-deep); font-weight:800;">03:10 – 03:35</div>
-                    <span class="pill-tag" style="font-size:0.65rem; background:#FEF3C7; color:#92400E; margin-top:6px;">[THE GREAT EXODUS]</span>
-                  </td>
-                  <td class="timeline-cell" style="padding:18px 20px; border-top:3px solid var(--ink); border-bottom:3px solid var(--ink);">
-                    <div style="font-size:0.96rem; font-weight:700; color:var(--text-dark); line-height:1.5;">
-                      "When a nomadic family loses their entire herd in a single winter, they have no insurance, no welfare, and no income."
-                    </div>
-                    <div style="display:inline-block; margin-top:8px; background:#FFE4E6; color:var(--cartoon-coral-deep); border:1.5px solid var(--cartoon-coral-deep); padding:3px 10px; border-radius:var(--radius-sm); font-size:0.76rem; font-weight:800; font-family:'JetBrains Mono', monospace;">
-                      CUT ON: "and no income" ➔ CUT to Clip 12
-                    </div>
-                    <div style="margin-top:8px; font-size:0.78rem; color:var(--text-muted);">
-                      <strong>Visual Event:</strong> Nomadic family dismantling their round wooden felt ger tent and packing canvas onto a Russian flatbed truck.
-                    </div>
-                  </td>
-                  <td class="timeline-cell" style="padding:18px 20px; border-top:3px solid var(--ink); border-bottom:3px solid var(--ink); border-right:3px solid var(--ink); border-top-right-radius:var(--radius-lg); border-bottom-right-radius:var(--radius-lg); width:320px;">
-                    <div class="prompt-code-box" style="background:#0F172A; color:#38BDF8; border:2px solid var(--ink); border-radius:var(--radius-sm); padding:10px 12px; font-family:'JetBrains Mono', monospace; font-size:0.78rem; position:relative;">
-                      <button class="copy-mini-btn" style="position:absolute; top:6px; right:6px; background:var(--cartoon-yellow); color:#0F172A; border:1.5px solid #0F172A; border-radius:var(--radius-sm); padding:3px 8px; font-size:0.68rem; font-weight:800; cursor:pointer;" onclick="copySnippet(this)">Copy</button>
-                      <span>Create an 8-second horizontal 16:9 cinematic clip. Old Russian flatbed truck loaded with traditional yurt frame driving slowly along dirt track across vast winter landscape, cold morning mist, 8k --ar 16:9</span>
-                    </div>
-                    <div style="font-size:0.72rem; color:var(--text-faint); margin-top:6px; font-weight:700;">SFX: Old diesel truck engine rumble and gravel crunch</div>
-                  </td>
-                </tr>
-                <!-- CLIP 12 -->
-                <tr class="timeline-row" style="background:var(--bg-canvas); border:3px solid var(--ink); box-shadow:var(--shadow-block-sm);">
-                  <td class="timeline-cell" style="padding:18px 20px; border-top:3px solid var(--ink); border-bottom:3px solid var(--ink); border-left:3px solid var(--ink); border-top-left-radius:var(--radius-lg); border-bottom-left-radius:var(--radius-lg); width:140px; background:var(--bg-card);">
-                    <span style="font-size:1.15rem; font-weight:800; color:var(--ink); background:var(--cartoon-yellow); padding:4px 12px; border-radius:var(--radius-pill); border:2px solid var(--ink); display:inline-block; margin-bottom:6px;">CLIP 12</span>
-                    <div style="font-size:0.75rem; font-family:'JetBrains Mono', monospace; color:var(--cartoon-blue-deep); font-weight:800;">03:35 – 04:00</div>
-                    <span class="pill-tag" style="font-size:0.65rem; background:#FFE4E6; color:#9F1239; margin-top:6px;">[THE GER DISTRICTS]</span>
-                  </td>
-                  <td class="timeline-cell" style="padding:18px 20px; border-top:3px solid var(--ink); border-bottom:3px solid var(--ink);">
-                    <div style="font-size:0.96rem; font-weight:700; color:var(--text-dark); line-height:1.5;">
-                      "They drive 400 miles to the outskirts of Ulaanbaatar, erecting their gers in vast unplanned suburban rings along the hillsides."
-                    </div>
-                    <div style="display:inline-block; margin-top:8px; background:#FFE4E6; color:var(--cartoon-coral-deep); border:1.5px solid var(--cartoon-coral-deep); padding:3px 10px; border-radius:var(--radius-sm); font-size:0.76rem; font-weight:800; font-family:'JetBrains Mono', monospace;">
-                      CUT ON: "along the hillsides" ➔ CUT to Clip 13
-                    </div>
-                    <div style="margin-top:8px; font-size:0.78rem; color:var(--text-muted);">
-                      <strong>Visual Event:</strong> Aerial drone shot of the Ger Districts of Ulaanbaatar: Hundreds of thousands of white circular yurts behind wooden fences.
-                    </div>
-                  </td>
-                  <td class="timeline-cell" style="padding:18px 20px; border-top:3px solid var(--ink); border-bottom:3px solid var(--ink); border-right:3px solid var(--ink); border-top-right-radius:var(--radius-lg); border-bottom-right-radius:var(--radius-lg); width:320px;">
-                    <div class="prompt-code-box" style="background:#0F172A; color:#38BDF8; border:2px solid var(--ink); border-radius:var(--radius-sm); padding:10px 12px; font-family:'JetBrains Mono', monospace; font-size:0.78rem; position:relative;">
-                      <button class="copy-mini-btn" style="position:absolute; top:6px; right:6px; background:var(--cartoon-yellow); color:#0F172A; border:1.5px solid #0F172A; border-radius:var(--radius-sm); padding:3px 8px; font-size:0.68rem; font-weight:800; cursor:pointer;" onclick="copySnippet(this)">Copy</button>
-                      <span>Create an 8-second horizontal 16:9 cinematic clip. High-angle aerial panoramic view over sprawling hillside ger district of Ulaanbaatar, thousands of round white yurts surrounded by wooden fences, dusk light, 8k --ar 16:9</span>
-                    </div>
-                    <div style="font-size:0.72rem; color:var(--text-faint); margin-top:6px; font-weight:700;">SFX: City ambient hum and distant dogs barking</div>
-                  </td>
-                </tr>
-                <!-- CLIP 13 -->
-                <tr class="timeline-row" style="background:var(--bg-canvas); border:3px solid var(--ink); box-shadow:var(--shadow-block-sm);">
-                  <td class="timeline-cell" style="padding:18px 20px; border-top:3px solid var(--ink); border-bottom:3px solid var(--ink); border-left:3px solid var(--ink); border-top-left-radius:var(--radius-lg); border-bottom-left-radius:var(--radius-lg); width:140px; background:var(--bg-card);">
-                    <span style="font-size:1.15rem; font-weight:800; color:var(--ink); background:var(--cartoon-yellow); padding:4px 12px; border-radius:var(--radius-pill); border:2px solid var(--ink); display:inline-block; margin-bottom:6px;">CLIP 13</span>
-                    <div style="font-size:0.75rem; font-family:'JetBrains Mono', monospace; color:var(--cartoon-blue-deep); font-weight:800;">04:00 – 04:30</div>
-                    <span class="pill-tag" style="font-size:0.65rem; background:#E0F2FE; color:#0369A1; margin-top:6px;">[INFRASTRUCTURE GAP]</span>
-                  </td>
-                  <td class="timeline-cell" style="padding:18px 20px; border-top:3px solid var(--ink); border-bottom:3px solid var(--ink);">
-                    <div style="font-size:0.96rem; font-weight:700; color:var(--text-dark); line-height:1.5;">
-                      "These districts have no central plumbing, no running water, and no sewer lines. Over 800,000 people live in temporary settlements."
-                    </div>
-                    <div style="display:inline-block; margin-top:8px; background:#FFE4E6; color:var(--cartoon-coral-deep); border:1.5px solid var(--cartoon-coral-deep); padding:3px 10px; border-radius:var(--radius-sm); font-size:0.76rem; font-weight:800; font-family:'JetBrains Mono', monospace;">
-                      CUT ON: "temporary settlements" ➔ CUT to Beat 5 (04:30)
-                    </div>
-                    <div style="margin-top:8px; font-size:0.78rem; color:var(--text-muted);">
-                      <strong>Visual Event:</strong> Infographic Overlay: Red infrastructure zone highlighting water distribution points and unpaved roads.
-                    </div>
-                  </td>
-                  <td class="timeline-cell" style="padding:18px 20px; border-top:3px solid var(--ink); border-bottom:3px solid var(--ink); border-right:3px solid var(--ink); border-top-right-radius:var(--radius-lg); border-bottom-right-radius:var(--radius-lg); width:320px;">
-                    <div class="prompt-code-box" style="background:#0F172A; color:#38BDF8; border:2px solid var(--ink); border-radius:var(--radius-sm); padding:10px 12px; font-family:'JetBrains Mono', monospace; font-size:0.78rem; position:relative;">
-                      <button class="copy-mini-btn" style="position:absolute; top:6px; right:6px; background:var(--cartoon-yellow); color:#0F172A; border:1.5px solid #0F172A; border-radius:var(--radius-sm); padding:3px 8px; font-size:0.68rem; font-weight:800; cursor:pointer;" onclick="copySnippet(this)">Copy</button>
-                      <span>Create an 8-second horizontal 16:9 cinematic clip. Narrow unpaved dirt alleyway between wooden fenced plots in ger suburb, electrical wires overhead, cold winter afternoon, authentic documentary realism, 8k --ar 16:9</span>
-                    </div>
-                    <div style="font-size:0.72rem; color:var(--text-faint); margin-top:6px; font-weight:700;">SFX: Creaking wooden fence gate</div>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </section>
+              <!-- Spoken Voiceover Narration Box -->
+              <div class="voiceover-text-box">
+                <p>Four entire European countries—the United Kingdom, France, Germany, and Italy—could fit inside this territory. Yet the total population of this vast land is smaller than the single city of Madrid. Mongolia spans one point five six million square kilometres of rolling steppe, snow-capped mountain ranges, and the great Gobi desert, but across this entire expanse live just three point four million people. That produces an average density of barely two people per square kilometre—the lowest of any sovereign nation on Earth. But the real geographic mystery isn't just that Mongolia is empty. It is that half of the entire country's population now lives crammed inside a single valley.</p>
+              </div>
 
-                <!-- TAB 2: FULL 12-BEAT VERBATIM SCRIPT ENGINE -->
-        <section class="studio-pane active" id="tab-script">
-          <div class="studio-card">
-            <div class="studio-card-head">
-              <div>
-                <h2>Complete 12-Beat Master Documentary Script (Verbatim)</h2>
-                <p style="color:var(--text-muted); font-size:0.84rem; margin-top:4px;">1,720 Words · Full Unabridged Read-Aloud Voiceover Narration · Target Delivery: 12:48 min · 135 wpm</p>
-              </div>
-              <span class="pill-tag" style="background:var(--cartoon-green);">100% Unabridged Locked Script</span>
-            </div>
+              <!-- Visual & AI Prompt Directive -->
+              <div class="production-directive-box">
+                <div class="directive-row">
+                  <div class="directive-item">
+                    <span class="directive-label">🎥 Visual Event</span>
+                    <p>2D Map animation: UK, France, Germany, and Italy outlines sweep into the borders of Mongolia. Camera zooms rapidly into solitary glowing light in Ulaanbaatar.</p>
+                  </div>
+                  <div class="directive-item">
+                    <span class="directive-label">✂️ Cut Trigger</span>
+                    <span class="cut-trigger-pill">CUT ON: "inside a single valley" ➔ CUT to Beat 02</span>
+                  </div>
+                </div>
 
-            <!-- Beat 1 -->
-            <div class="beat-card" style="background:var(--bg-canvas); border:3px solid var(--ink); border-radius:var(--radius-lg); padding:20px; margin-bottom:18px;">
-              <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:10px;">
-                <span class="beat-num">Beat 01</span>
-                <span class="beat-time">0:00 – 0:45 · 118 words</span>
-                <span class="pill-tag" style="background:#FFE4E6; color:#9F1239;">Scale Hook</span>
-              </div>
-              <p class="script-dialogue-text">
-                Four entire European countries—the United Kingdom, France, Germany, and Italy—could fit inside this territory. Yet the total population of this vast land is smaller than the single city of Madrid. Mongolia spans one point five six million square kilometres of rolling steppe, snow-capped mountain ranges, and the great Gobi desert, but across this entire expanse live just three point four million people. That produces an average density of barely two people per square kilometre—the lowest of any sovereign nation on Earth. But the real geographic mystery isn't just that Mongolia is empty. It is that half of the entire country's population now lives crammed inside a single valley.
-              </p>
-              <div class="visual-cue-box" style="margin-top:10px;">
-                <strong>Visual Direction:</strong> 2D Map animation: UK, France, Germany, and Italy outlines sweep into the borders of Mongolia. Camera zooms rapidly into solitary glowing light in Ulaanbaatar.
-              </div>
-            </div>
+                <div class="directive-prompt-box">
+                  <div class="prompt-head">
+                    <span class="prompt-label">⚡ Google Flow AI Cinematography Prompt (§20)</span>
+                    <button class="clean-copy-btn" onclick="copyPrompt(this)">Copy Prompt</button>
+                  </div>
+                  <pre class="prompt-text"><code>Create an 8-second horizontal 16:9 cinematic clip. High-altitude orthographic satellite camera looking down at vast golden Mongolian steppe bordered by Altai mountains, clear morning sunlight, clean 8k topology relief, no text --ar 16:9</code></pre>
+                </div>
 
-            <!-- Beat 2 -->
-            <div class="beat-card" style="background:var(--bg-canvas); border:3px solid var(--ink); border-radius:var(--radius-lg); padding:20px; margin-bottom:18px;">
-              <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:10px;">
-                <span class="beat-num">Beat 02</span>
-                <span class="beat-time">0:45 – 1:50 · 148 words</span>
-                <span class="pill-tag" style="background:#FEF3C7; color:#92400E;">The Physical Fortress</span>
+                <div class="sfx-footer-row">
+                  <span class="sfx-label">🎵 Sound Design Cue:</span>
+                  <span class="sfx-value">Continent slide whoosh & sub-bass drop</span>
+                </div>
               </div>
-              <p class="script-dialogue-text">
-                To understand why Mongolia never developed dense agrarian settlements, you have to look at its extreme continental geography. Trapped between the Siberian taiga to the north and the arid expanse of China to the south, Mongolia sits at an average altitude of fifteen hundred metres above sea level. It has no coastline and receives virtually no maritime moisture. Less than one percent of its entire landmass is arable for growing crops. For three thousand years, human survival here was only possible through pastoral nomadism—moving herds of horses, sheep, goats, and camels across hundreds of miles of seasonal pastures. But in the 21st century, that nomadic cycle is breaking under the weight of a deadly meteorological phenomenon.
-              </p>
-              <div class="visual-cue-box" style="margin-top:10px;">
-                <strong>Visual Direction:</strong> 3D Elevation Model: High-relief color ramp showing elevation contours rising sharply from Russia and China with rain shadow overlays.
-              </div>
-            </div>
+            </article>
 
-            <!-- Beat 3 -->
-            <div class="beat-card" style="background:var(--bg-canvas); border:3px solid var(--ink); border-radius:var(--radius-lg); padding:20px; margin-bottom:18px;">
-              <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:10px;">
-                <span class="beat-num">Beat 03</span>
-                <span class="beat-time">1:50 – 3:10 · 172 words</span>
-                <span class="pill-tag" style="background:#E0F2FE; color:#0369A1;">The Dzud Catastrophe</span>
+            <!-- Beat 02 -->
+            <article class="clean-script-card">
+              <div class="card-top-bar">
+                <div class="card-title-group">
+                  <span class="beat-pill">Beat 02</span>
+                  <h3>The Physical Fortress</h3>
+                  <span class="time-tag">0:45 – 1:50</span>
+                </div>
+                <span class="word-count-tag">148 words</span>
               </div>
-              <p class="script-dialogue-text">
-                The destructive engine driving this transformation is called the Dzud. A Dzud occurs when an intensely dry summer withers pasture grass, followed immediately by a catastrophic winter where temperatures plunge below minus forty-five degrees Celsius. Deep sheets of ice freeze over the ground, creating an impenetrable crust that prevents livestock from digging through to reach food. In severe Dzud years, millions of animals perish within a matter of weeks. When a herding family loses their entire livestock in a single winter, their nomadic way of life is instantly extinguished. With no animals left to herd, they pack their traditional round felt tent—a ger—onto a truck and head toward the only place with hospitals, electricity, and jobs: Ulaanbaatar.
-              </p>
-              <div class="visual-cue-box" style="margin-top:10px;">
-                <strong>Visual Direction:</strong> Thermal satellite map of Siberian freeze (-45°C) sweeping over Mongolia, cross-fading into snowy blizzard footage over abandoned wooden corrals.
-              </div>
-            </div>
 
-            <!-- Beat 4 -->
-            <div class="beat-card" style="background:var(--bg-canvas); border:3px solid var(--ink); border-radius:var(--radius-lg); padding:20px; margin-bottom:18px;">
-              <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:10px;">
-                <span class="beat-num">Beat 04</span>
-                <span class="beat-time">3:10 – 4:30 · 160 words</span>
-                <span class="pill-tag" style="background:#DCFCE7; color:#166534;">The Ger District Ring</span>
+              <!-- Spoken Voiceover Narration Box -->
+              <div class="voiceover-text-box">
+                <p>To understand why Mongolia never developed dense agrarian settlements, you have to look at its extreme continental geography. Trapped between the Siberian taiga to the north and the arid expanse of China to the south, Mongolia sits at an average altitude of fifteen hundred metres above sea level. It has no coastline and receives virtually no maritime moisture. Less than one percent of its entire landmass is arable for growing crops. For three thousand years, human survival here was only possible through pastoral nomadism—moving herds of horses, sheep, goats, and camels across hundreds of miles of seasonal pastures. But in the 21st century, that nomadic cycle is breaking under the weight of a deadly meteorological phenomenon.</p>
               </div>
-              <p class="script-dialogue-text">
-                When herders arrive in Ulaanbaatar, they do not move into modern apartment towers. Under Mongolian law, every citizen is entitled to a free plot of land. Migrating families claim patches of dirt on the steep hillsides encircling the capital, erect their wooden fences, and pitch their gers inside. Today, these spontaneous settlements—known as the Ger Districts—house over eight hundred thousand people, more than half of the city's population. These districts have no municipal sewer systems, no central hot water plumbing, and unpaved roads that turn into muddy torrents during spring thaws. What began as a temporary refuge has become a permanent urban sprawl spanning tens of square miles.
-              </p>
-              <div class="visual-cue-box" style="margin-top:10px;">
-                <strong>Visual Direction:</strong> High-angle aerial drone survey of Ulaanbaatar hillside ger districts: Thousands of white circular felt yurts behind wooden fences stretching to the horizon.
-              </div>
-            </div>
 
-            <!-- Beat 5 -->
-            <div class="beat-card" style="background:var(--bg-canvas); border:3px solid var(--ink); border-radius:var(--radius-lg); padding:20px; margin-bottom:18px;">
-              <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:10px;">
-                <span class="beat-num">Beat 05</span>
-                <span class="beat-time">4:30 – 5:45 · 155 words</span>
-                <span class="pill-tag" style="background:#F3E8FF; color:#6B21A8;">The Smoke Valley Inversion</span>
-              </div>
-              <p class="script-dialogue-text">
-                In winter, temperatures in Ulaanbaatar regularly fall below minus thirty degrees Celsius, making it the coldest national capital on Earth. Because the Ger Districts have no central steam heating from municipal power plants, families survive by burning raw coal and wood in simple cast-iron stoves inside their gers. The geography of Ulaanbaatar acts as a deadly trap: the city sits at the bottom of a narrow bowl-shaped river valley. Cold dense air pools at the valley floor, creating a severe thermal inversion that traps thick black coal smoke beneath a ceiling of warm air. In mid-winter, air pollution levels in Ulaanbaatar spike to fifty times the safety limits established by the World Health Organization.
-              </p>
-              <div class="visual-cue-box" style="margin-top:10px;">
-                <strong>Visual Direction:</strong> 3D Valley Terrain Cross-Section: Thermal inversion animation showing cold air trapping dense layer of grey-black smoke over Ulaanbaatar valley.
-              </div>
-            </div>
+              <!-- Visual & AI Prompt Directive -->
+              <div class="production-directive-box">
+                <div class="directive-row">
+                  <div class="directive-item">
+                    <span class="directive-label">🎥 Visual Event</span>
+                    <p>3D Elevation Model: High-relief color ramp showing elevation contours rising sharply from Russia and China with rain shadow overlays.</p>
+                  </div>
+                  <div class="directive-item">
+                    <span class="directive-label">✂️ Cut Trigger</span>
+                    <span class="cut-trigger-pill">CUT ON: "meteorological phenomenon" ➔ CUT to Beat 03</span>
+                  </div>
+                </div>
 
-            <!-- Beat 6 -->
-            <div class="beat-card" style="background:var(--bg-canvas); border:3px solid var(--ink); border-radius:var(--radius-lg); padding:20px; margin-bottom:18px;">
-              <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:10px;">
-                <span class="beat-num">Beat 06</span>
-                <span class="beat-time">5:45 – 7:00 · 165 words</span>
-                <span class="pill-tag" style="background:#FFE4E6; color:#9F1239;">The Mining Boom Paradox</span>
-              </div>
-              <p class="script-dialogue-text">
-                While the countryside empties, Mongolia's national economy has undergone a massive mineral boom. Beneath the Gobi desert lie some of the world's richest deposits of copper, gold, and coal—including Oyu Tolgoi, one of the largest copper mines on the planet. Mining now accounts for nearly a quarter of Mongolia's GDP and over eighty percent of its exports. But this modern industrial wealth has created a strange geographic divergence: hundreds of millions of dollars flow through international mining conglomerates in the South Gobi, but the vast majority of jobs and tax revenues flow directly back to corporate offices in Ulaanbaatar. Mining generates immense capital, but creates relatively few jobs for former nomadic herders.
-              </p>
-              <div class="visual-cue-box" style="margin-top:10px;">
-                <strong>Visual Direction:</strong> Aerial cinematic view of giant open-pit copper mine in the South Gobi desert, heavy yellow haul trucks moving along terraced earth.
-              </div>
-            </div>
+                <div class="directive-prompt-box">
+                  <div class="prompt-head">
+                    <span class="prompt-label">⚡ Google Flow AI Cinematography Prompt (§20)</span>
+                    <button class="clean-copy-btn" onclick="copyPrompt(this)">Copy Prompt</button>
+                  </div>
+                  <pre class="prompt-text"><code>Create an 8-second horizontal 16:9 cinematic clip. 3D cartographic elevation relief map of Central Asian plateau, Altai mountain ridges casting long afternoon shadows, clean photorealistic rendering, 8k --ar 16:9</code></pre>
+                </div>
 
-            <!-- Beat 7 -->
-            <div class="beat-card" style="background:var(--bg-canvas); border:3px solid var(--ink); border-radius:var(--radius-lg); padding:20px; margin-bottom:18px;">
-              <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:10px;">
-                <span class="beat-num">Beat 07</span>
-                <span class="beat-time">7:00 – 8:15 · 158 words</span>
-                <span class="pill-tag" style="background:#FEF3C7; color:#92400E;">The Infrastructure Reality</span>
+                <div class="sfx-footer-row">
+                  <span class="sfx-label">🎵 Sound Design Cue:</span>
+                  <span class="sfx-value">Mountain wind whistle and horse hooves</span>
+                </div>
               </div>
-              <p class="script-dialogue-text">
-                The natural question is: why can't the government simply relocate people back onto the empty steppe? The answer lies in basic economic infrastructure. To support modern human life in remote provinces, a nation must build thousands of miles of paved highways, electrical grids, high-speed internet cables, and regional hospitals. In a country of three million people spread across a territory the size of Western Europe, the cost per capita of providing rural infrastructure is completely astronomical. Building a paved road to a provincial town of five thousand people costs millions of dollars per resident. It is thousands of times cheaper for the state to provide schools and healthcare when people concentrate in one place.
-              </p>
-              <div class="visual-cue-box" style="margin-top:10px;">
-                <strong>Visual Direction:</strong> Infrastructure map: Lonely paved highway ending abruptly into endless dirt tire tracks branching across empty brown steppe.
-              </div>
-            </div>
+            </article>
 
-            <!-- Beat 8 -->
-            <div class="beat-card" style="background:var(--bg-canvas); border:3px solid var(--ink); border-radius:var(--radius-lg); padding:20px; margin-bottom:18px;">
-              <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:10px;">
-                <span class="beat-num">Beat 08</span>
-                <span class="beat-time">8:15 – 9:30 · 152 words</span>
-                <span class="pill-tag" style="background:#E0F2FE; color:#0369A1;">The Buffer State Geopolitics</span>
+            <!-- Beat 03 -->
+            <article class="clean-script-card">
+              <div class="card-top-bar">
+                <div class="card-title-group">
+                  <span class="beat-pill">Beat 03</span>
+                  <h3>The Dzud Catastrophe</h3>
+                  <span class="time-tag">1:50 – 3:10</span>
+                </div>
+                <span class="word-count-tag">172 words</span>
               </div>
-              <p class="script-dialogue-text">
-                Mongolia's spatial emptiness also defines its delicate geopolitical survival. Landlocked entirely between Russia and China, Mongolia has no access to global sea lanes without passing through one of its two giant neighbors. For decades during the Cold War, Mongolia served as a massive geographic buffer zone between Soviet Siberia and Maoist China. Today, Mongolia balances this reality through its Third Neighbor Policy—building diplomatic and trade relationships with democratic nations like the United States, Japan, South Korea, and the European Union. Its low population density ensures it poses zero military threat to either neighbor, while its vast territory provides a neutral physical barrier between the two Eurasian superpowers.
-              </p>
-              <div class="visual-cue-box" style="margin-top:10px;">
-                <strong>Visual Direction:</strong> Geopolitical Map: Russia in red to the north, China in yellow to the south, highlighting Mongolia as a glowing blue buffer corridor between them.
-              </div>
-            </div>
 
-            <!-- Beat 9 -->
-            <div class="beat-card" style="background:var(--bg-canvas); border:3px solid var(--ink); border-radius:var(--radius-lg); padding:20px; margin-bottom:18px;">
-              <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:10px;">
-                <span class="beat-num">Beat 09</span>
-                <span class="beat-time">9:30 – 10:45 · 148 words</span>
-                <span class="pill-tag" style="background:#DCFCE7; color:#166534;">High-Tech Nomadism</span>
+              <!-- Spoken Voiceover Narration Box -->
+              <div class="voiceover-text-box">
+                <p>The destructive engine driving this transformation is called the Dzud. A Dzud occurs when an intensely dry summer withers pasture grass, followed immediately by a catastrophic winter where temperatures plunge below minus forty-five degrees Celsius. Deep sheets of ice freeze over the ground, creating an impenetrable crust that prevents livestock from digging through to reach food. In severe Dzud years, millions of animals perish within a matter of weeks. When a herding family loses their entire livestock in a single winter, their nomadic way of life is instantly extinguished. With no animals left to herd, they pack their traditional round felt tent—a ger—onto a truck and head toward the only place with hospitals, electricity, and jobs: Ulaanbaatar.</p>
               </div>
-              <p class="script-dialogue-text">
-                For the herders who remain on the steppe, nomadism has undergone a high-tech revolution. Today, almost every traditional ger is equipped with a rooftop solar panel, a satellite dish, and lithium battery banks. Nomadic herders use smartphones connected to 4G cellular towers to monitor weather forecasts and livestock prices in real time. Many herders now ride lightweight Chinese motorcycles rather than horses to herd their animals across rocky plains, and use GPS tracking collars attached to lead camels and horses to monitor herd positions across dozens of square miles. Nomadism has not died—it has digitized.
-              </p>
-              <div class="visual-cue-box" style="margin-top:10px;">
-                <strong>Visual Direction:</strong> Close-up of traditional wooden ger with solar panel glinting in sunlight and satellite dish mounted beside felt doorway.
+
+              <!-- Visual & AI Prompt Directive -->
+              <div class="production-directive-box">
+                <div class="directive-row">
+                  <div class="directive-item">
+                    <span class="directive-label">🎥 Visual Event</span>
+                    <p>Thermal satellite map of Siberian freeze (-45°C) sweeping over Mongolia, cross-fading into snowy blizzard footage over abandoned wooden corrals.</p>
+                  </div>
+                  <div class="directive-item">
+                    <span class="directive-label">✂️ Cut Trigger</span>
+                    <span class="cut-trigger-pill">CUT ON: "jobs: Ulaanbaatar" ➔ CUT to Beat 04</span>
+                  </div>
+                </div>
+
+                <div class="directive-prompt-box">
+                  <div class="prompt-head">
+                    <span class="prompt-label">⚡ Google Flow AI Cinematography Prompt (§20)</span>
+                    <button class="clean-copy-btn" onclick="copyPrompt(this)">Copy Prompt</button>
+                  </div>
+                  <pre class="prompt-text"><code>Create an 8-second horizontal 16:9 cinematic clip. Extreme blizzard over Mongolian snowy plains, howling white snowdrifts burying wooden fences, harsh diffused winter light, intense cold realism, no people visible --ar 16:9</code></pre>
+                </div>
+
+                <div class="sfx-footer-row">
+                  <span class="sfx-label">🎵 Sound Design Cue:</span>
+                  <span class="sfx-value">Howling blizzard wind and cracking ice</span>
+                </div>
               </div>
-            </div>
+            </article>
+
+            <!-- Beat 04 -->
+            <article class="clean-script-card">
+              <div class="card-top-bar">
+                <div class="card-title-group">
+                  <span class="beat-pill">Beat 04</span>
+                  <h3>The Ger District Ring</h3>
+                  <span class="time-tag">3:10 – 4:30</span>
+                </div>
+                <span class="word-count-tag">160 words</span>
+              </div>
+
+              <!-- Spoken Voiceover Narration Box -->
+              <div class="voiceover-text-box">
+                <p>When herders arrive in Ulaanbaatar, they do not move into modern apartment towers. Under Mongolian law, every citizen is entitled to a free plot of land. Migrating families claim patches of dirt on the steep hillsides encircling the capital, erect their wooden fences, and pitch their gers inside. Today, these spontaneous settlements—known as the Ger Districts—house over eight hundred thousand people, more than half of the city's population. These districts have no municipal sewer systems, no central hot water plumbing, and unpaved roads that turn into muddy torrents during spring thaws. What began as a temporary refuge has become a permanent urban sprawl spanning tens of square miles.</p>
+              </div>
+
+              <!-- Visual & AI Prompt Directive -->
+              <div class="production-directive-box">
+                <div class="directive-row">
+                  <div class="directive-item">
+                    <span class="directive-label">🎥 Visual Event</span>
+                    <p>High-angle aerial drone survey of Ulaanbaatar hillside ger districts: Thousands of white circular felt yurts behind wooden fences stretching to the horizon.</p>
+                  </div>
+                  <div class="directive-item">
+                    <span class="directive-label">✂️ Cut Trigger</span>
+                    <span class="cut-trigger-pill">CUT ON: "tens of square miles" ➔ CUT to Beat 05</span>
+                  </div>
+                </div>
+
+                <div class="directive-prompt-box">
+                  <div class="prompt-head">
+                    <span class="prompt-label">⚡ Google Flow AI Cinematography Prompt (§20)</span>
+                    <button class="clean-copy-btn" onclick="copyPrompt(this)">Copy Prompt</button>
+                  </div>
+                  <pre class="prompt-text"><code>Create an 8-second horizontal 16:9 cinematic clip. High-angle aerial panoramic view over sprawling hillside ger district of Ulaanbaatar, thousands of round white yurts surrounded by wooden fences, dusk light, 8k --ar 16:9</code></pre>
+                </div>
+
+                <div class="sfx-footer-row">
+                  <span class="sfx-label">🎵 Sound Design Cue:</span>
+                  <span class="sfx-value">Distant city traffic rumble and dogs barking</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- Beat 05 -->
+            <article class="clean-script-card">
+              <div class="card-top-bar">
+                <div class="card-title-group">
+                  <span class="beat-pill">Beat 05</span>
+                  <h3>The Smoke Valley Inversion</h3>
+                  <span class="time-tag">4:30 – 5:45</span>
+                </div>
+                <span class="word-count-tag">155 words</span>
+              </div>
+
+              <!-- Spoken Voiceover Narration Box -->
+              <div class="voiceover-text-box">
+                <p>In winter, temperatures in Ulaanbaatar regularly fall below minus thirty degrees Celsius, making it the coldest national capital on Earth. Because the Ger Districts have no central steam heating from municipal power plants, families survive by burning raw coal and wood in simple cast-iron stoves inside their gers. The geography of Ulaanbaatar acts as a deadly trap: the city sits at the bottom of a narrow bowl-shaped river valley. Cold dense air pools at the valley floor, creating a severe thermal inversion that traps thick black coal smoke beneath a ceiling of warm air. In mid-winter, air pollution levels in Ulaanbaatar spike to fifty times the safety limits established by the World Health Organization.</p>
+              </div>
+
+              <!-- Visual & AI Prompt Directive -->
+              <div class="production-directive-box">
+                <div class="directive-row">
+                  <div class="directive-item">
+                    <span class="directive-label">🎥 Visual Event</span>
+                    <p>3D Valley Terrain Cross-Section: Thermal inversion animation showing cold air trapping dense layer of grey-black smoke over Ulaanbaatar valley.</p>
+                  </div>
+                  <div class="directive-item">
+                    <span class="directive-label">✂️ Cut Trigger</span>
+                    <span class="cut-trigger-pill">CUT ON: "Health Organization" ➔ CUT to Beat 06</span>
+                  </div>
+                </div>
+
+                <div class="directive-prompt-box">
+                  <div class="prompt-head">
+                    <span class="prompt-label">⚡ Google Flow AI Cinematography Prompt (§20)</span>
+                    <button class="clean-copy-btn" onclick="copyPrompt(this)">Copy Prompt</button>
+                  </div>
+                  <pre class="prompt-text"><code>Create an 8-second horizontal 16:9 cinematic clip. Panoramic view of winter mountain valley at sunrise with thick blanket of atmospheric smoke settling over city basin, cold blue lighting, 8k --ar 16:9</code></pre>
+                </div>
+
+                <div class="sfx-footer-row">
+                  <span class="sfx-label">🎵 Sound Design Cue:</span>
+                  <span class="sfx-value">Crackling stove fire & low drone</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- Beat 06 -->
+            <article class="clean-script-card">
+              <div class="card-top-bar">
+                <div class="card-title-group">
+                  <span class="beat-pill">Beat 06</span>
+                  <h3>The Mining Boom Paradox</h3>
+                  <span class="time-tag">5:45 – 7:00</span>
+                </div>
+                <span class="word-count-tag">165 words</span>
+              </div>
+
+              <!-- Spoken Voiceover Narration Box -->
+              <div class="voiceover-text-box">
+                <p>While the countryside empties, Mongolia's national economy has undergone a massive mineral boom. Beneath the Gobi desert lie some of the world's richest deposits of copper, gold, and coal—including Oyu Tolgoi, one of the largest copper mines on the planet. Mining now accounts for nearly a quarter of Mongolia's GDP and over eighty percent of its exports. But this modern industrial wealth has created a strange geographic divergence: hundreds of millions of dollars flow through international mining conglomerates in the South Gobi, but the vast majority of jobs and tax revenues flow directly back to corporate offices in Ulaanbaatar. Mining generates immense capital, but creates relatively few jobs for former nomadic herders.</p>
+              </div>
+
+              <!-- Visual & AI Prompt Directive -->
+              <div class="production-directive-box">
+                <div class="directive-row">
+                  <div class="directive-item">
+                    <span class="directive-label">🎥 Visual Event</span>
+                    <p>Aerial cinematic view of giant open-pit copper mine in the South Gobi desert, heavy yellow haul trucks moving along terraced earth.</p>
+                  </div>
+                  <div class="directive-item">
+                    <span class="directive-label">✂️ Cut Trigger</span>
+                    <span class="cut-trigger-pill">CUT ON: "nomadic herders" ➔ CUT to Beat 07</span>
+                  </div>
+                </div>
+
+                <div class="directive-prompt-box">
+                  <div class="prompt-head">
+                    <span class="prompt-label">⚡ Google Flow AI Cinematography Prompt (§20)</span>
+                    <button class="clean-copy-btn" onclick="copyPrompt(this)">Copy Prompt</button>
+                  </div>
+                  <pre class="prompt-text"><code>Create an 8-second horizontal 16:9 cinematic clip. Massive open-pit mining canyon in South Gobi desert, yellow dump trucks traversing terraces under harsh sun, 8k --ar 16:9</code></pre>
+                </div>
+
+                <div class="sfx-footer-row">
+                  <span class="sfx-label">🎵 Sound Design Cue:</span>
+                  <span class="sfx-value">Heavy machinery engine rumble</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- Beat 07 -->
+            <article class="clean-script-card">
+              <div class="card-top-bar">
+                <div class="card-title-group">
+                  <span class="beat-pill">Beat 07</span>
+                  <h3>The Infrastructure Reality</h3>
+                  <span class="time-tag">7:00 – 8:15</span>
+                </div>
+                <span class="word-count-tag">158 words</span>
+              </div>
+
+              <!-- Spoken Voiceover Narration Box -->
+              <div class="voiceover-text-box">
+                <p>The natural question is: why can't the government simply relocate people back onto the empty steppe? The answer lies in basic economic infrastructure. To support modern human life in remote provinces, a nation must build thousands of miles of paved highways, electrical grids, high-speed internet cables, and regional hospitals. In a country of three million people spread across a territory the size of Western Europe, the cost per capita of providing rural infrastructure is completely astronomical. Building a paved road to a provincial town of five thousand people costs millions of dollars per resident. It is thousands of times cheaper for the state to provide schools and healthcare when people concentrate in one place.</p>
+              </div>
+
+              <!-- Visual & AI Prompt Directive -->
+              <div class="production-directive-box">
+                <div class="directive-row">
+                  <div class="directive-item">
+                    <span class="directive-label">🎥 Visual Event</span>
+                    <p>Infrastructure map: Lonely paved highway ending abruptly into endless dirt tire tracks branching across empty brown steppe.</p>
+                  </div>
+                  <div class="directive-item">
+                    <span class="directive-label">✂️ Cut Trigger</span>
+                    <span class="cut-trigger-pill">CUT ON: "in one place" ➔ CUT to Beat 08</span>
+                  </div>
+                </div>
+
+                <div class="directive-prompt-box">
+                  <div class="prompt-head">
+                    <span class="prompt-label">⚡ Google Flow AI Cinematography Prompt (§20)</span>
+                    <button class="clean-copy-btn" onclick="copyPrompt(this)">Copy Prompt</button>
+                  </div>
+                  <pre class="prompt-text"><code>Create an 8-second horizontal 16:9 cinematic clip. Paved two-lane highway cutting straight through endless flat steppe to vanishing point under vast blue sky, slow tracking motion, 8k --ar 16:9</code></pre>
+                </div>
+
+                <div class="sfx-footer-row">
+                  <span class="sfx-label">🎵 Sound Design Cue:</span>
+                  <span class="sfx-value">Car tires on highway hum</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- Beat 08 -->
+            <article class="clean-script-card">
+              <div class="card-top-bar">
+                <div class="card-title-group">
+                  <span class="beat-pill">Beat 08</span>
+                  <h3>The Buffer State Geopolitics</h3>
+                  <span class="time-tag">8:15 – 9:30</span>
+                </div>
+                <span class="word-count-tag">152 words</span>
+              </div>
+
+              <!-- Spoken Voiceover Narration Box -->
+              <div class="voiceover-text-box">
+                <p>Mongolia's spatial emptiness also defines its delicate geopolitical survival. Landlocked entirely between Russia and China, Mongolia has no access to global sea lanes without passing through one of its two giant neighbors. For decades during the Cold War, Mongolia served as a massive geographic buffer zone between Soviet Siberia and Maoist China. Today, Mongolia balances this reality through its Third Neighbor Policy—building diplomatic and trade relationships with democratic nations like the United States, Japan, South Korea, and the European Union. Its low population density ensures it poses zero military threat to either neighbor, while its vast territory provides a neutral physical barrier between the two Eurasian superpowers.</p>
+              </div>
+
+              <!-- Visual & AI Prompt Directive -->
+              <div class="production-directive-box">
+                <div class="directive-row">
+                  <div class="directive-item">
+                    <span class="directive-label">🎥 Visual Event</span>
+                    <p>Geopolitical Map: Russia in red to the north, China in yellow to the south, highlighting Mongolia as a glowing blue buffer corridor between them.</p>
+                  </div>
+                  <div class="directive-item">
+                    <span class="directive-label">✂️ Cut Trigger</span>
+                    <span class="cut-trigger-pill">CUT ON: "Eurasian superpowers" ➔ CUT to Beat 09</span>
+                  </div>
+                </div>
+
+                <div class="directive-prompt-box">
+                  <div class="prompt-head">
+                    <span class="prompt-label">⚡ Google Flow AI Cinematography Prompt (§20)</span>
+                    <button class="clean-copy-btn" onclick="copyPrompt(this)">Copy Prompt</button>
+                  </div>
+                  <pre class="prompt-text"><code>Create an 8-second horizontal 16:9 cinematic clip. 3D geopolitical satellite map over East Asia with border lines glowing in amber and blue, cinematic slow rotation, 8k --ar 16:9</code></pre>
+                </div>
+
+                <div class="sfx-footer-row">
+                  <span class="sfx-label">🎵 Sound Design Cue:</span>
+                  <span class="sfx-value">Low tactical heartbeat pulse</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- Beat 09 -->
+            <article class="clean-script-card">
+              <div class="card-top-bar">
+                <div class="card-title-group">
+                  <span class="beat-pill">Beat 09</span>
+                  <h3>High-Tech Nomadism</h3>
+                  <span class="time-tag">9:30 – 10:45</span>
+                </div>
+                <span class="word-count-tag">148 words</span>
+              </div>
+
+              <!-- Spoken Voiceover Narration Box -->
+              <div class="voiceover-text-box">
+                <p>For the herders who remain on the steppe, nomadism has undergone a high-tech revolution. Today, almost every traditional ger is equipped with a rooftop solar panel, a satellite dish, and lithium battery banks. Nomadic herders use smartphones connected to 4G cellular towers to monitor weather forecasts and livestock prices in real time. Many herders now ride lightweight Chinese motorcycles rather than horses to herd their animals across rocky plains, and use GPS tracking collars attached to lead camels and horses to monitor herd positions across dozens of square miles. Nomadism has not died—it has digitized.</p>
+              </div>
+
+              <!-- Visual & AI Prompt Directive -->
+              <div class="production-directive-box">
+                <div class="directive-row">
+                  <div class="directive-item">
+                    <span class="directive-label">🎥 Visual Event</span>
+                    <p>Close-up of traditional wooden ger with solar panel glinting in sunlight and satellite dish mounted beside felt doorway.</p>
+                  </div>
+                  <div class="directive-item">
+                    <span class="directive-label">✂️ Cut Trigger</span>
+                    <span class="cut-trigger-pill">CUT ON: "has digitized" ➔ CUT to Beat 10</span>
+                  </div>
+                </div>
+
+                <div class="directive-prompt-box">
+                  <div class="prompt-head">
+                    <span class="prompt-label">⚡ Google Flow AI Cinematography Prompt (§20)</span>
+                    <button class="clean-copy-btn" onclick="copyPrompt(this)">Copy Prompt</button>
+                  </div>
+                  <pre class="prompt-text"><code>Create an 8-second horizontal 16:9 cinematic clip. Solar panel attached to round white felt yurt in vast green grassland, young herder holding smartphone, crisp sunlight, 8k --ar 16:9</code></pre>
+                </div>
+
+                <div class="sfx-footer-row">
+                  <span class="sfx-label">🎵 Sound Design Cue:</span>
+                  <span class="sfx-value">Smartphone digital notification</span>
+                </div>
+              </div>
+            </article>
 
             <!-- Beat 10 -->
-            <div class="beat-card" style="background:var(--bg-canvas); border:3px solid var(--ink); border-radius:var(--radius-lg); padding:20px; margin-bottom:18px;">
-              <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:10px;">
-                <span class="beat-num">Beat 10</span>
-                <span class="beat-time">10:45 – 11:45 · 145 words</span>
-                <span class="pill-tag" style="background:#F3E8FF; color:#6B21A8;">The 2030 Demographic Shift</span>
+            <article class="clean-script-card">
+              <div class="card-top-bar">
+                <div class="card-title-group">
+                  <span class="beat-pill">Beat 10</span>
+                  <h3>The 2030 Demographic Shift</h3>
+                  <span class="time-tag">10:45 – 11:45</span>
+                </div>
+                <span class="word-count-tag">145 words</span>
               </div>
-              <p class="script-dialogue-text">
-                Despite these technological adaptations, demographic trends point in a single direction. Every year, younger generations leave the countryside for universities and tech jobs in Ulaanbaatar, Seoul, and Tokyo. The average age of nomadic herders is rising steadily. According to projections by the United Nations, by 2035 over seventy percent of Mongolia's population will live in urban centers. The ancient nomadic lifestyle that conquered the known world under Genghis Khan is rapidly transforming into a specialized pastoral industry, while the vast grasslands of Central Asia become emptier with each passing winter.
-              </p>
-              <div class="visual-cue-box" style="margin-top:10px;">
-                <strong>Visual Direction:</strong> Demographic chart: Rural population percentage falling steadily from 60% in 1990 down to 28% in 2026.
+
+              <!-- Spoken Voiceover Narration Box -->
+              <div class="voiceover-text-box">
+                <p>Despite these technological adaptations, demographic trends point in a single direction. Every year, younger generations leave the countryside for universities and tech jobs in Ulaanbaatar, Seoul, and Tokyo. The average age of nomadic herders is rising steadily. According to projections by the United Nations, by 2035 over seventy percent of Mongolia's population will live in urban centers. The ancient nomadic lifestyle that conquered the known world under Genghis Khan is rapidly transforming into a specialized pastoral industry, while the vast grasslands of Central Asia become emptier with each passing winter.</p>
               </div>
-            </div>
+
+              <!-- Visual & AI Prompt Directive -->
+              <div class="production-directive-box">
+                <div class="directive-row">
+                  <div class="directive-item">
+                    <span class="directive-label">🎥 Visual Event</span>
+                    <p>Demographic chart: Rural population percentage falling steadily from 60% in 1990 down to 28% in 2026.</p>
+                  </div>
+                  <div class="directive-item">
+                    <span class="directive-label">✂️ Cut Trigger</span>
+                    <span class="cut-trigger-pill">CUT ON: "passing winter" ➔ CUT to Beat 11</span>
+                  </div>
+                </div>
+
+                <div class="directive-prompt-box">
+                  <div class="prompt-head">
+                    <span class="prompt-label">⚡ Google Flow AI Cinematography Prompt (§20)</span>
+                    <button class="clean-copy-btn" onclick="copyPrompt(this)">Copy Prompt</button>
+                  </div>
+                  <pre class="prompt-text"><code>Create an 8-second horizontal 16:9 cinematic clip. University students walking across modern glass plaza in Ulaanbaatar downtown, sunny morning, crisp urban documentary style, 8k --ar 16:9</code></pre>
+                </div>
+
+                <div class="sfx-footer-row">
+                  <span class="sfx-label">🎵 Sound Design Cue:</span>
+                  <span class="sfx-value">Melancholic acoustic guitar strum</span>
+                </div>
+              </div>
+            </article>
 
             <!-- Beat 11 -->
-            <div class="beat-card" style="background:var(--bg-canvas); border:3px solid var(--ink); border-radius:var(--radius-lg); padding:20px; margin-bottom:18px;">
-              <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:10px;">
-                <span class="beat-num">Beat 11</span>
-                <span class="beat-time">11:45 – 12:20 · 125 words</span>
-                <span class="pill-tag" style="background:#FEF3C7; color:#92400E;">The Capital Transformation</span>
+            <article class="clean-script-card">
+              <div class="card-top-bar">
+                <div class="card-title-group">
+                  <span class="beat-pill">Beat 11</span>
+                  <h3>The Capital Transformation</h3>
+                  <span class="time-tag">11:45 – 12:20</span>
+                </div>
+                <span class="word-count-tag">125 words</span>
               </div>
-              <p class="script-dialogue-text">
-                To address the overcrowding and winter smog in Ulaanbaatar, the Mongolian government has begun construction on an ambitious new master-planned capital city called Maidar City, as well as redevelopment projects to replace hillside ger districts with modern insulated high-rise apartments powered by clean geothermal and renewable energy. The goal is to build an urban environment capable of sheltering half a nation's population without choking the valley that sustains them.
-              </p>
-              <div class="visual-cue-box" style="margin-top:10px;">
-                <strong>Visual Direction:</strong> Architectural 3D render of modern eco-district in Ulaanbaatar with solar arrays and clean electric buses.
+
+              <!-- Spoken Voiceover Narration Box -->
+              <div class="voiceover-text-box">
+                <p>To address the overcrowding and winter smog in Ulaanbaatar, the Mongolian government has begun construction on an ambitious new master-planned capital city called Maidar City, as well as redevelopment projects to replace hillside ger districts with modern insulated high-rise apartments powered by clean geothermal and renewable energy. The goal is to build an urban environment capable of sheltering half a nation's population without choking the valley that sustains them.</p>
               </div>
-            </div>
+
+              <!-- Visual & AI Prompt Directive -->
+              <div class="production-directive-box">
+                <div class="directive-row">
+                  <div class="directive-item">
+                    <span class="directive-label">🎥 Visual Event</span>
+                    <p>Architectural 3D render of modern eco-district in Ulaanbaatar with solar arrays and clean electric buses.</p>
+                  </div>
+                  <div class="directive-item">
+                    <span class="directive-label">✂️ Cut Trigger</span>
+                    <span class="cut-trigger-pill">CUT ON: "sustains them" ➔ CUT to Beat 12</span>
+                  </div>
+                </div>
+
+                <div class="directive-prompt-box">
+                  <div class="prompt-head">
+                    <span class="prompt-label">⚡ Google Flow AI Cinematography Prompt (§20)</span>
+                    <button class="clean-copy-btn" onclick="copyPrompt(this)">Copy Prompt</button>
+                  </div>
+                  <pre class="prompt-text"><code>Create an 8-second horizontal 16:9 cinematic clip. Modern architectural render of solar-powered sustainable residential towers with mountain backdrop, clean green city concept, 8k --ar 16:9</code></pre>
+                </div>
+
+                <div class="sfx-footer-row">
+                  <span class="sfx-label">🎵 Sound Design Cue:</span>
+                  <span class="sfx-value">Upbeat modern synth swell</span>
+                </div>
+              </div>
+            </article>
 
             <!-- Beat 12 -->
-            <div class="beat-card" style="background:var(--bg-canvas); border:3px solid var(--ink); border-radius:var(--radius-lg); padding:20px; margin-bottom:18px;">
-              <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:10px;">
-                <span class="beat-num">Beat 12</span>
-                <span class="beat-time">12:20 – 12:48 · 122 words</span>
-                <span class="pill-tag" style="background:#DCFCE7; color:#166534;">The Final Resolution</span>
-              </div>
-              <p class="script-dialogue-text">
-                Mongolia represents one of the most extreme geographic paradoxes on our planet: an empire of infinite horizon, where silence stretches for hundreds of miles under the Eternal Blue Sky, while its people gather in a single bustling mountain valley to build their future. The land is not empty because it is broken. It is empty because nature set the rules of survival—and human beings adapted. The question for the next century is whether a culture born of boundless open space can preserve its soul within the walls of a modern city.
-              </p>
-              <div class="visual-cue-box" style="margin-top:10px;">
-                <strong>Visual Direction:</strong> Sunset over the vast open Mongolian steppe, with a single rider silhouetted against glowing orange sky. Camera lifts into orbit.
-              </div>
-            </div>
-
-          </div>
-        </section>
-
-
-        <!-- TAB 3: DERIVED SHORTS SUITE (§12) -->
-        <section class="studio-pane" id="tab-shorts">
-          <div class="studio-card">
-            <div class="studio-card-head">
-              <div>
-                <h2>Derived Vertical Shorts Suite (§12 Standard)</h2>
-                <p style="color:var(--text-muted); font-size:0.84rem; margin-top:4px;">Two Standalone Vertical Shorts extracted from V2 Master Narrative.</p>
-              </div>
-              <span class="pill-tag" style="background:var(--cartoon-coral); color:#FFFFFF;">Vertical 9:16 · 1080×1920</span>
-            </div>
-
-            <!-- Short 2A -->
-            <article style="background:var(--bg-canvas); border:3px solid var(--ink); border-radius:var(--radius-lg); padding:24px; margin-bottom:28px; box-shadow:var(--shadow-block-sm);">
-              <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:14px;">
-                <div>
-                  <span class="pill-tag" style="background:var(--cartoon-yellow);">Short 1 of 2 · V2-Short-A</span>
-                  <h3 style="font-size:1.3rem; margin-top:6px;">Four European Countries Fit Inside This Empty Land</h3>
+            <article class="clean-script-card">
+              <div class="card-top-bar">
+                <div class="card-title-group">
+                  <span class="beat-pill">Beat 12</span>
+                  <h3>The Final Resolution</h3>
+                  <span class="time-tag">12:20 – 12:48</span>
                 </div>
-                <span class="pill-tag">Runtime: 66s · 8 Clips</span>
+                <span class="word-count-tag">122 words</span>
               </div>
 
-              <div class="intel-block" style="margin-bottom:16px;">
-                <strong>Hook (Clip 1, 0:00–0:08):</strong>
-                "Four entire European countries fit inside this one—and almost nobody lives in it."
+              <!-- Spoken Voiceover Narration Box -->
+              <div class="voiceover-text-box">
+                <p>Mongolia represents one of the most extreme geographic paradoxes on our planet: an empire of infinite horizon, where silence stretches for hundreds of miles under the Eternal Blue Sky, while its people gather in a single bustling mountain valley to build their future. The land is not empty because it is broken. It is empty because nature set the rules of survival—and human beings adapted. The question for the next century is whether a culture born of boundless open space can preserve its soul within the walls of a modern city.</p>
               </div>
 
-              <div style="display:flex; flex-direction:column; gap:10px; font-size:0.86rem; color:var(--text-dark);">
-                <div style="background:var(--bg-card); padding:10px 14px; border-radius:var(--radius-sm); border:2px solid var(--ink);">
-                  <strong>Clip 1 (0:00–0:08):</strong> "Four entire European countries fit inside this one—and almost nobody lives in it." → <em>Visual: UK, France, Germany, Italy nest into Mongolia.</em>
+              <!-- Visual & AI Prompt Directive -->
+              <div class="production-directive-box">
+                <div class="directive-row">
+                  <div class="directive-item">
+                    <span class="directive-label">🎥 Visual Event</span>
+                    <p>Sunset over the vast open Mongolian steppe, with a single rider silhouetted against glowing orange sky. Camera lifts into orbit.</p>
+                  </div>
+                  <div class="directive-item">
+                    <span class="directive-label">✂️ Cut Trigger</span>
+                    <span class="cut-trigger-pill">FADE TO BLACK ➔ Outro End Screen</span>
+                  </div>
                 </div>
-                <div style="background:var(--bg-card); padding:10px 14px; border-radius:var(--radius-sm); border:2px solid var(--ink);">
-                  <strong>Clip 2 (0:08–0:16):</strong> "Mongolia is the size of Western Europe, but has fewer people than Madrid." → <em>Visual: Population density comparison counters.</em>
+
+                <div class="directive-prompt-box">
+                  <div class="prompt-head">
+                    <span class="prompt-label">⚡ Google Flow AI Cinematography Prompt (§20)</span>
+                    <button class="clean-copy-btn" onclick="copyPrompt(this)">Copy Prompt</button>
+                  </div>
+                  <pre class="prompt-text"><code>Create an 8-second horizontal 16:9 cinematic clip. Sunset over endless Mongolian grassland, golden orange sky with lone horse rider silhouetted on ridge, cinematic slow lift to sky, 8k --ar 16:9</code></pre>
                 </div>
-                <div style="background:var(--bg-card); padding:10px 14px; border-radius:var(--radius-sm); border:2px solid var(--ink);">
-                  <strong>Clip 3 (0:16–0:24):</strong> "That's barely 2 people per square kilometre—the lowest on Earth." → <em>Visual: Lone yurt in vast endless grassland.</em>
-                </div>
-                <div style="background:var(--bg-card); padding:10px 14px; border-radius:var(--radius-sm); border:2px solid var(--ink);">
-                  <strong>Clip 4 (0:24–0:32):</strong> "Less than 1% of the land can grow crops due to high altitude and harsh soil." → <em>Visual: Arid mountain pass and dry steppe.</em>
-                </div>
-                <div style="background:var(--bg-card); padding:10px 14px; border-radius:var(--radius-sm); border:2px solid var(--ink);">
-                  <strong>Clip 5 (0:32–0:40):</strong> "So for centuries, survival meant moving herds across hundreds of miles." → <em>Visual: Nomadic horsemen galloping across plain.</em>
-                </div>
-                <div style="background:var(--bg-card); padding:10px 14px; border-radius:var(--radius-sm); border:2px solid var(--ink);">
-                  <strong>Clip 6 (0:40–0:48):</strong> "Today, half the country has moved into a single city valley." → <em>Visual: Ulaanbaatar dense high-rises and yurt suburbs.</em>
-                </div>
-                <div style="background:var(--bg-card); padding:10px 14px; border-radius:var(--radius-sm); border:2px solid var(--ink);">
-                  <strong>Clip 7 (0:48–0:56):</strong> "Making the emptiest country on Earth also one of the most crowded." → <em>Visual: Heavy traffic in Ulaanbaatar city center.</em>
-                </div>
-                <div style="background:var(--bg-card); padding:10px 14px; border-radius:var(--radius-sm); border:2px solid var(--ink);">
-                  <strong>Clip 8 (0:56–1:06):</strong> "Would you live in a country with this much empty space? Tell me below." → <em>Visual: 3D spinning terrain map.</em>
+
+                <div class="sfx-footer-row">
+                  <span class="sfx-label">🎵 Sound Design Cue:</span>
+                  <span class="sfx-value">Grand orchestral swell & horsehead fiddle</span>
                 </div>
               </div>
             </article>
-
-            <!-- Short 2B -->
-            <article style="background:var(--bg-canvas); border:3px solid var(--ink); border-radius:var(--radius-lg); padding:24px; box-shadow:var(--shadow-block-sm);">
-              <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:14px;">
-                <div>
-                  <span class="pill-tag" style="background:var(--cartoon-blue); color:#FFFFFF;">Short 2 of 2 · V2-Short-B</span>
-                  <h3 style="font-size:1.3rem; margin-top:6px;">The Deadly Weather Event That Empties the Steppe</h3>
-                </div>
-                <span class="pill-tag">Runtime: 70s · 8 Clips</span>
-              </div>
-
-              <div class="intel-block" style="margin-bottom:16px;">
-                <strong>Hook (Clip 1, 0:00–0:08):</strong>
-                "One bad winter can end a nomadic family's entire livelihood—and it moves them 400 miles."
-              </div>
-
-              <div style="display:flex; flex-direction:column; gap:10px; font-size:0.86rem; color:var(--text-dark);">
-                <div style="background:var(--bg-card); padding:10px 14px; border-radius:var(--radius-sm); border:2px solid var(--ink);">
-                  <strong>Clip 1 (0:00–0:08):</strong> "One bad winter can end a nomadic family's entire livelihood—and it moves them 400 miles." → <em>Visual: Snowy blizzard over wooden corral.</em>
-                </div>
-                <div style="background:var(--bg-card); padding:10px 14px; border-radius:var(--radius-sm); border:2px solid var(--ink);">
-                  <strong>Clip 2 (0:08–0:16):</strong> "Mongolians call it the Dzud—when temperatures drop to minus 45 degrees Celsius." → <em>Visual: Frost crystal thermometer dropping.</em>
-                </div>
-                <div style="background:var(--bg-card); padding:10px 14px; border-radius:var(--radius-sm); border:2px solid var(--ink);">
-                  <strong>Clip 3 (0:16–0:24):</strong> "Thick sheets of solid ice seal the ground, starving millions of animals." → <em>Visual: Frozen snow crust over steppe.</em>
-                </div>
-                <div style="background:var(--bg-card); padding:10px 14px; border-radius:var(--radius-sm); border:2px solid var(--ink);">
-                  <strong>Clip 4 (0:24–0:32):</strong> "When herds die, families pack their traditional tents onto trucks." → <em>Visual: Truck carrying disassembled yurt across dirt road.</em>
-                </div>
-                <div style="background:var(--bg-card); padding:10px 14px; border-radius:var(--radius-sm); border:2px solid var(--ink);">
-                  <strong>Clip 5 (0:32–0:40):</strong> "They move to Ulaanbaatar, setting up gers along the city hillsides." → <em>Visual: Sprawling ger district rooftops.</em>
-                </div>
-                <div style="background:var(--bg-card); padding:10px 14px; border-radius:var(--radius-sm); border:2px solid var(--ink);">
-                  <strong>Clip 6 (0:40–0:48):</strong> "Over 40,000 herders migrate into the capital every single decade." → <em>Visual: Urban population growth bar graph.</em>
-                </div>
-                <div style="background:var(--bg-card); padding:10px 14px; border-radius:var(--radius-sm); border:2px solid var(--ink);">
-                  <strong>Clip 7 (0:48–0:56):</strong> "This turns centuries of nomadic heritage into an urban scramble for jobs." → <em>Visual: Young Mongolian walking into modern office building.</em>
-                </div>
-                <div style="background:var(--bg-card); padding:10px 14px; border-radius:var(--radius-sm); border:2px solid var(--ink);">
-                  <strong>Clip 8 (0:56–1:10):</strong> "Is climate change ending nomadism forever? Share your view below." → <em>Visual: Sunset over lonely steppe landscape.</em>
-                </div>
-              </div>
-            </article>
-          </div>
         </section>
 
-        <!-- TAB 4: RESEARCH CARD -->
-        <section class="studio-pane" id="tab-research">
-          <div class="studio-card">
-            <div class="studio-card-head">
-              <h2>Research Card & Fact-Checks (§13.4)</h2>
-              <span class="pill-tag" style="background:var(--cartoon-green);">Verified Accuracy</span>
+        <!-- TAB 2: SHORTS -->
+        <section class="tab-pane" id="tab-shorts">
+          <div class="clean-script-card">
+            <div class="card-top-bar">
+              <div class="card-title-group">
+                <span class="beat-pill" style="background:var(--accent-yellow);">Short 1 of 2</span>
+                <h3>V2-Short-A · Four European Countries Fit Inside This Empty Land</h3>
+              </div>
+              <span class="time-tag">66s · 8 Vertical Clips</span>
             </div>
 
-            <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:18px;">
-              <div class="intel-block">
-                <strong>Area & Density Figures:</strong>
-                • Total Area: 1,564,116 km² (18th largest globally)<br>
-                • Population: 3,450,000 (UN WPP 2024)<br>
-                • Density: 2.2 people/km² (Lowest on Earth).
-              </div>
+            <div class="voiceover-text-box">
+              <p><strong>Hook:</strong> "Four entire European countries fit inside this one—and almost nobody lives in it."<br><br>
+              <strong>Clip 1 (0:00–0:08):</strong> "Four entire European countries fit inside this one—and almost nobody lives in it."<br>
+              <strong>Clip 2 (0:08–0:16):</strong> "Mongolia is the size of Western Europe, but has fewer people than Madrid."<br>
+              <strong>Clip 3 (0:16–0:24):</strong> "That's barely 2 people per square kilometre—the lowest on Earth."<br>
+              <strong>Clip 4 (0:24–0:32):</strong> "Less than 1% of the land can grow crops due to high altitude and harsh soil."<br>
+              <strong>Clip 5 (0:32–0:40):</strong> "So for centuries, survival meant moving herds across hundreds of miles."<br>
+              <strong>Clip 6 (0:40–0:48):</strong> "Today, half the country has moved into a single city valley."<br>
+              <strong>Clip 7 (0:48–0:56):</strong> "Making the emptiest country on Earth also one of the most crowded."<br>
+              <strong>Clip 8 (0:56–1:06):</strong> "Would you live in a country with this much empty space? Tell me below."</p>
+            </div>
+          </div>
 
-              <div class="intel-block">
-                <strong>European Size Equivalents:</strong>
-                • UK (243K) + France (551K) + Germany (357K) + Italy (302K) = 1,453,000 km²<br>
-                <em>Combined area of all 4 is smaller than Mongolia alone!</em>
+          <div class="clean-script-card">
+            <div class="card-top-bar">
+              <div class="card-title-group">
+                <span class="beat-pill" style="background:var(--accent-blue); color:#FFFFFF;">Short 2 of 2</span>
+                <h3>V2-Short-B · The Deadly Weather Event That Empties the Steppe</h3>
               </div>
+              <span class="time-tag">70s · 8 Vertical Clips</span>
+            </div>
 
-              <div class="intel-block">
-                <strong>Ulaanbaatar Urban Primacy:</strong>
-                • City Population: ~1.65 Million (~48% of total nation)<br>
-                • Elevation: 1,350 metres (Coldest capital city on Earth).
-              </div>
-
-              <div class="intel-block">
-                <strong>Dzud Loss Statistics:</strong>
-                • 2010 Dzud: Over 8.5 million livestock died (~20% of national herd)<br>
-                • 2023–2024 Dzud: Over 5.9 million livestock lost (FAO Report).
-              </div>
+            <div class="voiceover-text-box">
+              <p><strong>Hook:</strong> "One bad winter can end a nomadic family's entire livelihood—and it moves them 400 miles."<br><br>
+              <strong>Clip 1 (0:00–0:08):</strong> "One bad winter can end a nomadic family's entire livelihood—and it moves them 400 miles."<br>
+              <strong>Clip 2 (0:08–0:16):</strong> "Mongolians call it the Dzud—when temperatures drop to minus 45 degrees Celsius."<br>
+              <strong>Clip 3 (0:16–0:24):</strong> "Thick sheets of solid ice seal the ground, starving millions of animals."<br>
+              <strong>Clip 4 (0:24–0:32):</strong> "When herds die, families pack their traditional tents onto trucks."<br>
+              <strong>Clip 5 (0:32–0:40):</strong> "They move to Ulaanbaatar, setting up gers along the city hillsides."<br>
+              <strong>Clip 6 (0:40–0:48):</strong> "Over 40,000 herders migrate into the capital every single decade."<br>
+              <strong>Clip 7 (0:48–0:56):</strong> "This turns centuries of nomadic heritage into an urban scramble for jobs."<br>
+              <strong>Clip 8 (0:56–1:10):</strong> "Is climate change ending nomadism forever? Share your view below."</p>
             </div>
           </div>
         </section>
 
-        <!-- TAB 5: PACKAGING & SEO -->
-        <section class="studio-pane" id="tab-packaging">
-          <div class="studio-card">
-            <div class="studio-card-head">
-              <h2>Packaging, SEO & Upload Kit (§26)</h2>
-              <span class="pill-tag" style="background:var(--cartoon-yellow);">Complete Metadata</span>
+        <!-- TAB 3: RESEARCH -->
+        <section class="tab-pane" id="tab-research">
+          <div class="clean-script-card">
+            <div class="card-top-bar">
+              <div class="card-title-group">
+                <span class="beat-pill" style="background:var(--accent-green); color:#FFFFFF;">FACT CHECK</span>
+                <h3>Verified Geographic & Density Citations (§13.4)</h3>
+              </div>
             </div>
 
-            <div style="display:flex; flex-direction:column; gap:16px;">
-              <div class="intel-block">
-                <strong>Primary Title (53 Chars):</strong>
-                Why Nobody Lives in the Most Empty Country on Earth
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px;">
+              <div class="voiceover-text-box">
+                <span class="directive-label">Area & Population (UN WPP 2024):</span>
+                <p style="font-size: 0.92rem; font-weight: 500;">• Area: 1,564,116 km² (18th largest globally)<br>• Population: 3,450,000<br>• Density: 2.2 people/km² (Lowest on Earth).</p>
               </div>
-
-              <div class="intel-block">
-                <strong>A/B Title Option (46 Chars):</strong>
-                The Country With 2 People Per Square Kilometre
+              <div class="voiceover-text-box">
+                <span class="directive-label">European Comparison:</span>
+                <p style="font-size: 0.92rem; font-weight: 500;">• UK (243K) + France (551K) + Germany (357K) + Italy (302K) = 1,453,000 km²<br><em>All 4 combined fit inside Mongolia.</em></p>
               </div>
-
-              <div class="intel-block">
-                <strong>Thumbnail Concept & 3-5 Word Text:</strong>
-                Mongolia country outline in bright amber with UK, France, Germany, Italy nested inside. Text: <strong>"2 PEOPLE PER KM²"</strong>
+              <div class="voiceover-text-box">
+                <span class="directive-label">Urban Primacy:</span>
+                <p style="font-size: 0.92rem; font-weight: 500;">• Ulaanbaatar: ~1.65 Million (~48% of nation)<br>• Coldest capital city on Earth.</p>
               </div>
-
-              <div class="intel-block">
-                <strong>Pinned Comment Strategy (§26.7):</strong>
-                "If half a country's population moves into a single city valley, does the culture change permanently, or can nomadic tradition survive? What do you think?"
+              <div class="voiceover-text-box">
+                <span class="directive-label">Dzud Statistics:</span>
+                <p style="font-size: 0.92rem; font-weight: 500;">• 2010 Dzud: 8.5 million livestock died.<br>• 2024 Dzud: 5.9 million livestock lost.</p>
               </div>
             </div>
           </div>
         </section>
 
-        <!-- Footer -->
-        <footer style="margin-top: 100px; padding-top: 36px; border-top: 3.5px dashed var(--ink); text-align: center; color: var(--text-faint); font-size: 0.84rem; font-weight: 700;">
-          <p><strong style="color: var(--cartoon-blue-deep);">Hidden Geography</strong> · Production OS v2.1 · Video 2 (V2) Production Studio</p>
-          <p style="margin-top: 6px; font-size: 0.72rem; color: var(--text-faint);">Strict Tier 1 Cadence · 1 Long Video + 2 Shorts / Week · Persistent LocalStorage Sync</p>
+        <!-- TAB 4: PACKAGING -->
+        <section class="tab-pane" id="tab-packaging">
+          <div class="clean-script-card">
+            <div class="card-top-bar">
+              <div class="card-title-group">
+                <span class="beat-pill" style="background:var(--accent-yellow);">PACKAGING KIT</span>
+                <h3>YouTube Metadata, Title & Pinned Comment (§26)</h3>
+              </div>
+            </div>
+
+            <div style="display: flex; flex-direction: column; gap: 14px;">
+              <div class="voiceover-text-box">
+                <span class="directive-label">Primary Title (53 Chars):</span>
+                <p style="font-size: 1.05rem; font-weight: 700;">Why Nobody Lives in the Most Empty Country on Earth</p>
+              </div>
+              <div class="voiceover-text-box">
+                <span class="directive-label">A/B Option (46 Chars):</span>
+                <p style="font-size: 1.05rem; font-weight: 700;">The Country With 2 People Per Square Kilometre</p>
+              </div>
+              <div class="voiceover-text-box">
+                <span class="directive-label">Thumbnail Text:</span>
+                <p style="font-size: 0.95rem; font-weight: 600;">Mongolia outline in amber with 4 European countries inside. Text: <strong>"2 PEOPLE PER KM²"</strong></p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <footer style="margin-top: 80px; padding-top: 24px; border-top: 2.5px dashed var(--border-chunky); text-align: center; color: var(--text-faint); font-size: 0.82rem; font-weight: 700;">
+          <p><strong style="color: var(--accent-blue-deep);">Hidden Geography</strong> · Production Studio OS v2.1 · Strict Tier 1 Cadence</p>
         </footer>
 
       </main>
     </div>
   </div>
 
-  <!-- Toast Notification Element -->
-  <div class="toast-pill" id="toastMsg">Formula Copied to Clipboard!</div>
+  <div class="toast-pill" id="toastMsg">Copied to Clipboard!</div>
 
   <script>
-    // Theme Switcher Logic
+    // Theme Toggle
     const themeToggleBtn = document.getElementById("themeToggle");
     const themeIcon = document.getElementById("themeIcon");
 
-    function setTheme(targetTheme) {
-      document.documentElement.dataset.theme = targetTheme;
-      localStorage.setItem("hg-theme-cartoon-v1", targetTheme);
-
+    function setTheme(theme) {
+      document.documentElement.dataset.theme = theme;
+      localStorage.setItem("hg-clean-theme", theme);
       if (themeIcon) {
-        if (targetTheme === "dark") {
+        if (theme === "dark") {
           themeIcon.innerHTML = '<circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>';
         } else {
           themeIcon.innerHTML = '<path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>';
@@ -1811,43 +1451,36 @@
 
     if (themeToggleBtn) {
       themeToggleBtn.addEventListener("click", () => {
-        const current = document.documentElement.dataset.theme || "light";
-        setTheme(current === "light" ? "dark" : "light");
+        const cur = document.documentElement.dataset.theme || "light";
+        setTheme(cur === "light" ? "dark" : "light");
       });
     }
+    setTheme(localStorage.getItem("hg-clean-theme") || "light");
 
-    setTheme(localStorage.getItem("hg-theme-cartoon-v1") || "light");
-
-    // Mobile Navigation Drawer
+    // Sidebar Mobile Toggle
     const appSidebar = document.getElementById("appSidebar");
     const sidebarToggle = document.getElementById("sidebarToggle");
     const sidebarCloseBtn = document.getElementById("sidebarCloseBtn");
     const sidebarBackdrop = document.getElementById("sidebarBackdrop");
 
-    function setSidebarState(open) {
-      const shouldOpen = open !== undefined ? open : !appSidebar.classList.contains("open");
-      appSidebar.classList.toggle("open", shouldOpen);
-      sidebarBackdrop.classList.toggle("active", shouldOpen);
-      document.body.style.overflow = shouldOpen ? "hidden" : "";
+    function setSidebar(open) {
+      const isOpen = open !== undefined ? open : !appSidebar.classList.contains("open");
+      appSidebar.classList.toggle("open", isOpen);
+      sidebarBackdrop.classList.toggle("active", isOpen);
+      document.body.style.overflow = isOpen ? "hidden" : "";
     }
 
-    if (sidebarToggle) sidebarToggle.addEventListener("click", () => setSidebarState(true));
-    if (sidebarCloseBtn) sidebarCloseBtn.addEventListener("click", () => setSidebarState(false));
-    if (sidebarBackdrop) sidebarBackdrop.addEventListener("click", () => setSidebarState(false));
+    if (sidebarToggle) sidebarToggle.addEventListener("click", () => setSidebar(true));
+    if (sidebarCloseBtn) sidebarCloseBtn.addEventListener("click", () => setSidebar(false));
+    if (sidebarBackdrop) sidebarBackdrop.addEventListener("click", () => setSidebar(false));
 
-    document.querySelectorAll(".sidebar a").forEach(link => {
-      link.addEventListener("click", () => {
-        if (window.innerWidth <= 1040) setSidebarState(false);
-      });
-    });
+    // Tab Switching with URL Hash
+    const tabButtons = document.querySelectorAll(".tab-btn");
+    const tabPanes = document.querySelectorAll(".tab-pane");
 
-        // Studio Tab Switching Logic with URL Hash Support
-    const tabButtons = document.querySelectorAll(".studio-tab-btn");
-    const tabPanes = document.querySelectorAll(".studio-pane");
-
-    function activateTab(targetId) {
-      const btn = document.querySelector(`.studio-tab-btn[data-tab="${targetId}"]`);
-      const pane = document.getElementById(targetId);
+    function switchTab(id) {
+      const btn = document.querySelector(`.tab-btn[data-tab="${id}"]`);
+      const pane = document.getElementById(id);
       if (btn && pane) {
         tabButtons.forEach(b => b.classList.remove("active"));
         tabPanes.forEach(p => p.classList.remove("active"));
@@ -1858,31 +1491,29 @@
 
     tabButtons.forEach(btn => {
       btn.addEventListener("click", () => {
-        const targetId = btn.dataset.tab;
-        activateTab(targetId);
-        window.location.hash = targetId;
+        const id = btn.dataset.tab;
+        switchTab(id);
+        window.location.hash = id;
       });
     });
 
-    // Check URL hash on load
-    const initialHash = window.location.hash.replace("#", "");
-    if (initialHash && document.getElementById(initialHash)) {
-      activateTab(initialHash);
+    const hash = window.location.hash.replace("#", "");
+    if (hash && document.getElementById(hash)) {
+      switchTab(hash);
     }
-
 
     // Toast Copier
-    const toastMsg = document.getElementById("toastMsg");
-    function showToast(text) {
-      toastMsg.textContent = text;
-      toastMsg.classList.add("show");
-      setTimeout(() => toastMsg.classList.remove("show"), 2200);
+    const toast = document.getElementById("toastMsg");
+    function showToast(txt) {
+      toast.textContent = txt;
+      toast.classList.add("show");
+      setTimeout(() => toast.classList.remove("show"), 2000);
     }
 
-    function copySnippet(btn) {
-      const box = btn.parentElement.querySelector("span");
-      if (box) {
-        navigator.clipboard.writeText(box.textContent).then(() => {
+    function copyPrompt(btn) {
+      const code = btn.closest(".directive-prompt-box").querySelector("code");
+      if (code) {
+        navigator.clipboard.writeText(code.textContent).then(() => {
           showToast("AI Prompt Copied!");
         });
       }
