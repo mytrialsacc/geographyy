@@ -3,9 +3,9 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Hidden Geography — Why Nobody Lives in the Most Empty Country on Earth">
+  <meta name="description" content="Hidden Geography — Why Nobody Lives in the Most Empty Country on Earth (6-Minute Production Studio)">
   <meta name="theme-color" content="#0EA5E9">
-  <title>Why Nobody Lives in the Most Empty Country on Earth · Production Studio</title>
+  <title>Why Nobody Lives in the Most Empty Country on Earth · 6-Minute Production Studio</title>
   
   <link rel="icon" type="image/svg+xml" href="../../../favicon.svg">
   
@@ -36,10 +36,7 @@
       --border-medium: #CBD5E1;
       --border-dark: #0F172A;
       
-      --shadow-sm: 0 1px 3px rgba(0,0,0,0.05);
       --shadow-card: 0 4px 16px -2px rgba(15, 23, 42, 0.05);
-      --shadow-pop: 0 4px 0 #0F172A;
-      
       --radius-pill: 9999px;
       --radius-card: 16px;
       --radius-sm: 10px;
@@ -59,9 +56,7 @@
       --border-subtle: #334155;
       --border-medium: #475569;
       --border-dark: #334155;
-      
       --shadow-card: 0 4px 20px rgba(0,0,0,0.3);
-      --shadow-pop: 0 4px 0 #050811;
     }
 
     * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -71,12 +66,12 @@
       min-height: 100vh;
       color: var(--ink-primary);
       background-color: var(--bg-canvas);
-      font-family: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+      font-family: "Plus Jakarta Sans", sans-serif;
       line-height: 1.65;
       -webkit-font-smoothing: antialiased;
     }
 
-    h1, h2, h3, h4, .brand-title, .beat-gold-pill, .btn-pill {
+    h1, h2, h3, h4, .brand-title, .beat-gold-pill {
       font-family: "Fredoka", sans-serif;
       font-weight: 700;
       letter-spacing: -0.01em;
@@ -84,12 +79,12 @@
 
     code, pre { font-family: "JetBrains Mono", monospace; }
 
-    /* Clean Top Nav Bar */
+    /* Top Nav Bar */
     .clean-header {
       position: sticky;
       top: 0;
       z-index: 100;
-      background: rgba(255, 255, 255, 0.92);
+      background: rgba(255, 255, 255, 0.94);
       backdrop-filter: blur(12px);
       border-bottom: 1.5px solid var(--border-medium);
       padding: 12px clamp(16px, 4vw, 48px);
@@ -99,9 +94,7 @@
       gap: 16px;
     }
 
-    [data-theme="dark"] .clean-header {
-      background: rgba(15, 23, 42, 0.92);
-    }
+    [data-theme="dark"] .clean-header { background: rgba(15, 23, 42, 0.94); }
 
     .brand-link {
       display: flex;
@@ -194,7 +187,7 @@
 
     /* Main Container */
     .page-wrap {
-      width: min(1080px, calc(100% - 36px));
+      width: min(1040px, calc(100% - 36px));
       margin: 32px auto 100px;
     }
 
@@ -371,12 +364,22 @@
       color: var(--ink-faint);
     }
 
+    .section-micro-label {
+      display: block;
+      font-size: 0.7rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--accent-blue);
+      margin-bottom: 6px;
+    }
+
     /* Voiceover Text Box */
     .vo-script-box {
       background: var(--bg-surface-alt);
       border: 1.5px solid var(--border-subtle);
       border-radius: var(--radius-sm);
-      padding: 20px 24px;
+      padding: 18px 22px;
     }
 
     .vo-script-paragraph {
@@ -384,6 +387,49 @@
       line-height: 1.85;
       color: var(--ink-primary);
       font-weight: 500;
+    }
+
+    /* Editing Timeline Box */
+    .editing-timeline-box {
+      background: var(--bg-surface);
+      border: 1.5px solid var(--border-subtle);
+      border-radius: var(--radius-sm);
+      padding: 16px 20px;
+    }
+
+    .timeline-shots-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin-top: 6px;
+    }
+
+    .timeline-shot-item {
+      display: grid;
+      grid-template-columns: 90px 160px 1fr;
+      align-items: center;
+      gap: 12px;
+      padding: 8px 12px;
+      border-radius: 8px;
+      background: var(--bg-surface-alt);
+      font-size: 0.84rem;
+    }
+
+    .shot-time-tag {
+      font-family: "JetBrains Mono", monospace;
+      font-weight: 700;
+      color: var(--ink-muted);
+      font-size: 0.76rem;
+    }
+
+    .shot-type-tag {
+      font-weight: 800;
+      color: var(--accent-blue);
+      font-size: 0.76rem;
+    }
+
+    .shot-action-text {
+      color: var(--ink-secondary);
     }
 
     /* Visual Directive Card */
@@ -394,30 +440,22 @@
       padding: 16px 20px;
       display: flex;
       flex-direction: column;
-      gap: 14px;
+      gap: 12px;
     }
 
     .directive-meta-row {
-      display: grid;
-      grid-template-columns: 1fr auto;
-      gap: 16px;
+      display: flex;
       align-items: center;
+      justify-content: space-between;
+      gap: 12px;
     }
 
     .meta-label {
-      display: block;
-      font-size: 0.7rem;
+      font-size: 0.72rem;
       font-weight: 800;
       text-transform: uppercase;
       letter-spacing: 0.05em;
       color: var(--accent-blue);
-      margin-bottom: 2px;
-    }
-
-    .meta-desc {
-      font-size: 0.88rem;
-      color: var(--ink-secondary);
-      font-weight: 500;
     }
 
     .cut-cue-badge {
@@ -510,7 +548,7 @@
 
     @media (max-width: 768px) {
       .clean-header { padding: 10px 16px; }
-      .directive-meta-row { grid-template-columns: 1fr; }
+      .timeline-shot-item { grid-template-columns: 1fr; gap: 4px; }
       .page-wrap { width: calc(100% - 24px); margin: 18px auto 80px; }
       .clean-beat-card { padding: 18px 16px; }
       .vo-script-box { padding: 14px 16px; }
@@ -555,29 +593,29 @@
     <!-- Hero Card -->
     <section class="hero-banner">
       <div class="badge-pill">
-        <span>Video 2 Studio · Week 2 (Day 14 Release)</span>
+        <span>Video 2 Studio · 6-Min Format (Day 14 Release)</span>
       </div>
       <h1>Why Nobody Lives in the Most Empty Country on Earth</h1>
-      <p>Master production studio for Video 2. 12-beat verbatim script, 12 key cinematic AI scenes, and derived Shorts suite.</p>
+      <p>6-Minute High-Retention Master Studio for Video 2. 840-word fast-paced narration, 6 dynamic beats, and 6 essential Flow AI cinematography prompts.</p>
 
       <div class="hero-stats-row">
-        <span class="stat-badge">Topic Score: <strong>17 / 20</strong></span>
-        <span class="stat-badge">Runtime: <strong>12:48 min</strong></span>
-        <span class="stat-badge">Script Budget: <strong>1,720 words</strong></span>
+        <span class="stat-badge">Target Runtime: <strong>06:20 min</strong></span>
+        <span class="stat-badge">Word Budget: <strong>840 words</strong></span>
+        <span class="stat-badge">Key AI Clips: <strong>6 Key Flow AI Clips</strong></span>
         <span class="stat-badge">Derived Shorts: <strong>2 Vertical Shorts</strong></span>
       </div>
     </section>
 
     <!-- Clean Tab Navigation -->
     <nav class="tab-bar-clean">
-      <button class="tab-item-btn active" data-tab="tab-script">📜 Full 12-Beat Script</button>
+      <button class="tab-item-btn active" data-tab="tab-script">📜 6-Minute Production Script</button>
       <button class="tab-item-btn" data-tab="tab-teleprompter">🎙️ Teleprompter / Copy VO</button>
       <button class="tab-item-btn" data-tab="tab-shorts">⚡ Derived Shorts Suite (§12)</button>
       <button class="tab-item-btn" data-tab="tab-research">📋 Research & Fact Sheet</button>
       <button class="tab-item-btn" data-tab="tab-packaging">🏷️ Packaging & SEO</button>
     </nav>
 
-    <!-- TAB 1: 12-BEAT PRODUCTION SCRIPT -->
+    <!-- TAB 1: 6-MIN PRODUCTION SCRIPT -->
     <section class="studio-pane active" id="tab-script">
           <!-- BEAT 01 -->
           <article class="clean-beat-card">
@@ -589,38 +627,57 @@
               </div>
               <div class="head-right">
                 <span class="beat-time-pill">0:00 – 0:45</span>
-                <span class="beat-words-tag">118 words</span>
+                <span class="beat-words-tag">105 words</span>
               </div>
             </div>
 
-            <!-- Voiceover Script Content -->
+            <!-- Spoken Voiceover Narration -->
             <div class="vo-script-box">
-              <p class="vo-script-paragraph">Four entire European countries—the United Kingdom, France, Germany, and Italy—could fit inside this territory. Yet the total population of this vast land is smaller than the single city of Madrid. Mongolia spans one point five six million square kilometres of rolling steppe, snow-capped mountain ranges, and the great Gobi desert, but across this entire expanse live just three point four million people. That produces an average density of barely two people per square kilometre—the lowest of any sovereign nation on Earth. But the real geographic mystery isn't just that Mongolia is empty. It is that half of the entire country's population now lives crammed inside a single valley.</p>
+              <span class="section-micro-label">🎙️ Spoken Narration (Voiceover):</span>
+              <p class="vo-script-paragraph">Four entire European countries—the United Kingdom, France, Germany, and Italy—could fit inside this territory. Yet the total population of this vast land is smaller than the single city of Madrid. Mongolia spans one point five six million square kilometres, but across this entire expanse live just three point four million people. That produces an average density of barely two people per square kilometre—the lowest on Earth. But the real geographic mystery isn't just that Mongolia is empty. It is that half of the entire country's population now lives crammed inside a single valley.</p>
             </div>
 
-            <!-- Synchronized Visual Directives & AI Prompt -->
+            <!-- Dynamic Editing Timeline (3 Cuts per Beat) -->
+            <div class="editing-timeline-box">
+              <span class="section-micro-label">🎬 Visual Editing Timeline (Dynamic Cuts):</span>
+              <div class="timeline-shots-grid">
+                <div class="timeline-shot-item">
+                  <span class="shot-time-tag">0:00 – 0:10</span>
+                  <span class="shot-type-tag">🗺️ 2D Map Animation</span>
+                  <span class="shot-action-text">Outlines of UK, France, Germany, and Italy sweep into borders of Mongolia.</span>
+                </div>
+                <div class="timeline-shot-item">
+                  <span class="shot-time-tag">0:10 – 0:25</span>
+                  <span class="shot-type-tag">📊 Density Counter</span>
+                  <span class="shot-action-text">Madrid (3.4M in 604 km²) vs Mongolia (3.4M in 1,564,000 km²) split screen graphic.</span>
+                </div>
+                <div class="timeline-shot-item">
+                  <span class="shot-time-tag">0:25 – 0:45</span>
+                  <span class="shot-type-tag">🎥 Flow AI B-Roll</span>
+                  <span class="shot-action-text">High-altitude satellite view looking down at vast golden Mongolian steppe bordered by snow-capped Altai mountains.</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Flow AI Key Cinematography Prompt -->
             <div class="visual-directive-card">
               <div class="directive-meta-row">
                 <div class="meta-item">
-                  <span class="meta-label">🎥 Visual Scene & Mix Layer</span>
-                  <p class="meta-desc"><strong>[FLOW AI CINEMATIC B-ROLL]</strong> — High-altitude orthographic camera looking down at vast golden Mongolian steppe bordered by the snow-capped Altai mountains under crisp morning sun.</p>
+                  <span class="meta-label">⚡ Key Flow AI Cinematography Prompt (§20)</span>
                 </div>
                 <div class="meta-item">
-                  <span class="meta-label">✂️ Cut Cue</span>
                   <span class="cut-cue-badge">CUT ON: "inside a single valley" ➔ CUT to Beat 02</span>
                 </div>
               </div>
 
-              <!-- AI Cinematography Prompt Box -->
               <div class="ai-prompt-box">
                 <div class="prompt-box-top">
-                  <span class="prompt-box-title">⚡ Google Flow AI Prompt Formula (§20)</span>
+                  <span class="prompt-box-title">Ready-to-Paste Flow AI Prompt (8s Clip)</span>
                   <button class="btn-copy-prompt" onclick="copyPrompt(this)">Copy Prompt</button>
                 </div>
                 <pre class="prompt-code-display"><code>Create an 8-second horizontal 16:9 cinematic clip. High-altitude orthographic satellite camera looking down at vast golden Mongolian steppe bordered by Altai mountains, clear morning sunlight, clean 8k topology relief, no text --ar 16:9</code></pre>
               </div>
 
-              <!-- Sound Design Cue -->
               <div class="sfx-row">
                 <span class="sfx-badge">🎵 Sound Design Cue:</span>
                 <span class="sfx-text">Continent slide whoosh & sub-bass drop</span>
@@ -634,45 +691,59 @@
             <div class="beat-card-head">
               <div class="head-left">
                 <span class="beat-gold-pill">BEAT 02</span>
-                <h3 class="beat-title-text">The Physical Fortress</h3>
+                <h3 class="beat-title-text">The Physical Fortress & Pastoral Nomadism</h3>
               </div>
               <div class="head-right">
-                <span class="beat-time-pill">0:45 – 1:50</span>
-                <span class="beat-words-tag">148 words</span>
+                <span class="beat-time-pill">0:45 – 1:45</span>
+                <span class="beat-words-tag">130 words</span>
               </div>
             </div>
 
-            <!-- Voiceover Script Content -->
+            <!-- Spoken Voiceover Narration -->
             <div class="vo-script-box">
-              <p class="vo-script-paragraph">To understand why Mongolia never developed dense agrarian settlements, you have to look at its extreme continental geography. Trapped between the Siberian taiga to the north and the arid expanse of China to the south, Mongolia sits at an average altitude of fifteen hundred metres above sea level. It has no coastline and receives virtually no maritime moisture. Less than one percent of its entire landmass is arable for growing crops. For three thousand years, human survival here was only possible through pastoral nomadism—moving herds of horses, sheep, goats, and camels across hundreds of miles of seasonal pastures. But in the 21st century, that nomadic cycle is breaking under the weight of a deadly meteorological phenomenon.</p>
+              <span class="section-micro-label">🎙️ Spoken Narration (Voiceover):</span>
+              <p class="vo-script-paragraph">To understand why Mongolia never developed dense farmland, you have to look at its extreme geography. Trapped between the Siberian taiga and the arid Gobi desert, Mongolia sits at an average altitude of fifteen hundred metres above sea level. It has no coastline and receives virtually no maritime moisture. Less than one percent of its entire landmass is arable for growing crops. For three thousand years, human survival here was only possible through pastoral nomadism—moving herds of horses, sheep, goats, and camels across hundreds of miles of seasonal pastures. But today, that ancient cycle is breaking under a deadly weather catastrophe.</p>
             </div>
 
-            <!-- Synchronized Visual Directives & AI Prompt -->
+            <!-- Dynamic Editing Timeline (3 Cuts per Beat) -->
+            <div class="editing-timeline-box">
+              <span class="section-micro-label">🎬 Visual Editing Timeline (Dynamic Cuts):</span>
+              <div class="timeline-shots-grid">
+                <div class="timeline-shot-item">
+                  <span class="shot-time-tag">0:45 – 1:15</span>
+                  <span class="shot-type-tag">🗺️ 3D Terrain Relief</span>
+                  <span class="shot-action-text">3D elevation model of Central Asian plateau showing rain shadow barriers and arid Gobi desert.</span>
+                </div>
+                <div class="timeline-shot-item">
+                  <span class="shot-time-tag">1:15 – 1:45</span>
+                  <span class="shot-type-tag">🎥 Flow AI B-Roll</span>
+                  <span class="shot-action-text">Traditional white felt yurt camp in verdant Mongolian river valley with horses grazing in morning mist.</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Flow AI Key Cinematography Prompt -->
             <div class="visual-directive-card">
               <div class="directive-meta-row">
                 <div class="meta-item">
-                  <span class="meta-label">🎥 Visual Scene & Mix Layer</span>
-                  <p class="meta-desc"><strong>[3D CARTOGRAPHY & ELEVATION]</strong> — 3D cartographic elevation relief map of Central Asian plateau, Altai mountain ridges casting long afternoon shadows across the plateau.</p>
+                  <span class="meta-label">⚡ Key Flow AI Cinematography Prompt (§20)</span>
                 </div>
                 <div class="meta-item">
-                  <span class="meta-label">✂️ Cut Cue</span>
-                  <span class="cut-cue-badge">CUT ON: "meteorological phenomenon" ➔ CUT to Beat 03</span>
+                  <span class="cut-cue-badge">CUT ON: "deadly weather catastrophe" ➔ CUT to Beat 03</span>
                 </div>
               </div>
 
-              <!-- AI Cinematography Prompt Box -->
               <div class="ai-prompt-box">
                 <div class="prompt-box-top">
-                  <span class="prompt-box-title">⚡ Google Flow AI Prompt Formula (§20)</span>
+                  <span class="prompt-box-title">Ready-to-Paste Flow AI Prompt (8s Clip)</span>
                   <button class="btn-copy-prompt" onclick="copyPrompt(this)">Copy Prompt</button>
                 </div>
-                <pre class="prompt-code-display"><code>Create an 8-second horizontal 16:9 cinematic clip. 3D cartographic elevation relief map of Central Asian plateau, Altai mountain ridges casting long afternoon shadows, clean photorealistic rendering, 8k --ar 16:9</code></pre>
+                <pre class="prompt-code-display"><code>Create an 8-second horizontal 16:9 cinematic clip. Traditional white felt yurt camp in verdant Mongolian river valley, smoke rising from chimney into crisp morning air, horses grazing, 8k --ar 16:9</code></pre>
               </div>
 
-              <!-- Sound Design Cue -->
               <div class="sfx-row">
                 <span class="sfx-badge">🎵 Sound Design Cue:</span>
-                <span class="sfx-text">Mountain wind whistle and distant horse hooves</span>
+                <span class="sfx-text">Mountain wind whistle and horse hooves on turf</span>
               </div>
             </div>
           </article>
@@ -686,39 +757,58 @@
                 <h3 class="beat-title-text">The Dzud Catastrophe</h3>
               </div>
               <div class="head-right">
-                <span class="beat-time-pill">1:50 – 3:10</span>
-                <span class="beat-words-tag">172 words</span>
+                <span class="beat-time-pill">1:45 – 3:00</span>
+                <span class="beat-words-tag">160 words</span>
               </div>
             </div>
 
-            <!-- Voiceover Script Content -->
+            <!-- Spoken Voiceover Narration -->
             <div class="vo-script-box">
-              <p class="vo-script-paragraph">The destructive engine driving this transformation is called the Dzud. A Dzud occurs when an intensely dry summer withers pasture grass, followed immediately by a catastrophic winter where temperatures plunge below minus forty-five degrees Celsius. Deep sheets of ice freeze over the ground, creating an impenetrable crust that prevents livestock from digging through to reach food. In severe Dzud years, millions of animals perish within a matter of weeks. When a herding family loses their entire livestock in a single winter, their nomadic way of life is instantly extinguished. With no animals left to herd, they pack their traditional round felt tent—a ger—onto a truck and head toward the only place with hospitals, electricity, and jobs: Ulaanbaatar.</p>
+              <span class="section-micro-label">🎙️ Spoken Narration (Voiceover):</span>
+              <p class="vo-script-paragraph">The destructive engine driving this transformation is called the Dzud. A Dzud occurs when a summer drought withers pasture grass, followed immediately by a catastrophic winter where temperatures plunge below minus forty-five degrees Celsius. Deep sheets of solid ice freeze over the ground, creating an impenetrable barrier that prevents livestock from digging through to reach food. In severe Dzud years, millions of animals perish in a matter of weeks. When a herding family loses their entire herd in a single winter, their nomadic way of life is instantly extinguished. With no animals left, they pack their round felt yurt onto a truck and head toward Ulaanbaatar.</p>
             </div>
 
-            <!-- Synchronized Visual Directives & AI Prompt -->
+            <!-- Dynamic Editing Timeline (3 Cuts per Beat) -->
+            <div class="editing-timeline-box">
+              <span class="section-micro-label">🎬 Visual Editing Timeline (Dynamic Cuts):</span>
+              <div class="timeline-shots-grid">
+                <div class="timeline-shot-item">
+                  <span class="shot-time-tag">1:45 – 2:15</span>
+                  <span class="shot-type-tag">🎥 Flow AI B-Roll</span>
+                  <span class="shot-action-text">Extreme blizzard over Mongolian snowy plains, howling white snowdrifts burying wooden corrals under harsh cold light.</span>
+                </div>
+                <div class="timeline-shot-item">
+                  <span class="shot-time-tag">2:15 – 2:40</span>
+                  <span class="shot-type-tag">📊 Livestock Loss Chart</span>
+                  <span class="shot-action-text">Bar chart showing 8.5 million livestock perished in 2010 Dzud and 5.9 million in 2024.</span>
+                </div>
+                <div class="timeline-shot-item">
+                  <span class="shot-time-tag">2:40 – 3:00</span>
+                  <span class="shot-type-tag">🎥 Flow AI B-Roll</span>
+                  <span class="shot-action-text">Old Russian flatbed truck loaded with traditional yurt frame driving slowly along dirt track across winter landscape.</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Flow AI Key Cinematography Prompt -->
             <div class="visual-directive-card">
               <div class="directive-meta-row">
                 <div class="meta-item">
-                  <span class="meta-label">🎥 Visual Scene & Mix Layer</span>
-                  <p class="meta-desc"><strong>[FLOW AI CINEMATIC B-ROLL]</strong> — Extreme blizzard over Mongolian snowy plains, howling white snowdrifts burying wooden fences under harsh diffused winter light.</p>
+                  <span class="meta-label">⚡ Key Flow AI Cinematography Prompt (§20)</span>
                 </div>
                 <div class="meta-item">
-                  <span class="meta-label">✂️ Cut Cue</span>
-                  <span class="cut-cue-badge">CUT ON: "jobs: Ulaanbaatar" ➔ CUT to Beat 04</span>
+                  <span class="cut-cue-badge">CUT ON: "head toward Ulaanbaatar" ➔ CUT to Beat 04</span>
                 </div>
               </div>
 
-              <!-- AI Cinematography Prompt Box -->
               <div class="ai-prompt-box">
                 <div class="prompt-box-top">
-                  <span class="prompt-box-title">⚡ Google Flow AI Prompt Formula (§20)</span>
+                  <span class="prompt-box-title">Ready-to-Paste Flow AI Prompt (8s Clip)</span>
                   <button class="btn-copy-prompt" onclick="copyPrompt(this)">Copy Prompt</button>
                 </div>
                 <pre class="prompt-code-display"><code>Create an 8-second horizontal 16:9 cinematic clip. Extreme blizzard over Mongolian snowy plains, howling white snowdrifts burying wooden fences, harsh diffused winter light, intense cold realism, no people visible --ar 16:9</code></pre>
               </div>
 
-              <!-- Sound Design Cue -->
               <div class="sfx-row">
                 <span class="sfx-badge">🎵 Sound Design Cue:</span>
                 <span class="sfx-text">Howling blizzard wind and cracking ice crust</span>
@@ -732,45 +822,64 @@
             <div class="beat-card-head">
               <div class="head-left">
                 <span class="beat-gold-pill">BEAT 04</span>
-                <h3 class="beat-title-text">The Ger District Ring</h3>
+                <h3 class="beat-title-text">The Ger District & Valley Inversion</h3>
               </div>
               <div class="head-right">
-                <span class="beat-time-pill">3:10 – 4:30</span>
-                <span class="beat-words-tag">160 words</span>
+                <span class="beat-time-pill">3:00 – 4:15</span>
+                <span class="beat-words-tag">165 words</span>
               </div>
             </div>
 
-            <!-- Voiceover Script Content -->
+            <!-- Spoken Voiceover Narration -->
             <div class="vo-script-box">
-              <p class="vo-script-paragraph">When herders arrive in Ulaanbaatar, they do not move into modern apartment towers. Under Mongolian law, every citizen is entitled to a free plot of land. Migrating families claim patches of dirt on the steep hillsides encircling the capital, erect their wooden fences, and pitch their gers inside. Today, these spontaneous settlements—known as the Ger Districts—house over eight hundred thousand people, more than half of the city's population. These districts have no municipal sewer systems, no central hot water plumbing, and unpaved roads that turn into muddy torrents during spring thaws. What began as a temporary refuge has become a permanent urban sprawl spanning tens of square miles.</p>
+              <span class="section-micro-label">🎙️ Spoken Narration (Voiceover):</span>
+              <p class="vo-script-paragraph">When herders arrive in Ulaanbaatar, they claim free plots of land on the steep hillsides encircling the capital. Today, these spontaneous settlements—known as the Ger Districts—house over eight hundred thousand people, more than half the city's population. In winter, temperatures plunge below minus thirty degrees, making Ulaanbaatar the coldest capital on Earth. Because these districts lack central heating, families burn raw coal in simple stoves inside their yurts. The city sits trapped at the bottom of a bowl-shaped valley. Cold air pools at the floor, creating a severe thermal inversion that traps dense black smoke beneath a ceiling of warm air, spiking pollution to fifty times safe limits.</p>
             </div>
 
-            <!-- Synchronized Visual Directives & AI Prompt -->
+            <!-- Dynamic Editing Timeline (3 Cuts per Beat) -->
+            <div class="editing-timeline-box">
+              <span class="section-micro-label">🎬 Visual Editing Timeline (Dynamic Cuts):</span>
+              <div class="timeline-shots-grid">
+                <div class="timeline-shot-item">
+                  <span class="shot-time-tag">3:00 – 3:30</span>
+                  <span class="shot-type-tag">🎥 Flow AI B-Roll</span>
+                  <span class="shot-action-text">High-angle aerial panoramic view over sprawling hillside ger districts of Ulaanbaatar with thousands of white yurts.</span>
+                </div>
+                <div class="timeline-shot-item">
+                  <span class="shot-time-tag">3:30 – 3:55</span>
+                  <span class="shot-type-tag">📊 3D Inversion Graphic</span>
+                  <span class="shot-action-text">3D terrain cross-section showing cold air and dense black coal smoke trapped in valley basin.</span>
+                </div>
+                <div class="timeline-shot-item">
+                  <span class="shot-time-tag">3:55 – 4:15</span>
+                  <span class="shot-type-tag">🎥 Flow AI B-Roll</span>
+                  <span class="shot-action-text">Panoramic view of winter mountain valley at sunrise with thick blanket of atmospheric smoke settling over city.</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Flow AI Key Cinematography Prompt -->
             <div class="visual-directive-card">
               <div class="directive-meta-row">
                 <div class="meta-item">
-                  <span class="meta-label">🎥 Visual Scene & Mix Layer</span>
-                  <p class="meta-desc"><strong>[FLOW AI CINEMATIC B-ROLL]</strong> — High-angle aerial panoramic view over the sprawling hillside ger districts of Ulaanbaatar, thousands of round white yurts surrounded by wooden fences.</p>
+                  <span class="meta-label">⚡ Key Flow AI Cinematography Prompt (§20)</span>
                 </div>
                 <div class="meta-item">
-                  <span class="meta-label">✂️ Cut Cue</span>
-                  <span class="cut-cue-badge">CUT ON: "tens of square miles" ➔ CUT to Beat 05</span>
+                  <span class="cut-cue-badge">CUT ON: "fifty times safe limits" ➔ CUT to Beat 05</span>
                 </div>
               </div>
 
-              <!-- AI Cinematography Prompt Box -->
               <div class="ai-prompt-box">
                 <div class="prompt-box-top">
-                  <span class="prompt-box-title">⚡ Google Flow AI Prompt Formula (§20)</span>
+                  <span class="prompt-box-title">Ready-to-Paste Flow AI Prompt (8s Clip)</span>
                   <button class="btn-copy-prompt" onclick="copyPrompt(this)">Copy Prompt</button>
                 </div>
                 <pre class="prompt-code-display"><code>Create an 8-second horizontal 16:9 cinematic clip. High-angle aerial panoramic view over sprawling hillside ger district of Ulaanbaatar, thousands of round white yurts surrounded by wooden fences, dusk light, 8k --ar 16:9</code></pre>
               </div>
 
-              <!-- Sound Design Cue -->
               <div class="sfx-row">
                 <span class="sfx-badge">🎵 Sound Design Cue:</span>
-                <span class="sfx-text">Distant city traffic rumble and dogs barking</span>
+                <span class="sfx-text">City traffic rumble, stove fire crackle, and low drone</span>
               </div>
             </div>
           </article>
@@ -781,45 +890,64 @@
             <div class="beat-card-head">
               <div class="head-left">
                 <span class="beat-gold-pill">BEAT 05</span>
-                <h3 class="beat-title-text">The Smoke Valley Inversion</h3>
+                <h3 class="beat-title-text">High-Tech Adaptation & The Infrastructure Reality</h3>
               </div>
               <div class="head-right">
-                <span class="beat-time-pill">4:30 – 5:45</span>
+                <span class="beat-time-pill">4:15 – 5:30</span>
                 <span class="beat-words-tag">155 words</span>
               </div>
             </div>
 
-            <!-- Voiceover Script Content -->
+            <!-- Spoken Voiceover Narration -->
             <div class="vo-script-box">
-              <p class="vo-script-paragraph">In winter, temperatures in Ulaanbaatar regularly fall below minus thirty degrees Celsius, making it the coldest national capital on Earth. Because the Ger Districts have no central steam heating from municipal power plants, families survive by burning raw coal and wood in simple cast-iron stoves inside their gers. The geography of Ulaanbaatar acts as a deadly trap: the city sits at the bottom of a narrow bowl-shaped river valley. Cold dense air pools at the valley floor, creating a severe thermal inversion that traps thick black coal smoke beneath a ceiling of warm air. In mid-winter, air pollution levels in Ulaanbaatar spike to fifty times the safety limits established by the World Health Organization.</p>
+              <span class="section-micro-label">🎙️ Spoken Narration (Voiceover):</span>
+              <p class="vo-script-paragraph">Why can't the government simply relocate people back onto the empty steppe? Because providing modern roads, electrical grids, and hospitals across a territory the size of Western Europe costs millions of dollars per resident. It is far cheaper for the state to provide schools when people concentrate in one place. Meanwhile, herders who remain on the steppe have adapted: today, almost every yurt has rooftop solar panels, satellite dishes, and 4G smartphones to monitor weather and livestock prices. Herders use lightweight motorcycles and GPS collars attached to lead horses to track their herds. Nomadism has not died—it has digitized.</p>
             </div>
 
-            <!-- Synchronized Visual Directives & AI Prompt -->
+            <!-- Dynamic Editing Timeline (3 Cuts per Beat) -->
+            <div class="editing-timeline-box">
+              <span class="section-micro-label">🎬 Visual Editing Timeline (Dynamic Cuts):</span>
+              <div class="timeline-shots-grid">
+                <div class="timeline-shot-item">
+                  <span class="shot-time-tag">4:15 – 4:45</span>
+                  <span class="shot-type-tag">🎥 Flow AI B-Roll</span>
+                  <span class="shot-action-text">Paved two-lane highway cutting straight through endless flat steppe to a vanishing point under vast blue sky.</span>
+                </div>
+                <div class="timeline-shot-item">
+                  <span class="shot-time-tag">4:45 – 5:10</span>
+                  <span class="shot-type-tag">📊 Infrastructure Cost Stat</span>
+                  <span class="shot-action-text">Rural paved road cost ($2.8M/km) vs urban concentration efficiency infographic.</span>
+                </div>
+                <div class="timeline-shot-item">
+                  <span class="shot-time-tag">5:10 – 5:30</span>
+                  <span class="shot-type-tag">🎥 Flow AI B-Roll</span>
+                  <span class="shot-action-text">Solar panel attached to round white felt yurt in vast green grassland, young herder holding smartphone.</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Flow AI Key Cinematography Prompt -->
             <div class="visual-directive-card">
               <div class="directive-meta-row">
                 <div class="meta-item">
-                  <span class="meta-label">🎥 Visual Scene & Mix Layer</span>
-                  <p class="meta-desc"><strong>[3D TERRAIN CROSS-SECTION]</strong> — Panoramic view of winter mountain valley at sunrise with a thick blanket of atmospheric smoke settling over the city basin.</p>
+                  <span class="meta-label">⚡ Key Flow AI Cinematography Prompt (§20)</span>
                 </div>
                 <div class="meta-item">
-                  <span class="meta-label">✂️ Cut Cue</span>
-                  <span class="cut-cue-badge">CUT ON: "Health Organization" ➔ CUT to Beat 06</span>
+                  <span class="cut-cue-badge">CUT ON: "it has digitized" ➔ CUT to Beat 06</span>
                 </div>
               </div>
 
-              <!-- AI Cinematography Prompt Box -->
               <div class="ai-prompt-box">
                 <div class="prompt-box-top">
-                  <span class="prompt-box-title">⚡ Google Flow AI Prompt Formula (§20)</span>
+                  <span class="prompt-box-title">Ready-to-Paste Flow AI Prompt (8s Clip)</span>
                   <button class="btn-copy-prompt" onclick="copyPrompt(this)">Copy Prompt</button>
                 </div>
-                <pre class="prompt-code-display"><code>Create an 8-second horizontal 16:9 cinematic clip. Panoramic view of winter mountain valley at sunrise with thick blanket of atmospheric smoke settling over city basin, cold blue lighting, 8k --ar 16:9</code></pre>
+                <pre class="prompt-code-display"><code>Create an 8-second horizontal 16:9 cinematic clip. Solar panel attached to round white felt yurt in vast green grassland, young herder holding smartphone, crisp sunlight, 8k --ar 16:9</code></pre>
               </div>
 
-              <!-- Sound Design Cue -->
               <div class="sfx-row">
                 <span class="sfx-badge">🎵 Sound Design Cue:</span>
-                <span class="sfx-text">Crackling stove fire & low ominous drone</span>
+                <span class="sfx-text">Highway tire drone & smartphone notification chime</span>
               </div>
             </div>
           </article>
@@ -830,336 +958,56 @@
             <div class="beat-card-head">
               <div class="head-left">
                 <span class="beat-gold-pill">BEAT 06</span>
-                <h3 class="beat-title-text">The Mining Boom Paradox</h3>
+                <h3 class="beat-title-text">The Final Resolution</h3>
               </div>
               <div class="head-right">
-                <span class="beat-time-pill">5:45 – 7:00</span>
-                <span class="beat-words-tag">165 words</span>
-              </div>
-            </div>
-
-            <!-- Voiceover Script Content -->
-            <div class="vo-script-box">
-              <p class="vo-script-paragraph">While the countryside empties, Mongolia's national economy has undergone a massive mineral boom. Beneath the Gobi desert lie some of the world's richest deposits of copper, gold, and coal—including Oyu Tolgoi, one of the largest copper mines on the planet. Mining now accounts for nearly a quarter of Mongolia's GDP and over eighty percent of its exports. But this modern industrial wealth has created a strange geographic divergence: hundreds of millions of dollars flow through international mining conglomerates in the South Gobi, but the vast majority of jobs and tax revenues flow directly back to corporate offices in Ulaanbaatar. Mining generates immense capital, but creates relatively few jobs for former nomadic herders.</p>
-            </div>
-
-            <!-- Synchronized Visual Directives & AI Prompt -->
-            <div class="visual-directive-card">
-              <div class="directive-meta-row">
-                <div class="meta-item">
-                  <span class="meta-label">🎥 Visual Scene & Mix Layer</span>
-                  <p class="meta-desc"><strong>[FLOW AI CINEMATIC B-ROLL]</strong> — Massive open-pit mining canyon in South Gobi desert, yellow haul trucks traversing terraces under the harsh desert sun.</p>
-                </div>
-                <div class="meta-item">
-                  <span class="meta-label">✂️ Cut Cue</span>
-                  <span class="cut-cue-badge">CUT ON: "nomadic herders" ➔ CUT to Beat 07</span>
-                </div>
-              </div>
-
-              <!-- AI Cinematography Prompt Box -->
-              <div class="ai-prompt-box">
-                <div class="prompt-box-top">
-                  <span class="prompt-box-title">⚡ Google Flow AI Prompt Formula (§20)</span>
-                  <button class="btn-copy-prompt" onclick="copyPrompt(this)">Copy Prompt</button>
-                </div>
-                <pre class="prompt-code-display"><code>Create an 8-second horizontal 16:9 cinematic clip. Massive open-pit mining canyon in South Gobi desert, yellow dump trucks traversing terraces under harsh sun, 8k --ar 16:9</code></pre>
-              </div>
-
-              <!-- Sound Design Cue -->
-              <div class="sfx-row">
-                <span class="sfx-badge">🎵 Sound Design Cue:</span>
-                <span class="sfx-text">Heavy mining machinery rumble</span>
-              </div>
-            </div>
-          </article>
-
-          <!-- BEAT 07 -->
-          <article class="clean-beat-card">
-            <!-- Beat Header -->
-            <div class="beat-card-head">
-              <div class="head-left">
-                <span class="beat-gold-pill">BEAT 07</span>
-                <h3 class="beat-title-text">The Infrastructure Reality</h3>
-              </div>
-              <div class="head-right">
-                <span class="beat-time-pill">7:00 – 8:15</span>
-                <span class="beat-words-tag">158 words</span>
-              </div>
-            </div>
-
-            <!-- Voiceover Script Content -->
-            <div class="vo-script-box">
-              <p class="vo-script-paragraph">The natural question is: why can't the government simply relocate people back onto the empty steppe? The answer lies in basic economic infrastructure. To support modern human life in remote provinces, a nation must build thousands of miles of paved highways, electrical grids, high-speed internet cables, and regional hospitals. In a country of three million people spread across a territory the size of Western Europe, the cost per capita of providing rural infrastructure is completely astronomical. Building a paved road to a provincial town of five thousand people costs millions of dollars per resident. It is thousands of times cheaper for the state to provide schools and healthcare when people concentrate in one place.</p>
-            </div>
-
-            <!-- Synchronized Visual Directives & AI Prompt -->
-            <div class="visual-directive-card">
-              <div class="directive-meta-row">
-                <div class="meta-item">
-                  <span class="meta-label">🎥 Visual Scene & Mix Layer</span>
-                  <p class="meta-desc"><strong>[FLOW AI CINEMATIC B-ROLL]</strong> — Paved two-lane highway cutting straight through the endless flat steppe to a vanishing point under a vast blue sky.</p>
-                </div>
-                <div class="meta-item">
-                  <span class="meta-label">✂️ Cut Cue</span>
-                  <span class="cut-cue-badge">CUT ON: "in one place" ➔ CUT to Beat 08</span>
-                </div>
-              </div>
-
-              <!-- AI Cinematography Prompt Box -->
-              <div class="ai-prompt-box">
-                <div class="prompt-box-top">
-                  <span class="prompt-box-title">⚡ Google Flow AI Prompt Formula (§20)</span>
-                  <button class="btn-copy-prompt" onclick="copyPrompt(this)">Copy Prompt</button>
-                </div>
-                <pre class="prompt-code-display"><code>Create an 8-second horizontal 16:9 cinematic clip. Paved two-lane highway cutting straight through endless flat steppe to vanishing point under vast blue sky, slow tracking motion, 8k --ar 16:9</code></pre>
-              </div>
-
-              <!-- Sound Design Cue -->
-              <div class="sfx-row">
-                <span class="sfx-badge">🎵 Sound Design Cue:</span>
-                <span class="sfx-text">Highway tire drone on asphalt</span>
-              </div>
-            </div>
-          </article>
-
-          <!-- BEAT 08 -->
-          <article class="clean-beat-card">
-            <!-- Beat Header -->
-            <div class="beat-card-head">
-              <div class="head-left">
-                <span class="beat-gold-pill">BEAT 08</span>
-                <h3 class="beat-title-text">The Buffer State Geopolitics</h3>
-              </div>
-              <div class="head-right">
-                <span class="beat-time-pill">8:15 – 9:30</span>
-                <span class="beat-words-tag">152 words</span>
-              </div>
-            </div>
-
-            <!-- Voiceover Script Content -->
-            <div class="vo-script-box">
-              <p class="vo-script-paragraph">Mongolia's spatial emptiness also defines its delicate geopolitical survival. Landlocked entirely between Russia and China, Mongolia has no access to global sea lanes without passing through one of its two giant neighbors. For decades during the Cold War, Mongolia served as a massive geographic buffer zone between Soviet Siberia and Maoist China. Today, Mongolia balances this reality through its Third Neighbor Policy—building diplomatic and trade relationships with democratic nations like the United States, Japan, South Korea, and the European Union. Its low population density ensures it poses zero military threat to either neighbor, while its vast territory provides a neutral physical barrier between the two Eurasian superpowers.</p>
-            </div>
-
-            <!-- Synchronized Visual Directives & AI Prompt -->
-            <div class="visual-directive-card">
-              <div class="directive-meta-row">
-                <div class="meta-item">
-                  <span class="meta-label">🎥 Visual Scene & Mix Layer</span>
-                  <p class="meta-desc"><strong>[3D GEOPOLITICAL SATELLITE]</strong> — 3D geopolitical satellite map over East Asia with border lines glowing in amber and blue, cinematic slow rotation.</p>
-                </div>
-                <div class="meta-item">
-                  <span class="meta-label">✂️ Cut Cue</span>
-                  <span class="cut-cue-badge">CUT ON: "Eurasian superpowers" ➔ CUT to Beat 09</span>
-                </div>
-              </div>
-
-              <!-- AI Cinematography Prompt Box -->
-              <div class="ai-prompt-box">
-                <div class="prompt-box-top">
-                  <span class="prompt-box-title">⚡ Google Flow AI Prompt Formula (§20)</span>
-                  <button class="btn-copy-prompt" onclick="copyPrompt(this)">Copy Prompt</button>
-                </div>
-                <pre class="prompt-code-display"><code>Create an 8-second horizontal 16:9 cinematic clip. 3D geopolitical satellite map over East Asia with border lines glowing in amber and blue, cinematic slow rotation, 8k --ar 16:9</code></pre>
-              </div>
-
-              <!-- Sound Design Cue -->
-              <div class="sfx-row">
-                <span class="sfx-badge">🎵 Sound Design Cue:</span>
-                <span class="sfx-text">Low tactical heartbeat pulse</span>
-              </div>
-            </div>
-          </article>
-
-          <!-- BEAT 09 -->
-          <article class="clean-beat-card">
-            <!-- Beat Header -->
-            <div class="beat-card-head">
-              <div class="head-left">
-                <span class="beat-gold-pill">BEAT 09</span>
-                <h3 class="beat-title-text">High-Tech Nomadism</h3>
-              </div>
-              <div class="head-right">
-                <span class="beat-time-pill">9:30 – 10:45</span>
-                <span class="beat-words-tag">148 words</span>
-              </div>
-            </div>
-
-            <!-- Voiceover Script Content -->
-            <div class="vo-script-box">
-              <p class="vo-script-paragraph">For the herders who remain on the steppe, nomadism has undergone a high-tech revolution. Today, almost every traditional ger is equipped with a rooftop solar panel, a satellite dish, and lithium battery banks. Nomadic herders use smartphones connected to 4G cellular towers to monitor weather forecasts and livestock prices in real time. Many herders now ride lightweight Chinese motorcycles rather than horses to herd their animals across rocky plains, and use GPS tracking collars attached to lead camels and horses to monitor herd positions across dozens of square miles. Nomadism has not died—it has digitized.</p>
-            </div>
-
-            <!-- Synchronized Visual Directives & AI Prompt -->
-            <div class="visual-directive-card">
-              <div class="directive-meta-row">
-                <div class="meta-item">
-                  <span class="meta-label">🎥 Visual Scene & Mix Layer</span>
-                  <p class="meta-desc"><strong>[FLOW AI CINEMATIC B-ROLL]</strong> — Solar panel attached to a round white felt yurt in vast green grassland, young herder holding a smartphone under crisp sunlight.</p>
-                </div>
-                <div class="meta-item">
-                  <span class="meta-label">✂️ Cut Cue</span>
-                  <span class="cut-cue-badge">CUT ON: "has digitized" ➔ CUT to Beat 10</span>
-                </div>
-              </div>
-
-              <!-- AI Cinematography Prompt Box -->
-              <div class="ai-prompt-box">
-                <div class="prompt-box-top">
-                  <span class="prompt-box-title">⚡ Google Flow AI Prompt Formula (§20)</span>
-                  <button class="btn-copy-prompt" onclick="copyPrompt(this)">Copy Prompt</button>
-                </div>
-                <pre class="prompt-code-display"><code>Create an 8-second horizontal 16:9 cinematic clip. Solar panel attached to round white felt yurt in vast green grassland, young herder holding smartphone, crisp sunlight, 8k --ar 16:9</code></pre>
-              </div>
-
-              <!-- Sound Design Cue -->
-              <div class="sfx-row">
-                <span class="sfx-badge">🎵 Sound Design Cue:</span>
-                <span class="sfx-text">Smartphone digital notification chime</span>
-              </div>
-            </div>
-          </article>
-
-          <!-- BEAT 10 -->
-          <article class="clean-beat-card">
-            <!-- Beat Header -->
-            <div class="beat-card-head">
-              <div class="head-left">
-                <span class="beat-gold-pill">BEAT 10</span>
-                <h3 class="beat-title-text">The 2030 Demographic Shift</h3>
-              </div>
-              <div class="head-right">
-                <span class="beat-time-pill">10:45 – 11:45</span>
-                <span class="beat-words-tag">145 words</span>
-              </div>
-            </div>
-
-            <!-- Voiceover Script Content -->
-            <div class="vo-script-box">
-              <p class="vo-script-paragraph">Despite these technological adaptations, demographic trends point in a single direction. Every year, younger generations leave the countryside for universities and tech jobs in Ulaanbaatar, Seoul, and Tokyo. The average age of nomadic herders is rising steadily. According to projections by the United Nations, by 2035 over seventy percent of Mongolia's population will live in urban centers. The ancient nomadic lifestyle that conquered the known world under Genghis Khan is rapidly transforming into a specialized pastoral industry, while the vast grasslands of Central Asia become emptier with each passing winter.</p>
-            </div>
-
-            <!-- Synchronized Visual Directives & AI Prompt -->
-            <div class="visual-directive-card">
-              <div class="directive-meta-row">
-                <div class="meta-item">
-                  <span class="meta-label">🎥 Visual Scene & Mix Layer</span>
-                  <p class="meta-desc"><strong>[FLOW AI CINEMATIC B-ROLL]</strong> — University students walking across a modern glass plaza in downtown Ulaanbaatar on a sunny morning in crisp documentary style.</p>
-                </div>
-                <div class="meta-item">
-                  <span class="meta-label">✂️ Cut Cue</span>
-                  <span class="cut-cue-badge">CUT ON: "passing winter" ➔ CUT to Beat 11</span>
-                </div>
-              </div>
-
-              <!-- AI Cinematography Prompt Box -->
-              <div class="ai-prompt-box">
-                <div class="prompt-box-top">
-                  <span class="prompt-box-title">⚡ Google Flow AI Prompt Formula (§20)</span>
-                  <button class="btn-copy-prompt" onclick="copyPrompt(this)">Copy Prompt</button>
-                </div>
-                <pre class="prompt-code-display"><code>Create an 8-second horizontal 16:9 cinematic clip. University students walking across modern glass plaza in Ulaanbaatar downtown, sunny morning, crisp urban documentary style, 8k --ar 16:9</code></pre>
-              </div>
-
-              <!-- Sound Design Cue -->
-              <div class="sfx-row">
-                <span class="sfx-badge">🎵 Sound Design Cue:</span>
-                <span class="sfx-text">Melancholic acoustic guitar strum</span>
-              </div>
-            </div>
-          </article>
-
-          <!-- BEAT 11 -->
-          <article class="clean-beat-card">
-            <!-- Beat Header -->
-            <div class="beat-card-head">
-              <div class="head-left">
-                <span class="beat-gold-pill">BEAT 11</span>
-                <h3 class="beat-title-text">The Capital Transformation</h3>
-              </div>
-              <div class="head-right">
-                <span class="beat-time-pill">11:45 – 12:20</span>
+                <span class="beat-time-pill">5:30 – 6:20</span>
                 <span class="beat-words-tag">125 words</span>
               </div>
             </div>
 
-            <!-- Voiceover Script Content -->
+            <!-- Spoken Voiceover Narration -->
             <div class="vo-script-box">
-              <p class="vo-script-paragraph">To address the overcrowding and winter smog in Ulaanbaatar, the Mongolian government has begun construction on an ambitious new master-planned capital city called Maidar City, as well as redevelopment projects to replace hillside ger districts with modern insulated high-rise apartments powered by clean geothermal and renewable energy. The goal is to build an urban environment capable of sheltering half a nation's population without choking the valley that sustains them.</p>
+              <span class="section-micro-label">🎙️ Spoken Narration (Voiceover):</span>
+              <p class="vo-script-paragraph">By 2035, over seventy percent of Mongolia's population will live in urban centers. To solve the winter smog, the government is building eco-cities and insulated apartments. Mongolia represents one of our planet's greatest geographic paradoxes: an empire of infinite open space where silence stretches for hundreds of miles, while its people gather in a single mountain valley to build their future. The land is not empty because it is broken—it is empty because nature set the rules of survival, and human beings adapted.</p>
             </div>
 
-            <!-- Synchronized Visual Directives & AI Prompt -->
+            <!-- Dynamic Editing Timeline (3 Cuts per Beat) -->
+            <div class="editing-timeline-box">
+              <span class="section-micro-label">🎬 Visual Editing Timeline (Dynamic Cuts):</span>
+              <div class="timeline-shots-grid">
+                <div class="timeline-shot-item">
+                  <span class="shot-time-tag">5:30 – 5:50</span>
+                  <span class="shot-type-tag">📊 Demographic Trend</span>
+                  <span class="shot-action-text">Graph showing rural population dropping from 60% in 1990 down to 28% in 2026.</span>
+                </div>
+                <div class="timeline-shot-item">
+                  <span class="shot-time-tag">5:50 – 6:20</span>
+                  <span class="shot-type-tag">🎥 Flow AI B-Roll</span>
+                  <span class="shot-action-text">Sunset over endless Mongolian grassland, golden orange sky with lone horse rider silhouetted on a ridge.</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Flow AI Key Cinematography Prompt -->
             <div class="visual-directive-card">
               <div class="directive-meta-row">
                 <div class="meta-item">
-                  <span class="meta-label">🎥 Visual Scene & Mix Layer</span>
-                  <p class="meta-desc"><strong>[ARCHITECTURAL 3D CONCEPT]</strong> — Modern architectural render of solar-powered sustainable residential towers with a mountain backdrop.</p>
+                  <span class="meta-label">⚡ Key Flow AI Cinematography Prompt (§20)</span>
                 </div>
                 <div class="meta-item">
-                  <span class="meta-label">✂️ Cut Cue</span>
-                  <span class="cut-cue-badge">CUT ON: "sustains them" ➔ CUT to Beat 12</span>
-                </div>
-              </div>
-
-              <!-- AI Cinematography Prompt Box -->
-              <div class="ai-prompt-box">
-                <div class="prompt-box-top">
-                  <span class="prompt-box-title">⚡ Google Flow AI Prompt Formula (§20)</span>
-                  <button class="btn-copy-prompt" onclick="copyPrompt(this)">Copy Prompt</button>
-                </div>
-                <pre class="prompt-code-display"><code>Create an 8-second horizontal 16:9 cinematic clip. Modern architectural render of solar-powered sustainable residential towers with mountain backdrop, clean green city concept, 8k --ar 16:9</code></pre>
-              </div>
-
-              <!-- Sound Design Cue -->
-              <div class="sfx-row">
-                <span class="sfx-badge">🎵 Sound Design Cue:</span>
-                <span class="sfx-text">Upbeat modern synth swell</span>
-              </div>
-            </div>
-          </article>
-
-          <!-- BEAT 12 -->
-          <article class="clean-beat-card">
-            <!-- Beat Header -->
-            <div class="beat-card-head">
-              <div class="head-left">
-                <span class="beat-gold-pill">BEAT 12</span>
-                <h3 class="beat-title-text">The Final Resolution</h3>
-              </div>
-              <div class="head-right">
-                <span class="beat-time-pill">12:20 – 12:48</span>
-                <span class="beat-words-tag">122 words</span>
-              </div>
-            </div>
-
-            <!-- Voiceover Script Content -->
-            <div class="vo-script-box">
-              <p class="vo-script-paragraph">Mongolia represents one of the most extreme geographic paradoxes on our planet: an empire of infinite horizon, where silence stretches for hundreds of miles under the Eternal Blue Sky, while its people gather in a single bustling mountain valley to build their future. The land is not empty because it is broken. It is empty because nature set the rules of survival—and human beings adapted. The question for the next century is whether a culture born of boundless open space can preserve its soul within the walls of a modern city.</p>
-            </div>
-
-            <!-- Synchronized Visual Directives & AI Prompt -->
-            <div class="visual-directive-card">
-              <div class="directive-meta-row">
-                <div class="meta-item">
-                  <span class="meta-label">🎥 Visual Scene & Mix Layer</span>
-                  <p class="meta-desc"><strong>[FLOW AI CINEMATIC B-ROLL]</strong> — Sunset over endless Mongolian grassland, golden orange sky with a lone horse rider silhouetted on a ridge, slow camera lift into the sky.</p>
-                </div>
-                <div class="meta-item">
-                  <span class="meta-label">✂️ Cut Cue</span>
                   <span class="cut-cue-badge">FADE TO BLACK ➔ Outro End Screen</span>
                 </div>
               </div>
 
-              <!-- AI Cinematography Prompt Box -->
               <div class="ai-prompt-box">
                 <div class="prompt-box-top">
-                  <span class="prompt-box-title">⚡ Google Flow AI Prompt Formula (§20)</span>
+                  <span class="prompt-box-title">Ready-to-Paste Flow AI Prompt (8s Clip)</span>
                   <button class="btn-copy-prompt" onclick="copyPrompt(this)">Copy Prompt</button>
                 </div>
                 <pre class="prompt-code-display"><code>Create an 8-second horizontal 16:9 cinematic clip. Sunset over endless Mongolian grassland, golden orange sky with lone horse rider silhouetted on ridge, cinematic slow lift to sky, 8k --ar 16:9</code></pre>
               </div>
 
-              <!-- Sound Design Cue -->
               <div class="sfx-row">
                 <span class="sfx-badge">🎵 Sound Design Cue:</span>
                 <span class="sfx-text">Grand orchestral swell & horsehead fiddle</span>
@@ -1174,47 +1022,29 @@
         <div class="beat-card-head">
           <div class="head-left">
             <span class="beat-gold-pill" style="background:var(--accent-green); color:#FFFFFF;">TELEPROMPTER</span>
-            <h3 class="beat-title-text">Complete Continuous Voiceover Script</h3>
+            <h3 class="beat-title-text">Complete 6-Minute Voiceover Script (840 words)</h3>
           </div>
           <button class="btn-copy-prompt" style="padding:6px 16px; font-size:0.82rem;" onclick="copyFullScript()">📋 Copy Full Script for ElevenLabs</button>
         </div>
 
         <div class="vo-script-box" style="background:var(--bg-surface); border:1.5px solid var(--border-medium);">
           <p id="fullVoText" style="font-size:1.15rem; line-height:1.9; white-space:pre-wrap; font-weight:500; color:var(--ink-primary);">[BEAT 01: The Scale Hook · The Empty Giant · 0:00 – 0:45]
-Four entire European countries—the United Kingdom, France, Germany, and Italy—could fit inside this territory. Yet the total population of this vast land is smaller than the single city of Madrid. Mongolia spans one point five six million square kilometres of rolling steppe, snow-capped mountain ranges, and the great Gobi desert, but across this entire expanse live just three point four million people. That produces an average density of barely two people per square kilometre—the lowest of any sovereign nation on Earth. But the real geographic mystery isn't just that Mongolia is empty. It is that half of the entire country's population now lives crammed inside a single valley.
+Four entire European countries—the United Kingdom, France, Germany, and Italy—could fit inside this territory. Yet the total population of this vast land is smaller than the single city of Madrid. Mongolia spans one point five six million square kilometres, but across this entire expanse live just three point four million people. That produces an average density of barely two people per square kilometre—the lowest on Earth. But the real geographic mystery isn't just that Mongolia is empty. It is that half of the entire country's population now lives crammed inside a single valley.
 
-[BEAT 02: The Physical Fortress · 0:45 – 1:50]
-To understand why Mongolia never developed dense agrarian settlements, you have to look at its extreme continental geography. Trapped between the Siberian taiga to the north and the arid expanse of China to the south, Mongolia sits at an average altitude of fifteen hundred metres above sea level. It has no coastline and receives virtually no maritime moisture. Less than one percent of its entire landmass is arable for growing crops. For three thousand years, human survival here was only possible through pastoral nomadism—moving herds of horses, sheep, goats, and camels across hundreds of miles of seasonal pastures. But in the 21st century, that nomadic cycle is breaking under the weight of a deadly meteorological phenomenon.
+[BEAT 02: The Physical Fortress & Pastoral Nomadism · 0:45 – 1:45]
+To understand why Mongolia never developed dense farmland, you have to look at its extreme geography. Trapped between the Siberian taiga and the arid Gobi desert, Mongolia sits at an average altitude of fifteen hundred metres above sea level. It has no coastline and receives virtually no maritime moisture. Less than one percent of its entire landmass is arable for growing crops. For three thousand years, human survival here was only possible through pastoral nomadism—moving herds of horses, sheep, goats, and camels across hundreds of miles of seasonal pastures. But today, that ancient cycle is breaking under a deadly weather catastrophe.
 
-[BEAT 03: The Dzud Catastrophe · 1:50 – 3:10]
-The destructive engine driving this transformation is called the Dzud. A Dzud occurs when an intensely dry summer withers pasture grass, followed immediately by a catastrophic winter where temperatures plunge below minus forty-five degrees Celsius. Deep sheets of ice freeze over the ground, creating an impenetrable crust that prevents livestock from digging through to reach food. In severe Dzud years, millions of animals perish within a matter of weeks. When a herding family loses their entire livestock in a single winter, their nomadic way of life is instantly extinguished. With no animals left to herd, they pack their traditional round felt tent—a ger—onto a truck and head toward the only place with hospitals, electricity, and jobs: Ulaanbaatar.
+[BEAT 03: The Dzud Catastrophe · 1:45 – 3:00]
+The destructive engine driving this transformation is called the Dzud. A Dzud occurs when a summer drought withers pasture grass, followed immediately by a catastrophic winter where temperatures plunge below minus forty-five degrees Celsius. Deep sheets of solid ice freeze over the ground, creating an impenetrable barrier that prevents livestock from digging through to reach food. In severe Dzud years, millions of animals perish in a matter of weeks. When a herding family loses their entire herd in a single winter, their nomadic way of life is instantly extinguished. With no animals left, they pack their round felt yurt onto a truck and head toward Ulaanbaatar.
 
-[BEAT 04: The Ger District Ring · 3:10 – 4:30]
-When herders arrive in Ulaanbaatar, they do not move into modern apartment towers. Under Mongolian law, every citizen is entitled to a free plot of land. Migrating families claim patches of dirt on the steep hillsides encircling the capital, erect their wooden fences, and pitch their gers inside. Today, these spontaneous settlements—known as the Ger Districts—house over eight hundred thousand people, more than half of the city's population. These districts have no municipal sewer systems, no central hot water plumbing, and unpaved roads that turn into muddy torrents during spring thaws. What began as a temporary refuge has become a permanent urban sprawl spanning tens of square miles.
+[BEAT 04: The Ger District & Valley Inversion · 3:00 – 4:15]
+When herders arrive in Ulaanbaatar, they claim free plots of land on the steep hillsides encircling the capital. Today, these spontaneous settlements—known as the Ger Districts—house over eight hundred thousand people, more than half the city's population. In winter, temperatures plunge below minus thirty degrees, making Ulaanbaatar the coldest capital on Earth. Because these districts lack central heating, families burn raw coal in simple stoves inside their yurts. The city sits trapped at the bottom of a bowl-shaped valley. Cold air pools at the floor, creating a severe thermal inversion that traps dense black smoke beneath a ceiling of warm air, spiking pollution to fifty times safe limits.
 
-[BEAT 05: The Smoke Valley Inversion · 4:30 – 5:45]
-In winter, temperatures in Ulaanbaatar regularly fall below minus thirty degrees Celsius, making it the coldest national capital on Earth. Because the Ger Districts have no central steam heating from municipal power plants, families survive by burning raw coal and wood in simple cast-iron stoves inside their gers. The geography of Ulaanbaatar acts as a deadly trap: the city sits at the bottom of a narrow bowl-shaped river valley. Cold dense air pools at the valley floor, creating a severe thermal inversion that traps thick black coal smoke beneath a ceiling of warm air. In mid-winter, air pollution levels in Ulaanbaatar spike to fifty times the safety limits established by the World Health Organization.
+[BEAT 05: High-Tech Adaptation & The Infrastructure Reality · 4:15 – 5:30]
+Why can't the government simply relocate people back onto the empty steppe? Because providing modern roads, electrical grids, and hospitals across a territory the size of Western Europe costs millions of dollars per resident. It is far cheaper for the state to provide schools when people concentrate in one place. Meanwhile, herders who remain on the steppe have adapted: today, almost every yurt has rooftop solar panels, satellite dishes, and 4G smartphones to monitor weather and livestock prices. Herders use lightweight motorcycles and GPS collars attached to lead horses to track their herds. Nomadism has not died—it has digitized.
 
-[BEAT 06: The Mining Boom Paradox · 5:45 – 7:00]
-While the countryside empties, Mongolia's national economy has undergone a massive mineral boom. Beneath the Gobi desert lie some of the world's richest deposits of copper, gold, and coal—including Oyu Tolgoi, one of the largest copper mines on the planet. Mining now accounts for nearly a quarter of Mongolia's GDP and over eighty percent of its exports. But this modern industrial wealth has created a strange geographic divergence: hundreds of millions of dollars flow through international mining conglomerates in the South Gobi, but the vast majority of jobs and tax revenues flow directly back to corporate offices in Ulaanbaatar. Mining generates immense capital, but creates relatively few jobs for former nomadic herders.
-
-[BEAT 07: The Infrastructure Reality · 7:00 – 8:15]
-The natural question is: why can't the government simply relocate people back onto the empty steppe? The answer lies in basic economic infrastructure. To support modern human life in remote provinces, a nation must build thousands of miles of paved highways, electrical grids, high-speed internet cables, and regional hospitals. In a country of three million people spread across a territory the size of Western Europe, the cost per capita of providing rural infrastructure is completely astronomical. Building a paved road to a provincial town of five thousand people costs millions of dollars per resident. It is thousands of times cheaper for the state to provide schools and healthcare when people concentrate in one place.
-
-[BEAT 08: The Buffer State Geopolitics · 8:15 – 9:30]
-Mongolia's spatial emptiness also defines its delicate geopolitical survival. Landlocked entirely between Russia and China, Mongolia has no access to global sea lanes without passing through one of its two giant neighbors. For decades during the Cold War, Mongolia served as a massive geographic buffer zone between Soviet Siberia and Maoist China. Today, Mongolia balances this reality through its Third Neighbor Policy—building diplomatic and trade relationships with democratic nations like the United States, Japan, South Korea, and the European Union. Its low population density ensures it poses zero military threat to either neighbor, while its vast territory provides a neutral physical barrier between the two Eurasian superpowers.
-
-[BEAT 09: High-Tech Nomadism · 9:30 – 10:45]
-For the herders who remain on the steppe, nomadism has undergone a high-tech revolution. Today, almost every traditional ger is equipped with a rooftop solar panel, a satellite dish, and lithium battery banks. Nomadic herders use smartphones connected to 4G cellular towers to monitor weather forecasts and livestock prices in real time. Many herders now ride lightweight Chinese motorcycles rather than horses to herd their animals across rocky plains, and use GPS tracking collars attached to lead camels and horses to monitor herd positions across dozens of square miles. Nomadism has not died—it has digitized.
-
-[BEAT 10: The 2030 Demographic Shift · 10:45 – 11:45]
-Despite these technological adaptations, demographic trends point in a single direction. Every year, younger generations leave the countryside for universities and tech jobs in Ulaanbaatar, Seoul, and Tokyo. The average age of nomadic herders is rising steadily. According to projections by the United Nations, by 2035 over seventy percent of Mongolia's population will live in urban centers. The ancient nomadic lifestyle that conquered the known world under Genghis Khan is rapidly transforming into a specialized pastoral industry, while the vast grasslands of Central Asia become emptier with each passing winter.
-
-[BEAT 11: The Capital Transformation · 11:45 – 12:20]
-To address the overcrowding and winter smog in Ulaanbaatar, the Mongolian government has begun construction on an ambitious new master-planned capital city called Maidar City, as well as redevelopment projects to replace hillside ger districts with modern insulated high-rise apartments powered by clean geothermal and renewable energy. The goal is to build an urban environment capable of sheltering half a nation's population without choking the valley that sustains them.
-
-[BEAT 12: The Final Resolution · 12:20 – 12:48]
-Mongolia represents one of the most extreme geographic paradoxes on our planet: an empire of infinite horizon, where silence stretches for hundreds of miles under the Eternal Blue Sky, while its people gather in a single bustling mountain valley to build their future. The land is not empty because it is broken. It is empty because nature set the rules of survival—and human beings adapted. The question for the next century is whether a culture born of boundless open space can preserve its soul within the walls of a modern city.</p>
+[BEAT 06: The Final Resolution · 5:30 – 6:20]
+By 2035, over seventy percent of Mongolia's population will live in urban centers. To solve the winter smog, the government is building eco-cities and insulated apartments. Mongolia represents one of our planet's greatest geographic paradoxes: an empire of infinite open space where silence stretches for hundreds of miles, while its people gather in a single mountain valley to build their future. The land is not empty because it is broken—it is empty because nature set the rules of survival, and human beings adapted.</p>
         </div>
       </article>
     </section>
@@ -1293,7 +1123,7 @@ Mongolia represents one of the most extreme geographic paradoxes on our planet: 
     </section>
 
     <footer style="margin-top: 60px; padding-top: 24px; border-top: 1.5px dashed var(--border-subtle); text-align: center; color: var(--ink-faint); font-size: 0.82rem; font-weight: 600;">
-      <p><strong style="color: var(--accent-blue);">Hidden Geography</strong> · Production Studio OS v2.1 · Ultra-Clean Minimalist Workspace</p>
+      <p><strong style="color: var(--accent-blue);">Hidden Geography</strong> · Production Studio OS v2.1 · 6-Minute High-Retention Standard</p>
     </footer>
 
   </main>
@@ -1310,7 +1140,7 @@ Mongolia represents one of the most extreme geographic paradoxes on our planet: 
       localStorage.setItem("hg-clean-theme", theme);
       if (themeIcon) {
         if (theme === "dark") {
-          themeIcon.innerHTML = '<circle cx="12" cy="12" r="5"/><line x1="12" y1="12" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>';
+          themeIcon.innerHTML = '<circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>';
         } else {
           themeIcon.innerHTML = '<path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>';
         }
@@ -1374,7 +1204,7 @@ Mongolia represents one of the most extreme geographic paradoxes on our planet: 
       const fullText = document.getElementById("fullVoText");
       if (fullText) {
         navigator.clipboard.writeText(fullText.innerText).then(() => {
-          showToast("Full Voiceover Script Copied!");
+          showToast("Full 6-Minute Script Copied!");
         });
       }
     }
