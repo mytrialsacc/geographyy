@@ -306,7 +306,7 @@
       box-shadow: var(--shadow-card);
       display: flex;
       flex-direction: column;
-      gap: 18px;
+      gap: 20px;
     }
 
     .beat-card-head {
@@ -371,7 +371,7 @@
       text-transform: uppercase;
       letter-spacing: 0.05em;
       color: var(--accent-blue);
-      margin-bottom: 6px;
+      margin-bottom: 8px;
     }
 
     /* Voiceover Text Box */
@@ -389,143 +389,196 @@
       font-weight: 500;
     }
 
-    /* Editing Timeline Box */
-    .editing-timeline-box {
-      background: var(--bg-surface);
-      border: 1.5px solid var(--border-subtle);
-      border-radius: var(--radius-sm);
-      padding: 16px 20px;
-    }
-
-    .timeline-shots-grid {
+    /* Shots List Container */
+    .shots-container {
       display: flex;
       flex-direction: column;
-      gap: 8px;
-      margin-top: 6px;
-    }
-
-    .timeline-shot-item {
-      display: grid;
-      grid-template-columns: 90px 160px 1fr;
-      align-items: center;
       gap: 12px;
-      padding: 8px 12px;
-      border-radius: 8px;
-      background: var(--bg-surface-alt);
-      font-size: 0.84rem;
     }
 
-    .shot-time-tag {
-      font-family: "JetBrains Mono", monospace;
-      font-weight: 700;
-      color: var(--ink-muted);
-      font-size: 0.76rem;
+    .shots-list {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
     }
 
-    .shot-type-tag {
-      font-weight: 800;
-      color: var(--accent-blue);
-      font-size: 0.76rem;
-    }
-
-    .shot-action-text {
-      color: var(--ink-secondary);
-    }
-
-    /* Visual Directive Card */
-    .visual-directive-card {
+    /* Individual Shot Card */
+    .single-shot-card {
       background: var(--bg-surface);
       border: 1.5px solid var(--border-medium);
-      border-radius: var(--radius-sm);
+      border-radius: 12px;
       padding: 16px 20px;
       display: flex;
       flex-direction: column;
       gap: 12px;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.03);
     }
 
-    .directive-meta-row {
+    .shot-card-top {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 12px;
+      flex-wrap: wrap;
+      gap: 10px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--border-subtle);
     }
 
-    .meta-label {
-      font-size: 0.72rem;
+    .shot-id-group {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .shot-pill {
+      font-family: "Fredoka", sans-serif;
+      font-size: 0.76rem;
+      font-weight: 700;
+      background: var(--ink-primary);
+      color: #FFFFFF;
+      padding: 2px 10px;
+      border-radius: 6px;
+    }
+
+    .shot-time-span {
+      font-family: "JetBrains Mono", monospace;
+      font-size: 0.8rem;
       font-weight: 800;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
       color: var(--accent-blue);
     }
 
-    .cut-cue-badge {
-      background: #FFE4E6;
-      color: var(--accent-coral);
-      border: 1.5px solid var(--accent-coral);
+    .shot-type-pill {
+      font-size: 0.74rem;
+      font-weight: 800;
       padding: 3px 10px;
       border-radius: var(--radius-pill);
-      font-size: 0.74rem;
+    }
+
+    .badge-ai { background: #E0F2FE; color: #0369A1; border: 1px solid #BAE6FD; }
+    .badge-map { background: #DCFCE7; color: #15803D; border: 1px solid #BBF7D0; }
+    .badge-graphic { background: #FEF3C7; color: #B45309; border: 1px solid #FDE68A; }
+
+    .shot-cut-trigger {
+      background: #FFE4E6;
+      color: var(--accent-coral);
+      border: 1px solid var(--accent-coral);
+      padding: 2px 8px;
+      border-radius: var(--radius-pill);
+      font-size: 0.72rem;
       font-weight: 800;
       font-family: "JetBrains Mono", monospace;
       white-space: nowrap;
     }
 
-    /* AI Prompt Box */
-    .ai-prompt-box {
-      background: #0F172A;
-      color: #38BDF8;
-      border: 1.5px solid #1E293B;
-      border-radius: 10px;
-      padding: 12px 16px;
+    /* Sub voiceover for this shot */
+    .shot-vo-subbox {
+      background: var(--bg-surface-alt);
+      border-left: 3.5px solid var(--accent-yellow);
+      border-radius: 6px;
+      padding: 8px 14px;
     }
 
-    .prompt-box-top {
+    .shot-vo-label {
+      display: block;
+      font-size: 0.68rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--accent-yellow);
+      margin-bottom: 2px;
+    }
+
+    .shot-vo-content {
+      font-size: 0.95rem;
+      font-weight: 600;
+      line-height: 1.5;
+      color: var(--ink-primary);
+    }
+
+    .shot-action-box {
+      font-size: 0.86rem;
+      color: var(--ink-secondary);
+    }
+
+    .shot-action-label {
+      font-size: 0.7rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--accent-blue);
+      display: block;
+      margin-bottom: 2px;
+    }
+
+    .shot-prompt-wrap {
+      background: #0F172A;
+      border: 1px solid #1E293B;
+      border-radius: 8px;
+      padding: 10px 14px;
+    }
+
+    .shot-prompt-head {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      margin-bottom: 6px;
+      margin-bottom: 4px;
     }
 
-    .prompt-box-title {
-      font-size: 0.7rem;
+    .prompt-head-label {
+      font-size: 0.68rem;
       font-weight: 800;
       text-transform: uppercase;
       letter-spacing: 0.06em;
       color: #94A3B8;
     }
 
-    .btn-copy-prompt {
+    .btn-copy-shot-prompt {
       background: var(--accent-yellow);
       color: #0F172A;
       border: 1px solid #0F172A;
-      border-radius: 6px;
-      padding: 3px 10px;
-      font-size: 0.72rem;
+      border-radius: 4px;
+      padding: 2px 8px;
+      font-size: 0.7rem;
       font-weight: 800;
       cursor: pointer;
-      transition: transform 0.1s ease;
     }
 
-    .btn-copy-prompt:hover { transform: scale(1.04); }
-
-    .prompt-code-display {
+    .shot-prompt-code {
       margin: 0;
       white-space: pre-wrap;
       word-break: break-word;
-      font-size: 0.8rem;
+      font-size: 0.78rem;
       line-height: 1.45;
       color: #38BDF8;
     }
 
-    .sfx-row {
+    .shot-source-info {
+      background: #F8FAFC;
+      border: 1px dashed var(--border-medium);
+      border-radius: 8px;
+      padding: 8px 12px;
+      font-size: 0.82rem;
+      color: var(--ink-secondary);
+    }
+
+    .source-info-label {
+      font-size: 0.68rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      color: var(--accent-green);
+      display: block;
+      margin-bottom: 2px;
+    }
+
+    .shot-sfx-line {
       display: flex;
       align-items: center;
       gap: 6px;
-      font-size: 0.76rem;
+      font-size: 0.74rem;
       font-weight: 700;
       color: var(--ink-muted);
     }
-    .sfx-badge { color: var(--accent-coral); }
+    .shot-sfx-tag { color: var(--accent-coral); }
 
     /* Toast */
     .clean-toast {
@@ -548,11 +601,9 @@
 
     @media (max-width: 768px) {
       .clean-header { padding: 10px 16px; }
-      .timeline-shot-item { grid-template-columns: 1fr; gap: 4px; }
       .page-wrap { width: calc(100% - 24px); margin: 18px auto 80px; }
       .clean-beat-card { padding: 18px 16px; }
-      .vo-script-box { padding: 14px 16px; }
-      .vo-script-paragraph { font-size: 1.02rem; }
+      .single-shot-card { padding: 14px 14px; }
     }
 
   </style>
@@ -596,7 +647,7 @@
         <span>Video 2 Studio · 6-Min Format (Day 14 Release)</span>
       </div>
       <h1>Why Nobody Lives in the Most Empty Country on Earth</h1>
-      <p>6-Minute High-Retention Master Studio for Video 2. 840-word fast-paced narration, 6 dynamic beats, and 6 essential Flow AI cinematography prompts.</p>
+      <p>6-Minute Master Production Studio for Video 2. 840-word fast-paced narration, 6 dynamic beats with crystal-clear shot timelines and 8-second Flow AI prompts.</p>
 
       <div class="hero-stats-row">
         <span class="stat-badge">Target Runtime: <strong>06:20 min</strong></span>
@@ -619,7 +670,7 @@
     <section class="studio-pane active" id="tab-script">
           <!-- BEAT 01 -->
           <article class="clean-beat-card">
-            <!-- Beat Header -->
+            <!-- Beat Main Header -->
             <div class="beat-card-head">
               <div class="head-left">
                 <span class="beat-gold-pill">BEAT 01</span>
@@ -631,63 +682,121 @@
               </div>
             </div>
 
-            <!-- Spoken Voiceover Narration -->
+            <!-- Complete Beat Voiceover Script -->
             <div class="vo-script-box">
-              <span class="section-micro-label">🎙️ Spoken Narration (Voiceover):</span>
+              <span class="section-micro-label">🎙️ Complete Narration for BEAT 01:</span>
               <p class="vo-script-paragraph">Four entire European countries—the United Kingdom, France, Germany, and Italy—could fit inside this territory. Yet the total population of this vast land is smaller than the single city of Madrid. Mongolia spans one point five six million square kilometres, but across this entire expanse live just three point four million people. That produces an average density of barely two people per square kilometre—the lowest on Earth. But the real geographic mystery isn't just that Mongolia is empty. It is that half of the entire country's population now lives crammed inside a single valley.</p>
             </div>
 
-            <!-- Dynamic Editing Timeline (3 Cuts per Beat) -->
-            <div class="editing-timeline-box">
-              <span class="section-micro-label">🎬 Visual Editing Timeline (Dynamic Cuts):</span>
-              <div class="timeline-shots-grid">
-                <div class="timeline-shot-item">
-                  <span class="shot-time-tag">0:00 – 0:10</span>
-                  <span class="shot-type-tag">🗺️ 2D Map Animation</span>
-                  <span class="shot-action-text">Outlines of UK, France, Germany, and Italy sweep into borders of Mongolia.</span>
+            <!-- Shot by Shot Visual Editing Breakdown -->
+            <div class="shots-container">
+              <span class="section-micro-label">🎬 Visual Editing Timeline (3 Sequential Cuts):</span>
+              <div class="shots-list">
+              <!-- Shot 1.1 -->
+              <div class="single-shot-card">
+                <div class="shot-card-top">
+                  <div class="shot-id-group">
+                    <span class="shot-pill">Shot 1.1</span>
+                    <span class="shot-time-span">0:00 – 0:15 (15s)</span>
+                  </div>
+                  <span class="shot-type-pill badge-map">🗺️ 2D Map Animation (CapCut/Premiere)</span>
+                  <span class="shot-cut-trigger">CUT ON: "fit inside this territory" ➔ CUT to Shot 1.2</span>
                 </div>
-                <div class="timeline-shot-item">
-                  <span class="shot-time-tag">0:10 – 0:25</span>
-                  <span class="shot-type-tag">📊 Density Counter</span>
-                  <span class="shot-action-text">Madrid (3.4M in 604 km²) vs Mongolia (3.4M in 1,564,000 km²) split screen graphic.</span>
+
+                <div class="shot-vo-subbox">
+                  <span class="shot-vo-label">🎙️ Voiceover Spoken During this Visual (0:00 – 0:15 (15s)):</span>
+                  <p class="shot-vo-content">"Four entire European countries—the United Kingdom, France, Germany, and Italy—could fit inside this territory."</p>
                 </div>
-                <div class="timeline-shot-item">
-                  <span class="shot-time-tag">0:25 – 0:45</span>
-                  <span class="shot-type-tag">🎥 Flow AI B-Roll</span>
-                  <span class="shot-action-text">High-altitude satellite view looking down at vast golden Mongolian steppe bordered by snow-capped Altai mountains.</span>
+
+                <div class="shot-action-box">
+                  <span class="shot-action-label">🎥 Visual Event on Screen:</span>
+                  <p class="shot-action-desc">Outlines of UK, France, Germany, and Italy sweep across the map and nest inside the borders of Mongolia.</p>
+                </div>
+
+                  <div class="shot-source-info">
+                    <span class="source-info-label">🛠️ Editing Asset Source:</span>
+                    <p class="source-info-text">2D animated map overlay in video editor. No AI needed.</p>
+                  </div>
+
+                <div class="shot-sfx-line">
+                  <span class="shot-sfx-tag">🎵 SFX:</span>
+                  <span class="shot-sfx-val">Continent slide whoosh</span>
                 </div>
               </div>
-            </div>
 
-            <!-- Flow AI Key Cinematography Prompt -->
-            <div class="visual-directive-card">
-              <div class="directive-meta-row">
-                <div class="meta-item">
-                  <span class="meta-label">⚡ Key Flow AI Cinematography Prompt (§20)</span>
+              <!-- Shot 1.2 -->
+              <div class="single-shot-card">
+                <div class="shot-card-top">
+                  <div class="shot-id-group">
+                    <span class="shot-pill">Shot 1.2</span>
+                    <span class="shot-time-span">0:15 – 0:30 (15s)</span>
+                  </div>
+                  <span class="shot-type-pill badge-graphic">📊 Split Screen Graphic</span>
+                  <span class="shot-cut-trigger">CUT ON: "lowest on Earth" ➔ CUT to Shot 1.3</span>
                 </div>
-                <div class="meta-item">
-                  <span class="cut-cue-badge">CUT ON: "inside a single valley" ➔ CUT to Beat 02</span>
+
+                <div class="shot-vo-subbox">
+                  <span class="shot-vo-label">🎙️ Voiceover Spoken During this Visual (0:15 – 0:30 (15s)):</span>
+                  <p class="shot-vo-content">"Yet the total population of this vast land is smaller than the single city of Madrid. Mongolia spans one point five six million square kilometres, but across this entire expanse live just three point four million people. That produces an average density of barely two people per square kilometre—the lowest on Earth."</p>
+                </div>
+
+                <div class="shot-action-box">
+                  <span class="shot-action-label">🎥 Visual Event on Screen:</span>
+                  <p class="shot-action-desc">Split-screen population comparison: Madrid (3.4M in 604 km²) vs Mongolia (3.4M in 1,564,000 km²).</p>
+                </div>
+
+                  <div class="shot-source-info">
+                    <span class="source-info-label">🛠️ Editing Asset Source:</span>
+                    <p class="source-info-text">2D static graphic with animated population counters.</p>
+                  </div>
+
+                <div class="shot-sfx-line">
+                  <span class="shot-sfx-tag">🎵 SFX:</span>
+                  <span class="shot-sfx-val">Digital counter tick & sub-bass drop</span>
                 </div>
               </div>
 
-              <div class="ai-prompt-box">
-                <div class="prompt-box-top">
-                  <span class="prompt-box-title">Ready-to-Paste Flow AI Prompt (8s Clip)</span>
-                  <button class="btn-copy-prompt" onclick="copyPrompt(this)">Copy Prompt</button>
+              <!-- Shot 1.3 -->
+              <div class="single-shot-card">
+                <div class="shot-card-top">
+                  <div class="shot-id-group">
+                    <span class="shot-pill">Shot 1.3</span>
+                    <span class="shot-time-span">0:30 – 0:45 (15s)</span>
+                  </div>
+                  <span class="shot-type-pill badge-ai">🎥 Google Flow AI B-Roll</span>
+                  <span class="shot-cut-trigger">CUT ON: "inside a single valley" ➔ CUT to Beat 02</span>
                 </div>
-                <pre class="prompt-code-display"><code>Create an 8-second horizontal 16:9 cinematic clip. High-altitude orthographic satellite camera looking down at vast golden Mongolian steppe bordered by Altai mountains, clear morning sunlight, clean 8k topology relief, no text --ar 16:9</code></pre>
-              </div>
 
-              <div class="sfx-row">
-                <span class="sfx-badge">🎵 Sound Design Cue:</span>
-                <span class="sfx-text">Continent slide whoosh & sub-bass drop</span>
+                <div class="shot-vo-subbox">
+                  <span class="shot-vo-label">🎙️ Voiceover Spoken During this Visual (0:30 – 0:45 (15s)):</span>
+                  <p class="shot-vo-content">"But the real geographic mystery isn't just that Mongolia is empty. It is that half of the entire country's population now lives crammed inside a single valley."</p>
+                </div>
+
+                <div class="shot-action-box">
+                  <span class="shot-action-label">🎥 Visual Event on Screen:</span>
+                  <p class="shot-action-desc">High-altitude orthographic camera looking down at vast golden Mongolian steppe bordered by Altai mountains under crisp morning sun.</p>
+                </div>
+
+                  <div class="shot-prompt-wrap">
+                    <div class="shot-prompt-head">
+                      <span class="prompt-head-label">⚡ Google Flow AI Prompt (8s Clip)</span>
+                      <button class="btn-copy-shot-prompt" onclick="copyShotPrompt(this)">Copy Prompt</button>
+                    </div>
+                    <pre class="shot-prompt-code"><code>Create an 8-second horizontal 16:9 cinematic clip. High-altitude orthographic satellite camera looking down at vast golden Mongolian steppe bordered by Altai mountains, clear morning sunlight, clean 8k topology relief, no text --ar 16:9</code></pre>
+                  </div>
+
+                <div class="shot-sfx-line">
+                  <span class="shot-sfx-tag">🎵 SFX:</span>
+                  <span class="shot-sfx-val">Distant horse whinny & wind sweep</span>
+                </div>
+              </div>
               </div>
             </div>
           </article>
 
           <!-- BEAT 02 -->
           <article class="clean-beat-card">
-            <!-- Beat Header -->
+            <!-- Beat Main Header -->
             <div class="beat-card-head">
               <div class="head-left">
                 <span class="beat-gold-pill">BEAT 02</span>
@@ -699,58 +808,89 @@
               </div>
             </div>
 
-            <!-- Spoken Voiceover Narration -->
+            <!-- Complete Beat Voiceover Script -->
             <div class="vo-script-box">
-              <span class="section-micro-label">🎙️ Spoken Narration (Voiceover):</span>
+              <span class="section-micro-label">🎙️ Complete Narration for BEAT 02:</span>
               <p class="vo-script-paragraph">To understand why Mongolia never developed dense farmland, you have to look at its extreme geography. Trapped between the Siberian taiga and the arid Gobi desert, Mongolia sits at an average altitude of fifteen hundred metres above sea level. It has no coastline and receives virtually no maritime moisture. Less than one percent of its entire landmass is arable for growing crops. For three thousand years, human survival here was only possible through pastoral nomadism—moving herds of horses, sheep, goats, and camels across hundreds of miles of seasonal pastures. But today, that ancient cycle is breaking under a deadly weather catastrophe.</p>
             </div>
 
-            <!-- Dynamic Editing Timeline (3 Cuts per Beat) -->
-            <div class="editing-timeline-box">
-              <span class="section-micro-label">🎬 Visual Editing Timeline (Dynamic Cuts):</span>
-              <div class="timeline-shots-grid">
-                <div class="timeline-shot-item">
-                  <span class="shot-time-tag">0:45 – 1:15</span>
-                  <span class="shot-type-tag">🗺️ 3D Terrain Relief</span>
-                  <span class="shot-action-text">3D elevation model of Central Asian plateau showing rain shadow barriers and arid Gobi desert.</span>
+            <!-- Shot by Shot Visual Editing Breakdown -->
+            <div class="shots-container">
+              <span class="section-micro-label">🎬 Visual Editing Timeline (2 Sequential Cuts):</span>
+              <div class="shots-list">
+              <!-- Shot 2.1 -->
+              <div class="single-shot-card">
+                <div class="shot-card-top">
+                  <div class="shot-id-group">
+                    <span class="shot-pill">Shot 2.1</span>
+                    <span class="shot-time-span">0:45 – 1:15 (30s)</span>
+                  </div>
+                  <span class="shot-type-pill badge-map">🗺️ 3D Terrain Relief</span>
+                  <span class="shot-cut-trigger">CUT ON: "growing crops" ➔ CUT to Shot 2.2</span>
                 </div>
-                <div class="timeline-shot-item">
-                  <span class="shot-time-tag">1:15 – 1:45</span>
-                  <span class="shot-type-tag">🎥 Flow AI B-Roll</span>
-                  <span class="shot-action-text">Traditional white felt yurt camp in verdant Mongolian river valley with horses grazing in morning mist.</span>
+
+                <div class="shot-vo-subbox">
+                  <span class="shot-vo-label">🎙️ Voiceover Spoken During this Visual (0:45 – 1:15 (30s)):</span>
+                  <p class="shot-vo-content">"To understand why Mongolia never developed dense farmland, you have to look at its extreme geography. Trapped between the Siberian taiga and the arid Gobi desert, Mongolia sits at an average altitude of fifteen hundred metres above sea level. It has no coastline and receives virtually no maritime moisture. Less than one percent of its entire landmass is arable for growing crops."</p>
+                </div>
+
+                <div class="shot-action-box">
+                  <span class="shot-action-label">🎥 Visual Event on Screen:</span>
+                  <p class="shot-action-desc">3D elevation model of Central Asian plateau showing rain shadow barriers and arid Gobi desert.</p>
+                </div>
+
+                  <div class="shot-source-info">
+                    <span class="source-info-label">🛠️ Editing Asset Source:</span>
+                    <p class="source-info-text">Google Earth Studio / 3D elevation map.</p>
+                  </div>
+
+                <div class="shot-sfx-line">
+                  <span class="shot-sfx-tag">🎵 SFX:</span>
+                  <span class="shot-sfx-val">Mountain wind whistle</span>
                 </div>
               </div>
-            </div>
 
-            <!-- Flow AI Key Cinematography Prompt -->
-            <div class="visual-directive-card">
-              <div class="directive-meta-row">
-                <div class="meta-item">
-                  <span class="meta-label">⚡ Key Flow AI Cinematography Prompt (§20)</span>
+              <!-- Shot 2.2 -->
+              <div class="single-shot-card">
+                <div class="shot-card-top">
+                  <div class="shot-id-group">
+                    <span class="shot-pill">Shot 2.2</span>
+                    <span class="shot-time-span">1:15 – 1:45 (30s)</span>
+                  </div>
+                  <span class="shot-type-pill badge-ai">🎥 Google Flow AI B-Roll</span>
+                  <span class="shot-cut-trigger">CUT ON: "deadly weather catastrophe" ➔ CUT to Beat 03</span>
                 </div>
-                <div class="meta-item">
-                  <span class="cut-cue-badge">CUT ON: "deadly weather catastrophe" ➔ CUT to Beat 03</span>
+
+                <div class="shot-vo-subbox">
+                  <span class="shot-vo-label">🎙️ Voiceover Spoken During this Visual (1:15 – 1:45 (30s)):</span>
+                  <p class="shot-vo-content">"For three thousand years, human survival here was only possible through pastoral nomadism—moving herds of horses, sheep, goats, and camels across hundreds of miles of seasonal pastures. But today, that ancient cycle is breaking under a deadly weather catastrophe."</p>
+                </div>
+
+                <div class="shot-action-box">
+                  <span class="shot-action-label">🎥 Visual Event on Screen:</span>
+                  <p class="shot-action-desc">Traditional white felt yurt camp in verdant Mongolian river valley with horses grazing in morning mist.</p>
+                </div>
+
+                  <div class="shot-prompt-wrap">
+                    <div class="shot-prompt-head">
+                      <span class="prompt-head-label">⚡ Google Flow AI Prompt (8s Clip)</span>
+                      <button class="btn-copy-shot-prompt" onclick="copyShotPrompt(this)">Copy Prompt</button>
+                    </div>
+                    <pre class="shot-prompt-code"><code>Create an 8-second horizontal 16:9 cinematic clip. Traditional white felt yurt camp in verdant Mongolian river valley, smoke rising from chimney into crisp morning air, horses grazing, 8k --ar 16:9</code></pre>
+                  </div>
+
+                <div class="shot-sfx-line">
+                  <span class="shot-sfx-tag">🎵 SFX:</span>
+                  <span class="shot-sfx-val">Horse hooves on turf & yurt stove crackle</span>
                 </div>
               </div>
-
-              <div class="ai-prompt-box">
-                <div class="prompt-box-top">
-                  <span class="prompt-box-title">Ready-to-Paste Flow AI Prompt (8s Clip)</span>
-                  <button class="btn-copy-prompt" onclick="copyPrompt(this)">Copy Prompt</button>
-                </div>
-                <pre class="prompt-code-display"><code>Create an 8-second horizontal 16:9 cinematic clip. Traditional white felt yurt camp in verdant Mongolian river valley, smoke rising from chimney into crisp morning air, horses grazing, 8k --ar 16:9</code></pre>
-              </div>
-
-              <div class="sfx-row">
-                <span class="sfx-badge">🎵 Sound Design Cue:</span>
-                <span class="sfx-text">Mountain wind whistle and horse hooves on turf</span>
               </div>
             </div>
           </article>
 
           <!-- BEAT 03 -->
           <article class="clean-beat-card">
-            <!-- Beat Header -->
+            <!-- Beat Main Header -->
             <div class="beat-card-head">
               <div class="head-left">
                 <span class="beat-gold-pill">BEAT 03</span>
@@ -762,63 +902,124 @@
               </div>
             </div>
 
-            <!-- Spoken Voiceover Narration -->
+            <!-- Complete Beat Voiceover Script -->
             <div class="vo-script-box">
-              <span class="section-micro-label">🎙️ Spoken Narration (Voiceover):</span>
+              <span class="section-micro-label">🎙️ Complete Narration for BEAT 03:</span>
               <p class="vo-script-paragraph">The destructive engine driving this transformation is called the Dzud. A Dzud occurs when a summer drought withers pasture grass, followed immediately by a catastrophic winter where temperatures plunge below minus forty-five degrees Celsius. Deep sheets of solid ice freeze over the ground, creating an impenetrable barrier that prevents livestock from digging through to reach food. In severe Dzud years, millions of animals perish in a matter of weeks. When a herding family loses their entire herd in a single winter, their nomadic way of life is instantly extinguished. With no animals left, they pack their round felt yurt onto a truck and head toward Ulaanbaatar.</p>
             </div>
 
-            <!-- Dynamic Editing Timeline (3 Cuts per Beat) -->
-            <div class="editing-timeline-box">
-              <span class="section-micro-label">🎬 Visual Editing Timeline (Dynamic Cuts):</span>
-              <div class="timeline-shots-grid">
-                <div class="timeline-shot-item">
-                  <span class="shot-time-tag">1:45 – 2:15</span>
-                  <span class="shot-type-tag">🎥 Flow AI B-Roll</span>
-                  <span class="shot-action-text">Extreme blizzard over Mongolian snowy plains, howling white snowdrifts burying wooden corrals under harsh cold light.</span>
+            <!-- Shot by Shot Visual Editing Breakdown -->
+            <div class="shots-container">
+              <span class="section-micro-label">🎬 Visual Editing Timeline (3 Sequential Cuts):</span>
+              <div class="shots-list">
+              <!-- Shot 3.1 -->
+              <div class="single-shot-card">
+                <div class="shot-card-top">
+                  <div class="shot-id-group">
+                    <span class="shot-pill">Shot 3.1</span>
+                    <span class="shot-time-span">1:45 – 2:15 (30s)</span>
+                  </div>
+                  <span class="shot-type-pill badge-ai">🎥 Google Flow AI B-Roll</span>
+                  <span class="shot-cut-trigger">CUT ON: "minus forty-five degrees Celsius" ➔ CUT to Shot 3.2</span>
                 </div>
-                <div class="timeline-shot-item">
-                  <span class="shot-time-tag">2:15 – 2:40</span>
-                  <span class="shot-type-tag">📊 Livestock Loss Chart</span>
-                  <span class="shot-action-text">Bar chart showing 8.5 million livestock perished in 2010 Dzud and 5.9 million in 2024.</span>
+
+                <div class="shot-vo-subbox">
+                  <span class="shot-vo-label">🎙️ Voiceover Spoken During this Visual (1:45 – 2:15 (30s)):</span>
+                  <p class="shot-vo-content">"The destructive engine driving this transformation is called the Dzud. A Dzud occurs when a summer drought withers pasture grass, followed immediately by a catastrophic winter where temperatures plunge below minus forty-five degrees Celsius."</p>
                 </div>
-                <div class="timeline-shot-item">
-                  <span class="shot-time-tag">2:40 – 3:00</span>
-                  <span class="shot-type-tag">🎥 Flow AI B-Roll</span>
-                  <span class="shot-action-text">Old Russian flatbed truck loaded with traditional yurt frame driving slowly along dirt track across winter landscape.</span>
+
+                <div class="shot-action-box">
+                  <span class="shot-action-label">🎥 Visual Event on Screen:</span>
+                  <p class="shot-action-desc">Extreme blizzard over Mongolian snowy plains, howling white snowdrifts burying wooden corrals under harsh cold light.</p>
+                </div>
+
+                  <div class="shot-prompt-wrap">
+                    <div class="shot-prompt-head">
+                      <span class="prompt-head-label">⚡ Google Flow AI Prompt (8s Clip)</span>
+                      <button class="btn-copy-shot-prompt" onclick="copyShotPrompt(this)">Copy Prompt</button>
+                    </div>
+                    <pre class="shot-prompt-code"><code>Create an 8-second horizontal 16:9 cinematic clip. Extreme blizzard over Mongolian snowy plains, howling white snowdrifts burying wooden fences, harsh diffused winter light, intense cold realism, no people visible --ar 16:9</code></pre>
+                  </div>
+
+                <div class="shot-sfx-line">
+                  <span class="shot-sfx-tag">🎵 SFX:</span>
+                  <span class="shot-sfx-val">Howling blizzard wind & sub-zero rumble</span>
                 </div>
               </div>
-            </div>
 
-            <!-- Flow AI Key Cinematography Prompt -->
-            <div class="visual-directive-card">
-              <div class="directive-meta-row">
-                <div class="meta-item">
-                  <span class="meta-label">⚡ Key Flow AI Cinematography Prompt (§20)</span>
+              <!-- Shot 3.2 -->
+              <div class="single-shot-card">
+                <div class="shot-card-top">
+                  <div class="shot-id-group">
+                    <span class="shot-pill">Shot 3.2</span>
+                    <span class="shot-time-span">2:15 – 2:40 (25s)</span>
+                  </div>
+                  <span class="shot-type-pill badge-graphic">📊 Livestock Mortality Infographic</span>
+                  <span class="shot-cut-trigger">CUT ON: "matter of weeks" ➔ CUT to Shot 3.3</span>
                 </div>
-                <div class="meta-item">
-                  <span class="cut-cue-badge">CUT ON: "head toward Ulaanbaatar" ➔ CUT to Beat 04</span>
+
+                <div class="shot-vo-subbox">
+                  <span class="shot-vo-label">🎙️ Voiceover Spoken During this Visual (2:15 – 2:40 (25s)):</span>
+                  <p class="shot-vo-content">"Deep sheets of solid ice freeze over the ground, creating an impenetrable barrier that prevents livestock from digging through to reach food. In severe Dzud years, millions of animals perish in a matter of weeks."</p>
+                </div>
+
+                <div class="shot-action-box">
+                  <span class="shot-action-label">🎥 Visual Event on Screen:</span>
+                  <p class="shot-action-desc">Infographic showing 8.5 million livestock perished in 2010 Dzud and 5.9 million in 2024.</p>
+                </div>
+
+                  <div class="shot-source-info">
+                    <span class="source-info-label">🛠️ Editing Asset Source:</span>
+                    <p class="source-info-text">2D bar chart graphic in video editor.</p>
+                  </div>
+
+                <div class="shot-sfx-line">
+                  <span class="shot-sfx-tag">🎵 SFX:</span>
+                  <span class="shot-sfx-val">Somber cello chord & ice crack</span>
                 </div>
               </div>
 
-              <div class="ai-prompt-box">
-                <div class="prompt-box-top">
-                  <span class="prompt-box-title">Ready-to-Paste Flow AI Prompt (8s Clip)</span>
-                  <button class="btn-copy-prompt" onclick="copyPrompt(this)">Copy Prompt</button>
+              <!-- Shot 3.3 -->
+              <div class="single-shot-card">
+                <div class="shot-card-top">
+                  <div class="shot-id-group">
+                    <span class="shot-pill">Shot 3.3</span>
+                    <span class="shot-time-span">2:40 – 3:00 (20s)</span>
+                  </div>
+                  <span class="shot-type-pill badge-ai">🎥 Google Flow AI B-Roll</span>
+                  <span class="shot-cut-trigger">CUT ON: "head toward Ulaanbaatar" ➔ CUT to Beat 04</span>
                 </div>
-                <pre class="prompt-code-display"><code>Create an 8-second horizontal 16:9 cinematic clip. Extreme blizzard over Mongolian snowy plains, howling white snowdrifts burying wooden fences, harsh diffused winter light, intense cold realism, no people visible --ar 16:9</code></pre>
-              </div>
 
-              <div class="sfx-row">
-                <span class="sfx-badge">🎵 Sound Design Cue:</span>
-                <span class="sfx-text">Howling blizzard wind and cracking ice crust</span>
+                <div class="shot-vo-subbox">
+                  <span class="shot-vo-label">🎙️ Voiceover Spoken During this Visual (2:40 – 3:00 (20s)):</span>
+                  <p class="shot-vo-content">"When a herding family loses their entire herd in a single winter, their nomadic way of life is instantly extinguished. With no animals left, they pack their round felt yurt onto a truck and head toward Ulaanbaatar."</p>
+                </div>
+
+                <div class="shot-action-box">
+                  <span class="shot-action-label">🎥 Visual Event on Screen:</span>
+                  <p class="shot-action-desc">Old Russian flatbed truck loaded with traditional yurt frame driving slowly along dirt track across vast winter landscape.</p>
+                </div>
+
+                  <div class="shot-prompt-wrap">
+                    <div class="shot-prompt-head">
+                      <span class="prompt-head-label">⚡ Google Flow AI Prompt (8s Clip)</span>
+                      <button class="btn-copy-shot-prompt" onclick="copyShotPrompt(this)">Copy Prompt</button>
+                    </div>
+                    <pre class="shot-prompt-code"><code>Create an 8-second horizontal 16:9 cinematic clip. Old Russian flatbed truck loaded with traditional yurt frame driving slowly along dirt track across vast winter landscape, cold morning mist, 8k --ar 16:9</code></pre>
+                  </div>
+
+                <div class="shot-sfx-line">
+                  <span class="shot-sfx-tag">🎵 SFX:</span>
+                  <span class="shot-sfx-val">Diesel engine clatter & gravel crunch</span>
+                </div>
+              </div>
               </div>
             </div>
           </article>
 
           <!-- BEAT 04 -->
           <article class="clean-beat-card">
-            <!-- Beat Header -->
+            <!-- Beat Main Header -->
             <div class="beat-card-head">
               <div class="head-left">
                 <span class="beat-gold-pill">BEAT 04</span>
@@ -830,63 +1031,124 @@
               </div>
             </div>
 
-            <!-- Spoken Voiceover Narration -->
+            <!-- Complete Beat Voiceover Script -->
             <div class="vo-script-box">
-              <span class="section-micro-label">🎙️ Spoken Narration (Voiceover):</span>
+              <span class="section-micro-label">🎙️ Complete Narration for BEAT 04:</span>
               <p class="vo-script-paragraph">When herders arrive in Ulaanbaatar, they claim free plots of land on the steep hillsides encircling the capital. Today, these spontaneous settlements—known as the Ger Districts—house over eight hundred thousand people, more than half the city's population. In winter, temperatures plunge below minus thirty degrees, making Ulaanbaatar the coldest capital on Earth. Because these districts lack central heating, families burn raw coal in simple stoves inside their yurts. The city sits trapped at the bottom of a bowl-shaped valley. Cold air pools at the floor, creating a severe thermal inversion that traps dense black smoke beneath a ceiling of warm air, spiking pollution to fifty times safe limits.</p>
             </div>
 
-            <!-- Dynamic Editing Timeline (3 Cuts per Beat) -->
-            <div class="editing-timeline-box">
-              <span class="section-micro-label">🎬 Visual Editing Timeline (Dynamic Cuts):</span>
-              <div class="timeline-shots-grid">
-                <div class="timeline-shot-item">
-                  <span class="shot-time-tag">3:00 – 3:30</span>
-                  <span class="shot-type-tag">🎥 Flow AI B-Roll</span>
-                  <span class="shot-action-text">High-angle aerial panoramic view over sprawling hillside ger districts of Ulaanbaatar with thousands of white yurts.</span>
+            <!-- Shot by Shot Visual Editing Breakdown -->
+            <div class="shots-container">
+              <span class="section-micro-label">🎬 Visual Editing Timeline (3 Sequential Cuts):</span>
+              <div class="shots-list">
+              <!-- Shot 4.1 -->
+              <div class="single-shot-card">
+                <div class="shot-card-top">
+                  <div class="shot-id-group">
+                    <span class="shot-pill">Shot 4.1</span>
+                    <span class="shot-time-span">3:00 – 3:30 (30s)</span>
+                  </div>
+                  <span class="shot-type-pill badge-ai">🎥 Google Flow AI B-Roll</span>
+                  <span class="shot-cut-trigger">CUT ON: "city's population" ➔ CUT to Shot 4.2</span>
                 </div>
-                <div class="timeline-shot-item">
-                  <span class="shot-time-tag">3:30 – 3:55</span>
-                  <span class="shot-type-tag">📊 3D Inversion Graphic</span>
-                  <span class="shot-action-text">3D terrain cross-section showing cold air and dense black coal smoke trapped in valley basin.</span>
+
+                <div class="shot-vo-subbox">
+                  <span class="shot-vo-label">🎙️ Voiceover Spoken During this Visual (3:00 – 3:30 (30s)):</span>
+                  <p class="shot-vo-content">"When herders arrive in Ulaanbaatar, they claim free plots of land on the steep hillsides encircling the capital. Today, these spontaneous settlements—known as the Ger Districts—house over eight hundred thousand people, more than half the city's population."</p>
                 </div>
-                <div class="timeline-shot-item">
-                  <span class="shot-time-tag">3:55 – 4:15</span>
-                  <span class="shot-type-tag">🎥 Flow AI B-Roll</span>
-                  <span class="shot-action-text">Panoramic view of winter mountain valley at sunrise with thick blanket of atmospheric smoke settling over city.</span>
+
+                <div class="shot-action-box">
+                  <span class="shot-action-label">🎥 Visual Event on Screen:</span>
+                  <p class="shot-action-desc">High-angle aerial panoramic view over sprawling hillside ger districts of Ulaanbaatar with thousands of white yurts.</p>
+                </div>
+
+                  <div class="shot-prompt-wrap">
+                    <div class="shot-prompt-head">
+                      <span class="prompt-head-label">⚡ Google Flow AI Prompt (8s Clip)</span>
+                      <button class="btn-copy-shot-prompt" onclick="copyShotPrompt(this)">Copy Prompt</button>
+                    </div>
+                    <pre class="shot-prompt-code"><code>Create an 8-second horizontal 16:9 cinematic clip. High-angle aerial panoramic view over sprawling hillside ger district of Ulaanbaatar, thousands of round white yurts surrounded by wooden fences, dusk light, 8k --ar 16:9</code></pre>
+                  </div>
+
+                <div class="shot-sfx-line">
+                  <span class="shot-sfx-tag">🎵 SFX:</span>
+                  <span class="shot-sfx-val">City traffic rumble & barking dogs</span>
                 </div>
               </div>
-            </div>
 
-            <!-- Flow AI Key Cinematography Prompt -->
-            <div class="visual-directive-card">
-              <div class="directive-meta-row">
-                <div class="meta-item">
-                  <span class="meta-label">⚡ Key Flow AI Cinematography Prompt (§20)</span>
+              <!-- Shot 4.2 -->
+              <div class="single-shot-card">
+                <div class="shot-card-top">
+                  <div class="shot-id-group">
+                    <span class="shot-pill">Shot 4.2</span>
+                    <span class="shot-time-span">3:30 – 3:55 (25s)</span>
+                  </div>
+                  <span class="shot-type-pill badge-graphic">📊 3D Inversion Graphic</span>
+                  <span class="shot-cut-trigger">CUT ON: "inside their yurts" ➔ CUT to Shot 4.3</span>
                 </div>
-                <div class="meta-item">
-                  <span class="cut-cue-badge">CUT ON: "fifty times safe limits" ➔ CUT to Beat 05</span>
+
+                <div class="shot-vo-subbox">
+                  <span class="shot-vo-label">🎙️ Voiceover Spoken During this Visual (3:30 – 3:55 (25s)):</span>
+                  <p class="shot-vo-content">"In winter, temperatures plunge below minus thirty degrees, making Ulaanbaatar the coldest capital on Earth. Because these districts lack central heating, families burn raw coal in simple stoves inside their yurts."</p>
+                </div>
+
+                <div class="shot-action-box">
+                  <span class="shot-action-label">🎥 Visual Event on Screen:</span>
+                  <p class="shot-action-desc">3D valley cross-section diagram showing cold air and dense black coal smoke trapped in the valley basin.</p>
+                </div>
+
+                  <div class="shot-source-info">
+                    <span class="source-info-label">🛠️ Editing Asset Source:</span>
+                    <p class="source-info-text">2D/3D diagram graphic in video editor.</p>
+                  </div>
+
+                <div class="shot-sfx-line">
+                  <span class="shot-sfx-tag">🎵 SFX:</span>
+                  <span class="shot-sfx-val">Stove fire crackle</span>
                 </div>
               </div>
 
-              <div class="ai-prompt-box">
-                <div class="prompt-box-top">
-                  <span class="prompt-box-title">Ready-to-Paste Flow AI Prompt (8s Clip)</span>
-                  <button class="btn-copy-prompt" onclick="copyPrompt(this)">Copy Prompt</button>
+              <!-- Shot 4.3 -->
+              <div class="single-shot-card">
+                <div class="shot-card-top">
+                  <div class="shot-id-group">
+                    <span class="shot-pill">Shot 4.3</span>
+                    <span class="shot-time-span">3:55 – 4:15 (20s)</span>
+                  </div>
+                  <span class="shot-type-pill badge-ai">🎥 Google Flow AI B-Roll</span>
+                  <span class="shot-cut-trigger">CUT ON: "fifty times safe limits" ➔ CUT to Beat 05</span>
                 </div>
-                <pre class="prompt-code-display"><code>Create an 8-second horizontal 16:9 cinematic clip. High-angle aerial panoramic view over sprawling hillside ger district of Ulaanbaatar, thousands of round white yurts surrounded by wooden fences, dusk light, 8k --ar 16:9</code></pre>
-              </div>
 
-              <div class="sfx-row">
-                <span class="sfx-badge">🎵 Sound Design Cue:</span>
-                <span class="sfx-text">City traffic rumble, stove fire crackle, and low drone</span>
+                <div class="shot-vo-subbox">
+                  <span class="shot-vo-label">🎙️ Voiceover Spoken During this Visual (3:55 – 4:15 (20s)):</span>
+                  <p class="shot-vo-content">"The city sits trapped at the bottom of a bowl-shaped valley. Cold air pools at the floor, creating a severe thermal inversion that traps dense black smoke beneath a ceiling of warm air, spiking pollution to fifty times safe limits."</p>
+                </div>
+
+                <div class="shot-action-box">
+                  <span class="shot-action-label">🎥 Visual Event on Screen:</span>
+                  <p class="shot-action-desc">Panoramic view of winter mountain valley at sunrise with thick blanket of atmospheric smoke settling over city.</p>
+                </div>
+
+                  <div class="shot-prompt-wrap">
+                    <div class="shot-prompt-head">
+                      <span class="prompt-head-label">⚡ Google Flow AI Prompt (8s Clip)</span>
+                      <button class="btn-copy-shot-prompt" onclick="copyShotPrompt(this)">Copy Prompt</button>
+                    </div>
+                    <pre class="shot-prompt-code"><code>Create an 8-second horizontal 16:9 cinematic clip. Panoramic view of winter mountain valley at sunrise with thick blanket of atmospheric smoke settling over city basin, cold blue lighting, 8k --ar 16:9</code></pre>
+                  </div>
+
+                <div class="shot-sfx-line">
+                  <span class="shot-sfx-tag">🎵 SFX:</span>
+                  <span class="shot-sfx-val">Low ominous drone & distant horn</span>
+                </div>
+              </div>
               </div>
             </div>
           </article>
 
           <!-- BEAT 05 -->
           <article class="clean-beat-card">
-            <!-- Beat Header -->
+            <!-- Beat Main Header -->
             <div class="beat-card-head">
               <div class="head-left">
                 <span class="beat-gold-pill">BEAT 05</span>
@@ -898,63 +1160,124 @@
               </div>
             </div>
 
-            <!-- Spoken Voiceover Narration -->
+            <!-- Complete Beat Voiceover Script -->
             <div class="vo-script-box">
-              <span class="section-micro-label">🎙️ Spoken Narration (Voiceover):</span>
+              <span class="section-micro-label">🎙️ Complete Narration for BEAT 05:</span>
               <p class="vo-script-paragraph">Why can't the government simply relocate people back onto the empty steppe? Because providing modern roads, electrical grids, and hospitals across a territory the size of Western Europe costs millions of dollars per resident. It is far cheaper for the state to provide schools when people concentrate in one place. Meanwhile, herders who remain on the steppe have adapted: today, almost every yurt has rooftop solar panels, satellite dishes, and 4G smartphones to monitor weather and livestock prices. Herders use lightweight motorcycles and GPS collars attached to lead horses to track their herds. Nomadism has not died—it has digitized.</p>
             </div>
 
-            <!-- Dynamic Editing Timeline (3 Cuts per Beat) -->
-            <div class="editing-timeline-box">
-              <span class="section-micro-label">🎬 Visual Editing Timeline (Dynamic Cuts):</span>
-              <div class="timeline-shots-grid">
-                <div class="timeline-shot-item">
-                  <span class="shot-time-tag">4:15 – 4:45</span>
-                  <span class="shot-type-tag">🎥 Flow AI B-Roll</span>
-                  <span class="shot-action-text">Paved two-lane highway cutting straight through endless flat steppe to a vanishing point under vast blue sky.</span>
+            <!-- Shot by Shot Visual Editing Breakdown -->
+            <div class="shots-container">
+              <span class="section-micro-label">🎬 Visual Editing Timeline (3 Sequential Cuts):</span>
+              <div class="shots-list">
+              <!-- Shot 5.1 -->
+              <div class="single-shot-card">
+                <div class="shot-card-top">
+                  <div class="shot-id-group">
+                    <span class="shot-pill">Shot 5.1</span>
+                    <span class="shot-time-span">4:15 – 4:45 (30s)</span>
+                  </div>
+                  <span class="shot-type-pill badge-ai">🎥 Google Flow AI B-Roll</span>
+                  <span class="shot-cut-trigger">CUT ON: "concentrate in one place" ➔ CUT to Shot 5.2</span>
                 </div>
-                <div class="timeline-shot-item">
-                  <span class="shot-time-tag">4:45 – 5:10</span>
-                  <span class="shot-type-tag">📊 Infrastructure Cost Stat</span>
-                  <span class="shot-action-text">Rural paved road cost ($2.8M/km) vs urban concentration efficiency infographic.</span>
+
+                <div class="shot-vo-subbox">
+                  <span class="shot-vo-label">🎙️ Voiceover Spoken During this Visual (4:15 – 4:45 (30s)):</span>
+                  <p class="shot-vo-content">"Why can't the government simply relocate people back onto the empty steppe? Because providing modern roads, electrical grids, and hospitals across a territory the size of Western Europe costs millions of dollars per resident. It is far cheaper for the state to provide schools when people concentrate in one place."</p>
                 </div>
-                <div class="timeline-shot-item">
-                  <span class="shot-time-tag">5:10 – 5:30</span>
-                  <span class="shot-type-tag">🎥 Flow AI B-Roll</span>
-                  <span class="shot-action-text">Solar panel attached to round white felt yurt in vast green grassland, young herder holding smartphone.</span>
+
+                <div class="shot-action-box">
+                  <span class="shot-action-label">🎥 Visual Event on Screen:</span>
+                  <p class="shot-action-desc">Paved two-lane highway cutting straight through endless flat steppe to a vanishing point under vast blue sky.</p>
+                </div>
+
+                  <div class="shot-prompt-wrap">
+                    <div class="shot-prompt-head">
+                      <span class="prompt-head-label">⚡ Google Flow AI Prompt (8s Clip)</span>
+                      <button class="btn-copy-shot-prompt" onclick="copyShotPrompt(this)">Copy Prompt</button>
+                    </div>
+                    <pre class="shot-prompt-code"><code>Create an 8-second horizontal 16:9 cinematic clip. Paved two-lane highway cutting straight through endless flat steppe to vanishing point under vast blue sky, slow tracking motion, 8k --ar 16:9</code></pre>
+                  </div>
+
+                <div class="shot-sfx-line">
+                  <span class="shot-sfx-tag">🎵 SFX:</span>
+                  <span class="shot-sfx-val">Highway tire drone on asphalt</span>
                 </div>
               </div>
-            </div>
 
-            <!-- Flow AI Key Cinematography Prompt -->
-            <div class="visual-directive-card">
-              <div class="directive-meta-row">
-                <div class="meta-item">
-                  <span class="meta-label">⚡ Key Flow AI Cinematography Prompt (§20)</span>
+              <!-- Shot 5.2 -->
+              <div class="single-shot-card">
+                <div class="shot-card-top">
+                  <div class="shot-id-group">
+                    <span class="shot-pill">Shot 5.2</span>
+                    <span class="shot-time-span">4:45 – 5:10 (25s)</span>
+                  </div>
+                  <span class="shot-type-pill badge-graphic">📊 Rural Cost vs Urban Density Chart</span>
+                  <span class="shot-cut-trigger">CUT ON: "livestock prices" ➔ CUT to Shot 5.3</span>
                 </div>
-                <div class="meta-item">
-                  <span class="cut-cue-badge">CUT ON: "it has digitized" ➔ CUT to Beat 06</span>
+
+                <div class="shot-vo-subbox">
+                  <span class="shot-vo-label">🎙️ Voiceover Spoken During this Visual (4:45 – 5:10 (25s)):</span>
+                  <p class="shot-vo-content">"Meanwhile, herders who remain on the steppe have adapted: today, almost every yurt has rooftop solar panels, satellite dishes, and 4G smartphones to monitor weather and livestock prices."</p>
+                </div>
+
+                <div class="shot-action-box">
+                  <span class="shot-action-label">🎥 Visual Event on Screen:</span>
+                  <p class="shot-action-desc">Infographic showing high-tech nomad tools: Solar panels, satellite dish, 4G cellular towers, and motorcycle.</p>
+                </div>
+
+                  <div class="shot-source-info">
+                    <span class="source-info-label">🛠️ Editing Asset Source:</span>
+                    <p class="source-info-text">2D animated icon callouts.</p>
+                  </div>
+
+                <div class="shot-sfx-line">
+                  <span class="shot-sfx-tag">🎵 SFX:</span>
+                  <span class="shot-sfx-val">Smartphone digital notification</span>
                 </div>
               </div>
 
-              <div class="ai-prompt-box">
-                <div class="prompt-box-top">
-                  <span class="prompt-box-title">Ready-to-Paste Flow AI Prompt (8s Clip)</span>
-                  <button class="btn-copy-prompt" onclick="copyPrompt(this)">Copy Prompt</button>
+              <!-- Shot 5.3 -->
+              <div class="single-shot-card">
+                <div class="shot-card-top">
+                  <div class="shot-id-group">
+                    <span class="shot-pill">Shot 5.3</span>
+                    <span class="shot-time-span">5:10 – 5:30 (20s)</span>
+                  </div>
+                  <span class="shot-type-pill badge-ai">🎥 Google Flow AI B-Roll</span>
+                  <span class="shot-cut-trigger">CUT ON: "it has digitized" ➔ CUT to Beat 06</span>
                 </div>
-                <pre class="prompt-code-display"><code>Create an 8-second horizontal 16:9 cinematic clip. Solar panel attached to round white felt yurt in vast green grassland, young herder holding smartphone, crisp sunlight, 8k --ar 16:9</code></pre>
-              </div>
 
-              <div class="sfx-row">
-                <span class="sfx-badge">🎵 Sound Design Cue:</span>
-                <span class="sfx-text">Highway tire drone & smartphone notification chime</span>
+                <div class="shot-vo-subbox">
+                  <span class="shot-vo-label">🎙️ Voiceover Spoken During this Visual (5:10 – 5:30 (20s)):</span>
+                  <p class="shot-vo-content">"Herders use lightweight motorcycles and GPS collars attached to lead horses to track their herds. Nomadism has not died—it has digitized."</p>
+                </div>
+
+                <div class="shot-action-box">
+                  <span class="shot-action-label">🎥 Visual Event on Screen:</span>
+                  <p class="shot-action-desc">Solar panel attached to round white felt yurt in vast green grassland, young herder holding smartphone.</p>
+                </div>
+
+                  <div class="shot-prompt-wrap">
+                    <div class="shot-prompt-head">
+                      <span class="prompt-head-label">⚡ Google Flow AI Prompt (8s Clip)</span>
+                      <button class="btn-copy-shot-prompt" onclick="copyShotPrompt(this)">Copy Prompt</button>
+                    </div>
+                    <pre class="shot-prompt-code"><code>Create an 8-second horizontal 16:9 cinematic clip. Solar panel attached to round white felt yurt in vast green grassland, young herder holding smartphone, crisp sunlight, 8k --ar 16:9</code></pre>
+                  </div>
+
+                <div class="shot-sfx-line">
+                  <span class="shot-sfx-tag">🎵 SFX:</span>
+                  <span class="shot-sfx-val">Gentle acoustic guitar strum</span>
+                </div>
+              </div>
               </div>
             </div>
           </article>
 
           <!-- BEAT 06 -->
           <article class="clean-beat-card">
-            <!-- Beat Header -->
+            <!-- Beat Main Header -->
             <div class="beat-card-head">
               <div class="head-left">
                 <span class="beat-gold-pill">BEAT 06</span>
@@ -966,51 +1289,82 @@
               </div>
             </div>
 
-            <!-- Spoken Voiceover Narration -->
+            <!-- Complete Beat Voiceover Script -->
             <div class="vo-script-box">
-              <span class="section-micro-label">🎙️ Spoken Narration (Voiceover):</span>
+              <span class="section-micro-label">🎙️ Complete Narration for BEAT 06:</span>
               <p class="vo-script-paragraph">By 2035, over seventy percent of Mongolia's population will live in urban centers. To solve the winter smog, the government is building eco-cities and insulated apartments. Mongolia represents one of our planet's greatest geographic paradoxes: an empire of infinite open space where silence stretches for hundreds of miles, while its people gather in a single mountain valley to build their future. The land is not empty because it is broken—it is empty because nature set the rules of survival, and human beings adapted.</p>
             </div>
 
-            <!-- Dynamic Editing Timeline (3 Cuts per Beat) -->
-            <div class="editing-timeline-box">
-              <span class="section-micro-label">🎬 Visual Editing Timeline (Dynamic Cuts):</span>
-              <div class="timeline-shots-grid">
-                <div class="timeline-shot-item">
-                  <span class="shot-time-tag">5:30 – 5:50</span>
-                  <span class="shot-type-tag">📊 Demographic Trend</span>
-                  <span class="shot-action-text">Graph showing rural population dropping from 60% in 1990 down to 28% in 2026.</span>
+            <!-- Shot by Shot Visual Editing Breakdown -->
+            <div class="shots-container">
+              <span class="section-micro-label">🎬 Visual Editing Timeline (2 Sequential Cuts):</span>
+              <div class="shots-list">
+              <!-- Shot 6.1 -->
+              <div class="single-shot-card">
+                <div class="shot-card-top">
+                  <div class="shot-id-group">
+                    <span class="shot-pill">Shot 6.1</span>
+                    <span class="shot-time-span">5:30 – 5:50 (20s)</span>
+                  </div>
+                  <span class="shot-type-pill badge-graphic">📊 2035 Demographic Trend Chart</span>
+                  <span class="shot-cut-trigger">CUT ON: "insulated apartments" ➔ CUT to Shot 6.2</span>
                 </div>
-                <div class="timeline-shot-item">
-                  <span class="shot-time-tag">5:50 – 6:20</span>
-                  <span class="shot-type-tag">🎥 Flow AI B-Roll</span>
-                  <span class="shot-action-text">Sunset over endless Mongolian grassland, golden orange sky with lone horse rider silhouetted on a ridge.</span>
+
+                <div class="shot-vo-subbox">
+                  <span class="shot-vo-label">🎙️ Voiceover Spoken During this Visual (5:30 – 5:50 (20s)):</span>
+                  <p class="shot-vo-content">"By 2035, over seventy percent of Mongolia's population will live in urban centers. To solve the winter smog, the government is building eco-cities and insulated apartments."</p>
+                </div>
+
+                <div class="shot-action-box">
+                  <span class="shot-action-label">🎥 Visual Event on Screen:</span>
+                  <p class="shot-action-desc">Graph showing rural population dropping from 60% in 1990 down to 28% in 2026, and 2035 projection.</p>
+                </div>
+
+                  <div class="shot-source-info">
+                    <span class="source-info-label">🛠️ Editing Asset Source:</span>
+                    <p class="source-info-text">2D animated chart overlay in video editor.</p>
+                  </div>
+
+                <div class="shot-sfx-line">
+                  <span class="shot-sfx-tag">🎵 SFX:</span>
+                  <span class="shot-sfx-val">Upbeat synth swell</span>
                 </div>
               </div>
-            </div>
 
-            <!-- Flow AI Key Cinematography Prompt -->
-            <div class="visual-directive-card">
-              <div class="directive-meta-row">
-                <div class="meta-item">
-                  <span class="meta-label">⚡ Key Flow AI Cinematography Prompt (§20)</span>
+              <!-- Shot 6.2 -->
+              <div class="single-shot-card">
+                <div class="shot-card-top">
+                  <div class="shot-id-group">
+                    <span class="shot-pill">Shot 6.2</span>
+                    <span class="shot-time-span">5:50 – 6:20 (30s)</span>
+                  </div>
+                  <span class="shot-type-pill badge-ai">🎥 Google Flow AI B-Roll</span>
+                  <span class="shot-cut-trigger">FADE TO BLACK ➔ Outro End Screen</span>
                 </div>
-                <div class="meta-item">
-                  <span class="cut-cue-badge">FADE TO BLACK ➔ Outro End Screen</span>
+
+                <div class="shot-vo-subbox">
+                  <span class="shot-vo-label">🎙️ Voiceover Spoken During this Visual (5:50 – 6:20 (30s)):</span>
+                  <p class="shot-vo-content">"Mongolia represents one of our planet's greatest geographic paradoxes: an empire of infinite open space where silence stretches for hundreds of miles, while its people gather in a single mountain valley to build their future. The land is not empty because it is broken—it is empty because nature set the rules of survival, and human beings adapted."</p>
+                </div>
+
+                <div class="shot-action-box">
+                  <span class="shot-action-label">🎥 Visual Event on Screen:</span>
+                  <p class="shot-action-desc">Sunset over endless Mongolian grassland, golden orange sky with lone horse rider silhouetted on a ridge.</p>
+                </div>
+
+                  <div class="shot-prompt-wrap">
+                    <div class="shot-prompt-head">
+                      <span class="prompt-head-label">⚡ Google Flow AI Prompt (8s Clip)</span>
+                      <button class="btn-copy-shot-prompt" onclick="copyShotPrompt(this)">Copy Prompt</button>
+                    </div>
+                    <pre class="shot-prompt-code"><code>Create an 8-second horizontal 16:9 cinematic clip. Sunset over endless Mongolian grassland, golden orange sky with lone horse rider silhouetted on ridge, cinematic slow lift to sky, 8k --ar 16:9</code></pre>
+                  </div>
+
+                <div class="shot-sfx-line">
+                  <span class="shot-sfx-tag">🎵 SFX:</span>
+                  <span class="shot-sfx-val">Grand orchestral swell & horsehead fiddle</span>
                 </div>
               </div>
-
-              <div class="ai-prompt-box">
-                <div class="prompt-box-top">
-                  <span class="prompt-box-title">Ready-to-Paste Flow AI Prompt (8s Clip)</span>
-                  <button class="btn-copy-prompt" onclick="copyPrompt(this)">Copy Prompt</button>
-                </div>
-                <pre class="prompt-code-display"><code>Create an 8-second horizontal 16:9 cinematic clip. Sunset over endless Mongolian grassland, golden orange sky with lone horse rider silhouetted on ridge, cinematic slow lift to sky, 8k --ar 16:9</code></pre>
-              </div>
-
-              <div class="sfx-row">
-                <span class="sfx-badge">🎵 Sound Design Cue:</span>
-                <span class="sfx-text">Grand orchestral swell & horsehead fiddle</span>
               </div>
             </div>
           </article>
@@ -1024,7 +1378,7 @@
             <span class="beat-gold-pill" style="background:var(--accent-green); color:#FFFFFF;">TELEPROMPTER</span>
             <h3 class="beat-title-text">Complete 6-Minute Voiceover Script (840 words)</h3>
           </div>
-          <button class="btn-copy-prompt" style="padding:6px 16px; font-size:0.82rem;" onclick="copyFullScript()">📋 Copy Full Script for ElevenLabs</button>
+          <button class="btn-copy-shot-prompt" style="padding:6px 16px; font-size:0.82rem;" onclick="copyFullScript()">📋 Copy Full Script for ElevenLabs</button>
         </div>
 
         <div class="vo-script-box" style="background:var(--bg-surface); border:1.5px solid var(--border-medium);">
@@ -1191,8 +1545,8 @@ By 2035, over seventy percent of Mongolia's population will live in urban center
       setTimeout(() => toast.classList.remove("show"), 2000);
     }
 
-    function copyPrompt(btn) {
-      const code = btn.closest(".visual-directive-card").querySelector("code");
+    function copyShotPrompt(btn) {
+      const code = btn.closest(".shot-prompt-wrap").querySelector("code");
       if (code) {
         navigator.clipboard.writeText(code.textContent).then(() => {
           showToast("AI Prompt Copied!");

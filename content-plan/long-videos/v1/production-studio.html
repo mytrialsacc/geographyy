@@ -306,7 +306,7 @@
       box-shadow: var(--shadow-card);
       display: flex;
       flex-direction: column;
-      gap: 18px;
+      gap: 20px;
     }
 
     .beat-card-head {
@@ -371,7 +371,7 @@
       text-transform: uppercase;
       letter-spacing: 0.05em;
       color: var(--accent-blue);
-      margin-bottom: 6px;
+      margin-bottom: 8px;
     }
 
     /* Voiceover Text Box */
@@ -389,143 +389,196 @@
       font-weight: 500;
     }
 
-    /* Editing Timeline Box */
-    .editing-timeline-box {
-      background: var(--bg-surface);
-      border: 1.5px solid var(--border-subtle);
-      border-radius: var(--radius-sm);
-      padding: 16px 20px;
-    }
-
-    .timeline-shots-grid {
+    /* Shots List Container */
+    .shots-container {
       display: flex;
       flex-direction: column;
-      gap: 8px;
-      margin-top: 6px;
-    }
-
-    .timeline-shot-item {
-      display: grid;
-      grid-template-columns: 90px 160px 1fr;
-      align-items: center;
       gap: 12px;
-      padding: 8px 12px;
-      border-radius: 8px;
-      background: var(--bg-surface-alt);
-      font-size: 0.84rem;
     }
 
-    .shot-time-tag {
-      font-family: "JetBrains Mono", monospace;
-      font-weight: 700;
-      color: var(--ink-muted);
-      font-size: 0.76rem;
+    .shots-list {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
     }
 
-    .shot-type-tag {
-      font-weight: 800;
-      color: var(--accent-blue);
-      font-size: 0.76rem;
-    }
-
-    .shot-action-text {
-      color: var(--ink-secondary);
-    }
-
-    /* Visual Directive Card */
-    .visual-directive-card {
+    /* Individual Shot Card */
+    .single-shot-card {
       background: var(--bg-surface);
       border: 1.5px solid var(--border-medium);
-      border-radius: var(--radius-sm);
+      border-radius: 12px;
       padding: 16px 20px;
       display: flex;
       flex-direction: column;
       gap: 12px;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.03);
     }
 
-    .directive-meta-row {
+    .shot-card-top {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 12px;
+      flex-wrap: wrap;
+      gap: 10px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--border-subtle);
     }
 
-    .meta-label {
-      font-size: 0.72rem;
+    .shot-id-group {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .shot-pill {
+      font-family: "Fredoka", sans-serif;
+      font-size: 0.76rem;
+      font-weight: 700;
+      background: var(--ink-primary);
+      color: #FFFFFF;
+      padding: 2px 10px;
+      border-radius: 6px;
+    }
+
+    .shot-time-span {
+      font-family: "JetBrains Mono", monospace;
+      font-size: 0.8rem;
       font-weight: 800;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
       color: var(--accent-blue);
     }
 
-    .cut-cue-badge {
-      background: #FFE4E6;
-      color: var(--accent-coral);
-      border: 1.5px solid var(--accent-coral);
+    .shot-type-pill {
+      font-size: 0.74rem;
+      font-weight: 800;
       padding: 3px 10px;
       border-radius: var(--radius-pill);
-      font-size: 0.74rem;
+    }
+
+    .badge-ai { background: #E0F2FE; color: #0369A1; border: 1px solid #BAE6FD; }
+    .badge-map { background: #DCFCE7; color: #15803D; border: 1px solid #BBF7D0; }
+    .badge-graphic { background: #FEF3C7; color: #B45309; border: 1px solid #FDE68A; }
+
+    .shot-cut-trigger {
+      background: #FFE4E6;
+      color: var(--accent-coral);
+      border: 1px solid var(--accent-coral);
+      padding: 2px 8px;
+      border-radius: var(--radius-pill);
+      font-size: 0.72rem;
       font-weight: 800;
       font-family: "JetBrains Mono", monospace;
       white-space: nowrap;
     }
 
-    /* AI Prompt Box */
-    .ai-prompt-box {
-      background: #0F172A;
-      color: #38BDF8;
-      border: 1.5px solid #1E293B;
-      border-radius: 10px;
-      padding: 12px 16px;
+    /* Sub voiceover for this shot */
+    .shot-vo-subbox {
+      background: var(--bg-surface-alt);
+      border-left: 3.5px solid var(--accent-yellow);
+      border-radius: 6px;
+      padding: 8px 14px;
     }
 
-    .prompt-box-top {
+    .shot-vo-label {
+      display: block;
+      font-size: 0.68rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--accent-yellow);
+      margin-bottom: 2px;
+    }
+
+    .shot-vo-content {
+      font-size: 0.95rem;
+      font-weight: 600;
+      line-height: 1.5;
+      color: var(--ink-primary);
+    }
+
+    .shot-action-box {
+      font-size: 0.86rem;
+      color: var(--ink-secondary);
+    }
+
+    .shot-action-label {
+      font-size: 0.7rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--accent-blue);
+      display: block;
+      margin-bottom: 2px;
+    }
+
+    .shot-prompt-wrap {
+      background: #0F172A;
+      border: 1px solid #1E293B;
+      border-radius: 8px;
+      padding: 10px 14px;
+    }
+
+    .shot-prompt-head {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      margin-bottom: 6px;
+      margin-bottom: 4px;
     }
 
-    .prompt-box-title {
-      font-size: 0.7rem;
+    .prompt-head-label {
+      font-size: 0.68rem;
       font-weight: 800;
       text-transform: uppercase;
       letter-spacing: 0.06em;
       color: #94A3B8;
     }
 
-    .btn-copy-prompt {
+    .btn-copy-shot-prompt {
       background: var(--accent-yellow);
       color: #0F172A;
       border: 1px solid #0F172A;
-      border-radius: 6px;
-      padding: 3px 10px;
-      font-size: 0.72rem;
+      border-radius: 4px;
+      padding: 2px 8px;
+      font-size: 0.7rem;
       font-weight: 800;
       cursor: pointer;
-      transition: transform 0.1s ease;
     }
 
-    .btn-copy-prompt:hover { transform: scale(1.04); }
-
-    .prompt-code-display {
+    .shot-prompt-code {
       margin: 0;
       white-space: pre-wrap;
       word-break: break-word;
-      font-size: 0.8rem;
+      font-size: 0.78rem;
       line-height: 1.45;
       color: #38BDF8;
     }
 
-    .sfx-row {
+    .shot-source-info {
+      background: #F8FAFC;
+      border: 1px dashed var(--border-medium);
+      border-radius: 8px;
+      padding: 8px 12px;
+      font-size: 0.82rem;
+      color: var(--ink-secondary);
+    }
+
+    .source-info-label {
+      font-size: 0.68rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      color: var(--accent-green);
+      display: block;
+      margin-bottom: 2px;
+    }
+
+    .shot-sfx-line {
       display: flex;
       align-items: center;
       gap: 6px;
-      font-size: 0.76rem;
+      font-size: 0.74rem;
       font-weight: 700;
       color: var(--ink-muted);
     }
-    .sfx-badge { color: var(--accent-coral); }
+    .shot-sfx-tag { color: var(--accent-coral); }
 
     /* Toast */
     .clean-toast {
@@ -548,11 +601,9 @@
 
     @media (max-width: 768px) {
       .clean-header { padding: 10px 16px; }
-      .timeline-shot-item { grid-template-columns: 1fr; gap: 4px; }
       .page-wrap { width: calc(100% - 24px); margin: 18px auto 80px; }
       .clean-beat-card { padding: 18px 16px; }
-      .vo-script-box { padding: 14px 16px; }
-      .vo-script-paragraph { font-size: 1.02rem; }
+      .single-shot-card { padding: 14px 14px; }
     }
 
   </style>
@@ -596,7 +647,7 @@
         <span>Video 1 Studio · 6-Min Format (Day 7 Release)</span>
       </div>
       <h1>Every Map You've Seen Is Lying About Africa</h1>
-      <p>6-Minute High-Retention Master Studio for Video 1. 855-word fast-paced narration, 6 dynamic beats, and 6 essential Flow AI cinematography prompts.</p>
+      <p>6-Minute Master Production Studio for Video 1. 855-word fast-paced narration, 6 dynamic beats with crystal-clear shot timelines and 8-second Flow AI prompts.</p>
 
       <div class="hero-stats-row">
         <span class="stat-badge">Target Runtime: <strong>06:30 min</strong></span>
@@ -619,7 +670,7 @@
     <section class="studio-pane active" id="tab-script">
           <!-- BEAT 01 -->
           <article class="clean-beat-card">
-            <!-- Beat Header -->
+            <!-- Beat Main Header -->
             <div class="beat-card-head">
               <div class="head-left">
                 <span class="beat-gold-pill">BEAT 01</span>
@@ -631,63 +682,121 @@
               </div>
             </div>
 
-            <!-- Spoken Voiceover Narration -->
+            <!-- Complete Beat Voiceover Script -->
             <div class="vo-script-box">
-              <span class="section-micro-label">🎙️ Spoken Narration (Voiceover):</span>
+              <span class="section-micro-label">🎙️ Complete Narration for BEAT 01:</span>
               <p class="vo-script-paragraph">On the map on your wall, Greenland looks about the same size as Africa. On the ground, Africa is fourteen times larger. The entire United States, China, India, and almost all of Western Europe could sit inside Africa simultaneously with room to spare. Yet for four hundred and fifty-seven years, classroom maps have shown you a distorted world. This was not an accident or a printing error—it was a calculated mathematical decision made in 1569 that we still use every single day.</p>
             </div>
 
-            <!-- Dynamic Editing Timeline (3 Cuts per Beat) -->
-            <div class="editing-timeline-box">
-              <span class="section-micro-label">🎬 Visual Editing Timeline (Dynamic Cuts):</span>
-              <div class="timeline-shots-grid">
-                <div class="timeline-shot-item">
-                  <span class="shot-time-tag">0:00 – 0:08</span>
-                  <span class="shot-type-tag">🎥 Flow AI B-Roll</span>
-                  <span class="shot-action-text">Vintage wooden classroom with large Mercator wall map. Camera pushes slowly and smoothly in toward Africa under soft morning light.</span>
+            <!-- Shot by Shot Visual Editing Breakdown -->
+            <div class="shots-container">
+              <span class="section-micro-label">🎬 Visual Editing Timeline (3 Sequential Cuts):</span>
+              <div class="shots-list">
+              <!-- Shot 1.1 -->
+              <div class="single-shot-card">
+                <div class="shot-card-top">
+                  <div class="shot-id-group">
+                    <span class="shot-pill">Shot 1.1</span>
+                    <span class="shot-time-span">0:00 – 0:08 (8s)</span>
+                  </div>
+                  <span class="shot-type-pill badge-ai">🎥 Google Flow AI B-Roll</span>
+                  <span class="shot-cut-trigger">CUT ON: "same size as Africa" ➔ CUT to Shot 1.2</span>
                 </div>
-                <div class="timeline-shot-item">
-                  <span class="shot-time-tag">0:08 – 0:22</span>
-                  <span class="shot-type-tag">🗺️ 2D Map Animation</span>
-                  <span class="shot-action-text">Greenland outline lifts off and shrinks down 14x into the Sahara desert.</span>
+
+                <div class="shot-vo-subbox">
+                  <span class="shot-vo-label">🎙️ Voiceover Spoken During this Visual (0:00 – 0:08 (8s)):</span>
+                  <p class="shot-vo-content">"On the map on your wall, Greenland looks about the same size as Africa."</p>
                 </div>
-                <div class="timeline-shot-item">
-                  <span class="shot-time-tag">0:22 – 0:45</span>
-                  <span class="shot-type-tag">📊 Graphic Overlay</span>
-                  <span class="shot-action-text">Outlines of USA, China, India, and Western Europe glide in and nest inside African continent borders.</span>
+
+                <div class="shot-action-box">
+                  <span class="shot-action-label">🎥 Visual Event on Screen:</span>
+                  <p class="shot-action-desc">Vintage wooden classroom with large Mercator wall map. Camera pushes slowly and smoothly in toward Africa under soft morning light.</p>
+                </div>
+
+                  <div class="shot-prompt-wrap">
+                    <div class="shot-prompt-head">
+                      <span class="prompt-head-label">⚡ Google Flow AI Prompt (8s Clip)</span>
+                      <button class="btn-copy-shot-prompt" onclick="copyShotPrompt(this)">Copy Prompt</button>
+                    </div>
+                    <pre class="shot-prompt-code"><code>Create an 8-second horizontal 16:9 cinematic clip. Documentary photography, vintage wooden classroom with large Mercator wall map on wall, slow straight-down camera push, warm morning sunlight, sharp focus on African continent, 8k resolution, no text --ar 16:9</code></pre>
+                  </div>
+
+                <div class="shot-sfx-line">
+                  <span class="shot-sfx-tag">🎵 SFX:</span>
+                  <span class="shot-sfx-val">Subtle chalk scratch & quiet classroom room tone</span>
                 </div>
               </div>
-            </div>
 
-            <!-- Flow AI Key Cinematography Prompt -->
-            <div class="visual-directive-card">
-              <div class="directive-meta-row">
-                <div class="meta-item">
-                  <span class="meta-label">⚡ Key Flow AI Cinematography Prompt (§20)</span>
+              <!-- Shot 1.2 -->
+              <div class="single-shot-card">
+                <div class="shot-card-top">
+                  <div class="shot-id-group">
+                    <span class="shot-pill">Shot 1.2</span>
+                    <span class="shot-time-span">0:08 – 0:22 (14s)</span>
+                  </div>
+                  <span class="shot-type-pill badge-map">🗺️ 2D Map Animation (CapCut/Premiere)</span>
+                  <span class="shot-cut-trigger">CUT ON: "fourteen times larger" ➔ CUT to Shot 1.3</span>
                 </div>
-                <div class="meta-item">
-                  <span class="cut-cue-badge">CUT ON: "every single day" ➔ CUT to Beat 02</span>
+
+                <div class="shot-vo-subbox">
+                  <span class="shot-vo-label">🎙️ Voiceover Spoken During this Visual (0:08 – 0:22 (14s)):</span>
+                  <p class="shot-vo-content">"On the ground, Africa is fourteen times larger."</p>
+                </div>
+
+                <div class="shot-action-box">
+                  <span class="shot-action-label">🎥 Visual Event on Screen:</span>
+                  <p class="shot-action-desc">2D animated map graphic where Greenland outline lifts off and shrinks down 14x into the Sahara desert.</p>
+                </div>
+
+                  <div class="shot-source-info">
+                    <span class="source-info-label">🛠️ Editing Asset Source:</span>
+                    <p class="source-info-text">2D SVG / PNG map layer in video editor (Scale: 100% ➔ 7.14%). No AI generation needed.</p>
+                  </div>
+
+                <div class="shot-sfx-line">
+                  <span class="shot-sfx-tag">🎵 SFX:</span>
+                  <span class="shot-sfx-val">Deep sub-bass drop on scale reveal</span>
                 </div>
               </div>
 
-              <div class="ai-prompt-box">
-                <div class="prompt-box-top">
-                  <span class="prompt-box-title">Ready-to-Paste Flow AI Prompt (8s Clip)</span>
-                  <button class="btn-copy-prompt" onclick="copyPrompt(this)">Copy Prompt</button>
+              <!-- Shot 1.3 -->
+              <div class="single-shot-card">
+                <div class="shot-card-top">
+                  <div class="shot-id-group">
+                    <span class="shot-pill">Shot 1.3</span>
+                    <span class="shot-time-span">0:22 – 0:45 (23s)</span>
+                  </div>
+                  <span class="shot-type-pill badge-graphic">📊 Infographic Overlay (Static Motion)</span>
+                  <span class="shot-cut-trigger">CUT ON: "every single day" ➔ CUT to Beat 02</span>
                 </div>
-                <pre class="prompt-code-display"><code>Create an 8-second horizontal 16:9 cinematic clip. Documentary photography, vintage wooden classroom with large Mercator wall map on wall, slow straight-down camera push, warm morning sunlight, sharp focus on African continent, 8k resolution, no text --ar 16:9</code></pre>
-              </div>
 
-              <div class="sfx-row">
-                <span class="sfx-badge">🎵 Sound Design Cue:</span>
-                <span class="sfx-text">Subtle chalk scratch & deep sub-bass drop on 14x scale reveal</span>
+                <div class="shot-vo-subbox">
+                  <span class="shot-vo-label">🎙️ Voiceover Spoken During this Visual (0:22 – 0:45 (23s)):</span>
+                  <p class="shot-vo-content">"The entire United States, China, India, and almost all of Western Europe could sit inside Africa simultaneously with room to spare. Yet for four hundred and fifty-seven years, classroom maps have shown you a distorted world. This was not an accident or a printing error—it was a calculated mathematical decision made in 1569 that we still use every single day."</p>
+                </div>
+
+                <div class="shot-action-box">
+                  <span class="shot-action-label">🎥 Visual Event on Screen:</span>
+                  <p class="shot-action-desc">High-contrast map graphic showing USA, China, India, and Europe outlines gliding and nesting inside African continent with area labels.</p>
+                </div>
+
+                  <div class="shot-source-info">
+                    <span class="source-info-label">🛠️ Editing Asset Source:</span>
+                    <p class="source-info-text">True Size static infographic asset with slow pan and country snap sound effects.</p>
+                  </div>
+
+                <div class="shot-sfx-line">
+                  <span class="shot-sfx-tag">🎵 SFX:</span>
+                  <span class="shot-sfx-val">Tactile click-snaps for nested country borders</span>
+                </div>
+              </div>
               </div>
             </div>
           </article>
 
           <!-- BEAT 02 -->
           <article class="clean-beat-card">
-            <!-- Beat Header -->
+            <!-- Beat Main Header -->
             <div class="beat-card-head">
               <div class="head-left">
                 <span class="beat-gold-pill">BEAT 02</span>
@@ -699,58 +808,89 @@
               </div>
             </div>
 
-            <!-- Spoken Voiceover Narration -->
+            <!-- Complete Beat Voiceover Script -->
             <div class="vo-script-box">
-              <span class="section-micro-label">🎙️ Spoken Narration (Voiceover):</span>
+              <span class="section-micro-label">🎙️ Complete Narration for BEAT 02:</span>
               <p class="vo-script-paragraph">To understand why this happens, look at the actual numbers: Africa is thirty point three million square kilometres. Greenland is barely two point one million. But when you flatten a three-dimensional globe onto a flat sheet of paper, distortion is mathematically unavoidable. In 1828, mathematician Carl Friedrich Gauss proved that no sphere can ever be flattened without stretching, tearing, or shrinking its surface. Every map maker in history must choose what to sacrifice: true shape, true area, or true compass direction. In 1569, a Flemish geographer named Gerardus Mercator chose direction—and transformed maritime history.</p>
             </div>
 
-            <!-- Dynamic Editing Timeline (3 Cuts per Beat) -->
-            <div class="editing-timeline-box">
-              <span class="section-micro-label">🎬 Visual Editing Timeline (Dynamic Cuts):</span>
-              <div class="timeline-shots-grid">
-                <div class="timeline-shot-item">
-                  <span class="shot-time-tag">0:45 – 1:15</span>
-                  <span class="shot-type-tag">🗺️ 3D Earth Orbit</span>
-                  <span class="shot-action-text">3D photorealistic globe rotating slowly in space, highlighting true continent boundaries and realistic topological relief.</span>
+            <!-- Shot by Shot Visual Editing Breakdown -->
+            <div class="shots-container">
+              <span class="section-micro-label">🎬 Visual Editing Timeline (2 Sequential Cuts):</span>
+              <div class="shots-list">
+              <!-- Shot 2.1 -->
+              <div class="single-shot-card">
+                <div class="shot-card-top">
+                  <div class="shot-id-group">
+                    <span class="shot-pill">Shot 2.1</span>
+                    <span class="shot-time-span">0:45 – 1:15 (30s)</span>
+                  </div>
+                  <span class="shot-type-pill badge-map">🗺️ 3D Earth Orbit (Google Earth / 3D)</span>
+                  <span class="shot-cut-trigger">CUT ON: "mathematically unavoidable" ➔ CUT to Shot 2.2</span>
                 </div>
-                <div class="timeline-shot-item">
-                  <span class="shot-time-tag">1:15 – 1:45</span>
-                  <span class="shot-type-tag">🎥 Flow AI B-Roll</span>
-                  <span class="shot-action-text">Close-up macro of vintage mathematical geometry equations and compass circles hand-drawn on parchment under warm desk lamp.</span>
+
+                <div class="shot-vo-subbox">
+                  <span class="shot-vo-label">🎙️ Voiceover Spoken During this Visual (0:45 – 1:15 (30s)):</span>
+                  <p class="shot-vo-content">"To understand why this happens, look at the actual numbers: Africa is thirty point three million square kilometres. Greenland is barely two point one million. But when you flatten a three-dimensional globe onto a flat sheet of paper, distortion is mathematically unavoidable."</p>
+                </div>
+
+                <div class="shot-action-box">
+                  <span class="shot-action-label">🎥 Visual Event on Screen:</span>
+                  <p class="shot-action-desc">3D photorealistic globe rotating slowly in space, highlighting true continent boundaries and realistic topological relief.</p>
+                </div>
+
+                  <div class="shot-source-info">
+                    <span class="source-info-label">🛠️ Editing Asset Source:</span>
+                    <p class="source-info-text">Google Earth Studio / 3D globe animation.</p>
+                  </div>
+
+                <div class="shot-sfx-line">
+                  <span class="shot-sfx-tag">🎵 SFX:</span>
+                  <span class="shot-sfx-val">Low ethereal space drone</span>
                 </div>
               </div>
-            </div>
 
-            <!-- Flow AI Key Cinematography Prompt -->
-            <div class="visual-directive-card">
-              <div class="directive-meta-row">
-                <div class="meta-item">
-                  <span class="meta-label">⚡ Key Flow AI Cinematography Prompt (§20)</span>
+              <!-- Shot 2.2 -->
+              <div class="single-shot-card">
+                <div class="shot-card-top">
+                  <div class="shot-id-group">
+                    <span class="shot-pill">Shot 2.2</span>
+                    <span class="shot-time-span">1:15 – 1:45 (30s)</span>
+                  </div>
+                  <span class="shot-type-pill badge-ai">🎥 Google Flow AI B-Roll</span>
+                  <span class="shot-cut-trigger">CUT ON: "transformed maritime history" ➔ CUT to Beat 03</span>
                 </div>
-                <div class="meta-item">
-                  <span class="cut-cue-badge">CUT ON: "transformed maritime history" ➔ CUT to Beat 03</span>
+
+                <div class="shot-vo-subbox">
+                  <span class="shot-vo-label">🎙️ Voiceover Spoken During this Visual (1:15 – 1:45 (30s)):</span>
+                  <p class="shot-vo-content">"In 1828, mathematician Carl Friedrich Gauss proved that no sphere can ever be flattened without stretching, tearing, or shrinking its surface. Every map maker in history must choose what to sacrifice: true shape, true area, or true compass direction. In 1569, a Flemish geographer named Gerardus Mercator chose direction—and transformed maritime history."</p>
+                </div>
+
+                <div class="shot-action-box">
+                  <span class="shot-action-label">🎥 Visual Event on Screen:</span>
+                  <p class="shot-action-desc">Close-up macro of vintage mathematical geometry equations and compass circles hand-drawn on aged parchment under warm directional desk lamp.</p>
+                </div>
+
+                  <div class="shot-prompt-wrap">
+                    <div class="shot-prompt-head">
+                      <span class="prompt-head-label">⚡ Google Flow AI Prompt (8s Clip)</span>
+                      <button class="btn-copy-shot-prompt" onclick="copyShotPrompt(this)">Copy Prompt</button>
+                    </div>
+                    <pre class="shot-prompt-code"><code>Create an 8-second horizontal 16:9 cinematic clip. Close-up macro shot of mathematical equations and geometric compass circles drawn with ink on vintage parchment, warm directional desk lamp, dust motes, 8k --ar 16:9</code></pre>
+                  </div>
+
+                <div class="shot-sfx-line">
+                  <span class="shot-sfx-tag">🎵 SFX:</span>
+                  <span class="shot-sfx-val">Quill pen writing sound & gentle parchment rustle</span>
                 </div>
               </div>
-
-              <div class="ai-prompt-box">
-                <div class="prompt-box-top">
-                  <span class="prompt-box-title">Ready-to-Paste Flow AI Prompt (8s Clip)</span>
-                  <button class="btn-copy-prompt" onclick="copyPrompt(this)">Copy Prompt</button>
-                </div>
-                <pre class="prompt-code-display"><code>Create an 8-second horizontal 16:9 cinematic clip. Close-up macro shot of mathematical equations and geometric compass circles drawn with ink on vintage parchment, warm directional desk lamp, dust motes, 8k --ar 16:9</code></pre>
-              </div>
-
-              <div class="sfx-row">
-                <span class="sfx-badge">🎵 Sound Design Cue:</span>
-                <span class="sfx-text">Quill pen writing sound & gentle parchment rustle</span>
               </div>
             </div>
           </article>
 
           <!-- BEAT 03 -->
           <article class="clean-beat-card">
-            <!-- Beat Header -->
+            <!-- Beat Main Header -->
             <div class="beat-card-head">
               <div class="head-left">
                 <span class="beat-gold-pill">BEAT 03</span>
@@ -762,63 +902,124 @@
               </div>
             </div>
 
-            <!-- Spoken Voiceover Narration -->
+            <!-- Complete Beat Voiceover Script -->
             <div class="vo-script-box">
-              <span class="section-micro-label">🎙️ Spoken Narration (Voiceover):</span>
+              <span class="section-micro-label">🎙️ Complete Narration for BEAT 03:</span>
               <p class="vo-script-paragraph">Mercator was not building a decorative poster for schools. He was building a life-or-death navigation tool for 16th-century sea captains crossing stormy oceans with simple magnetic compasses. On a round Earth, the shortest route between two ports is a curved arc called a great circle. But sailing a great circle requires recalculating your steering compass every single hour. In stormy seas with no visible stars, calculation errors meant running aground on deadly reefs. Mercator designed a map where any straight line drawn with a ruler represented a constant compass bearing—a rhumb line. Hold that single angle on your steering compass, and you were guaranteed to arrive.</p>
             </div>
 
-            <!-- Dynamic Editing Timeline (3 Cuts per Beat) -->
-            <div class="editing-timeline-box">
-              <span class="section-micro-label">🎬 Visual Editing Timeline (Dynamic Cuts):</span>
-              <div class="timeline-shots-grid">
-                <div class="timeline-shot-item">
-                  <span class="shot-time-tag">1:45 – 2:15</span>
-                  <span class="shot-type-tag">🎥 Flow AI B-Roll</span>
-                  <span class="shot-action-text">16th-century Spanish galleon cutting through deep Atlantic ocean waves amidst misty sea spray and dramatic stormy sky.</span>
+            <!-- Shot by Shot Visual Editing Breakdown -->
+            <div class="shots-container">
+              <span class="section-micro-label">🎬 Visual Editing Timeline (3 Sequential Cuts):</span>
+              <div class="shots-list">
+              <!-- Shot 3.1 -->
+              <div class="single-shot-card">
+                <div class="shot-card-top">
+                  <div class="shot-id-group">
+                    <span class="shot-pill">Shot 3.1</span>
+                    <span class="shot-time-span">1:45 – 2:15 (30s)</span>
+                  </div>
+                  <span class="shot-type-pill badge-ai">🎥 Google Flow AI B-Roll</span>
+                  <span class="shot-cut-trigger">CUT ON: "magnetic compasses" ➔ CUT to Shot 3.2</span>
                 </div>
-                <div class="timeline-shot-item">
-                  <span class="shot-time-tag">2:15 – 2:40</span>
-                  <span class="shot-type-tag">📊 2D Compass Graphic</span>
-                  <span class="shot-action-text">Animated curved Great Circle vs straight Rhumb Line comparison route across Atlantic ocean chart.</span>
+
+                <div class="shot-vo-subbox">
+                  <span class="shot-vo-label">🎙️ Voiceover Spoken During this Visual (1:45 – 2:15 (30s)):</span>
+                  <p class="shot-vo-content">"Mercator was not building a decorative poster for schools. He was building a life-or-death navigation tool for 16th-century sea captains crossing stormy oceans with simple magnetic compasses."</p>
                 </div>
-                <div class="timeline-shot-item">
-                  <span class="shot-time-tag">2:40 – 3:00</span>
-                  <span class="shot-type-tag">🎥 Flow AI B-Roll</span>
-                  <span class="shot-action-text">Close-up of weathered hands gripping wooden ship steering wheel at sunrise, calm golden ocean horizon.</span>
+
+                <div class="shot-action-box">
+                  <span class="shot-action-label">🎥 Visual Event on Screen:</span>
+                  <p class="shot-action-desc">16th-century wooden Spanish galleon sailing in turbulent deep Atlantic ocean amidst misty sea spray and dramatic stormy sky.</p>
+                </div>
+
+                  <div class="shot-prompt-wrap">
+                    <div class="shot-prompt-head">
+                      <span class="prompt-head-label">⚡ Google Flow AI Prompt (8s Clip)</span>
+                      <button class="btn-copy-shot-prompt" onclick="copyShotPrompt(this)">Copy Prompt</button>
+                    </div>
+                    <pre class="shot-prompt-code"><code>Create an 8-second horizontal 16:9 cinematic clip. Documentary photography, 16th-century wooden Spanish galleon sailing in turbulent deep Atlantic ocean, low-angle forward tracking camera, dramatic overcast lighting, misty sea spray, cinematic realism, no text --ar 16:9</code></pre>
+                  </div>
+
+                <div class="shot-sfx-line">
+                  <span class="shot-sfx-tag">🎵 SFX:</span>
+                  <span class="shot-sfx-val">Ocean waves crashing & creaking ship timber</span>
                 </div>
               </div>
-            </div>
 
-            <!-- Flow AI Key Cinematography Prompt -->
-            <div class="visual-directive-card">
-              <div class="directive-meta-row">
-                <div class="meta-item">
-                  <span class="meta-label">⚡ Key Flow AI Cinematography Prompt (§20)</span>
+              <!-- Shot 3.2 -->
+              <div class="single-shot-card">
+                <div class="shot-card-top">
+                  <div class="shot-id-group">
+                    <span class="shot-pill">Shot 3.2</span>
+                    <span class="shot-time-span">2:15 – 2:40 (25s)</span>
+                  </div>
+                  <span class="shot-type-pill badge-graphic">📊 2D Compass Chart Animation</span>
+                  <span class="shot-cut-trigger">CUT ON: "on deadly reefs" ➔ CUT to Shot 3.3</span>
                 </div>
-                <div class="meta-item">
-                  <span class="cut-cue-badge">CUT ON: "guaranteed to arrive" ➔ CUT to Beat 04</span>
+
+                <div class="shot-vo-subbox">
+                  <span class="shot-vo-label">🎙️ Voiceover Spoken During this Visual (2:15 – 2:40 (25s)):</span>
+                  <p class="shot-vo-content">"On a round Earth, the shortest route between two ports is a curved arc called a great circle. But sailing a great circle requires recalculating your steering compass every single hour. In stormy seas with no visible stars, calculation errors meant running aground on deadly reefs."</p>
+                </div>
+
+                <div class="shot-action-box">
+                  <span class="shot-action-label">🎥 Visual Event on Screen:</span>
+                  <p class="shot-action-desc">Animated Atlantic navigation chart showing curved Great Circle route (red arc) versus straight Rhumb Line (green line).</p>
+                </div>
+
+                  <div class="shot-source-info">
+                    <span class="source-info-label">🛠️ Editing Asset Source:</span>
+                    <p class="source-info-text">2D animated chart overlay in Premiere/CapCut.</p>
+                  </div>
+
+                <div class="shot-sfx-line">
+                  <span class="shot-sfx-tag">🎵 SFX:</span>
+                  <span class="shot-sfx-val">Brass compass ticking & wind gust</span>
                 </div>
               </div>
 
-              <div class="ai-prompt-box">
-                <div class="prompt-box-top">
-                  <span class="prompt-box-title">Ready-to-Paste Flow AI Prompt (8s Clip)</span>
-                  <button class="btn-copy-prompt" onclick="copyPrompt(this)">Copy Prompt</button>
+              <!-- Shot 3.3 -->
+              <div class="single-shot-card">
+                <div class="shot-card-top">
+                  <div class="shot-id-group">
+                    <span class="shot-pill">Shot 3.3</span>
+                    <span class="shot-time-span">2:40 – 3:00 (20s)</span>
+                  </div>
+                  <span class="shot-type-pill badge-ai">🎥 Google Flow AI B-Roll</span>
+                  <span class="shot-cut-trigger">CUT ON: "guaranteed to arrive" ➔ CUT to Beat 04</span>
                 </div>
-                <pre class="prompt-code-display"><code>Create an 8-second horizontal 16:9 cinematic clip. Documentary photography, 16th-century wooden Spanish galleon sailing in turbulent deep Atlantic ocean, low-angle forward tracking camera, dramatic overcast lighting, misty sea spray, cinematic realism, no text --ar 16:9</code></pre>
-              </div>
 
-              <div class="sfx-row">
-                <span class="sfx-badge">🎵 Sound Design Cue:</span>
-                <span class="sfx-text">Ocean waves crashing, creaking timber, and compass ticking</span>
+                <div class="shot-vo-subbox">
+                  <span class="shot-vo-label">🎙️ Voiceover Spoken During this Visual (2:40 – 3:00 (20s)):</span>
+                  <p class="shot-vo-content">"Mercator designed a map where any straight line drawn with a ruler represented a constant compass bearing—a rhumb line. Hold that single angle on your steering compass, and you were guaranteed to arrive."</p>
+                </div>
+
+                <div class="shot-action-box">
+                  <span class="shot-action-label">🎥 Visual Event on Screen:</span>
+                  <p class="shot-action-desc">Close-up of weathered hands gripping wooden ship steering wheel at sunrise, calm golden ocean horizon ahead.</p>
+                </div>
+
+                  <div class="shot-prompt-wrap">
+                    <div class="shot-prompt-head">
+                      <span class="prompt-head-label">⚡ Google Flow AI Prompt (8s Clip)</span>
+                      <button class="btn-copy-shot-prompt" onclick="copyShotPrompt(this)">Copy Prompt</button>
+                    </div>
+                    <pre class="shot-prompt-code"><code>Create an 8-second horizontal 16:9 cinematic clip. Weathered hands gripping wooden ship steering wheel at sunrise, calm golden ocean horizon ahead, warm majestic lighting, 8k --ar 16:9</code></pre>
+                  </div>
+
+                <div class="shot-sfx-line">
+                  <span class="shot-sfx-tag">🎵 SFX:</span>
+                  <span class="shot-sfx-val">Triumphant horn & calm ocean swell</span>
+                </div>
+              </div>
               </div>
             </div>
           </article>
 
           <!-- BEAT 04 -->
           <article class="clean-beat-card">
-            <!-- Beat Header -->
+            <!-- Beat Main Header -->
             <div class="beat-card-head">
               <div class="head-left">
                 <span class="beat-gold-pill">BEAT 04</span>
@@ -830,63 +1031,121 @@
               </div>
             </div>
 
-            <!-- Spoken Voiceover Narration -->
+            <!-- Complete Beat Voiceover Script -->
             <div class="vo-script-box">
-              <span class="section-micro-label">🎙️ Spoken Narration (Voiceover):</span>
+              <span class="section-micro-label">🎙️ Complete Narration for BEAT 04:</span>
               <p class="vo-script-paragraph">To keep compass lines straight, Mercator projected Earth onto a cylinder. Longitude lines remained parallel instead of converging at the poles, forcing northern landmasses to stretch east-to-west. To preserve accurate angles, Mercator stretched the vertical latitude lines by the exact same ratio. At the equator where Africa sits, distortion is zero percent. But at sixty degrees north, land is magnified four times. By eighty degrees, it is inflated thirty-three times. In 1973, historian Arno Peters protested this distortion, proposing an equal-area map that showed true continent sizes. But while Peters fixed land areas, his map severely warped coastlines, making Africa look like stretched wet laundry.</p>
             </div>
 
-            <!-- Dynamic Editing Timeline (3 Cuts per Beat) -->
-            <div class="editing-timeline-box">
-              <span class="section-micro-label">🎬 Visual Editing Timeline (Dynamic Cuts):</span>
-              <div class="timeline-shots-grid">
-                <div class="timeline-shot-item">
-                  <span class="shot-time-tag">3:00 – 3:30</span>
-                  <span class="shot-type-tag">🎥 Flow AI B-Roll</span>
-                  <span class="shot-action-text">Aerial drone shot over massive icebergs drifting in Disko Bay Greenland, deep sapphire water and golden polar sun.</span>
+            <!-- Shot by Shot Visual Editing Breakdown -->
+            <div class="shots-container">
+              <span class="section-micro-label">🎬 Visual Editing Timeline (3 Sequential Cuts):</span>
+              <div class="shots-list">
+              <!-- Shot 4.1 -->
+              <div class="single-shot-card">
+                <div class="shot-card-top">
+                  <div class="shot-id-group">
+                    <span class="shot-pill">Shot 4.1</span>
+                    <span class="shot-time-span">3:00 – 3:30 (30s)</span>
+                  </div>
+                  <span class="shot-type-pill badge-ai">🎥 Google Flow AI B-Roll</span>
+                  <span class="shot-cut-trigger">CUT ON: "exact same ratio" ➔ CUT to Shot 4.2</span>
                 </div>
-                <div class="timeline-shot-item">
-                  <span class="shot-time-tag">3:30 – 3:55</span>
-                  <span class="shot-type-tag">📊 Data Heatmap</span>
-                  <span class="shot-action-text">Color-coded distortion heatmap: Equator (0%) ➔ 60°N (400%) ➔ 80°N (3300%).</span>
+
+                <div class="shot-vo-subbox">
+                  <span class="shot-vo-label">🎙️ Voiceover Spoken During this Visual (3:00 – 3:30 (30s)):</span>
+                  <p class="shot-vo-content">"To keep compass lines straight, Mercator projected Earth onto a cylinder. Longitude lines remained parallel instead of converging at the poles, forcing northern landmasses to stretch east-to-west. To preserve accurate angles, Mercator stretched the vertical latitude lines by the exact same ratio."</p>
                 </div>
-                <div class="timeline-shot-item">
-                  <span class="shot-time-tag">3:55 – 4:15</span>
-                  <span class="shot-type-tag">🗺️ Map Comparison</span>
-                  <span class="shot-action-text">Side-by-side comparison of natural Africa vs vertically stretched Gall-Peters Africa.</span>
+
+                <div class="shot-action-box">
+                  <span class="shot-action-label">🎥 Visual Event on Screen:</span>
+                  <p class="shot-action-desc">Aerial drone shot over massive icebergs drifting in Disko Bay Greenland, deep sapphire water and golden polar sun.</p>
+                </div>
+
+                  <div class="shot-prompt-wrap">
+                    <div class="shot-prompt-head">
+                      <span class="prompt-head-label">⚡ Google Flow AI Prompt (8s Clip)</span>
+                      <button class="btn-copy-shot-prompt" onclick="copyShotPrompt(this)">Copy Prompt</button>
+                    </div>
+                    <pre class="shot-prompt-code"><code>Create an 8-second horizontal 16:9 cinematic clip. Aerial drone shot over massive icebergs drifting in Disko Bay Greenland, deep sapphire water, golden afternoon sun glinting on ice, 8k realism --ar 16:9</code></pre>
+                  </div>
+
+                <div class="shot-sfx-line">
+                  <span class="shot-sfx-tag">🎵 SFX:</span>
+                  <span class="shot-sfx-val">Glacial ice cracking echo & cold wind</span>
                 </div>
               </div>
-            </div>
 
-            <!-- Flow AI Key Cinematography Prompt -->
-            <div class="visual-directive-card">
-              <div class="directive-meta-row">
-                <div class="meta-item">
-                  <span class="meta-label">⚡ Key Flow AI Cinematography Prompt (§20)</span>
+              <!-- Shot 4.2 -->
+              <div class="single-shot-card">
+                <div class="shot-card-top">
+                  <div class="shot-id-group">
+                    <span class="shot-pill">Shot 4.2</span>
+                    <span class="shot-time-span">3:30 – 3:55 (25s)</span>
+                  </div>
+                  <span class="shot-type-pill badge-graphic">📊 Distortion Heatmap Overlay</span>
+                  <span class="shot-cut-trigger">CUT ON: "thirty-three times" ➔ CUT to Shot 4.3</span>
                 </div>
-                <div class="meta-item">
-                  <span class="cut-cue-badge">CUT ON: "stretched wet laundry" ➔ CUT to Beat 05</span>
+
+                <div class="shot-vo-subbox">
+                  <span class="shot-vo-label">🎙️ Voiceover Spoken During this Visual (3:30 – 3:55 (25s)):</span>
+                  <p class="shot-vo-content">"At the equator where Africa sits, distortion is zero percent. But at sixty degrees north, land is magnified four times. By eighty degrees, it is inflated thirty-three times."</p>
+                </div>
+
+                <div class="shot-action-box">
+                  <span class="shot-action-label">🎥 Visual Event on Screen:</span>
+                  <p class="shot-action-desc">Color-coded distortion heatmap on world map: Equator (0%) ➔ 60°N (400%) ➔ 80°N (3300%).</p>
+                </div>
+
+                  <div class="shot-source-info">
+                    <span class="source-info-label">🛠️ Editing Asset Source:</span>
+                    <p class="source-info-text">2D animated heatmap graphic.</p>
+                  </div>
+
+                <div class="shot-sfx-line">
+                  <span class="shot-sfx-tag">🎵 SFX:</span>
+                  <span class="shot-sfx-val">Alarm chime & data pulse</span>
                 </div>
               </div>
 
-              <div class="ai-prompt-box">
-                <div class="prompt-box-top">
-                  <span class="prompt-box-title">Ready-to-Paste Flow AI Prompt (8s Clip)</span>
-                  <button class="btn-copy-prompt" onclick="copyPrompt(this)">Copy Prompt</button>
+              <!-- Shot 4.3 -->
+              <div class="single-shot-card">
+                <div class="shot-card-top">
+                  <div class="shot-id-group">
+                    <span class="shot-pill">Shot 4.3</span>
+                    <span class="shot-time-span">3:55 – 4:15 (20s)</span>
+                  </div>
+                  <span class="shot-type-pill badge-map">🗺️ Map Comparison (Gall-Peters vs Normal)</span>
+                  <span class="shot-cut-trigger">CUT ON: "stretched wet laundry" ➔ CUT to Beat 05</span>
                 </div>
-                <pre class="prompt-code-display"><code>Create an 8-second horizontal 16:9 cinematic clip. Aerial drone shot over massive icebergs drifting in Disko Bay Greenland, deep sapphire water, golden afternoon sun glinting on ice, 8k realism --ar 16:9</code></pre>
-              </div>
 
-              <div class="sfx-row">
-                <span class="sfx-badge">🎵 Sound Design Cue:</span>
-                <span class="sfx-text">Glacier ice cracking echo & tension cello swell</span>
+                <div class="shot-vo-subbox">
+                  <span class="shot-vo-label">🎙️ Voiceover Spoken During this Visual (3:55 – 4:15 (20s)):</span>
+                  <p class="shot-vo-content">"In 1973, historian Arno Peters protested this distortion, proposing an equal-area map that showed true continent sizes. But while Peters fixed land areas, his map severely warped coastlines, making Africa look like stretched wet laundry."</p>
+                </div>
+
+                <div class="shot-action-box">
+                  <span class="shot-action-label">🎥 Visual Event on Screen:</span>
+                  <p class="shot-action-desc">Side-by-side comparison animation of natural Africa shape vs vertically elongated Gall-Peters Africa.</p>
+                </div>
+
+                  <div class="shot-source-info">
+                    <span class="source-info-label">🛠️ Editing Asset Source:</span>
+                    <p class="source-info-text">2D split-screen map comparison in video editor.</p>
+                  </div>
+
+                <div class="shot-sfx-line">
+                  <span class="shot-sfx-tag">🎵 SFX:</span>
+                  <span class="shot-sfx-val">Tension cello swell & elastic snap</span>
+                </div>
+              </div>
               </div>
             </div>
           </article>
 
           <!-- BEAT 05 -->
           <article class="clean-beat-card">
-            <!-- Beat Header -->
+            <!-- Beat Main Header -->
             <div class="beat-card-head">
               <div class="head-left">
                 <span class="beat-gold-pill">BEAT 05</span>
@@ -898,63 +1157,124 @@
               </div>
             </div>
 
-            <!-- Spoken Voiceover Narration -->
+            <!-- Complete Beat Voiceover Script -->
             <div class="vo-script-box">
-              <span class="section-micro-label">🎙️ Spoken Narration (Voiceover):</span>
+              <span class="section-micro-label">🎙️ Complete Narration for BEAT 05:</span>
               <p class="vo-script-paragraph">In 2005, when Google built Google Maps, they had dozens of accurate world projections to pick. They deliberately chose Web Mercator. Why? Because when you navigate a city street on your phone, preserving 90-degree street corners is everything. On an equal-area map, every city intersection in New York or London would appear skewed into an angled diamond. Mercator also flattens the inhabited world into a perfect square, which web servers easily chop into 256-pixel square tiles that load instantly across millions of smartphones. A 450-year-old sailing trick became the digital operating system of modern GPS.</p>
             </div>
 
-            <!-- Dynamic Editing Timeline (3 Cuts per Beat) -->
-            <div class="editing-timeline-box">
-              <span class="section-micro-label">🎬 Visual Editing Timeline (Dynamic Cuts):</span>
-              <div class="timeline-shots-grid">
-                <div class="timeline-shot-item">
-                  <span class="shot-time-tag">4:15 – 4:45</span>
-                  <span class="shot-type-tag">🎥 Flow AI B-Roll</span>
-                  <span class="shot-action-text">High-altitude orthogonal aerial view of Manhattan street grid intersections, straight down satellite motion under golden hour sun.</span>
+            <!-- Shot by Shot Visual Editing Breakdown -->
+            <div class="shots-container">
+              <span class="section-micro-label">🎬 Visual Editing Timeline (3 Sequential Cuts):</span>
+              <div class="shots-list">
+              <!-- Shot 5.1 -->
+              <div class="single-shot-card">
+                <div class="shot-card-top">
+                  <div class="shot-id-group">
+                    <span class="shot-pill">Shot 5.1</span>
+                    <span class="shot-time-span">4:15 – 4:45 (30s)</span>
+                  </div>
+                  <span class="shot-type-pill badge-ai">🎥 Google Flow AI B-Roll</span>
+                  <span class="shot-cut-trigger">CUT ON: "corners is everything" ➔ CUT to Shot 5.2</span>
                 </div>
-                <div class="timeline-shot-item">
-                  <span class="shot-time-tag">4:45 – 5:10</span>
-                  <span class="shot-type-tag">📊 3D Tile Pyramid</span>
-                  <span class="shot-action-text">3D cascading animation of square 256x256 image tiles loading rapidly downward onto smartphone screen.</span>
+
+                <div class="shot-vo-subbox">
+                  <span class="shot-vo-label">🎙️ Voiceover Spoken During this Visual (4:15 – 4:45 (30s)):</span>
+                  <p class="shot-vo-content">"In 2005, when Google built Google Maps, they had dozens of accurate world projections to pick. They deliberately chose Web Mercator. Why? Because when you navigate a city street on your phone, preserving 90-degree street corners is everything."</p>
                 </div>
-                <div class="timeline-shot-item">
-                  <span class="shot-time-tag">5:10 – 5:30</span>
-                  <span class="shot-type-tag">🎥 Flow AI B-Roll</span>
-                  <span class="shot-action-text">Close-up of hand holding modern smartphone displaying glowing GPS route while walking down busy city sidewalk.</span>
+
+                <div class="shot-action-box">
+                  <span class="shot-action-label">🎥 Visual Event on Screen:</span>
+                  <p class="shot-action-desc">High-altitude orthogonal aerial view of Manhattan street grid intersections, straight down satellite motion under golden hour sun.</p>
+                </div>
+
+                  <div class="shot-prompt-wrap">
+                    <div class="shot-prompt-head">
+                      <span class="prompt-head-label">⚡ Google Flow AI Prompt (8s Clip)</span>
+                      <button class="btn-copy-shot-prompt" onclick="copyShotPrompt(this)">Copy Prompt</button>
+                    </div>
+                    <pre class="shot-prompt-code"><code>Create an 8-second horizontal 16:9 cinematic clip. High-altitude orthogonal aerial view of Manhattan street grid intersections, straight down satellite motion, golden hour directional sunlight, 8k --ar 16:9</code></pre>
+                  </div>
+
+                <div class="shot-sfx-line">
+                  <span class="shot-sfx-tag">🎵 SFX:</span>
+                  <span class="shot-sfx-val">City traffic drone & street ambiance</span>
                 </div>
               </div>
-            </div>
 
-            <!-- Flow AI Key Cinematography Prompt -->
-            <div class="visual-directive-card">
-              <div class="directive-meta-row">
-                <div class="meta-item">
-                  <span class="meta-label">⚡ Key Flow AI Cinematography Prompt (§20)</span>
+              <!-- Shot 5.2 -->
+              <div class="single-shot-card">
+                <div class="shot-card-top">
+                  <div class="shot-id-group">
+                    <span class="shot-pill">Shot 5.2</span>
+                    <span class="shot-time-span">4:45 – 5:10 (25s)</span>
+                  </div>
+                  <span class="shot-type-pill badge-graphic">📊 3D Tile Pyramid Animation</span>
+                  <span class="shot-cut-trigger">CUT ON: "millions of smartphones" ➔ CUT to Shot 5.3</span>
                 </div>
-                <div class="meta-item">
-                  <span class="cut-cue-badge">CUT ON: "operating system of modern GPS" ➔ CUT to Beat 06</span>
+
+                <div class="shot-vo-subbox">
+                  <span class="shot-vo-label">🎙️ Voiceover Spoken During this Visual (4:45 – 5:10 (25s)):</span>
+                  <p class="shot-vo-content">"On an equal-area map, every city intersection in New York or London would appear skewed into an angled diamond. Mercator also flattens the inhabited world into a perfect square, which web servers easily chop into 256-pixel square tiles that load instantly across millions of smartphones."</p>
+                </div>
+
+                <div class="shot-action-box">
+                  <span class="shot-action-label">🎥 Visual Event on Screen:</span>
+                  <p class="shot-action-desc">3D cascading animation of square 256x256 image tiles dividing and loading rapidly downward onto smartphone screen.</p>
+                </div>
+
+                  <div class="shot-source-info">
+                    <span class="source-info-label">🛠️ Editing Asset Source:</span>
+                    <p class="source-info-text">Motion graphic tile pyramid animation.</p>
+                  </div>
+
+                <div class="shot-sfx-line">
+                  <span class="shot-sfx-tag">🎵 SFX:</span>
+                  <span class="shot-sfx-val">Data stream rush & server beep</span>
                 </div>
               </div>
 
-              <div class="ai-prompt-box">
-                <div class="prompt-box-top">
-                  <span class="prompt-box-title">Ready-to-Paste Flow AI Prompt (8s Clip)</span>
-                  <button class="btn-copy-prompt" onclick="copyPrompt(this)">Copy Prompt</button>
+              <!-- Shot 5.3 -->
+              <div class="single-shot-card">
+                <div class="shot-card-top">
+                  <div class="shot-id-group">
+                    <span class="shot-pill">Shot 5.3</span>
+                    <span class="shot-time-span">5:10 – 5:30 (20s)</span>
+                  </div>
+                  <span class="shot-type-pill badge-ai">🎥 Google Flow AI B-Roll</span>
+                  <span class="shot-cut-trigger">CUT ON: "operating system of modern GPS" ➔ CUT to Beat 06</span>
                 </div>
-                <pre class="prompt-code-display"><code>Create an 8-second horizontal 16:9 cinematic clip. High-altitude orthogonal aerial view of Manhattan street grid intersections, straight down satellite motion, golden hour directional sunlight, 8k --ar 16:9</code></pre>
-              </div>
 
-              <div class="sfx-row">
-                <span class="sfx-badge">🎵 Sound Design Cue:</span>
-                <span class="sfx-text">City traffic hum & smartphone navigation chime</span>
+                <div class="shot-vo-subbox">
+                  <span class="shot-vo-label">🎙️ Voiceover Spoken During this Visual (5:10 – 5:30 (20s)):</span>
+                  <p class="shot-vo-content">"A 450-year-old sailing trick became the digital operating system of modern GPS."</p>
+                </div>
+
+                <div class="shot-action-box">
+                  <span class="shot-action-label">🎥 Visual Event on Screen:</span>
+                  <p class="shot-action-desc">Close-up of hand holding modern smartphone displaying glowing GPS route while walking down busy city sidewalk.</p>
+                </div>
+
+                  <div class="shot-prompt-wrap">
+                    <div class="shot-prompt-head">
+                      <span class="prompt-head-label">⚡ Google Flow AI Prompt (8s Clip)</span>
+                      <button class="btn-copy-shot-prompt" onclick="copyShotPrompt(this)">Copy Prompt</button>
+                    </div>
+                    <pre class="shot-prompt-code"><code>Create an 8-second horizontal 16:9 cinematic clip. Close-up of hand holding modern smartphone displaying GPS navigation route while walking along bustling sunny city sidewalk, bokeh pedestrians, 8k --ar 16:9</code></pre>
+                  </div>
+
+                <div class="shot-sfx-line">
+                  <span class="shot-sfx-tag">🎵 SFX:</span>
+                  <span class="shot-sfx-val">Smartphone navigation chime</span>
+                </div>
+              </div>
               </div>
             </div>
           </article>
 
           <!-- BEAT 06 -->
           <article class="clean-beat-card">
-            <!-- Beat Header -->
+            <!-- Beat Main Header -->
             <div class="beat-card-head">
               <div class="head-left">
                 <span class="beat-gold-pill">BEAT 06</span>
@@ -966,51 +1286,82 @@
               </div>
             </div>
 
-            <!-- Spoken Voiceover Narration -->
+            <!-- Complete Beat Voiceover Script -->
             <div class="vo-script-box">
-              <span class="section-micro-label">🎙️ Spoken Narration (Voiceover):</span>
+              <span class="section-micro-label">🎙️ Complete Narration for BEAT 06:</span>
               <p class="vo-script-paragraph">Modern cartography has finally solved this dilemma. Today, the Equal Earth projection gives every continent its true proportions without distorting shapes, and Google Maps seamlessly switches into a 3D rotating globe once you zoom out. Maps are not photographs of our planet—they are human tools designed for specific jobs. Gerardus Mercator never lied to us; he built the ultimate sea chart. The mistake was ours, for keeping a 16th-century nautical tool pinned to classroom walls. The next time you look at a map, remember: Africa is bigger than you think.</p>
             </div>
 
-            <!-- Dynamic Editing Timeline (3 Cuts per Beat) -->
-            <div class="editing-timeline-box">
-              <span class="section-micro-label">🎬 Visual Editing Timeline (Dynamic Cuts):</span>
-              <div class="timeline-shots-grid">
-                <div class="timeline-shot-item">
-                  <span class="shot-time-tag">5:30 – 5:55</span>
-                  <span class="shot-type-tag">🗺️ 2D Equal Earth Display</span>
-                  <span class="shot-action-text">Clean Equal Earth projection map unfurling with smooth curved meridians and true continent proportions.</span>
+            <!-- Shot by Shot Visual Editing Breakdown -->
+            <div class="shots-container">
+              <span class="section-micro-label">🎬 Visual Editing Timeline (2 Sequential Cuts):</span>
+              <div class="shots-list">
+              <!-- Shot 6.1 -->
+              <div class="single-shot-card">
+                <div class="shot-card-top">
+                  <div class="shot-id-group">
+                    <span class="shot-pill">Shot 6.1</span>
+                    <span class="shot-time-span">5:30 – 5:55 (25s)</span>
+                  </div>
+                  <span class="shot-type-pill badge-map">🗺️ Equal Earth Map Display</span>
+                  <span class="shot-cut-trigger">CUT ON: "once you zoom out" ➔ CUT to Shot 6.2</span>
                 </div>
-                <div class="timeline-shot-item">
-                  <span class="shot-time-tag">5:55 – 6:30</span>
-                  <span class="shot-type-tag">🎥 Flow AI B-Roll</span>
-                  <span class="shot-action-text">Cinematic deep space pull back from Earth as a golden sunrise crests over the African continent under a starry sky.</span>
+
+                <div class="shot-vo-subbox">
+                  <span class="shot-vo-label">🎙️ Voiceover Spoken During this Visual (5:30 – 5:55 (25s)):</span>
+                  <p class="shot-vo-content">"Modern cartography has finally solved this dilemma. Today, the Equal Earth projection gives every continent its true proportions without distorting shapes, and Google Maps seamlessly switches into a 3D rotating globe once you zoom out."</p>
+                </div>
+
+                <div class="shot-action-box">
+                  <span class="shot-action-label">🎥 Visual Event on Screen:</span>
+                  <p class="shot-action-desc">Clean Equal Earth projection map unfurling with smooth curved meridians and true continent proportions.</p>
+                </div>
+
+                  <div class="shot-source-info">
+                    <span class="source-info-label">🛠️ Editing Asset Source:</span>
+                    <p class="source-info-text">2D motion graphic map display in video editor.</p>
+                  </div>
+
+                <div class="shot-sfx-line">
+                  <span class="shot-sfx-tag">🎵 SFX:</span>
+                  <span class="shot-sfx-val">Harmonious chime & space whoosh</span>
                 </div>
               </div>
-            </div>
 
-            <!-- Flow AI Key Cinematography Prompt -->
-            <div class="visual-directive-card">
-              <div class="directive-meta-row">
-                <div class="meta-item">
-                  <span class="meta-label">⚡ Key Flow AI Cinematography Prompt (§20)</span>
+              <!-- Shot 6.2 -->
+              <div class="single-shot-card">
+                <div class="shot-card-top">
+                  <div class="shot-id-group">
+                    <span class="shot-pill">Shot 6.2</span>
+                    <span class="shot-time-span">5:55 – 6:30 (35s)</span>
+                  </div>
+                  <span class="shot-type-pill badge-ai">🎥 Google Flow AI B-Roll</span>
+                  <span class="shot-cut-trigger">FADE TO BLACK ➔ Outro End Screen</span>
                 </div>
-                <div class="meta-item">
-                  <span class="cut-cue-badge">FADE TO BLACK ➔ Outro End Screen</span>
+
+                <div class="shot-vo-subbox">
+                  <span class="shot-vo-label">🎙️ Voiceover Spoken During this Visual (5:55 – 6:30 (35s)):</span>
+                  <p class="shot-vo-content">"Maps are not photographs of our planet—they are human tools designed for specific jobs. Gerardus Mercator never lied to us; he built the ultimate sea chart. The mistake was ours, for keeping a 16th-century nautical tool pinned to classroom walls. The next time you look at a map, remember: Africa is bigger than you think."</p>
+                </div>
+
+                <div class="shot-action-box">
+                  <span class="shot-action-label">🎥 Visual Event on Screen:</span>
+                  <p class="shot-action-desc">Cinematic deep space pull back from Earth as a golden sunrise crests over the African continent under a starry sky.</p>
+                </div>
+
+                  <div class="shot-prompt-wrap">
+                    <div class="shot-prompt-head">
+                      <span class="prompt-head-label">⚡ Google Flow AI Prompt (8s Clip)</span>
+                      <button class="btn-copy-shot-prompt" onclick="copyShotPrompt(this)">Copy Prompt</button>
+                    </div>
+                    <pre class="shot-prompt-code"><code>Create an 8-second horizontal 16:9 cinematic clip. Cinematic deep space pull back from Earth, golden sunrise cresting over the African continent, ethereal starry background, photorealistic 8k --ar 16:9</code></pre>
+                  </div>
+
+                <div class="shot-sfx-line">
+                  <span class="shot-sfx-tag">🎵 SFX:</span>
+                  <span class="shot-sfx-val">Grand orchestral crescendo resolving into warm piano</span>
                 </div>
               </div>
-
-              <div class="ai-prompt-box">
-                <div class="prompt-box-top">
-                  <span class="prompt-box-title">Ready-to-Paste Flow AI Prompt (8s Clip)</span>
-                  <button class="btn-copy-prompt" onclick="copyPrompt(this)">Copy Prompt</button>
-                </div>
-                <pre class="prompt-code-display"><code>Create an 8-second horizontal 16:9 cinematic clip. Cinematic deep space pull back from Earth, golden sunrise cresting over the African continent, ethereal starry background, photorealistic 8k --ar 16:9</code></pre>
-              </div>
-
-              <div class="sfx-row">
-                <span class="sfx-badge">🎵 Sound Design Cue:</span>
-                <span class="sfx-text">Grand orchestral crescendo resolving into warm piano</span>
               </div>
             </div>
           </article>
@@ -1024,7 +1375,7 @@
             <span class="beat-gold-pill" style="background:var(--accent-green); color:#FFFFFF;">TELEPROMPTER</span>
             <h3 class="beat-title-text">Complete 6-Minute Voiceover Script (855 words)</h3>
           </div>
-          <button class="btn-copy-prompt" style="padding:6px 16px; font-size:0.82rem;" onclick="copyFullScript()">📋 Copy Full Script for ElevenLabs</button>
+          <button class="btn-copy-shot-prompt" style="padding:6px 16px; font-size:0.82rem;" onclick="copyFullScript()">📋 Copy Full Script for ElevenLabs</button>
         </div>
 
         <div class="vo-script-box" style="background:var(--bg-surface); border:1.5px solid var(--border-medium);">
@@ -1219,8 +1570,8 @@ Modern cartography has finally solved this dilemma. Today, the Equal Earth proje
       setTimeout(() => toast.classList.remove("show"), 2000);
     }
 
-    function copyPrompt(btn) {
-      const code = btn.closest(".visual-directive-card").querySelector("code");
+    function copyShotPrompt(btn) {
+      const code = btn.closest(".shot-prompt-wrap").querySelector("code");
       if (code) {
         navigator.clipboard.writeText(code.textContent).then(() => {
           showToast("AI Prompt Copied!");
