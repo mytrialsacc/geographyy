@@ -1,0 +1,1337 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Hidden Geography — Visual Style Bible, Cinematic Standards & Google Flow AI Prompt Formulas.">
+  <meta name="theme-color" content="#38BDF8">
+  <title>Visual Style Bible & Prompts · Hidden Geography</title>
+  
+  <link rel="icon" type="image/svg+xml" href="../../favicon.svg">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&family=JetBrains+Mono:wght@600;800&display=swap" rel="stylesheet">
+  
+  <style>
+    :root {
+      /* Playful Animated Cartoon Palette */
+      --ink: #0F172A;
+      --bg-sky: #E0F2FE;
+      --bg-canvas: #F0F9FF;
+      --bg-card: #FFFFFF;
+      --bg-card-alt: #FEF3C7;
+      
+      --cartoon-blue: #0EA5E9;
+      --cartoon-blue-deep: #0284C7;
+      --cartoon-green: #22C55E;
+      --cartoon-green-deep: #16A34A;
+      --cartoon-yellow: #FBBF24;
+      --cartoon-yellow-deep: #D97706;
+      --cartoon-coral: #FB7185;
+      --cartoon-coral-deep: #F43F5E;
+      --cartoon-purple: #A855F7;
+      --cartoon-orange: #FB923C;
+
+      --text-dark: #0F172A;
+      --text-main: #0F172A;
+      --text-muted: #475569;
+      --text-faint: #64748B;
+      --text-white: #FFFFFF;
+
+      --border-chunky: var(--ink);
+      --card-base: var(--bg-card);
+      --card-elevated: var(--bg-canvas);
+      --card-highlight: var(--bg-card-alt);
+      
+      --shadow-block-lg: 0 10px 0 var(--ink), 0 20px 30px rgba(15, 23, 42, 0.12);
+      --shadow-block-md: 0 6px 0 var(--ink), 0 12px 20px rgba(15, 23, 42, 0.08);
+      --shadow-block-sm: 0 4px 0 var(--ink);
+      --shadow-btn: 0 5px 0 var(--ink);
+      --shadow-btn-active: 0 1px 0 var(--ink);
+
+      --radius-pill: 999px;
+      --radius-bubble: 24px;
+      --radius-box: 18px;
+      --radius-sm: 12px;
+      --radius-md: 16px;
+      --radius-lg: 22px;
+      --radius-xl: 26px;
+      --sidebar-w: 280px;
+    }
+
+    [data-theme="dark"] {
+      --ink: #050811;
+      --bg-sky: #090D16;
+      --bg-canvas: #0F172A;
+      --bg-card: #1E293B;
+      --bg-card-alt: #24344D;
+      
+      --cartoon-blue: #38BDF8;
+      --cartoon-blue-deep: #38BDF8;
+      --cartoon-green: #4ADE80;
+      --cartoon-green-deep: #22C55E;
+      --cartoon-yellow: #FBBF24;
+      --cartoon-yellow-deep: #F59E0B;
+      --cartoon-coral: #FB7185;
+      --cartoon-coral-deep: #F43F5E;
+
+      --text-dark: #F8FAFC;
+      --text-main: #F8FAFC;
+      --text-muted: #94A3B8;
+      --text-faint: #64748B;
+      
+      --border-chunky: #334155;
+      --card-base: #1E293B;
+      --card-elevated: #24344D;
+      --card-highlight: #2D3F5C;
+      
+      --shadow-block-lg: 0 10px 0 #050811, 0 24px 40px rgba(0,0,0,0.5);
+      --shadow-block-md: 0 6px 0 #050811, 0 14px 24px rgba(0,0,0,0.4);
+      --shadow-block-sm: 0 4px 0 #050811;
+      --shadow-btn: 0 5px 0 #050811;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; scroll-padding-top: 100px; }
+    
+    body {
+      min-height: 100vh;
+      color: var(--text-dark);
+      font-family: "Plus Jakarta Sans", sans-serif;
+      background-color: var(--bg-sky);
+      background-image: 
+        radial-gradient(circle at 10% 20%, rgba(14, 165, 233, 0.18), transparent 32rem),
+        radial-gradient(circle at 90% 80%, rgba(34, 197, 94, 0.18), transparent 35rem),
+        radial-gradient(circle at 50% 50%, rgba(251, 191, 36, 0.12), transparent 40rem);
+      background-attachment: fixed;
+      line-height: 1.55;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    h1, h2, h3, h4, .brand-title, .pill-tag, .stat-number, .btn-cartoon {
+      font-family: "Fredoka", "Plus Jakarta Sans", sans-serif;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+    }
+
+    code, pre { font-family: "JetBrains Mono", monospace; }
+
+    /* Floating Clouds */
+    .cartoon-clouds-bg {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 0;
+      overflow: hidden;
+    }
+
+    .cloud {
+      position: absolute;
+      background: #FFFFFF;
+      border: 3px solid var(--ink);
+      border-radius: var(--radius-pill);
+      box-shadow: 0 6px 0 var(--ink);
+      opacity: 0.85;
+      animation: floatCloud 24s linear infinite;
+    }
+
+    [data-theme="dark"] .cloud {
+      background: #1E293B;
+      opacity: 0.35;
+    }
+
+    .cloud-1 { width: 140px; height: 48px; top: 10%; left: -160px; animation-duration: 32s; }
+    .cloud-2 { width: 190px; height: 60px; top: 45%; left: -210px; animation-duration: 44s; animation-delay: 8s; }
+    .cloud-3 { width: 120px; height: 42px; top: 80%; left: -140px; animation-duration: 28s; animation-delay: 16s; }
+
+    @keyframes floatCloud {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(calc(100vw + 300px)); }
+    }
+
+    /* Layout Shell */
+    .app-shell {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      grid-template-columns: var(--sidebar-w) minmax(0, 1fr);
+      min-height: 100vh;
+    }
+
+    .sidebar-backdrop {
+      position: fixed;
+      inset: 0;
+      background: rgba(15, 23, 42, 0.65);
+      backdrop-filter: blur(4px);
+      -webkit-backdrop-filter: blur(4px);
+      z-index: 95;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.25s ease;
+    }
+    .sidebar-backdrop.active { opacity: 1; pointer-events: auto; }
+
+    /* Sidebar Navigation */
+    .sidebar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      width: var(--sidebar-w);
+      background: var(--bg-card);
+      border-right: 3.5px solid var(--border-chunky);
+      display: flex;
+      flex-direction: column;
+      padding: 24px 18px;
+      z-index: 100;
+      overflow-y: auto;
+      box-shadow: 4px 0 20px rgba(0,0,0,0.06);
+    }
+
+    .brand-cluster {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      text-decoration: none;
+    }
+
+    .brand-logo-badge {
+      width: 50px;
+      height: 50px;
+      border-radius: 16px;
+      background: linear-gradient(135deg, var(--cartoon-yellow), var(--cartoon-orange));
+      border: 3px solid var(--border-chunky);
+      box-shadow: 0 4px 0 var(--border-chunky);
+      display: grid;
+      place-items: center;
+      flex-shrink: 0;
+      transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+
+    .brand-cluster:hover .brand-logo-badge {
+      transform: rotate(-6deg) scale(1.08);
+    }
+
+    .brand-logo-badge svg {
+      width: 30px;
+      height: 30px;
+    }
+
+    .brand-title-wrap strong {
+      display: block;
+      font-size: 1.3rem;
+      color: var(--text-dark);
+      font-family: "Fredoka", sans-serif;
+      line-height: 1.05;
+    }
+
+    .brand-title-wrap small {
+      display: inline-block;
+      font-size: 0.66rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: #FFFFFF;
+      background: var(--cartoon-blue-deep);
+      padding: 2px 10px;
+      border-radius: var(--radius-pill);
+      margin-top: 4px;
+      border: 2px solid var(--border-chunky);
+      box-shadow: 0 2px 0 var(--border-chunky);
+    }
+
+    .nav-section-title {
+      font-size: 0.68rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--text-faint);
+      margin: 18px 8px 10px;
+    }
+
+    .nav-list {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .nav-pill-btn {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 11px 15px;
+      border-radius: var(--radius-md);
+      font-size: 0.86rem;
+      font-weight: 700;
+      color: var(--text-muted);
+      border: 2.5px solid transparent;
+      background: transparent;
+      transition: all 0.16s cubic-bezier(0.34, 1.56, 0.64, 1);
+      text-decoration: none;
+    }
+
+    .nav-pill-btn svg {
+      width: 19px;
+      height: 19px;
+      stroke: currentColor;
+      fill: none;
+      stroke-width: 2.5;
+      flex-shrink: 0;
+      transition: transform 0.2s ease;
+    }
+
+    .nav-pill-btn:hover {
+      color: var(--text-dark);
+      background: var(--bg-canvas);
+      border-color: var(--border-chunky);
+      transform: translateX(4px);
+      box-shadow: 0 3px 0 var(--border-chunky);
+    }
+
+    .nav-pill-btn:hover svg {
+      transform: scale(1.15) rotate(6deg);
+      stroke: var(--cartoon-blue-deep);
+    }
+
+    .nav-pill-btn.active {
+      color: #0F172A;
+      background: var(--cartoon-yellow);
+      border-color: var(--border-chunky);
+      box-shadow: 0 4px 0 var(--border-chunky);
+      transform: translateY(-2px);
+    }
+
+    .nav-pill-btn.active svg {
+      stroke: #0F172A;
+    }
+
+    .nav-counter-tag {
+      margin-left: auto;
+      font-size: 0.66rem;
+      font-weight: 800;
+      padding: 2px 8px;
+      border-radius: var(--radius-pill);
+      background: var(--bg-sky);
+      color: var(--cartoon-blue-deep);
+      border: 2px solid var(--border-chunky);
+    }
+
+    .nav-pill-btn.active .nav-counter-tag {
+      background: #0F172A;
+      color: var(--cartoon-yellow);
+      border-color: #0F172A;
+    }
+
+    .sidebar-footer-card {
+      margin-top: auto;
+      padding-top: 18px;
+      border-top: 3.5px dashed var(--border-chunky);
+    }
+
+    .channel-handle-box {
+      background: var(--bg-canvas);
+      border: 3px solid var(--border-chunky);
+      border-radius: var(--radius-md);
+      padding: 12px 14px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      box-shadow: 0 4px 0 var(--border-chunky);
+    }
+
+    .live-pulse-dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: var(--cartoon-green);
+      border: 2px solid var(--ink);
+      box-shadow: 0 0 10px var(--cartoon-green);
+      animation: cartoonPulse 1.8s infinite;
+    }
+
+    @keyframes cartoonPulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.35); }
+    }
+
+    .channel-handle-box span {
+      display: block;
+      font-size: 0.64rem;
+      font-weight: 800;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    .channel-handle-box strong {
+      font-size: 0.86rem;
+      color: var(--cartoon-blue-deep);
+      font-family: "JetBrains Mono", monospace;
+      font-weight: 800;
+    }
+
+    /* Main Content Wrapper */
+    .main-wrapper {
+      grid-column: 2;
+      min-width: 0;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Top Action Bar with Main Nav Links */
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 90;
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      background: rgba(240, 249, 255, 0.94);
+      border-bottom: 3.5px solid var(--ink);
+      padding: 12px clamp(16px, 3vw, 40px);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    [data-theme="dark"] .topbar {
+      background: rgba(15, 23, 42, 0.94);
+    }
+
+    /* Main Navigation Header Links Row */
+    .top-main-nav {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      overflow-x: auto;
+      scrollbar-width: none;
+    }
+    .top-main-nav::-webkit-scrollbar { display: none; }
+
+    .top-nav-link {
+      height: 38px;
+      padding: 0 14px;
+      border-radius: var(--radius-pill);
+      font-size: 0.82rem;
+      font-weight: 800;
+      color: var(--text-dark);
+      background: var(--bg-card);
+      border: 2.5px solid var(--ink);
+      box-shadow: 0 3px 0 var(--ink);
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      text-decoration: none;
+      white-space: nowrap;
+      transition: all 0.12s ease;
+      user-select: none;
+    }
+
+    .top-nav-link svg {
+      width: 16px;
+      height: 16px;
+      stroke: currentColor;
+      fill: none;
+      stroke-width: 2.5;
+    }
+
+    .top-nav-link:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 5px 0 var(--ink);
+      background: var(--bg-canvas);
+    }
+
+    .top-nav-link:active {
+      transform: translateY(2px);
+      box-shadow: 0 1px 0 var(--ink);
+    }
+
+    .top-nav-link.active {
+      background: var(--cartoon-yellow);
+      color: var(--ink);
+      border-color: var(--ink);
+    }
+
+    .top-action-group {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-shrink: 0;
+    }
+
+    /* Chunky Cartoon Action Buttons */
+    .btn-cartoon {
+      height: 40px;
+      padding: 0 18px;
+      border-radius: var(--radius-box);
+      font-size: 0.86rem;
+      font-weight: 700;
+      border: 3px solid var(--ink);
+      background: var(--bg-card);
+      color: var(--text-dark);
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      box-shadow: var(--shadow-btn);
+      cursor: pointer;
+      transition: all 0.12s ease;
+      text-decoration: none;
+      user-select: none;
+    }
+
+    .btn-cartoon svg {
+      width: 17px;
+      height: 17px;
+      stroke: currentColor;
+      fill: none;
+      stroke-width: 2.8;
+    }
+
+    .btn-cartoon:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 0 var(--ink);
+    }
+
+    .btn-cartoon:active {
+      transform: translateY(3px);
+      box-shadow: var(--shadow-btn-active);
+    }
+
+    .btn-cartoon.btn-gold { background: var(--cartoon-yellow); color: var(--ink); }
+    .btn-cartoon.btn-cyan { background: var(--cartoon-blue); color: #FFFFFF; }
+    .btn-cartoon.btn-emerald { background: var(--cartoon-green); color: var(--ink); }
+
+    .icon-btn-cartoon {
+      width: 40px;
+      height: 40px;
+      border-radius: var(--radius-box);
+      border: 3px solid var(--ink);
+      background: var(--bg-card);
+      color: var(--text-dark);
+      box-shadow: var(--shadow-btn);
+      display: grid;
+      place-items: center;
+      cursor: pointer;
+      transition: all 0.12s ease;
+      flex-shrink: 0;
+    }
+
+    .icon-btn-cartoon svg {
+      width: 19px;
+      height: 19px;
+      stroke: var(--text-dark);
+      fill: none;
+      stroke-width: 2.6;
+    }
+
+    .icon-btn-cartoon:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 0 var(--ink);
+    }
+
+    /* Page Content */
+    .content-container {
+      width: min(1340px, calc(100% - 48px));
+      margin: 0 auto;
+      padding: 36px 0 100px;
+    }
+
+    /* Hero Showcase Banner */
+    .hero-cartoon-card {
+      position: relative;
+      overflow: hidden;
+      border-radius: var(--radius-bubble);
+      border: 4px solid var(--ink);
+      background: var(--bg-card);
+      padding: clamp(32px, 5vw, 60px);
+      margin-bottom: 40px;
+      box-shadow: var(--shadow-block-lg);
+    }
+
+    .hero-badge-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      padding: 8px 18px;
+      border-radius: var(--radius-pill);
+      background: var(--cartoon-yellow);
+      border: 3px solid var(--ink);
+      color: var(--ink);
+      font-size: 0.76rem;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 18px;
+      box-shadow: 0 4px 0 var(--ink);
+    }
+
+    .hero-badge-pill svg {
+      width: 16px;
+      height: 16px;
+      stroke: var(--ink);
+      fill: none;
+      stroke-width: 2.8;
+    }
+
+    .hero-title {
+      font-size: clamp(2.4rem, 5.5vw, 4.5rem);
+      line-height: 1.05;
+      letter-spacing: -0.02em;
+      max-width: 900px;
+      margin-bottom: 18px;
+      color: var(--text-dark);
+    }
+
+    .hero-desc {
+      font-size: clamp(0.95rem, 1.6vw, 1.12rem);
+      color: var(--text-muted);
+      max-width: 760px;
+      line-height: 1.65;
+      margin-bottom: 28px;
+      font-weight: 600;
+    }
+
+    .hero-kpi-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 16px;
+      margin-top: 32px;
+      padding-top: 28px;
+      border-top: 3.5px dashed var(--ink);
+    }
+
+    .kpi-block {
+      background: var(--bg-canvas);
+      border: 3.5px solid var(--ink);
+      border-radius: var(--radius-box);
+      padding: 16px 20px;
+      box-shadow: var(--shadow-block-sm);
+      transition: transform 0.15s ease;
+    }
+
+    .kpi-block:hover { transform: translateY(-3px); }
+
+    .kpi-block .stat-value {
+      font-size: 2.5rem;
+      color: var(--text-dark);
+      line-height: 1;
+      display: flex;
+      align-items: baseline;
+      gap: 6px;
+    }
+
+    .kpi-block .stat-value span {
+      font-size: 1rem;
+      color: var(--cartoon-coral-deep);
+    }
+
+    .kpi-block .stat-label {
+      display: block;
+      margin-top: 6px;
+      font-size: 0.76rem;
+      font-weight: 700;
+      color: var(--text-muted);
+    }
+
+    /* Style Guide Bento Sections */
+    .style-section-title {
+      font-size: clamp(1.6rem, 2.5vw, 2.2rem);
+      color: var(--text-dark);
+      margin: 48px 0 20px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .bento-style-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+      gap: 24px;
+      margin-bottom: 40px;
+    }
+
+    .style-card {
+      background: var(--bg-card);
+      border: 3.5px solid var(--ink);
+      border-radius: var(--radius-bubble);
+      padding: 28px;
+      box-shadow: var(--shadow-block-md);
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+
+    .style-card-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .style-card-head h3 {
+      font-size: 1.35rem;
+      color: var(--text-dark);
+    }
+
+    /* Palette Swatches */
+    .swatches-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+    }
+
+    .swatch-card {
+      border: 2.5px solid var(--ink);
+      border-radius: var(--radius-md);
+      padding: 12px;
+      cursor: pointer;
+      transition: transform 0.15s ease;
+      box-shadow: 0 3px 0 var(--ink);
+    }
+
+    .swatch-card:hover {
+      transform: scale(1.04);
+    }
+
+    .swatch-preview {
+      height: 48px;
+      border-radius: var(--radius-sm);
+      border: 2px solid var(--ink);
+      margin-bottom: 8px;
+    }
+
+    .swatch-info strong {
+      display: block;
+      font-size: 0.8rem;
+      color: var(--text-dark);
+    }
+
+    .swatch-info small {
+      font-size: 0.72rem;
+      color: var(--text-muted);
+      font-family: "JetBrains Mono", monospace;
+      font-weight: 800;
+    }
+
+    /* Prompt Builder Interactive Box */
+    .prompt-builder-box {
+      background: var(--bg-canvas);
+      border: 3.5px solid var(--ink);
+      border-radius: var(--radius-bubble);
+      padding: 28px;
+      box-shadow: var(--shadow-block-lg);
+      margin-bottom: 40px;
+    }
+
+    .prompt-control-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 18px;
+      margin-bottom: 24px;
+    }
+
+    .control-group label {
+      display: block;
+      font-size: 0.76rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--cartoon-blue-deep);
+      margin-bottom: 8px;
+    }
+
+    .control-select {
+      width: 100%;
+      height: 44px;
+      border-radius: var(--radius-box);
+      border: 2.5px solid var(--ink);
+      background: var(--bg-card);
+      color: var(--text-dark);
+      padding: 0 12px;
+      font-size: 0.86rem;
+      font-weight: 700;
+      outline: none;
+      box-shadow: 0 3px 0 var(--ink);
+    }
+
+    .prompt-output-box {
+      background: #0F172A;
+      color: #38BDF8;
+      border: 3px solid var(--ink);
+      border-radius: var(--radius-box);
+      padding: 20px;
+      font-family: "JetBrains Mono", monospace;
+      font-size: 0.9rem;
+      line-height: 1.6;
+      box-shadow: inset 0 3px 6px rgba(0,0,0,0.4);
+      position: relative;
+    }
+
+    .copy-prompt-btn {
+      position: absolute;
+      top: 14px;
+      right: 14px;
+      background: var(--cartoon-yellow);
+      color: #0F172A;
+      border: 2px solid #0F172A;
+      border-radius: var(--radius-sm);
+      padding: 6px 14px;
+      font-size: 0.74rem;
+      font-weight: 800;
+      cursor: pointer;
+      box-shadow: 0 2px 0 #0F172A;
+      transition: transform 0.12s ease;
+    }
+
+    .copy-prompt-btn:hover { transform: translateY(-2px); }
+    .copy-prompt-btn:active { transform: translateY(2px); }
+
+    /* Toast Notification */
+    .toast-pill {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      background: var(--cartoon-green);
+      color: #0F172A;
+      padding: 12px 24px;
+      border-radius: var(--radius-pill);
+      border: 3.5px solid var(--ink);
+      font-weight: 800;
+      font-size: 0.86rem;
+      box-shadow: var(--shadow-block-md);
+      z-index: 2000;
+      transform: translateY(120px);
+      transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+      pointer-events: none;
+    }
+    .toast-pill.show { transform: translateY(0); }
+
+    /* Mobile Drawer */
+    .mobile-nav-toggle, .mobile-close-btn { display: none; }
+
+    @media (max-width: 1040px) {
+      .app-shell { grid-template-columns: 1fr; }
+      .sidebar { 
+        transform: translateX(-105%); 
+        transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1); 
+        width: min(320px, 86vw);
+        box-shadow: 10px 0 0 rgba(15, 23, 42, 0.2);
+        z-index: 1000;
+      }
+      .sidebar.open { transform: translateX(0); }
+      .mobile-nav-toggle { display: grid; }
+      .mobile-close-btn { display: grid; }
+      .main-wrapper { grid-column: 1; }
+      .bento-style-grid { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 640px) {
+      .topbar { padding: 10px 12px; gap: 8px; }
+      .top-main-nav { gap: 6px; }
+      .top-nav-link span { display: none; }
+      .top-nav-link { padding: 0 10px; }
+      .content-container { width: calc(100% - 20px); padding: 20px 0 80px; }
+      .hero-cartoon-card { padding: 24px 18px; margin-bottom: 28px; }
+      .hero-title { font-size: clamp(2rem, 8vw, 2.8rem); }
+      .swatches-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Floating Clouds Background -->
+  <div class="cartoon-clouds-bg" aria-hidden="true">
+    <div class="cloud cloud-1"></div>
+    <div class="cloud cloud-2"></div>
+    <div class="cloud cloud-3"></div>
+  </div>
+
+  <!-- Mobile Backdrop Overlay -->
+  <div class="sidebar-backdrop" id="sidebarBackdrop"></div>
+
+  <div class="app-shell">
+    <!-- Left Navigation Bar -->
+    <aside class="sidebar" id="appSidebar">
+      
+      <!-- Brand Cluster -->
+      <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 22px; border-bottom: 3.5px dashed var(--border-chunky); padding-bottom: 18px;">
+        <a class="brand-cluster" href="../../index.html">
+          <div class="brand-logo-badge">
+            <svg viewBox="0 0 128 128">
+              <circle cx="64" cy="64" r="54" fill="#0EA5E9" stroke="#0F172A" stroke-width="8"/>
+              <path d="M36 44 C42 32, 60 30, 70 38 C78 45, 88 42, 94 50 C100 58, 92 72, 82 74 C74 76, 68 88, 56 90 C46 92, 38 82, 34 72 Z" fill="#FBBF24" stroke="#0F172A" stroke-width="5"/>
+              <circle cx="64" cy="64" r="44" fill="none" stroke="#FFFFFF" stroke-width="3" stroke-dasharray="6 6" opacity="0.45"/>
+              <path d="M64 36 C55 27, 55 14, 64 8 C73 14, 73 27, 64 36 Z" fill="#F43F5E" stroke="#0F172A" stroke-width="4"/>
+            </svg>
+          </div>
+          <div class="brand-title-wrap">
+            <strong>Hidden Geography</strong>
+            <small>Production OS v2.1</small>
+          </div>
+        </a>
+        <button class="icon-btn-cartoon mobile-close-btn" id="sidebarCloseBtn" title="Close Menu">
+          <svg viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        </button>
+      </div>
+
+      <span class="nav-section-title">Command Center</span>
+      <nav class="nav-list">
+        <a href="../../index.html" class="nav-pill-btn">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg>
+          <span>Mission Control</span>
+          <span class="nav-counter-tag">Hub</span>
+        </a>
+        <a href="../weekly-calendar/weekly-calendar-dashboard.html" class="nav-pill-btn">
+          <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          <span>8-Week Calendar</span>
+          <span class="nav-counter-tag">56 Days</span>
+        </a>
+        <a href="../long-videos/long-videos-dashboard.html" class="nav-pill-btn">
+          <svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="2.18" ry="2.18"/><line x1="7" y1="2" x2="7" y2="22"/><line x1="17" y1="2" x2="17" y2="22"/><line x1="2" y1="12" x2="22" y2="12"/></svg>
+          <span>Long Videos</span>
+          <span class="nav-counter-tag">V1–V8</span>
+        </a>
+        <a href="../shorts/shorts-dashboard.html" class="nav-pill-btn">
+          <svg viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+          <span>Shorts Studio</span>
+          <span class="nav-counter-tag">9:16</span>
+        </a>
+        <a href="style-guide-dashboard.html" class="nav-pill-btn active">
+          <svg viewBox="0 0 24 24"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
+          <span>Visual Style Bible</span>
+        </a>
+      </nav>
+
+      <span class="nav-section-title">8-Week Long Studios</span>
+      <nav class="nav-list">
+        <a href="../long-videos/v1/production-studio.html" class="nav-pill-btn">
+          <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <span>V1 · Africa Map Lie</span>
+        </a>
+        <a href="../long-videos/v2/production-studio.html" class="nav-pill-btn">
+          <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <span>V2 · Empty Land</span>
+        </a>
+        <a href="../long-videos/v3/production-studio.html" class="nav-pill-btn">
+          <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <span>V3 · Border Town</span>
+        </a>
+        <a href="../long-videos/v4/production-studio.html" class="nav-pill-btn">
+          <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <span>V4 · Dying River</span>
+        </a>
+      </nav>
+
+      <div class="sidebar-footer-card">
+        <div class="channel-handle-box">
+          <div class="live-pulse-dot"></div>
+          <div>
+            <span>Verified YouTube Handle</span>
+            <strong>@hiddengeography</strong>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Main Content Wrapper -->
+    <div class="main-wrapper">
+      
+      <!-- Top Action Bar with Main Nav Links -->
+      <header class="topbar">
+        <div style="display: flex; align-items: center; gap: 8px;">
+          <button class="icon-btn-cartoon mobile-nav-toggle" id="sidebarToggle" title="Open Navigation Menu" aria-label="Toggle navigation">
+            <svg viewBox="0 0 24 24"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+          </button>
+          
+          <!-- Top Menu Bar Main Hub Navigation -->
+          <nav class="top-main-nav">
+            <a class="top-nav-link" href="../../index.html">
+              <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg>
+              <span>Hub</span>
+            </a>
+            <a class="top-nav-link" href="../weekly-calendar/weekly-calendar-dashboard.html">
+              <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+              <span>Calendar</span>
+            </a>
+            <a class="top-nav-link" href="../long-videos/long-videos-dashboard.html">
+              <svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="2.18" ry="2.18"/><line x1="7" y1="2" x2="7" y2="22"/><line x1="17" y1="2" x2="17" y2="22"/><line x1="2" y1="12" x2="22" y2="12"/></svg>
+              <span>Long Videos</span>
+            </a>
+            <a class="top-nav-link" href="../shorts/shorts-dashboard.html">
+              <svg viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+              <span>Shorts</span>
+            </a>
+            <a class="top-nav-link active" href="style-guide-dashboard.html">
+              <svg viewBox="0 0 24 24"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
+              <span>Style Bible</span>
+            </a>
+          </nav>
+        </div>
+
+        <div class="top-action-group">
+          <a class="btn-cartoon btn-gold" href="../long-videos/v1/production-studio.html">
+            <svg viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+            <span>V1 Studio</span>
+          </a>
+          <button class="icon-btn-cartoon" id="themeToggle" title="Toggle Theme Mode">
+            <svg id="themeIcon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+          </button>
+        </div>
+      </header>
+
+      <!-- Main Page Content -->
+      <main class="content-container">
+
+        <!-- Hero Showcase Banner -->
+        <section class="hero-cartoon-card">
+          <div class="hero-badge-pill">
+            <svg viewBox="0 0 24 24"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
+            <span>Master Manual §18–§24 · Visual Style Bible</span>
+          </div>
+
+          <h1 class="hero-title">
+            Visual Style <span style="color:var(--cartoon-blue); text-shadow: 2px 2px 0 var(--ink);">Bible</span> <br>
+            <span style="background:var(--cartoon-yellow); color:var(--ink); padding:2px 16px; border-radius:16px; border:3.5px solid var(--ink); box-shadow:0 5px 0 var(--ink); display:inline-block; margin-top:10px;">Google Flow AI & Cinematography</span>
+          </h1>
+
+          <p class="hero-desc">
+            The immutable visual rulebook for the Hidden Geography channel. Locking the 4-layer visual mix, Google Flow AI cinematic prompt formulas, official cartographic color swatches, 3-element thumbnail architecture, and broadcast audio mastering standards.
+          </p>
+
+          <div class="hero-kpi-grid">
+            <div class="kpi-block">
+              <div class="stat-value">45% <span>Maps</span></div>
+              <span class="stat-label">2D Vector & Basemap Layer</span>
+            </div>
+            <div class="kpi-block">
+              <div class="stat-value">25% <span>Flow AI</span></div>
+              <span class="stat-label">Cinematic AI B-Roll</span>
+            </div>
+            <div class="kpi-block">
+              <div class="stat-value">20% <span>3D Earth</span></div>
+              <span class="stat-label">Satellite Elevation Data</span>
+            </div>
+            <div class="kpi-block">
+              <div class="stat-value">-14 <span>LUFS</span></div>
+              <span class="stat-label">Broadcast Audio Delivery</span>
+            </div>
+          </div>
+        </section>
+
+        <!-- Interactive Google Flow Prompt Builder -->
+        <h2 class="style-section-title">
+          <svg viewBox="0 0 24 24" style="width:28px; height:28px; stroke:var(--cartoon-coral-deep); fill:none; stroke-width:3;"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+          Google Flow AI Prompt Engine (§20)
+        </h2>
+
+        <section class="prompt-builder-box">
+          <div class="prompt-control-grid">
+            <div class="control-group">
+              <label for="pSubject">Geography Subject:</label>
+              <select id="pSubject" class="control-select">
+                <option value="Greenland massive icy glaciers and jagged mountain fjords">Greenland Icy Fjords & Glaciers</option>
+                <option value="Vast Mongolian arid steppe with isolated traditional yurts">Mongolian Steppe & Dzud Terrain</option>
+                <option value="Border boundary line painted across European cobblestone town">Baarle Enclave Border Line</option>
+                <option value="Colorado River dry canyon bed fading into salt flats">Dry Colorado River Delta & Dam</option>
+                <option value="Panama Canal massive freshwater locks and container ships">Panama Canal Freshwater Locks</option>
+                <option value="Tristan da Cunha volcanic cliffs in roaring southern ocean">Tristan da Cunha Isolated Island</option>
+                <option value="Abandoned countryside town in Eastern Europe with silent streets">Depopulated Interior Town</option>
+                <option value="Iceland volcanic highlands and lonely circular Ring Road">Iceland Highlands & Ring Road</option>
+              </select>
+            </div>
+
+            <div class="control-group">
+              <label for="pMotion">Camera Motion (§20.3):</label>
+              <select id="pMotion" class="control-select">
+                <option value="slow high-altitude straight-down orbital satellite push">Straight-Down Satellite Drift</option>
+                <option value="cinematic low-altitude forward tracking dolly shot">Low-Altitude Forward Dolly</option>
+                <option value="sweeping 45-degree aerial panoramic rotation">45° Aerial Panoramic Orbit</option>
+                <option value="ground-level slow push-in with shallow depth of field">Ground-Level Slow Push-In</option>
+              </select>
+            </div>
+
+            <div class="control-group">
+              <label for="pLighting">Lighting & Atmosphere:</label>
+              <select id="pLighting" class="control-select">
+                <option value="golden hour directional sunlight with long sharp shadows">Golden Hour Sharp Shadows</option>
+                <option value="overcast dramatic diffused light with atmospheric haze">Overcast Dramatic Diffused</option>
+                <option value="clear crystal daylight with high contrast topological relief">Clear Daylight Topo Relief</option>
+                <option value="blue hour dusk with distant warm settlement pinpricks">Blue Hour Warm Point Lights</option>
+              </select>
+            </div>
+
+            <div class="control-group">
+              <label for="pAspect">Aspect Ratio:</label>
+              <select id="pAspect" class="control-select">
+                <option value="--ar 16:9">16:9 Landscape (Long Docs)</option>
+                <option value="--ar 9:16">9:16 Vertical (Shorts Studio)</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="prompt-output-box">
+            <button class="copy-prompt-btn" id="copyPromptBtn">Copy Formula</button>
+            <div id="promptOutputText">Documentary photography, Greenland massive icy glaciers and jagged mountain fjords, slow high-altitude straight-down orbital satellite push, golden hour directional sunlight with long sharp shadows, ultra-detailed topography, clean 8k resolution, photorealistic, no text, no captions --ar 16:9</div>
+          </div>
+        </section>
+
+        <!-- Bento Grid: Visual Rules, Palette & Typography -->
+        <h2 class="style-section-title">
+          <svg viewBox="0 0 24 24" style="width:28px; height:28px; stroke:var(--cartoon-blue-deep); fill:none; stroke-width:3;"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
+          Cartographic Color System & Swatches (§18.4)
+        </h2>
+
+        <div class="bento-style-grid">
+          <!-- Color Palette Swatches -->
+          <article class="style-card">
+            <div class="style-card-head">
+              <h3>Official Channel Palette</h3>
+              <span class="pill-tag">Click to Copy Hex</span>
+            </div>
+            <div class="swatches-grid">
+              <div class="swatch-card" data-hex="#0F172A" style="background:#F8FAFC;">
+                <div class="swatch-preview" style="background:#0F172A;"></div>
+                <div class="swatch-info">
+                  <strong>Deep Slate Navy</strong>
+                  <small>#0F172A · Ink & Borders</small>
+                </div>
+              </div>
+
+              <div class="swatch-card" data-hex="#0EA5E9" style="background:#F0F9FF;">
+                <div class="swatch-preview" style="background:#0EA5E9;"></div>
+                <div class="swatch-info">
+                  <strong>Ocean Sky Blue</strong>
+                  <small>#0EA5E9 · Hydrology</small>
+                </div>
+              </div>
+
+              <div class="swatch-card" data-hex="#FBBF24" style="background:#FFFBEB;">
+                <div class="swatch-preview" style="background:#FBBF24;"></div>
+                <div class="swatch-info">
+                  <strong>Discovery Gold</strong>
+                  <small>#FBBF24 · Scale Anchor</small>
+                </div>
+              </div>
+
+              <div class="swatch-card" data-hex="#22C55E" style="background:#F0FDF4;">
+                <div class="swatch-preview" style="background:#22C55E;"></div>
+                <div class="swatch-info">
+                  <strong>Terrain Emerald</strong>
+                  <small>#22C55E · Biomes</small>
+                </div>
+              </div>
+
+              <div class="swatch-card" data-hex="#F43F5E" style="background:#FFF1F2;">
+                <div class="swatch-preview" style="background:#F43F5E;"></div>
+                <div class="swatch-info">
+                  <strong>Alert Coral</strong>
+                  <small>#F43F5E · Disputes</small>
+                </div>
+              </div>
+
+              <div class="swatch-card" data-hex="#D97706" style="background:#FEF3C7;">
+                <div class="swatch-preview" style="background:#D97706;"></div>
+                <div class="swatch-info">
+                  <strong>Highland Amber</strong>
+                  <small>#D97706 · Topo Strata</small>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- 4-Layer Visual Mix Target -->
+          <article class="style-card">
+            <div class="style-card-head">
+              <h3>4-Layer Visual Mix (§18.2)</h3>
+              <span class="pill-tag">Target Ratios</span>
+            </div>
+            
+            <div style="display:flex; flex-direction:column; gap:14px;">
+              <div>
+                <div style="display:flex; justify-content:space-between; font-size:0.84rem; font-weight:800; margin-bottom:6px;">
+                  <span>2D Vector Basemaps (Natural Earth / Mapbox)</span>
+                  <strong style="color:var(--cartoon-blue-deep);">40–50%</strong>
+                </div>
+                <div class="progress-track-candy" style="height:14px;"><div style="width:45%; height:100%; background:var(--cartoon-blue);"></div></div>
+              </div>
+
+              <div>
+                <div style="display:flex; justify-content:space-between; font-size:0.84rem; font-weight:800; margin-bottom:6px;">
+                  <span>Google Flow AI Cinematic B-Roll</span>
+                  <strong style="color:var(--cartoon-coral-deep);">20–30%</strong>
+                </div>
+                <div class="progress-track-candy" style="height:14px;"><div style="width:25%; height:100%; background:var(--cartoon-coral);"></div></div>
+              </div>
+
+              <div>
+                <div style="display:flex; justify-content:space-between; font-size:0.84rem; font-weight:800; margin-bottom:6px;">
+                  <span>3D Satellite Terrain (Blender / Earth Studio)</span>
+                  <strong style="color:var(--cartoon-green-deep);">20–30%</strong>
+                </div>
+                <div class="progress-track-candy" style="height:14px;"><div style="width:20%; height:100%; background:var(--cartoon-green);"></div></div>
+              </div>
+
+              <div>
+                <div style="display:flex; justify-content:space-between; font-size:0.84rem; font-weight:800; margin-bottom:6px;">
+                  <span>On-Screen Data Graphics & Callouts</span>
+                  <strong style="color:var(--cartoon-yellow-deep);">10–15%</strong>
+                </div>
+                <div class="progress-track-candy" style="height:14px;"><div style="width:10%; height:100%; background:var(--cartoon-yellow);"></div></div>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <!-- Thumbnail Architecture & Sound Design -->
+        <div class="bento-style-grid">
+          <!-- Thumbnail Rules -->
+          <article class="style-card">
+            <div class="style-card-head">
+              <h3>Thumbnail 3-Element Rule (§27)</h3>
+              <span class="pill-tag">Non-Negotiable</span>
+            </div>
+            <ul style="list-style:none; display:flex; flex-direction:column; gap:12px; font-size:0.86rem; color:var(--text-muted); font-weight:600;">
+              <li style="display:flex; gap:10px; align-items:flex-start;">
+                <span style="background:var(--cartoon-yellow); color:#0F172A; border-radius:50%; width:22px; height:22px; display:grid; place-items:center; flex-shrink:0; font-weight:800; font-size:0.72rem; border:2px solid #0F172A;">1</span>
+                <div><strong>Subject Map / Landmass:</strong> Clean, high-contrast silhouette with subtle topo relief.</div>
+              </li>
+              <li style="display:flex; gap:10px; align-items:flex-start;">
+                <span style="background:var(--cartoon-blue); color:#FFFFFF; border-radius:50%; width:22px; height:22px; display:grid; place-items:center; flex-shrink:0; font-weight:800; font-size:0.72rem; border:2px solid #0F172A;">2</span>
+                <div><strong>Scale Anchor / Comparison:</strong> Inset shape, measurement ring, or split line creating immediate visual curiosity.</div>
+              </li>
+              <li style="display:flex; gap:10px; align-items:flex-start;">
+                <span style="background:var(--cartoon-coral); color:#FFFFFF; border-radius:50%; width:22px; height:22px; display:grid; place-items:center; flex-shrink:0; font-weight:800; font-size:0.72rem; border:2px solid #0F172A;">3</span>
+                <div><strong>3–5 Word Text Sticker:</strong> High-impact uppercase sticker font with dark solid shadow (e.g., "14 TIMES BIGGER").</div>
+              </li>
+            </ul>
+          </article>
+
+          <!-- Audio & Narration Standards -->
+          <article class="style-card">
+            <div class="style-card-head">
+              <h3>Audio & Voice Direction (§22–§23)</h3>
+              <span class="pill-tag">Broadcast Spec</span>
+            </div>
+            <div style="display:flex; flex-direction:column; gap:12px; font-size:0.84rem; color:var(--text-muted); font-weight:600;">
+              <div class="intel-block" style="padding:10px 14px;">
+                <strong>Loudness Normalization:</strong>
+                -14 LUFS integrated (YouTube Standard), Peak at -1.0 dBFS max.
+              </div>
+              <div class="intel-block" style="padding:10px 14px;">
+                <strong>Narrator Cadence:</strong>
+                135 to 145 words per minute. Calm, authoritative, analytical tone. No exaggerated YouTube hype.
+              </div>
+              <div class="intel-block" style="padding:10px 14px;">
+                <strong>Music & Ducking:</strong>
+                Music ducks automatically to -18 dB to -22 dB under dialogue. Low-frequency cinematic drones and subtle ticks.
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <!-- Footer -->
+        <footer style="margin-top: 100px; padding-top: 36px; border-top: 3.5px dashed var(--ink); text-align: center; color: var(--text-faint); font-size: 0.84rem; font-weight: 700;">
+          <p><strong style="color: var(--cartoon-blue-deep);">Hidden Geography</strong> · Production OS v2.1 · Visual Style Bible & AI Cinematography Hub</p>
+          <p style="margin-top: 6px; font-size: 0.72rem; color: var(--text-faint);">Strict Tier 1 Cadence · 1 Long Video + 2 Shorts / Week · Persistent LocalStorage Sync</p>
+        </footer>
+
+      </main>
+    </div>
+  </div>
+
+  <!-- Toast Notification Element -->
+  <div class="toast-pill" id="toastMsg">Copied to Clipboard!</div>
+
+  <script>
+    // Cartoon Theme Switcher Logic
+    const themeToggleBtn = document.getElementById("themeToggle");
+    const themeIcon = document.getElementById("themeIcon");
+
+    function setTheme(targetTheme) {
+      document.documentElement.dataset.theme = targetTheme;
+      localStorage.setItem("hg-theme-cartoon-v1", targetTheme);
+
+      if (themeIcon) {
+        if (targetTheme === "dark") {
+          themeIcon.innerHTML = '<circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>';
+        } else {
+          themeIcon.innerHTML = '<path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>';
+        }
+      }
+    }
+
+    if (themeToggleBtn) {
+      themeToggleBtn.addEventListener("click", () => {
+        const current = document.documentElement.dataset.theme || "light";
+        setTheme(current === "light" ? "dark" : "light");
+      });
+    }
+
+    setTheme(localStorage.getItem("hg-theme-cartoon-v1") || "light");
+
+    // Mobile Navigation Drawer
+    const appSidebar = document.getElementById("appSidebar");
+    const sidebarToggle = document.getElementById("sidebarToggle");
+    const sidebarCloseBtn = document.getElementById("sidebarCloseBtn");
+    const sidebarBackdrop = document.getElementById("sidebarBackdrop");
+
+    function setSidebarState(open) {
+      const shouldOpen = open !== undefined ? open : !appSidebar.classList.contains("open");
+      appSidebar.classList.toggle("open", shouldOpen);
+      sidebarBackdrop.classList.toggle("active", shouldOpen);
+      document.body.style.overflow = shouldOpen ? "hidden" : "";
+    }
+
+    if (sidebarToggle) sidebarToggle.addEventListener("click", () => setSidebarState(true));
+    if (sidebarCloseBtn) sidebarCloseBtn.addEventListener("click", () => setSidebarState(false));
+    if (sidebarBackdrop) sidebarBackdrop.addEventListener("click", () => setSidebarState(false));
+
+    document.querySelectorAll(".sidebar a").forEach(link => {
+      link.addEventListener("click", () => {
+        if (window.innerWidth <= 1040) setSidebarState(false);
+      });
+    });
+
+    // Interactive Flow Prompt Builder
+    const pSubject = document.getElementById("pSubject");
+    const pMotion = document.getElementById("pMotion");
+    const pLighting = document.getElementById("pLighting");
+    const pAspect = document.getElementById("pAspect");
+    const promptOutputText = document.getElementById("promptOutputText");
+    const copyPromptBtn = document.getElementById("copyPromptBtn");
+    const toastMsg = document.getElementById("toastMsg");
+
+    function updatePrompt() {
+      const prompt = `Documentary photography, ${pSubject.value}, ${pMotion.value}, ${pLighting.value}, ultra-detailed topography, clean 8k resolution, photorealistic, no text, no captions ${pAspect.value}`;
+      promptOutputText.textContent = prompt;
+    }
+
+    pSubject.addEventListener("change", updatePrompt);
+    pMotion.addEventListener("change", updatePrompt);
+    pLighting.addEventListener("change", updatePrompt);
+    pAspect.addEventListener("change", updatePrompt);
+
+    function showToast(msg) {
+      toastMsg.textContent = msg;
+      toastMsg.classList.add("show");
+      setTimeout(() => toastMsg.classList.remove("show"), 2200);
+    }
+
+    copyPromptBtn.addEventListener("click", () => {
+      navigator.clipboard.writeText(promptOutputText.textContent).then(() => {
+        showToast("Prompt Copied to Clipboard!");
+      });
+    });
+
+    // Copy Swatch Hex Codes
+    document.querySelectorAll(".swatch-card").forEach(card => {
+      card.addEventListener("click", () => {
+        const hex = card.dataset.hex;
+        navigator.clipboard.writeText(hex).then(() => {
+          showToast(`Hex ${hex} Copied!`);
+        });
+      });
+    });
+  </script>
+</body>
+</html>
