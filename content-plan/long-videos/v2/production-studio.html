@@ -1070,105 +1070,344 @@
               <span class="pill-tag" style="background:var(--cartoon-green);">Premiere Pro Ready</span>
             </div>
 
-            <table class="timeline-table">
+            <table class="timeline-table" style="width:100%; border-collapse:separate; border-spacing:0 16px;">
               <tbody>
-                <!-- Clip 01 -->
-                <tr class="timeline-row">
-                  <td class="timeline-cell">
-                    <span class="clip-badge">CLIP 01</span>
+                <!-- CLIP 01 -->
+                <tr class="timeline-row" style="background:var(--bg-canvas); border:3px solid var(--ink); box-shadow:var(--shadow-block-sm);">
+                  <td class="timeline-cell" style="padding:18px 20px; border-top:3px solid var(--ink); border-bottom:3px solid var(--ink); border-left:3px solid var(--ink); border-top-left-radius:var(--radius-lg); border-bottom-left-radius:var(--radius-lg); width:140px; background:var(--bg-card);">
+                    <span style="font-size:1.15rem; font-weight:800; color:var(--ink); background:var(--cartoon-yellow); padding:4px 12px; border-radius:var(--radius-pill); border:2px solid var(--ink); display:inline-block; margin-bottom:6px;">CLIP 01</span>
                     <div style="font-size:0.75rem; font-family:'JetBrains Mono', monospace; color:var(--cartoon-blue-deep); font-weight:800;">00:00 – 00:08</div>
                     <span class="pill-tag" style="font-size:0.65rem; background:#FFE4E6; color:#9F1239; margin-top:6px;">[HOOK SHOT]</span>
                   </td>
-                  <td class="timeline-cell">
+                  <td class="timeline-cell" style="padding:18px 20px; border-top:3px solid var(--ink); border-bottom:3px solid var(--ink);">
                     <div style="font-size:0.96rem; font-weight:700; color:var(--text-dark); line-height:1.5;">
                       "Four entire European countries—the United Kingdom, France, Germany, and Italy—could fit inside this territory."
                     </div>
-                    <div class="cut-trigger-tag">CUT TRIGGER: On words "fit inside this territory" ➔ CUT to Clip 02</div>
+                    <div style="display:inline-block; margin-top:8px; background:#FFE4E6; color:var(--cartoon-coral-deep); border:1.5px solid var(--cartoon-coral-deep); padding:3px 10px; border-radius:var(--radius-sm); font-size:0.76rem; font-weight:800; font-family:'JetBrains Mono', monospace;">
+                      CUT ON: "fit inside this territory" ➔ CUT to Clip 02
+                    </div>
                     <div style="margin-top:8px; font-size:0.78rem; color:var(--text-muted);">
-                      <strong>Visual Event:</strong> 2D Vector Basemap of Mongolia in deep amber. 4 European country silhouettes sweep in from left and nest into Mongolian borders.
+                      <strong>Visual Event:</strong> 2D Vector Basemap: Mongolia outline in deep amber. 4 European country silhouettes sweep in and nest into Mongolian borders.
                     </div>
                   </td>
-                  <td class="timeline-cell">
-                    <div class="prompt-snippet-box">
-                      <button class="copy-mini-btn" onclick="copySnippet(this)">Copy</button>
+                  <td class="timeline-cell" style="padding:18px 20px; border-top:3px solid var(--ink); border-bottom:3px solid var(--ink); border-right:3px solid var(--ink); border-top-right-radius:var(--radius-lg); border-bottom-right-radius:var(--radius-lg); width:320px;">
+                    <div class="prompt-code-box" style="background:#0F172A; color:#38BDF8; border:2px solid var(--ink); border-radius:var(--radius-sm); padding:10px 12px; font-family:'JetBrains Mono', monospace; font-size:0.78rem; position:relative;">
+                      <button class="copy-mini-btn" style="position:absolute; top:6px; right:6px; background:var(--cartoon-yellow); color:#0F172A; border:1.5px solid #0F172A; border-radius:var(--radius-sm); padding:3px 8px; font-size:0.68rem; font-weight:800; cursor:pointer;" onclick="copySnippet(this)">Copy</button>
                       <span>Create an 8-second horizontal 16:9 cinematic clip. High-altitude orthographic satellite camera looking down at vast golden Mongolian steppe bordered by Altai mountains, clear morning sunlight, clean 8k topology relief, no text --ar 16:9</span>
                     </div>
                     <div style="font-size:0.72rem; color:var(--text-faint); margin-top:6px; font-weight:700;">SFX: Deep cinematic map whoosh & continent slide</div>
                   </td>
                 </tr>
-
-                <!-- Clip 02 -->
-                <tr class="timeline-row">
-                  <td class="timeline-cell">
-                    <span class="clip-badge">CLIP 02</span>
+                <!-- CLIP 02 -->
+                <tr class="timeline-row" style="background:var(--bg-canvas); border:3px solid var(--ink); box-shadow:var(--shadow-block-sm);">
+                  <td class="timeline-cell" style="padding:18px 20px; border-top:3px solid var(--ink); border-bottom:3px solid var(--ink); border-left:3px solid var(--ink); border-top-left-radius:var(--radius-lg); border-bottom-left-radius:var(--radius-lg); width:140px; background:var(--bg-card);">
+                    <span style="font-size:1.15rem; font-weight:800; color:var(--ink); background:var(--cartoon-yellow); padding:4px 12px; border-radius:var(--radius-pill); border:2px solid var(--ink); display:inline-block; margin-bottom:6px;">CLIP 02</span>
                     <div style="font-size:0.75rem; font-family:'JetBrains Mono', monospace; color:var(--cartoon-blue-deep); font-weight:800;">00:08 – 00:16</div>
                     <span class="pill-tag" style="font-size:0.65rem; background:#FEF3C7; color:#92400E; margin-top:6px;">[SCALE SHOCK]</span>
                   </td>
-                  <td class="timeline-cell">
+                  <td class="timeline-cell" style="padding:18px 20px; border-top:3px solid var(--ink); border-bottom:3px solid var(--ink);">
                     <div style="font-size:0.96rem; font-weight:700; color:var(--text-dark); line-height:1.5;">
                       "Yet the total population of this vast land is smaller than the single metropolitan city of Madrid."
                     </div>
-                    <div class="cut-trigger-tag">CUT TRIGGER: On words "city of Madrid" ➔ CUT to Clip 03</div>
+                    <div style="display:inline-block; margin-top:8px; background:#FFE4E6; color:var(--cartoon-coral-deep); border:1.5px solid var(--cartoon-coral-deep); padding:3px 10px; border-radius:var(--radius-sm); font-size:0.76rem; font-weight:800; font-family:'JetBrains Mono', monospace;">
+                      CUT ON: "city of Madrid" ➔ CUT to Clip 03
+                    </div>
                     <div style="margin-top:8px; font-size:0.78rem; color:var(--text-muted);">
                       <strong>Visual Event:</strong> Split screen counter: Madrid (3.4M people in 604 km²) vs Mongolia (3.4M people in 1,564,000 km²).
                     </div>
                   </td>
-                  <td class="timeline-cell">
-                    <div class="prompt-snippet-box">
-                      <button class="copy-mini-btn" onclick="copySnippet(this)">Copy</button>
+                  <td class="timeline-cell" style="padding:18px 20px; border-top:3px solid var(--ink); border-bottom:3px solid var(--ink); border-right:3px solid var(--ink); border-top-right-radius:var(--radius-lg); border-bottom-right-radius:var(--radius-lg); width:320px;">
+                    <div class="prompt-code-box" style="background:#0F172A; color:#38BDF8; border:2px solid var(--ink); border-radius:var(--radius-sm); padding:10px 12px; font-family:'JetBrains Mono', monospace; font-size:0.78rem; position:relative;">
+                      <button class="copy-mini-btn" style="position:absolute; top:6px; right:6px; background:var(--cartoon-yellow); color:#0F172A; border:1.5px solid #0F172A; border-radius:var(--radius-sm); padding:3px 8px; font-size:0.68rem; font-weight:800; cursor:pointer;" onclick="copySnippet(this)">Copy</button>
                       <span>Create an 8-second horizontal 16:9 cinematic clip. Cinematic low-altitude forward tracking shot over silent endless grassland under vast dramatic blue sky with lone wooden yurt in extreme distance, warm golden sunlight, no text --ar 16:9</span>
                     </div>
                     <div style="font-size:0.72rem; color:var(--text-faint); margin-top:6px; font-weight:700;">SFX: Digital data counter tick & subtle wind rumble</div>
                   </td>
                 </tr>
-
-                <!-- Clip 03 -->
-                <tr class="timeline-row">
-                  <td class="timeline-cell">
-                    <span class="clip-badge">CLIP 03</span>
+                <!-- CLIP 03 -->
+                <tr class="timeline-row" style="background:var(--bg-canvas); border:3px solid var(--ink); box-shadow:var(--shadow-block-sm);">
+                  <td class="timeline-cell" style="padding:18px 20px; border-top:3px solid var(--ink); border-bottom:3px solid var(--ink); border-left:3px solid var(--ink); border-top-left-radius:var(--radius-lg); border-bottom-left-radius:var(--radius-lg); width:140px; background:var(--bg-card);">
+                    <span style="font-size:1.15rem; font-weight:800; color:var(--ink); background:var(--cartoon-yellow); padding:4px 12px; border-radius:var(--radius-pill); border:2px solid var(--ink); display:inline-block; margin-bottom:6px;">CLIP 03</span>
                     <div style="font-size:0.75rem; font-family:'JetBrains Mono', monospace; color:var(--cartoon-blue-deep); font-weight:800;">00:16 – 00:25</div>
                     <span class="pill-tag" style="font-size:0.65rem; background:#E0F2FE; color:#0369A1; margin-top:6px;">[CENTRAL Q]</span>
                   </td>
-                  <td class="timeline-cell">
+                  <td class="timeline-cell" style="padding:18px 20px; border-top:3px solid var(--ink); border-bottom:3px solid var(--ink);">
                     <div style="font-size:0.96rem; font-weight:700; color:var(--text-dark); line-height:1.5;">
                       "With only two people per square kilometre, why is the world's emptiest country emptying even faster into a single capital?"
                     </div>
-                    <div class="cut-trigger-tag">CUT TRIGGER: On words "into a single capital" ➔ CUT to Beat 2</div>
+                    <div style="display:inline-block; margin-top:8px; background:#FFE4E6; color:var(--cartoon-coral-deep); border:1.5px solid var(--cartoon-coral-deep); padding:3px 10px; border-radius:var(--radius-sm); font-size:0.76rem; font-weight:800; font-family:'JetBrains Mono', monospace;">
+                      CUT ON: "into a single capital" ➔ CUT to Clip 04
+                    </div>
                     <div style="margin-top:8px; font-size:0.78rem; color:var(--text-muted);">
                       <strong>Visual Event:</strong> 3D Globe camera zooms rapidly from space into the dense urban grid of Ulaanbaatar glowing like a solitary lightbulb in a dark void.
                     </div>
                   </td>
-                  <td class="timeline-cell">
-                    <div class="prompt-snippet-box">
-                      <button class="copy-mini-btn" onclick="copySnippet(this)">Copy</button>
+                  <td class="timeline-cell" style="padding:18px 20px; border-top:3px solid var(--ink); border-bottom:3px solid var(--ink); border-right:3px solid var(--ink); border-top-right-radius:var(--radius-lg); border-bottom-right-radius:var(--radius-lg); width:320px;">
+                    <div class="prompt-code-box" style="background:#0F172A; color:#38BDF8; border:2px solid var(--ink); border-radius:var(--radius-sm); padding:10px 12px; font-family:'JetBrains Mono', monospace; font-size:0.78rem; position:relative;">
+                      <button class="copy-mini-btn" style="position:absolute; top:6px; right:6px; background:var(--cartoon-yellow); color:#0F172A; border:1.5px solid #0F172A; border-radius:var(--radius-sm); padding:3px 8px; font-size:0.68rem; font-weight:800; cursor:pointer;" onclick="copySnippet(this)">Copy</button>
                       <span>Create an 8-second horizontal 16:9 cinematic clip. Aerial panoramic orbit of Ulaanbaatar city valley encircled by snowy rugged peaks, dusk blue hour with amber streetlights emerging, realistic cold atmosphere, no text --ar 16:9</span>
                     </div>
                     <div style="font-size:0.72rem; color:var(--text-faint); margin-top:6px; font-weight:700;">SFX: Dramatic low cello swell into title sequence</div>
                   </td>
                 </tr>
-
-                <!-- Clip 04 -->
-                <tr class="timeline-row">
-                  <td class="timeline-cell">
-                    <span class="clip-badge">CLIP 04</span>
-                    <div style="font-size:0.75rem; font-family:'JetBrains Mono', monospace; color:var(--cartoon-blue-deep); font-weight:800;">00:25 – 01:15</div>
-                    <span class="pill-tag" style="font-size:0.65rem; background:#DCFCE7; color:#166534; margin-top:6px;">[THE DZUD]</span>
+                <!-- CLIP 04 -->
+                <tr class="timeline-row" style="background:var(--bg-canvas); border:3px solid var(--ink); box-shadow:var(--shadow-block-sm);">
+                  <td class="timeline-cell" style="padding:18px 20px; border-top:3px solid var(--ink); border-bottom:3px solid var(--ink); border-left:3px solid var(--ink); border-top-left-radius:var(--radius-lg); border-bottom-left-radius:var(--radius-lg); width:140px; background:var(--bg-card);">
+                    <span style="font-size:1.15rem; font-weight:800; color:var(--ink); background:var(--cartoon-yellow); padding:4px 12px; border-radius:var(--radius-pill); border:2px solid var(--ink); display:inline-block; margin-bottom:6px;">CLIP 04</span>
+                    <div style="font-size:0.75rem; font-family:'JetBrains Mono', monospace; color:var(--cartoon-blue-deep); font-weight:800;">00:25 – 00:45</div>
+                    <span class="pill-tag" style="font-size:0.65rem; background:#DCFCE7; color:#166534; margin-top:6px;">[TITLE & HOOK]</span>
                   </td>
-                  <td class="timeline-cell">
+                  <td class="timeline-cell" style="padding:18px 20px; border-top:3px solid var(--ink); border-bottom:3px solid var(--ink);">
                     <div style="font-size:0.96rem; font-weight:700; color:var(--text-dark); line-height:1.5;">
-                      "The answer is not simply that Mongolia is cold. It is a deadly meteorological phenomenon known as the Dzud."
+                      "This is not just a story about cold geography. It is the story of how an extreme climate is ending 3,000 years of nomadic civilization."
                     </div>
-                    <div class="cut-trigger-tag">CUT TRIGGER: On words "known as the Dzud" ➔ CUT to Clip 05</div>
+                    <div style="display:inline-block; margin-top:8px; background:#FFE4E6; color:var(--cartoon-coral-deep); border:1.5px solid var(--cartoon-coral-deep); padding:3px 10px; border-radius:var(--radius-sm); font-size:0.76rem; font-weight:800; font-family:'JetBrains Mono', monospace;">
+                      CUT ON: "nomadic civilization" ➔ CUT to Beat 2 (00:45)
+                    </div>
                     <div style="margin-top:8px; font-size:0.78rem; color:var(--text-muted);">
-                      <strong>Visual Event:</strong> Dramatic thermal temperature overlay showing Siberian cold air mass (-45°C) sweeping over the Mongolian plateau.
+                      <strong>Visual Event:</strong> Title Card: 'HIDDEN GEOGRAPHY: THE EMPTIEST COUNTRY ON EARTH' over sweeping aerial Mongolian plain.
                     </div>
                   </td>
-                  <td class="timeline-cell">
-                    <div class="prompt-snippet-box">
-                      <button class="copy-mini-btn" onclick="copySnippet(this)">Copy</button>
+                  <td class="timeline-cell" style="padding:18px 20px; border-top:3px solid var(--ink); border-bottom:3px solid var(--ink); border-right:3px solid var(--ink); border-top-right-radius:var(--radius-lg); border-bottom-right-radius:var(--radius-lg); width:320px;">
+                    <div class="prompt-code-box" style="background:#0F172A; color:#38BDF8; border:2px solid var(--ink); border-radius:var(--radius-sm); padding:10px 12px; font-family:'JetBrains Mono', monospace; font-size:0.78rem; position:relative;">
+                      <button class="copy-mini-btn" style="position:absolute; top:6px; right:6px; background:var(--cartoon-yellow); color:#0F172A; border:1.5px solid #0F172A; border-radius:var(--radius-sm); padding:3px 8px; font-size:0.68rem; font-weight:800; cursor:pointer;" onclick="copySnippet(this)">Copy</button>
+                      <span>Create an 8-second horizontal 16:9 cinematic clip. Dramatic aerial tracking over galloping Mongolian horses with lone nomadic horseman across golden autumn steppe, dust rising in afternoon sun, 8k --ar 16:9</span>
+                    </div>
+                    <div style="font-size:0.72rem; color:var(--text-faint); margin-top:6px; font-weight:700;">SFX: Distant horse gallop and wind gust</div>
+                  </td>
+                </tr>
+                <!-- CLIP 05 -->
+                <tr class="timeline-row" style="background:var(--bg-canvas); border:3px solid var(--ink); box-shadow:var(--shadow-block-sm);">
+                  <td class="timeline-cell" style="padding:18px 20px; border-top:3px solid var(--ink); border-bottom:3px solid var(--ink); border-left:3px solid var(--ink); border-top-left-radius:var(--radius-lg); border-bottom-left-radius:var(--radius-lg); width:140px; background:var(--bg-card);">
+                    <span style="font-size:1.15rem; font-weight:800; color:var(--ink); background:var(--cartoon-yellow); padding:4px 12px; border-radius:var(--radius-pill); border:2px solid var(--ink); display:inline-block; margin-bottom:6px;">CLIP 05</span>
+                    <div style="font-size:0.75rem; font-family:'JetBrains Mono', monospace; color:var(--cartoon-blue-deep); font-weight:800;">00:45 – 01:05</div>
+                    <span class="pill-tag" style="font-size:0.65rem; background:#F3E8FF; color:#6B21A8; margin-top:6px;">[TERRAIN RELIEF]</span>
+                  </td>
+                  <td class="timeline-cell" style="padding:18px 20px; border-top:3px solid var(--ink); border-bottom:3px solid var(--ink);">
+                    <div style="font-size:0.96rem; font-weight:700; color:var(--text-dark); line-height:1.5;">
+                      "Mongolia sits locked inside the heart of Asia, an elevated plateau averaging 1,500 metres above sea level."
+                    </div>
+                    <div style="display:inline-block; margin-top:8px; background:#FFE4E6; color:var(--cartoon-coral-deep); border:1.5px solid var(--cartoon-coral-deep); padding:3px 10px; border-radius:var(--radius-sm); font-size:0.76rem; font-weight:800; font-family:'JetBrains Mono', monospace;">
+                      CUT ON: "above sea level" ➔ CUT to Clip 06
+                    </div>
+                    <div style="margin-top:8px; font-size:0.78rem; color:var(--text-muted);">
+                      <strong>Visual Event:</strong> 3D Elevation Model: High-relief color ramp showing elevation contours rising sharply from Russia and China.
+                    </div>
+                  </td>
+                  <td class="timeline-cell" style="padding:18px 20px; border-top:3px solid var(--ink); border-bottom:3px solid var(--ink); border-right:3px solid var(--ink); border-top-right-radius:var(--radius-lg); border-bottom-right-radius:var(--radius-lg); width:320px;">
+                    <div class="prompt-code-box" style="background:#0F172A; color:#38BDF8; border:2px solid var(--ink); border-radius:var(--radius-sm); padding:10px 12px; font-family:'JetBrains Mono', monospace; font-size:0.78rem; position:relative;">
+                      <button class="copy-mini-btn" style="position:absolute; top:6px; right:6px; background:var(--cartoon-yellow); color:#0F172A; border:1.5px solid #0F172A; border-radius:var(--radius-sm); padding:3px 8px; font-size:0.68rem; font-weight:800; cursor:pointer;" onclick="copySnippet(this)">Copy</button>
+                      <span>Create an 8-second horizontal 16:9 cinematic clip. 3D cartographic elevation relief map of Central Asian plateau, Altai mountain ridges casting long afternoon shadows, clean photorealistic rendering, 8k --ar 16:9</span>
+                    </div>
+                    <div style="font-size:0.72rem; color:var(--text-faint); margin-top:6px; font-weight:700;">SFX: Low tectonic bass hum</div>
+                  </td>
+                </tr>
+                <!-- CLIP 06 -->
+                <tr class="timeline-row" style="background:var(--bg-canvas); border:3px solid var(--ink); box-shadow:var(--shadow-block-sm);">
+                  <td class="timeline-cell" style="padding:18px 20px; border-top:3px solid var(--ink); border-bottom:3px solid var(--ink); border-left:3px solid var(--ink); border-top-left-radius:var(--radius-lg); border-bottom-left-radius:var(--radius-lg); width:140px; background:var(--bg-card);">
+                    <span style="font-size:1.15rem; font-weight:800; color:var(--ink); background:var(--cartoon-yellow); padding:4px 12px; border-radius:var(--radius-pill); border:2px solid var(--ink); display:inline-block; margin-bottom:6px;">CLIP 06</span>
+                    <div style="font-size:0.75rem; font-family:'JetBrains Mono', monospace; color:var(--cartoon-blue-deep); font-weight:800;">01:05 – 01:28</div>
+                    <span class="pill-tag" style="font-size:0.65rem; background:#FEF3C7; color:#92400E; margin-top:6px;">[RAIN SHADOW]</span>
+                  </td>
+                  <td class="timeline-cell" style="padding:18px 20px; border-top:3px solid var(--ink); border-bottom:3px solid var(--ink);">
+                    <div style="font-size:0.96rem; font-weight:700; color:var(--text-dark); line-height:1.5;">
+                      "Surrounded by mountain ranges and thousands of miles from any ocean, almost no moisture reaches the central steppe."
+                    </div>
+                    <div style="display:inline-block; margin-top:8px; background:#FFE4E6; color:var(--cartoon-coral-deep); border:1.5px solid var(--cartoon-coral-deep); padding:3px 10px; border-radius:var(--radius-sm); font-size:0.76rem; font-weight:800; font-family:'JetBrains Mono', monospace;">
+                      CUT ON: "central steppe" ➔ CUT to Clip 07
+                    </div>
+                    <div style="margin-top:8px; font-size:0.78rem; color:var(--text-muted);">
+                      <strong>Visual Event:</strong> Atmospheric Map: Moisture clouds from Pacific and Indian oceans hitting Himalayas and Altai ranges and stopping cold.
+                    </div>
+                  </td>
+                  <td class="timeline-cell" style="padding:18px 20px; border-top:3px solid var(--ink); border-bottom:3px solid var(--ink); border-right:3px solid var(--ink); border-top-right-radius:var(--radius-lg); border-bottom-right-radius:var(--radius-lg); width:320px;">
+                    <div class="prompt-code-box" style="background:#0F172A; color:#38BDF8; border:2px solid var(--ink); border-radius:var(--radius-sm); padding:10px 12px; font-family:'JetBrains Mono', monospace; font-size:0.78rem; position:relative;">
+                      <button class="copy-mini-btn" style="position:absolute; top:6px; right:6px; background:var(--cartoon-yellow); color:#0F172A; border:1.5px solid #0F172A; border-radius:var(--radius-sm); padding:3px 8px; font-size:0.68rem; font-weight:800; cursor:pointer;" onclick="copySnippet(this)">Copy</button>
+                      <span>Create an 8-second horizontal 16:9 cinematic clip. High-altitude satellite view of arid Gobi desert transitioning into dry grassy plain, stark harsh sunlight, dry cracked earth textures, 8k --ar 16:9</span>
+                    </div>
+                    <div style="font-size:0.72rem; color:var(--text-faint); margin-top:6px; font-weight:700;">SFX: Dry desert wind whistle</div>
+                  </td>
+                </tr>
+                <!-- CLIP 07 -->
+                <tr class="timeline-row" style="background:var(--bg-canvas); border:3px solid var(--ink); box-shadow:var(--shadow-block-sm);">
+                  <td class="timeline-cell" style="padding:18px 20px; border-top:3px solid var(--ink); border-bottom:3px solid var(--ink); border-left:3px solid var(--ink); border-top-left-radius:var(--radius-lg); border-bottom-left-radius:var(--radius-lg); width:140px; background:var(--bg-card);">
+                    <span style="font-size:1.15rem; font-weight:800; color:var(--ink); background:var(--cartoon-yellow); padding:4px 12px; border-radius:var(--radius-pill); border:2px solid var(--ink); display:inline-block; margin-bottom:6px;">CLIP 07</span>
+                    <div style="font-size:0.75rem; font-family:'JetBrains Mono', monospace; color:var(--cartoon-blue-deep); font-weight:800;">01:28 – 01:50</div>
+                    <span class="pill-tag" style="font-size:0.65rem; background:#FFE4E6; color:#9F1239; margin-top:6px;">[ARABLE STAT]</span>
+                  </td>
+                  <td class="timeline-cell" style="padding:18px 20px; border-top:3px solid var(--ink); border-bottom:3px solid var(--ink);">
+                    <div style="font-size:0.96rem; font-weight:700; color:var(--text-dark); line-height:1.5;">
+                      "Less than one percent of Mongolia's land is arable for farming. You cannot grow crops on the steppe—you can only graze livestock."
+                    </div>
+                    <div style="display:inline-block; margin-top:8px; background:#FFE4E6; color:var(--cartoon-coral-deep); border:1.5px solid var(--cartoon-coral-deep); padding:3px 10px; border-radius:var(--radius-sm); font-size:0.76rem; font-weight:800; font-family:'JetBrains Mono', monospace;">
+                      CUT ON: "graze livestock" ➔ CUT to Beat 3 (01:50)
+                    </div>
+                    <div style="margin-top:8px; font-size:0.78rem; color:var(--text-muted);">
+                      <strong>Visual Event:</strong> Data Pie Chart: 99.2% Non-arable rangeland vs 0.8% Arable land.
+                    </div>
+                  </td>
+                  <td class="timeline-cell" style="padding:18px 20px; border-top:3px solid var(--ink); border-bottom:3px solid var(--ink); border-right:3px solid var(--ink); border-top-right-radius:var(--radius-lg); border-bottom-right-radius:var(--radius-lg); width:320px;">
+                    <div class="prompt-code-box" style="background:#0F172A; color:#38BDF8; border:2px solid var(--ink); border-radius:var(--radius-sm); padding:10px 12px; font-family:'JetBrains Mono', monospace; font-size:0.78rem; position:relative;">
+                      <button class="copy-mini-btn" style="position:absolute; top:6px; right:6px; background:var(--cartoon-yellow); color:#0F172A; border:1.5px solid #0F172A; border-radius:var(--radius-sm); padding:3px 8px; font-size:0.68rem; font-weight:800; cursor:pointer;" onclick="copySnippet(this)">Copy</button>
+                      <span>Create an 8-second horizontal 16:9 cinematic clip. Herd of two-humped Bactrian camels grazing on sparse scrubland in front of towering sand dunes, golden morning light, 8k realism --ar 16:9</span>
+                    </div>
+                    <div style="font-size:0.72rem; color:var(--text-faint); margin-top:6px; font-weight:700;">SFX: Camel grunt and dry grass rustling</div>
+                  </td>
+                </tr>
+                <!-- CLIP 08 -->
+                <tr class="timeline-row" style="background:var(--bg-canvas); border:3px solid var(--ink); box-shadow:var(--shadow-block-sm);">
+                  <td class="timeline-cell" style="padding:18px 20px; border-top:3px solid var(--ink); border-bottom:3px solid var(--ink); border-left:3px solid var(--ink); border-top-left-radius:var(--radius-lg); border-bottom-left-radius:var(--radius-lg); width:140px; background:var(--bg-card);">
+                    <span style="font-size:1.15rem; font-weight:800; color:var(--ink); background:var(--cartoon-yellow); padding:4px 12px; border-radius:var(--radius-pill); border:2px solid var(--ink); display:inline-block; margin-bottom:6px;">CLIP 08</span>
+                    <div style="font-size:0.75rem; font-family:'JetBrains Mono', monospace; color:var(--cartoon-blue-deep); font-weight:800;">01:50 – 02:15</div>
+                    <span class="pill-tag" style="font-size:0.65rem; background:#E0F2FE; color:#0369A1; margin-top:6px;">[THE DZUD WEAPON]</span>
+                  </td>
+                  <td class="timeline-cell" style="padding:18px 20px; border-top:3px solid var(--ink); border-bottom:3px solid var(--ink);">
+                    <div style="font-size:0.96rem; font-weight:700; color:var(--text-dark); line-height:1.5;">
+                      "The engine that drives people off the steppe is a unique meteorological disaster that Mongolians call the Dzud."
+                    </div>
+                    <div style="display:inline-block; margin-top:8px; background:#FFE4E6; color:var(--cartoon-coral-deep); border:1.5px solid var(--cartoon-coral-deep); padding:3px 10px; border-radius:var(--radius-sm); font-size:0.76rem; font-weight:800; font-family:'JetBrains Mono', monospace;">
+                      CUT ON: "call the Dzud" ➔ CUT to Clip 09
+                    </div>
+                    <div style="margin-top:8px; font-size:0.78rem; color:var(--text-muted);">
+                      <strong>Visual Event:</strong> Thermal Satellite Overlay: Massive Siberian polar vortex of freezing blue air (-45°C) descending over Mongolia.
+                    </div>
+                  </td>
+                  <td class="timeline-cell" style="padding:18px 20px; border-top:3px solid var(--ink); border-bottom:3px solid var(--ink); border-right:3px solid var(--ink); border-top-right-radius:var(--radius-lg); border-bottom-right-radius:var(--radius-lg); width:320px;">
+                    <div class="prompt-code-box" style="background:#0F172A; color:#38BDF8; border:2px solid var(--ink); border-radius:var(--radius-sm); padding:10px 12px; font-family:'JetBrains Mono', monospace; font-size:0.78rem; position:relative;">
+                      <button class="copy-mini-btn" style="position:absolute; top:6px; right:6px; background:var(--cartoon-yellow); color:#0F172A; border:1.5px solid #0F172A; border-radius:var(--radius-sm); padding:3px 8px; font-size:0.68rem; font-weight:800; cursor:pointer;" onclick="copySnippet(this)">Copy</button>
                       <span>Create an 8-second horizontal 16:9 cinematic clip. Extreme blizzard over Mongolian snowy plains, howling white snowdrifts burying wooden fences, harsh diffused winter light, intense cold realism, no people visible --ar 16:9</span>
                     </div>
-                    <div style="font-size:0.72rem; color:var(--text-faint); margin-top:6px; font-weight:700;">SFX: Freezing wind gust & winter drone</div>
+                    <div style="font-size:0.72rem; color:var(--text-faint); margin-top:6px; font-weight:700;">SFX: Freezing winter wind howl & ice crack</div>
+                  </td>
+                </tr>
+                <!-- CLIP 09 -->
+                <tr class="timeline-row" style="background:var(--bg-canvas); border:3px solid var(--ink); box-shadow:var(--shadow-block-sm);">
+                  <td class="timeline-cell" style="padding:18px 20px; border-top:3px solid var(--ink); border-bottom:3px solid var(--ink); border-left:3px solid var(--ink); border-top-left-radius:var(--radius-lg); border-bottom-left-radius:var(--radius-lg); width:140px; background:var(--bg-card);">
+                    <span style="font-size:1.15rem; font-weight:800; color:var(--ink); background:var(--cartoon-yellow); padding:4px 12px; border-radius:var(--radius-pill); border:2px solid var(--ink); display:inline-block; margin-bottom:6px;">CLIP 09</span>
+                    <div style="font-size:0.75rem; font-family:'JetBrains Mono', monospace; color:var(--cartoon-blue-deep); font-weight:800;">02:15 – 02:40</div>
+                    <span class="pill-tag" style="font-size:0.65rem; background:#DCFCE7; color:#166534; margin-top:6px;">[WHITE DZUD]</span>
+                  </td>
+                  <td class="timeline-cell" style="padding:18px 20px; border-top:3px solid var(--ink); border-bottom:3px solid var(--ink);">
+                    <div style="font-size:0.96rem; font-weight:700; color:var(--text-dark); line-height:1.5;">
+                      "In a White Dzud, heavy snowdrifts freeze into solid ice sheets, locking pasture grass beneath impenetrable armor."
+                    </div>
+                    <div style="display:inline-block; margin-top:8px; background:#FFE4E6; color:var(--cartoon-coral-deep); border:1.5px solid var(--cartoon-coral-deep); padding:3px 10px; border-radius:var(--radius-sm); font-size:0.76rem; font-weight:800; font-family:'JetBrains Mono', monospace;">
+                      CUT ON: "impenetrable armor" ➔ CUT to Clip 10
+                    </div>
+                    <div style="margin-top:8px; font-size:0.78rem; color:var(--text-muted);">
+                      <strong>Visual Event:</strong> Macro camera shot of solid blue ice covering dry grass blades with thermometer dropping to -48°C.
+                    </div>
+                  </td>
+                  <td class="timeline-cell" style="padding:18px 20px; border-top:3px solid var(--ink); border-bottom:3px solid var(--ink); border-right:3px solid var(--ink); border-top-right-radius:var(--radius-lg); border-bottom-right-radius:var(--radius-lg); width:320px;">
+                    <div class="prompt-code-box" style="background:#0F172A; color:#38BDF8; border:2px solid var(--ink); border-radius:var(--radius-sm); padding:10px 12px; font-family:'JetBrains Mono', monospace; font-size:0.78rem; position:relative;">
+                      <button class="copy-mini-btn" style="position:absolute; top:6px; right:6px; background:var(--cartoon-yellow); color:#0F172A; border:1.5px solid #0F172A; border-radius:var(--radius-sm); padding:3px 8px; font-size:0.68rem; font-weight:800; cursor:pointer;" onclick="copySnippet(this)">Copy</button>
+                      <span>Create an 8-second horizontal 16:9 cinematic clip. Extreme close-up of thick frost and ice crust encasing dry steppe grass under biting wind, glistening ice crystals, cold pale lighting, 8k macro --ar 16:9</span>
+                    </div>
+                    <div style="font-size:0.72rem; color:var(--text-faint); margin-top:6px; font-weight:700;">SFX: Cracking ice under pressure</div>
+                  </td>
+                </tr>
+                <!-- CLIP 10 -->
+                <tr class="timeline-row" style="background:var(--bg-canvas); border:3px solid var(--ink); box-shadow:var(--shadow-block-sm);">
+                  <td class="timeline-cell" style="padding:18px 20px; border-top:3px solid var(--ink); border-bottom:3px solid var(--ink); border-left:3px solid var(--ink); border-top-left-radius:var(--radius-lg); border-bottom-left-radius:var(--radius-lg); width:140px; background:var(--bg-card);">
+                    <span style="font-size:1.15rem; font-weight:800; color:var(--ink); background:var(--cartoon-yellow); padding:4px 12px; border-radius:var(--radius-pill); border:2px solid var(--ink); display:inline-block; margin-bottom:6px;">CLIP 10</span>
+                    <div style="font-size:0.75rem; font-family:'JetBrains Mono', monospace; color:var(--cartoon-blue-deep); font-weight:800;">02:40 – 03:10</div>
+                    <span class="pill-tag" style="font-size:0.65rem; background:#F3E8FF; color:#6B21A8; margin-top:6px;">[LIVESTOCK LOSS]</span>
+                  </td>
+                  <td class="timeline-cell" style="padding:18px 20px; border-top:3px solid var(--ink); border-bottom:3px solid var(--ink);">
+                    <div style="font-size:0.96rem; font-weight:700; color:var(--text-dark); line-height:1.5;">
+                      "Unable to graze, livestock starve by the millions. In the catastrophic 2010 Dzud, over 8.5 million animals died in a single season."
+                    </div>
+                    <div style="display:inline-block; margin-top:8px; background:#FFE4E6; color:var(--cartoon-coral-deep); border:1.5px solid var(--cartoon-coral-deep); padding:3px 10px; border-radius:var(--radius-sm); font-size:0.76rem; font-weight:800; font-family:'JetBrains Mono', monospace;">
+                      CUT ON: "single season" ➔ CUT to Beat 4 (03:10)
+                    </div>
+                    <div style="margin-top:8px; font-size:0.78rem; color:var(--text-muted);">
+                      <strong>Visual Event:</strong> FAO Historical Loss Graph: Animal loss spike of 8.5 million cattle, sheep, and goats.
+                    </div>
+                  </td>
+                  <td class="timeline-cell" style="padding:18px 20px; border-top:3px solid var(--ink); border-bottom:3px solid var(--ink); border-right:3px solid var(--ink); border-top-right-radius:var(--radius-lg); border-bottom-right-radius:var(--radius-lg); width:320px;">
+                    <div class="prompt-code-box" style="background:#0F172A; color:#38BDF8; border:2px solid var(--ink); border-radius:var(--radius-sm); padding:10px 12px; font-family:'JetBrains Mono', monospace; font-size:0.78rem; position:relative;">
+                      <button class="copy-mini-btn" style="position:absolute; top:6px; right:6px; background:var(--cartoon-yellow); color:#0F172A; border:1.5px solid #0F172A; border-radius:var(--radius-sm); padding:3px 8px; font-size:0.68rem; font-weight:800; cursor:pointer;" onclick="copySnippet(this)">Copy</button>
+                      <span>Create an 8-second horizontal 16:9 cinematic clip. Abandoned wooden animal corral half-buried in deep snowdrifts on desolate winter plain, grey overcast sky, solemn documentary mood, 8k --ar 16:9</span>
+                    </div>
+                    <div style="font-size:0.72rem; color:var(--text-faint); margin-top:6px; font-weight:700;">SFX: Solemn low violin and quiet wind</div>
+                  </td>
+                </tr>
+                <!-- CLIP 11 -->
+                <tr class="timeline-row" style="background:var(--bg-canvas); border:3px solid var(--ink); box-shadow:var(--shadow-block-sm);">
+                  <td class="timeline-cell" style="padding:18px 20px; border-top:3px solid var(--ink); border-bottom:3px solid var(--ink); border-left:3px solid var(--ink); border-top-left-radius:var(--radius-lg); border-bottom-left-radius:var(--radius-lg); width:140px; background:var(--bg-card);">
+                    <span style="font-size:1.15rem; font-weight:800; color:var(--ink); background:var(--cartoon-yellow); padding:4px 12px; border-radius:var(--radius-pill); border:2px solid var(--ink); display:inline-block; margin-bottom:6px;">CLIP 11</span>
+                    <div style="font-size:0.75rem; font-family:'JetBrains Mono', monospace; color:var(--cartoon-blue-deep); font-weight:800;">03:10 – 03:35</div>
+                    <span class="pill-tag" style="font-size:0.65rem; background:#FEF3C7; color:#92400E; margin-top:6px;">[THE GREAT EXODUS]</span>
+                  </td>
+                  <td class="timeline-cell" style="padding:18px 20px; border-top:3px solid var(--ink); border-bottom:3px solid var(--ink);">
+                    <div style="font-size:0.96rem; font-weight:700; color:var(--text-dark); line-height:1.5;">
+                      "When a nomadic family loses their entire herd in a single winter, they have no insurance, no welfare, and no income."
+                    </div>
+                    <div style="display:inline-block; margin-top:8px; background:#FFE4E6; color:var(--cartoon-coral-deep); border:1.5px solid var(--cartoon-coral-deep); padding:3px 10px; border-radius:var(--radius-sm); font-size:0.76rem; font-weight:800; font-family:'JetBrains Mono', monospace;">
+                      CUT ON: "and no income" ➔ CUT to Clip 12
+                    </div>
+                    <div style="margin-top:8px; font-size:0.78rem; color:var(--text-muted);">
+                      <strong>Visual Event:</strong> Nomadic family dismantling their round wooden felt ger tent and packing canvas onto a Russian flatbed truck.
+                    </div>
+                  </td>
+                  <td class="timeline-cell" style="padding:18px 20px; border-top:3px solid var(--ink); border-bottom:3px solid var(--ink); border-right:3px solid var(--ink); border-top-right-radius:var(--radius-lg); border-bottom-right-radius:var(--radius-lg); width:320px;">
+                    <div class="prompt-code-box" style="background:#0F172A; color:#38BDF8; border:2px solid var(--ink); border-radius:var(--radius-sm); padding:10px 12px; font-family:'JetBrains Mono', monospace; font-size:0.78rem; position:relative;">
+                      <button class="copy-mini-btn" style="position:absolute; top:6px; right:6px; background:var(--cartoon-yellow); color:#0F172A; border:1.5px solid #0F172A; border-radius:var(--radius-sm); padding:3px 8px; font-size:0.68rem; font-weight:800; cursor:pointer;" onclick="copySnippet(this)">Copy</button>
+                      <span>Create an 8-second horizontal 16:9 cinematic clip. Old Russian flatbed truck loaded with traditional yurt frame driving slowly along dirt track across vast winter landscape, cold morning mist, 8k --ar 16:9</span>
+                    </div>
+                    <div style="font-size:0.72rem; color:var(--text-faint); margin-top:6px; font-weight:700;">SFX: Old diesel truck engine rumble and gravel crunch</div>
+                  </td>
+                </tr>
+                <!-- CLIP 12 -->
+                <tr class="timeline-row" style="background:var(--bg-canvas); border:3px solid var(--ink); box-shadow:var(--shadow-block-sm);">
+                  <td class="timeline-cell" style="padding:18px 20px; border-top:3px solid var(--ink); border-bottom:3px solid var(--ink); border-left:3px solid var(--ink); border-top-left-radius:var(--radius-lg); border-bottom-left-radius:var(--radius-lg); width:140px; background:var(--bg-card);">
+                    <span style="font-size:1.15rem; font-weight:800; color:var(--ink); background:var(--cartoon-yellow); padding:4px 12px; border-radius:var(--radius-pill); border:2px solid var(--ink); display:inline-block; margin-bottom:6px;">CLIP 12</span>
+                    <div style="font-size:0.75rem; font-family:'JetBrains Mono', monospace; color:var(--cartoon-blue-deep); font-weight:800;">03:35 – 04:00</div>
+                    <span class="pill-tag" style="font-size:0.65rem; background:#FFE4E6; color:#9F1239; margin-top:6px;">[THE GER DISTRICTS]</span>
+                  </td>
+                  <td class="timeline-cell" style="padding:18px 20px; border-top:3px solid var(--ink); border-bottom:3px solid var(--ink);">
+                    <div style="font-size:0.96rem; font-weight:700; color:var(--text-dark); line-height:1.5;">
+                      "They drive 400 miles to the outskirts of Ulaanbaatar, erecting their gers in vast unplanned suburban rings along the hillsides."
+                    </div>
+                    <div style="display:inline-block; margin-top:8px; background:#FFE4E6; color:var(--cartoon-coral-deep); border:1.5px solid var(--cartoon-coral-deep); padding:3px 10px; border-radius:var(--radius-sm); font-size:0.76rem; font-weight:800; font-family:'JetBrains Mono', monospace;">
+                      CUT ON: "along the hillsides" ➔ CUT to Clip 13
+                    </div>
+                    <div style="margin-top:8px; font-size:0.78rem; color:var(--text-muted);">
+                      <strong>Visual Event:</strong> Aerial drone shot of the Ger Districts of Ulaanbaatar: Hundreds of thousands of white circular yurts behind wooden fences.
+                    </div>
+                  </td>
+                  <td class="timeline-cell" style="padding:18px 20px; border-top:3px solid var(--ink); border-bottom:3px solid var(--ink); border-right:3px solid var(--ink); border-top-right-radius:var(--radius-lg); border-bottom-right-radius:var(--radius-lg); width:320px;">
+                    <div class="prompt-code-box" style="background:#0F172A; color:#38BDF8; border:2px solid var(--ink); border-radius:var(--radius-sm); padding:10px 12px; font-family:'JetBrains Mono', monospace; font-size:0.78rem; position:relative;">
+                      <button class="copy-mini-btn" style="position:absolute; top:6px; right:6px; background:var(--cartoon-yellow); color:#0F172A; border:1.5px solid #0F172A; border-radius:var(--radius-sm); padding:3px 8px; font-size:0.68rem; font-weight:800; cursor:pointer;" onclick="copySnippet(this)">Copy</button>
+                      <span>Create an 8-second horizontal 16:9 cinematic clip. High-angle aerial panoramic view over sprawling hillside ger district of Ulaanbaatar, thousands of round white yurts surrounded by wooden fences, dusk light, 8k --ar 16:9</span>
+                    </div>
+                    <div style="font-size:0.72rem; color:var(--text-faint); margin-top:6px; font-weight:700;">SFX: City ambient hum and distant dogs barking</div>
+                  </td>
+                </tr>
+                <!-- CLIP 13 -->
+                <tr class="timeline-row" style="background:var(--bg-canvas); border:3px solid var(--ink); box-shadow:var(--shadow-block-sm);">
+                  <td class="timeline-cell" style="padding:18px 20px; border-top:3px solid var(--ink); border-bottom:3px solid var(--ink); border-left:3px solid var(--ink); border-top-left-radius:var(--radius-lg); border-bottom-left-radius:var(--radius-lg); width:140px; background:var(--bg-card);">
+                    <span style="font-size:1.15rem; font-weight:800; color:var(--ink); background:var(--cartoon-yellow); padding:4px 12px; border-radius:var(--radius-pill); border:2px solid var(--ink); display:inline-block; margin-bottom:6px;">CLIP 13</span>
+                    <div style="font-size:0.75rem; font-family:'JetBrains Mono', monospace; color:var(--cartoon-blue-deep); font-weight:800;">04:00 – 04:30</div>
+                    <span class="pill-tag" style="font-size:0.65rem; background:#E0F2FE; color:#0369A1; margin-top:6px;">[INFRASTRUCTURE GAP]</span>
+                  </td>
+                  <td class="timeline-cell" style="padding:18px 20px; border-top:3px solid var(--ink); border-bottom:3px solid var(--ink);">
+                    <div style="font-size:0.96rem; font-weight:700; color:var(--text-dark); line-height:1.5;">
+                      "These districts have no central plumbing, no running water, and no sewer lines. Over 800,000 people live in temporary settlements."
+                    </div>
+                    <div style="display:inline-block; margin-top:8px; background:#FFE4E6; color:var(--cartoon-coral-deep); border:1.5px solid var(--cartoon-coral-deep); padding:3px 10px; border-radius:var(--radius-sm); font-size:0.76rem; font-weight:800; font-family:'JetBrains Mono', monospace;">
+                      CUT ON: "temporary settlements" ➔ CUT to Beat 5 (04:30)
+                    </div>
+                    <div style="margin-top:8px; font-size:0.78rem; color:var(--text-muted);">
+                      <strong>Visual Event:</strong> Infographic Overlay: Red infrastructure zone highlighting water distribution points and unpaved roads.
+                    </div>
+                  </td>
+                  <td class="timeline-cell" style="padding:18px 20px; border-top:3px solid var(--ink); border-bottom:3px solid var(--ink); border-right:3px solid var(--ink); border-top-right-radius:var(--radius-lg); border-bottom-right-radius:var(--radius-lg); width:320px;">
+                    <div class="prompt-code-box" style="background:#0F172A; color:#38BDF8; border:2px solid var(--ink); border-radius:var(--radius-sm); padding:10px 12px; font-family:'JetBrains Mono', monospace; font-size:0.78rem; position:relative;">
+                      <button class="copy-mini-btn" style="position:absolute; top:6px; right:6px; background:var(--cartoon-yellow); color:#0F172A; border:1.5px solid #0F172A; border-radius:var(--radius-sm); padding:3px 8px; font-size:0.68rem; font-weight:800; cursor:pointer;" onclick="copySnippet(this)">Copy</button>
+                      <span>Create an 8-second horizontal 16:9 cinematic clip. Narrow unpaved dirt alleyway between wooden fenced plots in ger suburb, electrical wires overhead, cold winter afternoon, authentic documentary realism, 8k --ar 16:9</span>
+                    </div>
+                    <div style="font-size:0.72rem; color:var(--text-faint); margin-top:6px; font-weight:700;">SFX: Creaking wooden fence gate</div>
                   </td>
                 </tr>
               </tbody>
