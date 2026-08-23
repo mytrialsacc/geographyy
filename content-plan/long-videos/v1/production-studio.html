@@ -5,13 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Hidden Geography — Every Map You've Seen Is Lying About Africa">
   <meta name="theme-color" content="#0EA5E9">
-  <title>Every Map You've Seen Is Lying About Africa · Production Studio</title>
+  <title>Every Map You've Seen Is Lying About Africa · Granular Production Studio</title>
   
   <link rel="icon" type="image/svg+xml" href="../../../favicon.svg">
   
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&family=JetBrains+Mono:wght@500;700;800&display=swap" rel="stylesheet">
   
   <style>
     :root {
@@ -71,7 +71,7 @@
       -webkit-font-smoothing: antialiased;
     }
 
-    h1, h2, h3, h4, .brand-title, .beat-pill, .btn-cartoon {
+    h1, h2, h3, h4, .brand-title, .beat-badge, .btn-cartoon {
       font-family: "Fredoka", sans-serif;
       font-weight: 700;
       letter-spacing: -0.01em;
@@ -207,17 +207,6 @@
       background: var(--accent-yellow);
       border-color: var(--border-chunky);
       box-shadow: var(--shadow-sm);
-    }
-
-    .nav-counter-tag {
-      margin-left: auto;
-      font-size: 0.66rem;
-      font-weight: 800;
-      padding: 2px 8px;
-      border-radius: var(--radius-pill);
-      background: var(--bg-tint);
-      color: var(--accent-blue-deep);
-      border: 1.5px solid var(--border-chunky);
     }
 
     /* Main Content */
@@ -426,184 +415,205 @@
     .tab-pane { display: none; flex-direction: column; gap: 24px; }
     .tab-pane.active { display: flex; }
 
-    /* Clean Script Cards */
-    .clean-script-card {
+
+    /* Granular 8-Second Clips Architecture */
+    .clean-beat-container {
       background: var(--bg-card);
       border: 3px solid var(--ink);
       border-radius: var(--radius-box);
       padding: 24px 28px;
       box-shadow: var(--shadow-block);
+      margin-bottom: 28px;
       display: flex;
       flex-direction: column;
-      gap: 18px;
+      gap: 20px;
     }
 
-    .card-top-bar {
+    .beat-section-header {
       display: flex;
       align-items: center;
       justify-content: space-between;
       flex-wrap: wrap;
       gap: 12px;
-      padding-bottom: 14px;
-      border-bottom: 2px dashed var(--border-chunky);
+      padding-bottom: 16px;
+      border-bottom: 2.5px dashed var(--border-chunky);
     }
 
-    .card-title-group {
+    .beat-title-wrap {
       display: flex;
       align-items: center;
-      flex-wrap: wrap;
-      gap: 10px;
+      gap: 12px;
     }
 
-    .beat-pill {
-      font-size: 0.85rem;
+    .beat-badge {
+      font-size: 0.9rem;
       font-weight: 800;
       background: var(--accent-yellow);
       color: #0F172A;
-      padding: 4px 14px;
+      padding: 5px 16px;
       border-radius: var(--radius-pill);
       border: 2px solid var(--ink);
     }
 
-    .card-title-group h3 {
-      font-size: 1.25rem;
+    .beat-section-header h3 {
+      font-size: 1.35rem;
       color: var(--text-dark);
     }
 
-    .time-tag {
+    .beat-time-badge {
       font-family: "JetBrains Mono", monospace;
-      font-size: 0.78rem;
+      font-size: 0.8rem;
       font-weight: 800;
       color: var(--accent-blue-deep);
       background: var(--bg-tint);
-      padding: 3px 10px;
+      padding: 4px 12px;
       border-radius: var(--radius-pill);
       border: 1.5px solid var(--border-chunky);
     }
 
-    .word-count-tag {
-      font-size: 0.74rem;
-      font-weight: 800;
-      color: var(--text-faint);
+    .clips-sequence-list {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
     }
 
-    /* Large Readable Voiceover Box */
-    .voiceover-text-box {
+    .granular-clip-box {
       background: var(--bg-card-alt);
-      border: 2px solid var(--ink);
+      border: 2.5px solid var(--ink);
       border-radius: 14px;
-      padding: 18px 22px;
-    }
-
-    .voiceover-text-box p {
-      font-size: 1.12rem;
-      line-height: 1.8;
-      color: var(--text-dark);
-      font-weight: 600;
-    }
-
-    /* Production Directive Box */
-    .production-directive-box {
-      background: var(--bg-sky);
-      border: 2px solid var(--ink);
-      border-radius: 14px;
-      padding: 16px 20px;
+      padding: 18px 20px;
       display: flex;
       flex-direction: column;
       gap: 14px;
+      box-shadow: var(--shadow-sm);
     }
 
-    .directive-row {
-      display: grid;
-      grid-template-columns: 1fr auto;
-      gap: 16px;
+    .clip-header-row {
+      display: flex;
       align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 10px;
     }
 
-    .directive-label {
+    .clip-id-badge {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .clip-pill {
+      font-size: 0.78rem;
+      font-weight: 800;
+      background: var(--accent-blue);
+      color: #FFFFFF;
+      padding: 3px 10px;
+      border-radius: 8px;
+      border: 1.5px solid var(--ink);
+    }
+
+    .clip-time {
+      font-family: "JetBrains Mono", monospace;
+      font-size: 0.82rem;
+      font-weight: 800;
+      color: var(--accent-blue-deep);
+    }
+
+    .cut-trigger-pill {
+      background: #FFE4E6;
+      color: var(--accent-coral);
+      border: 1.5px solid var(--accent-coral);
+      padding: 3px 10px;
+      border-radius: var(--radius-pill);
+      font-size: 0.74rem;
+      font-weight: 800;
+      font-family: "JetBrains Mono", monospace;
+    }
+
+    .clip-vo-line {
+      background: var(--bg-card);
+      border: 2px solid var(--ink);
+      border-left: 5px solid var(--accent-yellow-deep);
+      border-radius: 10px;
+      padding: 12px 16px;
+    }
+
+    .vo-label {
       display: block;
-      font-size: 0.72rem;
+      font-size: 0.7rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--accent-yellow-deep);
+      margin-bottom: 4px;
+    }
+
+    .vo-text {
+      font-size: 1.08rem;
+      line-height: 1.6;
+      color: var(--text-dark);
+      font-weight: 700;
+    }
+
+    .clip-visual-block {
+      background: var(--bg-sky);
+      border: 1.5px solid var(--border-chunky);
+      border-radius: 12px;
+      padding: 14px 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .visual-label, .prompt-badge, .sfx-tag-label {
+      font-size: 0.68rem;
       font-weight: 800;
       text-transform: uppercase;
       letter-spacing: 0.06em;
       color: var(--accent-blue-deep);
-      margin-bottom: 3px;
     }
 
-    .directive-item p {
-      font-size: 0.88rem;
+    .visual-desc p {
+      font-size: 0.86rem;
       color: var(--text-muted);
-      font-weight: 500;
+      margin-top: 2px;
     }
 
-    .cut-trigger-pill {
-      display: inline-block;
-      background: #FFE4E6;
-      color: var(--accent-coral);
-      border: 1.5px solid var(--accent-coral);
-      padding: 4px 12px;
-      border-radius: var(--radius-pill);
-      font-size: 0.76rem;
-      font-weight: 800;
-      font-family: "JetBrains Mono", monospace;
-      white-space: nowrap;
-    }
-
-    .directive-prompt-box {
+    .prompt-code-wrap {
       background: #0F172A;
-      color: #38BDF8;
       border: 2px solid var(--ink);
-      border-radius: 12px;
-      padding: 12px 16px;
+      border-radius: 10px;
+      padding: 10px 14px;
     }
 
-    .prompt-head {
+    .prompt-bar {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      margin-bottom: 8px;
+      margin-bottom: 6px;
     }
 
-    .prompt-label {
-      font-size: 0.72rem;
-      font-weight: 800;
-      text-transform: uppercase;
-      letter-spacing: 0.06em;
-      color: #94A3B8;
-    }
+    .prompt-badge { color: #94A3B8; }
 
-    .clean-copy-btn {
-      background: var(--accent-yellow);
-      color: #0F172A;
-      border: 1.5px solid #0F172A;
-      border-radius: 8px;
-      padding: 3px 10px;
-      font-size: 0.72rem;
-      font-weight: 800;
-      cursor: pointer;
-      transition: transform 0.1s ease;
-    }
-
-    .clean-copy-btn:hover { transform: scale(1.05); }
-
-    .prompt-text {
+    .prompt-snippet {
       margin: 0;
       white-space: pre-wrap;
       word-break: break-word;
-      font-size: 0.82rem;
-      line-height: 1.5;
+      font-size: 0.8rem;
+      line-height: 1.45;
       color: #38BDF8;
     }
 
-    .sfx-footer-row {
+    .clip-sfx-row {
       display: flex;
       align-items: center;
-      gap: 8px;
-      font-size: 0.78rem;
+      gap: 6px;
+      font-size: 0.76rem;
       font-weight: 700;
       color: var(--text-muted);
     }
-    .sfx-label { color: var(--accent-coral); }
+    .sfx-tag-label { color: var(--accent-coral); }
+
 
     /* Toast */
     .toast-pill {
@@ -639,7 +649,6 @@
       .sidebar.open { transform: translateX(0); }
       .mobile-nav-toggle, .mobile-close-btn { display: grid; }
       .main-wrapper { grid-column: 1; }
-      .directive-row { grid-template-columns: 1fr; }
     }
 
     @media (max-width: 640px) {
@@ -648,9 +657,8 @@
       .top-nav-link { padding: 0 10px; }
       .content-container { width: calc(100% - 24px); padding: 18px 0 80px; }
       .clean-hero-card { padding: 22px 18px; }
-      .clean-script-card { padding: 18px 16px; }
-      .voiceover-text-box { padding: 14px 16px; }
-      .voiceover-text-box p { font-size: 1.02rem; }
+      .clean-beat-container { padding: 18px 16px; }
+      .granular-clip-box { padding: 14px 16px; }
     }
   </style>
 </head>
@@ -768,628 +776,2404 @@
           </div>
 
           <h1 class="hero-title">Every Map You've Seen Is Lying About Africa</h1>
-          <p class="hero-desc">The complete, deterministic single-page production workstation for Video 1. 12-beat verbatim teleprompter script, Google Flow AI cinematography prompts, and derived Shorts suite.</p>
+          <p class="hero-desc">Full 58-clip granular production studio. Every 8-second clip features exact synchronized spoken voiceover, precise cut triggers, and 1-click Google Flow AI cinematography prompts.</p>
 
           <div class="hero-kpis-ribbon">
             <span class="kpi-pill">Topic Score: <strong>18 / 20</strong></span>
             <span class="kpi-pill">Total Runtime: <strong>13:14 min</strong></span>
-            <span class="kpi-pill">Voiceover Word Budget: <strong>1,780 words</strong></span>
+            <span class="kpi-pill">Granular Clips: <strong>58 Synchronized Clips (8s each)</strong></span>
             <span class="kpi-pill">Derived Shorts: <strong>2 Vertical Shorts</strong></span>
           </div>
         </section>
 
         <!-- Clean Tab Switcher Bar -->
         <nav class="studio-tab-bar">
-          <button class="tab-btn active" data-tab="tab-script">📜 Full 12-Beat Script</button>
+          <button class="tab-btn active" data-tab="tab-script">🎬 8-Second Synchronized Clips Studio</button>
           <button class="tab-btn" data-tab="tab-shorts">⚡ Derived Shorts Suite (§12)</button>
           <button class="tab-btn" data-tab="tab-research">📋 Research & Fact Sheet</button>
           <button class="tab-btn" data-tab="tab-packaging">🏷️ Packaging & SEO</button>
         </nav>
 
-        <!-- TAB 1: FULL SCRIPT -->
+        <!-- TAB 1: GRANULAR 8-SECOND CLIPS -->
         <section class="tab-pane active" id="tab-script">
-            <!-- Beat 01 -->
-            <article class="clean-script-card">
-              <div class="card-top-bar">
-                <div class="card-title-group">
-                  <span class="beat-pill">Beat 01</span>
-                  <h3>The Hook · Wall Map Lie</h3>
-                  <span class="time-tag">0:00 – 0:45</span>
-                </div>
-                <span class="word-count-tag">115 words</span>
+          <!-- BEAT 01 -->
+          <article class="clean-beat-container">
+            <div class="beat-section-header">
+              <div class="beat-title-wrap">
+                <span class="beat-badge">BEAT 01</span>
+                <h3>The Hook · The Wall Map Lie</h3>
               </div>
+              <span class="beat-time-badge">0:00 – 0:45 · 5 Clips</span>
+            </div>
 
-              <!-- Spoken Voiceover Narration Box -->
-              <div class="voiceover-text-box">
-                <p>On the map on your wall, Greenland looks about the same size as Africa. On the ground, Africa is fourteen times larger. The entire United States, China, India, and almost all of Western Europe could sit inside the African continent simultaneously with thousands of square miles to spare. Yet for four hundred and fifty-seven years, almost every school classroom, atlas, and smartphone on Earth has shown you a world where the Northern Hemisphere is artificially magnified, and the equator is squeezed. This was not an accident, and it wasn't a printing mistake. It was a calculated mathematical decision made in 1569—and there is a reason we still refuse to fix it.</p>
-              </div>
-
-              <!-- Visual & AI Prompt Directive -->
-              <div class="production-directive-box">
-                <div class="directive-row">
-                  <div class="directive-item">
-                    <span class="directive-label">🎥 Visual Event</span>
-                    <p>Slow dramatic zoom onto standard Mercator wall map. Green landmass of Greenland lifts off in glowing 3D amber and drops straight into the Sahara, fitting 14 times inside Africa.</p>
+            <div class="clips-sequence-list">
+              <!-- CLIP 01 -->
+              <div class="granular-clip-box">
+                <div class="clip-header-row">
+                  <div class="clip-id-badge">
+                    <span class="clip-pill">CLIP 01</span>
+                    <span class="clip-time">00:00 – 00:08</span>
                   </div>
-                  <div class="directive-item">
-                    <span class="directive-label">✂️ Cut Trigger</span>
-                    <span class="cut-trigger-pill">CUT ON: "refuse to fix it" ➔ CUT to Beat 02</span>
+                  <span class="cut-trigger-pill">CUT ON: "same size as Africa" ➔ CUT to Clip 02</span>
+                </div>
+
+                <!-- Spoken Voiceover Line -->
+                <div class="clip-vo-line">
+                  <span class="vo-label">🎙️ Spoken Voiceover (8s):</span>
+                  <p class="vo-text">"On the map on your wall, Greenland looks about the same size as Africa."</p>
+                </div>
+
+                <!-- Visual Action & Flow AI Prompt -->
+                <div class="clip-visual-block">
+                  <div class="visual-desc">
+                    <span class="visual-label">🎥 On-Screen Visual:</span>
+                    <p>Vintage classroom wall map in high contrast slate. Camera pushes slowly in on Greenland and Africa.</p>
                   </div>
-                </div>
 
-                <div class="directive-prompt-box">
-                  <div class="prompt-head">
-                    <span class="prompt-label">⚡ Google Flow AI Cinematography Prompt (§20)</span>
-                    <button class="clean-copy-btn" onclick="copyPrompt(this)">Copy Prompt</button>
+                  <div class="prompt-code-wrap">
+                    <div class="prompt-bar">
+                      <span class="prompt-badge">⚡ Flow AI Prompt (§20 Formula)</span>
+                      <button class="clean-copy-btn" onclick="copyPrompt(this)">Copy Prompt</button>
+                    </div>
+                    <pre class="prompt-snippet"><code>Create an 8-second horizontal 16:9 cinematic clip. Documentary photography, vintage wooden classroom with large Mercator wall map on wall, slow straight-down camera push, warm soft morning sunlight, sharp focus on African continent and Greenland, clean 8k resolution, no text --ar 16:9</code></pre>
                   </div>
-                  <pre class="prompt-text"><code>Create an 8-second horizontal 16:9 cinematic clip. Documentary photography, vintage wooden classroom with large Mercator wall map, slow straight-down camera push, warm morning sunlight, sharp focus on African continent, 8k resolution, no text --ar 16:9</code></pre>
-                </div>
 
-                <div class="sfx-footer-row">
-                  <span class="sfx-label">🎵 Sound Design Cue:</span>
-                  <span class="sfx-value">Low sub-bass drone on scale reveal</span>
-                </div>
-              </div>
-            </article>
-
-            <!-- Beat 02 -->
-            <article class="clean-script-card">
-              <div class="card-top-bar">
-                <div class="card-title-group">
-                  <span class="beat-pill">Beat 02</span>
-                  <h3>Scale Shock · Gauss Theorem</h3>
-                  <span class="time-tag">0:45 – 1:45</span>
-                </div>
-                <span class="word-count-tag">152 words</span>
-              </div>
-
-              <!-- Spoken Voiceover Narration Box -->
-              <div class="voiceover-text-box">
-                <p>To understand the true scale of the distortion, look at the actual numbers. Africa spans thirty point three seven million square kilometres. Greenland is just two point one six million. But when you flatten a three-dimensional sphere onto a two-dimensional sheet of paper, pure geometry makes distortion inevitable. In 1828, Carl Friedrich Gauss proved mathematically in his Theorema Egregium that no sphere can ever be flattened onto a plane without stretching, shrinking, or tearing its surface. Every map maker in human history has had to choose what to sacrifice: area, shape, angle, or distance. You can preserve shapes, or you can preserve true sizes—but you can never preserve both. In 1569, a Flemish cartographer named Gerardus Mercator made a choice that changed human navigation forever.</p>
-              </div>
-
-              <!-- Visual & AI Prompt Directive -->
-              <div class="production-directive-box">
-                <div class="directive-row">
-                  <div class="directive-item">
-                    <span class="directive-label">🎥 Visual Event</span>
-                    <p>2D Vector animation: USA, China, India, and Western Europe outlines glide across the screen and nest neatly inside the borders of Africa with live area counters ticking.</p>
-                  </div>
-                  <div class="directive-item">
-                    <span class="directive-label">✂️ Cut Trigger</span>
-                    <span class="cut-trigger-pill">CUT ON: "navigation forever" ➔ CUT to Beat 03</span>
+                  <div class="clip-sfx-row">
+                    <span class="sfx-tag-label">🎵 SFX:</span>
+                    <span class="sfx-tag-val">Subtle chalk scratch & quiet room tone</span>
                   </div>
                 </div>
-
-                <div class="directive-prompt-box">
-                  <div class="prompt-head">
-                    <span class="prompt-label">⚡ Google Flow AI Cinematography Prompt (§20)</span>
-                    <button class="clean-copy-btn" onclick="copyPrompt(this)">Copy Prompt</button>
+              </div>
+              <!-- CLIP 02 -->
+              <div class="granular-clip-box">
+                <div class="clip-header-row">
+                  <div class="clip-id-badge">
+                    <span class="clip-pill">CLIP 02</span>
+                    <span class="clip-time">00:08 – 00:16</span>
                   </div>
-                  <pre class="prompt-text"><code>Create an 8-second horizontal 16:9 cinematic clip. 3D cartographic terrain map of world globe rotating slowly, glowing boundary highlights over African continent, dark atmospheric background, studio lighting, 8k, no text --ar 16:9</code></pre>
+                  <span class="cut-trigger-pill">CUT ON: "fourteen times larger" ➔ CUT to Clip 03</span>
                 </div>
 
-                <div class="sfx-footer-row">
-                  <span class="sfx-label">🎵 Sound Design Cue:</span>
-                  <span class="sfx-value">Tactile click-snap for nested borders</span>
+                <!-- Spoken Voiceover Line -->
+                <div class="clip-vo-line">
+                  <span class="vo-label">🎙️ Spoken Voiceover (8s):</span>
+                  <p class="vo-text">"On the ground, Africa is fourteen times larger than Greenland."</p>
                 </div>
-              </div>
-            </article>
 
-            <!-- Beat 03 -->
-            <article class="clean-script-card">
-              <div class="card-top-bar">
-                <div class="card-title-group">
-                  <span class="beat-pill">Beat 03</span>
-                  <h3>The 1569 Navigator Problem</h3>
-                  <span class="time-tag">1:45 – 3:00</span>
-                </div>
-                <span class="word-count-tag">178 words</span>
-              </div>
-
-              <!-- Spoken Voiceover Narration Box -->
-              <div class="voiceover-text-box">
-                <p>Mercator was not designing a decorative poster for school children. He was building a survival tool for 16th-century sea captains crossing uncharted oceans with crude magnetic compasses. On an ordinary spherical globe, if a sailor wants to travel from Lisbon to Havana along a single compass bearing—say, southwest by west—the shortest geographic route is a curved arc called a great circle. But sailing along a great circle requires recalculating your steering compass every single hour. In rough stormy seas with heavy cloud cover, that calculation error meant missing your port or crashing into submerged coral reefs. Mercator wanted a map where a straight line drawn with a simple wooden ruler between any two ports on Earth was a line of constant compass bearing—a rhumb line. If you drew a straight line across his map and kept your compass pointing at that exact angle, you were guaranteed to reach your destination.</p>
-              </div>
-
-              <!-- Visual & AI Prompt Directive -->
-              <div class="production-directive-box">
-                <div class="directive-row">
-                  <div class="directive-item">
-                    <span class="directive-label">🎥 Visual Event</span>
-                    <p>Cinematic AI B-roll of 16th-century wooden galleon navigating stormy Atlantic seas, cross-fading into vintage compass brass calipers over antique nautical chart.</p>
+                <!-- Visual Action & Flow AI Prompt -->
+                <div class="clip-visual-block">
+                  <div class="visual-desc">
+                    <span class="visual-label">🎥 On-Screen Visual:</span>
+                    <p>3D Earth in space: Amber outline of Greenland lifts off and shrinks down 14x into the Sahara.</p>
                   </div>
-                  <div class="directive-item">
-                    <span class="directive-label">✂️ Cut Trigger</span>
-                    <span class="cut-trigger-pill">CUT ON: "reach your destination" ➔ CUT to Beat 04</span>
+
+                  <div class="prompt-code-wrap">
+                    <div class="prompt-bar">
+                      <span class="prompt-badge">⚡ Flow AI Prompt (§20 Formula)</span>
+                      <button class="clean-copy-btn" onclick="copyPrompt(this)">Copy Prompt</button>
+                    </div>
+                    <pre class="prompt-snippet"><code>Create an 8-second horizontal 16:9 cinematic clip. 3D cartographic terrain map of world globe rotating slowly, glowing boundary highlights over African continent, dark atmospheric background, high contrast studio lighting, 8k, no text --ar 16:9</code></pre>
+                  </div>
+
+                  <div class="clip-sfx-row">
+                    <span class="sfx-tag-label">🎵 SFX:</span>
+                    <span class="sfx-tag-val">Sub-bass drop on scale reveal</span>
                   </div>
                 </div>
-
-                <div class="directive-prompt-box">
-                  <div class="prompt-head">
-                    <span class="prompt-label">⚡ Google Flow AI Cinematography Prompt (§20)</span>
-                    <button class="clean-copy-btn" onclick="copyPrompt(this)">Copy Prompt</button>
+              </div>
+              <!-- CLIP 03 -->
+              <div class="granular-clip-box">
+                <div class="clip-header-row">
+                  <div class="clip-id-badge">
+                    <span class="clip-pill">CLIP 03</span>
+                    <span class="clip-time">00:16 – 00:25</span>
                   </div>
-                  <pre class="prompt-text"><code>Create an 8-second horizontal 16:9 cinematic clip. Documentary photography, 16th-century wooden Spanish galleon sailing in turbulent deep Atlantic ocean, low-angle forward tracking camera, dramatic overcast lighting, misty sea spray, cinematic realism, no text --ar 16:9</code></pre>
+                  <span class="cut-trigger-pill">CUT ON: "inside Africa simultaneously" ➔ CUT to Clip 04</span>
                 </div>
 
-                <div class="sfx-footer-row">
-                  <span class="sfx-label">🎵 Sound Design Cue:</span>
-                  <span class="sfx-value">Ship creaking timber & ocean waves</span>
+                <!-- Spoken Voiceover Line -->
+                <div class="clip-vo-line">
+                  <span class="vo-label">🎙️ Spoken Voiceover (8s):</span>
+                  <p class="vo-text">"The entire United States, China, India, and Western Europe could sit inside Africa simultaneously."</p>
                 </div>
-              </div>
-            </article>
 
-            <!-- Beat 04 -->
-            <article class="clean-script-card">
-              <div class="card-top-bar">
-                <div class="card-title-group">
-                  <span class="beat-pill">Beat 04</span>
-                  <h3>The Conformal Mathematics</h3>
-                  <span class="time-tag">3:00 – 4:15</span>
-                </div>
-                <span class="word-count-tag">165 words</span>
-              </div>
-
-              <!-- Spoken Voiceover Narration Box -->
-              <div class="voiceover-text-box">
-                <p>To turn curved compass bearings into straight lines, Mercator imagined wrapping a cylinder of paper around the Earth's equator. On a real globe, lines of longitude converge and meet at the North and South Poles. But on a flat cylinder, all lines of longitude remain strictly vertical and parallel. This means that as you travel north toward the Arctic, the map stretches east-to-west. At sixty degrees north, land is stretched to twice its true width. To keep compass angles accurate—a mathematical property called conformality—Mercator had to stretch the map north-to-south by the exact same mathematical ratio. He stretched the vertical spacing between latitude lines by the secant of the latitude angle. The result was pure geometric genius: local shapes and angles remained completely undistorted. A square building on the ground stayed a square on the map. But the price of this perfection was catastrophic area distortion at high latitudes.</p>
-              </div>
-
-              <!-- Visual & AI Prompt Directive -->
-              <div class="production-directive-box">
-                <div class="directive-row">
-                  <div class="directive-item">
-                    <span class="directive-label">🎥 Visual Event</span>
-                    <p>3D transparent globe wrapped in glowing cylinder. Longitudinal lines unroll into parallel tracks while latitude spacing expands exponentially near the poles.</p>
+                <!-- Visual Action & Flow AI Prompt -->
+                <div class="clip-visual-block">
+                  <div class="visual-desc">
+                    <span class="visual-label">🎥 On-Screen Visual:</span>
+                    <p>High-altitude satellite view of Africa: Outlines of 4 major superpowers glide in and nest inside borders.</p>
                   </div>
-                  <div class="directive-item">
-                    <span class="directive-label">✂️ Cut Trigger</span>
-                    <span class="cut-trigger-pill">CUT ON: "at high latitudes" ➔ CUT to Beat 05</span>
+
+                  <div class="prompt-code-wrap">
+                    <div class="prompt-bar">
+                      <span class="prompt-badge">⚡ Flow AI Prompt (§20 Formula)</span>
+                      <button class="clean-copy-btn" onclick="copyPrompt(this)">Copy Prompt</button>
+                    </div>
+                    <pre class="prompt-snippet"><code>Create an 8-second horizontal 16:9 cinematic clip. High-altitude orbital satellite view looking down over central African savannah and rivers, clear crystal daylight, topological relief, 8k realism, no text --ar 16:9</code></pre>
+                  </div>
+
+                  <div class="clip-sfx-row">
+                    <span class="sfx-tag-label">🎵 SFX:</span>
+                    <span class="sfx-tag-val">Tactile click-snaps for nested borders</span>
                   </div>
                 </div>
-
-                <div class="directive-prompt-box">
-                  <div class="prompt-head">
-                    <span class="prompt-label">⚡ Google Flow AI Cinematography Prompt (§20)</span>
-                    <button class="clean-copy-btn" onclick="copyPrompt(this)">Copy Prompt</button>
+              </div>
+              <!-- CLIP 04 -->
+              <div class="granular-clip-box">
+                <div class="clip-header-row">
+                  <div class="clip-id-badge">
+                    <span class="clip-pill">CLIP 04</span>
+                    <span class="clip-time">00:25 – 00:35</span>
                   </div>
-                  <pre class="prompt-text"><code>Create an 8-second horizontal 16:9 cinematic clip. 3D technical animation of transparent glass globe inside illuminated cylinder, glowing vector longitude and latitude lines, clean studio dark background, 8k --ar 16:9</code></pre>
+                  <span class="cut-trigger-pill">CUT ON: "a distorted world" ➔ CUT to Clip 05</span>
                 </div>
 
-                <div class="sfx-footer-row">
-                  <span class="sfx-label">🎵 Sound Design Cue:</span>
-                  <span class="sfx-value">Elastic stretch sound effect</span>
+                <!-- Spoken Voiceover Line -->
+                <div class="clip-vo-line">
+                  <span class="vo-label">🎙️ Spoken Voiceover (8s):</span>
+                  <p class="vo-text">"Yet for four hundred and fifty-seven years, classroom maps have shown you a distorted world."</p>
                 </div>
-              </div>
-            </article>
 
-            <!-- Beat 05 -->
-            <article class="clean-script-card">
-              <div class="card-top-bar">
-                <div class="card-title-group">
-                  <span class="beat-pill">Beat 05</span>
-                  <h3>Why the Poles Explode</h3>
-                  <span class="time-tag">4:15 – 5:30</span>
-                </div>
-                <span class="word-count-tag">172 words</span>
-              </div>
-
-              <!-- Spoken Voiceover Narration Box -->
-              <div class="voiceover-text-box">
-                <p>At the equator, where Africa sits, Mercator distortion is zero percent. One square inch on the map represents exactly the same land area as one square inch on the ground. But as you move away from the equator, the math explodes. At forty-five degrees latitude, land is magnified by two hundred percent. At sixty degrees latitude, where Scandinavia and Greenland sit, landmasses are inflated by four hundred percent. By seventy-five degrees, the inflation reaches a staggering one thousand five hundred percent. At eighty degrees north, land appears thirty-three times larger than it actually is. At the exact North and South Poles, the secant of ninety degrees reaches mathematical infinity. This is why standard Mercator wall maps never show the true poles—they simply truncate the map at eighty-five degrees north. If they didn't, the map would have to be infinitely tall.</p>
-              </div>
-
-              <!-- Visual & AI Prompt Directive -->
-              <div class="production-directive-box">
-                <div class="directive-row">
-                  <div class="directive-item">
-                    <span class="directive-label">🎥 Visual Event</span>
-                    <p>Heatmap gradient across world map: Deep green (0% distortion) at equator turning blinding neon red (+3300%) at Greenland and Arctic circle.</p>
+                <!-- Visual Action & Flow AI Prompt -->
+                <div class="clip-visual-block">
+                  <div class="visual-desc">
+                    <span class="visual-label">🎥 On-Screen Visual:</span>
+                    <p>Antique scholar library: Astrolabe and vintage globe spinning in dramatic golden candlelight.</p>
                   </div>
-                  <div class="directive-item">
-                    <span class="directive-label">✂️ Cut Trigger</span>
-                    <span class="cut-trigger-pill">CUT ON: "infinitely tall" ➔ CUT to Beat 06</span>
+
+                  <div class="prompt-code-wrap">
+                    <div class="prompt-bar">
+                      <span class="prompt-badge">⚡ Flow AI Prompt (§20 Formula)</span>
+                      <button class="clean-copy-btn" onclick="copyPrompt(this)">Copy Prompt</button>
+                    </div>
+                    <pre class="prompt-snippet"><code>Create an 8-second horizontal 16:9 cinematic clip. Antique brass astrolabe and globe spinning in dark scholar library, candlelight reflecting on polished brass, dramatic cinematic shadows, 8k --ar 16:9</code></pre>
+                  </div>
+
+                  <div class="clip-sfx-row">
+                    <span class="sfx-tag-label">🎵 SFX:</span>
+                    <span class="sfx-tag-val">Antique clock ticking</span>
                   </div>
                 </div>
-
-                <div class="directive-prompt-box">
-                  <div class="prompt-head">
-                    <span class="prompt-label">⚡ Google Flow AI Cinematography Prompt (§20)</span>
-                    <button class="clean-copy-btn" onclick="copyPrompt(this)">Copy Prompt</button>
+              </div>
+              <!-- CLIP 05 -->
+              <div class="granular-clip-box">
+                <div class="clip-header-row">
+                  <div class="clip-id-badge">
+                    <span class="clip-pill">CLIP 05</span>
+                    <span class="clip-time">00:35 – 00:45</span>
                   </div>
-                  <pre class="prompt-text"><code>Create an 8-second horizontal 16:9 cinematic clip. Aerial drone shot over massive icebergs drifting in Disko Bay Greenland, deep sapphire water, golden afternoon sun glinting on ice, 8k realism --ar 16:9</code></pre>
+                  <span class="cut-trigger-pill">CUT ON: "that we still use" ➔ CUT to Beat 02</span>
                 </div>
 
-                <div class="sfx-footer-row">
-                  <span class="sfx-label">🎵 Sound Design Cue:</span>
-                  <span class="sfx-value">Glacial ice cracking echo</span>
+                <!-- Spoken Voiceover Line -->
+                <div class="clip-vo-line">
+                  <span class="vo-label">🎙️ Spoken Voiceover (8s):</span>
+                  <p class="vo-text">"This was no accident—it was a calculated mathematical decision made in 1569 that we still use."</p>
                 </div>
-              </div>
-            </article>
 
-            <!-- Beat 06 -->
-            <article class="clean-script-card">
-              <div class="card-top-bar">
-                <div class="card-title-group">
-                  <span class="beat-pill">Beat 06</span>
-                  <h3>The 1973 Peters Rebellion</h3>
-                  <span class="time-tag">5:30 – 6:45</span>
-                </div>
-                <span class="word-count-tag">162 words</span>
-              </div>
-
-              <!-- Spoken Voiceover Narration Box -->
-              <div class="voiceover-text-box">
-                <p>For centuries, this mathematical inflation went largely unquestioned. But in May 1973, a German historian named Arno Peters called a massive press conference in Bonn. Peters accused the cartography establishment of deliberate Eurocentric racism. He argued that the Mercator projection gave European colonial powers an inflated psychological sense of superiority by making small European nations look massive while diminishing the developing nations of Africa, South America, and South Asia. Peters unveiled his own solution: an equal-area projection that represented every country's true land area precisely. His map became an overnight sensation, adopted by the United Nations, church organizations, and school boards worldwide. But among professional cartographers, the reaction was not praise. It was sheer fury.</p>
-              </div>
-
-              <!-- Visual & AI Prompt Directive -->
-              <div class="production-directive-box">
-                <div class="directive-row">
-                  <div class="directive-item">
-                    <span class="directive-label">🎥 Visual Event</span>
-                    <p>Archival 1970s footage/stills of Arno Peters holding press conference, contrasting Gall-Peters map beside classical Mercator.</p>
+                <!-- Visual Action & Flow AI Prompt -->
+                <div class="clip-visual-block">
+                  <div class="visual-desc">
+                    <span class="visual-label">🎥 On-Screen Visual:</span>
+                    <p>Macro copperplate engraving of 1569 world map with compass rose lines etched in copper.</p>
                   </div>
-                  <div class="directive-item">
-                    <span class="directive-label">✂️ Cut Trigger</span>
-                    <span class="cut-trigger-pill">CUT ON: "sheer fury" ➔ CUT to Beat 07</span>
+
+                  <div class="prompt-code-wrap">
+                    <div class="prompt-bar">
+                      <span class="prompt-badge">⚡ Flow AI Prompt (§20 Formula)</span>
+                      <button class="clean-copy-btn" onclick="copyPrompt(this)">Copy Prompt</button>
+                    </div>
+                    <pre class="prompt-snippet"><code>Create an 8-second horizontal 16:9 cinematic clip. Macro close-up of intricate 16th-century copperplate engraving of world map, fine etched crosshatch lines, warm side lighting, 8k macro --ar 16:9</code></pre>
+                  </div>
+
+                  <div class="clip-sfx-row">
+                    <span class="sfx-tag-label">🎵 SFX:</span>
+                    <span class="sfx-tag-val">Dramatic strings swell into main theme</span>
                   </div>
                 </div>
+              </div>
+            </div>
+          </article>
 
-                <div class="directive-prompt-box">
-                  <div class="prompt-head">
-                    <span class="prompt-label">⚡ Google Flow AI Cinematography Prompt (§20)</span>
-                    <button class="clean-copy-btn" onclick="copyPrompt(this)">Copy Prompt</button>
+          <!-- BEAT 02 -->
+          <article class="clean-beat-container">
+            <div class="beat-section-header">
+              <div class="beat-title-wrap">
+                <span class="beat-badge">BEAT 02</span>
+                <h3>The True Scale · Gauss's Theorem</h3>
+              </div>
+              <span class="beat-time-badge">0:45 – 1:45 · 6 Clips</span>
+            </div>
+
+            <div class="clips-sequence-list">
+              <!-- CLIP 06 -->
+              <div class="granular-clip-box">
+                <div class="clip-header-row">
+                  <div class="clip-id-badge">
+                    <span class="clip-pill">CLIP 06</span>
+                    <span class="clip-time">00:45 – 00:55</span>
                   </div>
-                  <pre class="prompt-text"><code>Create an 8-second horizontal 16:9 cinematic clip. 1970s press conference room with vintage microphones on podium, camera flashbulbs firing, black and white archival documentary look, 8k --ar 16:9</code></pre>
+                  <span class="cut-trigger-pill">CUT ON: "three million square kilometres" ➔ CUT to Clip 07</span>
                 </div>
 
-                <div class="sfx-footer-row">
-                  <span class="sfx-label">🎵 Sound Design Cue:</span>
-                  <span class="sfx-value">Camera flashbulb clicks & crowd murmur</span>
+                <!-- Spoken Voiceover Line -->
+                <div class="clip-vo-line">
+                  <span class="vo-label">🎙️ Spoken Voiceover (8s):</span>
+                  <p class="vo-text">"To see the true distortion, look at the actual numbers: Africa spans thirty point three million square kilometres."</p>
                 </div>
-              </div>
-            </article>
 
-            <!-- Beat 07 -->
-            <article class="clean-script-card">
-              <div class="card-top-bar">
-                <div class="card-title-group">
-                  <span class="beat-pill">Beat 07</span>
-                  <h3>The Mid-Video Retention Turn</h3>
-                  <span class="time-tag">6:45 – 8:00</span>
-                </div>
-                <span class="word-count-tag">168 words</span>
-              </div>
-
-              <!-- Spoken Voiceover Narration Box -->
-              <div class="voiceover-text-box">
-                <p>Cartographers were furious for two reasons. First, Arno Peters had not invented the map at all. A Scottish clergyman named James Gall had published the identical projection one hundred and eighteen years earlier, in 1855. Second, and far more critically, while the Gall-Peters projection gave countries their true geographic area, it completely butchered their shapes. In order to squeeze tropical continents into equal areas, Peters stretched Africa and South America into elongated, narrow vertical ribbons. Africa looked like wet laundry hanging from a clothesline. The human brain recognizes geography primarily through coastline shapes, not abstract square mileage. A child looking at a Gall-Peters map learns true land proportions, but completely loses the ability to recognize landmass contours or navigate local directions. The cure was as flawed as the disease.</p>
-              </div>
-
-              <!-- Visual & AI Prompt Directive -->
-              <div class="production-directive-box">
-                <div class="directive-row">
-                  <div class="directive-item">
-                    <span class="directive-label">🎥 Visual Event</span>
-                    <p>Visual comparison: Africa on Gall-Peters looking elongated and narrow vs normal globe, with shape distortion grids highlighting 50° shear angles.</p>
+                <!-- Visual Action & Flow AI Prompt -->
+                <div class="clip-visual-block">
+                  <div class="visual-desc">
+                    <span class="visual-label">🎥 On-Screen Visual:</span>
+                    <p>Vast African savannah landscape at sunrise with acacia trees and glowing golden horizon.</p>
                   </div>
-                  <div class="directive-item">
-                    <span class="directive-label">✂️ Cut Trigger</span>
-                    <span class="cut-trigger-pill">CUT ON: "flawed as the disease" ➔ CUT to Beat 08</span>
+
+                  <div class="prompt-code-wrap">
+                    <div class="prompt-bar">
+                      <span class="prompt-badge">⚡ Flow AI Prompt (§20 Formula)</span>
+                      <button class="clean-copy-btn" onclick="copyPrompt(this)">Copy Prompt</button>
+                    </div>
+                    <pre class="prompt-snippet"><code>Create an 8-second horizontal 16:9 cinematic clip. Cinematic low-altitude tracking shot over sweeping East African savannah at sunrise, lone acacia tree silhouetted against glowing orange horizon, golden hour light, 8k --ar 16:9</code></pre>
                   </div>
-                </div>
 
-                <div class="directive-prompt-box">
-                  <div class="prompt-head">
-                    <span class="prompt-label">⚡ Google Flow AI Cinematography Prompt (§20)</span>
-                    <button class="clean-copy-btn" onclick="copyPrompt(this)">Copy Prompt</button>
-                  </div>
-                  <pre class="prompt-text"><code>Create an 8-second horizontal 16:9 cinematic clip. Close-up of hands unfurling large Gall-Peters equal-area world map on wooden conference table, studio side lighting, 8k --ar 16:9</code></pre>
-                </div>
-
-                <div class="sfx-footer-row">
-                  <span class="sfx-label">🎵 Sound Design Cue:</span>
-                  <span class="sfx-value">Tension drone resolving into bass hit</span>
-                </div>
-              </div>
-            </article>
-
-            <!-- Beat 08 -->
-            <article class="clean-script-card">
-              <div class="card-top-bar">
-                <div class="card-title-group">
-                  <span class="beat-pill">Beat 08</span>
-                  <h3>The 2005 Silicon Valley Dilemma</h3>
-                  <span class="time-tag">8:00 – 9:15</span>
-                </div>
-                <span class="word-count-tag">158 words</span>
-              </div>
-
-              <!-- Spoken Voiceover Narration Box -->
-              <div class="voiceover-text-box">
-                <p>You might assume that with modern satellite imagery and supercomputers, we would have abandoned Mercator in the digital age. But in 2005, when Google built Google Maps, their engineering team had dozens of scientifically accurate projections to choose from: Robinson, Winkel Tripel, Equal Earth. Yet Google deliberately chose Mercator. Why? Because when you open your smartphone to find a coffee shop on a city street, you are not comparing the size of Greenland to Africa. You are navigating street intersections. Because Mercator preserves angles locally, a perpendicular ninety-degree street intersection on the ground is displayed as a perfect ninety-degree right angle on your screen. On an equal-area map, every city block in New York or Tokyo would appear skewed into an angled parallelogram.</p>
-              </div>
-
-              <!-- Visual & AI Prompt Directive -->
-              <div class="production-directive-box">
-                <div class="directive-row">
-                  <div class="directive-item">
-                    <span class="directive-label">🎥 Visual Event</span>
-                    <p>User interface transition from global zoom down to street level in Manhattan. Street grid stays perfectly orthogonal and square under Mercator.</p>
-                  </div>
-                  <div class="directive-item">
-                    <span class="directive-label">✂️ Cut Trigger</span>
-                    <span class="cut-trigger-pill">CUT ON: "angled parallelogram" ➔ CUT to Beat 09</span>
+                  <div class="clip-sfx-row">
+                    <span class="sfx-tag-label">🎵 SFX:</span>
+                    <span class="sfx-tag-val">Morning breeze & distant wildlife</span>
                   </div>
                 </div>
-
-                <div class="directive-prompt-box">
-                  <div class="prompt-head">
-                    <span class="prompt-label">⚡ Google Flow AI Cinematography Prompt (§20)</span>
-                    <button class="clean-copy-btn" onclick="copyPrompt(this)">Copy Prompt</button>
+              </div>
+              <!-- CLIP 07 -->
+              <div class="granular-clip-box">
+                <div class="clip-header-row">
+                  <div class="clip-id-badge">
+                    <span class="clip-pill">CLIP 07</span>
+                    <span class="clip-time">00:55 – 01:05</span>
                   </div>
-                  <pre class="prompt-text"><code>Create an 8-second horizontal 16:9 cinematic clip. High-altitude orthogonal aerial view of Manhattan street grid intersections, straight down satellite motion, golden hour directional sunlight, 8k --ar 16:9</code></pre>
+                  <span class="cut-trigger-pill">CUT ON: "Congo alone" ➔ CUT to Clip 08</span>
                 </div>
 
-                <div class="sfx-footer-row">
-                  <span class="sfx-label">🎵 Sound Design Cue:</span>
-                  <span class="sfx-value">Digital smartphone chime and UI whoosh</span>
+                <!-- Spoken Voiceover Line -->
+                <div class="clip-vo-line">
+                  <span class="vo-label">🎙️ Spoken Voiceover (8s):</span>
+                  <p class="vo-text">"Greenland is just two point one million—barely the size of the Democratic Republic of Congo alone."</p>
                 </div>
-              </div>
-            </article>
 
-            <!-- Beat 09 -->
-            <article class="clean-script-card">
-              <div class="card-top-bar">
-                <div class="card-title-group">
-                  <span class="beat-pill">Beat 09</span>
-                  <h3>The EPSG:3857 Tile Engine</h3>
-                  <span class="time-tag">9:15 – 10:30</span>
-                </div>
-                <span class="word-count-tag">160 words</span>
-              </div>
-
-              <!-- Spoken Voiceover Narration Box -->
-              <div class="voiceover-text-box">
-                <p>There was another massive computer science advantage. By truncating the polar regions at eighty-five degrees north and south, the Mercator projection flattens the entire inhabited surface of the Earth into a perfect square. A square can be divided evenly into four smaller squares, each of those into four more, creating a seamless multi-level tile pyramid. Web servers can store the world as pre-rendered 256-by-256 pixel PNG tiles. When you swipe across your phone screen, your device only downloads the specific four or five tiles visible in your viewport. This standard, now officially catalogued as EPSG:3857 or Web Mercator, was adopted by Apple Maps, OpenStreetMap, Mapbox, and Bing Maps. The convenience of square tile math permanently locked 1569 navigation physics into the architecture of the modern internet.</p>
-              </div>
-
-              <!-- Visual & AI Prompt Directive -->
-              <div class="production-directive-box">
-                <div class="directive-row">
-                  <div class="directive-item">
-                    <span class="directive-label">🎥 Visual Event</span>
-                    <p>3D technical animation of tile pyramid: World splitting into 4 quadrants, then 16, then 64, cascading downward with glowing data streams.</p>
+                <!-- Visual Action & Flow AI Prompt -->
+                <div class="clip-visual-block">
+                  <div class="visual-desc">
+                    <span class="visual-label">🎥 On-Screen Visual:</span>
+                    <p>Drone shot over icy blue glaciers in Greenland drifting in dark polar ocean waters.</p>
                   </div>
-                  <div class="directive-item">
-                    <span class="directive-label">✂️ Cut Trigger</span>
-                    <span class="cut-trigger-pill">CUT ON: "modern internet" ➔ CUT to Beat 10</span>
+
+                  <div class="prompt-code-wrap">
+                    <div class="prompt-bar">
+                      <span class="prompt-badge">⚡ Flow AI Prompt (§20 Formula)</span>
+                      <button class="clean-copy-btn" onclick="copyPrompt(this)">Copy Prompt</button>
+                    </div>
+                    <pre class="prompt-snippet"><code>Create an 8-second horizontal 16:9 cinematic clip. Low-angle slow dolly across icy jagged Arctic glaciers in Greenland, freezing mist rising off blue ocean water, harsh cold winter light, 8k --ar 16:9</code></pre>
+                  </div>
+
+                  <div class="clip-sfx-row">
+                    <span class="sfx-tag-label">🎵 SFX:</span>
+                    <span class="sfx-tag-val">Glacier ice creak & cold wind</span>
                   </div>
                 </div>
-
-                <div class="directive-prompt-box">
-                  <div class="prompt-head">
-                    <span class="prompt-label">⚡ Google Flow AI Cinematography Prompt (§20)</span>
-                    <button class="clean-copy-btn" onclick="copyPrompt(this)">Copy Prompt</button>
+              </div>
+              <!-- CLIP 08 -->
+              <div class="granular-clip-box">
+                <div class="clip-header-row">
+                  <div class="clip-id-badge">
+                    <span class="clip-pill">CLIP 08</span>
+                    <span class="clip-time">01:05 – 01:15</span>
                   </div>
-                  <pre class="prompt-text"><code>Create an 8-second horizontal 16:9 cinematic clip. Glowing server room with server racks blinking in rhythmic cyan and amber LEDs, cinematic slow dolly forward, dark tech aesthetic, 8k --ar 16:9</code></pre>
+                  <span class="cut-trigger-pill">CUT ON: "break the world" ➔ CUT to Clip 09</span>
                 </div>
 
-                <div class="sfx-footer-row">
-                  <span class="sfx-label">🎵 Sound Design Cue:</span>
-                  <span class="sfx-value">Data server fan whir & digital ping</span>
+                <!-- Spoken Voiceover Line -->
+                <div class="clip-vo-line">
+                  <span class="vo-label">🎙️ Spoken Voiceover (8s):</span>
+                  <p class="vo-text">"So why does flattening a three-dimensional sphere onto flat paper break the world?"</p>
                 </div>
-              </div>
-            </article>
 
-            <!-- Beat 10 -->
-            <article class="clean-script-card">
-              <div class="card-top-bar">
-                <div class="card-title-group">
-                  <span class="beat-pill">Beat 10</span>
-                  <h3>The Psychological & Economic Cost</h3>
-                  <span class="time-tag">10:30 – 11:30</span>
-                </div>
-                <span class="word-count-tag">155 words</span>
-              </div>
-
-              <!-- Spoken Voiceover Narration Box -->
-              <div class="voiceover-text-box">
-                <p>While Web Mercator is flawless for street navigation, keeping it on classroom walls has created profound unconscious cognitive biases. When generations of students grow up seeing Europe look larger than South America, and Greenland look larger than the entire African continent, it distorts our intuitive perception of global resource distribution, population capacity, and economic gravity. In reality, Africa is larger than the United States, China, India, Western Europe, and Japan combined. Its mineral reserves, solar energy potential, and agricultural land are vast. Yet in global policy discussions, the continent is often discussed as if it were a single small country, largely because of the lingering visual subconscious imprint of 16th-century nautical charts.</p>
-              </div>
-
-              <!-- Visual & AI Prompt Directive -->
-              <div class="production-directive-box">
-                <div class="directive-row">
-                  <div class="directive-item">
-                    <span class="directive-label">🎥 Visual Event</span>
-                    <p>Dark economic infographic: Outlines of global economic trade corridors fading over true-size African continent with mineral and solar resource overlays.</p>
+                <!-- Visual Action & Flow AI Prompt -->
+                <div class="clip-visual-block">
+                  <div class="visual-desc">
+                    <span class="visual-label">🎥 On-Screen Visual:</span>
+                    <p>3D geometric wireframe globe rotating over glass table with glowing cyan latitude rings.</p>
                   </div>
-                  <div class="directive-item">
-                    <span class="directive-label">✂️ Cut Trigger</span>
-                    <span class="cut-trigger-pill">CUT ON: "nautical charts" ➔ CUT to Beat 11</span>
+
+                  <div class="prompt-code-wrap">
+                    <div class="prompt-bar">
+                      <span class="prompt-badge">⚡ Flow AI Prompt (§20 Formula)</span>
+                      <button class="clean-copy-btn" onclick="copyPrompt(this)">Copy Prompt</button>
+                    </div>
+                    <pre class="prompt-snippet"><code>Create an 8-second horizontal 16:9 cinematic clip. Geometric wireframe holographic globe rotating over dark glass surface, glowing cyan grid lines, clean minimalist design, 8k --ar 16:9</code></pre>
+                  </div>
+
+                  <div class="clip-sfx-row">
+                    <span class="sfx-tag-label">🎵 SFX:</span>
+                    <span class="sfx-tag-val">Digital electronic pulse</span>
                   </div>
                 </div>
-
-                <div class="directive-prompt-box">
-                  <div class="prompt-head">
-                    <span class="prompt-label">⚡ Google Flow AI Cinematography Prompt (§20)</span>
-                    <button class="clean-copy-btn" onclick="copyPrompt(this)">Copy Prompt</button>
+              </div>
+              <!-- CLIP 09 -->
+              <div class="granular-clip-box">
+                <div class="clip-header-row">
+                  <div class="clip-id-badge">
+                    <span class="clip-pill">CLIP 09</span>
+                    <span class="clip-time">01:15 – 01:25</span>
                   </div>
-                  <pre class="prompt-text"><code>Create an 8-second horizontal 16:9 cinematic clip. Cinematic low-angle tracking shot through modern skyscraper financial district, sleek glass reflections, sharp morning light, 8k --ar 16:9</code></pre>
+                  <span class="cut-trigger-pill">CUT ON: "stretching its surface" ➔ CUT to Clip 10</span>
                 </div>
 
-                <div class="sfx-footer-row">
-                  <span class="sfx-label">🎵 Sound Design Cue:</span>
-                  <span class="sfx-value">Deep resonating cello tone</span>
+                <!-- Spoken Voiceover Line -->
+                <div class="clip-vo-line">
+                  <span class="vo-label">🎙️ Spoken Voiceover (8s):</span>
+                  <p class="vo-text">"In 1828, Carl Friedrich Gauss proved that no sphere can ever be flattened without stretching its surface."</p>
                 </div>
-              </div>
-            </article>
 
-            <!-- Beat 11 -->
-            <article class="clean-script-card">
-              <div class="card-top-bar">
-                <div class="card-title-group">
-                  <span class="beat-pill">Beat 11</span>
-                  <h3>The Modern Alternatives</h3>
-                  <span class="time-tag">11:30 – 12:30</span>
-                </div>
-                <span class="word-count-tag">148 words</span>
-              </div>
-
-              <!-- Spoken Voiceover Narration Box -->
-              <div class="voiceover-text-box">
-                <p>Fortunately, modern cartography has solved this dilemma. In 2018, cartographers Bojan Savric, Tom Patterson, and Bernhard Jenny released the Equal Earth projection. It preserves true relative areas with zero distortion of land sizes, while using gentle curved meridians to keep continent shapes natural and visually pleasing. Boston Public Schools recently replaced all classroom wall maps with Equal Earth and Gall-Peters alternatives. Simultaneously, Google Maps updated its desktop browser client to seamlessly switch from flat Web Mercator into a full 3D interactive spinning globe once you zoom out beyond continental scale. For the first time in five centuries, you can zoom into your local street using Mercator angles, and zoom out to view Africa in its true spherical magnificence.</p>
-              </div>
-
-              <!-- Visual & AI Prompt Directive -->
-              <div class="production-directive-box">
-                <div class="directive-row">
-                  <div class="directive-item">
-                    <span class="directive-label">🎥 Visual Event</span>
-                    <p>Smooth morphing animation: Flat Mercator map curving gracefully into the elegant Equal Earth projection, then transitioning into a dynamic 3D spinning globe.</p>
+                <!-- Visual Action & Flow AI Prompt -->
+                <div class="clip-visual-block">
+                  <div class="visual-desc">
+                    <span class="visual-label">🎥 On-Screen Visual:</span>
+                    <p>Macro shot of mathematical geometry equations and compass circles hand-drawn on aged parchment.</p>
                   </div>
-                  <div class="directive-item">
-                    <span class="directive-label">✂️ Cut Trigger</span>
-                    <span class="cut-trigger-pill">CUT ON: "spherical magnificence" ➔ CUT to Beat 12</span>
+
+                  <div class="prompt-code-wrap">
+                    <div class="prompt-bar">
+                      <span class="prompt-badge">⚡ Flow AI Prompt (§20 Formula)</span>
+                      <button class="clean-copy-btn" onclick="copyPrompt(this)">Copy Prompt</button>
+                    </div>
+                    <pre class="prompt-snippet"><code>Create an 8-second horizontal 16:9 cinematic clip. Close-up macro shot of mathematical equations and geometric circles drawn with ink on vintage parchment, warm directional desk lamp, 8k --ar 16:9</code></pre>
+                  </div>
+
+                  <div class="clip-sfx-row">
+                    <span class="sfx-tag-label">🎵 SFX:</span>
+                    <span class="sfx-tag-val">Quill pen writing sound</span>
                   </div>
                 </div>
-
-                <div class="directive-prompt-box">
-                  <div class="prompt-head">
-                    <span class="prompt-label">⚡ Google Flow AI Cinematography Prompt (§20)</span>
-                    <button class="clean-copy-btn" onclick="copyPrompt(this)">Copy Prompt</button>
+              </div>
+              <!-- CLIP 10 -->
+              <div class="granular-clip-box">
+                <div class="clip-header-row">
+                  <div class="clip-id-badge">
+                    <span class="clip-pill">CLIP 10</span>
+                    <span class="clip-time">01:25 – 01:35</span>
                   </div>
-                  <pre class="prompt-text"><code>Create an 8-second horizontal 16:9 cinematic clip. Beautiful 3D photorealistic globe slowly spinning in dark space, bright atmospheric rim glow, realistic continents and blue oceans, 8k --ar 16:9</code></pre>
+                  <span class="cut-trigger-pill">CUT ON: "compass direction" ➔ CUT to Clip 11</span>
                 </div>
 
-                <div class="sfx-footer-row">
-                  <span class="sfx-label">🎵 Sound Design Cue:</span>
-                  <span class="sfx-value">Harmonious chime and wind swell</span>
+                <!-- Spoken Voiceover Line -->
+                <div class="clip-vo-line">
+                  <span class="vo-label">🎙️ Spoken Voiceover (8s):</span>
+                  <p class="vo-text">"Every cartographer must choose what to sacrifice: true shape, true area, or true compass direction."</p>
                 </div>
-              </div>
-            </article>
 
-            <!-- Beat 12 -->
-            <article class="clean-script-card">
-              <div class="card-top-bar">
-                <div class="card-title-group">
-                  <span class="beat-pill">Beat 12</span>
-                  <h3>The Final Resolution</h3>
-                  <span class="time-tag">12:30 – 13:14</span>
-                </div>
-                <span class="word-count-tag">135 words</span>
-              </div>
-
-              <!-- Spoken Voiceover Narration Box -->
-              <div class="voiceover-text-box">
-                <p>Maps are not photographs of our planet. They are mathematical compromises created by human beings to solve specific human problems. Gerardus Mercator did not lie to us about Africa. He built the greatest navigational tool in maritime history. The mistake was never his—the mistake was ours, for taking a tool designed for 16th-century sailors across stormy oceans, and pinning it onto the walls of school classrooms for four hundred and fifty years. The next time you look at a world map, remember: the earth is not flat, no flat map is perfect, and Africa is far, far bigger than you were ever taught.</p>
-              </div>
-
-              <!-- Visual & AI Prompt Directive -->
-              <div class="production-directive-box">
-                <div class="directive-row">
-                  <div class="directive-item">
-                    <span class="directive-label">🎥 Visual Event</span>
-                    <p>Camera slowly pulls back into deep space, leaving the glowing blue and gold sphere of Earth rotating peacefully in the dark expanse. Channel subscribe watermark appears.</p>
+                <!-- Visual Action & Flow AI Prompt -->
+                <div class="clip-visual-block">
+                  <div class="visual-desc">
+                    <span class="visual-label">🎥 On-Screen Visual:</span>
+                    <p>Holographic display showing 3 dials: [SHAPE], [AREA], and [BEARING] rotating in balance.</p>
                   </div>
-                  <div class="directive-item">
-                    <span class="directive-label">✂️ Cut Trigger</span>
-                    <span class="cut-trigger-pill">FADE TO BLACK ➔ Outro End Screen</span>
+
+                  <div class="prompt-code-wrap">
+                    <div class="prompt-bar">
+                      <span class="prompt-badge">⚡ Flow AI Prompt (§20 Formula)</span>
+                      <button class="clean-copy-btn" onclick="copyPrompt(this)">Copy Prompt</button>
+                    </div>
+                    <pre class="prompt-snippet"><code>Create an 8-second horizontal 16:9 cinematic clip. Futuristic dark studio table with glowing holographic cartographic dials adjusting in real-time, clean depth of field, 8k --ar 16:9</code></pre>
+                  </div>
+
+                  <div class="clip-sfx-row">
+                    <span class="sfx-tag-label">🎵 SFX:</span>
+                    <span class="sfx-tag-val">Mechanical dial switch click</span>
                   </div>
                 </div>
-
-                <div class="directive-prompt-box">
-                  <div class="prompt-head">
-                    <span class="prompt-label">⚡ Google Flow AI Cinematography Prompt (§20)</span>
-                    <button class="clean-copy-btn" onclick="copyPrompt(this)">Copy Prompt</button>
+              </div>
+              <!-- CLIP 11 -->
+              <div class="granular-clip-box">
+                <div class="clip-header-row">
+                  <div class="clip-id-badge">
+                    <span class="clip-pill">CLIP 11</span>
+                    <span class="clip-time">01:35 – 01:45</span>
                   </div>
-                  <pre class="prompt-text"><code>Create an 8-second horizontal 16:9 cinematic clip. Cinematic deep space pull back from Earth, golden sunrise cresting over the African continent, ethereal starry background, photorealistic 8k --ar 16:9</code></pre>
+                  <span class="cut-trigger-pill">CUT ON: "transformed maritime history" ➔ CUT to Beat 03</span>
                 </div>
 
-                <div class="sfx-footer-row">
-                  <span class="sfx-label">🎵 Sound Design Cue:</span>
-                  <span class="sfx-value">Grand orchestral crescendo resolving into piano</span>
+                <!-- Spoken Voiceover Line -->
+                <div class="clip-vo-line">
+                  <span class="vo-label">🎙️ Spoken Voiceover (8s):</span>
+                  <p class="vo-text">"In 1569, a Flemish geographer named Gerardus Mercator made a choice that transformed maritime history."</p>
+                </div>
+
+                <!-- Visual Action & Flow AI Prompt -->
+                <div class="clip-visual-block">
+                  <div class="visual-desc">
+                    <span class="visual-label">🎥 On-Screen Visual:</span>
+                    <p>Dramatic slow push on portrait of Gerardus Mercator surrounded by antique calipers and maps.</p>
+                  </div>
+
+                  <div class="prompt-code-wrap">
+                    <div class="prompt-bar">
+                      <span class="prompt-badge">⚡ Flow AI Prompt (§20 Formula)</span>
+                      <button class="clean-copy-btn" onclick="copyPrompt(this)">Copy Prompt</button>
+                    </div>
+                    <pre class="prompt-snippet"><code>Create an 8-second horizontal 16:9 cinematic clip. Vintage oil-painting style documentary tracking shot of 16th-century cartographer studio in Flanders, warm candle glow on copper plates and globes, 8k --ar 16:9</code></pre>
+                  </div>
+
+                  <div class="clip-sfx-row">
+                    <span class="sfx-tag-label">🎵 SFX:</span>
+                    <span class="sfx-tag-val">Low cello crescendo</span>
+                  </div>
                 </div>
               </div>
-            </article>
+            </div>
+          </article>
+
+          <!-- BEAT 03 -->
+          <article class="clean-beat-container">
+            <div class="beat-section-header">
+              <div class="beat-title-wrap">
+                <span class="beat-badge">BEAT 03</span>
+                <h3>The 1569 Navigator Problem</h3>
+              </div>
+              <span class="beat-time-badge">1:45 – 3:00 · 6 Clips</span>
+            </div>
+
+            <div class="clips-sequence-list">
+              <!-- CLIP 12 -->
+              <div class="granular-clip-box">
+                <div class="clip-header-row">
+                  <div class="clip-id-badge">
+                    <span class="clip-pill">CLIP 12</span>
+                    <span class="clip-time">01:45 – 01:58</span>
+                  </div>
+                  <span class="cut-trigger-pill">CUT ON: "for sea captains" ➔ CUT to Clip 13</span>
+                </div>
+
+                <!-- Spoken Voiceover Line -->
+                <div class="clip-vo-line">
+                  <span class="vo-label">🎙️ Spoken Voiceover (8s):</span>
+                  <p class="vo-text">"Mercator was not building a map for classrooms—he was building a life-or-death tool for sea captains."</p>
+                </div>
+
+                <!-- Visual Action & Flow AI Prompt -->
+                <div class="clip-visual-block">
+                  <div class="visual-desc">
+                    <span class="visual-label">🎥 On-Screen Visual:</span>
+                    <p>16th-century Spanish galleon sailing in turbulent deep Atlantic ocean amidst dark storm clouds.</p>
+                  </div>
+
+                  <div class="prompt-code-wrap">
+                    <div class="prompt-bar">
+                      <span class="prompt-badge">⚡ Flow AI Prompt (§20 Formula)</span>
+                      <button class="clean-copy-btn" onclick="copyPrompt(this)">Copy Prompt</button>
+                    </div>
+                    <pre class="prompt-snippet"><code>Create an 8-second horizontal 16:9 cinematic clip. Documentary photography, 16th-century wooden Spanish galleon sailing in turbulent deep Atlantic ocean, low-angle forward tracking camera, dramatic overcast lighting, misty sea spray, cinematic realism, no text --ar 16:9</code></pre>
+                  </div>
+
+                  <div class="clip-sfx-row">
+                    <span class="sfx-tag-label">🎵 SFX:</span>
+                    <span class="sfx-tag-val">Ocean waves crashing & timber groan</span>
+                  </div>
+                </div>
+              </div>
+              <!-- CLIP 13 -->
+              <div class="granular-clip-box">
+                <div class="clip-header-row">
+                  <div class="clip-id-badge">
+                    <span class="clip-pill">CLIP 13</span>
+                    <span class="clip-time">01:58 – 02:10</span>
+                  </div>
+                  <span class="cut-trigger-pill">CUT ON: "called a great circle" ➔ CUT to Clip 14</span>
+                </div>
+
+                <!-- Spoken Voiceover Line -->
+                <div class="clip-vo-line">
+                  <span class="vo-label">🎙️ Spoken Voiceover (8s):</span>
+                  <p class="vo-text">"On a spherical Earth, the shortest route between two ports is a curved arc called a great circle."</p>
+                </div>
+
+                <!-- Visual Action & Flow AI Prompt -->
+                <div class="clip-visual-block">
+                  <div class="visual-desc">
+                    <span class="visual-label">🎥 On-Screen Visual:</span>
+                    <p>Glowing red curved arc sweeping across Atlantic ocean globe from Lisbon to Caribbean.</p>
+                  </div>
+
+                  <div class="prompt-code-wrap">
+                    <div class="prompt-bar">
+                      <span class="prompt-badge">⚡ Flow AI Prompt (§20 Formula)</span>
+                      <button class="clean-copy-btn" onclick="copyPrompt(this)">Copy Prompt</button>
+                    </div>
+                    <pre class="prompt-snippet"><code>Create an 8-second horizontal 16:9 cinematic clip. 3D orbital view of dark Earth with glowing red curved flight path arcing across North Atlantic Ocean, realistic atmosphere rim, 8k --ar 16:9</code></pre>
+                  </div>
+
+                  <div class="clip-sfx-row">
+                    <span class="sfx-tag-label">🎵 SFX:</span>
+                    <span class="sfx-tag-val">Ethereal laser sweep sound</span>
+                  </div>
+                </div>
+              </div>
+              <!-- CLIP 14 -->
+              <div class="granular-clip-box">
+                <div class="clip-header-row">
+                  <div class="clip-id-badge">
+                    <span class="clip-pill">CLIP 14</span>
+                    <span class="clip-time">02:10 – 02:22</span>
+                  </div>
+                  <span class="cut-trigger-pill">CUT ON: "every single hour" ➔ CUT to Clip 15</span>
+                </div>
+
+                <!-- Spoken Voiceover Line -->
+                <div class="clip-vo-line">
+                  <span class="vo-label">🎙️ Spoken Voiceover (8s):</span>
+                  <p class="vo-text">"Sailing a great circle requires recalculating your steering compass every single hour of the voyage."</p>
+                </div>
+
+                <!-- Visual Action & Flow AI Prompt -->
+                <div class="clip-visual-block">
+                  <div class="visual-desc">
+                    <span class="visual-label">🎥 On-Screen Visual:</span>
+                    <p>Antique brass magnetic compass on ship deck swaying violently in stormy sea mist.</p>
+                  </div>
+
+                  <div class="prompt-code-wrap">
+                    <div class="prompt-bar">
+                      <span class="prompt-badge">⚡ Flow AI Prompt (§20 Formula)</span>
+                      <button class="clean-copy-btn" onclick="copyPrompt(this)">Copy Prompt</button>
+                    </div>
+                    <pre class="prompt-snippet"><code>Create an 8-second horizontal 16:9 cinematic clip. Antique brass magnetic navigation compass on weathered wooden ship deck, compass needle swaying in rough seas, dramatic ocean backdrop, 8k --ar 16:9</code></pre>
+                  </div>
+
+                  <div class="clip-sfx-row">
+                    <span class="sfx-tag-label">🎵 SFX:</span>
+                    <span class="sfx-tag-val">Brass compass rattle and wind gust</span>
+                  </div>
+                </div>
+              </div>
+              <!-- CLIP 15 -->
+              <div class="granular-clip-box">
+                <div class="clip-header-row">
+                  <div class="clip-id-badge">
+                    <span class="clip-pill">CLIP 15</span>
+                    <span class="clip-time">02:22 – 02:35</span>
+                  </div>
+                  <span class="cut-trigger-pill">CUT ON: "deadly reefs" ➔ CUT to Clip 16</span>
+                </div>
+
+                <!-- Spoken Voiceover Line -->
+                <div class="clip-vo-line">
+                  <span class="vo-label">🎙️ Spoken Voiceover (8s):</span>
+                  <p class="vo-text">"Under stormy skies with no visible stars, calculation errors meant running aground on deadly reefs."</p>
+                </div>
+
+                <!-- Visual Action & Flow AI Prompt -->
+                <div class="clip-visual-block">
+                  <div class="visual-desc">
+                    <span class="visual-label">🎥 On-Screen Visual:</span>
+                    <p>Dangerous jagged coral reef breaking foam under dark stormy coastal waves.</p>
+                  </div>
+
+                  <div class="prompt-code-wrap">
+                    <div class="prompt-bar">
+                      <span class="prompt-badge">⚡ Flow AI Prompt (§20 Formula)</span>
+                      <button class="clean-copy-btn" onclick="copyPrompt(this)">Copy Prompt</button>
+                    </div>
+                    <pre class="prompt-snippet"><code>Create an 8-second horizontal 16:9 cinematic clip. Dramatic drone shot of sharp volcanic ocean reef rocks with violent white foam waves crashing over black stone, dark stormy sky, 8k --ar 16:9</code></pre>
+                  </div>
+
+                  <div class="clip-sfx-row">
+                    <span class="sfx-tag-label">🎵 SFX:</span>
+                    <span class="sfx-tag-val">Violent wave crash on rocks</span>
+                  </div>
+                </div>
+              </div>
+              <!-- CLIP 16 -->
+              <div class="granular-clip-box">
+                <div class="clip-header-row">
+                  <div class="clip-id-badge">
+                    <span class="clip-pill">CLIP 16</span>
+                    <span class="clip-time">02:35 – 02:48</span>
+                  </div>
+                  <span class="cut-trigger-pill">CUT ON: "constant compass bearing" ➔ CUT to Clip 17</span>
+                </div>
+
+                <!-- Spoken Voiceover Line -->
+                <div class="clip-vo-line">
+                  <span class="vo-label">🎙️ Spoken Voiceover (8s):</span>
+                  <p class="vo-text">"Mercator wanted a map where any straight line drawn with a ruler was a constant compass bearing."</p>
+                </div>
+
+                <!-- Visual Action & Flow AI Prompt -->
+                <div class="clip-visual-block">
+                  <div class="visual-desc">
+                    <span class="visual-label">🎥 On-Screen Visual:</span>
+                    <p>Top-down view of wooden ruler and quill pen drawing a straight line across sea chart.</p>
+                  </div>
+
+                  <div class="prompt-code-wrap">
+                    <div class="prompt-bar">
+                      <span class="prompt-badge">⚡ Flow AI Prompt (§20 Formula)</span>
+                      <button class="clean-copy-btn" onclick="copyPrompt(this)">Copy Prompt</button>
+                    </div>
+                    <pre class="prompt-snippet"><code>Create an 8-second horizontal 16:9 cinematic clip. Close-up of wooden ruler and quill pen drawing a straight black line across vintage navigational map, warm candlelight, dust motes floating in light beam, 8k --ar 16:9</code></pre>
+                  </div>
+
+                  <div class="clip-sfx-row">
+                    <span class="sfx-tag-label">🎵 SFX:</span>
+                    <span class="sfx-tag-val">Ruler slide & ink scratch</span>
+                  </div>
+                </div>
+              </div>
+              <!-- CLIP 17 -->
+              <div class="granular-clip-box">
+                <div class="clip-header-row">
+                  <div class="clip-id-badge">
+                    <span class="clip-pill">CLIP 17</span>
+                    <span class="clip-time">02:48 – 03:00</span>
+                  </div>
+                  <span class="cut-trigger-pill">CUT ON: "guaranteed to arrive" ➔ CUT to Beat 04</span>
+                </div>
+
+                <!-- Spoken Voiceover Line -->
+                <div class="clip-vo-line">
+                  <span class="vo-label">🎙️ Spoken Voiceover (8s):</span>
+                  <p class="vo-text">"Sailors called this a rhumb line: hold one compass direction, and you are guaranteed to arrive."</p>
+                </div>
+
+                <!-- Visual Action & Flow AI Prompt -->
+                <div class="clip-visual-block">
+                  <div class="visual-desc">
+                    <span class="visual-label">🎥 On-Screen Visual:</span>
+                    <p>Captains hand on wooden ship steering wheel pointing ship bow directly toward sunrise horizon.</p>
+                  </div>
+
+                  <div class="prompt-code-wrap">
+                    <div class="prompt-bar">
+                      <span class="prompt-badge">⚡ Flow AI Prompt (§20 Formula)</span>
+                      <button class="clean-copy-btn" onclick="copyPrompt(this)">Copy Prompt</button>
+                    </div>
+                    <pre class="prompt-snippet"><code>Create an 8-second horizontal 16:9 cinematic clip. Weathered hands gripping wooden ship steering wheel at sunrise, calm golden ocean horizon ahead, warm majestic lighting, 8k --ar 16:9</code></pre>
+                  </div>
+
+                  <div class="clip-sfx-row">
+                    <span class="sfx-tag-label">🎵 SFX:</span>
+                    <span class="sfx-tag-val">Triumphant horn & calm sea swell</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- BEAT 04 -->
+          <article class="clean-beat-container">
+            <div class="beat-section-header">
+              <div class="beat-title-wrap">
+                <span class="beat-badge">BEAT 04</span>
+                <h3>The Conformal Mathematics</h3>
+              </div>
+              <span class="beat-time-badge">3:00 – 4:15 · 5 Clips</span>
+            </div>
+
+            <div class="clips-sequence-list">
+              <!-- CLIP 18 -->
+              <div class="granular-clip-box">
+                <div class="clip-header-row">
+                  <div class="clip-id-badge">
+                    <span class="clip-pill">CLIP 18</span>
+                    <span class="clip-time">03:00 – 03:15</span>
+                  </div>
+                  <span class="cut-trigger-pill">CUT ON: "around the equator" ➔ CUT to Clip 19</span>
+                </div>
+
+                <!-- Spoken Voiceover Line -->
+                <div class="clip-vo-line">
+                  <span class="vo-label">🎙️ Spoken Voiceover (8s):</span>
+                  <p class="vo-text">"To turn curved bearings into straight lines, Mercator projected Earth onto a cylinder around the equator."</p>
+                </div>
+
+                <!-- Visual Action & Flow AI Prompt -->
+                <div class="clip-visual-block">
+                  <div class="visual-desc">
+                    <span class="visual-label">🎥 On-Screen Visual:</span>
+                    <p>3D transparent glass globe inside a glowing cylindrical grid unrolling into a flat square.</p>
+                  </div>
+
+                  <div class="prompt-code-wrap">
+                    <div class="prompt-bar">
+                      <span class="prompt-badge">⚡ Flow AI Prompt (§20 Formula)</span>
+                      <button class="clean-copy-btn" onclick="copyPrompt(this)">Copy Prompt</button>
+                    </div>
+                    <pre class="prompt-snippet"><code>Create an 8-second horizontal 16:9 cinematic clip. 3D technical animation of transparent glass globe inside illuminated cylinder, glowing vector longitude and latitude lines, clean studio dark background, 8k --ar 16:9</code></pre>
+                  </div>
+
+                  <div class="clip-sfx-row">
+                    <span class="sfx-tag-label">🎵 SFX:</span>
+                    <span class="sfx-tag-val">Glass resonance and electric hum</span>
+                  </div>
+                </div>
+              </div>
+              <!-- CLIP 19 -->
+              <div class="granular-clip-box">
+                <div class="clip-header-row">
+                  <div class="clip-id-badge">
+                    <span class="clip-pill">CLIP 19</span>
+                    <span class="clip-time">03:15 – 03:30</span>
+                  </div>
+                  <span class="cut-trigger-pill">CUT ON: "remain strictly parallel" ➔ CUT to Clip 20</span>
+                </div>
+
+                <!-- Spoken Voiceover Line -->
+                <div class="clip-vo-line">
+                  <span class="vo-label">🎙️ Spoken Voiceover (8s):</span>
+                  <p class="vo-text">"On a globe, longitude lines meet at the poles. On a cylinder, they remain strictly parallel."</p>
+                </div>
+
+                <!-- Visual Action & Flow AI Prompt -->
+                <div class="clip-visual-block">
+                  <div class="visual-desc">
+                    <span class="visual-label">🎥 On-Screen Visual:</span>
+                    <p>Top-down view of North Pole with converging longitude lines unzipping into parallel bars.</p>
+                  </div>
+
+                  <div class="prompt-code-wrap">
+                    <div class="prompt-bar">
+                      <span class="prompt-badge">⚡ Flow AI Prompt (§20 Formula)</span>
+                      <button class="clean-copy-btn" onclick="copyPrompt(this)">Copy Prompt</button>
+                    </div>
+                    <pre class="prompt-snippet"><code>Create an 8-second horizontal 16:9 cinematic clip. High-altitude satellite view of Norwegian fjords and snow-covered Scandinavian coast, slow orbital drift, clear daylight, crisp topological relief, 8k --ar 16:9</code></pre>
+                  </div>
+
+                  <div class="clip-sfx-row">
+                    <span class="sfx-tag-label">🎵 SFX:</span>
+                    <span class="sfx-tag-val">Grid snap sound</span>
+                  </div>
+                </div>
+              </div>
+              <!-- CLIP 20 -->
+              <div class="granular-clip-box">
+                <div class="clip-header-row">
+                  <div class="clip-id-badge">
+                    <span class="clip-pill">CLIP 20</span>
+                    <span class="clip-time">03:30 – 03:45</span>
+                  </div>
+                  <span class="cut-trigger-pill">CUT ON: "hundreds of percent" ➔ CUT to Clip 21</span>
+                </div>
+
+                <!-- Spoken Voiceover Line -->
+                <div class="clip-vo-line">
+                  <span class="vo-label">🎙️ Spoken Voiceover (8s):</span>
+                  <p class="vo-text">"This forces northern landmasses to stretch east-to-west by hundreds of percent."</p>
+                </div>
+
+                <!-- Visual Action & Flow AI Prompt -->
+                <div class="clip-visual-block">
+                  <div class="visual-desc">
+                    <span class="visual-label">🎥 On-Screen Visual:</span>
+                    <p>2D Animation: Greenland stretching horizontally like elastic rubber across the top of the map.</p>
+                  </div>
+
+                  <div class="prompt-code-wrap">
+                    <div class="prompt-bar">
+                      <span class="prompt-badge">⚡ Flow AI Prompt (§20 Formula)</span>
+                      <button class="clean-copy-btn" onclick="copyPrompt(this)">Copy Prompt</button>
+                    </div>
+                    <pre class="prompt-snippet"><code>Create an 8-second horizontal 16:9 cinematic clip. Arctic ice shelf extending across wide ocean bay, dramatic low sun casting long blue shadows, pristine photorealistic 8k --ar 16:9</code></pre>
+                  </div>
+
+                  <div class="clip-sfx-row">
+                    <span class="sfx-tag-label">🎵 SFX:</span>
+                    <span class="sfx-tag-val">Stretching rubber elastic FX</span>
+                  </div>
+                </div>
+              </div>
+              <!-- CLIP 21 -->
+              <div class="granular-clip-box">
+                <div class="clip-header-row">
+                  <div class="clip-id-badge">
+                    <span class="clip-pill">CLIP 21</span>
+                    <span class="clip-time">03:45 – 04:00</span>
+                  </div>
+                  <span class="cut-trigger-pill">CUT ON: "exact same ratio" ➔ CUT to Clip 22</span>
+                </div>
+
+                <!-- Spoken Voiceover Line -->
+                <div class="clip-vo-line">
+                  <span class="vo-label">🎙️ Spoken Voiceover (8s):</span>
+                  <p class="vo-text">"To keep compass angles true, Mercator stretched the vertical latitude spacing by the exact same ratio."</p>
+                </div>
+
+                <!-- Visual Action & Flow AI Prompt -->
+                <div class="clip-visual-block">
+                  <div class="visual-desc">
+                    <span class="visual-label">🎥 On-Screen Visual:</span>
+                    <p>Glowing cyan formula y = ln(tan(pi/4 + phi/2)) expanding spacing between Arctic grid lines.</p>
+                  </div>
+
+                  <div class="prompt-code-wrap">
+                    <div class="prompt-bar">
+                      <span class="prompt-badge">⚡ Flow AI Prompt (§20 Formula)</span>
+                      <button class="clean-copy-btn" onclick="copyPrompt(this)">Copy Prompt</button>
+                    </div>
+                    <pre class="prompt-snippet"><code>Create an 8-second horizontal 16:9 cinematic clip. Glowing cyan mathematical calculus formulas floating in dark technical space over rotating 3D coordinate grid, depth of field, 8k --ar 16:9</code></pre>
+                  </div>
+
+                  <div class="clip-sfx-row">
+                    <span class="sfx-tag-label">🎵 SFX:</span>
+                    <span class="sfx-tag-val">Digital harmonic hum</span>
+                  </div>
+                </div>
+              </div>
+              <!-- CLIP 22 -->
+              <div class="granular-clip-box">
+                <div class="clip-header-row">
+                  <div class="clip-id-badge">
+                    <span class="clip-pill">CLIP 22</span>
+                    <span class="clip-time">04:00 – 04:15</span>
+                  </div>
+                  <span class="cut-trigger-pill">CUT ON: "poles to explode" ➔ CUT to Beat 05</span>
+                </div>
+
+                <!-- Spoken Voiceover Line -->
+                <div class="clip-vo-line">
+                  <span class="vo-label">🎙️ Spoken Voiceover (8s):</span>
+                  <p class="vo-text">"This preserved local shapes flawlessly, but caused the land area of the poles to explode."</p>
+                </div>
+
+                <!-- Visual Action & Flow AI Prompt -->
+                <div class="clip-visual-block">
+                  <div class="visual-desc">
+                    <span class="visual-label">🎥 On-Screen Visual:</span>
+                    <p>Side-by-side comparison of tiny actual Greenland exploding into massive giant on Mercator canvas.</p>
+                  </div>
+
+                  <div class="prompt-code-wrap">
+                    <div class="prompt-bar">
+                      <span class="prompt-badge">⚡ Flow AI Prompt (§20 Formula)</span>
+                      <button class="clean-copy-btn" onclick="copyPrompt(this)">Copy Prompt</button>
+                    </div>
+                    <pre class="prompt-snippet"><code>Create an 8-second horizontal 16:9 cinematic clip. Dramatic slow camera track across massive ice wall in Greenland, turquoise glacial meltwater, warm afternoon sun, 8k realism --ar 16:9</code></pre>
+                  </div>
+
+                  <div class="clip-sfx-row">
+                    <span class="sfx-tag-label">🎵 SFX:</span>
+                    <span class="sfx-tag-val">Heavy bass hit</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- BEAT 05 -->
+          <article class="clean-beat-container">
+            <div class="beat-section-header">
+              <div class="beat-title-wrap">
+                <span class="beat-badge">BEAT 05</span>
+                <h3>Why the Poles Explode</h3>
+              </div>
+              <span class="beat-time-badge">4:15 – 5:30 · 5 Clips</span>
+            </div>
+
+            <div class="clips-sequence-list">
+              <!-- CLIP 23 -->
+              <div class="granular-clip-box">
+                <div class="clip-header-row">
+                  <div class="clip-id-badge">
+                    <span class="clip-pill">CLIP 23</span>
+                    <span class="clip-time">04:15 – 04:30</span>
+                  </div>
+                  <span class="cut-trigger-pill">CUT ON: "one real square inch" ➔ CUT to Clip 24</span>
+                </div>
+
+                <!-- Spoken Voiceover Line -->
+                <div class="clip-vo-line">
+                  <span class="vo-label">🎙️ Spoken Voiceover (8s):</span>
+                  <p class="vo-text">"At the equator where Africa sits, distortion is zero. One square inch represents one real square inch."</p>
+                </div>
+
+                <!-- Visual Action & Flow AI Prompt -->
+                <div class="clip-visual-block">
+                  <div class="visual-desc">
+                    <span class="visual-label">🎥 On-Screen Visual:</span>
+                    <p>Lush tropical rainforest canopy in Congo basin with sunlight breaking through misty green leaves.</p>
+                  </div>
+
+                  <div class="prompt-code-wrap">
+                    <div class="prompt-bar">
+                      <span class="prompt-badge">⚡ Flow AI Prompt (§20 Formula)</span>
+                      <button class="clean-copy-btn" onclick="copyPrompt(this)">Copy Prompt</button>
+                    </div>
+                    <pre class="prompt-snippet"><code>Create an 8-second horizontal 16:9 cinematic clip. Aerial drone glide over dense lush green Congo river basin rainforest, mist rising off canopy in warm tropical sunlight, 8k realism --ar 16:9</code></pre>
+                  </div>
+
+                  <div class="clip-sfx-row">
+                    <span class="sfx-tag-label">🎵 SFX:</span>
+                    <span class="sfx-tag-val">Tropical jungle ambiance</span>
+                  </div>
+                </div>
+              </div>
+              <!-- CLIP 24 -->
+              <div class="granular-clip-box">
+                <div class="clip-header-row">
+                  <div class="clip-id-badge">
+                    <span class="clip-pill">CLIP 24</span>
+                    <span class="clip-time">04:30 – 04:45</span>
+                  </div>
+                  <span class="cut-trigger-pill">CUT ON: "thirty-three times" ➔ CUT to Clip 25</span>
+                </div>
+
+                <!-- Spoken Voiceover Line -->
+                <div class="clip-vo-line">
+                  <span class="vo-label">🎙️ Spoken Voiceover (8s):</span>
+                  <p class="vo-text">"At sixty degrees north, landmasses are inflated four times. By eighty degrees, they are magnified thirty-three times."</p>
+                </div>
+
+                <!-- Visual Action & Flow AI Prompt -->
+                <div class="clip-visual-block">
+                  <div class="visual-desc">
+                    <span class="visual-label">🎥 On-Screen Visual:</span>
+                    <p>Heatmap gradient turning deep red across Greenland, Alaska, and Northern Siberia.</p>
+                  </div>
+
+                  <div class="prompt-code-wrap">
+                    <div class="prompt-bar">
+                      <span class="prompt-badge">⚡ Flow AI Prompt (§20 Formula)</span>
+                      <button class="clean-copy-btn" onclick="copyPrompt(this)">Copy Prompt</button>
+                    </div>
+                    <pre class="prompt-snippet"><code>Create an 8-second horizontal 16:9 cinematic clip. Aerial drone shot over massive icebergs drifting in Disko Bay Greenland, deep sapphire water, golden afternoon sun glinting on ice, 8k realism --ar 16:9</code></pre>
+                  </div>
+
+                  <div class="clip-sfx-row">
+                    <span class="sfx-tag-label">🎵 SFX:</span>
+                    <span class="sfx-tag-val">Alarm chime & wind roar</span>
+                  </div>
+                </div>
+              </div>
+              <!-- CLIP 25 -->
+              <div class="granular-clip-box">
+                <div class="clip-header-row">
+                  <div class="clip-id-badge">
+                    <span class="clip-pill">CLIP 25</span>
+                    <span class="clip-time">04:45 – 05:00</span>
+                  </div>
+                  <span class="cut-trigger-pill">CUT ON: "simply cut off" ➔ CUT to Clip 26</span>
+                </div>
+
+                <!-- Spoken Voiceover Line -->
+                <div class="clip-vo-line">
+                  <span class="vo-label">🎙️ Spoken Voiceover (8s):</span>
+                  <p class="vo-text">"At the exact poles, the mathematics reach infinity—which is why wall maps simply cut off."</p>
+                </div>
+
+                <!-- Visual Action & Flow AI Prompt -->
+                <div class="clip-visual-block">
+                  <div class="visual-desc">
+                    <span class="visual-label">🎥 On-Screen Visual:</span>
+                    <p>Endless white Antarctic ice sheet under pale blue sky with blizzard winds wiping the screen white.</p>
+                  </div>
+
+                  <div class="prompt-code-wrap">
+                    <div class="prompt-bar">
+                      <span class="prompt-badge">⚡ Flow AI Prompt (§20 Formula)</span>
+                      <button class="clean-copy-btn" onclick="copyPrompt(this)">Copy Prompt</button>
+                    </div>
+                    <pre class="prompt-snippet"><code>Create an 8-second horizontal 16:9 cinematic clip. Endless flat white Antarctic ice sheet stretching to horizon under pale blue polar sky, blowing ground blizzard, desolate frozen majesty, 8k --ar 16:9</code></pre>
+                  </div>
+
+                  <div class="clip-sfx-row">
+                    <span class="sfx-tag-label">🎵 SFX:</span>
+                    <span class="sfx-tag-val">Sub-zero wind howl</span>
+                  </div>
+                </div>
+              </div>
+              <!-- CLIP 26 -->
+              <div class="granular-clip-box">
+                <div class="clip-header-row">
+                  <div class="clip-id-badge">
+                    <span class="clip-pill">CLIP 26</span>
+                    <span class="clip-time">05:00 – 05:15</span>
+                  </div>
+                  <span class="cut-trigger-pill">CUT ON: "looked enormous" ➔ CUT to Clip 27</span>
+                </div>
+
+                <!-- Spoken Voiceover Line -->
+                <div class="clip-vo-line">
+                  <span class="vo-label">🎙️ Spoken Voiceover (8s):</span>
+                  <p class="vo-text">"This gave northern colonial empires an accidental psychological advantage: their countries looked enormous."</p>
+                </div>
+
+                <!-- Visual Action & Flow AI Prompt -->
+                <div class="clip-visual-block">
+                  <div class="visual-desc">
+                    <span class="visual-label">🎥 On-Screen Visual:</span>
+                    <p>19th-century Victorian classroom with world empire map hanging on dark mahogany walls.</p>
+                  </div>
+
+                  <div class="prompt-code-wrap">
+                    <div class="prompt-bar">
+                      <span class="prompt-badge">⚡ Flow AI Prompt (§20 Formula)</span>
+                      <button class="clean-copy-btn" onclick="copyPrompt(this)">Copy Prompt</button>
+                    </div>
+                    <pre class="prompt-snippet"><code>Create an 8-second horizontal 16:9 cinematic clip. Vintage 19th-century British empire classroom with globe and historical maps hanging on wood-paneled walls, cinematic lighting, dust motes, 8k --ar 16:9</code></pre>
+                  </div>
+
+                  <div class="clip-sfx-row">
+                    <span class="sfx-tag-label">🎵 SFX:</span>
+                    <span class="sfx-tag-val">Clock chime & school bell</span>
+                  </div>
+                </div>
+              </div>
+              <!-- CLIP 27 -->
+              <div class="granular-clip-box">
+                <div class="clip-header-row">
+                  <div class="clip-id-badge">
+                    <span class="clip-pill">CLIP 27</span>
+                    <span class="clip-time">05:15 – 05:30</span>
+                  </div>
+                  <span class="cut-trigger-pill">CUT ON: "two point four times bigger" ➔ CUT to Beat 06</span>
+                </div>
+
+                <!-- Spoken Voiceover Line -->
+                <div class="clip-vo-line">
+                  <span class="vo-label">🎙️ Spoken Voiceover (8s):</span>
+                  <p class="vo-text">"The United Kingdom was drawn looking larger than Madagascar, even though Madagascar is two point four times bigger."</p>
+                </div>
+
+                <!-- Visual Action & Flow AI Prompt -->
+                <div class="clip-visual-block">
+                  <div class="visual-desc">
+                    <span class="visual-label">🎥 On-Screen Visual:</span>
+                    <p>Side-by-side comparison of Madagascar Island outline placed next to British Isles.</p>
+                  </div>
+
+                  <div class="prompt-code-wrap">
+                    <div class="prompt-bar">
+                      <span class="prompt-badge">⚡ Flow AI Prompt (§20 Formula)</span>
+                      <button class="clean-copy-btn" onclick="copyPrompt(this)">Copy Prompt</button>
+                    </div>
+                    <pre class="prompt-snippet"><code>Create an 8-second horizontal 16:9 cinematic clip. 3D cartographic render of Madagascar island surrounded by turquoise Indian ocean reefs, golden sunlight, crisp terrain relief, 8k --ar 16:9</code></pre>
+                  </div>
+
+                  <div class="clip-sfx-row">
+                    <span class="sfx-tag-label">🎵 SFX:</span>
+                    <span class="sfx-tag-val">Snapping graphic sound</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- BEAT 06 -->
+          <article class="clean-beat-container">
+            <div class="beat-section-header">
+              <div class="beat-title-wrap">
+                <span class="beat-badge">BEAT 06</span>
+                <h3>The 1973 Peters Rebellion</h3>
+              </div>
+              <span class="beat-time-badge">5:30 – 6:45 · 5 Clips</span>
+            </div>
+
+            <div class="clips-sequence-list">
+              <!-- CLIP 28 -->
+              <div class="granular-clip-box">
+                <div class="clip-header-row">
+                  <div class="clip-id-badge">
+                    <span class="clip-pill">CLIP 28</span>
+                    <span class="clip-time">05:30 – 05:45</span>
+                  </div>
+                  <span class="cut-trigger-pill">CUT ON: "cartographic world" ➔ CUT to Clip 29</span>
+                </div>
+
+                <!-- Spoken Voiceover Line -->
+                <div class="clip-vo-line">
+                  <span class="vo-label">🎙️ Spoken Voiceover (8s):</span>
+                  <p class="vo-text">"In May 1973, German historian Arno Peters held a press conference that shook the cartographic world."</p>
+                </div>
+
+                <!-- Visual Action & Flow AI Prompt -->
+                <div class="clip-visual-block">
+                  <div class="visual-desc">
+                    <span class="visual-label">🎥 On-Screen Visual:</span>
+                    <p>1970s press conference room with vintage microphones and flashbulbs firing.</p>
+                  </div>
+
+                  <div class="prompt-code-wrap">
+                    <div class="prompt-bar">
+                      <span class="prompt-badge">⚡ Flow AI Prompt (§20 Formula)</span>
+                      <button class="clean-copy-btn" onclick="copyPrompt(this)">Copy Prompt</button>
+                    </div>
+                    <pre class="prompt-snippet"><code>Create an 8-second horizontal 16:9 cinematic clip. 1970s press conference room with vintage microphones on podium, camera flashbulbs firing, black and white archival documentary look, 8k --ar 16:9</code></pre>
+                  </div>
+
+                  <div class="clip-sfx-row">
+                    <span class="sfx-tag-label">🎵 SFX:</span>
+                    <span class="sfx-tag-val">Camera flash clicks & shutter sound</span>
+                  </div>
+                </div>
+              </div>
+              <!-- CLIP 29 -->
+              <div class="granular-clip-box">
+                <div class="clip-header-row">
+                  <div class="clip-id-badge">
+                    <span class="clip-pill">CLIP 29</span>
+                    <span class="clip-time">05:45 – 06:00</span>
+                  </div>
+                  <span class="cut-trigger-pill">CUT ON: "feel small" ➔ CUT to Clip 30</span>
+                </div>
+
+                <!-- Spoken Voiceover Line -->
+                <div class="clip-vo-line">
+                  <span class="vo-label">🎙️ Spoken Voiceover (8s):</span>
+                  <p class="vo-text">"Peters argued that Mercator was a colonial tool designed to make developing nations feel small."</p>
+                </div>
+
+                <!-- Visual Action & Flow AI Prompt -->
+                <div class="clip-visual-block">
+                  <div class="visual-desc">
+                    <span class="visual-label">🎥 On-Screen Visual:</span>
+                    <p>Arno Peters gesturing toward large comparison poster of distorted world continents.</p>
+                  </div>
+
+                  <div class="prompt-code-wrap">
+                    <div class="prompt-bar">
+                      <span class="prompt-badge">⚡ Flow AI Prompt (§20 Formula)</span>
+                      <button class="clean-copy-btn" onclick="copyPrompt(this)">Copy Prompt</button>
+                    </div>
+                    <pre class="prompt-snippet"><code>Create an 8-second horizontal 16:9 cinematic clip. Close-up of vintage printed pamphlets and newspaper articles from 1973 discussing world map controversies, warm archive lighting, 8k --ar 16:9</code></pre>
+                  </div>
+
+                  <div class="clip-sfx-row">
+                    <span class="sfx-tag-label">🎵 SFX:</span>
+                    <span class="sfx-tag-val">Crowd murmurs & debate chatter</span>
+                  </div>
+                </div>
+              </div>
+              <!-- CLIP 30 -->
+              <div class="granular-clip-box">
+                <div class="clip-header-row">
+                  <div class="clip-id-badge">
+                    <span class="clip-pill">CLIP 30</span>
+                    <span class="clip-time">06:00 – 06:15</span>
+                  </div>
+                  <span class="cut-trigger-pill">CUT ON: "exact square mileage" ➔ CUT to Clip 31</span>
+                </div>
+
+                <!-- Spoken Voiceover Line -->
+                <div class="clip-vo-line">
+                  <span class="vo-label">🎙️ Spoken Voiceover (8s):</span>
+                  <p class="vo-text">"He unveiled an equal-area map where every continent was scaled to its exact square mileage."</p>
+                </div>
+
+                <!-- Visual Action & Flow AI Prompt -->
+                <div class="clip-visual-block">
+                  <div class="visual-desc">
+                    <span class="visual-label">🎥 On-Screen Visual:</span>
+                    <p>Hands unfurling large Gall-Peters equal area world map on dark conference table.</p>
+                  </div>
+
+                  <div class="prompt-code-wrap">
+                    <div class="prompt-bar">
+                      <span class="prompt-badge">⚡ Flow AI Prompt (§20 Formula)</span>
+                      <button class="clean-copy-btn" onclick="copyPrompt(this)">Copy Prompt</button>
+                    </div>
+                    <pre class="prompt-snippet"><code>Create an 8-second horizontal 16:9 cinematic clip. Close-up of hands unfurling large Gall-Peters equal-area world map on wooden conference table, studio side lighting, 8k --ar 16:9</code></pre>
+                  </div>
+
+                  <div class="clip-sfx-row">
+                    <span class="sfx-tag-label">🎵 SFX:</span>
+                    <span class="sfx-tag-val">Paper unrolling sound</span>
+                  </div>
+                </div>
+              </div>
+              <!-- CLIP 31 -->
+              <div class="granular-clip-box">
+                <div class="clip-header-row">
+                  <div class="clip-id-badge">
+                    <span class="clip-pill">CLIP 31</span>
+                    <span class="clip-time">06:15 – 06:30</span>
+                  </div>
+                  <span class="cut-trigger-pill">CUT ON: "school systems worldwide" ➔ CUT to Clip 32</span>
+                </div>
+
+                <!-- Spoken Voiceover Line -->
+                <div class="clip-vo-line">
+                  <span class="vo-label">🎙️ Spoken Voiceover (8s):</span>
+                  <p class="vo-text">"His projection was adopted by the United Nations, global charities, and school systems worldwide."</p>
+                </div>
+
+                <!-- Visual Action & Flow AI Prompt -->
+                <div class="clip-visual-block">
+                  <div class="visual-desc">
+                    <span class="visual-label">🎥 On-Screen Visual:</span>
+                    <p>United Nations General Assembly hall with flags and delegates seated under bright lights.</p>
+                  </div>
+
+                  <div class="prompt-code-wrap">
+                    <div class="prompt-bar">
+                      <span class="prompt-badge">⚡ Flow AI Prompt (§20 Formula)</span>
+                      <button class="clean-copy-btn" onclick="copyPrompt(this)">Copy Prompt</button>
+                    </div>
+                    <pre class="prompt-snippet"><code>Create an 8-second horizontal 16:9 cinematic clip. Grand United Nations general assembly hall with diplomats and international flags, wide cinematic tracking shot, warm diplomatic lighting, 8k --ar 16:9</code></pre>
+                  </div>
+
+                  <div class="clip-sfx-row">
+                    <span class="sfx-tag-label">🎵 SFX:</span>
+                    <span class="sfx-tag-val">Gavel strike & room reverb</span>
+                  </div>
+                </div>
+              </div>
+              <!-- CLIP 32 -->
+              <div class="granular-clip-box">
+                <div class="clip-header-row">
+                  <div class="clip-id-badge">
+                    <span class="clip-pill">CLIP 32</span>
+                    <span class="clip-time">06:30 – 06:45</span>
+                  </div>
+                  <span class="cut-trigger-pill">CUT ON: "absolute outrage" ➔ CUT to Beat 07</span>
+                </div>
+
+                <!-- Spoken Voiceover Line -->
+                <div class="clip-vo-line">
+                  <span class="vo-label">🎙️ Spoken Voiceover (8s):</span>
+                  <p class="vo-text">"But among professional cartographers, the reaction was not celebration—it was absolute outrage."</p>
+                </div>
+
+                <!-- Visual Action & Flow AI Prompt -->
+                <div class="clip-visual-block">
+                  <div class="visual-desc">
+                    <span class="visual-label">🎥 On-Screen Visual:</span>
+                    <p>Dark university study with angry cartography professors debating over maps and compasses.</p>
+                  </div>
+
+                  <div class="prompt-code-wrap">
+                    <div class="prompt-bar">
+                      <span class="prompt-badge">⚡ Flow AI Prompt (§20 Formula)</span>
+                      <button class="clean-copy-btn" onclick="copyPrompt(this)">Copy Prompt</button>
+                    </div>
+                    <pre class="prompt-snippet"><code>Create an 8-second horizontal 16:9 cinematic clip. Dark wood-paneled academic library with geographers debating over open atlases under brass green desk lamps, tense atmosphere, 8k --ar 16:9</code></pre>
+                  </div>
+
+                  <div class="clip-sfx-row">
+                    <span class="sfx-tag-label">🎵 SFX:</span>
+                    <span class="sfx-tag-val">Low dramatic cello note</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- BEAT 07 -->
+          <article class="clean-beat-container">
+            <div class="beat-section-header">
+              <div class="beat-title-wrap">
+                <span class="beat-badge">BEAT 07</span>
+                <h3>The Mid-Video Retention Turn</h3>
+              </div>
+              <span class="beat-time-badge">6:45 – 8:00 · 5 Clips</span>
+            </div>
+
+            <div class="clips-sequence-list">
+              <!-- CLIP 33 -->
+              <div class="granular-clip-box">
+                <div class="clip-header-row">
+                  <div class="clip-id-badge">
+                    <span class="clip-pill">CLIP 33</span>
+                    <span class="clip-time">06:45 – 07:00</span>
+                  </div>
+                  <span class="cut-trigger-pill">CUT ON: "earlier in 1855" ➔ CUT to Clip 34</span>
+                </div>
+
+                <!-- Spoken Voiceover Line -->
+                <div class="clip-vo-line">
+                  <span class="vo-label">🎙️ Spoken Voiceover (8s):</span>
+                  <p class="vo-text">"First, Peters had not invented the map—James Gall had published it over a century earlier in 1855."</p>
+                </div>
+
+                <!-- Visual Action & Flow AI Prompt -->
+                <div class="clip-visual-block">
+                  <div class="visual-desc">
+                    <span class="visual-label">🎥 On-Screen Visual:</span>
+                    <p>Victorian scientific journal from 1855 open to James Gall's original projection drawings.</p>
+                  </div>
+
+                  <div class="prompt-code-wrap">
+                    <div class="prompt-bar">
+                      <span class="prompt-badge">⚡ Flow AI Prompt (§20 Formula)</span>
+                      <button class="clean-copy-btn" onclick="copyPrompt(this)">Copy Prompt</button>
+                    </div>
+                    <pre class="prompt-snippet"><code>Create an 8-second horizontal 16:9 cinematic clip. Victorian library book stacks with leather-bound scientific journals, golden dust in afternoon sunlight, cinematic slow tracking, 8k --ar 16:9</code></pre>
+                  </div>
+
+                  <div class="clip-sfx-row">
+                    <span class="sfx-tag-label">🎵 SFX:</span>
+                    <span class="sfx-tag-val">Book page turn & dust sound</span>
+                  </div>
+                </div>
+              </div>
+              <!-- CLIP 34 -->
+              <div class="granular-clip-box">
+                <div class="clip-header-row">
+                  <div class="clip-id-badge">
+                    <span class="clip-pill">CLIP 34</span>
+                    <span class="clip-time">07:00 – 07:15</span>
+                  </div>
+                  <span class="cut-trigger-pill">CUT ON: "hanging from a line" ➔ CUT to Clip 35</span>
+                </div>
+
+                <!-- Spoken Voiceover Line -->
+                <div class="clip-vo-line">
+                  <span class="vo-label">🎙️ Spoken Voiceover (8s):</span>
+                  <p class="vo-text">"Second, while it fixed area sizes, it brutally warped shapes: Africa looked like wet laundry hanging from a line."</p>
+                </div>
+
+                <!-- Visual Action & Flow AI Prompt -->
+                <div class="clip-visual-block">
+                  <div class="visual-desc">
+                    <span class="visual-label">🎥 On-Screen Visual:</span>
+                    <p>Gall-Peters Africa on screen looking vertically stretched and unnaturally narrow.</p>
+                  </div>
+
+                  <div class="prompt-code-wrap">
+                    <div class="prompt-bar">
+                      <span class="prompt-badge">⚡ Flow AI Prompt (§20 Formula)</span>
+                      <button class="clean-copy-btn" onclick="copyPrompt(this)">Copy Prompt</button>
+                    </div>
+                    <pre class="prompt-snippet"><code>Create an 8-second horizontal 16:9 cinematic clip. Digital display comparing normal African continent shape vs stretched elongated Gall-Peters distortion, red wireframe analysis, 8k --ar 16:9</code></pre>
+                  </div>
+
+                  <div class="clip-sfx-row">
+                    <span class="sfx-tag-label">🎵 SFX:</span>
+                    <span class="sfx-tag-val">Elastic snap & dissonance tone</span>
+                  </div>
+                </div>
+              </div>
+              <!-- CLIP 35 -->
+              <div class="granular-clip-box">
+                <div class="clip-header-row">
+                  <div class="clip-id-badge">
+                    <span class="clip-pill">CLIP 35</span>
+                    <span class="clip-time">07:15 – 07:30</span>
+                  </div>
+                  <span class="cut-trigger-pill">CUT ON: "abstract square kilometers" ➔ CUT to Clip 36</span>
+                </div>
+
+                <!-- Spoken Voiceover Line -->
+                <div class="clip-vo-line">
+                  <span class="vo-label">🎙️ Spoken Voiceover (8s):</span>
+                  <p class="vo-text">"The human brain recognizes geography through coastlines and shapes, not abstract square kilometers."</p>
+                </div>
+
+                <!-- Visual Action & Flow AI Prompt -->
+                <div class="clip-visual-block">
+                  <div class="visual-desc">
+                    <span class="visual-label">🎥 On-Screen Visual:</span>
+                    <p>Macro view of human eye looking closely at intricate coastline details on glowing digital map.</p>
+                  </div>
+
+                  <div class="prompt-code-wrap">
+                    <div class="prompt-bar">
+                      <span class="prompt-badge">⚡ Flow AI Prompt (§20 Formula)</span>
+                      <button class="clean-copy-btn" onclick="copyPrompt(this)">Copy Prompt</button>
+                    </div>
+                    <pre class="prompt-snippet"><code>Create an 8-second horizontal 16:9 cinematic clip. Extreme close-up of human eye reflecting glowing blue cartographic coastline lines, cinematic shallow depth of field, 8k --ar 16:9</code></pre>
+                  </div>
+
+                  <div class="clip-sfx-row">
+                    <span class="sfx-tag-label">🎵 SFX:</span>
+                    <span class="sfx-tag-val">Subtle heartbeat pulse</span>
+                  </div>
+                </div>
+              </div>
+              <!-- CLIP 36 -->
+              <div class="granular-clip-box">
+                <div class="clip-header-row">
+                  <div class="clip-id-badge">
+                    <span class="clip-pill">CLIP 36</span>
+                    <span class="clip-time">07:30 – 07:45</span>
+                  </div>
+                  <span class="cut-trigger-pill">CUT ON: "visual communication tool" ➔ CUT to Clip 37</span>
+                </div>
+
+                <!-- Spoken Voiceover Line -->
+                <div class="clip-vo-line">
+                  <span class="vo-label">🎙️ Spoken Voiceover (8s):</span>
+                  <p class="vo-text">"If a map makes countries unrecognizable, it fails as a visual communication tool."</p>
+                </div>
+
+                <!-- Visual Action & Flow AI Prompt -->
+                <div class="clip-visual-block">
+                  <div class="visual-desc">
+                    <span class="visual-label">🎥 On-Screen Visual:</span>
+                    <p>Classroom students looking confused at distorted world maps hanging on wall.</p>
+                  </div>
+
+                  <div class="prompt-code-wrap">
+                    <div class="prompt-bar">
+                      <span class="prompt-badge">⚡ Flow AI Prompt (§20 Formula)</span>
+                      <button class="clean-copy-btn" onclick="copyPrompt(this)">Copy Prompt</button>
+                    </div>
+                    <pre class="prompt-snippet"><code>Create an 8-second horizontal 16:9 cinematic clip. Modern classroom students looking up at large wall display of different world map projections, soft morning light, authentic documentary look, 8k --ar 16:9</code></pre>
+                  </div>
+
+                  <div class="clip-sfx-row">
+                    <span class="sfx-tag-label">🎵 SFX:</span>
+                    <span class="sfx-tag-val">Soft classroom chatter</span>
+                  </div>
+                </div>
+              </div>
+              <!-- CLIP 37 -->
+              <div class="granular-clip-box">
+                <div class="clip-header-row">
+                  <div class="clip-id-badge">
+                    <span class="clip-pill">CLIP 37</span>
+                    <span class="clip-time">07:45 – 08:00</span>
+                  </div>
+                  <span class="cut-trigger-pill">CUT ON: "Silicon Valley stepped in" ➔ CUT to Beat 08</span>
+                </div>
+
+                <!-- Spoken Voiceover Line -->
+                <div class="clip-vo-line">
+                  <span class="vo-label">🎙️ Spoken Voiceover (8s):</span>
+                  <p class="vo-text">"And so the battle between true shape and true area remained unresolved—until Silicon Valley stepped in."</p>
+                </div>
+
+                <!-- Visual Action & Flow AI Prompt -->
+                <div class="clip-visual-block">
+                  <div class="visual-desc">
+                    <span class="visual-label">🎥 On-Screen Visual:</span>
+                    <p>High-altitude aerial tracking over Silicon Valley tech campus glass buildings at sunset.</p>
+                  </div>
+
+                  <div class="prompt-code-wrap">
+                    <div class="prompt-bar">
+                      <span class="prompt-badge">⚡ Flow AI Prompt (§20 Formula)</span>
+                      <button class="clean-copy-btn" onclick="copyPrompt(this)">Copy Prompt</button>
+                    </div>
+                    <pre class="prompt-snippet"><code>Create an 8-second horizontal 16:9 cinematic clip. Aerial panoramic sunset over modern Silicon Valley glass tech headquarters, glowing blue architectural lights, crisp tech aesthetic, 8k --ar 16:9</code></pre>
+                  </div>
+
+                  <div class="clip-sfx-row">
+                    <span class="sfx-tag-label">🎵 SFX:</span>
+                    <span class="sfx-tag-val">Modern synth swell</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- BEAT 08 -->
+          <article class="clean-beat-container">
+            <div class="beat-section-header">
+              <div class="beat-title-wrap">
+                <span class="beat-badge">BEAT 08</span>
+                <h3>The 2005 Silicon Valley Dilemma</h3>
+              </div>
+              <span class="beat-time-badge">8:00 – 9:15 · 5 Clips</span>
+            </div>
+
+            <div class="clips-sequence-list">
+              <!-- CLIP 38 -->
+              <div class="granular-clip-box">
+                <div class="clip-header-row">
+                  <div class="clip-id-badge">
+                    <span class="clip-pill">CLIP 38</span>
+                    <span class="clip-time">08:00 – 08:15</span>
+                  </div>
+                  <span class="cut-trigger-pill">CUT ON: "projections to choose from" ➔ CUT to Clip 39</span>
+                </div>
+
+                <!-- Spoken Voiceover Line -->
+                <div class="clip-vo-line">
+                  <span class="vo-label">🎙️ Spoken Voiceover (8s):</span>
+                  <p class="vo-text">"In 2005, when Google engineers built Google Maps, they had dozens of accurate projections to choose from."</p>
+                </div>
+
+                <!-- Visual Action & Flow AI Prompt -->
+                <div class="clip-visual-block">
+                  <div class="visual-desc">
+                    <span class="visual-label">🎥 On-Screen Visual:</span>
+                    <p>Computer screen showing 2005 Google Maps beta interface loading with road vectors.</p>
+                  </div>
+
+                  <div class="prompt-code-wrap">
+                    <div class="prompt-bar">
+                      <span class="prompt-badge">⚡ Flow AI Prompt (§20 Formula)</span>
+                      <button class="clean-copy-btn" onclick="copyPrompt(this)">Copy Prompt</button>
+                    </div>
+                    <pre class="prompt-snippet"><code>Create an 8-second horizontal 16:9 cinematic clip. Vintage 2005 computer monitor displaying early web browser interface with digital vector map rendering in real-time, warm office lighting, 8k --ar 16:9</code></pre>
+                  </div>
+
+                  <div class="clip-sfx-row">
+                    <span class="sfx-tag-label">🎵 SFX:</span>
+                    <span class="sfx-tag-val">Computer keyboard clicks</span>
+                  </div>
+                </div>
+              </div>
+              <!-- CLIP 39 -->
+              <div class="granular-clip-box">
+                <div class="clip-header-row">
+                  <div class="clip-id-badge">
+                    <span class="clip-pill">CLIP 39</span>
+                    <span class="clip-time">08:15 – 08:30</span>
+                  </div>
+                  <span class="cut-trigger-pill">CUT ON: "distorting the globe" ➔ CUT to Clip 40</span>
+                </div>
+
+                <!-- Spoken Voiceover Line -->
+                <div class="clip-vo-line">
+                  <span class="vo-label">🎙️ Spoken Voiceover (8s):</span>
+                  <p class="vo-text">"They chose Web Mercator—the very projection criticized for distorting the globe."</p>
+                </div>
+
+                <!-- Visual Action & Flow AI Prompt -->
+                <div class="clip-visual-block">
+                  <div class="visual-desc">
+                    <span class="visual-label">🎥 On-Screen Visual:</span>
+                    <p>Zooming into Web Mercator EPSG:3857 technical specification document on screen.</p>
+                  </div>
+
+                  <div class="prompt-code-wrap">
+                    <div class="prompt-bar">
+                      <span class="prompt-badge">⚡ Flow AI Prompt (§20 Formula)</span>
+                      <button class="clean-copy-btn" onclick="copyPrompt(this)">Copy Prompt</button>
+                    </div>
+                    <pre class="prompt-snippet"><code>Create an 8-second horizontal 16:9 cinematic clip. Glowing blue tech HUD displaying cartographic EPSG code coordinates and wireframe world grid, smooth camera orbit, 8k --ar 16:9</code></pre>
+                  </div>
+
+                  <div class="clip-sfx-row">
+                    <span class="sfx-tag-label">🎵 SFX:</span>
+                    <span class="sfx-tag-val">Tech beep notification</span>
+                  </div>
+                </div>
+              </div>
+              <!-- CLIP 40 -->
+              <div class="granular-clip-box">
+                <div class="clip-header-row">
+                  <div class="clip-id-badge">
+                    <span class="clip-pill">CLIP 40</span>
+                    <span class="clip-time">08:30 – 08:45</span>
+                  </div>
+                  <span class="cut-trigger-pill">CUT ON: "corners is everything" ➔ CUT to Clip 41</span>
+                </div>
+
+                <!-- Spoken Voiceover Line -->
+                <div class="clip-vo-line">
+                  <span class="vo-label">🎙️ Spoken Voiceover (8s):</span>
+                  <p class="vo-text">"Why? Because when you navigate a city street on your phone, preserving 90-degree corners is everything."</p>
+                </div>
+
+                <!-- Visual Action & Flow AI Prompt -->
+                <div class="clip-visual-block">
+                  <div class="visual-desc">
+                    <span class="visual-label">🎥 On-Screen Visual:</span>
+                    <p>Overhead satellite view of Manhattan street grid intersections staying perfectly square.</p>
+                  </div>
+
+                  <div class="prompt-code-wrap">
+                    <div class="prompt-bar">
+                      <span class="prompt-badge">⚡ Flow AI Prompt (§20 Formula)</span>
+                      <button class="clean-copy-btn" onclick="copyPrompt(this)">Copy Prompt</button>
+                    </div>
+                    <pre class="prompt-snippet"><code>Create an 8-second horizontal 16:9 cinematic clip. High-altitude orthogonal aerial view of Manhattan street grid intersections, straight down satellite motion, golden hour directional sunlight, 8k --ar 16:9</code></pre>
+                  </div>
+
+                  <div class="clip-sfx-row">
+                    <span class="sfx-tag-label">🎵 SFX:</span>
+                    <span class="sfx-tag-val">City traffic sound</span>
+                  </div>
+                </div>
+              </div>
+              <!-- CLIP 41 -->
+              <div class="granular-clip-box">
+                <div class="clip-header-row">
+                  <div class="clip-id-badge">
+                    <span class="clip-pill">CLIP 41</span>
+                    <span class="clip-time">08:45 – 09:00</span>
+                  </div>
+                  <span class="cut-trigger-pill">CUT ON: "into angled diamonds" ➔ CUT to Clip 42</span>
+                </div>
+
+                <!-- Spoken Voiceover Line -->
+                <div class="clip-vo-line">
+                  <span class="vo-label">🎙️ Spoken Voiceover (8s):</span>
+                  <p class="vo-text">"On an equal-area map, local street corners in New York or London would appear skewed into angled diamonds."</p>
+                </div>
+
+                <!-- Visual Action & Flow AI Prompt -->
+                <div class="clip-visual-block">
+                  <div class="visual-desc">
+                    <span class="visual-label">🎥 On-Screen Visual:</span>
+                    <p>Digital animation showing street intersection shearing into diagonal parallelogram.</p>
+                  </div>
+
+                  <div class="prompt-code-wrap">
+                    <div class="prompt-bar">
+                      <span class="prompt-badge">⚡ Flow AI Prompt (§20 Formula)</span>
+                      <button class="clean-copy-btn" onclick="copyPrompt(this)">Copy Prompt</button>
+                    </div>
+                    <pre class="prompt-snippet"><code>Create an 8-second horizontal 16:9 cinematic clip. Fast moving POV of car driving through dense downtown skyscraper canyon, neon lights reflecting on wet asphalt, 8k --ar 16:9</code></pre>
+                  </div>
+
+                  <div class="clip-sfx-row">
+                    <span class="sfx-tag-label">🎵 SFX:</span>
+                    <span class="sfx-tag-val">Car engine rev & tire whoosh</span>
+                  </div>
+                </div>
+              </div>
+              <!-- CLIP 42 -->
+              <div class="granular-clip-box">
+                <div class="clip-header-row">
+                  <div class="clip-id-badge">
+                    <span class="clip-pill">CLIP 42</span>
+                    <span class="clip-time">09:00 – 09:15</span>
+                  </div>
+                  <span class="cut-trigger-pill">CUT ON: "local navigation" ➔ CUT to Beat 09</span>
+                </div>
+
+                <!-- Spoken Voiceover Line -->
+                <div class="clip-vo-line">
+                  <span class="vo-label">🎙️ Spoken Voiceover (8s):</span>
+                  <p class="vo-text">"Mercator kept streets looking like streets—making it the undisputed king of local navigation."</p>
+                </div>
+
+                <!-- Visual Action & Flow AI Prompt -->
+                <div class="clip-visual-block">
+                  <div class="visual-desc">
+                    <span class="visual-label">🎥 On-Screen Visual:</span>
+                    <p>Person holding smartphone on busy city street corner with blue navigation dot guiding the way.</p>
+                  </div>
+
+                  <div class="prompt-code-wrap">
+                    <div class="prompt-bar">
+                      <span class="prompt-badge">⚡ Flow AI Prompt (§20 Formula)</span>
+                      <button class="clean-copy-btn" onclick="copyPrompt(this)">Copy Prompt</button>
+                    </div>
+                    <pre class="prompt-snippet"><code>Create an 8-second horizontal 16:9 cinematic clip. Close-up of hand holding modern smartphone displaying GPS navigation route while walking along bustling sunny city sidewalk, bokeh pedestrians, 8k --ar 16:9</code></pre>
+                  </div>
+
+                  <div class="clip-sfx-row">
+                    <span class="sfx-tag-label">🎵 SFX:</span>
+                    <span class="sfx-tag-val">GPS navigation chime</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- BEAT 09 -->
+          <article class="clean-beat-container">
+            <div class="beat-section-header">
+              <div class="beat-title-wrap">
+                <span class="beat-badge">BEAT 09</span>
+                <h3>The EPSG:3857 Tile Engine</h3>
+              </div>
+              <span class="beat-time-badge">9:15 – 10:30 · 5 Clips</span>
+            </div>
+
+            <div class="clips-sequence-list">
+              <!-- CLIP 43 -->
+              <div class="granular-clip-box">
+                <div class="clip-header-row">
+                  <div class="clip-id-badge">
+                    <span class="clip-pill">CLIP 43</span>
+                    <span class="clip-time">09:15 – 09:30</span>
+                  </div>
+                  <span class="cut-trigger-pill">CUT ON: "into a perfect square" ➔ CUT to Clip 44</span>
+                </div>
+
+                <!-- Spoken Voiceover Line -->
+                <div class="clip-vo-line">
+                  <span class="vo-label">🎙️ Spoken Voiceover (8s):</span>
+                  <p class="vo-text">"Mercator also had a secret superpower for internet architecture: it flattens the world into a perfect square."</p>
+                </div>
+
+                <!-- Visual Action & Flow AI Prompt -->
+                <div class="clip-visual-block">
+                  <div class="visual-desc">
+                    <span class="visual-label">🎥 On-Screen Visual:</span>
+                    <p>3D world map snapping into an exact 1:1 square aspect ratio bounding box.</p>
+                  </div>
+
+                  <div class="prompt-code-wrap">
+                    <div class="prompt-bar">
+                      <span class="prompt-badge">⚡ Flow AI Prompt (§20 Formula)</span>
+                      <button class="clean-copy-btn" onclick="copyPrompt(this)">Copy Prompt</button>
+                    </div>
+                    <pre class="prompt-snippet"><code>Create an 8-second horizontal 16:9 cinematic clip. 3D technical animation of glowing holographic world map snapping into a perfect square bounding box, dark studio background, cyan grid, 8k --ar 16:9</code></pre>
+                  </div>
+
+                  <div class="clip-sfx-row">
+                    <span class="sfx-tag-label">🎵 SFX:</span>
+                    <span class="sfx-tag-val">Geometric snap click</span>
+                  </div>
+                </div>
+              </div>
+              <!-- CLIP 44 -->
+              <div class="granular-clip-box">
+                <div class="clip-header-row">
+                  <div class="clip-id-badge">
+                    <span class="clip-pill">CLIP 44</span>
+                    <span class="clip-time">09:30 – 09:45</span>
+                  </div>
+                  <span class="cut-trigger-pill">CUT ON: "seamless pyramid" ➔ CUT to Clip 45</span>
+                </div>
+
+                <!-- Spoken Voiceover Line -->
+                <div class="clip-vo-line">
+                  <span class="vo-label">🎙️ Spoken Voiceover (8s):</span>
+                  <p class="vo-text">"A square divides cleanly into four quadrants, sixteen tiles, sixty-four tiles, in a seamless pyramid."</p>
+                </div>
+
+                <!-- Visual Action & Flow AI Prompt -->
+                <div class="clip-visual-block">
+                  <div class="visual-desc">
+                    <span class="visual-label">🎥 On-Screen Visual:</span>
+                    <p>Cascading pyramid of 256x256 pixel image tiles loading rapidly downward.</p>
+                  </div>
+
+                  <div class="prompt-code-wrap">
+                    <div class="prompt-bar">
+                      <span class="prompt-badge">⚡ Flow AI Prompt (§20 Formula)</span>
+                      <button class="clean-copy-btn" onclick="copyPrompt(this)">Copy Prompt</button>
+                    </div>
+                    <pre class="prompt-snippet"><code>Create an 8-second horizontal 16:9 cinematic clip. 3D technical graphic of multi-tier map tile pyramid dividing into smaller square image tiles with cascading data lines, glowing amber and blue, 8k --ar 16:9</code></pre>
+                  </div>
+
+                  <div class="clip-sfx-row">
+                    <span class="sfx-tag-label">🎵 SFX:</span>
+                    <span class="sfx-tag-val">Digital data stream rush</span>
+                  </div>
+                </div>
+              </div>
+              <!-- CLIP 45 -->
+              <div class="granular-clip-box">
+                <div class="clip-header-row">
+                  <div class="clip-id-badge">
+                    <span class="clip-pill">CLIP 45</span>
+                    <span class="clip-time">09:45 – 10:00</span>
+                  </div>
+                  <span class="cut-trigger-pill">CUT ON: "saving gigabytes of data" ➔ CUT to Clip 46</span>
+                </div>
+
+                <!-- Spoken Voiceover Line -->
+                <div class="clip-vo-line">
+                  <span class="vo-label">🎙️ Spoken Voiceover (8s):</span>
+                  <p class="vo-text">"Web servers only send the exact four or five tiles visible on your phone screen, saving gigabytes of data."</p>
+                </div>
+
+                <!-- Visual Action & Flow AI Prompt -->
+                <div class="clip-visual-block">
+                  <div class="visual-desc">
+                    <span class="visual-label">🎥 On-Screen Visual:</span>
+                    <p>Blinking LED server racks in dark modern data center humming with high-speed fiber optics.</p>
+                  </div>
+
+                  <div class="prompt-code-wrap">
+                    <div class="prompt-bar">
+                      <span class="prompt-badge">⚡ Flow AI Prompt (§20 Formula)</span>
+                      <button class="clean-copy-btn" onclick="copyPrompt(this)">Copy Prompt</button>
+                    </div>
+                    <pre class="prompt-snippet"><code>Create an 8-second horizontal 16:9 cinematic clip. Glowing server room with server racks blinking in rhythmic cyan and amber LEDs, cinematic slow dolly forward, dark tech aesthetic, 8k --ar 16:9</code></pre>
+                  </div>
+
+                  <div class="clip-sfx-row">
+                    <span class="sfx-tag-label">🎵 SFX:</span>
+                    <span class="sfx-tag-val">Server fan hum & fiber optic pulse</span>
+                  </div>
+                </div>
+              </div>
+              <!-- CLIP 46 -->
+              <div class="granular-clip-box">
+                <div class="clip-header-row">
+                  <div class="clip-id-badge">
+                    <span class="clip-pill">CLIP 46</span>
+                    <span class="clip-time">10:00 – 10:15</span>
+                  </div>
+                  <span class="cut-trigger-pill">CUT ON: "their fundamental base" ➔ CUT to Clip 47</span>
+                </div>
+
+                <!-- Spoken Voiceover Line -->
+                <div class="clip-vo-line">
+                  <span class="vo-label">🎙️ Spoken Voiceover (8s):</span>
+                  <p class="vo-text">"Apple Maps, Mapbox, OpenStreetMap, and Uber all adopted EPSG:3857 as their fundamental base."</p>
+                </div>
+
+                <!-- Visual Action & Flow AI Prompt -->
+                <div class="clip-visual-block">
+                  <div class="visual-desc">
+                    <span class="visual-label">🎥 On-Screen Visual:</span>
+                    <p>Logos of modern navigation apps floating over 3D digital globe grid.</p>
+                  </div>
+
+                  <div class="prompt-code-wrap">
+                    <div class="prompt-bar">
+                      <span class="prompt-badge">⚡ Flow AI Prompt (§20 Formula)</span>
+                      <button class="clean-copy-btn" onclick="copyPrompt(this)">Copy Prompt</button>
+                    </div>
+                    <pre class="prompt-snippet"><code>Create an 8-second horizontal 16:9 cinematic clip. Modern vehicle dashboard screen displaying glowing digital navigation interface at night, smooth camera pan, 8k --ar 16:9</code></pre>
+                  </div>
+
+                  <div class="clip-sfx-row">
+                    <span class="sfx-tag-label">🎵 SFX:</span>
+                    <span class="sfx-tag-val">Digital chime</span>
+                  </div>
+                </div>
+              </div>
+              <!-- CLIP 47 -->
+              <div class="granular-clip-box">
+                <div class="clip-header-row">
+                  <div class="clip-id-badge">
+                    <span class="clip-pill">CLIP 47</span>
+                    <span class="clip-time">10:15 – 10:30</span>
+                  </div>
+                  <span class="cut-trigger-pill">CUT ON: "of the mobile web" ➔ CUT to Beat 10</span>
+                </div>
+
+                <!-- Spoken Voiceover Line -->
+                <div class="clip-vo-line">
+                  <span class="vo-label">🎙️ Spoken Voiceover (8s):</span>
+                  <p class="vo-text">"And so, 16th-century sailing math became the permanent digital foundation of the mobile web."</p>
+                </div>
+
+                <!-- Visual Action & Flow AI Prompt -->
+                <div class="clip-visual-block">
+                  <div class="visual-desc">
+                    <span class="visual-label">🎥 On-Screen Visual:</span>
+                    <p>Cross-fade between 1569 antique nautical parchment and modern glowing smartphone circuit lines.</p>
+                  </div>
+
+                  <div class="prompt-code-wrap">
+                    <div class="prompt-bar">
+                      <span class="prompt-badge">⚡ Flow AI Prompt (§20 Formula)</span>
+                      <button class="clean-copy-btn" onclick="copyPrompt(this)">Copy Prompt</button>
+                    </div>
+                    <pre class="prompt-snippet"><code>Create an 8-second horizontal 16:9 cinematic clip. Seamless visual morph between antique 1569 parchment map and modern glowing blue circuit board tracks, artistic lighting transition, 8k --ar 16:9</code></pre>
+                  </div>
+
+                  <div class="clip-sfx-row">
+                    <span class="sfx-tag-label">🎵 SFX:</span>
+                    <span class="sfx-tag-val">Harmonic transition swell</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- BEAT 10 -->
+          <article class="clean-beat-container">
+            <div class="beat-section-header">
+              <div class="beat-title-wrap">
+                <span class="beat-badge">BEAT 10</span>
+                <h3>The Psychological & Economic Cost</h3>
+              </div>
+              <span class="beat-time-badge">10:30 – 11:30 · 4 Clips</span>
+            </div>
+
+            <div class="clips-sequence-list">
+              <!-- CLIP 48 -->
+              <div class="granular-clip-box">
+                <div class="clip-header-row">
+                  <div class="clip-id-badge">
+                    <span class="clip-pill">CLIP 48</span>
+                    <span class="clip-time">10:30 – 10:45</span>
+                  </div>
+                  <span class="cut-trigger-pill">CUT ON: "deep mental biases" ➔ CUT to Clip 49</span>
+                </div>
+
+                <!-- Spoken Voiceover Line -->
+                <div class="clip-vo-line">
+                  <span class="vo-label">🎙️ Spoken Voiceover (8s):</span>
+                  <p class="vo-text">"While Web Mercator is perfect for turn-by-turn driving, keeping it in classrooms has created deep mental biases."</p>
+                </div>
+
+                <!-- Visual Action & Flow AI Prompt -->
+                <div class="clip-visual-block">
+                  <div class="visual-desc">
+                    <span class="visual-label">🎥 On-Screen Visual:</span>
+                    <p>Child looking up at giant world wall map in modern school hallway.</p>
+                  </div>
+
+                  <div class="prompt-code-wrap">
+                    <div class="prompt-bar">
+                      <span class="prompt-badge">⚡ Flow AI Prompt (§20 Formula)</span>
+                      <button class="clean-copy-btn" onclick="copyPrompt(this)">Copy Prompt</button>
+                    </div>
+                    <pre class="prompt-snippet"><code>Create an 8-second horizontal 16:9 cinematic clip. Young student standing in bright sunlit school hallway looking up thoughtfully at a large world map poster, soft cinematic lighting, 8k --ar 16:9</code></pre>
+                  </div>
+
+                  <div class="clip-sfx-row">
+                    <span class="sfx-tag-label">🎵 SFX:</span>
+                    <span class="sfx-tag-val">Distant school hallway footsteps</span>
+                  </div>
+                </div>
+              </div>
+              <!-- CLIP 49 -->
+              <div class="granular-clip-box">
+                <div class="clip-header-row">
+                  <div class="clip-id-badge">
+                    <span class="clip-pill">CLIP 49</span>
+                    <span class="clip-time">10:45 – 11:00</span>
+                  </div>
+                  <span class="cut-trigger-pill">CUT ON: "perception of global power" ➔ CUT to Clip 50</span>
+                </div>
+
+                <!-- Spoken Voiceover Line -->
+                <div class="clip-vo-line">
+                  <span class="vo-label">🎙️ Spoken Voiceover (8s):</span>
+                  <p class="vo-text">"When people spend decades seeing Africa look smaller than Greenland, it unconsciously warps perception of global power."</p>
+                </div>
+
+                <!-- Visual Action & Flow AI Prompt -->
+                <div class="clip-visual-block">
+                  <div class="visual-desc">
+                    <span class="visual-label">🎥 On-Screen Visual:</span>
+                    <p>International boardroom with world leaders discussing global trade policies under dim lights.</p>
+                  </div>
+
+                  <div class="prompt-code-wrap">
+                    <div class="prompt-bar">
+                      <span class="prompt-badge">⚡ Flow AI Prompt (§20 Formula)</span>
+                      <button class="clean-copy-btn" onclick="copyPrompt(this)">Copy Prompt</button>
+                    </div>
+                    <pre class="prompt-snippet"><code>Create an 8-second horizontal 16:9 cinematic clip. International summit conference room with world leaders seated around circular table, warm cinematic lighting, serious documentary tone, 8k --ar 16:9</code></pre>
+                  </div>
+
+                  <div class="clip-sfx-row">
+                    <span class="sfx-tag-label">🎵 SFX:</span>
+                    <span class="sfx-tag-val">Subtle gavel tap & tension cello</span>
+                  </div>
+                </div>
+              </div>
+              <!-- CLIP 50 -->
+              <div class="granular-clip-box">
+                <div class="clip-header-row">
+                  <div class="clip-id-badge">
+                    <span class="clip-pill">CLIP 50</span>
+                    <span class="clip-time">11:00 – 11:15</span>
+                  </div>
+                  <span class="cut-trigger-pill">CUT ON: "critical mineral wealth" ➔ CUT to Clip 51</span>
+                </div>
+
+                <!-- Spoken Voiceover Line -->
+                <div class="clip-vo-line">
+                  <span class="vo-label">🎙️ Spoken Voiceover (8s):</span>
+                  <p class="vo-text">"Africa holds sixty percent of the world's best solar resources and immense reserves of critical mineral wealth."</p>
+                </div>
+
+                <!-- Visual Action & Flow AI Prompt -->
+                <div class="clip-visual-block">
+                  <div class="visual-desc">
+                    <span class="visual-label">🎥 On-Screen Visual:</span>
+                    <p>Sweeping solar farm in North African desert with thousands of reflective panels gleaming under midday sun.</p>
+                  </div>
+
+                  <div class="prompt-code-wrap">
+                    <div class="prompt-bar">
+                      <span class="prompt-badge">⚡ Flow AI Prompt (§20 Formula)</span>
+                      <button class="clean-copy-btn" onclick="copyPrompt(this)">Copy Prompt</button>
+                    </div>
+                    <pre class="prompt-snippet"><code>Create an 8-second horizontal 16:9 cinematic clip. Sweeping aerial view over massive desert solar panel farm, thousands of photovoltaic mirrors gleaming in bright sun, clean energy future, 8k --ar 16:9</code></pre>
+                  </div>
+
+                  <div class="clip-sfx-row">
+                    <span class="sfx-tag-label">🎵 SFX:</span>
+                    <span class="sfx-tag-val">Solar inverter hum & wind</span>
+                  </div>
+                </div>
+              </div>
+              <!-- CLIP 51 -->
+              <div class="granular-clip-box">
+                <div class="clip-header-row">
+                  <div class="clip-id-badge">
+                    <span class="clip-pill">CLIP 51</span>
+                    <span class="clip-time">11:15 – 11:30</span>
+                  </div>
+                  <span class="cut-trigger-pill">CUT ON: "single small country" ➔ CUT to Beat 11</span>
+                </div>
+
+                <!-- Spoken Voiceover Line -->
+                <div class="clip-vo-line">
+                  <span class="vo-label">🎙️ Spoken Voiceover (8s):</span>
+                  <p class="vo-text">"Yet international news often treats a continent of 1.4 billion people and 54 nations as if it were a single small country."</p>
+                </div>
+
+                <!-- Visual Action & Flow AI Prompt -->
+                <div class="clip-visual-block">
+                  <div class="visual-desc">
+                    <span class="visual-label">🎥 On-Screen Visual:</span>
+                    <p>True scale overlay: US, China, India, and Europe sitting inside African continent.</p>
+                  </div>
+
+                  <div class="prompt-code-wrap">
+                    <div class="prompt-bar">
+                      <span class="prompt-badge">⚡ Flow AI Prompt (§20 Formula)</span>
+                      <button class="clean-copy-btn" onclick="copyPrompt(this)">Copy Prompt</button>
+                    </div>
+                    <pre class="prompt-snippet"><code>Create an 8-second horizontal 16:9 cinematic clip. 3D glowing cartographic data overlay of Africa at night with economic trade network lines illuminating across cities, 8k --ar 16:9</code></pre>
+                  </div>
+
+                  <div class="clip-sfx-row">
+                    <span class="sfx-tag-label">🎵 SFX:</span>
+                    <span class="sfx-tag-val">Deep bass drop</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- BEAT 11 -->
+          <article class="clean-beat-container">
+            <div class="beat-section-header">
+              <div class="beat-title-wrap">
+                <span class="beat-badge">BEAT 11</span>
+                <h3>The Modern Solutions</h3>
+              </div>
+              <span class="beat-time-badge">11:30 – 12:30 · 4 Clips</span>
+            </div>
+
+            <div class="clips-sequence-list">
+              <!-- CLIP 52 -->
+              <div class="granular-clip-box">
+                <div class="clip-header-row">
+                  <div class="clip-id-badge">
+                    <span class="clip-pill">CLIP 52</span>
+                    <span class="clip-time">11:30 – 11:45</span>
+                  </div>
+                  <span class="cut-trigger-pill">CUT ON: "its true size" ➔ CUT to Clip 53</span>
+                </div>
+
+                <!-- Spoken Voiceover Line -->
+                <div class="clip-vo-line">
+                  <span class="vo-label">🎙️ Spoken Voiceover (8s):</span>
+                  <p class="vo-text">"Thankfully, modern cartographers have created stunning maps that finally give every landmass its true size."</p>
+                </div>
+
+                <!-- Visual Action & Flow AI Prompt -->
+                <div class="clip-visual-block">
+                  <div class="visual-desc">
+                    <span class="visual-label">🎥 On-Screen Visual:</span>
+                    <p>Cartographer working on modern digital drawing tablet drafting the Equal Earth projection.</p>
+                  </div>
+
+                  <div class="prompt-code-wrap">
+                    <div class="prompt-bar">
+                      <span class="prompt-badge">⚡ Flow AI Prompt (§20 Formula)</span>
+                      <button class="clean-copy-btn" onclick="copyPrompt(this)">Copy Prompt</button>
+                    </div>
+                    <pre class="prompt-snippet"><code>Create an 8-second horizontal 16:9 cinematic clip. Close-up of digital designer stylus pen sketching curved coordinate lines on glowing tablet display, creative studio environment, 8k --ar 16:9</code></pre>
+                  </div>
+
+                  <div class="clip-sfx-row">
+                    <span class="sfx-tag-label">🎵 SFX:</span>
+                    <span class="sfx-tag-val">Stylus pen tap & whoosh</span>
+                  </div>
+                </div>
+              </div>
+              <!-- CLIP 53 -->
+              <div class="granular-clip-box">
+                <div class="clip-header-row">
+                  <div class="clip-id-badge">
+                    <span class="clip-pill">CLIP 53</span>
+                    <span class="clip-time">11:45 – 12:00</span>
+                  </div>
+                  <span class="cut-trigger-pill">CUT ON: "shapes natural" ➔ CUT to Clip 54</span>
+                </div>
+
+                <!-- Spoken Voiceover Line -->
+                <div class="clip-vo-line">
+                  <span class="vo-label">🎙️ Spoken Voiceover (8s):</span>
+                  <p class="vo-text">"In 2018, the Equal Earth projection was released, preserving exact land areas while keeping continent shapes natural."</p>
+                </div>
+
+                <!-- Visual Action & Flow AI Prompt -->
+                <div class="clip-visual-block">
+                  <div class="visual-desc">
+                    <span class="visual-label">🎥 On-Screen Visual:</span>
+                    <p>The Equal Earth map unfurling with smooth curved meridians and realistic continent proportions.</p>
+                  </div>
+
+                  <div class="prompt-code-wrap">
+                    <div class="prompt-bar">
+                      <span class="prompt-badge">⚡ Flow AI Prompt (§20 Formula)</span>
+                      <button class="clean-copy-btn" onclick="copyPrompt(this)">Copy Prompt</button>
+                    </div>
+                    <pre class="prompt-snippet"><code>Create an 8-second horizontal 16:9 cinematic clip. Elegant 3D motion graphic of Equal Earth world map unfurling smoothly over dark blue surface, golden continents, clean design, 8k --ar 16:9</code></pre>
+                  </div>
+
+                  <div class="clip-sfx-row">
+                    <span class="sfx-tag-label">🎵 SFX:</span>
+                    <span class="sfx-tag-val">Harmonious chime</span>
+                  </div>
+                </div>
+              </div>
+              <!-- CLIP 54 -->
+              <div class="granular-clip-box">
+                <div class="clip-header-row">
+                  <div class="clip-id-badge">
+                    <span class="clip-pill">CLIP 54</span>
+                    <span class="clip-time">12:00 – 12:15</span>
+                  </div>
+                  <span class="cut-trigger-pill">CUT ON: "Equal Earth alternatives" ➔ CUT to Clip 55</span>
+                </div>
+
+                <!-- Spoken Voiceover Line -->
+                <div class="clip-vo-line">
+                  <span class="vo-label">🎙️ Spoken Voiceover (8s):</span>
+                  <p class="vo-text">"School districts from Boston to Europe have begun replacing classroom wall maps with Equal Earth alternatives."</p>
+                </div>
+
+                <!-- Visual Action & Flow AI Prompt -->
+                <div class="clip-visual-block">
+                  <div class="visual-desc">
+                    <span class="visual-label">🎥 On-Screen Visual:</span>
+                    <p>Teacher hanging brand new Equal Earth map on classroom wall in front of smiling students.</p>
+                  </div>
+
+                  <div class="prompt-code-wrap">
+                    <div class="prompt-bar">
+                      <span class="prompt-badge">⚡ Flow AI Prompt (§20 Formula)</span>
+                      <button class="clean-copy-btn" onclick="copyPrompt(this)">Copy Prompt</button>
+                    </div>
+                    <pre class="prompt-snippet"><code>Create an 8-second horizontal 16:9 cinematic clip. Teacher hanging large new colorful world map on bright classroom wall, students watching, warm inspiring daylight, 8k --ar 16:9</code></pre>
+                  </div>
+
+                  <div class="clip-sfx-row">
+                    <span class="sfx-tag-label">🎵 SFX:</span>
+                    <span class="sfx-tag-val">Paper smooth & classroom laughter</span>
+                  </div>
+                </div>
+              </div>
+              <!-- CLIP 55 -->
+              <div class="granular-clip-box">
+                <div class="clip-header-row">
+                  <div class="clip-id-badge">
+                    <span class="clip-pill">CLIP 55</span>
+                    <span class="clip-time">12:15 – 12:30</span>
+                  </div>
+                  <span class="cut-trigger-pill">CUT ON: "once you zoom out" ➔ CUT to Beat 12</span>
+                </div>
+
+                <!-- Spoken Voiceover Line -->
+                <div class="clip-vo-line">
+                  <span class="vo-label">🎙️ Spoken Voiceover (8s):</span>
+                  <p class="vo-text">"And Google Maps now switches seamlessly from flat Mercator into a full 3D rotating globe once you zoom out."</p>
+                </div>
+
+                <!-- Visual Action & Flow AI Prompt -->
+                <div class="clip-visual-block">
+                  <div class="visual-desc">
+                    <span class="visual-label">🎥 On-Screen Visual:</span>
+                    <p>Google Maps 3D desktop globe spinning effortlessly in dark space with glowing city lights.</p>
+                  </div>
+
+                  <div class="prompt-code-wrap">
+                    <div class="prompt-bar">
+                      <span class="prompt-badge">⚡ Flow AI Prompt (§20 Formula)</span>
+                      <button class="clean-copy-btn" onclick="copyPrompt(this)">Copy Prompt</button>
+                    </div>
+                    <pre class="prompt-snippet"><code>Create an 8-second horizontal 16:9 cinematic clip. Beautiful 3D photorealistic globe slowly spinning in dark space, bright atmospheric rim glow, realistic continents and blue oceans, 8k --ar 16:9</code></pre>
+                  </div>
+
+                  <div class="clip-sfx-row">
+                    <span class="sfx-tag-label">🎵 SFX:</span>
+                    <span class="sfx-tag-val">Spatial space whoosh</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- BEAT 12 -->
+          <article class="clean-beat-container">
+            <div class="beat-section-header">
+              <div class="beat-title-wrap">
+                <span class="beat-badge">BEAT 12</span>
+                <h3>The Final Resolution</h3>
+              </div>
+              <span class="beat-time-badge">12:30 – 13:14 · 3 Clips</span>
+            </div>
+
+            <div class="clips-sequence-list">
+              <!-- CLIP 56 -->
+              <div class="granular-clip-box">
+                <div class="clip-header-row">
+                  <div class="clip-id-badge">
+                    <span class="clip-pill">CLIP 56</span>
+                    <span class="clip-time">12:30 – 12:45</span>
+                  </div>
+                  <span class="cut-trigger-pill">CUT ON: "specific human jobs" ➔ CUT to Clip 57</span>
+                </div>
+
+                <!-- Spoken Voiceover Line -->
+                <div class="clip-vo-line">
+                  <span class="vo-label">🎙️ Spoken Voiceover (8s):</span>
+                  <p class="vo-text">"Maps are not photographs of our planet. They are human tools designed for specific human jobs."</p>
+                </div>
+
+                <!-- Visual Action & Flow AI Prompt -->
+                <div class="clip-visual-block">
+                  <div class="visual-desc">
+                    <span class="visual-label">🎥 On-Screen Visual:</span>
+                    <p>Vintage globe and modern glowing tablet sitting side-by-side on wooden desk.</p>
+                  </div>
+
+                  <div class="prompt-code-wrap">
+                    <div class="prompt-bar">
+                      <span class="prompt-badge">⚡ Flow AI Prompt (§20 Formula)</span>
+                      <button class="clean-copy-btn" onclick="copyPrompt(this)">Copy Prompt</button>
+                    </div>
+                    <pre class="prompt-snippet"><code>Create an 8-second horizontal 16:9 cinematic clip. Beautiful still-life tracking shot across antique wooden globe and modern glowing digital tablet on dark mahogany desk, warm moody lighting, 8k --ar 16:9</code></pre>
+                  </div>
+
+                  <div class="clip-sfx-row">
+                    <span class="sfx-tag-label">🎵 SFX:</span>
+                    <span class="sfx-tag-val">Gentle acoustic guitar & piano</span>
+                  </div>
+                </div>
+              </div>
+              <!-- CLIP 57 -->
+              <div class="granular-clip-box">
+                <div class="clip-header-row">
+                  <div class="clip-id-badge">
+                    <span class="clip-pill">CLIP 57</span>
+                    <span class="clip-time">12:45 – 13:00</span>
+                  </div>
+                  <span class="cut-trigger-pill">CUT ON: "on classroom walls" ➔ CUT to Clip 58</span>
+                </div>
+
+                <!-- Spoken Voiceover Line -->
+                <div class="clip-vo-line">
+                  <span class="vo-label">🎙️ Spoken Voiceover (8s):</span>
+                  <p class="vo-text">"Mercator never lied to us. He built the ultimate sea navigation tool. The mistake was keeping it on classroom walls."</p>
+                </div>
+
+                <!-- Visual Action & Flow AI Prompt -->
+                <div class="clip-visual-block">
+                  <div class="visual-desc">
+                    <span class="visual-label">🎥 On-Screen Visual:</span>
+                    <p>Camera pulls back from glowing African continent into full orbital view of Earth.</p>
+                  </div>
+
+                  <div class="prompt-code-wrap">
+                    <div class="prompt-bar">
+                      <span class="prompt-badge">⚡ Flow AI Prompt (§20 Formula)</span>
+                      <button class="clean-copy-btn" onclick="copyPrompt(this)">Copy Prompt</button>
+                    </div>
+                    <pre class="prompt-snippet"><code>Create an 8-second horizontal 16:9 cinematic clip. Cinematic deep space pull back from Earth, golden sunrise cresting over the African continent, ethereal starry background, photorealistic 8k --ar 16:9</code></pre>
+                  </div>
+
+                  <div class="clip-sfx-row">
+                    <span class="sfx-tag-label">🎵 SFX:</span>
+                    <span class="sfx-tag-val">Grand orchestral swell</span>
+                  </div>
+                </div>
+              </div>
+              <!-- CLIP 58 -->
+              <div class="granular-clip-box">
+                <div class="clip-header-row">
+                  <div class="clip-id-badge">
+                    <span class="clip-pill">CLIP 58</span>
+                    <span class="clip-time">13:00 – 13:14</span>
+                  </div>
+                  <span class="cut-trigger-pill">FADE TO BLACK ➔ Outro End Screen</span>
+                </div>
+
+                <!-- Spoken Voiceover Line -->
+                <div class="clip-vo-line">
+                  <span class="vo-label">🎙️ Spoken Voiceover (8s):</span>
+                  <p class="vo-text">"The next time you look at a world map, remember: the Earth is round, and Africa is bigger than you think."</p>
+                </div>
+
+                <!-- Visual Action & Flow AI Prompt -->
+                <div class="clip-visual-block">
+                  <div class="visual-desc">
+                    <span class="visual-label">🎥 On-Screen Visual:</span>
+                    <p>Earth floating serenely in space with channel logo and subscribe button fading in.</p>
+                  </div>
+
+                  <div class="prompt-code-wrap">
+                    <div class="prompt-bar">
+                      <span class="prompt-badge">⚡ Flow AI Prompt (§20 Formula)</span>
+                      <button class="clean-copy-btn" onclick="copyPrompt(this)">Copy Prompt</button>
+                    </div>
+                    <pre class="prompt-snippet"><code>Create an 8-second horizontal 16:9 cinematic clip. Majestic photorealistic Earth rotating slowly in deep space, stars glistening in distance, warm atmospheric glow, peaceful cinematic outro, 8k --ar 16:9</code></pre>
+                  </div>
+
+                  <div class="clip-sfx-row">
+                    <span class="sfx-tag-label">🎵 SFX:</span>
+                    <span class="sfx-tag-val">Orchestral resolution into warm piano chord</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
         </section>
 
         <!-- TAB 2: SHORTS -->
         <section class="tab-pane" id="tab-shorts">
-          <div class="clean-script-card">
-            <div class="card-top-bar">
-              <div class="card-title-group">
-                <span class="beat-pill" style="background:var(--accent-yellow);">Short 1 of 2</span>
+          <div class="clean-beat-container">
+            <div class="beat-section-header">
+              <div class="beat-title-wrap">
+                <span class="beat-badge">Short 1 of 2</span>
                 <h3>V1-Short-A · The 14x Greenland vs Africa Area Shock</h3>
               </div>
-              <span class="time-tag">68s · 8 Vertical Clips</span>
+              <span class="beat-time-badge">68s · 8 Vertical Clips</span>
             </div>
 
-            <div class="voiceover-text-box">
-              <p><strong>Hook:</strong> "Greenland is not the size of Africa. It fits inside it fourteen times."<br><br>
-              <strong>Clip 1 (0:00–0:08):</strong> "Greenland is not the size of Africa. It fits inside it fourteen times."<br>
-              <strong>Clip 2 (0:08–0:16):</strong> "The US, China, India, and all of Western Europe fit inside Africa together."<br>
-              <strong>Clip 3 (0:16–0:24):</strong> "Africa is 30.3 million square kilometres. Greenland is barely 2.1 million."<br>
-              <strong>Clip 4 (0:24–0:32):</strong> "So why does your wall map show them as identical twins?"<br>
-              <strong>Clip 5 (0:32–0:40):</strong> "Because in 1569, sailors needed straight compass lines, not true country sizes."<br>
-              <strong>Clip 6 (0:40–0:48):</strong> "Mercator stretched the poles to preserve angles, inflating northern lands by 400%."<br>
-              <strong>Clip 7 (0:48–0:56):</strong> "Even in 2026, web maps still keep this projection to render square tiles."<br>
-              <strong>Clip 8 (0:56–1:08):</strong> "Should schools ban the Mercator map forever, or does it still have a purpose? Tell me below."</p>
+            <div class="clip-vo-line" style="margin-bottom:12px;">
+              <span class="vo-label">🎙️ Spoken Script:</span>
+              <p class="vo-text">
+                "Greenland is not the size of Africa. It fits inside it fourteen times. The US, China, India, and all of Western Europe fit inside Africa together. Africa is 30.3 million square kilometres. Greenland is barely 2.1 million. So why does your wall map show them as identical twins? Because in 1569, sailors needed straight compass lines, not true country sizes. Mercator stretched the poles to preserve angles, inflating northern lands by 400%. Even in 2026, web maps still keep this projection to render square tiles. Should schools ban the Mercator map forever, or does it still have a purpose? Tell me below."
+              </p>
             </div>
           </div>
 
-          <div class="clean-script-card">
-            <div class="card-top-bar">
-              <div class="card-title-group">
-                <span class="beat-pill" style="background:var(--accent-blue); color:#FFFFFF;">Short 2 of 2</span>
+          <div class="clean-beat-container">
+            <div class="beat-section-header">
+              <div class="beat-title-wrap">
+                <span class="beat-badge" style="background:var(--accent-blue); color:#FFFFFF;">Short 2 of 2</span>
                 <h3>V1-Short-B · Why Your Phone Uses a 1569 Sailing Map</h3>
               </div>
-              <span class="time-tag">72s · 8 Vertical Clips</span>
+              <span class="beat-time-badge">72s · 8 Vertical Clips</span>
             </div>
 
-            <div class="voiceover-text-box">
-              <p><strong>Hook:</strong> "Your smartphone navigation still relies on a sailing map drawn in 1569. There is a genius reason why."<br><br>
-              <strong>Clip 1 (0:00–0:08):</strong> "Your smartphone navigation still relies on a sailing map drawn in 1569. There is a genius reason why."<br>
-              <strong>Clip 2 (0:08–0:16):</strong> "In 2005, when Google built Google Maps, they had dozens of accurate world projections to pick."<br>
-              <strong>Clip 3 (0:16–0:24):</strong> "They picked Web Mercator—the exact map notorious for exaggerating the Arctic."<br>
-              <strong>Clip 4 (0:24–0:32):</strong> "Why? Because Mercator preserves 90-degree street corners at local zoom levels."<br>
-              <strong>Clip 5 (0:32–0:40):</strong> "Equal-area maps distort angles, turning square city blocks into skewed parallelograms."<br>
-              <strong>Clip 6 (0:40–0:48):</strong> "Mercator also divides cleanly into 256-pixel square tiles that load instantly across millions of phones."<br>
-              <strong>Clip 7 (0:48–0:56):</strong> "So the map isn't broken—it was perfectly engineered for street-level navigation."<br>
-              <strong>Clip 8 (0:56–1:12):</strong> "Did you know your GPS was using a 450-year-old compass trick? Drop your thoughts below."</p>
+            <div class="clip-vo-line">
+              <span class="vo-label">🎙️ Spoken Script:</span>
+              <p class="vo-text">
+                "Your smartphone navigation still relies on a sailing map drawn in 1569. There is a genius reason why. In 2005, when Google built Google Maps, they had dozens of accurate world projections to pick. They picked Web Mercator—the exact map notorious for exaggerating the Arctic. Why? Because Mercator preserves 90-degree street corners at local zoom levels. Equal-area maps distort angles, turning square city blocks into skewed parallelograms. Mercator also divides cleanly into 256-pixel square tiles that load instantly across millions of phones. So the map isn't broken—it was perfectly engineered for street-level navigation. Did you know your GPS was using a 450-year-old compass trick? Drop your thoughts below."
+              </p>
             </div>
           </div>
         </section>
 
         <!-- TAB 3: RESEARCH -->
         <section class="tab-pane" id="tab-research">
-          <div class="clean-script-card">
-            <div class="card-top-bar">
-              <div class="card-title-group">
-                <span class="beat-pill" style="background:var(--accent-green); color:#FFFFFF;">FACT CHECK</span>
+          <div class="clean-beat-container">
+            <div class="beat-section-header">
+              <div class="beat-title-wrap">
+                <span class="beat-badge" style="background:var(--accent-green); color:#FFFFFF;">FACT CHECK</span>
                 <h3>Verified Geographic & Mathematical Citations (§13.4)</h3>
               </div>
             </div>
 
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px;">
-              <div class="voiceover-text-box">
-                <span class="directive-label">Area Ratios (CIA World Factbook 2024):</span>
-                <p style="font-size: 0.92rem; font-weight: 500;">• Africa: 30,370,000 km²<br>• Greenland: 2,166,086 km²<br>• Exact Ratio: 14.02x</p>
+              <div class="clip-vo-line">
+                <span class="vo-label">Area Ratios (CIA World Factbook 2024):</span>
+                <p style="font-size: 0.92rem; font-weight: 600; color: var(--text-dark); margin-top:4px;">• Africa: 30,370,000 km²<br>• Greenland: 2,166,086 km²<br>• Exact Ratio: 14.02x</p>
               </div>
-              <div class="voiceover-text-box">
-                <span class="directive-label">Nested Benchmark (True Size):</span>
-                <p style="font-size: 0.92rem; font-weight: 500;">• USA (9.83M) + China (9.60M) + India (3.29M) + W. Europe (4.10M) = 26.82M km²<br><em>All 4 nest inside Africa with 3.55M km² left over.</em></p>
+              <div class="clip-vo-line">
+                <span class="vo-label">Nested Benchmark (True Size):</span>
+                <p style="font-size: 0.92rem; font-weight: 600; color: var(--text-dark); margin-top:4px;">• USA (9.83M) + China (9.60M) + India (3.29M) + W. Europe (4.10M) = 26.82M km²<br><em>All 4 nest inside Africa with 3.55M km² left over.</em></p>
               </div>
-              <div class="voiceover-text-box">
-                <span class="directive-label">Historic Date & Source:</span>
-                <p style="font-size: 0.92rem; font-weight: 500;">• Gerardus Mercator, published 1569 in Duisburg.<br>• Title: <em>Nova et Aucta Orbis Terrae Descriptio</em>.</p>
+              <div class="clip-vo-line">
+                <span class="vo-label">Historic Date & Source:</span>
+                <p style="font-size: 0.92rem; font-weight: 600; color: var(--text-dark); margin-top:4px;">• Gerardus Mercator, published 1569 in Duisburg.<br>• Title: <em>Nova et Aucta Orbis Terrae Descriptio</em>.</p>
               </div>
-              <div class="voiceover-text-box">
-                <span class="directive-label">Web Standard Spec:</span>
-                <p style="font-size: 0.92rem; font-weight: 500;">• Spec: EPSG:3857 (WGS 84 / Pseudo-Mercator)<br>• Tile Pyramid: 256×256 pixels.</p>
+              <div class="clip-vo-line">
+                <span class="vo-label">Web Standard Spec:</span>
+                <p style="font-size: 0.92rem; font-weight: 600; color: var(--text-dark); margin-top:4px;">• Spec: EPSG:3857 (WGS 84 / Pseudo-Mercator)<br>• Tile Pyramid: 256×256 pixels.</p>
               </div>
             </div>
           </div>
@@ -1397,44 +3181,40 @@
 
         <!-- TAB 4: PACKAGING -->
         <section class="tab-pane" id="tab-packaging">
-          <div class="clean-script-card">
-            <div class="card-top-bar">
-              <div class="card-title-group">
-                <span class="beat-pill" style="background:var(--accent-yellow);">PACKAGING KIT</span>
+          <div class="clean-beat-container">
+            <div class="beat-section-header">
+              <div class="beat-title-wrap">
+                <span class="beat-badge">PACKAGING KIT</span>
                 <h3>YouTube Metadata, Pinned Comment & Chapters (§26)</h3>
               </div>
             </div>
 
             <div style="display: flex; flex-direction: column; gap: 14px;">
-              <div class="voiceover-text-box">
-                <span class="directive-label">Primary Title (43 Chars):</span>
-                <p style="font-size: 1.05rem; font-weight: 700;">Every Map You've Seen Is Lying About Africa</p>
+              <div class="clip-vo-line">
+                <span class="vo-label">Primary Title (43 Chars):</span>
+                <p style="font-size: 1.05rem; font-weight: 800; color: var(--text-dark);">Every Map You've Seen Is Lying About Africa</p>
               </div>
-              <div class="voiceover-text-box">
-                <span class="directive-label">A/B Test Title (36 Chars):</span>
-                <p style="font-size: 1.05rem; font-weight: 700;">Why Africa Is Bigger Than You Think</p>
+              <div class="clip-vo-line">
+                <span class="vo-label">A/B Test Title (36 Chars):</span>
+                <p style="font-size: 1.05rem; font-weight: 800; color: var(--text-dark);">Why Africa Is Bigger Than You Think</p>
               </div>
-              <div class="voiceover-text-box">
-                <span class="directive-label">Thumbnail Concept & 3-Word Text:</span>
-                <p style="font-size: 0.95rem; font-weight: 600;">Amber Greenland outline nested inside dark slate Africa. Text: <strong>"14x BIGGER"</strong></p>
-              </div>
-              <div class="voiceover-text-box">
-                <span class="directive-label">Pinned Comment Strategy:</span>
-                <p style="font-size: 0.95rem; font-weight: 500;">"If you had to pick one map for classroom walls—between true shape (Mercator) and true area (Equal Earth)—which would you choose and why? Let's discuss in the replies."</p>
+              <div class="clip-vo-line">
+                <span class="vo-label">Thumbnail Concept:</span>
+                <p style="font-size: 0.95rem; font-weight: 600; color: var(--text-dark);">Amber Greenland outline nested inside dark slate Africa. Text: <strong>"14x BIGGER"</strong></p>
               </div>
             </div>
           </div>
         </section>
 
         <footer style="margin-top: 80px; padding-top: 24px; border-top: 2.5px dashed var(--border-chunky); text-align: center; color: var(--text-faint); font-size: 0.82rem; font-weight: 700;">
-          <p><strong style="color: var(--accent-blue-deep);">Hidden Geography</strong> · Production Studio OS v2.1 · Strict Tier 1 Cadence</p>
+          <p><strong style="color: var(--accent-blue-deep);">Hidden Geography</strong> · Production Studio OS v2.1 · Granular 8-Second Synchronized Workflow</p>
         </footer>
 
       </main>
     </div>
   </div>
 
-  <div class="toast-pill" id="toastMsg">Copied to Clipboard!</div>
+  <div class="toast-pill" id="toastMsg">Prompt Copied to Clipboard!</div>
 
   <script>
     // Theme Toggle
@@ -1515,10 +3295,10 @@
     }
 
     function copyPrompt(btn) {
-      const code = btn.closest(".directive-prompt-box").querySelector("code");
+      const code = btn.closest(".prompt-code-wrap").querySelector("code");
       if (code) {
         navigator.clipboard.writeText(code.textContent).then(() => {
-          showToast("AI Prompt Copied!");
+          showToast("Prompt Copied!");
         });
       }
     }
