@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Hidden Geography — Every Map You've Seen Is Lying About Africa">
   <meta name="theme-color" content="#0EA5E9">
-  <title>Every Map You've Seen Is Lying About Africa · Production Studio</title>
+  <title>Every Map You've Seen Is Lying About Africa · Long Video Studio</title>
   
   <link rel="icon" type="image/svg+xml" href="../../../favicon.svg">
   
@@ -341,7 +341,7 @@
       gap: 16px;
     }
 
-    /* Single Clip Card (Clean & Filename focused) */
+    /* Single Clip Card */
     .single-clip-card {
       background: var(--bg-surface);
       border: 1.5px solid var(--border-medium);
@@ -455,31 +455,6 @@
       color: var(--ink-primary);
     }
 
-    /* Shorts VO Box */
-    .clip-vo-box {
-      background: var(--bg-surface-alt);
-      border-left: 3.5px solid var(--accent-yellow);
-      border-radius: 6px;
-      padding: 10px 14px;
-    }
-
-    .micro-label-gold {
-      display: block;
-      font-size: 0.68rem;
-      font-weight: 800;
-      color: #B45309;
-      margin-bottom: 4px;
-      text-transform: uppercase;
-    }
-    [data-theme="dark"] .micro-label-gold { color: #FBBF24; }
-
-    .clip-vo-text {
-      font-size: 0.94rem;
-      font-weight: 500;
-      line-height: 1.6;
-      color: var(--ink-primary);
-    }
-
     /* Toast */
     .clean-toast {
       position: fixed;
@@ -546,10 +521,9 @@
     <nav class="anchor-nav-bar">
       <a class="anchor-pill" href="#step1-voiceover">🎙️ Step 1: Full Voiceover Script</a>
       <a class="anchor-pill" href="#step2-clips">🎬 Step 2: Flow AI Prompts (27 Clips)</a>
-      <a class="anchor-pill" href="#step3-shorts">⚡ Step 3: YouTube Shorts</a>
     </nav>
 
-    <!-- SECTION 1: FULL VOICEOVER SCRIPT (SAB SE PEHLY) -->
+    <!-- SECTION 1: FULL VOICEOVER SCRIPT -->
     <section class="production-section" id="step1-voiceover">
       <div class="section-banner-head">
         <div>
@@ -610,7 +584,7 @@ Modern cartography has finally solved this dilemma. Today, the Equal Earth proje
 
       <!-- Sequential Cards List -->
       <div class="clips-sequence-list">
-        <!-- v1-clip-01.mp4 -->
+<!-- v1-clip-01.mp4 -->
         <article class="single-clip-card" id="v1-clip-01">
           <div class="clip-card-header">
             <div class="clip-title-group">
@@ -1314,68 +1288,8 @@ Modern cartography has finally solved this dilemma. Today, the Equal Earth proje
       </div>
     </section>
 
-    <!-- SECTION 3: DERIVED SHORTS -->
-    <section class="production-section" id="step3-shorts">
-      <div class="section-banner-head">
-        <div>
-          <span class="clip-filename-pill" style="background:var(--accent-coral); color:#FFFFFF;">STEP 3</span>
-          <h2 class="section-head-title" style="margin-top:6px;">⚡ YouTube Shorts Suite (9:16 Vertical)</h2>
-        </div>
-      </div>
-
-      <div class="clips-sequence-list">
-        <!-- v1-short-01 -->
-        <article class="single-clip-card">
-          <div class="clip-card-header">
-            <div class="clip-title-group">
-              <span class="clip-filename-pill" style="background:#0284C7;">💾 Save As: <strong>v1-short-01.mp4</strong></span>
-              <span class="clip-time-range">68s · 9:16 Vertical</span>
-            </div>
-            <span class="clip-type-pill">⚡ Flow AI Vertical (9:16)</span>
-          </div>
-
-          <div class="clip-vo-box">
-            <span class="micro-label-gold">🎙️ Short 1 Voiceover Script:</span>
-            <p class="clip-vo-text">"Greenland is not the size of Africa. It fits inside it fourteen times! The US, China, India, and all of Western Europe fit inside Africa together. Africa is 30.3 million square kilometres. Greenland is barely 2.1 million. So why does your wall map show them as identical twins? Because in 1569, sailors needed straight compass lines, not true country sizes. Mercator stretched the poles to preserve angles, inflating northern lands by 400%. Even in 2026, web maps still keep this projection to render square tiles. Should schools ban the Mercator map forever, or does it still have a purpose? Tell me below."</p>
-          </div>
-
-          <div class="clip-prompt-box">
-            <div class="prompt-box-header">
-              <span class="prompt-badge-title">Google Flow Vertical Prompt (9:16):</span>
-              <button class="btn-copy-action" onclick="copyClipPrompt(this)">📋 Copy Prompt</button>
-            </div>
-            <pre class="prompt-code-box"><code>Create an 8-second vertical 9:16 cinematic documentary clip. Macro documentary shot, vintage wooden classroom with large Mercator wall map, camera pushes straight in on Greenland and Africa, soft morning daylight, hyper-detailed paper grain, 8k resolution, photorealistic, no text --ar 9:16</code></pre>
-          </div>
-        </article>
-
-        <!-- v1-short-02 -->
-        <article class="single-clip-card">
-          <div class="clip-card-header">
-            <div class="clip-title-group">
-              <span class="clip-filename-pill" style="background:#0284C7;">💾 Save As: <strong>v1-short-02.mp4</strong></span>
-              <span class="clip-time-range">72s · 9:16 Vertical</span>
-            </div>
-            <span class="clip-type-pill">⚡ Flow AI Vertical (9:16)</span>
-          </div>
-
-          <div class="clip-vo-box">
-            <span class="micro-label-gold">🎙️ Short 2 Voiceover Script:</span>
-            <p class="clip-vo-text">"Your smartphone navigation still relies on a sailing map drawn in 1569. There is a genius reason why! In 2005, when Google built Google Maps, they picked Web Mercator. Why? Because Mercator preserves 90-degree street corners at local zoom levels. Equal-area maps distort angles, turning square city blocks into skewed parallelograms. Mercator also divides cleanly into 256-pixel square tiles that load instantly across millions of phones. So the map isn't broken—it was perfectly engineered for street-level navigation. Did you know your GPS was using a 450-year-old compass trick? Drop your thoughts below."</p>
-          </div>
-
-          <div class="clip-prompt-box">
-            <div class="prompt-box-header">
-              <span class="prompt-badge-title">Google Flow Vertical Prompt (9:16):</span>
-              <button class="btn-copy-action" onclick="copyClipPrompt(this)">📋 Copy Prompt</button>
-            </div>
-            <pre class="prompt-code-box"><code>Create an 8-second vertical 9:16 cinematic clip. Close-up of hand holding modern smartphone displaying blue GPS navigation route while walking on bustling city sidewalk at sunset, sleek bokeh city lights, 8k resolution, photorealistic, no text --ar 9:16</code></pre>
-          </div>
-        </article>
-      </div>
-    </section>
-
     <footer style="margin-top: 30px; padding-top: 20px; border-top: 1.5px dashed var(--border-subtle); text-align: center; color: var(--ink-faint); font-size: 0.82rem; font-weight: 600;">
-      <p><strong style="color: var(--accent-blue);">Hidden Geography</strong> · Production Studio OS v2.1 · Deep 8K High-Retention Standard</p>
+      <p><strong style="color: var(--accent-blue);">Hidden Geography</strong> · Long Video Production Studio OS v2.1 · 100% Dedicated Long-Form Workflow</p>
     </footer>
 
   </main>
