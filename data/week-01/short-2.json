@@ -1,0 +1,88 @@
+{
+  "week": "01",
+  "number": 2,
+  "title": "Why Google Maps Uses Mercator Geometry",
+  "format": "YouTube Short + TikTok — Google Flow 9:16 + separate voiceover",
+  "script": "Google Maps uses Mercator geometry for its standard base map. Mercator preserves local angles, the same property that made a straight line useful as a constant compass bearing on nautical charts. At street scale, nearby roads and corners stay familiar. Google converts latitude and longitude into Mercator world coordinates, then divides the map into square image tiles. At zoom level zero, the base world is two hundred and fifty six pixels square. Every higher zoom level doubles both pixel dimensions, and the app requests only the tiles inside your screen. The satellite positioning system calculates your location separately. Mercator decides how that location appears on the flat display. An old navigation geometry survives because it still does one digital job efficiently.",
+  "word_count": 121,
+  "predicted_duration_seconds": 50,
+  "clips": [
+    {
+      "number": 1,
+      "filename": "s1b-clip-01.mp4",
+      "predicted_start_seconds": 0,
+      "prompt": "Create one continuous 8-second vertical 9:16 phone navigation shot. Hand pans a clean unlabeled city map with familiar right-angle streets, soft daylight, no readable interface text or brands, no text, no logos, no watermark, no spoken dialogue or narration.",
+      "cut_cue": "Jab voiceover bole: \"nautical charts\" → s1b-clip-02.mp4 lagayein."
+    },
+    {
+      "number": 2,
+      "filename": "s1b-clip-02.mp4",
+      "predicted_start_seconds": 12.8,
+      "prompt": "Create one continuous 8-second vertical 9:16 historical chart shot. A straight constant-bearing route is drawn beside a brass compass on a Mercator-style ocean grid, authentic lantern light, no labels, no text, no logos, no watermark, no spoken dialogue or narration.",
+      "cut_cue": "Jab voiceover bole: \"nearby roads and corners stay familiar\" → s1b-clip-03.mp4 lagayein."
+    },
+    {
+      "number": 3,
+      "filename": "s1b-clip-03.mp4",
+      "predicted_start_seconds": 16.6,
+      "prompt": "Create one continuous 8-second vertical 9:16 map-engine animation. Latitude and longitude transform into a square Mercator world coordinate grid, smooth precise motion, no numeric labels, no text, no logos, no watermark, no spoken dialogue or narration.",
+      "cut_cue": "Jab voiceover bole: \"square image tiles\" → s1b-clip-04.mp4 lagayein."
+    },
+    {
+      "number": 4,
+      "filename": "s1b-clip-04.mp4",
+      "predicted_start_seconds": 23.6,
+      "prompt": "Create one continuous 8-second vertical 9:16 tile animation. A square base world divides into four, sixteen, then many equal image tiles while the camera zooms smoothly, restrained technical style, no text, no logos, no watermark, no spoken dialogue or narration.",
+      "cut_cue": "Jab voiceover bole: \"tiles inside your screen\" → s1b-clip-05.mp4 lagayein."
+    },
+    {
+      "number": 5,
+      "filename": "s1b-clip-05.mp4",
+      "predicted_start_seconds": 37.2,
+      "prompt": "Create one continuous 8-second vertical 9:16 split visualization. Navigation satellites locate a point on a realistic globe, then a separate flat phone map draws that point, clear two-stage motion, no text, no logos, no watermark, no spoken dialogue or narration.",
+      "cut_cue": "Short khatam → End screen lagayein."
+    }
+  ],
+  "sources": [
+    {
+      "title": "African Union — The True Size of Africa",
+      "url": "https://au.int/sites/default/files/documents/44438-doc-AUE_2024_English_2.pdf"
+    },
+    {
+      "title": "United Nations Statistics — Greenland surface area",
+      "url": "https://unstats.un.org/unsd/publications/pocketbook/files/world-stats-pocketbook-2024.pdf"
+    },
+    {
+      "title": "USGS — Exploring Maps and projection tradeoffs",
+      "url": "https://pubs.usgs.gov/unnumbered/70043847/report.pdf"
+    },
+    {
+      "title": "NOAA — Mercator nautical charts and rhumb lines",
+      "url": "https://www.nauticalcharts.noaa.gov/learn/nautical-cartography.html"
+    },
+    {
+      "title": "Google Maps — Map and tile coordinates",
+      "url": "https://developers.google.com/maps/documentation/javascript/coordinates"
+    },
+    {
+      "title": "Google Maps — Projection documentation",
+      "url": "https://developers.google.com/maps/documentation/javascript/maptypes"
+    },
+    {
+      "title": "PROJ — Equal Earth projection",
+      "url": "https://proj.org/en/stable/operations/projections/eqearth.html"
+    },
+    {
+      "title": "Google Flow — Create video clips",
+      "url": "https://support.google.com/flow/answer/16353334?hl=en"
+    },
+    {
+      "title": "Google Flow — Models and supported features",
+      "url": "https://support.google.com/flow/answer/16352836?hl=en"
+    },
+    {
+      "title": "YouTube — Accurate and succinct title guidance",
+      "url": "https://support.google.com/youtube/answer/12340300?hl=en"
+    }
+  ]
+}

@@ -1,0 +1,95 @@
+{
+  "week": "01",
+  "number": 3,
+  "title": "No Flat World Map Can Be Perfect",
+  "format": "YouTube Short + TikTok — Google Flow 9:16 + separate voiceover",
+  "script": "A globe cannot be flattened into a perfect map. Imagine cutting an orange peel and pressing it onto a table. The peel must tear, overlap, or stretch before it lies flat. Earth creates the same problem. Every world map chooses which property to protect and which distortion to accept. Mercator protects local angles, which helps navigation, but enlarges high latitudes. Equal area projections protect relative size, but shapes bend more as they move away from favored regions. Equal Earth was designed to preserve area while keeping continents visually familiar. It still cannot preserve every distance, direction, and shape at once. A globe avoids the flattening problem, but it cannot show the entire planet on one sheet. There is no single correct world map. There are only projections built for different tasks.",
+  "word_count": 131,
+  "predicted_duration_seconds": 54,
+  "clips": [
+    {
+      "number": 1,
+      "filename": "s1c-clip-01.mp4",
+      "predicted_start_seconds": 0,
+      "prompt": "Create an 8-second vertical 9:16 photorealistic geography documentary clip. A detailed blue planet Earth rotates slowly in deep space while a translucent flat sheet appears beside it, emphasizing sphere versus plane, natural atmospheric glow, smooth camera drift, no text, no labels, no watermark, no logos, no spoken dialogue or narration.",
+      "cut_cue": "Jab voiceover bole: \"perfect map\" → s1c-clip-02.mp4 lagayein."
+    },
+    {
+      "number": 2,
+      "filename": "s1c-clip-02.mp4",
+      "predicted_start_seconds": 3.7,
+      "prompt": "Create an 8-second vertical 9:16 macro documentary clip. Human hands carefully cut a fresh orange peel and press the curved peel onto a dark wooden table; the peel naturally tears and overlaps as it flattens, soft window light, precise overhead camera, photorealistic, no text, no logos, no watermark, no spoken dialogue or narration.",
+      "cut_cue": "Jab voiceover bole: \"before it lies flat\" → s1c-clip-03.mp4 lagayein."
+    },
+    {
+      "number": 3,
+      "filename": "s1c-clip-03.mp4",
+      "predicted_start_seconds": 12.8,
+      "prompt": "Create an 8-second vertical 9:16 museum visualization. Three unlabeled world map sheets float side by side, one preserving shape, one preserving relative area, one preserving direction; each sheet subtly bends and transforms while a globe remains behind them, warm gallery lighting, no text, no logos, no watermark, no spoken dialogue or narration.",
+      "cut_cue": "Jab voiceover bole: \"distortion to accept\" → s1c-clip-04.mp4 lagayein."
+    },
+    {
+      "number": 4,
+      "filename": "s1c-clip-04.mp4",
+      "predicted_start_seconds": 20.3,
+      "prompt": "Create an 8-second vertical 9:16 scientific animation. A glowing Earth sphere sits inside a transparent cylinder as light rays project the curved surface onto the cylinder, polar regions stretching upward, slow clean orbit, cinematic cyan and amber lighting, no text, no logos, no watermark, no spoken dialogue or narration.",
+      "cut_cue": "Jab voiceover bole: \"enlarges high latitudes\" → s1c-clip-05.mp4 lagayein."
+    },
+    {
+      "number": 5,
+      "filename": "s1c-clip-05.mp4",
+      "predicted_start_seconds": 24.8,
+      "prompt": "Create an 8-second vertical 9:16 cartographic documentary clip. A modern equal-area world map unrolls across a walnut table, continent areas balanced and recognizable, curved outer edges suggesting a globe, soft museum lighting, no readable labels, no watermark, no text, no logos, no spoken dialogue or narration.",
+      "cut_cue": "Jab voiceover bole: \"entire planet on one sheet\" → s1c-clip-06.mp4 lagayein."
+    },
+    {
+      "number": 6,
+      "filename": "s1c-clip-06.mp4",
+      "predicted_start_seconds": 48,
+      "prompt": "Create an 8-second vertical 9:16 cinematic finale. Camera pulls away from a collection of different flat world maps toward a single rotating globe suspended in a dark observatory, sunrise crossing Earth, contemplative geography documentary mood, no text, no watermark, no logos, no spoken dialogue or narration.",
+      "cut_cue": "Short khatam → End screen lagayein."
+    }
+  ],
+  "sources": [
+    {
+      "title": "African Union — The True Size of Africa",
+      "url": "https://au.int/sites/default/files/documents/44438-doc-AUE_2024_English_2.pdf"
+    },
+    {
+      "title": "United Nations Statistics — Greenland surface area",
+      "url": "https://unstats.un.org/unsd/publications/pocketbook/files/world-stats-pocketbook-2024.pdf"
+    },
+    {
+      "title": "USGS — Exploring Maps and projection tradeoffs",
+      "url": "https://pubs.usgs.gov/unnumbered/70043847/report.pdf"
+    },
+    {
+      "title": "NOAA — Mercator nautical charts and rhumb lines",
+      "url": "https://www.nauticalcharts.noaa.gov/learn/nautical-cartography.html"
+    },
+    {
+      "title": "Google Maps — Map and tile coordinates",
+      "url": "https://developers.google.com/maps/documentation/javascript/coordinates"
+    },
+    {
+      "title": "Google Maps — Projection documentation",
+      "url": "https://developers.google.com/maps/documentation/javascript/maptypes"
+    },
+    {
+      "title": "PROJ — Equal Earth projection",
+      "url": "https://proj.org/en/stable/operations/projections/eqearth.html"
+    },
+    {
+      "title": "Google Flow — Create video clips",
+      "url": "https://support.google.com/flow/answer/16353334?hl=en"
+    },
+    {
+      "title": "Google Flow — Models and supported features",
+      "url": "https://support.google.com/flow/answer/16352836?hl=en"
+    },
+    {
+      "title": "YouTube — Accurate and succinct title guidance",
+      "url": "https://support.google.com/youtube/answer/12340300?hl=en"
+    }
+  ]
+}

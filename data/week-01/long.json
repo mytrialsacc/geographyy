@@ -1,0 +1,332 @@
+{
+  "week": "01",
+  "title": "Why Mercator Maps Make Africa Look Too Small",
+  "format": "YouTube long — Google Flow 16:9 + separate voiceover",
+  "script": "On a common Mercator world map, Greenland can look almost as large as Africa. On the ground, that comparison is nowhere close. The African continent covers about thirty point three seven million square kilometres. Greenland covers about two point one seven million. Divide those numbers and Africa is about fourteen times as large. This is the first clue that a flat map is not a photograph of the planet.\n\nThe scale shock goes further. The combined surface areas of the United States, China, and India total roughly twenty two point seven million square kilometres. That is still well below Africa's area, with more than seven million square kilometres left over. Their shapes cannot simply be packed like puzzle pieces without overlap, but the area comparison is real. Africa only looks modest when a projection changes the visual scale of high latitudes.\n\nEvery flat world map makes a compromise. Earth is curved, paper and screens are flat, and a curved surface cannot be opened into a plane without distortion. Imagine cutting an orange peel and pressing it onto a table. It must tear, overlap, compress, or stretch. With a world map, something has to give. A projection may protect area, local shape, distance, or direction, but no single flat projection keeps all four perfectly everywhere. The right choice depends on what the map is for.\n\nThe Mercator projection chose a very specific job. Gerardus Mercator published his projection in 1569. On a Mercator nautical chart, a line of constant compass direction appears straight. Navigators call that a rhumb line, or a line of constant course. A sailor could draw the route with a ruler, measure its angle from north, and steer that bearing with a compass.\n\nThat convenience does not always produce the shortest route. On a globe, the shortest path between two points follows a curved arc called a great circle. A great-circle track usually changes compass direction as the journey progresses. For a long ocean crossing, a straight rhumb line could be easier to plot and follow, even when it travelled farther. Mercator's success came from navigation, not continent comparison.\n\nThe geometry that keeps directions useful also creates the size problem. Mercator places longitude lines as straight, parallel verticals. To preserve local angles, the spacing between horizontal latitude lines expands toward the poles. The map stretches east to west and north to south by the same scale in every direction at each point. Cartographers call that property conformal. It means local angles stay correct, so a small road intersection keeps a familiar shape.\n\nBut conformal does not mean equal area. On Mercator, scale grows with latitude. Along the equator, scale is true. At sixty degrees north, linear scale is about twice the equatorial scale. Because area has two dimensions, the displayed area is enlarged about four times. Near eighty degrees north, linear scale is roughly five point eight times larger, so a tiny patch can appear at about thirty three times the equatorial area scale.\n\nThat last number needs context. It describes a small patch near eighty degrees, not a claim that all of Greenland is thirty three times too large. Greenland stretches from about sixty to above eighty degrees north, so distortion changes across the island. Africa crosses the equator and reaches into mid-latitudes, where Mercator distortion is much lower. On the same wall map, Greenland expands far more than Africa. That is why their displayed areas become misleading.\n\nThe projection is not secretly changing land. It is changing the scale used to draw land at different latitudes. Problems begin when we use the wrong map for the wrong question. Mercator is useful when local direction and angle matter. If the question is which continent is larger, use an equal area projection instead.\n\nAn equal area projection keeps every region's area in the correct proportion to every other region. The tradeoff moves somewhere else: shape has to bend somewhere. Gall-Peters is one well-known equal area design, but its continents look vertically stretched in many places. Equal Earth, designed in 2018, also preserves relative area while keeping the overall shapes of continents visually familiar. It is excellent for comparing global size, but it still does not preserve every distance, direction, and shape.\n\nSo why does a modern phone still show Mercator geometry? Google Maps uses a Mercator projection for its standard base maps. At street scale, conformal geometry keeps nearby roads and corners familiar at street scale. Google's implementation cuts the world off near about eighty five degrees north and south, making a square base map. At zoom level zero, that base world is two hundred and fifty six pixels square.\n\nEach higher zoom level doubles the pixel dimensions in both directions. That creates four times as many pixels as the previous level. The square can be divided into small image tiles, and the app requests only the tiles inside your screen. This is efficient for panning and zooming. The satellite positioning system calculates your location separately. Mercator decides how that position is drawn on a flat display.\n\nDigital maps are not trapped forever. When a global view matters, an app can show the round Earth directly. Atlases can use Equal Earth or another equal area design. Nautical work can still use a Mercator chart. There is no universal winner. A map is a tool, and each tool protects a different property.\n\nFor navigation, a Mercator nautical chart remains useful. For comparing Africa with Greenland, choose an equal area map or a globe. In a classroom, do not ask only whether a map looks familiar. Ask what property it preserves, what it distorts, and what task it was built to solve.\n\nAfrica was never small. Greenland was never its twin. That distinction matters in every classroom. Mercator was not a liar; it was a successful tool doing a different job. The next time a flat world map surprises you, do not throw it away. Read it more intelligently, and choose the map that matches the question.",
+  "word_count": 1001,
+  "predicted_duration_seconds": 414,
+  "clips": [
+    {
+      "number": 1,
+      "filename": "v1-clip-01.mp4",
+      "predicted_start_seconds": 0,
+      "prompt": "Create one continuous 8-second horizontal 16:9 documentary shot. Slow push toward an aged Mercator world map in a quiet classroom, Greenland and Africa both visible, warm window light, accurate coastlines, no readable labels, no text, no logos, no watermark, no spoken dialogue or narration.",
+      "cut_cue": "Jab voiceover bole: \"almost as large as Africa\" → Theek yahan v1-clip-02.mp4 lagayein."
+    },
+    {
+      "number": 2,
+      "filename": "v1-clip-02.mp4",
+      "predicted_start_seconds": 5.8,
+      "prompt": "Create one continuous 8-second horizontal 16:9 satellite-style shot. Orbit above Africa, then reveal Greenland beside it at true relative area, steady camera, natural terrain and cloud detail, accurate coastlines, no text, no logos, no watermark, no spoken dialogue or narration.",
+      "cut_cue": "Jab voiceover bole: \"about fourteen times as large\" → Theek yahan v1-clip-03.mp4 lagayein."
+    },
+    {
+      "number": 3,
+      "filename": "v1-clip-03.mp4",
+      "predicted_start_seconds": 21.9,
+      "prompt": "Create one continuous 8-second horizontal 16:9 clean scale visualization. Accurate unlabeled silhouettes of Africa and Greenland settle side by side at true proportional area on a dark museum table, slow overhead drift, no text, no logos, no watermark, no spoken dialogue or narration.",
+      "cut_cue": "Jab voiceover bole: \"more than seven million square kilometres left over\" → Theek yahan v1-clip-04.mp4 lagayein."
+    },
+    {
+      "number": 4,
+      "filename": "v1-clip-04.mp4",
+      "predicted_start_seconds": 45.5,
+      "prompt": "Create one continuous 8-second horizontal 16:9 museum visualization. Accurate unlabeled silhouettes of the United States, China, and India appear beside Africa, their combined area visibly smaller without pretending the shapes fit inside, no text, no logos, no watermark, no spoken dialogue or narration.",
+      "cut_cue": "Jab voiceover bole: \"the area comparison is real\" → Theek yahan v1-clip-05.mp4 lagayein."
+    },
+    {
+      "number": 5,
+      "filename": "v1-clip-05.mp4",
+      "predicted_start_seconds": 52.6,
+      "prompt": "Create one continuous 8-second horizontal 16:9 macro shot. A globe casts a curved shadow over several different flat world maps on a cartographer desk, slow lateral camera slide, soft archival lighting, no text, no logos, no watermark, no spoken dialogue or narration.",
+      "cut_cue": "Jab voiceover bole: \"Imagine cutting an orange peel\" → Theek yahan v1-clip-06.mp4 lagayein."
+    },
+    {
+      "number": 6,
+      "filename": "v1-clip-06.mp4",
+      "predicted_start_seconds": 71.6,
+      "prompt": "Create one continuous 8-second horizontal 16:9 overhead documentary shot. Hands cut an orange peel and press it flat; gaps and overlaps appear naturally, precise motion, dark wooden table, soft window light, no text, no logos, no watermark, no spoken dialogue or narration.",
+      "cut_cue": "Jab voiceover bole: \"something has to give\" → Theek yahan v1-clip-07.mp4 lagayein."
+    },
+    {
+      "number": 7,
+      "filename": "v1-clip-07.mp4",
+      "predicted_start_seconds": 80.3,
+      "prompt": "Create one continuous 8-second horizontal 16:9 gallery shot. A globe rotates behind three unlabeled projection sheets that preserve different geometric properties, subtle morphing, accurate continent outlines, warm museum lighting, no text, no logos, no watermark, no spoken dialogue or narration.",
+      "cut_cue": "Jab voiceover bole: \"what the map is for\" → Theek yahan v1-clip-08.mp4 lagayein."
+    },
+    {
+      "number": 8,
+      "filename": "v1-clip-08.mp4",
+      "predicted_start_seconds": 92.7,
+      "prompt": "Create one continuous 8-second horizontal 16:9 historical shot. Anonymous sixteenth-century cartographer hands draft a cylindrical world projection on parchment in a Flemish workshop, authentic tools, no visible face, no text, no logos, no watermark, no spoken dialogue or narration.",
+      "cut_cue": "Jab voiceover bole: \"Gerardus Mercator published his projection in 1569\" → Theek yahan v1-clip-09.mp4 lagayein."
+    },
+    {
+      "number": 9,
+      "filename": "v1-clip-09.mp4",
+      "predicted_start_seconds": 98.9,
+      "prompt": "Create one continuous 8-second horizontal 16:9 maritime shot. Brass compass, ruler, and unlabeled nautical chart on a moving wooden ship table, lantern light, ocean spray, steady macro camera, no text, no logos, no watermark, no spoken dialogue or narration.",
+      "cut_cue": "Jab voiceover bole: \"line of constant course\" → Theek yahan v1-clip-10.mp4 lagayein."
+    },
+    {
+      "number": 10,
+      "filename": "v1-clip-10.mp4",
+      "predicted_start_seconds": 109.2,
+      "prompt": "Create one continuous 8-second horizontal 16:9 chart visualization. A straight route line is drawn across a Mercator-style ocean grid while a compass bearing stays constant, accurate geometry, no place labels, no text, no logos, no watermark, no spoken dialogue or narration.",
+      "cut_cue": "Jab voiceover bole: \"That convenience does not always produce the shortest route\" → Theek yahan v1-clip-11.mp4 lagayein."
+    },
+    {
+      "number": 11,
+      "filename": "v1-clip-11.mp4",
+      "predicted_start_seconds": 121.7,
+      "prompt": "Create one continuous 8-second horizontal 16:9 globe visualization. A shortest-route arc curves across the round Atlantic between two unlabeled points, slow orbit, realistic Earth, no borders or labels, no text, no logos, no watermark, no spoken dialogue or narration.",
+      "cut_cue": "Jab voiceover bole: \"changes compass direction as the journey progresses\" → Theek yahan v1-clip-12.mp4 lagayein."
+    },
+    {
+      "number": 12,
+      "filename": "v1-clip-12.mp4",
+      "predicted_start_seconds": 133.7,
+      "prompt": "Create one continuous 8-second horizontal 16:9 navigation comparison. Curved great-circle track on a globe transitions to a straight constant-bearing track on a flat chart, clean museum graphic, accurate geometry, no text, no logos, no watermark, no spoken dialogue or narration.",
+      "cut_cue": "Jab voiceover bole: \"straight rhumb line\" → Theek yahan v1-clip-13.mp4 lagayein."
+    },
+    {
+      "number": 13,
+      "filename": "v1-clip-13.mp4",
+      "predicted_start_seconds": 137.4,
+      "prompt": "Create one continuous 8-second horizontal 16:9 cinematic ship shot. Navigator follows a plotted bearing at a wooden helm on open ocean, calm dawn light, authentic compass, face not visible, no text, no logos, no watermark, no spoken dialogue or narration.",
+      "cut_cue": "Jab voiceover bole: \"Mercator's success came from navigation, not continent comparison\" → Theek yahan v1-clip-14.mp4 lagayein."
+    },
+    {
+      "number": 14,
+      "filename": "v1-clip-14.mp4",
+      "predicted_start_seconds": 145.7,
+      "prompt": "Create one continuous 8-second horizontal 16:9 scientific animation. Earth sits inside a transparent cylinder; longitude lines project outward and become straight parallel verticals, slow orbit, clean dark laboratory, no text, no logos, no watermark, no spoken dialogue or narration.",
+      "cut_cue": "Jab voiceover bole: \"verticals\" → Theek yahan v1-clip-15.mp4 lagayein."
+    },
+    {
+      "number": 15,
+      "filename": "v1-clip-15.mp4",
+      "predicted_start_seconds": 153.5,
+      "prompt": "Create one continuous 8-second horizontal 16:9 technical animation. Horizontal latitude lines spread farther apart toward both poles on an unlabeled Mercator grid, smooth controlled motion, dark blueprint background, no text, no logos, no watermark, no spoken dialogue or narration.",
+      "cut_cue": "Jab voiceover bole: \"expands toward the poles\" → Theek yahan v1-clip-16.mp4 lagayein."
+    },
+    {
+      "number": 16,
+      "filename": "v1-clip-16.mp4",
+      "predicted_start_seconds": 159.3,
+      "prompt": "Create one continuous 8-second horizontal 16:9 conformal-grid demonstration. A small square and right angle move around a Mercator map while preserving local angles as their scale changes, clean geometric animation, no text, no logos, no watermark, no spoken dialogue or narration.",
+      "cut_cue": "Jab voiceover bole: \"local angles stay correct\" → Theek yahan v1-clip-17.mp4 lagayein."
+    },
+    {
+      "number": 17,
+      "filename": "v1-clip-17.mp4",
+      "predicted_start_seconds": 172.1,
+      "prompt": "Create one continuous 8-second horizontal 16:9 straight-down city shot. A compact road intersection keeps familiar right angles during a smooth map zoom, realistic urban blocks, no interface text, no text, no logos, no watermark, no spoken dialogue or narration.",
+      "cut_cue": "Jab voiceover bole: \"familiar shape\" → Theek yahan v1-clip-18.mp4 lagayein."
+    },
+    {
+      "number": 18,
+      "filename": "v1-clip-18.mp4",
+      "predicted_start_seconds": 175.9,
+      "prompt": "Create one continuous 8-second horizontal 16:9 globe-grid animation. A small equal patch at the equator moves to sixty degrees north and expands to four times its displayed area, no numbers or labels, no text, no logos, no watermark, no spoken dialogue or narration.",
+      "cut_cue": "Jab voiceover bole: \"enlarged about four times\" → Theek yahan v1-clip-19.mp4 lagayein."
+    },
+    {
+      "number": 19,
+      "filename": "v1-clip-19.mp4",
+      "predicted_start_seconds": 194.1,
+      "prompt": "Create one continuous 8-second horizontal 16:9 polar-grid animation. A small patch moves close to eighty degrees north and expands dramatically while the equatorial reference stays fixed, accurate Mercator geometry, no text, no logos, no watermark, no spoken dialogue or narration.",
+      "cut_cue": "Jab voiceover bole: \"about thirty three times the equatorial area scale\" → Theek yahan v1-clip-20.mp4 lagayein."
+    },
+    {
+      "number": 20,
+      "filename": "v1-clip-20.mp4",
+      "predicted_start_seconds": 205.7,
+      "prompt": "Create one continuous 8-second horizontal 16:9 scientific shot. Greenland spans several latitude bands on a rotating globe, with distortion increasing gradually toward its north rather than uniformly, no labels, no text, no logos, no watermark, no spoken dialogue or narration.",
+      "cut_cue": "Jab voiceover bole: \"not a claim that all of Greenland is thirty three times too large\" → Theek yahan v1-clip-21.mp4 lagayein."
+    },
+    {
+      "number": 21,
+      "filename": "v1-clip-21.mp4",
+      "predicted_start_seconds": 216.4,
+      "prompt": "Create one continuous 8-second horizontal 16:9 map transformation. Africa and Greenland change from globe-correct relative area to Mercator display, Greenland expanding much more, accurate coastlines, neutral dark background, no text, no logos, no watermark, no spoken dialogue or narration.",
+      "cut_cue": "Jab voiceover bole: \"Greenland expands far more than Africa\" → Theek yahan v1-clip-22.mp4 lagayein."
+    },
+    {
+      "number": 22,
+      "filename": "v1-clip-22.mp4",
+      "predicted_start_seconds": 233.8,
+      "prompt": "Create one continuous 8-second horizontal 16:9 documentary shot. A navigator selects one map while a geographer selects another from a projection drawer, hands only, purposeful studio lighting, no text, no logos, no watermark, no spoken dialogue or narration.",
+      "cut_cue": "Jab voiceover bole: \"wrong map for the wrong question\" → Theek yahan v1-clip-23.mp4 lagayein."
+    },
+    {
+      "number": 23,
+      "filename": "v1-clip-23.mp4",
+      "predicted_start_seconds": 249.9,
+      "prompt": "Create one continuous 8-second horizontal 16:9 equal-area visualization. Identical glowing area tiles remain equal as they move across an unlabeled world map, while coastlines gently bend, accurate geometry, no text, no logos, no watermark, no spoken dialogue or narration.",
+      "cut_cue": "Jab voiceover bole: \"equal area projection instead\" → Theek yahan v1-clip-24.mp4 lagayein."
+    },
+    {
+      "number": 24,
+      "filename": "v1-clip-24.mp4",
+      "predicted_start_seconds": 259.4,
+      "prompt": "Create one continuous 8-second horizontal 16:9 projection morph. A Mercator-style map transforms into a Gall-Peters-style equal-area map, relative areas stabilize while continent shapes stretch, no labels, no text, no logos, no watermark, no spoken dialogue or narration.",
+      "cut_cue": "Jab voiceover bole: \"shape has to bend somewhere\" → Theek yahan v1-clip-25.mp4 lagayein."
+    },
+    {
+      "number": 25,
+      "filename": "v1-clip-25.mp4",
+      "predicted_start_seconds": 270.2,
+      "prompt": "Create one continuous 8-second horizontal 16:9 gallery shot. A modern Equal Earth map unrolls across a walnut table, relative continent areas accurate and outlines recognizable, soft museum lighting, no text, no logos, no watermark, no spoken dialogue or narration.",
+      "cut_cue": "Jab voiceover bole: \"designed in 2018\" → Theek yahan v1-clip-26.mp4 lagayein."
+    },
+    {
+      "number": 26,
+      "filename": "v1-clip-26.mp4",
+      "predicted_start_seconds": 279.7,
+      "prompt": "Create one continuous 8-second horizontal 16:9 comparison. Equal Earth sheet, Mercator sheet, and a globe rotate slowly together, each visibly useful for a different task, accurate unlabeled geography, no text, no logos, no watermark, no spoken dialogue or narration.",
+      "cut_cue": "Jab voiceover bole: \"does not preserve every distance, direction, and shape\" → Theek yahan v1-clip-27.mp4 lagayein."
+    },
+    {
+      "number": 27,
+      "filename": "v1-clip-27.mp4",
+      "predicted_start_seconds": 292.6,
+      "prompt": "Create one continuous 8-second horizontal 16:9 phone navigation shot. Hand pans a clean unlabeled city map with familiar right-angle streets, natural daylight, no readable interface text or brand marks, no text, no logos, no watermark, no spoken dialogue or narration.",
+      "cut_cue": "Jab voiceover bole: \"familiar at street scale\" → Theek yahan v1-clip-28.mp4 lagayein."
+    },
+    {
+      "number": 28,
+      "filename": "v1-clip-28.mp4",
+      "predicted_start_seconds": 307,
+      "prompt": "Create one continuous 8-second horizontal 16:9 map-engine animation. A global Mercator grid is cropped near both polar limits and settles into a perfect square, clean technical style, no numeric labels, no text, no logos, no watermark, no spoken dialogue or narration.",
+      "cut_cue": "Jab voiceover bole: \"eighty five degrees north and south\" → Theek yahan v1-clip-29.mp4 lagayein."
+    },
+    {
+      "number": 29,
+      "filename": "v1-clip-29.mp4",
+      "predicted_start_seconds": 312.8,
+      "prompt": "Create one continuous 8-second horizontal 16:9 tile animation. A square base world divides into four, then sixteen, then many equal image tiles in orderly grids, smooth zoom, dark technical background, no text, no logos, no watermark, no spoken dialogue or narration.",
+      "cut_cue": "Jab voiceover bole: \"two hundred and fifty six pixels square\" → Theek yahan v1-clip-30.mp4 lagayein."
+    },
+    {
+      "number": 30,
+      "filename": "v1-clip-30.mp4",
+      "predicted_start_seconds": 321.1,
+      "prompt": "Create one continuous 8-second horizontal 16:9 server visualization. Successive map zoom levels double in width and height as only the visible tiles illuminate, restrained blue data glow, no text, no logos, no watermark, no spoken dialogue or narration.",
+      "cut_cue": "Jab voiceover bole: \"four times as many pixels\" → Theek yahan v1-clip-31.mp4 lagayein."
+    },
+    {
+      "number": 31,
+      "filename": "v1-clip-31.mp4",
+      "predicted_start_seconds": 328.6,
+      "prompt": "Create one continuous 8-second horizontal 16:9 infrastructure shot. A small set of map tiles travels from server racks to one phone viewport while unused tiles remain dark, realistic documentary lighting, no text, no logos, no watermark, no spoken dialogue or narration.",
+      "cut_cue": "Jab voiceover bole: \"only the tiles inside your screen\" → Theek yahan v1-clip-32.mp4 lagayein."
+    },
+    {
+      "number": 32,
+      "filename": "v1-clip-32.mp4",
+      "predicted_start_seconds": 338.1,
+      "prompt": "Create one continuous 8-second horizontal 16:9 split visualization. Navigation satellites locate a point on the globe, then a separate flat Mercator display draws that point, clear two-stage motion, no labels, no text, no logos, no watermark, no spoken dialogue or narration.",
+      "cut_cue": "Jab voiceover bole: \"Mercator decides how that position is drawn\" → Theek yahan v1-clip-33.mp4 lagayein."
+    },
+    {
+      "number": 33,
+      "filename": "v1-clip-33.mp4",
+      "predicted_start_seconds": 347.2,
+      "prompt": "Create one continuous 8-second horizontal 16:9 zoom-out shot. A close city map pulls back smoothly until it becomes a realistic rotating globe, clean interface edges, no text or brand marks, no logos, no watermark, no spoken dialogue or narration.",
+      "cut_cue": "Jab voiceover bole: \"show the round Earth directly\" → Theek yahan v1-clip-34.mp4 lagayein."
+    },
+    {
+      "number": 34,
+      "filename": "v1-clip-34.mp4",
+      "predicted_start_seconds": 356.7,
+      "prompt": "Create one continuous 8-second horizontal 16:9 projection gallery. Several accurate unlabeled world maps and one globe rotate under spotlights, each with visibly different geometry, calm documentary camera, no text, no logos, no watermark, no spoken dialogue or narration.",
+      "cut_cue": "Jab voiceover bole: \"There is no universal winner\" → Theek yahan v1-clip-35.mp4 lagayein."
+    },
+    {
+      "number": 35,
+      "filename": "v1-clip-35.mp4",
+      "predicted_start_seconds": 366.2,
+      "prompt": "Create one continuous 8-second horizontal 16:9 nautical documentary shot. Modern mariner plots a constant-course line on an unlabeled Mercator chart beside a compass, crisp practical lighting, no text, no logos, no watermark, no spoken dialogue or narration.",
+      "cut_cue": "Jab voiceover bole: \"Mercator nautical chart remains useful\" → Theek yahan v1-clip-36.mp4 lagayein."
+    },
+    {
+      "number": 36,
+      "filename": "v1-clip-36.mp4",
+      "predicted_start_seconds": 374.5,
+      "prompt": "Create one continuous 8-second horizontal 16:9 classroom comparison. Teacher hands replace a Mercator wall map with an equal-area map while keeping a globe nearby, faces out of frame, accurate coastlines, no text, no logos, no watermark, no spoken dialogue or narration.",
+      "cut_cue": "Jab voiceover bole: \"choose an equal area map or a globe\" → Theek yahan v1-clip-37.mp4 lagayein."
+    },
+    {
+      "number": 37,
+      "filename": "v1-clip-37.mp4",
+      "predicted_start_seconds": 379.9,
+      "prompt": "Create one continuous 8-second horizontal 16:9 close-up. A hand studies map scale, projection grid, and globe together before choosing the correct sheet, slow deliberate movement, warm study light, no text, no logos, no watermark, no spoken dialogue or narration.",
+      "cut_cue": "Jab voiceover bole: \"what task it was built to solve\" → Theek yahan v1-clip-38.mp4 lagayein."
+    },
+    {
+      "number": 38,
+      "filename": "v1-clip-38.mp4",
+      "predicted_start_seconds": 391.4,
+      "prompt": "Create one continuous 8-second horizontal 16:9 orbital shot. Africa fills the sunlit center of a realistic Earth view, vast Sahara and Congo Basin visible, accurate continental outline, gentle camera drift, no text, no logos, no watermark, no spoken dialogue or narration.",
+      "cut_cue": "Jab voiceover bole: \"Africa was never small\" → Theek yahan v1-clip-39.mp4 lagayein."
+    },
+    {
+      "number": 39,
+      "filename": "v1-clip-39.mp4",
+      "predicted_start_seconds": 393.1,
+      "prompt": "Create one continuous 8-second horizontal 16:9 historical-to-modern match cut. Parchment Mercator chart transitions into a phone map using the same grid geometry, no identifiable historical face, no brands, no text, no logos, no watermark, no spoken dialogue or narration.",
+      "cut_cue": "Jab voiceover bole: \"successful tool doing a different job\" → Theek yahan v1-clip-40.mp4 lagayein."
+    },
+    {
+      "number": 40,
+      "filename": "v1-clip-40.mp4",
+      "predicted_start_seconds": 403.4,
+      "prompt": "Create one continuous 8-second horizontal 16:9 finale. Camera pulls back from several flat projection sheets to a rotating globe above them, Africa clearly visible, sunrise rim light, calm documentary mood, no text, no logos, no watermark, no spoken dialogue or narration.",
+      "cut_cue": "Video khatam → Outro Subscribe & End Screen lagayein."
+    }
+  ],
+  "sources": [
+    {
+      "title": "African Union — The True Size of Africa",
+      "url": "https://au.int/sites/default/files/documents/44438-doc-AUE_2024_English_2.pdf"
+    },
+    {
+      "title": "United Nations Statistics — Greenland surface area",
+      "url": "https://unstats.un.org/unsd/publications/pocketbook/files/world-stats-pocketbook-2024.pdf"
+    },
+    {
+      "title": "USGS — Exploring Maps and projection tradeoffs",
+      "url": "https://pubs.usgs.gov/unnumbered/70043847/report.pdf"
+    },
+    {
+      "title": "NOAA — Mercator nautical charts and rhumb lines",
+      "url": "https://www.nauticalcharts.noaa.gov/learn/nautical-cartography.html"
+    },
+    {
+      "title": "Google Maps — Map and tile coordinates",
+      "url": "https://developers.google.com/maps/documentation/javascript/coordinates"
+    },
+    {
+      "title": "Google Maps — Projection documentation",
+      "url": "https://developers.google.com/maps/documentation/javascript/maptypes"
+    },
+    {
+      "title": "PROJ — Equal Earth projection",
+      "url": "https://proj.org/en/stable/operations/projections/eqearth.html"
+    },
+    {
+      "title": "Google Flow — Create video clips",
+      "url": "https://support.google.com/flow/answer/16353334?hl=en"
+    },
+    {
+      "title": "Google Flow — Models and supported features",
+      "url": "https://support.google.com/flow/answer/16352836?hl=en"
+    },
+    {
+      "title": "YouTube — Accurate and succinct title guidance",
+      "url": "https://support.google.com/youtube/answer/12340300?hl=en"
+    }
+  ]
+}
