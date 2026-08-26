@@ -16,6 +16,8 @@ jobs:
           fetch-depth: 0
       - name: Week pages build karo
         run: node scripts/build-site.mjs
+      - name: Content aur links validate karo
+        run: python3 scripts/validate-site.py
       - name: gh-pages branch publish karo
         run: |
           git config user.name "github-actions[bot]"
