@@ -49,12 +49,14 @@ longScript = longScript
 const longPrompts = matches(legacyLong, /<pre class="prompt-code-box"><code>([\s\S]*?)<\/code><\/pre>/g);
 const longCues = matches(legacyLong, /<p class="cut-point-instruction">([\s\S]*?)<\/p>/g);
 if (longPrompts.length !== 27 || longCues.length !== 27) throw new Error('Expected 27 long prompts and cues');
+longPrompts[2] = longPrompts[2].replace(', and Western Europe', '');
 longCues[20] = 'Jab voiceover bole: "two hundred and fifty six pixel square tiles" → Theek yahan v1-clip-22.mp4 lagayein.';
 longCues[22] = 'Jab voiceover bole: "modern navigation screens" → Theek yahan v1-clip-24.mp4 lagayein.';
 longCues[23] = 'Jab voiceover bole: "continental shapes recognizable" → Theek yahan v1-clip-25.mp4 lagayein.';
 
 const shortPrompts = matches(legacyShorts, /<pre class="prompt-code-box"><code>([\s\S]*?)<\/code><\/pre>/g);
 if (shortPrompts.length !== 10) throw new Error('Expected 10 legacy short prompts');
+shortPrompts[1] = shortPrompts[1].replace(', and Europe', '');
 
 const shortOneScript = `Greenland is not the size of Africa. Africa can hold Greenland about fourteen times. Africa covers roughly thirty point three million square kilometres. Greenland covers about two point one seven million. A Mercator wall map makes them look like near twins because it preserves local angles, not area. That choice was useful for sailors in fifteen sixty nine. A straight line on Mercator could represent a constant compass bearing across an ocean. The tradeoff grows toward the poles. At sixty degrees north, the map's area scale is about four times the scale at the equator. Greenland expands on the page while equatorial Africa stays comparatively restrained. The projection is not a photograph and it was never designed to compare continent sizes. It is a navigation tool being asked to do a different job.`;
 
