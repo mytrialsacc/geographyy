@@ -39,6 +39,7 @@ class PageParser(HTMLParser):
 
 required = {
     "index.html",
+    "channel-setup.html",
     "calendar.html",
     "longs/index.html",
     "longs/week-01.html",
@@ -46,6 +47,7 @@ required = {
     "shorts/week-01/short-1.html",
     "shorts/week-01/short-2.html",
     "shorts/week-01/short-3.html",
+    "seo/week-01.html",
     "style-guide.html",
     "style.css",
     "app.js",
@@ -53,6 +55,8 @@ required = {
     "data/week-01/short-1.json",
     "data/week-01/short-2.json",
     "data/week-01/short-3.json",
+    "data/week-01/tiktok.json",
+    "data/channel-setup.json",
 }
 files = {str(path.relative_to(DOCS)).replace("\\", "/") for path in DOCS.rglob("*") if path.is_file()}
 for name in sorted(required - files):
@@ -114,6 +118,29 @@ for pack in packs:
                 fail(f"{pack} clip {index + 1}: timestamp does not come from previous cue")
             search_from = found + len(phrase)
 
+tiktok_file = DOCS / "data" / "week-01" / "tiktok.json"
+if tiktok_file.exists():
+    tiktok_packs = json.loads(tiktok_file.read_text(encoding="utf-8"))
+    if len(tiktok_packs) != 3:
+        fail(f"tiktok: expected 3 packs, got {len(tiktok_packs)}")
+    for index, pack in enumerate(tiktok_packs, 1):
+        if pack.get("short") != index:
+            fail(f"tiktok pack {index}: short number mismatch")
+        for field in ("title", "search_phrase", "caption", "cover_text", "first_frame_text", "filename"):
+            if not pack.get(field):
+                fail(f"tiktok pack {index}: missing {field}")
+        if pack.get("caption", "").count("#") < 3:
+            fail(f"tiktok pack {index}: caption needs focused hashtags")
+        if "#fyp" in pack.get("caption", "").lower():
+            fail(f"tiktok pack {index}: generic #fyp must not be used")
+
+setup_file = DOCS / "data" / "channel-setup.json"
+if setup_file.exists():
+    setup = json.loads(setup_file.read_text(encoding="utf-8"))
+    for platform in ("youtube", "tiktok"):
+        if platform not in setup:
+            fail(f"channel setup: missing {platform}")
+
 for filename in sorted(name for name in files if name.endswith(".html")):
     text = (DOCS / filename).read_text(encoding="utf-8")
     parser = PageParser()
@@ -136,6 +163,17 @@ for filename in sorted(name for name in files if name.endswith(".html")):
 home = (DOCS / "index.html").read_text(encoding="utf-8") if (DOCS / "index.html").exists() else ""
 if "Maryam:" not in home:
     fail("home: beginner start instruction is missing")
+for required_link in ("channel-setup.html", "seo/week-01.html"):
+    if required_link not in home:
+        fail(f"home: missing top-level link {required_link}")
+setup_html = (DOCS / "channel-setup.html").read_text(encoding="utf-8") if (DOCS / "channel-setup.html").exists() else ""
+for required_text in ("Hidden Geography", "@HiddenGeographyHQ", "Personal Account", "Official references"):
+    if required_text not in setup_html:
+        fail(f"channel setup page: missing {required_text}")
+tiktok_html = (DOCS / "seo" / "week-01.html").read_text(encoding="utf-8") if (DOCS / "seo" / "week-01.html").exists() else ""
+for required_text in ("Greenland Is Not the Size of Africa", "Why Google Maps Uses Mercator Geometry", "No Flat World Map Can Be Perfect"):
+    if required_text not in tiktok_html:
+        fail(f"TikTok page: missing {required_text}")
 long_html = (DOCS / "longs" / "week-01.html").read_text(encoding="utf-8") if (DOCS / "longs" / "week-01.html").exists() else ""
 for required_text in ("Google Flow kholo", "Veo 3.1 Lite", "Volume 0", "Verified sources"):
     if required_text not in long_html:
@@ -155,4 +193,4 @@ if ERRORS:
         print(f"- {error}")
     sys.exit(1)
 
-print("VALIDATION PASSED: Week 1 long + 3 shorts, 56 prompts/cues, links, JSON and beginner workflow")
+print("VALIDATION PASSED: channel setup, Week 1 long + 3 shorts, TikTok packs, 56 prompts/cues, links, JSON and beginner workflow")
