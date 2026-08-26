@@ -3,25 +3,31 @@ on:
   push:
     branches: [main]
 permissions:
-  contents: read
-  pages: write
-  id-token: write
+  contents: write
 concurrency:
-  group: pages
+  group: geography-pages
   cancel-in-progress: true
 jobs:
-  deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+  publish:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
       - name: Week pages build karo
         run: node scripts/build-site.mjs
-      - uses: actions/configure-pages@v5
-      - uses: actions/upload-pages-artifact@v3
-        with:
-          path: docs
-      - uses: actions/deploy-pages@v4
-        id: deployment
+      - name: gh-pages branch publish karo
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git fetch origin gh-pages
+          git worktree add publish origin/gh-pages
+          rsync -a --delete --exclude .git docs/ publish/
+          cd publish
+          git add -A
+          if git diff --cached --quiet; then
+            echo "Koi deploy change nahi"
+          else
+            git commit -m "Site deploy ${GITHUB_SHA::7}"
+            git push origin HEAD:gh-pages
+          fi
