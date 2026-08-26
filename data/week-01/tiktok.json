@@ -1,0 +1,29 @@
+[
+  {
+    "short": 1,
+    "title": "Greenland Is Not the Size of Africa",
+    "search_phrase": "Mercator map Africa size",
+    "caption": "Why does Greenland look almost as large as Africa on a Mercator map? Africa is actually about fourteen times larger. Mercator preserves local angles, but high latitudes expand. #Geography #MercatorProjection #Africa #MapFacts",
+    "cover_text": "AFRICA IS 14× LARGER",
+    "first_frame_text": "Greenland is not the size of Africa.",
+    "filename": "hidden-geography-week-01-tiktok-short-01.mp4"
+  },
+  {
+    "short": 2,
+    "title": "Why Google Maps Uses Mercator Geometry",
+    "search_phrase": "why Google Maps uses Mercator",
+    "caption": "Why does Google Maps use Mercator geometry? It keeps nearby roads and corners familiar and divides the world into square image tiles that load efficiently. GPS finds your location; Mercator controls how it appears. #Geography #GoogleMaps #Mercator #MapProjection",
+    "cover_text": "WHY GOOGLE MAPS USES IT",
+    "first_frame_text": "Google Maps still uses Mercator geometry.",
+    "filename": "hidden-geography-week-01-tiktok-short-02.mp4"
+  },
+  {
+    "short": 3,
+    "title": "No Flat World Map Can Be Perfect",
+    "search_phrase": "why flat maps are distorted",
+    "caption": "Why are flat world maps distorted? No projection can preserve area, shape, distance and direction perfectly at the same time. Every map protects one property and changes another. #Geography #MapProjection #Cartography #WorldMap",
+    "cover_text": "NO FLAT MAP IS PERFECT",
+    "first_frame_text": "A globe cannot become a perfect flat map.",
+    "filename": "hidden-geography-week-01-tiktok-short-03.mp4"
+  }
+]

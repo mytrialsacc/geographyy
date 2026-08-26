@@ -1,0 +1,19 @@
+{
+  "youtube": {
+    "name": "Hidden Geography",
+    "handle": "@HiddenGeographyHQ",
+    "fallback_handle": "@HiddenGeographyMaps",
+    "description": "Maps make the world look simple. Hidden Geography explains the borders, projections, rivers, cities, and geographic systems that make it complicated. One visual geography documentary and three Shorts each week.",
+    "keywords": "geography documentary, map projections, borders explained, world geography, hidden geography, cartography, rivers and cities, geography facts, geography shorts, Hidden Geography",
+    "playlist": "Hidden Geography | Maps Explained",
+    "profile_prompt": "A minimal square channel emblem for a visual geography documentary brand, a simple globe crossed by one clean compass needle, deep ocean blue background, warm sand and copper land accents, crisp editorial vector style, strong silhouette readable at tiny size, centered composition, no letters, no words, no numbers, no gradients, no watermark, 1:1",
+    "banner_prompt": "A wide cinematic geography documentary channel banner, a physical globe, an unlabeled relief map and a brass compass arranged on a dark cartography table, soft sunrise light crossing the globe, deep ocean blue, warm sand and copper palette, clean editorial composition, all important objects inside the center safe area, dark edges for responsive cropping, no readable text, no logo, no watermark, 16:9",
+    "banner_text": "HIDDEN GEOGRAPHY\nMAPS EXPLAIN THE WORLD"
+  },
+  "tiktok": {
+    "nickname": "Hidden Geography",
+    "username": "@HiddenGeographyHQ",
+    "fallback_username": "@HiddenGeographyMaps",
+    "bio": "Maps, borders and places explained visually. New geography Shorts weekly."
+  }
+}
