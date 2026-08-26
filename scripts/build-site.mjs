@@ -56,7 +56,7 @@ const normalizeFlowPrompt = prompt => {
     .replace(/\s{2,}/g, ' ')
     .trim()
     .replace(/[.,]\s*$/, '');
-  if (!/no (?:text|readable labels)/i.test(result)) result += ', no text';
+  if (!/no text/i.test(result)) result += ', no text';
   if (!/no (?:logo|logos)/i.test(result)) result += ', no logos';
   if (!/no watermark/i.test(result)) result += ', no watermark';
   if (!/no (?:spoken dialogue|dialogue)/i.test(result)) result += ', no spoken dialogue or narration';
