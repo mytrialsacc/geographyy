@@ -39,6 +39,7 @@ class PageParser(HTMLParser):
 
 required = {
     "index.html",
+    "manual.html",
     "channel-setup.html",
     "calendar.html",
     "longs/index.html",
@@ -166,6 +167,12 @@ if "Maryam:" not in home:
 for required_link in ("channel-setup.html", "seo/week-01.html"):
     if required_link not in home:
         fail(f"home: missing top-level link {required_link}")
+if "manual.html" not in home:
+    fail("home: missing top-level manual link")
+manual_html = (DOCS / "manual.html").read_text(encoding="utf-8") if (DOCS / "manual.html").exists() else ""
+for required_text in ("Maryam · sab se pehle yeh parho", "Long video ka poora order", "Teen Shorts ka poora order", "Agar samajh na aaye"):
+    if required_text not in manual_html:
+        fail(f"manual page: missing {required_text}")
 setup_html = (DOCS / "channel-setup.html").read_text(encoding="utf-8") if (DOCS / "channel-setup.html").exists() else ""
 for required_text in ("Hidden Geography", "@HiddenGeographyHQ", "Personal Account", "Official references"):
     if required_text not in setup_html:
@@ -193,4 +200,4 @@ if ERRORS:
         print(f"- {error}")
     sys.exit(1)
 
-print("VALIDATION PASSED: channel setup, Week 1 long + 3 shorts, TikTok packs, 56 prompts/cues, links, JSON and beginner workflow")
+print("VALIDATION PASSED: beginner manual, channel setup, Week 1 long + 3 shorts, TikTok packs, 56 prompts/cues, links and JSON")
