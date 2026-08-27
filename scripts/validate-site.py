@@ -188,11 +188,15 @@ for required_text in ("Google Flow kholo", "Veo 3.1 Lite", "Volume 0", "Verified
 for banned in ("Every Map You've Seen Is Lying", "Western Europe", "Generated audio off", "guaranteed to arrive"):
     if banned.lower() in "\n".join((DOCS / name).read_text(encoding="utf-8") for name in files if name.endswith((".html", ".json"))).lower():
         fail(f"outdated or misleading phrase remains: {banned}")
+if "https://www.usgs.gov/faqs/how-are-different-map-projections-used" not in long_html:
+    fail("long page: current official USGS projection reference is missing")
 
 css = (DOCS / "style.css").read_text(encoding="utf-8") if (DOCS / "style.css").exists() else ""
 for rule in ("overflow-x:hidden", "overflow-wrap:anywhere", "@media(max-width:420px)"):
     if rule not in css:
         fail(f"style.css: mobile guard missing: {rule}")
+if "--gold:#7a3e00" not in css:
+    fail("style.css: accessible copper text color is missing")
 
 if ERRORS:
     print(f"VALIDATION FAILED ({len(ERRORS)} issues)")
