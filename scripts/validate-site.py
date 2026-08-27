@@ -173,6 +173,19 @@ manual_html = (DOCS / "manual.html").read_text(encoding="utf-8") if (DOCS / "man
 for required_text in ("Maryam · sab se pehle yeh parho", "Long video ka poora order", "Teen Shorts ka poora order", "Agar samajh na aaye"):
     if required_text not in manual_html:
         fail(f"manual page: missing {required_text}")
+for required_text in (
+    "https://f5tts-prod.duckdns.org/web/",
+    "https://labs.google/fx/tools/flow",
+    "bm_mix_adam_lewis",
+    "Speed:</b> 0.8",
+    "Video → Veo 3.1 Lite",
+    "ratio <b>16:9</b>",
+    "ratio <b>9:16</b>",
+    "duration <b>8 seconds</b>",
+    "output <b>1</b>",
+):
+    if required_text not in manual_html:
+        fail(f"manual page: exact tool setting/link is missing: {required_text}")
 setup_html = (DOCS / "channel-setup.html").read_text(encoding="utf-8") if (DOCS / "channel-setup.html").exists() else ""
 for required_text in ("Hidden Geography", "@HiddenGeographyHQ", "Personal Account", "Official references"):
     if required_text not in setup_html:
@@ -182,12 +195,15 @@ for required_text in ("Greenland Is Not the Size of Africa", "Why Google Maps Us
     if required_text not in tiktok_html:
         fail(f"TikTok page: missing {required_text}")
 long_html = (DOCS / "longs" / "week-01.html").read_text(encoding="utf-8") if (DOCS / "longs" / "week-01.html").exists() else ""
-for required_text in ("Google Flow kholo", "Veo 3.1 Lite", "Volume 0", "Verified sources"):
+for required_text in ("Google Flow kholo", "Veo 3.1 Lite", "Volume 0", "Verified sources", "bm_mix_adam_lewis", "speed <b>0.8</b>"):
     if required_text not in long_html:
         fail(f"long page: missing beginner instruction: {required_text}")
+all_content = "\n".join((DOCS / name).read_text(encoding="utf-8") for name in files if name.endswith((".html", ".json")))
 for banned in ("Every Map You've Seen Is Lying", "Western Europe", "Generated audio off", "guaranteed to arrive"):
-    if banned.lower() in "\n".join((DOCS / name).read_text(encoding="utf-8") for name in files if name.endswith((".html", ".json"))).lower():
+    if banned.lower() in all_content.lower():
         fail(f"outdated or misleading phrase remains: {banned}")
+if re.search(r"\bSaif\b", all_content, flags=re.IGNORECASE):
+    fail("site pages: old reporter name Saif remains; use Anas")
 if "https://www.usgs.gov/faqs/how-are-different-map-projections-used" not in long_html:
     fail("long page: current official USGS projection reference is missing")
 
