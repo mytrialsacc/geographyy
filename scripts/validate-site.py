@@ -204,6 +204,16 @@ for banned in ("Every Map You've Seen Is Lying", "Western Europe", "Generated au
         fail(f"outdated or misleading phrase remains: {banned}")
 if re.search(r"\bSaif\b", all_content, flags=re.IGNORECASE):
     fail("site pages: old reporter name Saif remains; use Anas")
+for awkward_phrase in (
+    "khool",
+    "Generate dabao",
+    "Guess mat karo",
+    "Tumhari instruction copy hai",
+):
+    if awkward_phrase.lower() in all_content.lower():
+        fail(f"site wording: awkward phrase remains: {awkward_phrase}")
+if re.search(r"\bkhol\b", all_content, flags=re.IGNORECASE):
+    fail("site wording: use the natural instruction 'kholo', not 'khol'")
 if "https://www.usgs.gov/faqs/how-are-different-map-projections-used" not in long_html:
     fail("long page: current official USGS projection reference is missing")
 
